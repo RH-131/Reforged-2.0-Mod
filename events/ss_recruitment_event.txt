@@ -4,7 +4,244 @@
 
 add_namespace = ss_recruitment_event
 
+country_event = {
+	id = ss_recruitment_event.0
+	title = ss_recruitment_event.0.t	
+	desc = ss_recruitment_event.0.desc	#
+	picture = GFX_report_event_german_volunteers					# 
+	is_triggered_only = yes
 
+	option = { 
+		name = ss_recruitment_event.0.a #historical
+		ai_chance = {
+			base = 50
+		}
+		add_to_variable = { var = wehrmacht_anger value = 5}
+		subtract_from_variable = { var = SS_anger value = 5}
+		SS_resolve_effects_wehrmacht = yes
+			SS_set_templates = yes
+			if = {
+				limit = {
+					has_country_flag = SS_mechanised_division_late
+				}
+				custom_effect_tooltip = GER_ss_division_germany_mech_tt
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 64 }
+						create_unit = {
+							division = "name = \"1. SS Division 'Liebstandarte SS Adolf Hitler'\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
+							owner = ROOT
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 64 }
+						create_unit = {
+							division = "name = \"2. SS Division 'Das Reich'\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
+							owner = ROOT
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 64 }
+						create_unit = {
+							division = "name = \"3. SS Division 'Totenkopf'\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
+							owner = ROOT
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SS_mechanised_division_early
+				}
+				custom_effect_tooltip = GER_ss_division_germany_mech_tt
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 64 }
+						create_unit = {
+							division = "name = \"1. SS SS Division Liebstandarte SS Adolf Hitler\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
+							owner = ROOT
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 64 }
+						create_unit = {
+							division = "name = \"2. SS Division 'Das Reich'\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
+							owner = ROOT
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 64 }
+						create_unit = {
+							division = "name = \"3. SS Division 'Totenkopf'\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
+							owner = ROOT
+						}
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = GER_ss_division_germany_mot_tt
+				hidden_effect = {		
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 64 }
+						create_unit = {
+							division = "name = \"1. SS Division 'Liebstandarte SS Adolf Hitler'\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
+							owner = ROOT
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 64 }
+						create_unit = {
+							division = "name = \"2. SS 'Das Reich'\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
+							owner = ROOT
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 64 }
+						create_unit = {
+							division = "name = \"3. SS 'Totenkopf'\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
+							owner = ROOT
+						}
+					}
+				}
+			}
+	}
+	option = {
+		name = ss_recruitment_event.0.b #big
+		ai_chance = {
+			base = 25
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+			modifier = {
+				factor = 0
+				check_variable = { var = wehrmacht_anger value = 30 compare = greater_than_or_equals }
+			}
+		}
+		add_to_variable = { var = wehrmacht_anger value = 5}
+		subtract_from_variable = { var = SS_anger value = 5}
+		SS_resolve_effects_wehrmacht = yes
+		SS_set_templates = yes
+		if = {
+			limit = {
+				has_country_flag = SS_armored_division_late
+			}
+			custom_effect_tooltip = GER_ss_division_germany_armored_tt
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 64 }
+						create_unit = {
+							division = "name = \"1. SS Division 'Liebstandarte SS Adolf Hitler'\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+							owner = ROOT
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 64 }
+						create_unit = {
+							division = "name = \"2. SS Division 'Das Reich'\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+							owner = ROOT
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 64 }
+						create_unit = {
+							division = "name = \"3. SS Division 'Totenkopf'\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+							owner = ROOT
+						}
+					}
+				}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = SS_armored_division_improved
+			}
+			custom_effect_tooltip = GER_ss_division_germany_armored_tt
+			hidden_effect = {	
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"1. SS Division 'Liebstandarte SS Adolf Hitler'\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"2. SS Division 'Das Reich'\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"3. SS Division 'Totenkopf'\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+			}
+		}
+		else = {
+			custom_effect_tooltip = GER_ss_division_germany_armored_tt
+			hidden_effect = {	
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"1. SS Division 'Liebstandarte SS Adolf Hitler'\" division_template = \"SS Panzer Division\" start_experience_factor = 1 start_equipment_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"2. SS Division 'Das Reich'\" division_template = \"SS Panzer Division\" start_experience_factor = 1 start_equipment_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"3. SS Division 'Totenkopf'\" division_template = \"SS Panzer Division\" start_experience_factor = 1 start_equipment_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ss_recruitment_event.0.c #small group of specialists
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				check_variable = { var = SS_anger value = 30 compare = greater_than_or_equals }
+			}
+		}
+		add_manpower = 30000
+		army_experience = 20
+		add_to_variable = { var = SS_anger value = 10}
+		SS_resolve_effects_ss = yes
+		subtract_from_variable = { var = wehrmacht_anger value = 5}
+	}
+
+}
 
 #SS recruitment, denmark
 country_event = {
@@ -12,10 +249,9 @@ country_event = {
 	title = ss_recruitment_event.1.t	
 	desc = ss_recruitment_event.1.desc	#
 	picture = GFX_report_event_german_volunteers					# 
-	
-	
 
 	is_triggered_only = yes
+
 	option = { 
 		name = ss_recruitment_event.1.a #historical
 		ai_chance = {
@@ -24,10 +260,6 @@ country_event = {
 		add_to_variable = { var = wehrmacht_anger value = 5}
 		subtract_from_variable = { var = SS_anger value = 5}
 		SS_resolve_effects_wehrmacht = yes
-		if = {
-			limit = {
-				has_country_flag = SS_recruitment_NOR # player has already selected historical recruitment in Norway
-			}
 			SS_set_templates = yes
 			if = {
 				limit = {
@@ -39,8 +271,8 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"5. SS Division Wiking\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 1.0 start_equipment_factor = 0.01" 
-							owner = GER
+							division = "name = \"5. SS Division Wiking\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
+							owner = ROOT
 						}
 					}
 				}
@@ -55,38 +287,25 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"5. SS Division Wiking\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 1.0 start_equipment_factor = 0.01" 
-							owner = GER
+							division = "name = \"5. SS Division Wiking\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
+							owner = ROOT
 						}
 					}
 				}
 			}
-			if = {
-				limit = {
-					not = {
-						has_country_flag = SS_mechanised_division_early
-						has_country_flag = SS_mechanised_division_late
-					}
-				}
+			else = {
 				custom_effect_tooltip = GER_division_wiking_mot_tt
 				hidden_effect = {		
 					random_owned_controlled_state = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"5. SS Division Wiking\" division_template = \"SS Motorisierte Division\" start_experience_factor = 1.0 start_equipment_factor = 0.01" 
-							owner = GER
+							division = "name = \"5. SS Division Wiking\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
+							owner = ROOT
 						}
 					}
 				}
 			}
-		}
-		if = {
-			limit = { not = { has_country_flag = SS_recruitment_NOR } }
-			set_country_flag = SS_recruitment_DEN
-			add_manpower = 5000
-			custom_effect_tooltip = SS_recruitment_NOR_tt
-		}
 	}
 	option = {
 		name = ss_recruitment_event.1.b #big
@@ -115,8 +334,8 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"SS Panzer-Division Danmark\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
-							owner = GER
+							division = "name = \"SS Panzer-Division Danmark\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+							owner = ROOT
 						}
 					}
 				}
@@ -131,8 +350,8 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS Panzer-Division Danmark\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
-						owner = GER
+						division = "name = \"SS Panzer-Division Danmark\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = ROOT
 					}
 				}
 			}
@@ -144,8 +363,8 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS Panzer-Division Danmark\" division_template = \"SS Panzer Division\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
-						owner = GER
+						division = "name = \"SS Panzer-Division Danmark\" division_template = \"SS Panzer Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = ROOT
 					}
 				}
 			}
@@ -160,8 +379,8 @@ country_event = {
 				check_variable = { var = SS_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_manpower = 500
-		army_experience = 10
+		add_manpower = 30000
+		army_experience = 20
 		add_to_variable = { var = SS_anger value = 10}
 		SS_resolve_effects_ss = yes
 		subtract_from_variable = { var = wehrmacht_anger value = 5}
@@ -187,10 +406,6 @@ country_event = {
 		add_to_variable = { var = wehrmacht_anger value = 5}
 		subtract_from_variable = { var = SS_anger value = 5}
 		SS_resolve_effects_wehrmacht = yes
-		if = {
-			limit = {
-				has_country_flag = SS_recruitment_DEN # player has already selected historical recruitment in Norway
-			}
 			SS_set_templates = yes
 			if = {
 				limit = {
@@ -202,7 +417,7 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"5. SS Division Wiking\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 1.0 start_equipment_factor = 0.01" 
+							division = "name = \"5. SS Division Wiking\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
@@ -218,38 +433,25 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"5. SS Division Wiking\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 1.0 start_equipment_factor = 0.01" 
+							division = "name = \"5. SS Division Wiking\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
 				}
 			}
-			if = {
-				limit = {
-					not = {
-						has_country_flag = SS_mechanised_division_early
-						has_country_flag = SS_mechanised_division_late
-					}
-				}
+			else = {
 				custom_effect_tooltip = GER_division_wiking_mot_tt
 				hidden_effect = {		
 					random_owned_controlled_state = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"5. SS Division Wiking\" division_template = \"SS Motorisierte Division\" start_experience_factor = 1.0 start_equipment_factor = 0.01" 
+							division = "name = \"5. SS Division Wiking\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
 				}
 			}
-		}
-		if = {
-			limit = { not = { has_country_flag = SS_recruitment_DEN } }
-			set_country_flag = SS_recruitment_NOR
-			add_manpower = 5000
-			custom_effect_tooltip = SS_recruitment_DEN_tt
-		}
 	}
 	option = {
 		name = ss_recruitment_event.1.b #big
@@ -278,7 +480,7 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"SS Panzer-Division Norge\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+							division = "name = \"SS Panzer-Division Norge\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
@@ -294,7 +496,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS Panzer-Division Norge\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Norge\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -307,7 +509,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS Panzer-Division Norge\" division_template = \"SS Panzer Division\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Norge\" division_template = \"SS Panzer Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -323,8 +525,8 @@ country_event = {
 				check_variable = { var = SS_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_manpower = 500
-		army_experience = 10
+		add_manpower = 30000
+		army_experience = 20
 		add_to_variable = { var = SS_anger value = 10}
 		SS_resolve_effects_ss = yes
 		subtract_from_variable = { var = wehrmacht_anger value = 5}
@@ -360,7 +562,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"23. SS-Division Nederland\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"23. SS-Division Nederland\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -376,7 +578,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"23. SS-Division Nederland\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"23. SS-Division Nederland\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -389,7 +591,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"23. SS-Division Nederland\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"23. SS-Division Nederland\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -424,11 +626,11 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"SS Panzer-Division Nederland\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+							division = "name = \"SS Panzer-Division Nederland\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 						create_unit = {
-							division = "name = \"SS Panzer-Division Anton Mussert\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+							division = "name = \"SS Panzer-Division Anton Mussert\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
@@ -444,11 +646,11 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS Panzer-Division Nederland\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Nederland\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 					create_unit = {
-						division = "name = \"SS Panzer-Division Anton Mussert\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Anton Mussert\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -461,11 +663,11 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS Panzer-Division Nederland\" division_template = \"SS Panzer Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Nederland\" division_template = \"SS Panzer Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 					create_unit = {
-						division = "name = \"SS Panzer-Division Anton Mussert\" division_template = \"SS Panzer Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Anton Mussert\" division_template = \"SS Panzer Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -481,8 +683,8 @@ country_event = {
 				check_variable = { var = SS_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_manpower = 1000
-		army_experience = 10
+		add_manpower = 30000
+		army_experience = 20
 		add_to_variable = { var = SS_anger value = 10}
 		SS_resolve_effects_ss = yes
 		subtract_from_variable = { var = wehrmacht_anger value = 5}
@@ -518,11 +720,11 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"27. SS-Division Langemark\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"27. SS-Division Langemark\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 					create_unit = {
-						division = "name = \"28. SS-Division Wallonien\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"28. SS-Division Wallonien\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -538,11 +740,11 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"27. SS-Division Langemark\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"27. SS-Division Langemark\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 					create_unit = {
-						division = "name = \"28. SS-Division Wallonien\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"28. SS-Division Wallonien\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -555,11 +757,11 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"27. SS-Division Langemark\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"27. SS-Division Langemark\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 					create_unit = {
-						division = "name = \"28. SS-Division Wallonien\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"28. SS-Division Wallonien\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -595,11 +797,11 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"SS Panzer-Division Flandern\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+							division = "name = \"SS Panzer-Division Flandern\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 						create_unit = {
-							division = "name = \"SS Panzer-Division Wallonien\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+							division = "name = \"SS Panzer-Division Wallonien\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
@@ -615,11 +817,11 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS Panzer-Division Flandern\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Flandern\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 					create_unit = {
-						division = "name = \"SS Panzer-Division Wallonien\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Wallonien\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -632,11 +834,11 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS Panzer-Division Flandern\" division_template = \"SS Panzer Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Flandern\" division_template = \"SS Panzer Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 					create_unit = {
-						division = "name = \"SS Panzer-Division Wallonien\" division_template = \"SS Panzer Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Wallonien\" division_template = \"SS Panzer Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -652,8 +854,8 @@ country_event = {
 				check_variable = { var = SS_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_manpower = 1000
-		army_experience = 10
+		add_manpower = 30000
+		army_experience = 20
 		add_to_variable = { var = SS_anger value = 10}
 		SS_resolve_effects_ss = yes
 		subtract_from_variable = { var = wehrmacht_anger value = 5}
@@ -691,7 +893,7 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"33. SS-Waffen-Grenadier-Division Charlemagne\" division_template = \"SS Waffen-Grenadier-Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+							division = "name = \"33. SS-Waffen-Grenadier-Division Charlemagne\" division_template = \"SS Waffen-Grenadier-Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
@@ -726,11 +928,11 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"33. SS-Panzergrenadier-Division Charlemagne\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"33. SS-Panzergrenadier-Division Charlemagne\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 					create_unit = {
-						division = "name = \"SS-Panzergrenadier-Division Bretagne\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"SS-Panzergrenadier-Division Bretagne\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -746,11 +948,11 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"33. SS-Panzergrenadier-Division Charlemagne\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"33. SS-Panzergrenadier-Division Charlemagne\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 					create_unit = {
-						division = "name = \"SS-Panzergrenadier-Division Bretagne\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"SS-Panzergrenadier-Division Bretagne\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -763,11 +965,11 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"33. SS-Panzergrenadier-Division Charlemagne\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"33. SS-Panzergrenadier-Division Charlemagne\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 					create_unit = {
-						division = "name = \"SS-Panzergrenadier-Division Bretagne\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"SS-Panzergrenadier-Division Bretagne\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -783,8 +985,8 @@ country_event = {
 				check_variable = { var = SS_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_manpower = 2000
-		army_experience = 10
+		add_manpower = 30000
+		army_experience = 20
 		add_to_variable = { var = SS_anger value = 10}
 		SS_resolve_effects_ss = yes
 		subtract_from_variable = { var = wehrmacht_anger value = 5}
@@ -822,7 +1024,7 @@ country_event = {
 				limit = { ROOT = { has_full_control_of_state = PREV } }
 				prioritize = { 64 }
 				create_unit = {
-					division = "name = \"20. SS-Waffen-Grenadier-Division\" division_template = \"SS Waffen-Grenadier-Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+					division = "name = \"20. SS-Waffen-Grenadier-Division\" division_template = \"SS Waffen-Grenadier-Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 					owner = GER
 				}
 			}
@@ -857,7 +1059,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"20. SS-Panzergrenadier-Division\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.01" 
+						division = "name = \"20. SS-Panzergrenadier-Division\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.5 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -873,7 +1075,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"20. SS-Panzergrenadier-Division\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.6 start_equipment_factor = 0.01" 
+						division = "name = \"20. SS-Panzergrenadier-Division\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.5 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -886,7 +1088,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"20. SS-Panzergrenadier-Division\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.6 start_equipment_factor = 0.01" 
+						division = "name = \"20. SS-Panzergrenadier-Division\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.5 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -902,8 +1104,8 @@ country_event = {
 				check_variable = { var = SS_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_manpower = 1000
-		army_experience = 10
+		add_manpower = 30000
+		army_experience = 20
 		add_to_variable = { var = SS_anger value = 10}
 		SS_resolve_effects_ss = yes
 		subtract_from_variable = { var = wehrmacht_anger value = 5}
@@ -940,11 +1142,11 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"15. SS-Waffen-Grenadier-Division\" division_template = \"SS Waffen-Grenadier-Division\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+							division = "name = \"15. SS-Waffen-Grenadier-Division\" division_template = \"SS Waffen-Grenadier-Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 						create_unit = {
-							division = "name = \"19. SS-Waffen-Grenadier-Division\" division_template = \"SS Waffen-Grenadier-Division\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+							division = "name = \"19. SS-Waffen-Grenadier-Division\" division_template = \"SS Waffen-Grenadier-Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
@@ -979,7 +1181,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"15. SS-Panzergrenadier-Division\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.01" 
+						division = "name = \"15. SS-Panzergrenadier-Division\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.5 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -995,7 +1197,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"15. SS-Panzergrenadier-Division\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.6 start_equipment_factor = 0.01" 
+						division = "name = \"15. SS-Panzergrenadier-Division\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.5 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -1008,7 +1210,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"15. SS-Panzergrenadier-Division\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.6 start_equipment_factor = 0.01" 
+						division = "name = \"15. SS-Panzergrenadier-Division\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.5 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -1024,7 +1226,7 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"19. SS Panzer-Division Latvia\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+							division = "name = \"19. SS Panzer-Division Latvia\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
@@ -1040,7 +1242,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"19. SS Panzer-Division Latvia\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"19. SS Panzer-Division Latvia\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -1053,7 +1255,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"19. SS Panzer-Division Latvia\" division_template = \"SS Panzer Division\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"19. SS Panzer-Division Latvia\" division_template = \"SS Panzer Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -1069,8 +1271,8 @@ country_event = {
 				check_variable = { var = SS_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_manpower = 1000
-		army_experience = 10
+		add_manpower = 30000
+		army_experience = 20
 		add_to_variable = { var = SS_anger value = 10}
 		SS_resolve_effects_ss = yes
 		subtract_from_variable = { var = wehrmacht_anger value = 5}
@@ -1095,7 +1297,7 @@ country_event = {
 		add_to_variable = { var = wehrmacht_anger value = 5}
 		subtract_from_variable = { var = SS_anger value = 5}
 		SS_resolve_effects_wehrmacht = yes
-		add_manpower = 1000
+		add_manpower = 20000
 	}
 		
 	option = {
@@ -1126,7 +1328,7 @@ country_event = {
 				limit = { ROOT = { has_full_control_of_state = PREV } }
 				prioritize = { 64 }
 				create_unit = {
-					division = "name = \"40. SS-Waffen-Grenadier-Division\" division_template = \"SS Waffen-Grenadier-Division\" start_experience_factor = 0.1 start_equipment_factor = 0.01" 
+					division = "name = \"40. SS-Waffen-Grenadier-Division\" division_template = \"SS Waffen-Grenadier-Division\" start_experience_factor = 0.1 start_equipment_factor = 0.1" 
 					owner = GER
 				}
 			}
@@ -1142,8 +1344,8 @@ country_event = {
 				check_variable = { var = SS_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_manpower = 500
-		army_experience = 10
+		add_manpower = 30000
+		army_experience = 20
 		add_to_variable = { var = SS_anger value = 10}
 		SS_resolve_effects_ss = yes
 		subtract_from_variable = { var = wehrmacht_anger value = 5}
@@ -1194,7 +1396,7 @@ country_event = {
 				limit = {
 					skill > 3
 					NOT = {
-						has_trait = politically_connected
+						has_trait = Waffen_SS
 					}
 				}
 				save_event_target_as = GER_SS_general_resigns
@@ -1243,7 +1445,7 @@ country_event = {
 						has_unit_leader_flag = GER_SS_conspirator
 					}
 					NOT = {
-						has_trait = politically_connected
+						has_trait = Waffen_SS
 					}
 				}
 				set_unit_leader_flag = GER_SS_conspirator
@@ -1496,12 +1698,7 @@ country_event = {
 			base = 10
 		}
 		add_political_power = -80
-		if = {
-			limit = {
-				has_idea = heinrich_himmler
-			}
-			remove_ideas = heinrich_himmler
-		}
+
 		subtract_from_variable = { var = wehrmacht_anger value = 15 }	
 	}
 	option = { #placate
@@ -1533,21 +1730,20 @@ country_event = {
 			30 = { 
 				if = {
 					limit = {
-						has_country_leader = { ruling_only = yes character = GER_hermann_goring }
+						has_country_leader = { ruling_only = yes name = "Hermann Göring" }
 					}
 					set_country_flag = GER_SS_Goering_dead #no zombie Görings!
 				}
 				kill_country_leader = yes 
 				set_variable = { var = SS_anger value = 0 }
-				GER_heinrich_himmler = {
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = "1965.1.1.1"
-							traits = {}
-						}
-					}		
+				create_country_leader = {
+					name = "Heinrich Himmler"
+					desc = "POLITICS_HEINRICH_HIMMLER_DESC"
+					picture = "Portrait_Germany_Heinrich_Himmler.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
 				}
 				country_event = ss_recruitment_event.26 #internal power struggle
 				hidden_effect = {
@@ -1578,12 +1774,7 @@ country_event = {
 				has_stability < 0.5
 			}
 		}
-		if = {
-			limit = {
-				has_idea = heinrich_himmler
-			}
-			remove_ideas = heinrich_himmler
-		}
+		
 		add_stability = -0.2
 		set_country_flag = GER_ss_himmler_purged
 		add_popularity = {
@@ -1615,12 +1806,7 @@ country_event = {
 	# 
 	option = { #Government backs Himmler
 		name = ss_recruitment_event.26.a
-		if = {
-			limit = {
-				has_idea = goering
-			}
-			remove_ideas = goering
-		}
+		
 		hidden_effect = {
 		}
 		if = {
@@ -1646,21 +1832,15 @@ country_event = {
 			}
 		}
 		kill_country_leader = yes
-		if = {
-			limit = {
-				has_idea = heinrich_himmler
+		
+		create_country_leader = {
+			name = "Hermann Göring"
+			desc = "POLITICS_HEINRICH_HIMMLER_DESC"
+			picture = "Portrait_Germany_Hermann_Göring.dds"
+			expire = "1965.1.1"
+			ideology = nazism
+			traits = {
 			}
-			remove_ideas = heinrich_himmler
-		}
-		GER_hermann_goring = {
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					ideology = nazism
-					expire = "1965.1.1.1"
-					traits = {}
-				}
-			}		
 		}
 		hidden_effect = {
 		}
@@ -1681,16 +1861,11 @@ country_event = {
 	option = { #Government backs Wehrmacht
 		name = ss_recruitment_event.26.c
 		kill_country_leader = yes
-		if = {
-			limit = {
-				has_idea = heinrich_himmler
-			}
-			remove_ideas = heinrich_himmler
-		}
+		
 		create_country_leader = {
 			name = "Günther von Kluge"
 			desc = "POLITICS_HEINRICH_HIMMLER_DESC"
-			picture = GFX_portrait_Gunther_von_Kluge
+			picture = "Portrait_Germany_Gunther_von_Kluge.dds"
 			expire = "1965.1.1"
 			ideology = despotism
 			traits = {
@@ -1741,7 +1916,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS-Panzergrenadier-Division Oliver Cromwell\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.8 start_equipment_factor = 0.01" 
+						division = "name = \"SS-Panzergrenadier-Division Oliver Cromwell\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.65 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -1757,7 +1932,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS-Panzergrenadier-Division Oliver Cromwell\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.8 start_equipment_factor = 0.01" 
+						division = "name = \"SS-Panzergrenadier-Division Oliver Cromwell\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.65 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -1770,7 +1945,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS-Panzergrenadier-Division Oliver Cromwell\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.8 start_equipment_factor = 0.01" 
+						division = "name = \"SS-Panzergrenadier-Division Oliver Cromwell\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.65 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -1805,11 +1980,11 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"SS Panzer-Division Oliver Cromwell\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+							division = "name = \"SS Panzer-Division Oliver Cromwell\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 						create_unit = {
-							division = "name = \"SS Panzer-Division Sankt Georg\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+							division = "name = \"SS Panzer-Division Sankt Georg\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
@@ -1825,11 +2000,11 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS Panzer-Division Oliver Cromwell\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Oliver Cromwell\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 					create_unit = {
-						division = "name = \"SS Panzer-Division Sankt Georg\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Sankt Georg\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -1842,11 +2017,11 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS Panzer-Division Oliver Cromwell\" division_template = \"SS Panzer Division\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Oliver Cromwell\" division_template = \"SS Panzer Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 					create_unit = {
-						division = "name = \"SS Panzer-Division Sankt Georg\" division_template = \"SS Panzer Division\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Sankt Georg\" division_template = \"SS Panzer Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -1862,8 +2037,8 @@ country_event = {
 				check_variable = { var = SS_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_manpower = 1000
-		army_experience = 10
+		add_manpower = 30000
+		army_experience = 20
 		add_to_variable = { var = SS_anger value = 10}
 		SS_resolve_effects_ss = yes
 		subtract_from_variable = { var = wehrmacht_anger value = 5}
@@ -1900,7 +2075,7 @@ country_event = {
 				limit = { ROOT = { has_full_control_of_state = PREV } }
 				prioritize = { 64 }
 				create_unit = {
-					division = "name = \"Gälische Freiwilligen-Divison der Waffen-SS\" division_template = \"SS Waffen-Grenadier-Division\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+					division = "name = \"Gälische Freiwilligen-Divison der Waffen-SS\" division_template = \"SS Waffen-Grenadier-Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 					owner = GER
 				}
 			}
@@ -1934,7 +2109,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"Gälische Freiwilligen-Divison der Waffen-SS\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"Gälische Freiwilligen-Divison der Waffen-SS\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -1950,7 +2125,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"Gälische Freiwilligen-Divison der Waffen-SS\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"Gälische Freiwilligen-Divison der Waffen-SS\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -1963,7 +2138,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"Gälische Freiwilligen-Divison der Waffen-SS\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.7 start_equipment_factor = 0.01" 
+						division = "name = \"Gälische Freiwilligen-Divison der Waffen-SS\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -1979,8 +2154,8 @@ country_event = {
 				check_variable = { var = SS_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_manpower = 1000
-		army_experience = 10
+		add_manpower = 30000
+		army_experience = 20
 		add_to_variable = { var = SS_anger value = 10}
 		SS_resolve_effects_ss = yes
 		subtract_from_variable = { var = wehrmacht_anger value = 5}
@@ -2016,7 +2191,7 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"SS Panzergrenadier-Division Sveaborg\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 1.0 start_equipment_factor = 0.01" 
+							division = "name = \"SS Panzergrenadier-Division Sveaborg\" division_template = \"SS Panzergrenadier Division (n.A.)\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
@@ -2032,7 +2207,7 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"SS Panzergrenadier-Division Sveaborg\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 1.0 start_equipment_factor = 0.01" 
+							division = "name = \"SS Panzergrenadier-Division Sveaborg\" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
@@ -2045,7 +2220,7 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"SS Division Sveaborg\" division_template = \"SS Motorisierte Division\" start_experience_factor = 1.0 start_equipment_factor = 0.01" 
+							division = "name = \"SS Division Sveaborg\" division_template = \"SS Motorisierte Division\" start_experience_factor = 0.8 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
@@ -2081,7 +2256,7 @@ country_event = {
 						limit = { ROOT = { has_full_control_of_state = PREV } }
 						prioritize = { 64 }
 						create_unit = {
-							division = "name = \"SS Panzer-Division Sveaborg\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+							division = "name = \"SS Panzer-Division Sveaborg\" division_template = \"SS Panzer Division (vollgep.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 							owner = GER
 						}
 					}
@@ -2097,7 +2272,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS Panzer-Division Sveaborg\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Sveaborg\" division_template = \"SS Panzer Division (n.A.)\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -2110,7 +2285,7 @@ country_event = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 64 }
 					create_unit = {
-						division = "name = \"SS Panzer-Division Sveaborg\" division_template = \"SS Panzer Division\" start_experience_factor = 0.5 start_equipment_factor = 0.01" 
+						division = "name = \"SS Panzer-Division Sveaborg\" division_template = \"SS Panzer Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
 						owner = GER
 					}
 				}
@@ -2126,10 +2301,50 @@ country_event = {
 				check_variable = { var = SS_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_manpower = 500
-		army_experience = 10
+		add_manpower = 30000
+		army_experience = 20
 		add_to_variable = { var = SS_anger value = 10}
 		SS_resolve_effects_ss = yes
 		subtract_from_variable = { var = wehrmacht_anger value = 5}
 	}
+}
+
+
+
+#SS recruitment, denmark
+country_event = {
+	id = ss_recruitment_event.101
+	title = ss_recruitment_event.1.t	
+	desc = ss_recruitment_event.1.desc	#
+	picture = GFX_report_event_german_volunteers					# 
+	
+	
+
+	is_triggered_only = yes
+	option = {
+		name = ss_recruitment_event.1.b #big
+		ai_chance = {
+			base = 25
+		}
+			custom_effect_tooltip = GER_division_danmark_armored_tt
+			hidden_effect = {	
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					create_unit = {
+						division = "name = \"SS Pansar Division Danmark\" division_template = \"SS Panzer Division\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = SWE
+					}
+				}
+			}
+		
+	}
+	option = {
+		name = ss_recruitment_event.1.c #small group of specialists
+		ai_chance = {
+			base = 0
+		}
+		add_manpower = 30000
+		army_experience = 20
+	}
+
 }

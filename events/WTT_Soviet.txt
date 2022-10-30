@@ -2,25 +2,13 @@
 # Soviet Events
 ###########################
 
-#  #  ##  #   ###       ##  ### ### #   # 
-#  # #  # #   #  #     #  #  #   #   # #  
-#### #  # #   #  #     #     #   #    #   
-#  # #  # #   #  #     #  #  #   #    #   
-#  #  ##  ### ###       ##  ###  #    #   
-
 add_namespace = wtt_soviet_hold_city
-
- ## ###  ##  #   ### #  #  ##  ###   ##  ###  
-#    #  #  # #    #  ## # #    #  # #  # #  # 
- #   #  #### #    #  # ## # ## ###  #### #  # 
-  #  #  #  # #    #  #  # #  # #  # #  # #  # 
-##   #  #  # ### ### #  #  ##  #  # #  # ###  
 
 # Defense of Stalingrad (state) successful
 country_event = {
 	id = wtt_soviet_hold_city.1
-	title = wtt_soviet_hold_city_t_success
-	desc = wtt_soviet_hold_city_d_success
+	title = wtt_soviet_hold_city_o_success
+	desc = wtt_soviet_hold_city_o_success
 	picture = GFX_report_event_stalin_01
 	
 	is_triggered_only = yes
@@ -46,17 +34,11 @@ country_event = {
 	}
 }
 
-#   ### #  # ### #  #  ##  ###   ##  ###  
-#   #   ## #  #  ## # #    #  # #  # #  # 
-#   ##  # ##  #  # ## # ## ###  #### #  # 
-#   #   #  #  #  #  # #  # #  # #  # #  # 
-### ### #  # ### #  #  ##  #  # #  # ###  
-
 # Defense of Leningrad (state) successful
 country_event = {
 	id = wtt_soviet_hold_city.3
-	title = wtt_soviet_hold_city_t_success
-	desc = wtt_soviet_hold_city_d_success
+	title = wtt_soviet_hold_city_o_success
+	desc = wtt_soviet_hold_city_o_success
 	picture = GFX_report_event_stalin_propaganda
 	
 	is_triggered_only = yes
@@ -82,17 +64,11 @@ country_event = {
 	}
 }
 
-#   #  ##   ##  ##   ##  #   # 
-## ## #  # #   #  # #  # #   # 
-# # # #  #  #  #    #  # # # # 
-#   # #  #   # #  # #  # # # # 
-#   #  ##  ##   ##   ##   # #  
-
 # Defense of Moscow (state) successful
 country_event = {
 	id = wtt_soviet_hold_city.5
-	title = wtt_soviet_hold_city_t_success
-	desc = wtt_soviet_hold_city_d_success
+	title = wtt_soviet_hold_city_o_success
+	desc = wtt_soviet_hold_city_o_success
 	picture = GFX_report_event_soviet_tank_parade
 	
 	is_triggered_only = yes
@@ -117,6 +93,3 @@ country_event = {
 		name = wtt_soviet_hold_city_o_fail
 	}
 }
-
-
-

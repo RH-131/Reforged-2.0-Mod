@@ -40,35 +40,7 @@ country_event = {
 					add_to_faction = FROM
 				}
 			}
-		}
-		else_if = {
-			limit = {
-				FROM = { has_completed_focus = PRC_government_of_national_defense }
-			}
-			if = {
-				limit = {
-					NOT = { is_in_faction_with = FROM }
-					FROM = { is_in_faction = no }
-				}
-				FROM = {
-					set_rule = { can_create_factions = yes }
-					create_faction = PRC_government_of_national_defense
-				}
-			}
-			else_if = {
-				limit = {
-					ROOT = { is_faction_leader  = yes }
-				}
-				ROOT = {
-					add_to_faction = FROM
-				}
-				add_ai_strategy = {
-					type = alliance
-					id = "CHI"
-					value = 200
-				}
-			}
-		}
+		}	
 		if = {
 			limit = {
 				FROM = { is_faction_leader = yes }
@@ -214,9 +186,7 @@ country_event = {
 	picture = GFX_report_event_japan_army_mountainside
 
 	is_triggered_only = yes
-	trigger = {
-		not = { has_war_with = event_target:WTT_communist_china }
-	}
+	
 	option = {
 		name = wtt_prc.20.a #don't do anything
 		ai_chance = {
@@ -591,44 +561,6 @@ country_event = {
 	
 	option = {
 		name = wtt_prc.30.a #okay
-	}
-}
-
-# Hidden event to 'age' Franco after 1950
-country_event = {
-	id = wtt_prc.33
-
-	trigger = {
-		tag = PRC
-		has_country_leader = {
-		    character = PRC_mao_zedong
-		    ruling_only = yes
-		}
-		date > 1950.1.1
-	}
-
-	mean_time_to_happen = {
-		days = 2
-	}
-
-	fire_only_once = yes
-
-	hidden = yes
-
-	immediate = {
-		hidden_effect = {
-			retire_country_leader = yes
-			create_country_leader = {
-				name = "Mao Zedong"
-				desc = "POLITICS_MAO_ZEDONG_DESC"
-				picture = GFX_portrait_prc_mao_zedong
-				expire = "1965.1.1"
-				ideology = marxism
-				traits = {
-					
-				}
-			}
-		}
 	}
 }
 
@@ -1087,7 +1019,7 @@ country_event = {
 			base = 10
 		}
 		FROM = {
-			country_event = { id = wtt_warlord_vs_prc.33 }
+			country_event = { id = wtt_warlord_vs_prc.3 }
 		}
 		PRC_soviet_tribute_clear_all = yes
 	}
@@ -1202,3 +1134,4 @@ country_event = {
 		}
 	}
 }
+

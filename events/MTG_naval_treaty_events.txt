@@ -189,17 +189,9 @@ country_event = {
 				}
 			}
 		}
-		FROM = {
-			country_event = { id = MTG_naval_treaty.6 days = 3 }
-			effect_tooltip = {
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = PREV
-				}
-			}
-		}	
 	}
 }
+
 #country accepts disarmament
 country_event = {
 	id = MTG_naval_treaty.5
@@ -241,20 +233,16 @@ country_event = {
 				factor = 0.25
 			}
 		}
-		send_embargo = FROM
-		add_opinion_modifier = {
-			target = FROM 
-			modifier = broken_naval_treaty_opinion_mod
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
 		}
+		
 	}
 	option = {# fine
 		name = MTG_naval_treaty.6.b 
 		ai_chance = {
 			factor = 30
-			modifier = {
-				has_completed_focus = ENG_enforce_the_naval_treaties
-				factor = 0
-			}
 		}
 	}
 }
@@ -283,15 +271,18 @@ country_event = {
 	
 	
 	hidden = yes
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = 1 }
 	fire_only_once = yes
-	trigger = {
-		any_country = {
-			has_naval_treaty_trigger = yes
-			has_war = yes
+	trigger = {	 
+		has_naval_treaty_trigger = yes
+		OR = {
 			any_enemy_country = {
 				is_major = yes
 				NOT = { tag = event_target:WTT_current_china_leader} #special exception
+		
+			}
+			JAP = {
+				has_completed_focus = JAP_intervene_in_china
 			}
 		}
 	}

@@ -1,0 +1,24 @@
+add_namespace = mongolia
+
+country_event = {
+    id = mongolia.1
+    title = mongolia.1.title
+    desc = mongolia.1.desc
+    picture = news_event_dutch_soldiers_indonesia.dds
+    fire_only_once = yes
+
+    trigger = {
+	tag = MON
+        MON = { has_completed_focus = MON_elevateministryofinternalaffairs }
+    }
+
+    mean_time_to_happen = { days = 7 }
+
+    immediate = {
+            add_ideas = MON_Internal_security
+			add_ideas = MON_officer_purged
+    }
+        option = {
+        name = mon.1.a
+    }
+}

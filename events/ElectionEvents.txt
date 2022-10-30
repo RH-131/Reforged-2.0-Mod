@@ -34,6 +34,7 @@ country_event = {
 				date < 1949.1.1
 			} 
 		}
+		NOT = { tag = MEX }
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		NOT = {
@@ -89,6 +90,8 @@ country_event = {
 				date < 1949.1.1
 			} 
 		}
+		NOT = { tag = MEX }
+		date > 1938.01.01
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		has_war = no
@@ -163,10 +166,6 @@ country_event = {
 				tag = USA 
 				date < 1949.1.1
 			} 
-			AND = { 
-				tag = GRE 
-				#has_dlc = "Battle for the Bosporus"
-			} 
 		}
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
@@ -203,7 +202,6 @@ country_event = {
 				can_lose_unity = yes
 			}
 		}
-		add_stability = -0.05
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.03
@@ -226,10 +224,6 @@ country_event = {
 			AND = { 
 				tag = USA 
 				date < 1949.1.1
-			} 
-			AND = { 
-				tag = GRE 
-				#has_dlc = "Battle for the Bosporus"
 			} 
 		}
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
@@ -289,10 +283,9 @@ country_event = {
 				}
 			}
 		}
-		add_stability = -0.05
 		add_popularity = {
 			ideology = democratic
-			popularity = 0.03
+			popularity = 0.01
 		}
 		set_country_flag = government_declined_communists
 	}
@@ -312,10 +305,6 @@ country_event = {
 			AND = { 
 				tag = USA 
 				date < 1949.1.1
-			} 
-			AND = { 
-				tag = GRE 
-				#has_dlc = "Battle for the Bosporus"
 			} 
 		}
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
@@ -391,10 +380,6 @@ country_event = {
 				tag = USA 
 				date < 1949.1.1
 			} 
-			AND = { 
-				tag = GRE 
-				#has_dlc = "Battle for the Bosporus"
-			} 
 		}
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
@@ -430,7 +415,7 @@ country_event = {
 		}
 		add_popularity = {
 			ideology = fascism
-			popularity = 0.05
+			popularity = 0.1
 		}
 	}
 
@@ -443,7 +428,6 @@ country_event = {
 				can_lose_unity = no
 			}
 		}
-		add_stability = -0.05
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.03
@@ -467,10 +451,6 @@ country_event = {
 			AND = { 
 				tag = USA 
 				date < 1949.1.1
-			} 
-			AND = { 
-				tag = GRE 
-				#has_dlc = "Battle for the Bosporus"
 			} 
 		}
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
@@ -521,7 +501,6 @@ country_event = {
 				can_lose_unity = no
 			}
 		}
-		add_stability = -0.05
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.03
@@ -546,18 +525,6 @@ country_event = {
 			AND = {
 				original_tag = SPR
 				has_dlc = "La Resistance"
-			}
-			AND = {
-				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				original_tag = TUR
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				original_tag = SWI
-				has_dlc = "By Blood Alone"
 			}
 		}
 	}
@@ -599,16 +566,6 @@ country_event = {
 		has_government = democratic
 		communism > 0.5
 		is_puppet = no
-		NOT = {
-			AND = {
-				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				original_tag = TUR
-				has_dlc = "Battle for the Bosporus"
-			}
-		}
 	}
 	
 	option = {

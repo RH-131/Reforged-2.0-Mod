@@ -1,0 +1,66 @@
+﻿add_namespace = yak
+
+# The Great Yak ascends
+country_event = {
+	id = yak.1
+	title = yak.1.t
+	desc = yak.1.d
+	picture = GFX_report_event_manchukuo_army_2
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		name = yak.1.a
+		create_country_leader = {
+			name = "The Great Yak"
+			desc = "POLITICS_YAK_DESC"
+			picture = "Portrait_Great_Yak.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				godlike_creature
+			}
+		}
+		set_research_slots = 8
+		add_ideas = great_yak_idea
+		set_cosmetic_tag = YAK_EMPIRE
+		news_event = { days = 6 id = yak.2 }
+		create_field_marshal = {
+			name = "The Great Yak"
+			portrait_path = "gfx/leaders/TIB/Portrait_Great_Yak.dds"
+			traits = { yak_command }
+			skill = 9
+			attack_skill = 9
+			defense_skill = 9
+			planning_skill = 9
+			logistics_skill = 9
+		}
+		create_corps_commander = {
+			name = "The Great Yak"
+			portrait_path = "gfx/leaders/TIB/Portrait_Great_Yak.dds"
+			traits = { yak_command }
+			skill = 9
+			attack_skill = 9
+			defense_skill = 9
+			planning_skill = 9
+			logistics_skill = 9
+		}		
+	}
+	option = { 
+		name = yak.1.b
+	}	
+}
+news_event = {
+	id = yak.2
+	title = yak.2.t
+	desc = yak.2.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yak.2.a
+	}
+}

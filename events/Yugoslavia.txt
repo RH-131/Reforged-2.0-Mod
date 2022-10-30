@@ -13,41 +13,10 @@ country_event = {
 
 	fire_only_once = yes
 	
-	trigger = {
-		tag = ENG
-		NOT = {
-			has_dlc = "Death or Dishonor"
-		}
-		YUG = {
-			OR = {
-				is_in_faction_with = GER
-				gives_military_access_to = GER
-			}
-		}
-		HUN = { owns_state = 76 }
-		GER = {
-			OR = {
-				AND = { is_in_faction_with = ITA is_in_faction_with = HUN }
-				AND = { is_in_faction_with = ITA is_in_faction_with = BUL }
-				AND = { is_in_faction_with = HUN is_in_faction_with = BUL }
-			}
-		}
-		ENG = { has_completed_focus = uk_balkan_strategy }
-		ENG = { NOT = { is_in_faction_with = GER } }
-		ENG = { NOT = { has_country_flag = has_already_decided_yugo_coup_flag } }
-		
-	}
+	is_triggered_only = yes
 
 	immediate = {
-		hidden_effect = { 
-			remove_ideas = anti_german_military 
-			ENG = { set_country_flag = has_already_decided_yugo_coup_flag }
-			YUG = { set_country_flag = has_already_decided_yugo_coup_flag }
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 14
+		hidden_effect = { remove_ideas = anti_german_military }
 	}
 	
 	option = {
@@ -80,34 +49,16 @@ country_event = {
 
 	option = {
 		name = yugoslavia.2.a
-		hidden_effect = {
-			if = {
-				limit = {
-					date > 1941.09.06
-				}
-				remove_trait = {
-					character = YUG_peter_ii
-					ideology = despotism
-					trait = underage_monarch
-				}
-				remove_trait = {
-					character = YUG_peter_ii
-					ideology = conservatism
-					trait = underage_monarch
-				}				
-				set_country_flag = peter_is_of_age
-				YUG_peter_ii = {
-					set_portraits = {
-						civilian = {
-					    	large="GFX_portrait_yugoslavia_peter_ii_old"
-						}
-					}					
-				}
-			}
-		}
 		retire_country_leader = yes
-		YUG_peter_ii = {
-			promote_character = { ideology = despotism }
+		create_country_leader = {
+			name = "Peter II"
+			desc = "POLITICS_PETER_II_DESC"
+			picture = "Portrait_Yugoslavia_Peter_II.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				#
+			}
 		}
 		add_timed_idea = { idea = anti_nazi_coup days = 730 }
 		add_opinion_modifier = { target = GER modifier = anti_german_coup }
@@ -136,100 +87,10 @@ country_event = {
 	option = {
 		name = yugoslavia.2.b
 		ai_chance = { factor = 0 }
-		remove_ideas = { king_peter_1 }
-		if = {
-			limit = {
-				has_completed_focus = YUG_dissolve_serbia
-			}
-			start_civil_war = { ideology = democratic size = 0.6 capital = 107 states = { 108 803 } }
-		}
-		else = {
-			start_civil_war = { ideology = democratic size = 0.6 capital = 107 states = { 108 803 802 106 105 } }
-		}
-		random_country = {
-			limit = {
-				original_tag = YUG
-				NOT = { tag = ROOT }
-				has_government = democratic
-			}
-			add_ideas = { king_peter_1 }
-			if = {
-				limit = {
-					PREV = { has_completed_focus = YUG_dissolve_serbia }
-				}
-				puppet = KOS
-				puppet = MNT
-				puppet = MAC
-			}
-			if = {
-				limit = {
-					PREV = { has_completed_focus = YUG_divide_bosnia }
-				}
-				puppet = HRZ
-			}
-			every_other_country = {
-				limit = {
-					is_subject_of = PREV
-				}
-				set_country_flag = yugoslav_puppet_flag
-				add_to_war = { 
-					targeted_alliance = PREV 
-					enemy = PREV.PREV
-					hostility_reason = asked_to_join
-				}
-			}
-			every_other_country = {
-				limit = {
-					is_subject_of = PREV.PREV
-				}
-				set_country_flag = yugoslav_puppet_flag #transfer puppets at the end of the war
-				add_to_war = { 
-					targeted_alliance = PREV.PREV
-					enemy = PREV
-					hostility_reason = asked_to_join
-				}
-			}
-			if = {
-				limit = {
-					PREV = {
-						has_cosmetic_tag = SER
-					}
-				}
-				set_cosmetic_tag = SER
-			}
-			retire_country_leader = yes
-			set_popularities = {
-				democratic = 50
-				neutrality = 40
-				fascism = 5
-				communism = 5
-			}
-			set_capital = { state = 107 }
-			YUG_peter_ii = {
-				promote_character = { ideology = despotism }
-				promote_character = { ideology = conservatism }
-			}
-			if = {
-				limit = {
-					date > 1941.09.06
-				}
-				YUG_peter_ii = {
-					swap_country_leader_traits = { 
-						remove = underage_monarch
-						add = legitimate_heir
-					}
-				}
-				hidden_effect = { 
-					set_country_flag = peter_is_of_age 
-					YUG_peter_ii = {
-						set_portraits = {
-							civilian = {
-						    	large="GFX_portrait_yugoslavia_peter_ii_old"
-							}
-						}
-					}
-				}
-			}
+		GER = { puppet = YUG }
+		start_civil_war = {
+			ideology = democratic
+			size = 0.4
 		}
 	}
 }
@@ -252,7 +113,7 @@ country_event = {
 			has_global_flag = FRA_abandoned_yugoslavia
 		}
 	}
-	picture = GFX_report_event_chamberlain_announce
+	picture = GFX_report_event_degaulle_churchill
 	
 	is_triggered_only = yes
 	
@@ -263,7 +124,7 @@ country_event = {
 				create_wargoal = {
 					type = take_state_focus
 					target = YUG
-					generator = { 102 853 }
+					generator = { 102 }
 				}
 			}
 		}
@@ -275,7 +136,7 @@ country_event = {
 	id = yugoslavia.4
 	title = yugoslavia.3.t
 	desc = yugoslavia.4.d
-	picture = GFX_report_event_chamberlain_announce
+	picture = GFX_report_event_degaulle
 	
 	is_triggered_only = yes
 	
@@ -286,7 +147,7 @@ country_event = {
 				create_wargoal = {
 					type = take_state_focus
 					target = YUG
-					generator = { 102 853 }
+					generator = { 102 }
 				}
 			}
 		}
@@ -298,7 +159,7 @@ country_event = {
 	id = yugoslavia.5
 	title = yugoslavia.5.t
 	desc = yugoslavia.5.d
-	picture = GFX_report_event_hitler_croatia_handshake
+	picture = GFX_report_event_king_peter_cabinet
 	
 	is_triggered_only = yes
 	
@@ -333,14 +194,20 @@ country_event = {
 	}
 	option = { # Refuse anyway
 		name = yugoslavia.5.b
-		ai_chance = { factor = 10 }
+		ai_chance = { 
+			factor = 10
+			modifier = {  # historical mod
+				factor = 0
+				is_historical_focus_on = yes 
+			} 
+		}
 		GER = {
 			country_event = germany.95 #Germany gains wargoal
 			effect_tooltip = {
 				create_wargoal = {
 					type = take_state_focus
 					target = YUG
-					generator = { 102 853 }
+					generator = { 102 }
 				}
 			}
 		}
@@ -353,7 +220,7 @@ country_event = {
 	id = yugoslavia.6
 	title = yugoslavia.3.t
 	desc = yugoslavia.6.d
-	picture = GFX_report_event_fascists_posing
+	picture = GFX_report_event_mussolini_flag
 	
 	is_triggered_only = yes
 	
@@ -364,7 +231,7 @@ country_event = {
 				create_wargoal = {
 					type = take_state_focus
 					target = YUG
-					generator = { 102 853 }
+					generator = { 102 }
 				}
 			}
 		}
@@ -423,30 +290,10 @@ country_event = {
 		GER = {
 
 			add_political_power = -75		
-			add_named_threat = { threat = 5 name = GER_fate_of_yugoslavia }
-			every_country = {
-				limit = {
-					is_subject_of = YUG
-					OR = {
-						original_tag = BOS
-						original_tag = HRZ
-						original_tag = CRO
-						original_tag = MAC
-						original_tag = SLV
-						original_tag = KOS
-						original_tag = MNT
-						original_tag = HUN
-						original_tag = ROM
-					}
-				}
-				GER = { annex_country = { target = PREV transfer_troops = no } }
-			}
+			
 			annex_country = { target = YUG transfer_troops = no }
 
-			hidden_effect = {
-				set_global_flag = GER_fate_of_yugoslavia_annex_YUG
-				news_event = { hours = 6 id = news.169 }
-			}
+			
 		}
 	}
 }
@@ -467,6 +314,10 @@ country_event = {
 		name = yugoslavia.8.a
 		ai_chance = { 
 			factor = 10
+			modifier = {
+				factor = 0 
+				is_historical_focus_on = yes 
+			}
 		}
 
 		GER = { country_event = { id = germany.111 days = 1 } 
@@ -485,20 +336,6 @@ country_event = {
 
 		ai_chance = {
 			factor = 10
-			modifier = {
-				factor = 0
-				any_other_country = {
-					is_major = yes
-					OR = {
-						has_guaranteed = YUG
-						is_in_faction_with = YUG
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				is_puppet = yes
-			} 
 		}
 
 		trigger = { 
@@ -513,29 +350,9 @@ country_event = {
 
 		GER = {		
 			add_political_power = -25
-			add_named_threat = { threat = 3 name = GER_fate_of_yugoslavia }
-			
-			CRO = {
-				if = {
-					limit = { YUG = { owns_state = 103 } }
-					transfer_state = 103
-				}
-				if = {
-					limit = { YUG = { owns_state = 104 } }
-					transfer_state = 104
-				}
-				if = {
-					limit = { YUG = { owns_state = 109 } }
-					transfer_state = 109
-				}						
-			}
-			puppet = CRO
 			annex_country = { target = YUG transfer_troops = no }
 
-			hidden_effect = {
-				set_global_flag = GER_fate_of_yugoslavia_puppet_CRO_annex_YUG
-				news_event = { hours = 6 id = news.169 }
-			}
+			
 		}
 	}
 }
@@ -568,7 +385,7 @@ country_event = {
 
 	#Seems fair
 	option = {
-		name = yugoslavia.9.b
+		name = yugoslavia.9.c
 		ai_chance = { 
 			factor = 10
 			modifier = {
@@ -589,30 +406,8 @@ country_event = {
 
 		GER = {
 
-			add_named_threat = { threat = 2 name = GER_fate_of_yugoslavia }
-			
-			CRO = {
-				if = {
-					limit = { YUG = { owns_state = 103 } }
-					transfer_state = 103
-				}
-				if = {
-					limit = { YUG = { owns_state = 104 } }
-					transfer_state = 104
-				}
-				if = {
-					limit = { YUG = { owns_state = 109 } }
-					transfer_state = 109
-				}						
-			}
-			puppet = CRO
 			puppet = YUG
-
-
-			hidden_effect = {
-				set_global_flag = GER_fate_of_yugoslavia_puppet_CRO_YUG
-				news_event = { hours = 6 id = news.169 }
-			}
+			
 		}
 	}
 }
