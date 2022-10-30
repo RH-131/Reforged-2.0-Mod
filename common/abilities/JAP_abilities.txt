@@ -10,17 +10,22 @@ ability = {
 		allowed = {
 			is_leading_army_group = no
 			is_border_war = no
-			OWNER = {
+            OWNER = {
 				OR = {
 					has_completed_focus = JAP_warrior_spirit
-					has_completed_focus = SPA_cultivate_fanaticism
 				}
 			}
 		}
 		
 		cost = 0.05
 		duration = 168
-		
+		unit_modifiers = {
+			paradrop_organization_factor = -1.0
+			paratrooper_aa_defense = -1.0
+			air_paradrop_attack_factor = -0.1
+			air_paradrop_defence_factor = -0.1
+			air_paradrop_agility_factor = -0.1
+		}
 		one_time_effect = {
 			add_temporary_buff_to_units = {
 				combat_defense = 0.2
