@@ -1,11 +1,9 @@
 #	Example:
-#
+# 
 #	example_dynamic_modifier = {
 #		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
 #		enable = { always = yes } #optional, the modifier won't apply if not enabled
 #		remove_trigger = { always = no } #optional, will remove the modifier if true
-#       attacker_modifier = no  # if yes this modifier will also be read in combat for
-#                               # people engaging in the combat even if not in the state
 #
 #		# list of modifiers
 #		fuel_cost = 321
@@ -25,3 +23,11 @@
 #
 #	can be added to countries, states or unit leaders
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+usa_popular_support_dynamic_modifier = {
+	enable = { always = yes } #optional, the modifier won't apply if not enabled
+	remove_trigger = { is_in_faction_with = ENG } #optional, will remove the modifier if true
+
+	# list of modifiers
+	war_support_factor = USA_popular_support_var
+}
