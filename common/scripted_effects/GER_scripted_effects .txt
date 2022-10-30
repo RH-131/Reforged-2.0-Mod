@@ -2,6 +2,41 @@
 #Important to put HIGHEST first
 GER_mefo_bills_level_up = {
 	if = {
+		limit = { has_idea = GER_mefo_bills_22 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_22
+			add_idea = GER_mefo_bills_23
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_21 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_21
+			add_idea = GER_mefo_bills_22
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_20 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_20
+			add_idea = GER_mefo_bills_21
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_19 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_19
+			add_idea = GER_mefo_bills_20
+		}		
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_18 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_18
+			add_idea = GER_mefo_bills_19
+		}
+	}
+	else_if = {
 		limit = { has_idea = GER_mefo_bills_17 }
 		swap_ideas = {
 			remove_idea = GER_mefo_bills_17
@@ -196,6 +231,26 @@ GER_remove_mefo_bills = {
 		limit = { has_idea = GER_mefo_bills_18 }
 		remove_ideas = GER_mefo_bills_18
 	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_19 }
+		remove_ideas = GER_mefo_bills_19
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_20 }
+		remove_ideas = GER_mefo_bills_20
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_21 }
+		remove_ideas = GER_mefo_bills_21
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_22 }
+		remove_ideas = GER_mefo_bills_22
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_23 }
+		remove_ideas = GER_mefo_bills_23
+	}
 }
 
 # Like the level up effect except it runs in reverse
@@ -203,6 +258,10 @@ GER_remove_mefo_bills = {
 
 GER_mefo_bills_level_down = {
 	if = {
+		limit = { has_idea = GER_mefo_bills_1 }
+		remove_ideas = GER_mefo_bills_1
+	}
+	else_if = {
 		limit = { has_idea = GER_mefo_bills_2 }
 		swap_ideas = {
 			remove_idea = GER_mefo_bills_2
@@ -321,447 +380,787 @@ GER_mefo_bills_level_down = {
 			add_idea = GER_mefo_bills_17
 		}
 	}
-}
-
-give_SOV_armor_research_bonuses = { #this effect is run for the Soviets!
-	if = {
-		limit = {
-			NOT = {
-				has_dlc = "No Step Back"
-			}
-		}
-		add_tech_bonus = {
-			name = med_armor_bonus
-			ahead_reduction = 2
-			category = cat_medium_armor
-		}
-		add_tech_bonus = {
-			name = armor_bonus
-			bonus = 1.0
-			uses = 1
-			category = armor
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_19 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_19
+			add_idea = GER_mefo_bills_18
 		}
 	}
-	if = { #double if because history files don't like else and this effect is run in the Soviet history file
-		limit = {
-			has_dlc = "No Step Back"
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_20 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_20
+			add_idea = GER_mefo_bills_19
 		}
-		create_equipment_variant = {
-			name = "A-20"
-			type = medium_tank_chassis_1
-			parent_version = 0
-			modules = {
-				main_armament_slot = tank_small_cannon_2
-				turret_type_slot = tank_medium_two_man_tank_turret
-				suspension_type_slot = tank_christie_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_diesel_engine
-				special_type_slot_1 = sloped_armor
-			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 8
-				tank_nsb_armor_upgrade = 2
-			}
-			icon = "GFX_SOV_basic_medium_tank_medium"
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_21 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_21
+			add_idea = GER_mefo_bills_20
+		}		
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_22 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_22
+			add_idea = GER_mefo_bills_21
 		}
-		create_equipment_variant = {
-			name = "KV-1"
-			type = heavy_tank_chassis_1
-			parent_version = 0
-			modules = {
-				main_armament_slot = tank_medium_cannon
-				turret_type_slot = tank_heavy_three_man_tank_turret
-				suspension_type_slot = tank_torsion_bar_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_diesel_engine		
-			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 10
-				tank_nsb_armor_upgrade = 9
-			}
-			icon = "GFX_SOV_improved_heavy_tank_medium"
-		}
-		add_tech_bonus = {
-			name = armor_bonus
-			bonus = 1.0
-			uses = 2
-			category = armor
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_23 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_23
+			add_idea = GER_mefo_bills_22
 		}
 	}
 }
 
-MR_pact_transfer_state_effect = {
+GER_economy_of_plunder = {
 	if = {
-		limit = {
-			96 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 96
-						is_subject_of = ROOT
-					}
-				}
+		limit = { has_idea = GER_economy_of_plunder_5 }
+		swap_ideas = {
+			remove_idea = GER_economy_of_plunder_5
+			add_idea = GER_economy_of_plunder_6
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_economy_of_plunder_4 }
+		swap_ideas = {
+			remove_idea = GER_economy_of_plunder_4
+			add_idea = GER_economy_of_plunder_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_economy_of_plunder_3 }
+		swap_ideas = {
+			remove_idea = GER_economy_of_plunder_3
+			add_idea = GER_economy_of_plunder_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_economy_of_plunder_2 }
+		swap_ideas = {
+			remove_idea = GER_economy_of_plunder_2
+			add_idea = GER_economy_of_plunder_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_economy_of_plunder_1 }
+		swap_ideas = {
+			remove_idea = GER_economy_of_plunder_1
+			add_idea = GER_economy_of_plunder_2
+		}		
+	}
+	else_if = {
+		limit = { NOT = { has_idea = GER_economy_of_plunder_1 } }
+		add_ideas = GER_economy_of_plunder_1
+	}
+}
+
+##Atlantikwall
+GER_increment_atlantikwall = {
+	if = {
+		limit = {has_country_flag = GER_atlantikwall_9}
+		clr_country_flag = GER_atlantikwall_9
+		set_country_flag = GER_atlantikwall_10
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_9
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_10
 			}
 		}
-		if = {
+		every_country = {
 			limit = {
 				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOU
-						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
-					}
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
 				}
 			}
-			SOU = { transfer_state = 96 }
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_9
+				add_idea = ENG_atlantikwall_10
+			}
 		}
-		else = {
-			random_other_country = {
-				limit = {
-					is_in_faction_with = SOU
-					OR = {
-						has_cosmetic_tag = LIT_belarus
-						has_cosmetic_tag = LAT_belarus
-						has_cosmetic_tag = EST_belarus
-						has_cosmetic_tag = BAL_UNIFIED
-					}
-				}
-				transfer_state = 96
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_9
+				add_idea = ITA_atlantikwall_10
 			}
 		}
 	}
-	if = {
-		limit = {
-			95 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 95
-						is_subject_of = ROOT
-					}
-				}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_8}
+		clr_country_flag = GER_atlantikwall_8
+		set_country_flag = GER_atlantikwall_9
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_8
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_9
 			}
 		}
-		if = {
+		every_country = {
 			limit = {
 				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOU
-						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
-					}
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
 				}
 			}
-			SOU = { transfer_state = 95 }
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_8
+				add_idea = ENG_atlantikwall_9
+			}
 		}
-		else = {
-			random_other_country = {
-				limit = {
-					is_in_faction_with = SOU
-					OR = {
-						has_cosmetic_tag = LIT_belarus
-						has_cosmetic_tag = LAT_belarus
-						has_cosmetic_tag = EST_belarus
-						has_cosmetic_tag = BAL_UNIFIED
-					}
-				}
-				transfer_state = 95
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_8
+				add_idea = ITA_atlantikwall_9
 			}
 		}
 	}
-	if = {
-		limit = {
-			94 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 94
-						is_subject_of = ROOT
-					}
-				}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_7}
+		clr_country_flag = GER_atlantikwall_7
+		set_country_flag = GER_atlantikwall_8
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_7
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_8
 			}
 		}
-		if = {
+		every_country = {
 			limit = {
 				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOU
-						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
-					}
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
 				}
 			}
-			SOU = { transfer_state = 94 }
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_7
+				add_idea = ENG_atlantikwall_8
+			}
 		}
-		else = {
-			random_other_country = {
-				limit = {
-					is_in_faction_with = SOU
-					OR = {
-						has_cosmetic_tag = LIT_belarus
-						has_cosmetic_tag = LAT_belarus
-						has_cosmetic_tag = EST_belarus
-						has_cosmetic_tag = BAL_UNIFIED
-					}
-				}
-				transfer_state = 94
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_7
+				add_idea = ITA_atlantikwall_8
 			}
 		}
 	}
-	if = {
-		limit = {
-			93 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 93
-						is_subject_of = ROOT
-					}
-				}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_6}
+		clr_country_flag = GER_atlantikwall_6
+		set_country_flag = GER_atlantikwall_7
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_6
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_7
 			}
 		}
-		SOU = { transfer_state = 93 }
-	}
-	if = {
-		limit = {
-			91 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 91
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		SOU = { transfer_state = 91 }
-	}
-	if = {
-		limit = {
-			97 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 97
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		if = {
+		every_country = {
 			limit = {
 				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOU
-						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
-					}
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
 				}
 			}
-			SOU = { transfer_state = 97 }
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_6
+				add_idea = ENG_atlantikwall_7
+			}
 		}
-		else = {
-			random_other_country = {
-				limit = {
-					is_in_faction_with = SOU
-					OR = {
-						has_cosmetic_tag = LIT_belarus
-						has_cosmetic_tag = LAT_belarus
-						has_cosmetic_tag = EST_belarus
-						has_cosmetic_tag = BAL_UNIFIED
-					}
-				}
-				transfer_state = 97
-				97 = {
-					add_core_of = PREV
-				}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_6
+				add_idea = ITA_atlantikwall_7
 			}
 		}
 	}
-	if = {
-		limit = {
-			89 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 89
-						is_subject_of = ROOT
-					}
-				}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_5}
+		clr_country_flag = GER_atlantikwall_5
+		set_country_flag = GER_atlantikwall_6
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_5
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_6
 			}
 		}
-		SOU = { transfer_state = 89 }
-	}
-	if = {
-		limit = {
-			784 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 784
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_global_flag = LIT_gets_vilnius
-					LIT = { controls_state = 784 }
-					LIT = { is_in_faction_with = SOU }
-				}
-				LIT = { exists = yes }
-			}
-			LIT = { transfer_state = 784 }
-		}
-		else_if = {
+		every_country = {
 			limit = {
 				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOU
-						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
-					}
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
 				}
 			}
-			SOU = { transfer_state = 784 }
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_5
+				add_idea = ENG_atlantikwall_6
+			}
 		}
-		else = {
-			random_other_country = {
-				limit = {
-					is_in_faction_with = SOU
-					OR = {
-						has_cosmetic_tag = LIT_belarus
-						has_cosmetic_tag = LAT_belarus
-						has_cosmetic_tag = EST_belarus
-						has_cosmetic_tag = BAL_UNIFIED
-					}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_5
+				add_idea = ITA_atlantikwall_6
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_4}
+		clr_country_flag = GER_atlantikwall_4
+		set_country_flag = GER_atlantikwall_5
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_4
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_5
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
 				}
-				transfer_state = 784
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_4
+				add_idea = ENG_atlantikwall_5
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_4
+				add_idea = ITA_atlantikwall_5
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_3}
+		clr_country_flag = GER_atlantikwall_3
+		set_country_flag = GER_atlantikwall_4
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_3
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_4
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_3
+				add_idea = ENG_atlantikwall_4
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_3
+				add_idea = ITA_atlantikwall_4
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_2}
+		clr_country_flag = GER_atlantikwall_2
+		set_country_flag = GER_atlantikwall_3
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_2
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_3
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_2
+				add_idea = ENG_atlantikwall_3
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_2
+				add_idea = ITA_atlantikwall_3
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_1}
+		clr_country_flag = GER_atlantikwall_1
+		set_country_flag = GER_atlantikwall_2
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_1
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_2
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_1
+				add_idea = ENG_atlantikwall_2
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_1
+				add_idea = ITA_atlantikwall_2
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_0}
+		clr_country_flag = GER_atlantikwall_0
+		set_country_flag = GER_atlantikwall_1
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_0
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_1
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_0
+				add_idea = ENG_atlantikwall_1
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_0
+				add_idea = ITA_atlantikwall_1
 			}
 		}
 	}
 }
-
-MR_pact_transfer_faction_state_effect = {
+GER_decrement_atlantikwall = {
 	if = {
-		limit = {
-			96 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 96
-						is_in_faction_with = ROOT
-					}
-				}
+		limit = {has_country_flag = GER_atlantikwall_1}
+		clr_country_flag = GER_atlantikwall_1
+		set_country_flag = GER_atlantikwall_0
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_1
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_0
 			}
 		}
-		SOU = { transfer_state = 96 }
-	}
-	if = {
-		limit = {
-			95 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 95
-						is_in_faction_with = ROOT
-					}
-				}
-			}
-		}
-		SOU = { transfer_state = 95 }
-	}
-	if = {
-		limit = {
-			94 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 94
-						is_in_faction_with = ROOT
-					}
-				}
-			}
-		}
-		SOU = { transfer_state = 94 }
-	}
-	if = {
-		limit = {
-			93 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 93
-						is_in_faction_with = ROOT
-					}
-				}
-			}
-		}
-		SOU = { transfer_state = 93 }
-	}
-	if = {
-		limit = {
-			91 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 91
-						is_in_faction_with = ROOT
-					}
-				}
-			}
-		}
-		SOU = { transfer_state = 91 }
-	}
-	if = {
-		limit = {
-			97 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 97
-						is_in_faction_with = ROOT
-					}
-				}
-			}
-		}
-		SOU = { transfer_state = 97 }
-	}
-	if = {
-		limit = {
-			89 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 89
-						is_in_faction_with = ROOT
-					}
-				}
-			}
-		}
-		SOU = { transfer_state = 89 }
-	}
-	if = {
-		limit = {
-			784 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = { 
-						controls_state = 784
-						is_in_faction_with = ROOT
-					}
-				}
-			}
-		}
-		if = {
+		every_country = {
 			limit = {
-				OR = {
-					has_global_flag = LIT_gets_vilnius
-					LIT = { controls_state = 784 }
+				NOT = {
+					tag = USA
 				}
-				LIT = { exists = yes }
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
 			}
-			LIT = { transfer_state = 784 }
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_1
+				add_idea = ENG_atlantikwall_0
+			}
 		}
-		else = {
-			SOU = { transfer_state = 784 }
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_1
+				add_idea = ITA_atlantikwall_0
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_2}
+		clr_country_flag = GER_atlantikwall_2
+		set_country_flag = GER_atlantikwall_1
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_2
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_1
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_2
+				add_idea = ENG_atlantikwall_1
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_2
+				add_idea = ITA_atlantikwall_1
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_3}
+		clr_country_flag = GER_atlantikwall_3
+		set_country_flag = GER_atlantikwall_2
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_3
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_2
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_3
+				add_idea = ENG_atlantikwall_2
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_3
+				add_idea = ITA_atlantikwall_2
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_4}
+		clr_country_flag = GER_atlantikwall_4
+		set_country_flag = GER_atlantikwall_3
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_4
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_3
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_4
+				add_idea = ENG_atlantikwall_3
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_4
+				add_idea = ITA_atlantikwall_3
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_5}
+		clr_country_flag = GER_atlantikwall_5
+		set_country_flag = GER_atlantikwall_4
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_5
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_4
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_5
+				add_idea = ENG_atlantikwall_4
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_5
+				add_idea = ITA_atlantikwall_4
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_6}
+		clr_country_flag = GER_atlantikwall_6
+		set_country_flag = GER_atlantikwall_5
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_6
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_5
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_6
+				add_idea = ENG_atlantikwall_5
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_6
+				add_idea = ITA_atlantikwall_5
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_7}
+		clr_country_flag = GER_atlantikwall_7
+		set_country_flag = GER_atlantikwall_6
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_7
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_6
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_7
+				add_idea = ENG_atlantikwall_6
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_7
+				add_idea = ITA_atlantikwall_6
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_8}
+		clr_country_flag = GER_atlantikwall_8
+		set_country_flag = GER_atlantikwall_7
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_8
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_7
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_8
+				add_idea = ENG_atlantikwall_7
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_8
+				add_idea = ITA_atlantikwall_7
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_9}
+		clr_country_flag = GER_atlantikwall_9
+		set_country_flag = GER_atlantikwall_8
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_9
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_8
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_9
+				add_idea = ENG_atlantikwall_8
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_9
+				add_idea = ITA_atlantikwall_8
+			}
+		}
+	}
+	else_if = {
+		limit = {has_country_flag = GER_atlantikwall_10}
+		clr_country_flag = GER_atlantikwall_10
+		set_country_flag = GER_atlantikwall_9
+		every_state = {
+			limit = {has_state_flag = atlantikwall_state}
+			remove_dynamic_modifier = {
+				modifier = atlantikwall_10
+			}
+			add_dynamic_modifier = {
+				modifier = atlantikwall_9
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+				OR = {
+					tag = ENG
+					is_in_faction_with = ENG
+				}
+			}
+			swap_ideas = {
+				remove_idea = ENG_atlantikwall_10
+				add_idea = ENG_atlantikwall_9
+			}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_atlantikwall_10
+				add_idea = ITA_atlantikwall_9
+			}
 		}
 	}
 }

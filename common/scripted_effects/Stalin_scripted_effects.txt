@@ -1,0 +1,1094 @@
+stalin_paranoia_effects = {
+	if = {
+		limit = { has_idea = stalins_reign_of_terror_1 }
+		remove_ideas = stalins_reign_of_terror_1
+	}
+	else_if = {
+		limit = { has_idea = stalins_reign_of_terror_2 }
+		swap_ideas = {
+			remove_idea = stalins_reign_of_terror_2
+			add_idea = stalins_reign_of_terror_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = stalins_reign_of_terror_3 }
+		swap_ideas = {
+			remove_idea = stalins_reign_of_terror_3
+			add_idea = stalins_reign_of_terror_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = stalins_reign_of_terror_4 }
+		swap_ideas = {
+			remove_idea = stalins_reign_of_terror_4
+			add_idea = stalins_reign_of_terror_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = stalins_reign_of_terror_5 }
+		swap_ideas = {
+			remove_idea = stalins_reign_of_terror_5
+			add_idea = stalins_reign_of_terror_4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = stalins_reign_of_terror_6 }
+		swap_ideas = {
+			remove_idea = stalins_reign_of_terror_6
+			add_idea = stalins_reign_of_terror_5
+		}
+	}
+}
+
+gulag_economy_effects = {
+	if = {
+		limit = { has_idea = SOV_gulag_economy_1 }
+		swap_ideas = {
+			remove_idea = SOV_gulag_economy_1
+			add_idea = SOV_gulag_economy_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SOV_gulag_economy_2 }
+		swap_ideas = {
+			remove_idea = SOV_gulag_economy_2
+			add_idea = SOV_gulag_economy_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SOV_gulag_economy_3 }
+		swap_ideas = {
+			remove_idea = SOV_gulag_economy_3
+			add_idea = SOV_gulag_economy_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SOV_gulag_economy_4 }
+		swap_ideas = {
+			remove_idea = SOV_gulag_economy_4
+			add_idea = SOV_gulag_economy_5
+		}
+	}
+}
+
+clear_stalin_paranoia_effects = {
+	if = {
+		limit = {
+			has_idea = stalins_reign_of_terror_1
+		}
+		remove_ideas = stalins_reign_of_terror_1
+	}
+	else_if = {
+		limit = {
+			has_idea = stalins_reign_of_terror_2
+		}
+		remove_ideas = stalins_reign_of_terror_2
+	}
+	else_if = {
+		limit = {
+			has_idea = stalins_reign_of_terror_3
+		}
+		remove_ideas = stalins_reign_of_terror_3
+	}
+	else_if = {
+		limit = {
+			has_idea = stalins_reign_of_terror_4
+		}
+		remove_ideas = stalins_reign_of_terror_4
+	}
+	else_if = {
+		limit = {
+			has_idea = stalins_reign_of_terror_5
+		}
+		remove_ideas = stalins_reign_of_terror_5
+	}
+	else_if = {
+		limit = {
+			has_idea = stalins_reign_of_terror_6
+		}
+		remove_ideas = stalins_reign_of_terror_6
+	}	
+}
+
+SOV_great_patriotic_war_scripted_effect = {
+	if = { 
+		limit = { 
+			check_variable = {
+    			var = eastern_front_points_var
+   				value = 46
+    			compare = equals
+			}
+		} 
+
+		add_manpower = -140000
+
+		division_template = {
+			name = "Strelkovaya Diviziya"
+			priority = 2
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+					
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+
+				artillery_brigade = { x = 3 y = 0 }		
+				artillery_brigade = { x = 3 y = 1 }
+				anti_tank_brigade = { x = 3 y = 2 }
+			}
+
+			support = {
+				DIV_HQ = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				anti_air_company = { x = 0 y = 2 }
+				military_police = { x = 1 y = 0 }
+				recon = { x = 1 y = 1 }
+			}
+		}
+
+		every_state = {
+			limit = { state = 219 }
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}				
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}				
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+		}
+	}
+
+	if = { 
+		limit = { 
+			check_variable = {
+    			var = eastern_front_points_var
+   				value = 54
+    			compare = equals
+			}
+		} 
+		add_timed_idea = {
+			idea = SOV_stiffening_resistance
+			days = 220
+		}	
+	}
+
+	if = {
+		limit = { 
+			check_variable = {
+    			var = eastern_front_points_var
+   				value = 60
+    			compare = equals
+			}
+		} 
+		division_template = {
+			name = "Strelkovaya Diviziya"
+			priority = 2
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+					
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+
+				artillery_brigade = { x = 3 y = 0 }		
+				artillery_brigade = { x = 3 y = 1 }
+				anti_tank_brigade = { x = 3 y = 2 }
+			}
+
+			support = {
+				DIV_HQ = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				anti_air_company = { x = 0 y = 2 }
+				military_police = { x = 1 y = 0 }
+				recon = { x = 1 y = 1 }
+			}
+		}
+
+		division_template = {
+			name = "NKVD Division"
+			priority = 2
+
+			regiments = {
+				light_infantry = { x = 0 y = 0 }
+				light_infantry = { x = 0 y = 1 }
+				light_infantry = { x = 0 y = 2 }
+				
+				light_infantry = { x = 1 y = 0 }
+				light_infantry = { x = 1 y = 1 }
+				light_infantry = { x = 1 y = 2 }
+					
+				light_infantry = { x = 2 y = 0 }
+				light_infantry = { x = 2 y = 1 }
+				light_infantry = { x = 2 y = 2 }
+
+				light_infantry = { x = 3 y = 0 }		
+				light_infantry = { x = 3 y = 1 }
+				light_infantry = { x = 3 y = 2 }
+				artillery_brigade = { x = 3 y = 3 }				
+			}
+
+			support = {
+				DIV_HQ = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				military_police = { x = 1 y = 0 }
+				recon = { x = 1 y = 1 }
+			}
+		}
+
+		every_state = {
+			limit = { state = 219 }
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}				
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}				
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}
+
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+		}
+	}
+
+	if = { 
+		limit = { 
+			check_variable = {
+    			var = eastern_front_points_var
+   				value = 68
+    			compare = equals
+			}
+		} 
+		if = {
+			limit = {
+				has_idea = SOV_stiffening_resistance
+			}
+			
+				remove_ideas = SOV_stiffening_resistance 
+				add_timed_idea = {
+					idea = SOV_stiffening_resistance_2
+					days = 220
+				}
+			
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_idea = SOV_stiffening_resistance
+				}
+			}
+				add_timed_idea = {
+					idea = SOV_stiffening_resistance_2
+					days = 220
+				}
+		}
+	}
+
+	if = { 
+		limit = { 
+			check_variable = {
+    			var = eastern_front_points_var
+   				value = 76
+    			compare = equals
+			}
+		} 
+
+		division_template = {
+			name = "Strelkovaya Diviziya"
+			priority = 2
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+					
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+
+				artillery_brigade = { x = 3 y = 0 }		
+				artillery_brigade = { x = 3 y = 1 }
+				anti_tank_brigade = { x = 3 y = 2 }
+			}
+
+			support = {
+				DIV_HQ = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				anti_air_company = { x = 0 y = 2 }
+				military_police = { x = 1 y = 0 }
+				recon = { x = 1 y = 1 }
+			}
+		}
+
+		division_template = {
+			name = "NKVD Division"
+			priority = 2
+
+			regiments = {
+				light_infantry = { x = 0 y = 0 }
+				light_infantry = { x = 0 y = 1 }
+				light_infantry = { x = 0 y = 2 }
+				
+				light_infantry = { x = 1 y = 0 }
+				light_infantry = { x = 1 y = 1 }
+				light_infantry = { x = 1 y = 2 }
+					
+				light_infantry = { x = 2 y = 0 }
+				light_infantry = { x = 2 y = 1 }
+				light_infantry = { x = 2 y = 2 }
+
+				light_infantry = { x = 3 y = 0 }		
+				light_infantry = { x = 3 y = 1 }
+				light_infantry = { x = 3 y = 2 }
+				artillery_brigade = { x = 3 y = 3 }				
+			}
+
+			support = {
+				DIV_HQ = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				military_police = { x = 1 y = 0 }
+				recon = { x = 1 y = 1 }
+			}
+		}
+
+		every_state = {
+			limit = { state = 219 }
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}				
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}				
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}
+
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+		}
+	}
+
+	if = {
+		limit = { 
+			check_variable = {
+    			var = eastern_front_points_var
+   				value = 84
+    			compare = equals
+			}
+		} 
+
+		if = {
+			limit = {
+				has_idea = SOV_stiffening_resistance_2
+			}
+				remove_ideas = SOV_stiffening_resistance_2
+				add_timed_idea = {
+					idea = SOV_stiffening_resistance_3
+					days = 220
+				}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_idea = SOV_stiffening_resistance_2
+				}
+			}
+				add_timed_idea = {
+					idea = SOV_stiffening_resistance_3
+					days = 220
+				}
+		}		
+	}
+
+	if = { 
+		limit = { 
+			check_variable = {
+    			var = eastern_front_points_var
+   				value = 90
+    			compare = equals
+			}
+		} 
+
+		division_template = {
+			name = "Strelkovaya Diviziya"
+			priority = 2
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+					
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+
+				artillery_brigade = { x = 3 y = 0 }		
+				artillery_brigade = { x = 3 y = 1 }
+				anti_tank_brigade = { x = 3 y = 2 }
+			}
+
+			support = {
+				DIV_HQ = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				anti_air_company = { x = 0 y = 2 }
+				military_police = { x = 1 y = 0 }
+				recon = { x = 1 y = 1 }
+			}
+		}
+
+		division_template = {
+			name = "NKVD Division"
+			priority = 2
+
+			regiments = {
+				light_infantry = { x = 0 y = 0 }
+				light_infantry = { x = 0 y = 1 }
+				light_infantry = { x = 0 y = 2 }
+				
+				light_infantry = { x = 1 y = 0 }
+				light_infantry = { x = 1 y = 1 }
+				light_infantry = { x = 1 y = 2 }
+					
+				light_infantry = { x = 2 y = 0 }
+				light_infantry = { x = 2 y = 1 }
+				light_infantry = { x = 2 y = 2 }
+
+				light_infantry = { x = 3 y = 0 }		
+				light_infantry = { x = 3 y = 1 }
+				light_infantry = { x = 3 y = 2 }
+				artillery_brigade = { x = 3 y = 3 }				
+			}
+
+			support = {
+				DIV_HQ = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				military_police = { x = 1 y = 0 }
+				recon = { x = 1 y = 1 }
+			}
+		}
+
+		every_state = {
+			limit = { state = 219 }		
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}				
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}				
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}
+
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}
+		}
+	}
+
+	if = { 
+		limit = { 
+			check_variable = {
+    			var = eastern_front_points_var
+   				value = 98
+    			compare = equals
+			}
+		} 
+
+		if = {
+			limit = {
+				has_idea = SOV_stiffening_resistance_3
+			}
+				remove_ideas = SOV_stiffening_resistance_3
+				add_timed_idea = {
+					idea = SOV_stiffening_resistance_4
+					days = 220
+				}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_idea = SOV_stiffening_resistance_3
+				}
+			}
+				add_timed_idea = {
+					idea = SOV_stiffening_resistance_4
+					days = 220
+				}
+		}
+	}
+
+	if = { 
+		limit = { 
+			check_variable = {
+    			var = eastern_front_points_var
+   				value = 106
+    			compare = equals
+			}
+		} 
+
+		division_template = {
+			name = "Strelkovaya Diviziya"
+			priority = 2
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+					
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+
+				artillery_brigade = { x = 3 y = 0 }		
+				artillery_brigade = { x = 3 y = 1 }
+				anti_tank_brigade = { x = 3 y = 2 }
+			}
+
+			support = {
+				DIV_HQ = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				anti_air_company = { x = 0 y = 2 }
+				military_police = { x = 1 y = 0 }
+				recon = { x = 1 y = 1 }
+			}
+		}
+
+		division_template = {
+			name = "NKVD Division"
+			priority = 2
+
+			regiments = {
+				light_infantry = { x = 0 y = 0 }
+				light_infantry = { x = 0 y = 1 }
+				light_infantry = { x = 0 y = 2 }
+				
+				light_infantry = { x = 1 y = 0 }
+				light_infantry = { x = 1 y = 1 }
+				light_infantry = { x = 1 y = 2 }
+					
+				light_infantry = { x = 2 y = 0 }
+				light_infantry = { x = 2 y = 1 }
+				light_infantry = { x = 2 y = 2 }
+
+				light_infantry = { x = 3 y = 0 }		
+				light_infantry = { x = 3 y = 1 }
+				light_infantry = { x = 3 y = 2 }
+				artillery_brigade = { x = 3 y = 3 }				
+			}
+
+			support = {
+				DIV_HQ = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				military_police = { x = 1 y = 0 }
+				recon = { x = 1 y = 1 }
+			}
+		}
+
+		every_state = {
+			limit = { state = 219 }
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}				
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}				
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}
+
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}
+	}
+
+	if = { 
+		limit = { 
+			check_variable = {
+    			var = eastern_front_points_var
+   				value = 114
+    			compare = equals
+			}
+		} 
+
+		division_template = {
+			name = "Strelkovaya Diviziya"
+			priority = 2
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+					
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+
+				artillery_brigade = { x = 3 y = 0 }		
+				artillery_brigade = { x = 3 y = 1 }
+				anti_tank_brigade = { x = 3 y = 2 }
+			}
+
+			support = {
+				DIV_HQ = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				anti_air_company = { x = 0 y = 2 }
+				military_police = { x = 1 y = 0 }
+				recon = { x = 1 y = 1 }
+			}
+		}
+
+		division_template = {
+			name = "NKVD Division"
+			priority = 2
+
+			regiments = {
+				light_infantry = { x = 0 y = 0 }
+				light_infantry = { x = 0 y = 1 }
+				light_infantry = { x = 0 y = 2 }
+				
+				light_infantry = { x = 1 y = 0 }
+				light_infantry = { x = 1 y = 1 }
+				light_infantry = { x = 1 y = 2 }
+					
+				light_infantry = { x = 2 y = 0 }
+				light_infantry = { x = 2 y = 1 }
+				light_infantry = { x = 2 y = 2 }
+
+				light_infantry = { x = 3 y = 0 }		
+				light_infantry = { x = 3 y = 1 }
+				light_infantry = { x = 3 y = 2 }
+				artillery_brigade = { x = 3 y = 3 }				
+			}
+
+			support = {
+				DIV_HQ = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				military_police = { x = 1 y = 0 }
+				recon = { x = 1 y = 1 }
+			}
+		}
+
+		every_state = {
+			limit = { state = 219 }
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}				
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}				
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}
+
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}	
+			create_unit = {
+				division = "name = \"NKVD Division\" division_template = \"NKVD Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
+				owner = SOV
+			}
+		}
+	}
+}

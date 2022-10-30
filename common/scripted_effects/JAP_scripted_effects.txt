@@ -63,10 +63,7 @@ JAP_interservice_rivalry_towards_navy = {
 			remove_idea = JAP_interservice_rivalry_army_dominant
 			add_idea = JAP_interservice_rivalry_army_strengthened
 		}
-	}
-	
-	
-	
+	}	
 }
 
 JAP_intervene_in_china_level_down = {
@@ -133,4 +130,489 @@ JAP_intervene_in_china_remove = {
 	else = {		
 		remove_ideas = JAP_intervene_in_china_1
 	}	
+}
+
+#Important to put HIGHEST first
+JAP_island_hopping_level_up = {
+	
+	if = {
+		limit = { has_idea = JAP_island_hopping14 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping14
+			add_idea = JAP_island_hopping15
+		}
+		JAP_increment_major_conquest = yes
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping13 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping13
+			add_idea = JAP_island_hopping14
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping12 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping12
+			add_idea = JAP_island_hopping13
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping11 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping11
+			add_idea = JAP_island_hopping12
+		}		
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping10 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping10
+			add_idea = JAP_island_hopping11
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping9 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping9
+			add_idea = JAP_island_hopping10
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping8 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping8
+			add_idea = JAP_island_hopping9
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping7 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping7
+			add_idea = JAP_island_hopping8
+		}		
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping6 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping6
+			add_idea = JAP_island_hopping7
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping5 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping5
+			add_idea = JAP_island_hopping6
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping4 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping4
+			add_idea = JAP_island_hopping5
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping3 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping3
+			add_idea = JAP_island_hopping4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping2 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping2
+			add_idea = JAP_island_hopping3
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping1}
+		swap_ideas = {
+			remove_idea = JAP_island_hopping1
+			add_idea = JAP_island_hopping2
+		}
+	}
+}
+
+# Like the level up effect except it runs in reverse
+JAP_island_hopping_level_down = {
+	if = {
+		limit = { has_idea = JAP_island_hopping1 }
+		remove_ideas = JAP_island_hopping1
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping2 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping2
+			add_idea = JAP_island_hopping1
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping3 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping3
+			add_idea = JAP_island_hopping2
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping4 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping4
+			add_idea = JAP_island_hopping3
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping5 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping5
+			add_idea = JAP_island_hopping4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping6 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping6
+			add_idea = JAP_island_hopping5
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping7 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping7
+			add_idea = JAP_island_hopping6
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping8 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping8
+			add_idea = JAP_island_hopping7
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping9 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping9
+			add_idea = JAP_island_hopping8
+		}		
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping10 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping10
+			add_idea = JAP_island_hopping9
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping11 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping11
+			add_idea = JAP_island_hopping10
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping12 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping12
+			add_idea = JAP_island_hopping11
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping13 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping13
+			add_idea = JAP_island_hopping12
+		}		
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping14 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping14
+			add_idea = JAP_island_hopping13
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_island_hopping15 }
+		swap_ideas = {
+			remove_idea = JAP_island_hopping15
+			add_idea = JAP_island_hopping14
+		}
+		JAP_decrement_major_conquest = yes
+	}
+}
+
+JAP_increment_major_conquest = {
+	if = {
+		limit = { has_idea = JAP_major_conquest_4 }
+		swap_ideas = {
+			remove_idea = JAP_major_conquest_4
+			add_idea = JAP_major_conquest_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_major_conquest_3 }
+		swap_ideas = {
+			remove_idea = JAP_major_conquest_3
+			add_idea = JAP_major_conquest_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_major_conquest_2 }
+		swap_ideas = {
+			remove_idea = JAP_major_conquest_2
+			add_idea = JAP_major_conquest_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_major_conquest_1 }
+		swap_ideas = {
+			remove_idea = JAP_major_conquest_1
+			add_idea = JAP_major_conquest_2
+		}
+	}
+}
+
+JAP_decrement_major_conquest = {
+	if = {
+		limit = { has_idea = JAP_major_conquest_2 }
+		swap_ideas = {
+			remove_idea = JAP_major_conquest_2
+			add_idea = JAP_major_conquest_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_major_conquest_3 }
+		swap_ideas = {
+			remove_idea = JAP_major_conquest_3
+			add_idea = JAP_major_conquest_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_major_conquest_4 }
+		swap_ideas = {
+			remove_idea = JAP_major_conquest_4
+			add_idea = JAP_major_conquest_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_major_conquest_5 }
+		swap_ideas = {
+			remove_idea = JAP_major_conquest_5
+			add_idea = JAP_major_conquest_4
+		}
+	}
+}
+
+#Allies plane production malus
+JAP_allies_air_production_malus_up = {
+	if = {
+		limit = { has_idea = allies_air_production_malus_5 }
+		swap_ideas = {
+			remove_idea = allies_air_production_malus_5
+			add_idea = allies_air_production_malus_6
+		}
+	}
+	else_if = {
+		limit = { has_idea = allies_air_production_malus_4 }
+		swap_ideas = {
+			remove_idea = allies_air_production_malus_4
+			add_idea = allies_air_production_malus_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = allies_air_production_malus_3 }
+		swap_ideas = {
+			remove_idea = allies_air_production_malus_3
+			add_idea = allies_air_production_malus_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = allies_air_production_malus_2 }
+		swap_ideas = {
+			remove_idea = allies_air_production_malus_2
+			add_idea = allies_air_production_malus_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = allies_air_production_malus_1 }
+		swap_ideas = {
+			remove_idea = allies_air_production_malus_1
+			add_idea = allies_air_production_malus_2
+		}
+	}
+}
+
+JAP_allies_air_production_malus_down = {
+	if = {
+		limit = { has_idea = allies_air_production_malus_2 }
+		swap_ideas = {
+			remove_idea = allies_air_production_malus_2
+			add_idea = allies_air_production_malus_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = allies_air_production_malus_3 }
+		swap_ideas = {
+			remove_idea = allies_air_production_malus_3
+			add_idea = allies_air_production_malus_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = allies_air_production_malus_4 }
+		swap_ideas = {
+			remove_idea = allies_air_production_malus_4
+			add_idea = allies_air_production_malus_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = allies_air_production_malus_5 }
+		swap_ideas = {
+			remove_idea = allies_air_production_malus_5
+			add_idea = allies_air_production_malus_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = allies_air_production_malus_6 }
+		swap_ideas = {
+			remove_idea = allies_air_production_malus_6
+			add_idea = allies_air_production_malus_5
+		}
+	}
+}
+
+JAP_china_war_200_days = {
+	custom_effect_tooltip = JAP_china_war_200_days_tt
+	every_other_country = {
+		limit = {has_idea = ruling_sent_attache_to_china_idea}
+		army_experience = 8
+		air_experience = 2
+	}
+	every_other_country = {
+		limit = {has_idea = ruling_sent_attache_to_japan_idea}
+		army_experience = 12
+		air_experience = 3
+	}
+	every_other_country = {
+		limit = {has_idea = ruling_sent_air_to_china_idea}
+		air_experience = 17
+	}
+	every_other_country = {
+		limit = {has_idea = ruling_sent_air_to_japan_idea}
+		air_experience = 25
+	}
+	army_experience = 100
+	MAN = {
+		army_experience = 25
+	}
+	SIA = {
+		army_experience = 25
+	}
+	air_experience = 25
+}
+JAP_china_war_150_days = {
+	custom_effect_tooltip = JAP_china_war_150_days_tt
+	every_other_country = {
+		limit = {has_idea = ruling_sent_attache_to_china_idea}
+		army_experience = 16
+		air_experience = 4
+	}
+	every_other_country = {
+		limit = {has_idea = ruling_sent_attache_to_japan_idea}
+		army_experience = 24
+		air_experience = 6
+	}
+	every_other_country = {
+		limit = {has_idea = ruling_sent_air_to_china_idea}
+		air_experience = 33
+	}
+	every_other_country = {
+		limit = {has_idea = ruling_sent_air_to_japan_idea}
+		air_experience = 50
+	}
+	add_equipment_to_stockpile = { type = infantry_equipment amount = -1250 }
+	add_equipment_to_stockpile = { type = support_equipment amount = -125 }
+	add_equipment_to_stockpile = { type = horse_equipment amount = -250 }
+	add_equipment_to_stockpile = { type = motorized_equipment amount = -50 }
+	add_equipment_to_stockpile = { type = radio_equipment amount = -50 }
+	add_manpower = -10000
+	army_experience = 200
+	MAN = {
+		army_experience = 50
+	}
+	SIA = {
+		army_experience = 50
+	}
+	air_experience = 50
+}
+JAP_china_war_100_days = {
+	custom_effect_tooltip = JAP_china_war_100_days_tt
+	every_other_country = {
+		limit = {has_idea = ruling_sent_attache_to_china_idea}
+		army_experience = 24
+		air_experience = 6
+	}
+	every_other_country = {
+		limit = {has_idea = ruling_sent_attache_to_japan_idea}
+		army_experience = 36
+		air_experience = 9
+	}
+	every_other_country = {
+		limit = {has_idea = ruling_sent_air_to_china_idea}
+		air_experience = 50
+	}
+	every_other_country = {
+		limit = {has_idea = ruling_sent_air_to_japan_idea}
+		air_experience = 75
+	}
+	add_equipment_to_stockpile = { type = infantry_equipment amount = -2500 }
+	add_equipment_to_stockpile = { type = support_equipment amount = -250 }
+	add_equipment_to_stockpile = { type = horse_equipment amount = -500 }
+	add_equipment_to_stockpile = { type = motorized_equipment amount = -100 }
+	add_equipment_to_stockpile = { type = radio_equipment amount = -100 }
+	add_manpower = -20000
+	army_experience = 300
+	MAN = {
+		army_experience = 75
+	}
+	SIA = {
+		army_experience = 75
+	}
+	air_experience = 75
+}
+JAP_china_war_50_days = {
+	custom_effect_tooltip = JAP_china_war_50_days_tt
+	every_other_country = {
+		limit = {has_idea = ruling_sent_attache_to_china_idea}
+		army_experience = 32
+		air_experience = 8
+	}
+	every_other_country = {
+		limit = {has_idea = ruling_sent_attache_to_japan_idea}
+		army_experience = 48
+		air_experience = 12
+	}
+	every_other_country = {
+		limit = {has_idea = ruling_sent_air_to_china_idea}
+		air_experience = 66
+	}
+	every_other_country = {
+		limit = {has_idea = ruling_sent_air_to_japan_idea}
+		air_experience = 100
+	}
+	add_equipment_to_stockpile = { type = infantry_equipment amount = -5000 }
+	add_equipment_to_stockpile = { type = support_equipment amount = -500 }
+	add_equipment_to_stockpile = { type = horse_equipment amount = -1000 }
+	add_equipment_to_stockpile = { type = motorized_equipment amount = -200 }
+	add_equipment_to_stockpile = { type = radio_equipment amount = -200 }
+	add_manpower = -40000
+	army_experience = 400
+	MAN = {
+		army_experience = 100
+	}
+	SIA = {
+		army_experience = 100
+	}
+	air_experience = 100
 }
