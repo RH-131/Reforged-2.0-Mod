@@ -1,0 +1,807 @@
+leader_traits = {
+
+	POR_defense = {
+	    sprite = 13
+	    random = no
+		consumer_goods_factor = -0.01
+		political_power_factor = 0.25
+		war_support_weekly = 0.002
+		neutrality_drift = 0.20
+	}
+	
+	POR_navy = {
+	    sprite = 10
+        random = no
+		political_power_factor = -0.1
+		industrial_capacity_dockyard = 0.1
+		refit_ic_cost = -0.1
+		refit_speed = 0.1
+		repair_speed_factor = 0.1
+	}
+	
+	POR_landair = {
+	    sprite = 10
+		random = no
+		political_power_factor = -0.1
+		industrial_capacity_factory = 0.1
+	    army_core_attack_factor = 0.1
+	    army_core_defence_factor = 0.1
+	}
+	
+	POR_adv = {
+	    sprite = 10
+		random = no
+		production_speed_buildings_factor = 0.05
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+		local_resources_factor = 0.05
+	}
+	
+	ncr_theorist = {
+		random = no
+		experience_gain_army = 0.1
+		experience_gain_air = 0.1
+		experience_gain_navy = 0.1
+	}
+	
+	POR_attack = {
+		random = no
+		army_attack_factor = 0.1
+	}
+	
+	POR_defence = {
+		random = no
+		army_defence_factor = 0.1
+	}
+	
+	POR_radio = {
+		random = no
+		army_org_factor = 0.05
+		army_morale_factor = 0.05
+	}
+	
+	POR_arm = {
+		random = no
+		army_armor_attack_factor = 0.08
+	    army_armor_defence_factor = 0.08
+	}
+	
+	POR_infantry = {
+		random = no
+		attrition = -0.12
+	}
+	
+	POR_commando = {
+		random = no
+		army_infantry_attack_factor = 0.15
+		army_infantry_defence_factor = 0.15
+	}
+	
+	POR_motorize = {
+		random = no
+		cavalry_attack_factor = 0.08
+		cavalry_defence_factor = 0.08
+		motorized_attack_factor = 0.08
+		motorized_defence_factor =0.08
+		mechanized_attack_factor = 0.08
+		mechanized_defence_factor = 0.08
+	}
+	
+    energy_concern = {
+	    random = no
+	    production_speed_buildings_factor = 0.05 
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+		equipment_bonus = {
+			infantry_equipment  = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+		}
+	}	
+    tank_concern = {
+	    random = no
+		equipment_bonus = {			
+			amphibious_mechanized_equipment = {
+				soft_attack = 0.05
+				maximum_speed = 0.05
+			    reliability = 0.1
+				build_cost_ic = -0.05 instant = yes
+			}
+			amphibious_tank_equipment = {
+				soft_attack = 0.05
+				maximum_speed = 0.05
+			    reliability = 0.1
+				build_cost_ic = -0.05 instant = yes
+			}
+		}
+	}
+    air_concern = {
+	    random = no
+		equipment_bonus = {
+			fighter_equipment = {
+                air_range = 0.1 
+				air_agility = 0.05
+				maximum_speed = 0.05
+			}
+			cv_fighter_equipment = {
+                air_range = 0.1 
+				air_agility = 0.05
+				maximum_speed = 0.05
+			}
+		}
+	}
+    sea_concern = {
+	    random = no
+		equipment_bonus = {
+			submarine = {
+				sub_visibility = -0.1 
+				surface_visibility = -0.1 
+			}
+			screen_ship = {
+				sub_detection = 0.1 
+				lg_attack = 0.05
+			}
+			capital_ship = {
+				armor_value = 0.1 
+				hg_attack = 0.05
+			}
+		}
+	}
+    gun_concern = {
+	    random = no
+		equipment_bonus = {
+			infantry_equipment = {
+				breakthrough = 0.05 
+				soft_attack = 0.05
+				defense = 0.1 
+			}	
+		}
+	}
+	jolly = {
+		random = no
+		stability_weekly = 0.005
+		production_speed_infrastructure_factor = 0.2
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	naughty_and_nice = {
+		random = no
+		stability_factor = 0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	CZE_landair = {
+	    sprite = 10
+		random = no
+		political_power_factor = -0.05
+		industrial_capacity_factory = 0.10
+		production_factory_max_efficiency_factor = 0.10
+	    production_factory_efficiency_gain_factor = 0.10
+		equipment_bonus = {
+			fighter_equipment = {
+				instant = yes
+				build_cost_ic = -0.05
+			}
+			heavy_fighter_equipment = {
+				instant = yes
+				build_cost_ic = -0.05
+			}
+		}
+	}	
+	colonial_organizer = {
+		sprite = 10
+		random = yes
+		conversion_cost_civ_to_mil_factor= -0.15
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_start_efficiency_factor = 0.05
+		line_change_production_efficiency_factor = 0.05
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	colonial_naval_manufacturer = {
+		random = no
+		equipment_bonus = {
+			carrier = {
+				carrier_size = 0.15
+				armor_value = 0.35
+				max_strength = 0.1
+			}
+			capital_ship = {
+				armor_value = 0.1
+				hg_attack = 0.1
+			}
+			screen_ship = {
+				lg_attack = 0.1
+				armor_value = 0.05 
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	fascist_builder = {
+		sprite = 10
+		random = yes
+		refit_ic_cost = -0.1
+		refit_speed = 0.1
+		repair_speed_factor = 0.1
+		industrial_capacity_dockyard = 0.05
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	OAK_autocratic_charmer = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 25
+		}
+
+		consumer_goods_factor = -0.02 
+		war_support_factor = 0.05 
+		industrial_capacity_factory = -0.05 
+		fascism_drift = 0.01 
+	}
+
+	OAK_stern_imperialist = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 25
+		}
+
+		industrial_capacity_factory = 0.05 
+		production_speed_buildings_factor = 0.03
+	}
+
+	OAK_resigned_generalissimo = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 25
+		}
+
+		supply_consumption_factor = -0.1 
+		consumer_goods_factor = 0.05 
+	}
+
+	OAK_ruthless_powermongerer = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 25
+		}
+
+		stability_factor = -0.2
+		political_power_gain = 0.35
+	}
+
+	OAK_power_hungry_demagogue = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 25
+		}
+
+		intel_network_gain_factor = 0.25
+		subversive_activites_upkeep = -0.25 
+	}
+
+	OAK_insignificant_layman = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 25
+		}
+
+		stability_factor = 0.05 
+		resistance_target = -0.05
+	}
+
+	OAK_barking_buffoon = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 25
+		}
+
+		max_command_power = 25
+		resistance_damage_to_garrison = 0.05  
+	}
+
+	OAK_popular_figurehead = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 25
+		}
+
+		stability_factor = 0.15   
+	}
+
+	OAK_pig_headed_isolationist = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 25
+		}
+
+		war_support_factor = -0.15 
+		drift_defence_factor = 0.5 	
+		stability_factor = 0.10  
+		min_export = -0.1 
+	}
+
+	
+
+	USA_secretary_of_the_treasure = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	USA_roosevelts_right_hand_man = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	USA_attorney_general = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	USA_secretary_of_the_interior = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	USA_special_assistant_for_air_affairs = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+		equipment_bonus  = {
+			fighter_equipment  = {
+				build_cost_ic  = -0.050
+				instant  = yes 
+			}
+		}
+		equipment_bonus  = {
+			CAS_equipment  = {
+				build_cost_ic  = -0.050
+				instant  = yes 
+			}
+		}
+		equipment_bonus  = {
+			nav_bomber_equipment  = {
+				build_cost_ic  = -0.050
+				instant  = yes 
+			}
+		}
+		equipment_bonus  = {
+			tac_bomber_equipment  = {
+				build_cost_ic  = -0.050
+				instant  = yes 
+			}
+		}
+	}
+
+	USA_vice_president = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	USA_secretary_of_war = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	USA_secretary_of_the_navy = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	USA_secretary_of_state = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+
+	SOV_iron_fisted_brute = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	SOV_georgian_gangster = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	SOV_secret_police_chief = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	SOV_secret_police_chief_2 = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	SOV_secret_police_chief_3 = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+
+	SOV_communist_purist = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	SOV_stalins_agent = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	SOV_stalins_justice = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	SOV_figurehead = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	SOV_marshal = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	SOV_army_modernizer = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+		equipment_bonus  = {
+			mechanized_equipment  = {
+				build_cost_ic  = -0.050
+				reliability  = -0.100
+				instant  = yes 
+			}
+		}
+		equipment_bonus = {
+			motorized_equipment  = {
+				build_cost_ic  = -0.050
+				reliability  = -0.100
+				instant  = yes 
+			}
+		}
+	}
+
+	SOV_ambassador_to_the_british = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+		targeted_modifier  = {
+			tag  = ENG
+			trade_cost_for_target_factor  = -0.500
+		}
+	}
+
+	SOV_military_intelligence_officer = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	SOV_boot_licker = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	SOV_commissar_of_internal_affairs = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	SOV_commissar_of_trade = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	SOV_commissar_of_ammunition = {
+		sprite = 10
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+		equipment_bonus  = {
+			infantry_equipment  = {
+				build_cost_ic  = -0.050
+				instant  = yes 
+			}
+		}
+	}
+
+	SOV_peoples_commissar_of_armaments = {
+		sprite = 10
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	SOV_military_unintelligence = {
+		sprite = 10
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	SOV_medium_tank_designer = {
+	}
+
+	SOV_mass_production_facility = {
+	}
+
+	SOV_heavy_tank_designer = {}
+
+	SOV_cavalry_tank_designer = {}
+
+	SOV_breakthrough_tank_designer = {}
+
+	SOV_repurposed_tractor_factory = {}
+
+	SOV_advanced_medium_tank_manufacturer = {}
+
+	SOV_variant_designer = {}
+
+	godlike_creature= {}
+
+	ENG_chancellor_of_the_exchequer = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	ENG_secretary_of_state_home_department = {		
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	ENG_secretary_of_foreign_affairs = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	ENG_secretary_of_state_for_the_colonies = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	ENG_secretary_of_state_for_the_colonies = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	ENG_secretary_of_state_for_air = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+
+		equipment_bonus = {
+			fighter_equipment = {
+				build_cost_ic = -0.05 instant = yes 
+			}
+			heavy_fighter_equipment = {
+				build_cost_ic = -0.05 instant = yes 
+			}
+			CAS_equipment = {
+				build_cost_ic = -0.05 instant = yes 
+			}
+			nav_bomber_equipment = {
+				build_cost_ic = -0.05 instant = yes 
+			}
+			tac_bomber_equipment = {
+				build_cost_ic = -0.05 instant = yes 
+			}
+		}
+	}
+
+	ENG_first_lord_of_the_admiralty = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	ENG_president_of_the_board_for_trade = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	ENG_minister_of_labour = {
+		sprite = 13
+		random = yes
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	OAK_trait_industrial_concern = {
+		random = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		production_speed_buildings_factor = 0.05
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+	}
+
+	OAK_trait_construction_concern = {
+		random = no
+		ai_will_do = {
+			factor = 100
+		}
+
+		production_speed_buildings_factor = 0.1
+		political_power_cost = 0.1
+	}
+
+	OAK_trait_production_concern = {
+		random = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+	}
+
+	OAK_USA_trait_production_concern = {
+		random = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		industrial_capacity_factory = 0.2
+	}
+
+	OAK_trait_refinery_concern = {
+		random = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		production_speed_synthetic_refinery_factor = 0.15
+		production_speed_synthetic_rubber_refinery_factor = 0.15
+		local_resources_factor = 0.15 
+		fuel_gain_factor_from_states = 0.05 
+		max_fuel_factor = 0.05
+	}
+
+	OAK_trait_electrical_concern = {
+		random = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		production_speed_air_base_factor = 0.1
+		production_speed_naval_base_factor = 0.1
+		production_speed_bunker_factor = 0.1
+		production_speed_coastal_bunker_factor = 0.1
+		production_speed_anti_air_building_factor = 0.1
+		production_speed_rocket_site_factor = 0.1
+		production_speed_radar_station_factor = 0.1
+		production_speed_infrastructure_factor = 0.1 
+	}
+	mongolian_stalin = {
+		random = no
+		industrial_capacity_factory = 0.1
+		communism_drift = 0.1
+	}
+}
+
