@@ -99,12 +99,15 @@ resistance_90 = {
 	state_modifier = {
 		local_factories = -0.03
 	}
-	
+
 	on_enable = {
 		custom_effect_tooltip = resistance_90_effect_tooltip
 		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
 			# avoid effects that can effect state controllers here
-			country_event = { id = occupied_countries.2 hours = 1 }
+			country_event = { id = occupied_countries.2 hours = 1 }		
+			}
 		}
 	}
 }
