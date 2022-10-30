@@ -14,12 +14,27 @@ branch_intelligence = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
 		
 		level = {
 			modifier = {
-				civilian_intel_factor = 0.25
+				civilian_intel_factor = 0.10
+			}
+		}
+		level = {
+			modifier = {
+				civilian_intel_factor = 0.10
+			}
+		}
+		level = {
+			modifier = {
+				civilian_intel_factor = 0.10
+			}
+		}
+		level = {
+			modifier = {
+				civilian_intel_factor = 0.10
 			}
 		}
 	}
@@ -35,12 +50,27 @@ branch_intelligence = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
 		
 		level = {
 			modifier = {
-				army_intel_factor = 0.25
+				army_intel_factor = 0.10
+			}
+		}
+		level = {
+			modifier = {
+				army_intel_factor = 0.10
+			}
+		}
+		level = {
+			modifier = {
+				army_intel_factor = 0.10
+			}
+		}
+		level = {
+			modifier = {
+				army_intel_factor = 0.10
 			}
 		}
 		
@@ -57,12 +87,27 @@ branch_intelligence = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
 		
 		level = {
 			modifier = {
-				navy_intel_factor = 0.25
+				navy_intel_factor = 0.10
+			}
+		}
+		level = {
+			modifier = {
+				navy_intel_factor = 0.10
+			}
+		}
+		level = {
+			modifier = {
+				navy_intel_factor = 0.10
+			}
+		}
+		level = {
+			modifier = {
+				navy_intel_factor = 0.10
 			}
 		}
 		
@@ -79,15 +124,29 @@ branch_intelligence = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
-		
+
 		level = {
 			modifier = {
-				airforce_intel_factor = 0.25
+				airforce_intel_factor = 0.10
 			}
 		}
-		
+		level = {
+			modifier = {
+				airforce_intel_factor = 0.10
+			}
+		}
+		level = {
+			modifier = {
+				airforce_intel_factor = 0.10
+			}
+		}
+		level = {
+			modifier = {
+				airforce_intel_factor = 0.10
+			}
+		}
 	}
 }
 
@@ -104,18 +163,18 @@ branch_defense = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
 		
 		level = {
 			modifier = {
-				intelligence_agency_defense = 1.5
+				intelligence_agency_defense = 1
 			}
 		}
 		
 		level = {
 			modifier = {
-				intelligence_agency_defense = 1.25
+				intelligence_agency_defense = 1
 			}
 		}
 		
@@ -143,18 +202,30 @@ branch_defense = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
 		
 		level = {
 			modifier = {
-				root_out_resistance_effectiveness_factor = 0.25
+				root_out_resistance_effectiveness_factor = 0.10
 			}
 		}
 		
 		level = {
 			modifier = {
-				root_out_resistance_effectiveness_factor = 0.25
+				root_out_resistance_effectiveness_factor = 0.10
+			}
+		}
+		
+		level = {
+			modifier = {
+				root_out_resistance_effectiveness_factor = 0.10
+			}
+		}
+		
+		level = {
+			modifier = {
+				root_out_resistance_effectiveness_factor = 0.10
 			}
 		}
 	}
@@ -173,15 +244,52 @@ branch_operation = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
 		
 		level = {
 			modifier = {
-				operation_steal_tech_outcome = 0.25
+				operation_steal_tech_outcome = 0.10
+				operation_steal_tech_civilian_cost = -0.10
+				operation_steal_tech_army_cost = -0.10
+				operation_steal_tech_navy_cost = -0.10
+				operation_steal_tech_airforce_cost = -0.10
+				defense_impact_on_blueprint_stealing = -0.10
 			}
 		}
 		
+		level = {
+			modifier = {
+				operation_steal_tech_outcome = 0.10
+				operation_steal_tech_civilian_cost = -0.10
+				operation_steal_tech_army_cost = -0.10
+				operation_steal_tech_navy_cost = -0.10
+				operation_steal_tech_airforce_cost = -0.10
+				defense_impact_on_blueprint_stealing = -0.10
+			}
+		}
+		
+		level = {
+			modifier = {
+				operation_steal_tech_outcome = 0.10
+				operation_steal_tech_civilian_cost = -0.10
+				operation_steal_tech_army_cost = -0.10
+				operation_steal_tech_navy_cost = -0.10
+				operation_steal_tech_airforce_cost = -0.10
+				defense_impact_on_blueprint_stealing = -0.10
+			}
+		}
+		
+		level = {
+			modifier = {
+				operation_steal_tech_outcome = 0.10
+				operation_steal_tech_civilian_cost = -0.10
+				operation_steal_tech_army_cost = -0.10
+				operation_steal_tech_navy_cost = -0.10
+				operation_steal_tech_airforce_cost = -0.10
+				defense_impact_on_blueprint_stealing = -0.10
+			}
+		}
 	}
 	
 	upgrade_portable_radios = {
@@ -198,15 +306,27 @@ branch_operation = {
 		}
 
 		modifiers_during_progress = {
-			civilian_factory_use = 8
+			civilian_factory_use = 4
 		}
 		
 		level = {
 			modifier = {
-				operation_coordinated_strike_outcome = 1
+				operation_coordinated_strike_outcome = 0.33
+				intel_network_gain_factor = 0.15
 			}
 		}
-		
+		level = {
+			modifier = {
+				operation_coordinated_strike_outcome = 0.33
+				intel_network_gain_factor = 0.15
+			}
+		}
+		level = {
+			modifier = {
+				operation_coordinated_strike_outcome = 0.33
+				intel_network_gain_factor = 0.15
+			}
+		}
 	}
 	
 	upgrade_invisible_ink = {
@@ -219,7 +339,7 @@ branch_operation = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
 		
 		level = {
@@ -228,7 +348,6 @@ branch_operation = {
 				operation_steal_tech_risk = -0.25
 			}
 		}
-		
 	}
 	
 	upgrade_plastic_explosives = {
@@ -247,10 +366,15 @@ branch_operation = {
 		level = {
 			modifier = {
 				target_sabotage_factor = 0.25
-				boost_resistance_factor = 0.25
+				boost_resistance_factor = 0.15
 			}
 		}
-		
+		level = {
+			modifier = {
+				target_sabotage_factor = 0.25
+				boost_resistance_factor = 0.15
+			}
+		}
 	}
 	
 	upgrade_suicide_pills = {
@@ -263,16 +387,21 @@ branch_operation = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
 		
 		level = {
 			modifier = {
-				operative_death_on_capture_chance = 0.1
-				own_operative_detection_chance = -0.05
+				operative_death_on_capture_chance = 0.15
+				own_operative_detection_chance = -0.15
 			}
 		}
-		
+		level = {
+			modifier = {
+				operative_death_on_capture_chance = 0.15
+				own_operative_detection_chance = -0.15
+			}
+		}
 	}
 	
 }
@@ -289,18 +418,37 @@ branch_operative = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 10
+			civilian_factory_use = 8
 		}
 		
 		level = {
 			modifier = {
-				enemy_operative_recruitment_chance = 0.25
-				occupied_operative_recruitment_chance = 0.25
+				enemy_operative_recruitment_chance = 0.15
+				occupied_operative_recruitment_chance = 0.15
 				new_operative_slot_bonus = 1
 			}
-			
-			complete_effect = {
-				unlock_decision_category_tooltip = lar_local_recruitment
+		}
+		level = {
+			modifier = {
+				enemy_operative_recruitment_chance = 0.15
+				occupied_operative_recruitment_chance = 0.15
+				new_operative_slot_bonus = 1
+				operative_slot = 1
+			}
+		}
+		level = {
+			modifier = {
+				enemy_operative_recruitment_chance = 0.15
+				occupied_operative_recruitment_chance = 0.15
+				new_operative_slot_bonus = 1
+			}
+		}
+		level = {
+			modifier = {
+				enemy_operative_recruitment_chance = 0.15
+				occupied_operative_recruitment_chance = 0.15
+				new_operative_slot_bonus = 1
+				operative_slot = 1
 			}
 		}
 		
@@ -316,11 +464,13 @@ branch_operative = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
 		
 		level = {
 			modifier = {
+				operation_infiltrate_cost = -0.25
+				operation_infiltrate_outcome = 0.25
 				commando_trait_chance_factor = 1 # +100%
 			}
 		}
@@ -337,16 +487,21 @@ branch_operative = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
 		
 		level = {
 			modifier = {
-				enemy_operative_capture_chance_factor = 1 # +100%
-				enemy_operative_intel_extraction_rate = 0.25 # +25%
+				enemy_operative_capture_chance_factor = 0.5 
+				enemy_operative_intel_extraction_rate = 0.15
 			}
 		}
-		
+		level = {
+			modifier = {
+				enemy_operative_capture_chance_factor = 0.5 
+				enemy_operative_intel_extraction_rate = 0.15
+			}
+		}
 	}
 	
 	upgrade_diplo_training = {
@@ -359,7 +514,7 @@ branch_operative = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
 		
 		level = {
@@ -381,13 +536,22 @@ branch_operative = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 8
+			civilian_factory_use = 4
 		}
 		
 		level = {
 			modifier = {
-				propaganda_mission_factor = 0.25
-				boost_ideology_mission_factor = 0.25
+				operation_fake_intel_cost = -0.15
+			}
+		}
+		level = {
+			modifier = {
+				operation_fake_intel_cost = -0.15
+			}
+		}
+		level = {
+			modifier = {
+				operation_fake_intel_outcome = 0.2
 			}
 		}
 		
@@ -408,7 +572,7 @@ branch_crypto = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 8
+			civilian_factory_use = 4
 		}
 		
 		level = {
@@ -435,7 +599,7 @@ branch_crypto = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
 		
 		level = {
@@ -466,7 +630,7 @@ branch_crypto = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 10 
+			civilian_factory_use = 8 
 		}
 		
 		level = {
@@ -503,18 +667,20 @@ branch_crypto = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 4
 		}
 		
 		level = {
 			modifier = {
 				crypto_strength = 1
+				intelligence_agency_defense = 0.2
 			}
 		}
 		
 		level = {
 			modifier = {
 				crypto_strength = 1
+				intelligence_agency_defense = 0.1
 			}
 		}
 	}
@@ -534,24 +700,27 @@ branch_crypto = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 15
+			civilian_factory_use = 12
 		}
 		
 		level = {
 			modifier = {
 				crypto_strength = 2
+				intelligence_agency_defense = 0.4
 			}
 		}
 		
 		level = {
 			modifier = {
 				crypto_strength = 2
+				intelligence_agency_defense = 0.2
 			}
 		}
 		
 		level = {
 			modifier = {
 				crypto_strength = 2
+				intelligence_agency_defense = 0.2
 			}
 		}
 	}
