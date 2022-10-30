@@ -1,0 +1,42 @@
+mengkukuo_historical = {
+	name = "Mengkukuo Historical"
+	desc = "Eco > Army"
+
+	enable = {
+		original_tag = MEN
+		has_dlc = "Man the Guns"
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = MEN_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_game_rule = {
+				rule = MEN_ai_behavior
+				option = DEFAULT
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_war_with = JAP
+		}
+	}
+
+	ai_national_focuses = {
+		political_effort
+		industrial_effort
+		construction_effort
+		construction_effort_2
+		infrastructure_effort
+		construction_effort_3
+		infrastructure_effort_2
+		production_effort
+		production_effort_2
+		production_effort_3
+		aviation_effort
+		# Economic and political stuff is complete at this point, AI will pick military NFs from here on
+	}
+}

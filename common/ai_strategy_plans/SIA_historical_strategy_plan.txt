@@ -1,0 +1,62 @@
+siam_historical = {
+	name = "Siam Historical"
+	desc = "Eco > Army"
+
+	enable = {
+		original_tag = SIA
+		has_dlc = "Man the Guns"
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = SIA_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_game_rule = {
+				rule = SIA_ai_behavior
+				option = DEFAULT
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_war_with = JAP
+		}
+	}
+
+	ai_national_focuses = {
+		SIA_investors
+		SIA_production_effort_3
+		SIA_production_effort_2
+		SIA_infrastructure_effort_1
+		SIA_infrastructure_effort_2
+		SIA_production_effort_1
+		SIA_military_effort_1
+		SIA_synth_oil_focus
+		SIA_oil_industry
+		SIA_military_effort_3
+		SIA_military_effort_2
+		SIA_tech_slot
+		SIA_aviation_effort
+		SIA_navy_funds
+		SIA_adressing_social_issues
+		SIA_elite_schools
+		SIA_newspapers
+		SIA_suphapburut_group
+		SIA_heal_the_divide_1
+		SIA_new_siamese_man
+		SIA_heal_the_divide_2
+		SIA_adressing_political_issues
+		SIA_fascism_support
+		SIA_strenghten_rel_jap
+		SIA_strenghten_rel_ger
+		SIA_fascist_nation
+		SIA_militarism
+		SIA_paramilitarism
+		SIA_japanese_ships
+		SIA_german_equipment
+		SIA_austerity
+		# Economic and political stuff is complete at this point, AI will pick military NFs from here on
+	}
+}
