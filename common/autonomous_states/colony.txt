@@ -9,7 +9,6 @@ autonomy_state = {
 	
 	rule = {
 		desc = "RULE_DESC_IS_A_SUBJECT"
-		
 		can_not_declare_war = yes
 		can_decline_call_to_war = no
 		can_be_spymaster = no
@@ -23,8 +22,6 @@ autonomy_state = {
 		extra_trade_to_overlord_factor = 0.5
 		overlord_trade_cost_factor = -0.5
 		can_master_build_for_us = 1
-
-		research_sharing_per_country_bonus_factor = -0.5
 	}
 	
 	ai_subject_wants_higher = {
@@ -49,16 +46,11 @@ autonomy_state = {
 	}
 	
 	can_take_level = {
-		if = {
-			limit = {
-				original_tag = RAJ			
-			}
-			has_completed_focus = RAJ_cripps_mission
-		}
 		#trigger here
 	}
 
 	can_lose_level = {
 		#trigger here
+		NOT = { original_tag = MON }
 	}
 }
