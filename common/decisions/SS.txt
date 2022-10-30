@@ -1,46 +1,68 @@
 SS_recruitment = {
+
+	SS_recruitment_Germany = {
+
+		icon = generic_army_support
+
+		available = {
+			AND = {
+				has_idea = heinrich_himmler
+				OR = {
+					has_completed_focus = GER_SS_recruit_everywhere
+					has_completed_focus = GER_SS_restrict_recruitment
+				}
+				and = {
+					has_full_control_of_state = 64
+					has_full_control_of_state = 52
+				}
+			}
+		}
+
+		visible = {
+			has_idea = heinrich_himmler
+			OR = {
+				has_completed_focus = GER_SS_recruit_everywhere
+				has_completed_focus = GER_SS_restrict_recruitment
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		days_remove = 30
+		remove_effect = {
+			country_event = ss_recruitment_event.0
+		}
+	}
+
+
 	SS_recruitment_denmark = {
 
 		icon = generic_army_support
 
 		available = {
-			OR = {
+			AND = {
 				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			99 = {
-				CONTROLLER = {
+				has_completed_focus = GER_SS_recruit_everywhere
+				any_country = {
 					OR = {
-						original_tag = GER
+						tag = GER
 						is_subject_of = GER
 					}
-				}
-			}
-			37 = {
-				CONTROLLER = {
-					OR = {
-						original_tag = GER
-						is_subject_of = GER
+					and = {
+						controls_state = 99
+						controls_state = 37
 					}
 				}
 			}
 		}
+
 		visible = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			OR = {
-				DEN = {
-					is_subject_of = GER
-				}
-				has_war_with = DEN
-				AND = {
-					has_war = yes
-					DEN = {
-						exists = no
-					}
-				}
+			has_idea = heinrich_himmler
+			and = {
+				has_completed_focus = GER_SS_recruit_everywhere
 			}
 		}
 
@@ -49,63 +71,40 @@ SS_recruitment = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			country_event = ss_recruitment_event.1
 		}
 	}
+
 	SS_recruitment_norway = {
 
 		icon = generic_army_support
 
 		available = {
-			OR = {
+			AND = {
 				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			110 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			142 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			143 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			144 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+				has_completed_focus = GER_SS_recruit_everywhere
+				any_country = {
+					OR = {
+						tag = GER
+						is_subject_of = GER
+					}
+					and = {
+						has_full_control_of_state = 110
+						has_full_control_of_state = 142
+						has_full_control_of_state = 143
+						has_full_control_of_state = 144
+
+					}
+				}
 			}
 		}
+
 		visible = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			OR = {
-				NOR = {
-					is_subject_of = GER
-				}
-				has_war_with = NOR
-				NOR = { exists = no }
+			has_idea = heinrich_himmler
+			and = {
+				has_completed_focus = GER_SS_recruit_everywhere
 			}
 		}
 
@@ -114,7 +113,8 @@ SS_recruitment = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			country_event = ss_recruitment_event.2
 		}
 	}
@@ -123,49 +123,27 @@ SS_recruitment = {
 		icon = generic_army_support
 
 		available = {
-			OR = {
+			AND = {
 				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			
-			36 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			7 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			35 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-				
-			
-		}
-		visible = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			OR = {
-				HOL = {
-					is_subject_of = GER
+				has_completed_focus = GER_SS_recruit_everywhere
+				any_country = {
+					OR = {
+						tag = GER
+						is_subject_of = GER
+					}
+					and = {
+						has_full_control_of_state = 36
+						has_full_control_of_state = 7
+						has_full_control_of_state = 35
+					}
 				}
-				has_war_with = HOL
-				HOL = { exists = no }
+			}
+		}
+
+		visible = {
+			has_idea = heinrich_himmler
+			and = {
+				has_completed_focus = GER_SS_recruit_everywhere
 			}
 		}
 
@@ -174,47 +152,37 @@ SS_recruitment = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			country_event = ss_recruitment_event.3
 		}
 	}
+
 	SS_recruitment_belgium = {
 
 		icon = generic_army_support
 
 		available = {
-			OR = {
+			AND = {
 				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
+				has_completed_focus = GER_SS_recruit_everywhere
+				any_country = {
+					OR = {
+						tag = GER
+						is_subject_of = GER
+					}
+					and = {
+						has_full_control_of_state = 6
+						has_full_control_of_state = 34
+					}
+				}		
 			}
-			6 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			34 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}	
 		}
+
 		visible = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			OR = {
-				BEL = {
-					is_subject_of = GER
-				}
-				has_war_with = BEL
-				BEL = { exists = no }
+			has_idea = heinrich_himmler
+			and = {
+				has_completed_focus = GER_SS_recruit_everywhere
 			}
 		}
 
@@ -223,7 +191,8 @@ SS_recruitment = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			country_event = ss_recruitment_event.4
 		}
 	}
@@ -232,54 +201,28 @@ SS_recruitment = {
 		icon = generic_army_support
 
 		available = {
-			OR = {
+			AND = {
 				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			29 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			16 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			15 = {
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			14 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+				has_completed_focus = GER_SS_recruit_everywhere	
+				any_country = {
+					OR = {
+						tag = GER
+						is_subject_of = GER
+					}
+					and = {
+						has_full_control_of_state = 29
+						has_full_control_of_state = 16
+						has_full_control_of_state = 15
+						has_full_control_of_state = 14
+					}
+				}
 			}
 		}
+
 		visible = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			OR = {
-				FRA = {
-					is_subject_of = GER
-				}
-				has_war_with = FRA
-				FRA = { exists = no }
+			has_idea = heinrich_himmler
+			and = {
+				has_completed_focus = GER_SS_recruit_everywhere
 			}
 		}
 
@@ -288,7 +231,8 @@ SS_recruitment = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			country_event = ss_recruitment_event.5
 		}
 	}
@@ -297,52 +241,36 @@ SS_recruitment = {
 		icon = generic_army_support
 
 		available = {
-			OR = {
+			AND = {
 				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			13 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			191 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-		}
-		visible = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			OR = {
-				EST = {
-					is_subject_of = GER
-				}
-				has_war_with = EST
-				AND = {
-					has_war = yes
-					EST = {
-						exists = no
+				has_completed_focus = GER_SS_recruit_everywhere
+				any_country = {
+					OR = {
+						tag = GER
+						is_subject_of = GER
+					}
+					and = {
+						has_full_control_of_state = 13
+						has_full_control_of_state = 191
 					}
 				}
 			}
 		}
 
+		visible = {
+			has_idea = heinrich_himmler
+			and = {
+				has_completed_focus = GER_SS_recruit_everywhere
+			}
+		}
+		
 		cost = 25
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 1
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			country_event = ss_recruitment_event.6
 		}
 	}
@@ -351,43 +279,26 @@ SS_recruitment = {
 		icon = generic_army_support
 
 		available = {
-			OR = {
+			AND = {
 				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			12 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			190 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-		}
-		visible = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			OR = {
-				LAT = {
-					is_subject_of = GER
-				}
-				has_war_with = LAT
-				AND = {
-					has_war = yes
-					LAT = {
-						exists = no
+				has_completed_focus = GER_SS_recruit_everywhere
+				any_country = {
+					OR = {
+						tag = GER
+						is_subject_of = GER
+					}
+					and = {
+						has_full_control_of_state = 12
+						has_full_control_of_state = 190
 					}
 				}
+			}
+		}
+
+		visible = {
+			has_idea = heinrich_himmler
+			and = {
+				has_completed_focus = GER_SS_recruit_everywhere
 			}
 		}
 
@@ -396,7 +307,8 @@ SS_recruitment = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			country_event = ss_recruitment_event.7
 		}
 	}
@@ -405,44 +317,26 @@ SS_recruitment = {
 		icon = generic_army_support
 
 		available = {
-			OR = {
+			AND = {
 				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			
-			11 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			189 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-		}
-		visible = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			OR = {
-				LIT = {
-					is_subject_of = GER
-				}
-				has_war_with = LIT
-				AND = {
-					has_war = yes
-					LIT = {
-						exists = no
+				has_completed_focus = GER_SS_recruit_everywhere
+				any_country = {
+					OR = {
+						tag = GER
+						is_subject_of = GER
+					}
+					and = {
+						has_full_control_of_state = 11
+						has_full_control_of_state = 189
 					}
 				}
+			}
+		}
+
+		visible = {
+			has_idea = heinrich_himmler
+			and = {
+				has_completed_focus = GER_SS_recruit_everywhere
 			}
 		}
 
@@ -451,237 +345,9 @@ SS_recruitment = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			country_event = ss_recruitment_event.8
 		}
 	}
-	SS_recruitment_britain = {
-
-		icon = generic_army_support
-
-		available = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			126 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			127 = {
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			123 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			338 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-		}
-		visible = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			OR = {
-				ENG = {
-					is_subject_of = GER
-				}
-				has_war_with = ENG
-				AND = {
-					has_war = yes
-					ENG = {
-						exists = no
-					}
-				}
-			}
-		}
-
-		cost = 25
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1
-		}
-		complete_effect = {
-			country_event = ss_recruitment_alternate.1
-		}
-	}
-	SS_recruitment_scotland = {
-
-		icon = generic_army_support
-
-		available = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			OR = {
-				AND = {
-					121 = { is_controlled_by = GER }
-					133 = { is_controlled_by = GER }
-					136 = { is_controlled_by = GER }
-					120 = { is_controlled_by = GER }
-				}
-				AND = {
-					121 = { CONTROLLER = { is_subject_of = GER } }
-					133 = { CONTROLLER = { is_subject_of = GER } }
-					136 = { CONTROLLER = { is_subject_of = GER } }
-					120 = { CONTROLLER = { is_subject_of = GER } }
-				}
-			}
-		}
-		visible = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			OR = {
-				AND = {
-					121 = { is_controlled_by = GER }
-					133 = { is_controlled_by = GER }
-					136 = { is_controlled_by = GER }
-					120 = { is_controlled_by = GER }
-				}
-				AND = {
-					121 = { CONTROLLER = { is_subject_of = GER } }
-					133 = { CONTROLLER = { is_subject_of = GER } }
-					136 = { CONTROLLER = { is_subject_of = GER } }
-					120 = { CONTROLLER = { is_subject_of = GER } }
-				}
-			}
-		}
-
-		cost = 25
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1
-		}
-		complete_effect = {
-			country_event = ss_recruitment_alternate.2
-		}
-	}
-	SS_recruitment_sweden = {
-
-		icon = generic_army_support
-
-		available = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			141 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			139 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			138 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-			140 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}
-		}
-		visible = {
-			OR = {
-				has_idea = heinrich_himmler
-				has_country_leader = { character = GER_heinrich_himmler }
-			}
-			OR = {
-				SWE = {
-					is_subject_of = GER
-				}
-				has_war_with = SWE
-				AND = {
-					has_war = yes
-					SWE = {
-						exists = no
-					}
-				}
-			}
-		}
-
-		cost = 25
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1
-		}
-		complete_effect = {
-			country_event = ss_recruitment_alternate.3
-		}
-	}
-}
-
-SS_demands = {
-	SS_himmler_wants_field_command = {
-
-		icon = generic_army_support
-
-		available = {
-			has_idea = heinrich_himmler
-			has_war = yes
-		}
-		visible = {
-			has_idea = heinrich_himmler
-			has_war = yes
-		}
-		cost = 25
-		fire_only_once = yes
-		complete_effect = {
-			subtract_from_variable = { var = SS_anger value = 10 }
-			add_to_variable = { var = wehrmacht_anger value = 5 } #shitty little upstart
-			GER_heinrich_himmler = {
-				add_field_marshal_role = {
-					traits = { politically_connected }
-					skill = 1
-					attack_skill = 1
-					defense_skill = 1
-					planning_skill = 1
-					logistics_skill = 1
-				} 
-			}
-		}
-	}
-}
-wehrmacht_demands = {
-	
 }

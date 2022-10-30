@@ -1,0 +1,284 @@
+HUN_axis_bills = {
+
+	HUN_axis_bills_mission = {
+
+		allowed = { always = yes }
+
+		icon = HUN_axis_bills
+
+		activation = {
+			OR = {
+				has_completed_focus = HUN_german_dependency
+				has_completed_focus = HUN_italian_dependency
+			}
+		}
+
+		#cost = HUN_axis_bill_counter?10
+
+		days_mission_timeout = 180
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					NOT = { HUN_has_axis_bills = yes }
+					has_idea = HUN_axis_bills_ended
+				}
+			}
+		}
+
+		days_remove = HUN_extend_axis_bills_days?0
+
+		timeout_effect = {
+			if = {
+				limit = {
+					has_country_flag = HUN_has_cancelled_axis
+					}
+				add_political_power = -380
+				add_ideas = HUN_axis_bills_ended
+			}
+			else_if = {
+				custom_effect_tooltip = HUN_axis_bills_mission_tt
+				custom_effect_tooltip = HUN_axis_bills_effect_in_days
+				hidden_effect = {
+					set_variable = { HUN_extend_axis_bills_days = days_mission_timeout@HUN_axis_bills_mission }
+					set_country_flag = paid_for_axis
+				}
+				HUN_axis_bills_level_up = yes
+				if = {
+					limit = {
+						check_variable = { var = HUN_axis_bill_counter value = 15 compare = less_than }
+					}
+					hidden_effect = { set_variable = { var = HUN_axis_bill_counter value = 10 } }
+				}
+				add_to_variable = { var = HUN_axis_bill_counter value = 10 }
+			}
+		}
+	}
+}
+
+HUN_foreign_licensing = {
+	
+	HUN_alkett_license1 = {
+
+		icon = generic_construction
+
+		available = {
+			if = {
+				GER = { 
+					has_tech = ger_medium_assault_gun_1941
+				}
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		visible = {
+			original_tag = HUN 
+			has_completed_focus = HUN_alkett
+		}
+
+		days_remove = 180
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			set_technology = { 
+				ger_medium_assault_gun_1941 = 1
+			}
+		}
+	}
+	
+	HUN_alkett_license2 = {
+
+		icon = generic_construction
+
+		available = {
+			if = {
+				GER = { 
+					has_tech = ger_medium_assault_gun_1943
+				}
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		visible = {
+			original_tag = HUN 
+			has_completed_focus = HUN_alkett
+		}
+
+		days_remove = 180
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			set_technology = { 
+				ger_medium_assault_gun_1943 = 1
+			}
+		}
+	}
+	
+	HUN_hanomag_license = {
+
+		icon = generic_construction
+
+		available = {
+			if = {
+				GER = { 
+					has_tech = ger_mechanised_infantry2
+				}
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		visible = {
+			original_tag = HUN 
+			has_completed_focus = HUN_hanomag
+		}
+
+		days_remove = 180
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			set_technology = { 
+				ger_mechanised_infantry2 = 1
+			}
+		}
+	}
+	
+	HUN_hanomag_license2 = {
+
+		icon = generic_construction
+
+		available = {
+			if = {
+				GER = { 
+					has_tech = ger_mechanised_infantry3
+				}
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		visible = {
+			original_tag = HUN 
+			has_completed_focus = HUN_hanomag
+		}
+
+		days_remove = 180
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			set_technology = { 
+				ger_mechanised_infantry3 = 1
+			}
+		}
+	}
+	
+	HUN_fiat_license = {
+
+		icon = generic_construction
+
+		available = {
+			if = {
+				ITA = { 
+					has_tech = axis_light_tank_1940
+				}
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		visible = {
+			original_tag = HUN 
+			has_completed_focus = HUN_fiat
+		}
+
+		days_remove = 180
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			set_technology = { 
+				axis_light_tank_1940 = 1
+			}
+		}
+	}
+	
+	HUN_fiat_license2 = {
+
+		icon = generic_construction
+
+		available = {
+			if = {
+				ITA = { 
+					has_tech = axis_light_tank_1942
+				}
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		visible = {
+			original_tag = HUN 
+			has_completed_focus = HUN_fiat
+		}
+
+		days_remove = 180
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			set_technology = { 
+				axis_light_tank_1942 = 1
+			}
+		}
+	}
+}

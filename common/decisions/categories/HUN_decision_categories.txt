@@ -1,0 +1,40 @@
+#################
+#### HUNGARY ####
+#################
+
+HUN_foreign_licensing = {
+	icon = GFX_decision_category_generic_economy
+	
+	allowed = {
+		always = yes
+	}
+	
+	visible = {
+		if = {
+			limit = {
+				tag = HUN
+			}
+			has_completed_focus = HUN_secret_rearmament
+		}
+	}
+}
+
+HUN_axis_bills = {
+	icon = GFX_decision_category_generic_economy
+	
+	allowed = {
+		always = yes
+	}
+	
+	visible = {
+		if = {
+			limit = {
+				tag = HUN
+				OR = {
+					has_completed_focus = HUN_german_dependency
+					has_completed_focus = HUN_italian_dependency
+				}
+			}
+		}
+	}
+}

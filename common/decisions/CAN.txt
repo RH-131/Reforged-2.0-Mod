@@ -1,0 +1,40 @@
+operations = {
+	CAN_annex_saf = {
+
+			icon = generic_political_discourse
+
+			allowed = {
+				tag = CAN			
+			}
+			visible = {
+				tag = CAN
+				SAF = { is_ai = yes }
+				country_exists = SAF
+			}
+			available = {
+				date > 1939.1.1
+			}
+
+			cost = 0
+
+			fire_only_once = yes
+
+
+			complete_effect = {
+				SAF = {
+					transfer_navy = {
+						target = CAN
+					}
+				}
+				annex_country = {
+				  target = SAF
+				  transfer_troops = yes
+				}
+				every_state = {
+					limit = { is_core_of = SAF }
+					set_resistance = 0
+					set_compliance = 100
+				}
+			}		
+	}
+}

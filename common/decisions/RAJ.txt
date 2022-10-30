@@ -1,0 +1,852 @@
+RAJ_imperial_state_of_india = {
+    RAJ_decrease_corruption = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = RAJ			
+		}
+
+		available = {
+			NOT = {
+				has_idea = RAJ_corruption_3
+				has_idea = RAJ_corruption_4
+				has_idea = RAJ_corruption_5
+			}
+		}
+
+		days_re_enable = 350
+
+		cost = 100
+		
+		ai_will_do = {
+			factor = 100 
+		}
+		
+		complete_effect = {
+			RAJ_level_down_corruption = yes 
+			add_stability = -0.05
+			add_timed_idea = { idea = RAJ_corruption_countdown days = 350 }
+		}		
+	}
+	
+    RAJ_urbanization_delhi = {
+
+		icon = generic_political_discourse
+		
+		allowed = {
+			tag = RAJ			
+		}
+		
+		days_remove = 120
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		cost = 40
+		fire_only_once = yes		
+		
+		remove_effect = {
+			439 = {
+				add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+					type = industrial_complex
+					instant_build = yes 
+					level = 2
+				}
+			}
+			add_resource = {
+				state = 439
+				amount = 15
+				type = steel
+			}			
+			custom_effect_tooltip = RAJ_attempt_industrialization_tt_3
+
+			add_to_variable = {
+				var = rapid_industrialization
+				value = 7
+			}	
+		}	
+		complete_effect = {
+			add_stability = -0.05
+		}
+	}
+
+    RAJ_urbanization_bombay = {
+
+		icon = generic_political_discourse
+		
+		allowed = {
+			tag = RAJ			
+		}
+		
+		days_remove = 120
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		cost = 40
+		fire_only_once = yes		
+		
+		remove_effect = {
+			429 = {
+				add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+					type = industrial_complex
+					instant_build = yes 
+					level = 2
+				}
+			} 
+			add_resource = {
+				state = 429
+				amount = 8
+				type = steel
+			}			
+			custom_effect_tooltip = RAJ_attempt_industrialization_tt_3
+
+			add_to_variable = {
+				var = rapid_industrialization
+				value = 7
+			}	
+		}	
+		complete_effect = {
+			add_stability = -0.05
+		}
+	}
+	
+    RAJ_develop_bombay = {
+
+		icon = generic_political_discourse
+		
+		allowed = {
+			tag = RAJ			
+		}
+
+		days_remove = 120
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		cost = 40
+		fire_only_once = yes		
+		
+		remove_effect = {
+			429 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 3
+				}
+			}
+			add_resource = {
+				state = 429
+				amount = 7
+				type = steel
+			}
+			custom_effect_tooltip = RAJ_attempt_industrialization_tt_3
+
+			add_to_variable = {
+				var = rapid_industrialization
+				value = 7
+			}	
+		}	
+		complete_effect = {
+			add_stability = -0.05
+		}
+	}
+	
+	RAJ_expand_tata_iron_and_steel = {
+		allowed = {
+			tag = RAJ			
+		}
+
+		available = {
+			has_completed_focus = RAJ_core_industry_2	
+		}
+		
+		visible = {
+			has_completed_focus = RAJ_core_industry_2 
+		}
+
+		days_remove = 270
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+		
+		ai_will_do = {
+			factor = 100 
+		}
+		
+		cost = 100
+		
+		fire_only_once = yes	
+		
+		remove_effect = {
+			431 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes 
+				}
+			} 
+			custom_effect_tooltip = RAJ_attempt_industrialization_tt_4
+			add_resource = {
+				state = 431
+				amount = 12
+				type = steel
+			}
+			add_to_variable = {
+				var = rapid_industrialization
+				value = 15
+			}	
+		}		
+	}
+
+	RAJ_illustrious_decision = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			tag = RAJ			
+		}
+
+		available = {
+			has_completed_focus = RAJ_the_illustrious_class 
+		}
+
+		visible = {
+			has_completed_focus = RAJ_the_illustrious_class 
+		}
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			custom_effect_tooltip = UK_carrier_focus_1_tt
+			clear_variable = carrier_focus_1
+			hidden_effect = {
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_1
+						creator = "RAJ" 
+						version_name = "Illustrious Class"
+					}
+					name = "Vikrant" 
+					requested_factories = 1
+					progress = 0.5
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_1
+						creator = "RAJ" 
+						version_name = "Illustrious Class"
+					}
+					name = "Viraat" 
+					requested_factories = 1
+					progress = 0.5
+					amount = 1
+				}
+			}
+			custom_effect_tooltip = UK_carrier_focus_1_tt
+		}		
+	}
+
+	RAJ_royal_class_decision = {
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			tag = RAJ			
+		}
+
+		available = {
+			tag = RAJ
+			has_completed_focus = RAJ_the_princess_royal_class 
+		}
+
+		visible = {
+			tag = RAJ
+			has_completed_focus = RAJ_the_princess_royal_class 
+		}
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			custom_effect_tooltip = UK_bb_focus_1_tt
+			hidden_effect = {
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "RAJ" 
+						version_name = "Royal Class"
+					}
+					name = "Delhi" 
+					requested_factories = 1
+					progress = 0.5
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "RAJ" 
+						version_name = "Royal Class"
+					}
+					name = "Prince of Wales" 
+					requested_factories = 1
+					progress = 0.5
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "RAJ" 
+						version_name = "Royal Class"
+					}
+					name = "Mysore" 
+					requested_factories = 1
+					progress = 0.5
+					amount = 1
+				}
+			}
+		}		
+	}
+
+	RAJ_sway_the_baroda_state = {
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = RAJ			
+		}
+
+		available = {
+			has_completed_focus = RAJ_submits_4
+		}
+		
+		visible = {
+			has_completed_focus = RAJ_submits_4 
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 90
+
+		modifier = {
+		}
+
+		remove_effect = {
+				
+			subtract_from_variable = {
+				var = RAJ_princely_states_influence 
+				value = -1 
+			}
+
+			add_offsite_building = {
+				type = industrial_complex
+				level = 4
+			}
+
+		}
+	}
+
+	RAJ_sway_the_hyderabad_state = {
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = RAJ			
+		}
+
+		available = {
+			has_completed_focus = RAJ_submits_4
+		}
+		
+		visible = {
+			has_completed_focus = RAJ_submits_4 
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 90
+
+		modifier = {
+		}
+
+		remove_effect = {
+				
+			subtract_from_variable = {
+				var = RAJ_princely_states_influence 
+				value = -1 
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 4
+			}
+		}
+	}
+
+	RAJ_sway_the_mysore_state = {
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = RAJ			
+		}
+
+		available = {
+			has_completed_focus = RAJ_submits_4
+		}
+		
+		visible = {
+			has_completed_focus = RAJ_submits_4 
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 90
+
+		modifier = {
+		}
+
+		remove_effect = {
+				
+			subtract_from_variable = {
+				var = RAJ_princely_states_influence 
+				value = -1 
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 4
+			}
+		}
+	}
+
+	RAJ_reorganize_sind_industry = {
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = RAJ			
+		}
+
+		available = {
+			has_completed_focus = RAJ_take_the_prince_industry
+		}
+		
+		visible = {
+			has_completed_focus = RAJ_take_the_prince_industry 
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 70
+
+		modifier = {
+		}
+
+		remove_effect = {
+				
+			subtract_from_variable = {
+				var = RAJ_princely_states_influence 
+				value = -1 
+			}
+
+			443 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					level = 2
+					type = industrial_complex
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	RAJ_reorganize_gujarat_industry = {
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = RAJ			
+		}
+
+		available = {
+			has_completed_focus = RAJ_take_the_prince_industry
+		}
+		
+		visible = {
+			has_completed_focus = RAJ_take_the_prince_industry 
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 70
+
+		modifier = {
+		}
+
+		remove_effect = {
+				
+			subtract_from_variable = {
+				var = RAJ_princely_states_influence 
+				value = -1 
+			}
+
+			428 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					level = 2
+					type = industrial_complex
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	RAJ_reorganize_mysore_industry = {
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = RAJ			
+		}
+
+		available = {
+			has_completed_focus = RAJ_take_the_prince_industry
+		}
+		
+		visible = {
+			has_completed_focus = RAJ_take_the_prince_industry 
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 70
+
+		modifier = {
+		}
+
+		remove_effect = {
+				
+			subtract_from_variable = {
+				var = RAJ_princely_states_influence 
+				value = -1 
+			}
+
+			425 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					level = 2
+					type = industrial_complex
+					instant_build = yes
+				}
+			}
+
+		}
+	}	
+
+	RAJ_attempt_rapid_industrialization_and_urbanization = {
+
+		icon = generic_construction
+
+		available = {
+			AND = {
+				check_variable = { 
+					var = rapid_industrialization value = 100
+					compare = greater_than_or_equals 
+				}					
+				has_completed_focus = RAJ_cooperative_societies
+			}
+		}
+		
+		is_good = no
+
+		fire_only_once = yes
+
+		allowed = {
+			tag = RAJ			
+		}
+		
+		cost = 100
+
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = RAJ_agrarian_society_2
+				add_idea = RAJ_agrarian_society_3
+			}
+					
+ 			custom_effect_tooltip = RAJ_attempt_industrialization_tt   	
+		}	
+	}
+
+### Raj Resources Extraction Decisions ###
+
+	RAJ_develop_west_bengal_steel = { #431
+		icon = steel
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 431
+			}
+		}
+
+		allowed = {
+			#Everyone
+		}
+
+		available = {
+			has_completed_focus = RAJ_core_industry_2
+			has_full_control_of_state = 431
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation3
+			controls_state = 431
+		}
+
+		visible = {
+			controls_state = 431
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		remove_effect = {
+			431 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}				
+			}
+		}
+	}
+	
+	RAJ_develop_delhi_steel = { #439
+		icon = steel
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 439
+			}
+		}
+
+		allowed = {
+			#Everyone
+		}
+
+		available = {
+			has_completed_focus = RAJ_core_industry_3
+			has_full_control_of_state = 439
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation3
+			controls_state = 439
+		}
+
+		visible = {
+			controls_state = 439
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		remove_effect = {
+			439 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}				
+			}
+		}
+	}
+	
+	RAJ_develop_bombay_steel = { #429
+		icon = steel
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 429
+			}
+		}
+
+		allowed = {
+			#Everyone
+		}
+
+		available = {
+			has_completed_focus = RAJ_core_industry_5
+			has_completed_focus = RAJ_home_defence_industry_focus
+			has_full_control_of_state = 429
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation3
+			controls_state = 429
+		}
+
+		visible = {
+			controls_state = 429
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		remove_effect = {
+			429 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}				
+			}
+		}
+	}
+	
+	RAJ_develop_orissa_mining_expansion = { #426
+		icon = steel
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 426
+			}
+		}
+
+		allowed = {
+			#Everyone
+		}
+
+		available = {
+			OR = {
+			has_completed_focus = RAJ_prince_military_production_expansion
+			has_completed_focus = RAJ_congress_industry_6
+			}
+			has_full_control_of_state = 426
+			num_of_civilian_factories_available_for_projects > 4
+			has_tech = excavation3
+			controls_state = 426
+		}
+
+		visible = {
+			controls_state = 426
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 70
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		remove_effect = {
+			426 = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}	
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+				add_resource = { 
+					type = chromium
+					amount = 3
+				}				
+			}
+		}
+	}
+	
+	RAJ_develop_aden_mining = { #659
+		icon = steel
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 659
+			}
+		}
+
+		allowed = {
+			#Everyone
+		}
+
+		available = {
+			has_completed_focus = RAJ_arabian_mines
+			has_full_control_of_state = 659
+			num_of_civilian_factories_available_for_projects > 4
+			has_tech = excavation4
+			controls_state = 659
+		}
+
+		visible = {
+			has_completed_focus = RAJ_arabian_mines
+			controls_state = 659
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		remove_effect = {
+			659 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}	
+				add_resource = {
+					type = aluminium
+					amount = 4
+				}
+			}
+		}
+	}
+	
+}
+	

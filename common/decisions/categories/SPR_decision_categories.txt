@@ -59,31 +59,19 @@ SPR_the_inevitable_civil_war = {
 	}
 }
 
-SPR_civil_war_offensives = {
-	priority = 8
-	icon = spr_civil_war_offensives
+SPR_civil_war_operations = {
 
-	picture = GFX_decision_cat_picture_spr_civil_war_offensives
-
-	on_map_area = {
-		state = 41
-		name = SPR_civil_war_offensives_map_category_name
-		zoom = 250
-	}
-
-	visible_when_empty = yes
+	icon = spr_the_inevitable_civil_war
 	
 	allowed = {
 		original_tag = SPR
 		has_dlc = "La Resistance"
 	}
-
+	
 	visible = {
-		SPR_scw_in_progress = yes
-		any_owned_state = {
-			has_state_flag = SPR_unplanned_offensive_flag
+			has_global_flag = spanish_civil_war
+			has_government = fascism
 		}
-	}
 }
 
 SPA_reassert_american_dominance = {

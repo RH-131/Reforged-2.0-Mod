@@ -1,12 +1,51 @@
 prospect_for_resources = {
-	develop_shandong_aluminium_deposits = { #597
+	JAP_develop_north_sakhalin_oil_deposits = { #655
+		icon = oil
 
+		highlight_states = {
+			highlight_state_targets = {
+				state = 655
+			}
+		}
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 655
+			has_tech = excavation2
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			655 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+		}
+	}
+	develop_shandong_aluminium_deposits = { #597
+		
 		icon = aluminium
 
 		allowed = {
-
+			original_tag = JAP
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 597
@@ -21,8 +60,6 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			owns_state = 597
-			controls_state = 597
 			597 = {
 				NOT = {
 					has_state_flag = shandong_aluminium_developed
@@ -40,53 +77,25 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
-		remove_effect = {
-			597 = { set_state_flag = shandong_aluminium_developed }
+		remove_effect = { 
+			597 = { set_state_flag = shandong_aluminium_developed } 
 			597 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 25
 				}
 			}
 		}
 	}
 
 	develop_suiyuan_steel_deposits = { #621
-
+		
 		icon = steel
 
 		allowed = {
-
+			original_tag = JAP
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -101,8 +110,6 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			owns_state = 621
-			controls_state = 621
 			621 = {
 				NOT = {
 					has_state_flag = suiyuan_steel_developed
@@ -120,53 +127,28 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
-		remove_effect = {
-			621 = { set_state_flag = suiyuan_steel_developed }
+		remove_effect = { 
+			621 = { set_state_flag = suiyuan_steel_developed } 
 			621 = {
 				add_resource = {
 					type = steel
-					amount = 8
+					amount = 25
 				}
 			}
-		}
+		}	
 	}
 
 	develop_daqing_deposits = { #714
-
+		
 		icon = oil
 
 		allowed = {
-
+			OR = {
+				tag = JAP
+				tag = MAN
+			}
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -181,8 +163,6 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			owns_state = 714
-			controls_state = 714
 			714 = {
 				NOT = {
 					has_state_flag = daqing_oil_developed_1
@@ -200,62 +180,28 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 20 #10 was the basic default AI weight before, meant for Chinas.
-				OR = {
-					is_literally_china = yes
-					original_tag = MAN
-					original_tag = MEN
-					original_tag = JAP
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 10
 		}
-
-		remove_effect = {
-			714 = { set_state_flag = daqing_oil_developed_1 }
+		remove_effect = { 
+			714 = { set_state_flag = daqing_oil_developed_1 } 
 			714 = {
 				add_resource = {
 					type = oil
-					amount = 4
+					amount = 5
 				}
 			}
-		}
+		}	
 	}
 	develop_daqing_deposits_2 = { #714
-
+		
 		icon = oil
 
 		allowed = {
-
+			OR = {
+				tag = JAP
+				tag = MAN
+			}
+			
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -270,8 +216,6 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			owns_state = 714
-			controls_state = 714
 			714 = {
 				has_state_flag = daqing_oil_developed_1
 				NOT = {
@@ -290,52 +234,24 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 1
 		}
-		remove_effect = {
-			714 = { set_state_flag = daqing_oil_developed_2 }
+		remove_effect = { 
+			714 = { set_state_flag = daqing_oil_developed_2 } 
 			714 = {
 				add_resource = {
 					type = oil
-					amount = 8
+					amount = 10
 				}
 			}
-		}
+		}	
 	}
 	develop_yunnan_aluminium_deposits = { #325
-
+		
 		icon = aluminium
 
 		allowed = {
-
+			original_tag = JAP
 		}
 
 		available = {
@@ -351,8 +267,6 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			owns_state = 325
-			controls_state = 325
 			325 = {
 				NOT = {
 					has_state_flag = yunnan_aluminium_developed
@@ -370,52 +284,27 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
-		remove_effect = {
-			325 = { set_state_flag = yunnan_aluminium_developed }
+		remove_effect = { 
+			325 = { set_state_flag = yunnan_aluminium_developed } 
 			325 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 25
 				}
 			}
-		}
+		}	
 	}
 	develop_kirin_aluminium_deposits = { #328
-
+		
 		icon = aluminium
 
 		allowed = {
-			NOT = { tag = MAN }
+			OR = {
+				tag = JAP
+				tag = MAN
+			}
 		}
 
 		available = {
@@ -431,8 +320,6 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			owns_state = 328
-			controls_state = 328
 			328 = {
 				NOT = {
 					has_state_flag = kirin_aluminium_developed
@@ -450,52 +337,24 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
-		remove_effect = {
-			328 = { set_state_flag = kirin_aluminium_developed }
+		remove_effect = { 
+			328 = { set_state_flag = kirin_aluminium_developed } 
 			328 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 18
 				}
 			}
-		}
+		}	
 	}
 	develop_sichuan_aluminium_deposits = { #605
-
+		
 		icon = aluminium
 
 		allowed = {
-
+			original_tag = JAP
 		}
 
 		available = {
@@ -511,8 +370,6 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			owns_state = 605
-			controls_state = 605
 			605 = {
 				NOT = {
 					has_state_flag = sichuan_aluminium_developed
@@ -530,60 +387,31 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
-		remove_effect = {
-			605 = { set_state_flag = sichuan_aluminium_developed }
+		remove_effect = { 
+			605 = { set_state_flag = sichuan_aluminium_developed } 
 			605 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 25
 				}
 			}
-		}
+		}	
 	}
 
 	develop_luzon_chromium_deposits = { #623
-
+		
 		icon = chromium
 
 		allowed = {
-
+			original_tag = JAP
 		}
 
 		available = {
-			owns_state = 623
 			controls_state = 623
-			num_of_civilian_factories_available_for_projects > 2
-			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 1
+			has_tech = excavation2
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -592,8 +420,6 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			owns_state = 623
-			controls_state = 623
 			623 = {
 				NOT = {
 					has_state_flag = luzon_chromium_developed
@@ -607,68 +433,30 @@ prospect_for_resources = {
 		days_remove = 60
 
 		modifier = {
-			civilian_factory_use = 3
+			civilian_factory_use = 2
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 10 #5 was the basic default AI weight before, meant for Chinas.
-				OR = {
-					is_literally_china = yes
-					original_tag = MAN
-					original_tag = MEN
-					original_tag = JAP
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = chromium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
-		remove_effect = {
-			623 = { set_state_flag = luzon_chromium_developed }
+		remove_effect = { 
+			623 = { set_state_flag = luzon_chromium_developed } 
 			623 = {
 				add_resource = {
 					type = chromium
-					amount = 8
+					amount = 12
 				}
 			}
 		}
 	}
 
 	develop_mindanao_steel_deposits = { #627
-
+		
 		icon = steel
 
 		allowed = {
-
+			original_tag = JAP
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 627
@@ -676,15 +464,12 @@ prospect_for_resources = {
 		}
 
 		available = {
-			has_tech = excavation4
-			num_of_civilian_factories_available_for_projects > 2
-			owns_state = 627
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 1
 			controls_state = 627
 		}
 
 		visible = {
-			owns_state = 627
-			controls_state = 627
 			627 = {
 				NOT = {
 					has_state_flag = mindanao_steel_developed
@@ -698,147 +483,35 @@ prospect_for_resources = {
 		days_remove = 60
 
 		modifier = {
-			civilian_factory_use = 3
+			civilian_factory_use = 2
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
-		remove_effect = {
-			627 = { set_state_flag = mindanao_steel_developed }
+		remove_effect = { 
+			627 = { set_state_flag = mindanao_steel_developed } 
 			627 = {
 				add_resource = {
 					type = steel
-					amount = 8
+					amount = 12
 				}
 			}
 		}
 	}
-
-	develop_samar_steel_deposits = { #625
-
-		icon = steel
-
-		allowed = {
-
-		}
-
-		available = {
-			has_tech = excavation3
-			num_of_civilian_factories_available_for_projects > 2
-			owns_state = 625
-			controls_state = 625
-		}
-
-		highlight_states = {
-			highlight_state_targets = {
-				state = 625
-			}
-		}
-
-		visible = {
-			owns_state = 625
-			controls_state = 625
-			625 = {
-				NOT = {
-					has_state_flag = samar_steel_developed
-				}
-			}
-		}
-
-		fire_only_once = yes
-
-		cost = 25
-		days_remove = 60
-
-		modifier = {
-			civilian_factory_use = 3
-		}
-
-		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
-		}
-
-		remove_effect = {
-			625 = { set_state_flag = samar_steel_developed }
-			625 = {
-				add_resource = {
-					type = steel
-					amount = 6
-				}
-			}
-		}
-	}
-
 	develop_nauru_tungsten_deposits = { #725
-
+		
 		icon = tungsten
 
 		allowed = {
-
+			original_tag = JAP
 		}
 
 		available = {
 			has_tech = excavation4
 			num_of_civilian_factories_available_for_projects > 2
-			owns_state = 725
 			controls_state = 725
+			has_completed_focus = JAP_reach_for_resources_focus
 		}
 
 		highlight_states = {
@@ -848,8 +521,6 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			owns_state = 725
-			controls_state = 725
 			725 = {
 				NOT = {
 					has_state_flag = nauru_tungsten_developed
@@ -867,41 +538,14 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.5
+			factor = 1
 			modifier = {
-				factor = 0
 				tag = ENG
 				has_war = no
-			}
-			modifier = {
 				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = tungsten
-					amount < 1
-				}
 			}
 		}
+
 		remove_effect = {
 			725 = { set_state_flag = nauru_tungsten_developed }
 			725 = {
@@ -912,21 +556,71 @@ prospect_for_resources = {
 			}
 		}
 	}
-	develop_tonkin_aluminium_deposits = { #671
+	develop_samar_steel_deposits = { #625
+		
+		icon = steel
 
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 1
+			controls_state = 625
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 625
+			}
+		}
+
+		visible = {
+			625 = {
+				NOT = {
+					has_state_flag = samar_steel_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		remove_effect = { 
+			625 = { set_state_flag = samar_steel_developed } 
+			625 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+		}	
+	}
+
+	develop_tonkin_aluminium_deposits = { #671
+		
 		icon = aluminium
 
 		allowed = {
-
+			original_tag = JAP
 		}
 
 		available = {
 			has_tech = excavation4
 			num_of_civilian_factories_available_for_projects > 2
-			owns_state = 671
 			controls_state = 671
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 671
@@ -934,8 +628,6 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			owns_state = 671
-			controls_state = 671
 			671 = {
 				NOT = {
 					has_state_flag = tonkin_aluminium_developed
@@ -953,35 +645,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -989,26 +653,24 @@ prospect_for_resources = {
 			671 = {
 				add_resource = {
 					type = aluminium
-					amount = 6
+					amount = 25
 				}
 			}
 		}
 	}
 	develop_singapore_aluminium_deposits = { #336
-
+		
 		icon = aluminium
 
 		allowed = {
-
+			original_tag = JAP
 		}
 
-		available = {
+		available = {	
 			has_tech = excavation2
 			num_of_civilian_factories_available_for_projects > 2
-			owns_state = 336
 			controls_state = 336
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 336
@@ -1016,8 +678,6 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			owns_state = 336
-			controls_state = 336
 			336 = {
 				NOT = {
 					has_state_flag = singapore_aluminium_developed
@@ -1035,35 +695,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -1071,15 +703,15 @@ prospect_for_resources = {
 			336 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 25
 				}
 			}
 		}
 	}
 	develop_sirte_oil_fields = { #662
-
+		
 		icon = oil
-
+		
 		allowed = {
 			NOT = {
 				tag = ITA
@@ -1087,12 +719,10 @@ prospect_for_resources = {
 		}
 
 		available = {
-			has_tech = excavation3
 			num_of_civilian_factories_available_for_projects > 2
 			owns_state = 662
 			controls_state = 662
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 662
@@ -1119,39 +749,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 20 #10 was the default weight before, meant for ITA.
-				original_tag = ITA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -1161,13 +759,13 @@ prospect_for_resources = {
 			662 = {
 				add_resource = {
 					type = oil
-					amount = 8
+					amount = 15
 				}
 			}
 		}
 	}
 	develop_benghazi_oil_fields = { #450
-
+		
 		icon = oil
 
 		allowed = {
@@ -1177,12 +775,10 @@ prospect_for_resources = {
 		}
 
 		available = {
-			has_tech = excavation4
 			num_of_civilian_factories_available_for_projects > 2
 			owns_state = 450
 			controls_state = 450
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 450
@@ -1192,7 +788,6 @@ prospect_for_resources = {
 		visible = {
 			owns_state = 450
 			controls_state = 450
-			has_tech = excavation3
 			450 = {
 				NOT = {
 					has_state_flag = benghazi_oil_developed
@@ -1210,39 +805,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 20 #10 was the default weight before, meant for ITA.
-				original_tag = ITA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -1252,13 +815,14 @@ prospect_for_resources = {
 			450 = {
 				add_resource = {
 					type = oil
-					amount = 4
+					amount = 15
 				}
 			}
 		}
 	}
+	
 	develop_tasmania_aluminium_deposits = { #518
-
+		
 		icon = aluminium
 
 		allowed = {
@@ -1271,7 +835,6 @@ prospect_for_resources = {
 			owns_state = 518
 			controls_state = 518
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 518
@@ -1298,35 +861,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -1336,13 +871,14 @@ prospect_for_resources = {
 			518 = {
 				add_resource = {
 					type = aluminium
-					amount = 8
+					amount = 22
 				}
 			}
 		}
 	}
-	develop_west_africa_aluminium_deposits = { #556
-
+	
+	develop_french_guiana_aluminium_deposits = { #310
+		
 		icon = aluminium
 
 		allowed = {
@@ -1350,22 +886,20 @@ prospect_for_resources = {
 		}
 
 		available = {
-			has_tech = excavation3
 			num_of_civilian_factories_available_for_projects > 2
-			owns_state = 556
-			controls_state = 556
+			owns_state = 310
+			controls_state = 310
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
-				state = 556
+				state = 310
 			}
 		}
 
 		visible = {
-			owns_state = 556
-			controls_state = 556
-			556 = {
+			owns_state = 310
+			controls_state = 310
+			310 = {
 				NOT = {
 					has_state_flag = west_Africa_aluminium_developed
 				}
@@ -1382,78 +916,48 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
-			556 = {
+			310 = {
 				set_state_flag = west_Africa_aluminium_developed
 			}
-			556 = {
+			310 = {
 				add_resource = {
 					type = aluminium
-					amount = 8
+					amount = 13
 				}
 			}
 		}
 	}
-	develop_west_africa_aluminium_deposits_2 = { #556
-
+	develop_french_guiana_aluminium_deposits_2 = { #310
+		
 		icon = aluminium
 
 		allowed = {
-
+			
 		}
 
 		available = {
-			has_tech = excavation5
-			num_of_civilian_factories_available_for_projects > 2
-			owns_state = 556
-			controls_state = 556
+			num_of_civilian_factories_available_for_projects > 4
+			owns_state = 310
+			controls_state = 310
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 556
+				state = 310
 			}
 		}
 
 		visible = {
-			owns_state = 556
-			controls_state = 556
-			has_tech = excavation3
-			556 = {
+			owns_state = 310
+			controls_state = 310
+			310 = {
 				has_state_flag = west_Africa_aluminium_developed
 			}
-			556 = {
+			310 = {
 				NOT = {
 					has_state_flag = west_Africa_aluminium_developed_2
 				}
@@ -1466,55 +970,27 @@ prospect_for_resources = {
 		days_remove = 90
 
 		modifier = {
-			civilian_factory_use = 3
+			civilian_factory_use = 5
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
-			556 = {
+			310 = {
 				set_state_flag = west_Africa_aluminium_developed_2
 			}
-			556 = {
+			310 = {
 				add_resource = {
 					type = aluminium
-					amount = 4
+					amount = 13
 				}
 			}
 		}
 	}
 	develop_madagascar_rubber_plantations = { #543
-
+		
 		icon = rubber
 
 		allowed = {
@@ -1546,42 +1022,10 @@ prospect_for_resources = {
 		fire_only_once = yes
 
 		cost = 25
-		days_remove = 180
+		days_remove = 90
 
 		modifier = {
 			civilian_factory_use = 3
-		}
-
-		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = rubber
-					amount < 1
-				}
-			}
 		}
 
 		remove_effect = {
@@ -1591,13 +1035,17 @@ prospect_for_resources = {
 			543 = {
 				add_resource = {
 					type = rubber
-					amount = 8
+					amount = 10
 				}
 			}
 		}
+
+		ai_will_do = {
+			factor = 1
+		}
 	}
 	develop_madagascar_rubber_plantations_2 = { #543
-
+		
 		icon = rubber
 
 		allowed = {
@@ -1609,7 +1057,6 @@ prospect_for_resources = {
 			controls_state = 543
 			num_of_civilian_factories_available_for_projects > 4
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 543
@@ -1632,42 +1079,14 @@ prospect_for_resources = {
 		fire_only_once = yes
 
 		cost = 25
-		days_remove = 180
+		days_remove = 90
 
 		modifier = {
 			civilian_factory_use = 5
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = rubber
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -1677,13 +1096,13 @@ prospect_for_resources = {
 			543 = {
 				add_resource = {
 					type = rubber
-					amount = 8
+					amount = 15
 				}
 			}
 		}
 	}
 	develop_nigeria_rubber_plantations = { #558
-
+		
 		icon = rubber
 
 		allowed = {
@@ -1693,9 +1112,8 @@ prospect_for_resources = {
 		available = {
 			owns_state = 558
 			controls_state = 558
-			num_of_civilian_factories_available_for_projects > 2
+			num_of_civilian_factories_available_for_projects > 3
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 558
@@ -1715,51 +1133,14 @@ prospect_for_resources = {
 		fire_only_once = yes
 
 		cost = 25
-		days_remove = 180
+		days_remove = 90
 
 		modifier = {
-			civilian_factory_use = 3
+			civilian_factory_use = 4
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = ENG
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					AND = {
-						tag = ENG
-						has_war = no
-						336 = { CONTROLLER = { is_in_faction_with = ROOT } }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = rubber
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -1775,13 +1156,12 @@ prospect_for_resources = {
 		}
 	}
 	develop_ems_oil_fields = { #56
-
+		
 		icon = oil
 
 		allowed = {
 
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 56
@@ -1812,43 +1192,11 @@ prospect_for_resources = {
 		days_remove = 120
 
 		modifier = {
-			civilian_factory_use = 3
+			civilian_factory_use = 5
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 20 #10 was the default weight before
-				original_tag = GER
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -1858,14 +1206,14 @@ prospect_for_resources = {
 			56 = {
 				add_resource = {
 					type = oil
-					amount = 6
+					amount = 17
 				}
 			}
 		}
 	}
 
 	develop_matzen_oil_fields = { #4
-
+		
 		icon = oil
 
 		allowed = {
@@ -1878,7 +1226,6 @@ prospect_for_resources = {
 			owns_state = 4
 			controls_state = 4
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 4
@@ -1906,39 +1253,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 20 #10 was the default weight before
-				original_tag = GER
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -1948,19 +1263,18 @@ prospect_for_resources = {
 			4 = {
 				add_resource = {
 					type = oil
-					amount = 4
+					amount = 21
 				}
 			}
 		}
 	}
 	develop_friesland_oil_fields = { #36
-
+		
 		icon = oil
 
 		allowed = {
 
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 36
@@ -1995,62 +1309,26 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 20 #10 was the default weight before
-				OR = {
-					original_tag = GER
-					original_tag = HOL
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 		remove_effect = {
 			36 = { set_state_flag = friesland_oil_developed }
 			36 = {
 				add_resource = {
 					type = oil
-					amount = 6
+					amount = 18
 				}
-
+				
 			}
 		}
 	}
 	expand_eregli_steel_works = { #347
-
+		
 		icon = steel
 
 		allowed = {
 
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 347
@@ -2059,13 +1337,7 @@ prospect_for_resources = {
 
 		available = {
 			has_tech = construction3
-			if = {
-				limit = {
-					has_dlc = "Battle for the Bosporus"
-				}
-				has_country_flag = TUR_karabuk_iron_steel_factory_modernised_flag
-			}
-			num_of_civilian_factories_available_for_projects > 14
+			num_of_civilian_factories_available_for_projects > 2
 			owns_state = 347
 			controls_state = 347
 		}
@@ -2086,39 +1358,7 @@ prospect_for_resources = {
 		days_remove = 90
 
 		modifier = {
-			civilian_factory_use = 15
-		}
-
-		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			civilian_factory_use = 3
 		}
 
 		remove_effect = {
@@ -2126,20 +1366,22 @@ prospect_for_resources = {
 			347 = {
 				add_resource = {
 					type = steel
-					amount = 23
+					amount = 22
 				}
 			}
 		}
+
+		ai_will_do = {
+			factor = 1
+		}
 	}
-
 	develop_newfoundland_steel = { #331
-
+		
 		icon = steel
 
 		allowed = {
 
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 331
@@ -2173,44 +1415,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 20 #10 was the default weight before
-				original_tag = ENG
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					AND = {
-						tag = ENG
-						has_war = no
-						date < 1938.1.1
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -2218,13 +1423,13 @@ prospect_for_resources = {
 			331 = {
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 32
 				}
 			}
 		}
 	}
-	develop_quebec_steel = { #862
-
+	develop_quebec_steel = { #466
+		
 		icon = steel
 
 		allowed = {
@@ -2234,22 +1439,22 @@ prospect_for_resources = {
 		available = {
 			has_tech = excavation2
 			num_of_civilian_factories_available_for_projects > 2
-			862 = {
-				infrastructure > 1
+			466 = {
+				infrastructure > 4
 			}
-			owns_state = 862
-			controls_state = 862
+			owns_state = 466
+			controls_state = 466
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 862
+				state = 466
 			}
 		}
 
 		visible = {
-			owns_state = 862
-			controls_state = 862
-			862 = {
+			owns_state = 466
+			controls_state = 466
+			466 = {
 				NOT = {
 					has_state_flag = quebec_steel_developed
 				}
@@ -2264,145 +1469,30 @@ prospect_for_resources = {
 		modifier = {
 			civilian_factory_use = 3
 		}
-
-		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
-		}
-
 		remove_effect = {
-			862 = {
+			466 = {
 				set_state_flag = quebec_steel_developed
 			}
-			862 = {
+			466 = {
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 32
 				}
 			}
-		}
-	}
-
-	develop_cuba_steel = { #315
-
-		icon = steel
-
-		allowed = {
-
-		}
-
-		highlight_states = {
-			highlight_state_targets = {
-				state = 315
-			}
-		}
-
-		available = {
-			has_tech = excavation3
-			num_of_civilian_factories_available_for_projects > 2
-			owns_state = 315
-			controls_state = 315
-		}
-
-		visible = {
-			owns_state = 315
-			controls_state = 315
-			315 = {
-				NOT = {
-					has_state_flag = cuba_steel_developed
-				}
-			}
-		}
-
-		fire_only_once = yes
-
-		cost = 25
-		days_remove = 90
-
-		modifier = {
-			civilian_factory_use = 3
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
-		}
-
-		remove_effect = {
-			315 = {
-				set_state_flag = cuba_steel_developed
-			}
-			315 = {
-				add_resource = {
-					type = steel
-					amount = 6
-				}
-			}
+			factor = 1
 		}
 	}
 
 	develop_arkansas_aluminium_deposits = { #372
-
+		
 		icon = aluminium
 
 		allowed = {
 
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 372
@@ -2421,8 +1511,8 @@ prospect_for_resources = {
 			controls_state = 372
 			372 = {
 				NOT = {
-					has_state_flag = {
-						flag = arkansas_aluminium_developed
+					has_state_flag = { 
+						flag = arkansas_aluminium_developed 
 						value = 5
 					}
 				}
@@ -2430,7 +1520,7 @@ prospect_for_resources = {
 		}
 
 		cost = 25
-		days_remove = USA_arkansas_aluminium_duration?30
+		days_remove = USA_arkansas_aluminium_duration
 
 		modifier = {
 			civilian_factory_use = 12
@@ -2461,38 +1551,13 @@ prospect_for_resources = {
 			372 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 22
 				}
 			}
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		complete_effect = {
@@ -2505,7 +1570,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_new_york_aluminium_deposits = { #358
-
+		
 		icon = aluminium
 
 		allowed = {
@@ -2537,39 +1602,14 @@ prospect_for_resources = {
 		}
 
 		cost = 25
-		days_remove = USA_new_york_aluminium_duration?30
+		days_remove = USA_new_york_aluminium_duration
 
 		modifier = {
 			civilian_factory_use = 12
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -2597,7 +1637,7 @@ prospect_for_resources = {
 			358 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 32
 				}
 			}
 		}
@@ -2612,7 +1652,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_tennessee_aluminium_deposits = { #368
-
+		
 		icon = aluminium
 
 		allowed = {
@@ -2625,7 +1665,7 @@ prospect_for_resources = {
 			controls_state = 368
 			num_of_civilian_factories_available_for_projects > 11
 		}
-
+		
 		highlight_states = {
 			highlight_state_targets = {
 				state = 368
@@ -2637,48 +1677,25 @@ prospect_for_resources = {
 			controls_state = 368
 			368 = {
 				NOT = {
-					has_state_flag = {
-						flag = tennessee_aluminium_developed
+					has_state_flag = { 
+						flag = tennessee_aluminium_developed 
 						value = 5
 					}
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = USA_tennessee_aluminium_duration?30
+		days_remove = USA_tennessee_aluminium_duration
 
 		modifier = {
-			civilian_factory_use = 12
+			civilian_factory_use = 36
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -2706,7 +1723,7 @@ prospect_for_resources = {
 			368 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 45
 				}
 			}
 		}
@@ -2721,7 +1738,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_washington_aluminium_deposits = { #386
-
+		
 		icon = aluminium
 
 		allowed = {
@@ -2746,48 +1763,25 @@ prospect_for_resources = {
 			controls_state = 386
 			386 = {
 				NOT = {
-					has_state_flag = {
-						flag = washington_aluminium_developed
+					has_state_flag = { 
+						flag = washington_aluminium_developed 
 						value = 5
 					}
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = USA_washington_aluminium_duration?30
+		days_remove = USA_washington_aluminium_duration
 
 		modifier = {
 			civilian_factory_use = 12
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -2815,7 +1809,7 @@ prospect_for_resources = {
 			386 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 26
 				}
 			}
 		}
@@ -2830,13 +1824,12 @@ prospect_for_resources = {
 		}
 	}
 	develop_idaho_tungsten_deposits = { #387
-
+		
 		icon = tungsten
 
 		allowed = {
 
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 387
@@ -2855,48 +1848,25 @@ prospect_for_resources = {
 			controls_state = 387
 			387 = {
 				NOT = {
-					has_state_flag = {
-						flag = idaho_tungsten_developed
+					has_state_flag = { 
+						flag = idaho_tungsten_developed 
 						value = 5
 					}
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = USA_idaho_tungsten_duration?30
+		days_remove = USA_idaho_tungsten_duration
 
 		modifier = {
 			civilian_factory_use = 12
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = tungsten
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -2924,7 +1894,7 @@ prospect_for_resources = {
 			387 = {
 				add_resource = {
 					type = tungsten
-					amount = 6
+					amount = 23
 				}
 			}
 		}
@@ -2939,7 +1909,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_california_tungsten_deposits = { #378
-
+		
 		icon = tungsten
 
 		allowed = {
@@ -2949,7 +1919,7 @@ prospect_for_resources = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 378
-			}
+			} 
 		}
 
 		available = {
@@ -2964,8 +1934,8 @@ prospect_for_resources = {
 			controls_state = 378
 			378 = {
 				NOT = {
-					has_state_flag = {
-						flag = california_tungsten_developed
+					has_state_flag = { 
+						flag = california_tungsten_developed 
 						value = 5
 					}
 				}
@@ -2980,31 +1950,10 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.5
+			factor = 1
 			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
+				has_political_power < 200
 				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = tungsten
-					amount < 1
-				}
 			}
 		}
 
@@ -3033,7 +1982,7 @@ prospect_for_resources = {
 			378 = {
 				add_resource = {
 					type = tungsten
-					amount = 6
+					amount = 21
 				}
 			}
 		}
@@ -3048,7 +1997,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_minnesota_steel_deposits = { #391
-
+		
 		icon = steel
 
 		allowed = {
@@ -3073,48 +2022,25 @@ prospect_for_resources = {
 			controls_state = 391
 			391 = {
 				NOT = {
-					has_state_flag = {
-						flag = minnesota_steel_developed
+					has_state_flag = { 
+						flag = minnesota_steel_developed 
 						value = 5
 					}
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = USA_minnesota_steel_duration?30
+		days_remove = USA_minnesota_steel_duration
 
 		modifier = {
 			civilian_factory_use = 12
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -3142,7 +2068,7 @@ prospect_for_resources = {
 			391 = {
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 56
 				}
 			}
 		}
@@ -3157,13 +2083,12 @@ prospect_for_resources = {
 		}
 	}
 	develop_pennsylvania_steel_deposits = { #360
-
+		
 		icon = steel
 
 		allowed = {
 
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 360
@@ -3182,48 +2107,25 @@ prospect_for_resources = {
 			controls_state = 360
 			360 = {
 				NOT = {
-					has_state_flag = {
-						flag = pennsylvania_steel_developed
+					has_state_flag = { 
+						flag = pennsylvania_steel_developed 
 						value = 5
 					}
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = USA_pennsylvania_steel_duration?30
+		days_remove = USA_pennsylvania_steel_duration
 
 		modifier = {
 			civilian_factory_use = 12
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -3251,7 +2153,7 @@ prospect_for_resources = {
 			360 = {
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 64
 				}
 			}
 		}
@@ -3267,7 +2169,7 @@ prospect_for_resources = {
 	}
 
 	develop_ohio_steel_deposits = { #261
-
+		
 		icon = steel
 
 		allowed = {
@@ -3280,7 +2182,6 @@ prospect_for_resources = {
 			owns_state = 261
 			controls_state = 261
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 261
@@ -3292,48 +2193,25 @@ prospect_for_resources = {
 			controls_state = 261
 			261 = {
 				NOT = {
-					has_state_flag = {
-						flag = ohio_steel_developed
+					has_state_flag = { 
+						flag = ohio_steel_developed 
 						value = 5
 					}
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = USA_ohio_steel_duration?30
+		days_remove = USA_ohio_steel_duration
 
 		modifier = {
 			civilian_factory_use = 12
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -3361,7 +2239,7 @@ prospect_for_resources = {
 			261 = {
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 61
 				}
 			}
 		}
@@ -3376,13 +2254,12 @@ prospect_for_resources = {
 		}
 	}
 	develop_indiana_steel_deposits = { #396
-
+		
 		icon = steel
 
 		allowed = {
 
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 396
@@ -3401,48 +2278,25 @@ prospect_for_resources = {
 			controls_state = 396
 			396 = {
 				NOT = {
-					has_state_flag = {
-						flag = indiana_steel_developed
+					has_state_flag = { 
+						flag = indiana_steel_developed 
 						value = 5
 					}
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = USA_indiana_steel_duration?30
+		days_remove = USA_indiana_steel_duration
 
 		modifier = {
 			civilian_factory_use = 12
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -3470,7 +2324,7 @@ prospect_for_resources = {
 			396 = {
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 72
 				}
 			}
 		}
@@ -3486,13 +2340,12 @@ prospect_for_resources = {
 	}
 
 	develop_montana_chromium_deposits = { #388
-
+		
 		icon = chromium
 
 		allowed = {
 
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 388
@@ -3512,48 +2365,25 @@ prospect_for_resources = {
 			has_tech = excavation3
 			388 = {
 				NOT = {
-					has_state_flag = {
-						flag = montana_chromium_developed
+					has_state_flag = { 
+						flag = montana_chromium_developed 
 						value = 5
 					}
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = USA_montana_chromium_duration?30
+		days_remove = USA_montana_chromium_duration
 
 		modifier = {
 			civilian_factory_use = 12
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = chromium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -3581,7 +2411,7 @@ prospect_for_resources = {
 			388 = {
 				add_resource = {
 					type = chromium
-					amount = 6
+					amount = 26
 				}
 			}
 		}
@@ -3597,7 +2427,7 @@ prospect_for_resources = {
 	}
 
 	develop_california_chromium_deposits = { #378
-
+		
 		icon = chromium
 
 		allowed = {
@@ -3607,7 +2437,7 @@ prospect_for_resources = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 378
-			}
+			} 
 		}
 
 		available = {
@@ -3623,48 +2453,25 @@ prospect_for_resources = {
 			has_tech = excavation3
 			378 = {
 				NOT = {
-					has_state_flag = {
-						flag = california_chromium_developed
+					has_state_flag = { 
+						flag = california_chromium_developed 
 						value = 5
 					}
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = USA_california_chromium_duration?30
+		days_remove = USA_california_chromium_duration
 
 		modifier = {
 			civilian_factory_use = 12
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = chromium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -3692,7 +2499,7 @@ prospect_for_resources = {
 			378 = {
 				add_resource = {
 					type = chromium
-					amount = 6
+					amount = 26
 				}
 			}
 		}
@@ -3707,231 +2514,9 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_oregon_chromium_deposits = { #385
-
-		icon = chromium
-
-		allowed = {
-
-		}
-
-		highlight_states = {
-			highlight_state_targets = {
-				state = 385
-			}
-		}
-
-		available = {
-			has_tech = excavation4
-			num_of_civilian_factories_available_for_projects > 11
-			owns_state = 385
-			controls_state = 385
-		}
-
-		visible = {
-			owns_state = 385
-			controls_state = 385
-			has_tech = excavation3
-			385 = {
-				NOT = {
-					has_state_flag = {
-						flag = oregon_chromium_developed
-						value = 5
-					}
-				}
-			}
-		}
-
-		cost = 25
-		days_remove = USA_oregon_chromium_duration?30
-
-		modifier = {
-			civilian_factory_use = 12
-		}
-
-		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = chromium
-					amount < 1
-				}
-			}
-		}
-
-		remove_effect = {
-			custom_effect_tooltip = repeatable_decision_tt
-			add_to_variable = { var = USA_oregon_chromium_duration value = 30 }
-			385 = {
-				if = {
-					limit = {
-						NOT = {
-							has_state_flag = oregon_chromium_developed
-						}
-					}
-					set_state_flag = {
-						flag = oregon_chromium_developed
-						value = 1
-					}
-				}
-				else = {
-					modify_state_flag = {
-						flag = oregon_chromium_developed
-						value = 1
-					}
-				}
-			}
-			385 = {
-				add_resource = {
-					type = chromium
-					amount = 26
-				}
-			}
-		}
-
-		complete_effect = {
-			if = {
-				limit = {
-					check_variable = { var = USA_oregon_chromium_duration value = 30 compare = less_than }
-				}
-				set_variable = { var = USA_oregon_chromium_duration value = 30 }
-			}
-		}
-	}
-
-	develop_alaska_chromium_deposits = { #463
-
-		icon = chromium
-
-		allowed = {
-
-		}
-
-		highlight_states = {
-			highlight_state_targets = {
-				state = 463
-			}
-		}
-
-		available = {
-			has_tech = excavation5
-			num_of_civilian_factories_available_for_projects > 11
-			owns_state = 463
-			controls_state = 463
-		}
-
-		visible = {
-			owns_state = 463
-			controls_state = 463
-			has_tech = excavation3
-			463 = {
-				NOT = {
-					has_state_flag = {
-						flag = alaska_chromium_developed
-						value = 5
-					}
-				}
-			}
-		}
-
-		cost = 25
-		days_remove = USA_alaska_chromium_duration?30
-
-		modifier = {
-			civilian_factory_use = 12
-		}
-
-		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 2 #1 was the default weight before
-				original_tag = USA
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					has_political_power < 200
-				}
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = chromium
-					amount < 1
-				}
-			}
-		}
-
-		remove_effect = {
-			custom_effect_tooltip = repeatable_decision_tt
-			add_to_variable = { var = USA_oregon_chromium_duration value = 30 }
-			463 = {
-				if = {
-					limit = {
-						NOT = {
-							has_state_flag = oregon_chromium_developed
-						}
-					}
-					set_state_flag = {
-						flag = alaska_chromium_developed
-						value = 1
-					}
-				}
-				else = {
-					modify_state_flag = {
-						flag = alaska_chromium_developed
-						value = 1
-					}
-				}
-			}
-			463 = {
-				add_resource = {
-					type = chromium
-					amount = 26
-				}
-			}
-		}
-
-		complete_effect = {
-			if = {
-				limit = {
-					check_variable = { var = USA_alaska_chromium_duration value = 30 compare = less_than }
-				}
-				set_variable = { var = USA_alaska_chromium_duration value = 30 }
-			}
-		}
-	}
-
 	develop_south_sakhalin_oil_deposits = { #537
 		icon = oil
-
+		
 		highlight_states = {
 			highlight_state_targets = {
 				state = 537
@@ -3945,7 +2530,6 @@ prospect_for_resources = {
 		available = {
 			has_full_control_of_state = 537
 			num_of_civilian_factories_available_for_projects > 2
-			has_tech = excavation3
 			controls_state = 537
 		}
 
@@ -3960,46 +2544,18 @@ prospect_for_resources = {
 		days_remove = 60
 
 		modifier = {
-			civilian_factory_use = 3
+			civilian_factory_use = 5
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			base = 1
 		}
 
 		remove_effect = {
 			537 = {
 				add_resource = {
 					type = oil
-					amount = 8
+					amount = 15
 				}
 				set_state_flag = sakhalin_oil_developed
 			}
@@ -4008,7 +2564,7 @@ prospect_for_resources = {
 
 	develop_palau_aluminium_deposits = { #647
 		icon = aluminium
-
+		
 		highlight_states = {
 			highlight_state_targets = {
 				state = 647
@@ -4041,53 +2597,25 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
 			647 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 23
 				}
-				set_state_flag = palau_aluminium_developed
+				set_state_flag = palau_aluminium_developed				
 			}
 		}
 	}
 	develop_cornwall_tungsten_deposits_1 = { #123
-
+		
 		icon = tungsten
 
 		allowed = {
-
+			
 		}
 
 		available = {
@@ -4123,43 +2651,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				factor = 20
-				original_tag = ENG
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-					AND = {
-						tag = ENG
-						has_war = no
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = tungsten
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -4167,17 +2659,17 @@ prospect_for_resources = {
 			123 = {
 				add_resource = {
 					type = tungsten
-					amount = 4
+					amount = 13
 				}
 			}
 		}
 	}
 	develop_cornwall_tungsten_deposits_2 = { #123
-
+		
 		icon = tungsten
 
 		allowed = {
-
+			
 		}
 
 		available = {
@@ -4186,7 +2678,7 @@ prospect_for_resources = {
 			owns_state = 123
 			controls_state = 123
 		}
-
+		
 		highlight_states = {
 			highlight_state_targets = {
 				state = 123
@@ -4214,35 +2706,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = tungsten
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -4250,14 +2714,14 @@ prospect_for_resources = {
 			123 = {
 				add_resource = {
 					type = tungsten
-					amount = 6
+					amount = 18
 				}
 			}
 		}
 	}
 	develop_leningrad_aluminium_deposits = { #195
 		icon = aluminium
-
+		
 		highlight_states = {
 			highlight_state_targets = {
 				state = 195
@@ -4290,50 +2754,22 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-			factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
 			195 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 33
 				}
-				set_state_flag = leningrad_aluminium_developed
+				set_state_flag = leningrad_aluminium_developed				
 			}
 		}
 	}
 	develop_kamensk_aluminium_deposits = { #653
 		icon = aluminium
-
+		
 		highlight_states = {
 			highlight_state_targets = {
 				state = 653
@@ -4366,50 +2802,22 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
 			653 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 34
 				}
-				set_state_flag = kamensk_aluminium_developed
+				set_state_flag = kamensk_aluminium_developed				
 			}
 		}
 	}
 	develop_stalingrad_aluminium_deposits = { #217
 		icon = aluminium
-
+		
 		highlight_states = {
 			highlight_state_targets = {
 				state = 217
@@ -4442,56 +2850,25 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = aluminium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
 			217 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 26
 				}
-				set_state_flag = stalingrad_aluminium_developed
+				set_state_flag = stalingrad_aluminium_developed				
 			}
 		}
 	}
 	develop_caucasus_tungsten_deposits_1 = { #233
-
+		
 		icon = tungsten
 
 		allowed = {
-
+			
 		}
 
 		available = {
@@ -4527,38 +2904,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = tungsten
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -4566,17 +2912,17 @@ prospect_for_resources = {
 			233 = {
 				add_resource = {
 					type = tungsten
-					amount = 6
+					amount = 24
 				}
 			}
 		}
 	}
 	develop_caucasus_tungsten_deposits_2 = { #233
-
+		
 		icon = tungsten
 
 		allowed = {
-
+			
 		}
 
 		available = {
@@ -4613,38 +2959,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = tungsten
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -4652,17 +2967,17 @@ prospect_for_resources = {
 			233 = {
 				add_resource = {
 					type = tungsten
-					amount = 10
+					amount = 28
 				}
 			}
 		}
 	}
 	develop_kyzyl_tungsten_deposits = { #404 State not found
-
+		
 		icon = tungsten
 
 		allowed = {
-
+			
 		}
 
 		available = {
@@ -4699,38 +3014,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = tungsten
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -4738,17 +3022,17 @@ prospect_for_resources = {
 			404 = {
 				add_resource = {
 					type = tungsten
-					amount = 8
+					amount = 23
 				}
 			}
 		}
 	}
-	develop_chelyabinsk_steel_deposits = { #572
-
+	develop_chelyabinsk_steel_deposits = { #572 
+		
 		icon = steel
 
 		allowed = {
-
+			
 		}
 
 		available = {
@@ -4771,15 +3055,15 @@ prospect_for_resources = {
 			has_tech = construction3
 			572 = {
 				NOT = {
-					has_state_flag = {
-						flag = chelyabinsk_steel_developed
+					has_state_flag = { 
+						flag = chelyabinsk_steel_developed 
 						value = 3
 					}
 				}
 			}
 		}
 
-
+		
 
 		cost = 25
 		days_remove = 90
@@ -4789,56 +3073,25 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
-			572 = {
+			572 = { 
 				if = {
 					limit = {
 						not = {
-							has_state_flag = chelyabinsk_steel_developed
+							has_state_flag = chelyabinsk_steel_developed 
 						}
 					}
 					set_state_flag = {
-						flag = chelyabinsk_steel_developed
+						flag = chelyabinsk_steel_developed 
 						value = 1
 					}
 				}
 				else = {
 					modify_state_flag = {
-						flag = chelyabinsk_steel_developed
+						flag = chelyabinsk_steel_developed 
 						value = 1
 					}
 				}
@@ -4846,17 +3099,17 @@ prospect_for_resources = {
 			572 = {
 				add_resource = {
 					type = steel
-					amount = 20
+					amount = 39
 				}
 			}
 		}
 	}
 	develop_zlatoust_steel_deposits_1 = { #573
-
+		
 		icon = steel
 
 		allowed = {
-
+			
 		}
 
 		available = {
@@ -4892,38 +3145,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -4931,17 +3153,17 @@ prospect_for_resources = {
 			573 = {
 				add_resource = {
 					type = steel
-					amount = 10
+					amount = 34
 				}
 			}
 		}
 	}
 	develop_zlatoust_steel_deposits_2 = { #573
-
+		
 		icon = steel
 
 		allowed = {
-
+			
 		}
 
 		available = {
@@ -4978,38 +3200,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -5017,13 +3208,13 @@ prospect_for_resources = {
 			573 = {
 				add_resource = {
 					type = steel
-					amount = 20
+					amount = 63
 				}
 			}
 		}
 	}
 	develop_kursk_steel_deposits = { #220
-
+		
 		icon = steel
 
 		allowed = {
@@ -5048,54 +3239,25 @@ prospect_for_resources = {
 			controls_state = 220
 			220 = {
 				NOT = {
-					has_state_flag = {
-						flag = kursk_steel_developed
+					has_state_flag = { 
+						flag = kursk_steel_developed 
 						value = 5
 					}
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = SOV_kursk_steel_duration?30
+		days_remove = SOV_kursk_steel_duration
 
 		modifier = {
 			civilian_factory_use = 9
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -5122,7 +3284,7 @@ prospect_for_resources = {
 			220 = {
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 80
 				}
 			}
 		}
@@ -5137,7 +3299,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_kursk_steel_deposits_2 = { #220
-
+		
 		icon = steel
 
 		allowed = {
@@ -5162,58 +3324,29 @@ prospect_for_resources = {
 			controls_state = 220
 			220 = {
 				NOT = {
-					has_state_flag = {
-						flag = kursk_steel_developed_2
+					has_state_flag = { 
+						flag = kursk_steel_developed_2 
 						value = 5
 					}
 				}
-				has_state_flag = {
+				has_state_flag = { 
 					flag = kursk_steel_developed
 					value = 5
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = SOV_kursk_steel_duration_2?30
+		days_remove = SOV_kursk_steel_duration_2
 
 		modifier = {
 			civilian_factory_use = 12
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -5240,7 +3373,7 @@ prospect_for_resources = {
 			220 = {
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 35
 				}
 			}
 		}
@@ -5255,7 +3388,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_kursk_steel_deposits_3 = { #220
-
+		
 		icon = steel
 
 		allowed = {
@@ -5280,58 +3413,29 @@ prospect_for_resources = {
 			controls_state = 220
 			220 = {
 				NOT = {
-					has_state_flag = {
-						flag = kursk_steel_developed_3
+					has_state_flag = { 
+						flag = kursk_steel_developed_3 
 						value = 5
 					}
 				}
-				has_state_flag = {
+				has_state_flag = { 
 					flag = kursk_steel_developed_2
 					value = 5
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = SOV_kursk_steel_duration_3?30
+		days_remove = SOV_kursk_steel_duration_3
 
 		modifier = {
 			civilian_factory_use = 15
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -5358,7 +3462,7 @@ prospect_for_resources = {
 			220 = {
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 75
 				}
 			}
 		}
@@ -5373,7 +3477,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_Belgorod_steel_deposits = { #240
-
+		
 		icon = steel
 
 		allowed = {
@@ -5398,54 +3502,25 @@ prospect_for_resources = {
 			controls_state = 240
 			240 = {
 				NOT = {
-					has_state_flag = {
-						flag = Belgorod_steel_developed
+					has_state_flag = { 
+						flag = Belgorod_steel_developed 
 						value = 5
 					}
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = SOV_Belgorod_steel_duration?30
+		days_remove = SOV_Belgorod_steel_duration
 
 		modifier = {
 			civilian_factory_use = 9
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -5472,7 +3547,7 @@ prospect_for_resources = {
 			240 = {
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 34
 				}
 			}
 		}
@@ -5487,7 +3562,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_Belgorod_steel_deposits_2 = { #240
-
+		
 		icon = steel
 
 		allowed = {
@@ -5512,58 +3587,29 @@ prospect_for_resources = {
 			controls_state = 240
 			240 = {
 				NOT = {
-					has_state_flag = {
-						flag = Belgorod_steel_developed_2
+					has_state_flag = { 
+						flag = Belgorod_steel_developed_2 
 						value = 5
 					}
 				}
-				has_state_flag = {
+				has_state_flag = { 
 					flag = Belgorod_steel_developed
 					value = 5
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = SOV_Belgorod_steel_duration_2?30
+		days_remove = SOV_Belgorod_steel_duration_2
 
 		modifier = {
 			civilian_factory_use = 12
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -5590,7 +3636,7 @@ prospect_for_resources = {
 			240 = {
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 46
 				}
 			}
 		}
@@ -5605,7 +3651,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_Belgorod_steel_deposits_3 = { #240
-
+		
 		icon = steel
 
 		allowed = {
@@ -5630,58 +3676,29 @@ prospect_for_resources = {
 			controls_state = 240
 			240 = {
 				NOT = {
-					has_state_flag = {
-						flag = Belgorod_steel_developed_3
+					has_state_flag = { 
+						flag = Belgorod_steel_developed_3 
 						value = 5
 					}
 				}
-				has_state_flag = {
+				has_state_flag = { 
 					flag = Belgorod_steel_developed_2
 					value = 5
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = SOV_Belgorod_steel_duration_3?30
+		days_remove = SOV_Belgorod_steel_duration_3
 
 		modifier = {
 			civilian_factory_use = 15
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -5708,7 +3725,7 @@ prospect_for_resources = {
 			240 = {
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 81
 				}
 			}
 		}
@@ -5723,11 +3740,11 @@ prospect_for_resources = {
 		}
 	}
 	develop_uralsk_chromium_deposits_1 = { #407
-
+		
 		icon = chromium
 
 		allowed = {
-
+			
 		}
 
 		available = {
@@ -5763,38 +3780,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = chromium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -5802,17 +3788,17 @@ prospect_for_resources = {
 			407 = {
 				add_resource = {
 					type = chromium
-					amount = 10
+					amount = 32
 				}
 			}
 		}
 	}
 	develop_uralsk_chromium_deposits_2 = { #407
-
+		
 		icon = chromium
 
 		allowed = {
-
+			
 		}
 
 		available = {
@@ -5849,38 +3835,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = chromium
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -5888,13 +3843,13 @@ prospect_for_resources = {
 			407 = {
 				add_resource = {
 					type = chromium
-					amount = 15
+					amount = 46
 				}
 			}
 		}
-	}
+	}	
 	develop_liaotung_iron_ore_deposits = { #716
-
+		
 		icon = steel
 
 		allowed = {
@@ -5939,46 +3894,18 @@ prospect_for_resources = {
 			716 = {
 				add_resource = {
 					type = steel
-					amount = 16
+					amount = 32
 				}
 			}
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 	}
 
 	develop_chosen_tungsten_deposits = { #527
-
+		
 		icon = tungsten
 
 		allowed = {
@@ -6003,51 +3930,25 @@ prospect_for_resources = {
 			controls_state = 527
 			527 = {
 				NOT = {
-					has_state_flag = {
-						flag = chosin_tungsten_developed
+					has_state_flag = { 
+						flag = chosin_tungsten_developed 
 						value = 5
 					}
 				}
 			}
 		}
 
+		fire_only_once = yes
+
 		cost = 25
-		days_remove = chosin_tungsten_duration?30
+		days_remove = chosin_tungsten_duration
 
 		modifier = {
 			civilian_factory_use = 5
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = tungsten
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -6074,7 +3975,7 @@ prospect_for_resources = {
 			527 = {
 				add_resource = {
 					type = tungsten
-					amount = 6
+					amount = 16
 				}
 			}
 		}
@@ -6088,9 +3989,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-
-	develop_abu_dhabi_oil_fields  = { #658
-
+  develop_abu_dhabi_oil_fields  = { #658
+		
 		icon = oil
 
 		allowed = {
@@ -6131,38 +4031,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 10
 		}
 
 		remove_effect = {
@@ -6178,7 +4047,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_kuwait_oil_fields = { #656
-
+		
 		icon = oil
 
 		allowed = {
@@ -6204,8 +4073,8 @@ prospect_for_resources = {
 			has_tech = excavation2
 			656 = {
 				NOT = {
-					has_state_flag = {
-						flag = kuwait_oil_developed
+					has_state_flag = { 
+						flag = kuwait_oil_developed 
 						value = 5
 					}
 				}
@@ -6219,35 +4088,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 1
 		}
 
 		remove_effect = {
@@ -6289,7 +4130,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_khuzestan_oil_fields   = { #413
-
+		
 		icon = oil
 
 		allowed = {
@@ -6330,38 +4171,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 10
 		}
 
 		remove_effect = {
@@ -6377,7 +4187,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_fars_oil_fields = { #412
-
+		
 		icon = oil
 
 		allowed = {
@@ -6418,38 +4228,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 10
 		}
 
 		remove_effect = {
@@ -6465,7 +4244,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_baghdad_oil_fields  = { #291
-
+		
 		icon = oil
 
 		allowed = {
@@ -6506,38 +4285,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 10
 		}
 
 		remove_effect = {
@@ -6553,7 +4301,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_mosul_oil_fields   = { #676
-
+		
 		icon = oil
 
 		allowed = {
@@ -6593,38 +4341,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 10
 		}
 
 		remove_effect = {
@@ -6639,119 +4356,8 @@ prospect_for_resources = {
 			}
 		}
 	}
-	develop_nejd_oil_fields = { #859
-
-		icon = oil
-
-		allowed = {
-
-		}
-
-		available = {
-			has_tech = excavation5
-			owns_state = 859
-			controls_state = 859
-			num_of_civilian_factories_available_for_projects > 14
-		}
-
-		highlight_states = {
-			highlight_state_targets = {
-				state = 859
-			}
-		}
-
-		visible = {
-			owns_state = 859
-			controls_state = 859
-			has_tech = excavation4
-			859 = {
-				NOT = {
-					has_state_flag = {
-						flag = nejd_oil_developed
-						value = 5
-					}
-				}
-			}
-		}
-
-		cost = 25
-		days_remove = nejd_oil_duration?30
-		modifier = {
-			civilian_factory_use = 15
-		}
-
-		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
-		}
-
-		remove_effect = {
-			add_to_variable = { var = nejd_oil_duration value = 30 }
-			859 = {
-				if = {
-					limit = {
-						NOT = {
-							has_state_flag = nejd_oil_developed
-						}
-					}
-					set_state_flag = {
-						flag = nejd_oil_developed
-						value = 1
-					}
-				}
-				else = {
-					modify_state_flag = {
-						flag = nejd_oil_developed
-						value = 1
-					}
-				}
-			}
-			859 = {
-				add_resource = {
-					type = oil
-					amount = 22
-				}
-			}
-		}
-
-		complete_effect = {
-			if = {
-				limit = {
-					check_variable = { var = nejd_oil_duration value = 30 compare = less_than }
-				}
-				set_variable = { var = nejd_oil_duration value = 60 }
-			}
-		}
-	}
 	develop_eastern_desert_oil_fields   = { #457
-
+		
 		icon = oil
 
 		allowed = {
@@ -6792,38 +4398,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 10
 		}
 
 		remove_effect = {
@@ -6839,7 +4414,7 @@ prospect_for_resources = {
 		}
 	}
 	develop_qatar_oil_fields   = { #765
-
+		
 		icon = oil
 
 		allowed = {
@@ -6880,38 +4455,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 10
 		}
 
 		remove_effect = {
@@ -6921,891 +4465,6 @@ prospect_for_resources = {
 			765 = {
 				add_resource = {
 					type = oil
-					amount = 8
-				}
-			}
-		}
-	}
-
-	develop_malatya_chromium_deposits = { #344
-
-		icon = chromium
-
-		allowed = {
-
-		}
-
-		highlight_states = {
-			highlight_states_trigger = {
-				state = 344
-			}
-		}
-
-		available = {
-			has_tech = excavation2
-			num_of_civilian_factories_available_for_projects > 4
-			owns_state = 344
-			controls_state = 344
-		}
-
-		visible = {
-			owns_state = 344
-			controls_state = 344
-			344 = {
-				NOT = {
-					has_state_flag = malatya_chromium_developed
-				}
-			}
-		}
-
-		fire_only_once = yes
-
-		cost = 25
-		days_remove = 90
-
-		modifier = {
-			civilian_factory_use = 5
-		}
-
-		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = chromium
-					amount < 1
-				}
-			}
-		}
-		remove_effect = {
-			344 = { set_state_flag = malatya_chromium_developed }
-			344 = {
-				add_resource = {
-					type = chromium
-					amount = 15
-				}
-			}
-		}
-	}
-
-	develop_mersin_chromium_mines = { #345
-
-		icon = chromium
-
-		allowed = {
-
-		}
-
-		highlight_states = {
-			highlight_states_trigger = {
-				state = 345
-			}
-		}
-
-		available = {
-			has_tech = excavation3
-			num_of_civilian_factories_available_for_projects > 5
-			owns_state = 345
-			controls_state = 345
-		}
-
-		visible = {
-			owns_state = 345
-			controls_state = 345
-			345 = {
-				NOT = {
-					has_state_flag = mersin_chromium_developed
-				}
-			}
-		}
-
-		fire_only_once = yes
-
-		cost = 25
-		days_remove = 120
-
-		modifier = {
-			civilian_factory_use = 6
-		}
-
-		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = chromium
-					amount < 1
-				}
-			}
-		}
-		remove_effect = {
-			345 = { set_state_flag = mersin_chromium_developed }
-			345 = {
-				add_resource = {
-					type = chromium
-					amount = 34
-				}
-			}
-		}
-	}
-
-	utilize_diyarbakir_chromium_deposits = { #350
-
-		icon = chromium
-
-		allowed = {
-
-		}
-
-		highlight_states = {
-			highlight_states_trigger = {
-				state = 350
-			}
-		}
-
-		available = {
-			has_tech = excavation2
-			num_of_civilian_factories_available_for_projects > 3
-			owns_state = 350
-			controls_state = 350
-		}
-
-		visible = {
-			owns_state = 350
-			controls_state = 350
-			350 = {
-				NOT = {
-					has_state_flag = diyarbakir_chromium_developed
-				}
-			}
-		}
-
-		fire_only_once = yes
-
-		cost = 25
-		days_remove = 180
-
-		modifier = {
-			civilian_factory_use = 4
-		}
-
-		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						SOV_we_want_to_send_ultimatums = yes
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = chromium
-					amount < 1
-				}
-			}
-		}
-		remove_effect = {
-			350 = { set_state_flag = biyarbakir_chromium_developed }
-			350 = {
-				add_resource = {
-					type = chromium
-					amount = 36
-				}
-			}
-		}
-	}
-
-	expand_the_kirikkale_steel_mills   = { #49
-
-		icon = steel
-
-		allowed = {
-
-		}
-
-		highlight_states = {
-			highlight_states_trigger = {
-				state = 49
-			}
-		}
-
-		available = {
-			has_tech = construction3
-			num_of_civilian_factories_available_for_projects > 14
-			owns_state = 49
-			controls_state = 49
-		}
-
-		visible = {
-			owns_state = 49
-			controls_state = 49
-			49 = {
-				NOT = {
-					has_state_flag = ankara_steel_developed
-				}
-			}
-		}
-
-		fire_only_once = yes
-
-		cost = 25
-		days_remove = 45
-
-		modifier = {
-			civilian_factory_use = 15
-		}
-
-		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
-		}
-
-		remove_effect = {
-			49 = {
-				set_state_flag = ankara_steel_developed
-			}
-			49 = {
-				add_resource = {
-					type = steel
-					amount = 12
-				}
-			}
-		}
-	}
-
-	develop_the_iron_mines_in_divrigi = { #349
-
-		icon = steel
-
-		allowed = {
-
-		}
-
-		highlight_states = {
-			highlight_states_trigger = {
-				state = 349
-			}
-		}
-
-		available = {
-			has_tech = excavation4
-			num_of_civilian_factories_available_for_projects > 19
-			owns_state = 349
-			controls_state = 349
-		}
-
-		visible = {
-			has_tech = excavation2
-			owns_state = 349
-			controls_state = 349
-			349 = {
-				NOT = {
-					has_state_flag = sivas_steel_developed
-				}
-			}
-		}
-
-		fire_only_once = yes
-
-		cost = 25
-		days_remove = 40
-
-		modifier = {
-			civilian_factory_use = 20
-		}
-
-		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
-		}
-
-		remove_effect = {
-			349 = {
-				set_state_flag = sivas_steel_developed
-			}
-			349 = {
-				add_resource = {
-					type = steel
-					amount = 28
-				}
-			}
-		}
-	}
-
-	exploit_the_raman_oil_field = { #350
-
-		icon = oil
-
-		allowed = {
-
-		}
-
-		highlight_states = {
-			highlight_states_trigger = {
-				state = 350
-			}
-		}
-
-
-		available = {
-			has_tech = excavation3
-			num_of_civilian_factories_available_for_projects > 9
-			owns_state = 350
-			controls_state = 350
-		}
-
-		visible = {
-			has_tech = excavation1
-			owns_state = 350
-			controls_state = 350
-			350 = {
-				NOT = {
-					has_state_flag = raman_oil_developed
-				}
-			}
-		}
-
-		fire_only_once = yes
-
-		cost = 25
-		days_remove = 60
-
-		modifier = {
-			civilian_factory_use = 10
-		}
-
-		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
-		}
-
-		remove_effect = {
-			350 = {
-				set_state_flag = raman_oil_developed
-			}
-			350 = {
-				add_resource = {
-					type = oil
-					amount = 16
-				}
-			}
-		}
-	}
-
-	drill_in_the_garzan_oil_field = { #350
-
-		icon = oil
-
-		allowed = {
-
-		}
-
-		highlight_states = {
-			highlight_states_trigger = {
-				state = 350
-			}
-		}
-
-		available = {
-			has_tech = excavation4
-			if = {
-				limit = {
-					original_tag = TUR
-				}
-				has_idea = petrol_ofisi
-			}
-			num_of_civilian_factories_available_for_projects > 15
-			owns_state = 350
-			controls_state = 350
-		}
-
-		visible = {
-			owns_state = 350
-			controls_state = 350
-			350 = {
-				NOT = {
-					has_state_flag = garzan_oil_developed
-				}
-			}
-			has_tech = excavation3
-		}
-
-		fire_only_once = yes
-
-		cost = 25
-		days_remove = 80
-
-		modifier = {
-			civilian_factory_use = 16
-		}
-
-		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
-		}
-
-		remove_effect = {
-			350 = {
-				set_state_flag = garzan_oil_developed
-			}
-			350 = {
-				add_resource = {
-					type = oil
-					amount = 14
-				}
-			}
-		}
-	}
-	expand_the_west_raman_oil_field = { #350
-
-		icon = oil
-
-		allowed = {
-
-		}
-
-		highlight_states = {
-			highlight_states_trigger = {
-				state = 350
-			}
-		}
-
-		available = {
-			has_tech = excavation5
-			if = {
-				limit = {
-					original_tag = TUR
-				}
-				has_idea = petrol_ofisi
-			}
-			num_of_civilian_factories_available_for_projects > 24
-			owns_state = 350
-			controls_state = 350
-		}
-
-		visible = {
-			owns_state = 350
-			controls_state = 350
-			350 = {
-				NOT = {
-					has_state_flag = west_raman_oil_developed
-				}
-			}
-			has_tech = excavation4
-		}
-
-		fire_only_once = yes
-
-		cost = 25
-		days_remove = 180
-
-		modifier = {
-			civilian_factory_use = 25
-		}
-
-		ai_will_do = {
-			base = 0.3
-			modifier = {
-				factor = 0
-				OR = {
-					AND = { #Ultimatum decisions are available and we should prio them
-						original_tag = SOV
-						OR = {
-							SOV_save_pp_for_manpower_trouble = yes
-							SOV_we_want_to_send_ultimatums = yes
-						}
-					}
-					AND = { #Too low MP we need to save PP for the laws
-						has_manpower < 10000
-						NOT = { has_idea = scraping_the_barrel }
-					}
-				}
-			}
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
-		}
-
-		remove_effect = {
-			350 = {
-				set_state_flag = west_raman_oil_developed
-			}
-			350 = {
-				add_resource = {
-					type = oil
-					amount = 36
-				}
-			}
-		}
-	}
-	develop_tripoli_oil_fields = { #448
-
-		icon = oil
-
-		allowed = {
-			original_tag = ITA			
-		}
-
-		available = {
-			has_tech = excavation3
-			num_of_civilian_factories_available_for_projects > 2
-			OR = { 
-				has_full_control_of_state = 448 
-				any_subject_country = { #FOR PUPPETS
-					has_full_control_of_state = 448
-				}
-			} 
-		}
-
-		highlight_states = {
-			highlight_state_targets = {
-				state = 448
-			}
-		}
-
-		visible = {
-			has_completed_focus = ITA_oil_in_tripoli
-			448 = {
-				NOT = {
-					has_state_flag = {
-						flag = tripoli_oil_developed
-						value = 3
-					}
-				}
-			}
-		}
-
-		cost = 25
-		days_remove = 60
-
-		modifier = {
-			civilian_factory_use = 3
-		}
-
-		ai_will_do = {
-			base = 0.5
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
-		}
-
-		remove_effect = {
-			custom_effect_tooltip = repeatable_decision_tt
-			448 = {
-				if = {
-					limit = {
-						NOT = {
-							has_state_flag = tripoli_oil_developed
-						}
-					}
-					set_state_flag = {
-						flag = tripoli_oil_developed
-						value = 1
-					}
-				}
-				else = {
-					modify_state_flag = {
-						flag = tripoli_oil_developed
-						value = 1
-					}
-				}
-			}	
-			448 = {
-				add_resource = {
-					type = oil
-					amount = 4
-				}
-			}
-		}
-	}
-	
-	develop_tripoli_steel_deposits = { #448
-
-		icon = steel
-
-		allowed = {
-			original_tag = ITA
-		}
-		available = {
-			has_tech = excavation3
-			num_of_civilian_factories_available_for_projects > 2
-			OR = { 
-				has_full_control_of_state = 448 
-				any_subject_country = { #FOR PUPPETS
-					has_full_control_of_state = 448
-				}
-			} 
-		}
-
-		highlight_states = {
-			highlight_state_targets = {
-				state = 448
-			}
-		}
-
-		visible = {
-			has_completed_focus = ITA_steel_in_tripoli
-			448 = {
-				NOT = {
-					has_state_flag = {
-						flag = tripoli_steel_developed
-						value = 3
-					}
-				}
-			}
-		}
-
-		cost = 25
-		days_remove = 60
-
-		modifier = {
-			civilian_factory_use = 3
-		}
-
-		ai_will_do = {
-			base = 0.5
-			modifier = {  # Too low PP
-				factor = 0.5
-					has_political_power < 80
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
-			}
-		}
-		remove_effect = {
-			custom_effect_tooltip = repeatable_decision_tt
-			448 = {
-				if = {
-					limit = {
-						NOT = {
-							has_state_flag = tripoli_steel_developed
-						}
-					}
-					set_state_flag = {
-						flag = tripoli_steel_developed
-						value = 1
-					}
-				}
-				else = {
-					modify_state_flag = {
-						flag = tripoli_steel_developed
-						value = 1
-					}
-				}
-			}	
-			448 = {
-				add_resource = {
-					type = steel
 					amount = 8
 				}
 			}

@@ -1,0 +1,1024 @@
+PAR_instant_effect_decisions = {
+	
+	SOV_mark_state_for_five_year_plan = {
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+
+		available = {	
+			NOT = {
+				SOV = {
+					has_war_with = GER 
+				}
+			}
+		}
+
+		cost = 0
+
+		days_re_enable = 80 
+
+		complete_effect = {
+			SOV = {
+				random_owned_state = {
+					limit = {
+						NOT = { has_state_flag = SOV_5_year_plan_IC }
+						NOT = { has_state_flag = SOV_gulag_economy_flag }
+						free_building_slots = {
+							building = arms_factory
+							size > 4
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size > 4
+						}
+					}
+					set_state_flag = SOV_5_year_plan_IC 
+					custom_effect_tooltip = SOV_5_year_plan_1_tt
+				}
+				add_to_variable = { var = 5_year_plan_progress value = 2 }
+			}
+		}
+
+		ai_will_do = {
+			base = 5000			
+		}
+	}
+						
+	GER_more_challenge_for_sov = {
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+
+		available = {
+					SOV = {
+						is_ai = no 
+					}
+					GER = {
+						is_ai = yes 
+					}
+					ITA = {
+						is_ai = yes 
+					}
+					BUL = {
+						is_ai = yes 
+					}
+					ROM = {
+						is_ai = yes 
+					}
+					HUN = {
+						is_ai = yes 
+					}
+		}
+
+		cost = 0
+
+		days_re_enable = 90 
+
+		complete_effect = {
+			GER = {
+				add_offsite_building = {
+					type = arms_factory 
+					level = 2
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 5000			
+		}
+	}
+	
+	GER_more_challenge_for_ger = {
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+
+		available = {
+			GER = {
+				is_ai = no 
+			}
+			SOV = {
+				is_ai = yes 
+			}
+			ENG = {
+				is_ai = yes 
+			}
+			USA = {
+				is_ai = yes 
+			}
+		}
+
+		cost = 0
+
+		days_re_enable = 90 
+
+		complete_effect = {
+			SOV = {
+				add_offsite_building = {
+					type = arms_factory 
+					level = 1
+				}
+			}
+			USA = {
+				add_offsite_building = {
+					type = arms_factory 
+					level = 1
+				}
+			}
+			ENG = {
+				add_offsite_building = {
+					type = arms_factory 
+					level = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 5000			
+		}
+	}
+	
+	JAP_more_challenge_for_jap = {
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+
+		available = {
+					JAP = {
+						is_ai = no 
+					}
+					CHI = {
+						is_ai = yes 
+					}
+					ENG = {
+						is_ai = yes 
+					}
+					USA = {
+						is_ai = yes 
+					}
+		}
+
+		cost = 0
+
+		days_re_enable = 90 
+
+		complete_effect = {
+			CHI = {
+				add_offsite_building = {
+					type = arms_factory 
+					level = 1
+				}
+			}
+			USA = {
+				add_offsite_building = {
+					type = arms_factory 
+					level = 1
+				}
+			}
+			ENG = {
+				add_offsite_building = {
+					type = arms_factory 
+					level = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 5000			
+		}
+	}
+	
+	JAP_more_challenge_for_usa = {
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+
+		available = {
+					USA = {
+						is_ai = no 
+					}
+					JAP = {
+						is_ai = yes 
+					}
+		}
+
+		cost = 0
+
+		days_re_enable = 90 
+
+		complete_effect = {
+			JAP = {
+				add_offsite_building = {
+					type = arms_factory 
+					level = 1
+				}
+				add_offsite_building = {
+					type = dockyard 
+					level = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 5000			
+		}
+	}
+
+	USA_election_1936 = {
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+
+		fire_only_once = yes
+
+		available = {	
+			date > 1936.11.01
+		}
+
+		cost = 0
+
+		complete_effect = {
+           USA = { country_event = { id = usa.6 } }
+		}
+
+		ai_will_do = {
+			base = 5000			
+		}
+	}
+
+	USA_election_1940 = {
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+
+		fire_only_once = yes
+
+		available = {	
+			date > 1940.11.01
+		}
+
+		cost = 0
+
+		complete_effect = {
+           USA = { country_event = { id = usa.7 } }
+		}
+
+		ai_will_do = {
+			base = 5000			
+		}
+	}
+
+	USA_election_1944 = {
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+
+		fire_only_once = yes
+
+		available = {	
+			date > 1944.11.01
+		}
+
+		cost = 0
+
+		complete_effect = {
+           USA = { country_event = { id = usa.9 } }
+		}
+
+		ai_will_do = {
+			base = 5000			
+		}
+	}
+
+	USA_death_of_roosevelt = {
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+
+		fire_only_once = yes
+
+		available = {	
+			date > 1945.3.29
+		}
+
+		cost = 0
+
+		complete_effect = {
+           USA = { country_event = { id = usa.14 } }
+		}
+
+		ai_will_do = {
+			base = 5000			
+		}
+	}
+
+	USA_recession_of_1937 = {
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+
+		fire_only_once = yes
+
+		available = {	
+			date > 1937.6.1
+		}
+
+		cost = 0
+
+		complete_effect = {
+           USA = { country_event = { id = usa.30 } }
+		}
+
+		ai_will_do = {
+			base = 5000			
+		}
+	}
+
+	quit_india_movement = {
+
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+
+		fire_only_once = yes
+
+		available = {	
+			date > 1942.01.01
+		}
+
+		cost = 0
+
+		complete_effect = {
+           RAJ = { country_event = { id = tfv_raj.210 } }
+		}
+
+		ai_will_do = {
+			base = 5000			
+		}
+	}
+	ins_capitulation = {
+
+		icon = generic_megaphone
+		fire_only_once = yes
+
+		allowed = {
+			tag = PAR
+		}
+
+		available = {
+			INS = { surrender_progress > 0.1 }
+		}
+
+		cost = 0
+		
+		complete_effect = {
+			country_event = { hours = 6 id = news.471 }
+		}
+		ai_will_do = {
+			base = 5000			
+		}
+	}
+	
+	remove_poor_industrial_infrastructure = {
+
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+
+		fire_only_once = yes
+
+		available = {	
+			RAJ = {
+				check_variable = { 
+					var = rapid_industrialization 
+					value = 50 
+					compare = greater_than_or_equals 
+				}		
+			}				
+		}
+
+		cost = 0
+
+		complete_effect = {
+           RAJ = { 
+		   remove_ideas = RAJ_poor_industrial_infrastructure
+			add_ideas = RAJ_poor_industrial_infrastructure_2 }
+		}
+
+		ai_will_do = {
+			base = 5		
+		}
+	}
+	
+    salo = {
+	   
+	   icon = generic_megaphone
+	   fire_only_once = yes
+	   
+		allowed = {
+		   tag = PAR
+		}
+	   available = {	
+		   ITA = { surrender_progress > 0.3 }
+		   ITA = {casualties > 350000 }
+		   GER = { has_capitulated = no }
+		   ITA = { has_war_with = ENG }
+		   ITA = { has_war_with = USA }
+		   USA = { is_in_faction_with = ENG }
+		   OR = {
+			   OR = {
+					ENG = { has_full_control_of_state = 2 }
+					any_other_country = {
+						is_in_faction_with = ENG
+						has_full_control_of_state = 2
+					}
+				}
+				OR = {
+					ENG = { has_full_control_of_state = 39 }
+					any_other_country = {
+						is_in_faction_with = ENG
+						has_full_control_of_state = 39
+					}
+				}
+				OR = {
+					ENG = { has_full_control_of_state = 115 }
+					any_other_country = {
+						is_in_faction_with = ENG
+						has_full_control_of_state = 115
+					}
+				}
+				OR = {
+					ENG = { has_full_control_of_state = 117 }
+					any_other_country = {
+						is_in_faction_with = ENG
+						has_full_control_of_state = 117
+					}
+				}
+				OR = {
+					ENG = { has_full_control_of_state = 156 }
+					any_other_country = {
+						is_in_faction_with = ENG
+						has_full_control_of_state = 156
+					}
+				}
+				OR = {
+					ENG = { has_full_control_of_state = 157 }
+					any_other_country = {
+						is_in_faction_with = ENG
+						has_full_control_of_state = 157
+					}
+				}
+				OR = {
+					ENG = { has_full_control_of_state = 158 }
+					any_other_country = {
+						is_in_faction_with = ENG
+						has_full_control_of_state = 158
+					}
+				}
+				OR = {
+					ENG = { has_full_control_of_state = 159 }
+					any_other_country = {
+						is_in_faction_with = ENG
+						has_full_control_of_state = 159
+					}
+				}
+				OR = {
+					ENG = { has_full_control_of_state = 160 }
+					any_other_country = {
+						is_in_faction_with = ENG
+						has_full_control_of_state = 160
+					}
+				}
+				OR = {
+					ENG = { has_full_control_of_state = 161 }
+					any_other_country = {
+						is_in_faction_with = ENG
+						has_full_control_of_state = 161
+					}
+				}
+				OR = {
+					ENG = { has_full_control_of_state = 162 }
+					any_other_country = {
+						is_in_faction_with = ENG
+						has_full_control_of_state = 162
+					}
+				}
+				OR = {
+					ENG = { has_full_control_of_state = 736 }
+					any_other_country = {
+						is_in_faction_with = ENG
+						has_full_control_of_state = 736
+					}
+				}
+				OR = {
+					ENG = { has_full_control_of_state = 788 }
+					any_other_country = {
+						is_in_faction_with = ENG
+						has_full_control_of_state = 788
+					}
+				}
+			}
+		}
+      
+	    cost = 0
+
+		complete_effect = {
+		   if = { 
+		    limit = {  ENG = { is_faction_leader = yes } }
+		    ENG = { country_event = salo.8 }
+	       }
+		   if = { 
+		    limit = {  USA = { is_faction_leader = yes } }
+		    USA = { country_event = salo.8 }
+	       }
+		}
+	    ai_will_do = {
+			base = 5000			
+		}
+	}	
+    leader_1 = {
+	   
+	   icon = generic_megaphone
+	   fire_only_once = yes
+	      
+		allowed = {
+			tag = PAR
+		}
+	   available = {	
+		   GER = { surrender_progress > 0.85 }
+		   GER = { has_war_with = SOV }
+		}
+        
+	    cost = 0
+
+		complete_effect = {
+			GER = { country_event = leaderdies.1 } 
+		}
+	    ai_will_do = {
+			base = 5000			
+		}
+	}		
+	leader_2 = {
+	   
+	   icon = generic_megaphone
+	   fire_only_once = yes
+	      
+		allowed = {
+		   tag = PAR
+		}
+	   available = {	
+		   ITA = { surrender_progress > 0.9 }
+		   ITA = { has_war_with = ENG }
+		}
+       
+	    cost = 0
+
+		complete_effect = {
+			ITA = { country_event = leaderdies.3 } 
+		}
+	    ai_will_do = {
+			base = 5000			
+		}
+	}	
+    leader_3 = {
+	   
+	   icon = generic_megaphone
+	   fire_only_once = yes
+	      
+		allowed = {
+		   tag = PAR
+		}
+	   available = {	
+		   SOV = { surrender_progress > 0.95 }
+		   GER = { has_war_with = SOV }
+		}
+        
+	    cost = 0
+
+		complete_effect = {
+			SOV = { country_event = leaderdies.5 } 
+		}
+	    ai_will_do = {
+			base = 5000			
+		}
+	}			
+	
+	PAR_CAN = {
+
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {	
+		   ENG = { is_ai = no }
+		   CAN = { is_ai = yes }
+		   GER = {is_ai = no }
+		   NOT = { ENG = { has_idea = ENG_can_is_ai } }
+		}
+
+		cost = 0
+
+		complete_effect = {
+           ENG = { add_ideas = ENG_can_is_ai }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}
+	PAR_CAN_2 = {
+
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {	
+		   ENG = { is_ai = no }
+		   CAN = { is_ai = no }
+		   GER = {is_ai = no}
+		   ENG = { has_idea = ENG_can_is_ai }
+		}
+
+		cost = 0
+
+		complete_effect = {
+           ENG = { remove_ideas = ENG_can_is_ai }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}
+	PAR_SAF = {
+
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {	
+		   ENG = { is_ai = no }
+		   SAF = { is_ai = yes }
+		   GER = {is_ai = no }
+		   NOT = { ENG = { has_idea = ENG_saf_is_ai } }
+		}
+
+		cost = 0
+
+		complete_effect = {
+           ENG = { add_ideas = ENG_saf_is_ai }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}
+	PAR_SAF_2 = {
+
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {	
+		   ENG = { is_ai = no }
+		   SAF = { is_ai = no }
+		   GER = {is_ai = no}
+		   ENG = { has_idea = ENG_saf_is_ai }
+		}
+
+		cost = 0
+
+		complete_effect = {
+           ENG = { remove_ideas = ENG_saf_is_ai }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}
+	PAR_RAJ_ENG = {
+
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {	
+		   ENG = { is_ai = no }
+		   RAJ = { is_ai = yes }
+		   JAP = { is_ai = no }
+		   GER = {is_ai = no}
+		   NOT = { ENG = { has_idea = ENG_raj_is_ai } }
+		}
+
+		cost = 0
+
+		complete_effect = {
+           ENG = { add_ideas = ENG_raj_is_ai }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}
+	PAR_RAJ_ENG_2 = {
+
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {	
+		   ENG = { is_ai = no }
+		   RAJ = { is_ai = no }
+		   JAP = { is_ai = no }
+		   GER = {is_ai = no}
+		   ENG = { has_idea = ENG_raj_is_ai }
+		}
+
+		cost = 0
+
+		complete_effect = {
+           ENG = { remove_ideas = ENG_raj_is_ai }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}
+	PAR_AST_ENG = {
+
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {	
+		   ENG = { is_ai = no }
+		   AST = { is_ai = yes }
+		   JAP = { is_ai = no }
+		   GER = {is_ai = no}
+		   NOT = { ENG = { has_idea = ENG_ast_is_ai } }
+		}
+
+		cost = 0
+
+		complete_effect = {
+           ENG = { add_ideas = ENG_ast_is_ai }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}
+	PAR_AST_ENG_2 = {
+
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {	
+		   ENG = { is_ai = no }
+		   AST = { is_ai = no }
+		   JAP = { is_ai = no }
+		   GER = {is_ai = no}
+		   ENG = { has_idea = ENG_ast_is_ai }
+		}
+
+		cost = 0
+
+		complete_effect = {
+           ENG = { remove_ideas = ENG_ast_is_ai }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}
+	PAR_JAP = {
+
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {	
+		   USA = {is_ai = no}
+		   JAP = { is_ai = yes }
+		   GER = {is_ai = no}
+		   NOT = { USA = { has_idea = USA_jap_is_ai } }
+		}
+
+		cost = 0
+
+		complete_effect = {
+           USA = { add_ideas = USA_jap_is_ai }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}
+	PAR_JAP_2 = {
+
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {	
+		   USA = {is_ai = no}
+		   JAP = { is_ai = no}
+		   GER = {is_ai = no}
+		   USA = { has_idea = USA_jap_is_ai }
+		}
+
+		cost = 0
+
+		complete_effect = {
+           USA = { remove_ideas = USA_jap_is_ai }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}
+	
+	PAR_CHI_1 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {	
+			JAP = { has_war_with = CHI }
+			CHI = {  surrender_progress > 0.5 }
+			NOT = {
+				JAP = {has_country_flag = jap_first_truce}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+           JAP = { country_event = { id = japan.19 } }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}
+	
+	PAR_CHI_2 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {	
+			JAP = { has_war_with = CHI }
+			CHI = {  surrender_progress > 0.6 }
+			JAP = {  has_idea = jap_chinese_occupation }
+		}
+
+		cost = 0
+
+		complete_effect = {
+           JAP = { country_event = { id = japan.22 } }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}
+	
+	PAR_CHI_3 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {	
+			JAP = { has_war_with = CHI }
+			CHI = {  surrender_progress > 0.75 }
+			JAP = {  has_idea = jap_chinese_occupation_2 }
+		}
+
+		cost = 0
+
+		complete_effect = {
+           JAP = { country_event = { id = japan.23 } }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}
+
+	PAR_RAJ_1 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {
+			AND = {
+				JAP = { has_war_with = RAJ }
+				JAP = {
+				has_full_control_of_state = 640
+				has_full_control_of_state = 288
+				}
+				NOT = {
+				RAJ = { has_completed_focus = RAJ_princes_4 }
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+           RAJ = { country_event = { id = tfv_raj.21 } }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}	
+
+
+	PAR_RAJ_2 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		available = {
+			AND = {
+			JAP = { has_war_with = RAJ }
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+           RAJ = { country_event = { id = tfv_raj.20 } }
+		}
+
+		ai_will_do = {
+			base = 5000
+			
+		}
+	}	
+}

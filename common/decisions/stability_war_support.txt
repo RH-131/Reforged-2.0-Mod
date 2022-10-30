@@ -1,5 +1,5 @@
 crisis = {
-
+	
 	draft_dodging = {
 
 		icon = generic_civil_support
@@ -23,16 +23,13 @@ crisis = {
 			}
 		}
 
-		cost = 0
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 
 		visible = {
-			OR = {
-				has_civil_war = yes
-				has_country_flag = crisis_in_progress
-			}
+			has_country_flag = crisis_in_progress
 			NOT = {
 				has_country_flag = crisis_solution_in_progress
 			}
@@ -72,27 +69,20 @@ crisis = {
 			}
 		}
 
-		cost = 0
+		cost = 5
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				has_idea = strikes_3
-				factor = 500
-			}
 		}
-		
+
 		visible = {
+			has_country_flag = crisis_in_progress
+			NOT = {
+				has_country_flag = crisis_solution_in_progress
+			}
 			OR = {
 				has_idea = strikes_1
 				has_idea = strikes_2
 				has_idea = strikes_3
-			}
-			OR = {
-				has_country_flag = crisis_in_progress
-				has_civil_war = yes
-			}
-			NOT = {
-				has_country_flag = crisis_solution_in_progress
 			}
 		}
 
@@ -326,10 +316,7 @@ crisis = {
 		}
 
 		available = {
-			OR = {
-				has_country_flag = crisis_in_progress #needed to avoid doubling up with demob strikes
-				has_civil_war = yes
-			}
+			has_country_flag = crisis_in_progress
 			OR = {
 				has_idea = mutiny_1
 				has_idea = mutiny_2
@@ -343,10 +330,7 @@ crisis = {
 		}
 
 		visible = {
-			OR = {
-				has_country_flag = crisis_in_progress #needed to avoid doubling up with demob strikes
-				has_civil_war = yes
-			}
+			has_country_flag = crisis_in_progress
 			NOT = {
 				has_country_flag = crisis_solution_in_progress
 			}
@@ -384,10 +368,7 @@ crisis = {
 				has_idea = mutiny_2
 				has_idea = mutiny_3
 			}
-			OR = {
-				has_country_flag = crisis_in_progress #needed to avoid doubling up with demob strikes
-				has_civil_war = yes
-			} 
+			has_country_flag = crisis_in_progress 
 		}
 		visible = {
 			OR = {
@@ -395,10 +376,7 @@ crisis = {
 				has_idea = mutiny_2
 				has_idea = mutiny_3	
 			}
-			OR = {
-				has_country_flag = crisis_in_progress #needed to avoid doubling up with demob strikes
-				has_civil_war = yes
-			}
+			has_country_flag = crisis_in_progress
 		}
 		complete_effect = {
 			
@@ -688,13 +666,6 @@ demobilization = {
 		visible = {
 			has_unsupported_manpower_law = yes
 			has_war = no
-			if = {
-				limit = { original_tag = GRE }
-				NOT = {
-					has_completed_focus = GRE_request_communist_support
-				}
-			}
-
 		}
 		complete_effect = {
 			if = {
@@ -737,27 +708,10 @@ demobilization = {
 		activation = {
 			has_unsupported_manpower_law = yes
 			has_war = no
-			if = {
-				limit = {
-					original_tag = GRE
-				}
-				NOT = {
-					has_completed_focus = GRE_request_communist_support
-				}
-			}
+			is_ai = no
 		}
-		visible = {
-			if = {
-				limit = {
-					original_tag = GRE
-				}
-				NOT = {
-					has_completed_focus = GRE_request_communist_support #put here in lieu of a cancel trigger
-				}
-			}		
-		}
-		cancel_if_not_visible = yes
 		timeout_effect = {
+
 			if = {
 				limit = {
 					has_government = communism
