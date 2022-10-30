@@ -76,7 +76,7 @@ bruneval_raid = { ### 1/50
 	map_icon = GFX_historical_bruneval_raid_small
 	name = bruneval_raid
 	desc = bruneval_raid_desc
-	days = 180
+	days = 90
 
 	allowed = {
 		NOT = { original_tag = GER }
@@ -219,39 +219,29 @@ capture_tito = { ### 1/50
 		capture_tito_exfiltration = { base = 100 }
 	}
 }
-
 rescue_mussolini = { ### 1/35
 	icon = GFX_historical_mussolini_rescue
 	map_icon = GFX_historical_mussolini_rescue_small
 	name = rescue_mussolini
 	desc = rescue_mussolini_desc
-	days = 90
+	days = 20
 
 	allowed = {
 		original_tag = GER
 	}
 	available = { 
-		has_government = fascism
-		has_war_with = ITA
 		ITA = {
-			not = {
-				has_government = fascism
-			}
+			has_idea = SAl_italian_civil_war
 		}
 	}
 	visible = {
-		# TODO is this really enough of a check?
-		has_government = fascism
 		FROM = {
 			original_tag = ITA
-			not = {
-				has_government = fascism
+			has_idea = SAl_italian_civil_war
+			has_country_leader = {
+				name = "Chaos and Confusion"
+				ruling_only = yes
 			}
-		}
-		not = { has_global_flag = mussolini_rescued_flag }
-		network_national_coverage = {
-			target = ITA
-			value > 0
 		}
 	}
 
@@ -262,10 +252,10 @@ rescue_mussolini = { ### 1/35
 	risk_modifiers = { operation_risk }
 
 	# Integer [0-100] - Every operation has a hard requirement of network strength in the target country
-	network_strength = 35
+	network_strength = 25
 
 	equipment = {
-		infantry_equipment = 2000
+		infantry_equipment = 1000
 	}
 
 	on_start = {  # SCOPE_OPERATION
@@ -274,15 +264,10 @@ rescue_mussolini = { ### 1/35
 	outcome_potential = {
 		custom_effect_tooltip = rescue_mussolini_outcome_tt
 	}
-	risk_chance = 0.3
+	risk_chance = 0.1
 	# outcome is an effect that runs when the operation has completed
 	outcome_execute = { # SCOPE_OPERATION
-		ROOT = { 
-			random_list = {
-				25 = { country_event = lar_rescue_mussolini.1 } #raid fails
-				75 = { country_event = lar_rescue_mussolini.2 } #raid succeeds
-			}
-		}
+		ITA = { country_event = salo.4 }
 	}
 	
 	# This is where all the separate phases are defined
