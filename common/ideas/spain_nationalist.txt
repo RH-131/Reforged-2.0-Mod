@@ -1,32 +1,114 @@
 ideas = {
 
-	hidden_ideas = { # Used to prevent AI to hold outside of the Iberian Peninsula during the SCW
-		SPA_death_before_surrender_capitulation = {
+	country = {
+	
+	    SPA_spanish_civil_war_industry = {
 
-			name = SPR_death_before_surrender
+			picture = generic_goods_red_bonus
 
-			allowed = {
+		    allowed = {
 				original_tag = SPR
 			}
+			
 
-			allowed_civil_war = {
-				always = yes
-			}
-
+			removal_cost = -1
 			modifier = {
-				surrender_limit = 1
-				max_surrender_limit_offset = 1
+				stability_factor = -0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.2
 			}
 		}
-	}
+		SPA_german_trading = {
+			allowed = {
+			    original_tag = SPR
+				always = no
+			}
+			allowed_civil_war = {
+				tag = SPR
+			}
+			removal_cost = -1
 
-	country = {
+			picture = can_wartime_prices_and_trade_board
+			
+			targeted_modifier = {
+				tag = GER
+				trade_cost_for_target_factor = -0.5
+			}
+		}	
+        isolationism = {
 
+			picture = generic_pp_unity_bonus
+			
+			name = Isolationism
+
+		    allowed = {
+				original_tag = SPR
+			}
+			rule = {
+				can_create_factions = no
+				can_join_factions = no 
+			}
+
+			removal_cost = -1
+			modifier = {
+			    join_faction_tension = 1.00
+				ai_get_ally_desire_factor = -100
+			}
+		}
+        spanish_civil_war_defence = {
+
+			picture = spanish_civil_war
+
+		    allowed = {
+				original_tag = SPR
+			}
+			rule = {
+				can_join_factions = no 
+			}
+			removal_cost = -1
+			modifier = {
+			    conscription = 0.03
+				army_org_factor = 0.1
+				army_defence_factor = 1.0
+				army_speed_factor = -0.5
+				max_dig_in = 10
+				dig_in_speed_factor = 1.0
+				supply_consumption_factor = -0.5
+			}
+		}
+		
 		SPA_death_before_surrender = {
 
 			name = SPR_death_before_surrender
 
-			picture = SPR_nationalist_remnants
+			picture = spanish_civil_war
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			rule = {
+				can_join_factions = no 
+			}
+
+			modifier = {
+				surrender_limit = 1
+				army_org_factor = 0.1
+				max_dig_in = 5
+				army_defence_factor = 0.25
+				dig_in_speed_factor = 1.0
+				max_surrender_limit_offset = 0.10
+			}
+		}
+
+		SPA_no_navy = {
+			picture = generic_sea_focused_navy
 
 			allowed = {
 				original_tag = SPR
@@ -36,9 +118,203 @@ ideas = {
 				always = yes
 			}
 
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_dockyard = -100
+			}
+		}
+		
+		SPA_no_army = {
+			picture = generic_sea_focused_navy
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				training_time_factor = 100
+			}
+		}
+		
+	    spanish_civil_war_republic = {
+
+			picture = spanish_civil_war
+
+		    allowed = {
+				original_tag = SPR
+			}
+			
+			name = spanish_civil_war_defence
+
+			removal_cost = -1
+			rule = {
+				can_join_factions = no 
+			}
+			modifier = {
+			    conscription = 0.015
+				army_org_factor = 0.05
+				army_defence_factor = 1.0
+				army_speed_factor = -0.5
+				max_dig_in = 10
+				dig_in_speed_factor = 1.0
+				supply_consumption_factor = -0.5
+				surrender_limit = 0.15
+			}
+		}		
+
+		SPR_death_before_surrender = {
+
+			picture = spanish_civil_war
+
+			allowed = {
+				original_tag = SPR
+				NOT = { has_government = fascism }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			rule = {
+				can_join_factions = no 
+			}
 			modifier = {
 				surrender_limit = 1
-				max_surrender_limit_offset = 0.15
+				army_org_factor = 0.1
+				max_dig_in = 5
+				army_defence_factor = 0.25
+				dig_in_speed_factor = 1.0
+				max_surrender_limit_offset = 0.10
+			}
+		}
+
+		SPR_no_navy = {
+			picture = generic_sea_focused_navy
+
+			allowed = {
+				original_tag = SPR
+				NOT = { has_government = fascism }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_dockyard = -100
+			}
+		}
+
+		SPR_political_violence = {
+
+			picture = SPR_political_violence
+
+			allowed = {
+				original_tag = SPR
+				NOT = { has_global_flag = spanish_civil_war }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.15
+				disabled_ideas = 1
+			}
+		}
+
+		SPR_national_strikes_1 = { # Two times suppressed as Nationalists
+
+			name = SPR_national_strikes
+
+			picture = FRA_factory_strikes
+
+			allowed = {
+				original_tag = SPR
+				NOT = { has_global_flag = spanish_civil_war }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+
+		}
+		
+		SPR_military_disloyalty = {
+
+			picture = chi_war_of_resistance
+
+			allowed = {
+				original_tag = SPR
+				NOT = { has_global_flag = spanish_civil_war }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				custom_modifier_tooltip = SPR_military_disloyalty_tt
+				military_leader_cost_factor = 1.00
+			}
+		}
+
+		SPR_disbanded_army_1 = {
+
+			name = SPR_disbanded_army
+
+			picture = SPR_disbanded_army
+
+			allowed = {
+				original_tag = SPR
+				NOT = { has_government = fascism }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				max_command_power = -50
+				command_power_gain_mult = -0.2
+				planning_speed = -0.2
+				max_planning = -0.2
+				army_defence_factor = -0.05
+				army_attack_factor = -0.1
+			}
+		}
+		
+		SPR_seized_spanish_gold_reserves = {
+
+			picture = SPR_seize_the_gold_reserves
+
+			allowed = {
+				original_tag = SPR
+				NOT = { has_government = fascism }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
 			}
 		}
 
@@ -98,44 +374,82 @@ ideas = {
 				defense_bonus_against = 0.05
 			}
 		}
+		SPA_recovering_from_civil_war_nodlc = {
 
-		SPA_recovering_from_civil_war = {
-
-			name = SPA_recovering_from_civil_war
-
-			picture = FRA_matignon_agreements
+			picture = ROM_king_carol_emptied_accounts
 
 			allowed = {
 				original_tag = SPR
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
 			}
-
+			cancel = {
+				has_war = yes
+			}
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
-
+            rule = {
+				can_create_factions = no
+				can_join_factions = no 
+			}
 			modifier = {
-				ai_get_ally_desire_factor = -300
-				ai_join_ally_desire_factor = -300
-				join_faction_tension = 0.5
 				industrial_capacity_factory = -0.2
 				industrial_capacity_dockyard = -0.2
 				production_speed_buildings_factor = -0.1
 				consumer_goods_factor = 0.1
 			}
-
-			rule = { can_decline_call_to_war = yes }
-
 		}
+		SPA_recovering_from_civil_war_ai = {
 
+			picture = ROM_king_carol_emptied_accounts		
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			cancel = {
+				has_war = yes
+			}
+            rule = {
+				can_create_factions = no
+				can_join_factions = no 
+			}
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_factory_max_efficiency_factor = -0.25
+				industrial_capacity_factory = -0.75
+			}
+		}
+		SPA_recovering_from_civil_war = {
+
+			picture = ROM_king_carol_emptied_accounts
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+            rule = {
+				can_create_factions = no
+				can_join_factions = no 
+			}
+			modifier = {
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.15
+			}
+		}
+		
 		SPA_recovering_from_civil_war_2 = {
 
 			name = SPA_recovering_from_civil_war
 
-			picture = FRA_matignon_agreements
+			picture = ROM_king_carol_emptied_accounts
 
 			allowed = {
 				original_tag = SPR
@@ -148,18 +462,16 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-
-			modifier = {
-				ai_get_ally_desire_factor = -200
-				ai_join_ally_desire_factor = -200
-				join_faction_tension = 0.5
-				industrial_capacity_factory = -0.14
-				industrial_capacity_dockyard = -0.14
-				production_speed_buildings_factor = -0.07
-				consumer_goods_factor = 0.07
+			rule = {
+				can_create_factions = no
+				can_join_factions = no 
 			}
-
-			rule = { can_decline_call_to_war = yes }
+			modifier = {
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
 
 		}
 
@@ -167,7 +479,7 @@ ideas = {
 
 			name = SPA_recovering_from_civil_war
 
-			picture = FRA_matignon_agreements
+			picture = ROM_king_carol_emptied_accounts
 
 			allowed = {
 				original_tag = SPR
@@ -180,15 +492,16 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-
-			modifier = {
-				industrial_capacity_factory = -0.07
-				industrial_capacity_dockyard = -0.07
-				production_speed_buildings_factor = -0.04
-				consumer_goods_factor = 0.04
+			rule = {
+				can_create_factions = no
+				can_join_factions = no 
 			}
-
-			rule = { can_decline_call_to_war = yes }
+			modifier = {
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.05
+			}
 		}
 
 		SPA_awaiting_the_rebellion = {
@@ -230,8 +543,6 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.003
 				neutrality_drift = 0.05
-				army_defence_factor = -0.1
-				army_attack_factor = -0.1
 			}
 		}
 
@@ -254,10 +565,8 @@ ideas = {
 			}
 
 			modifier = {
-				stability_weekly = -0.001
+				stability_weekly = -0.002
 				neutrality_drift = 0.02
-				army_defence_factor = -0.05
-				army_attack_factor = -0.05
 			}
 		}
 
@@ -281,12 +590,6 @@ ideas = {
 
 			modifier = {
 				stability_weekly = -0.001
-				neutrality_drift = 0.02
-				army_defence_factor = -0.05
-				army_attack_factor = -0.05
-				conscription = 0.01
-				army_infantry_attack_factor = 0.05
-				army_infantry_defence_factor = 0.05
 			}
 		}
 
@@ -309,32 +612,6 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.01
-				army_infantry_attack_factor = 0.05
-				army_infantry_defence_factor = 0.05
-			}
-		}
-
-		SPA_carlism_5 = {
-
-			name = SPA_carlism
-
-			picture = SPA_carlism
-
-			allowed = {
-				original_tag = SPR
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-
 			}
 		}
 
@@ -373,9 +650,7 @@ ideas = {
 			}
 
 			modifier = {
-				send_volunteer_size = 3
-				send_volunteer_divisions_required = -1
-				lend_lease_tension = -0.30
+				lend_lease_tension = -0.50
 			}
 		}
 
@@ -593,8 +868,7 @@ ideas = {
 			}
 
 			modifier = {
-				stability_weekly = 0.002
-				consumer_goods_factor = -0.05
+			    production_speed_infrastructure_factor = 0.05
 			}
 		}
 
@@ -612,10 +886,9 @@ ideas = {
 				always = yes
 			}
 
-			modifier = {
-				stability_weekly = 0.002
-				consumer_goods_factor = -0.05
-				production_speed_infrastructure_factor = 0.1
+			modifier = {  
+			    production_speed_infrastructure_factor = 0.05
+                production_speed_buildings_factor = 0.05
 			}
 		}
 
@@ -634,10 +907,11 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.1
+                production_speed_buildings_factor = 0.1
 				production_speed_infrastructure_factor = 0.1
 			}
 		}
+
 
 		SPA_national_recovery_4 = {
 
@@ -654,76 +928,9 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.1
-				production_speed_infrastructure_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
-			}
-		}
-
-		SPA_national_recovery_5 = {
-
-			name = SPA_national_recovery
-
-			picture = SPA_national_recovery
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				consumer_goods_factor = -0.05
-				production_speed_infrastructure_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
-			}
-		}
-
-		SPA_national_recovery_6 = {
-
-			name = SPA_national_recovery
-
-			picture = SPA_national_recovery
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				consumer_goods_factor = -0.1
-				production_speed_infrastructure_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
+                production_speed_infrastructure_factor = 0.1
+                production_speed_buildings_factor = 0.1
 				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
-			}
-		}
-
-		SPA_national_recovery_7 = {
-
-			name = SPA_national_recovery
-
-			picture = SPA_national_recovery
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				consumer_goods_factor = -0.05
-				production_speed_infrastructure_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
 			}
 		}
 
@@ -793,9 +1000,8 @@ ideas = {
 			}
 
 			modifier = {
-				send_volunteer_size = 3
-				send_volunteer_divisions_required = -0.25
-				send_volunteers_tension = -0.20
+				lend_lease_tension = -1
+				special_forces_min = 150
 			}
 		}
 
@@ -834,8 +1040,8 @@ ideas = {
 
 			modifier = {
 				defence = 0.05
-				offence = 0.05
-				army_org_factor = 0.05
+				army_org_factor = 0.1
+				army_morale_factor = 0.05
 			}
 		}
 
@@ -1076,5 +1282,370 @@ ideas = {
 				}
 			}
 		}
+	}
+	naval_manufacturer = { 			
+		
+		designer = yes
+
+		### Vanilla ###
+
+		secn_vanilla = {
+
+			name = secn
+			
+			picture = generic_naval_manufacturer_3
+
+			
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+				original_tag = SPR
+			}
+			
+			research_bonus = {
+				naval_equipment = -0.05
+			}
+			
+			equipment_bonus = {
+				# fast and well armed
+			}
+			
+			traits = { naval_manufacturer }
+			
+			modifier = { naval_manufacturer_cost_factor = -0.33 }
+		}
+
+		### La Resistance ###
+		
+		secn = {
+			
+			picture = SPR_sociedad_espanola_de_construccion_naval
+
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+			
+			research_bonus = {
+				naval_equipment = -0.05
+			}
+			
+			equipment_bonus = {
+				# fast and well armed
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = { naval_manufacturer_cost_factor = -0.33 }
+		}
+
+		SPR_euskalduna = {
+			
+			picture = SPR_euskalduna
+
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+
+			available = {
+			}
+			
+			research_bonus = {
+				naval_equipment = -0.05
+			}
+			
+			equipment_bonus = {
+				# fast and well armed
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = { naval_manufacturer_cost_factor = -0.33 }
+		}
+	}
+	
+	aircraft_manufacturer = { 		
+			
+		designer = yes
+
+		### Vanilla ###
+
+		casa_vanilla = {
+
+			name = casa
+			
+			picture = generic_air_manufacturer_2
+
+			
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+				original_tag = SPR
+			}
+			
+			research_bonus = {
+				air_equipment = -0.05
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
+			equipment_bonus = {
+				# capable of aerobatics, forward shooting machine guns, low number of crashes
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		### La Resistance ###
+		
+		casa = {
+			
+			picture = SPR_casa
+
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+
+			available = {
+			}
+			
+			research_bonus = {
+				air_equipment = -0.05
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
+			equipment_bonus = {
+				# capable of aerobatics, forward shooting machine guns, low number of crashes
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SPR_hispano_aviacion = {
+			
+			picture = SPR_hispano_aviacion
+
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+
+			available = {
+			}
+			
+			research_bonus = {
+				air_equipment = -0.05
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
+			equipment_bonus = {
+				# capable of aerobatics, forward shooting machine guns, low number of crashes
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+		
+		designer = yes
+
+		SPR_star_bonifacio_echeverria = {
+			
+			picture = SPR_star_bonifacio_echeverria
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+
+			available = {
+			}
+			
+			research_bonus = {
+				infantry_weapons = -0.05
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = { materiel_manufacturer_cost_factor = -0.33 }
+		}
+
+		SPR_esperanza_y_cia = {
+
+			picture = SPR_esperanza_y_cia
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+
+			available = {
+			}
+			
+			research_bonus = {
+				artillery = -0.05
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = { materiel_manufacturer_cost_factor = -0.33 }
+		}
+
+		SPR_llama_gabilondo_y_cia = {
+
+			picture = SPR_llama_gabilondo_y_cia_sa
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+
+			available = {
+			}
+			
+			research_bonus = {
+				support_tech = 0.10
+			}
+			
+			traits = { support_equipment_manufacturer }
+			
+			modifier = { materiel_manufacturer_cost_factor = -0.33 }
+		}
+
+		SPR_hispano_suiza = {
+
+			picture = SPR_hispano_suiza
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+
+			available = {
+			}
+			
+			research_bonus = {
+				motorized_equipment = -0.05
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = { materiel_manufacturer_cost_factor = -0.33 }
+		}
+
+	}
+
+    industrial_research = {
+
+		SPR_compania_telefonica_nacional = {
+			
+			picture = SPR_compania_telefonica_nacional
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+
+			available = {
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+			
+			modifier = {
+			}
+		}
+	}
+
+	industrial_concern = {
+
+		SPR_industria_de_guerra_de_cataluna = {
+			
+			picture = SPR_industrias_de_guerra_de_cataluna
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = SPR_scw_not_in_progress_tt
+						NOT = { SPR_scw_in_progress = yes }
+					}
+					controls_state = 165
+				}
+			}
+			
+			research_bonus = {
+			}
+			
+			traits = { construction_company }
+			
+			modifier = {
+			}
+		}
+
+		SPR_altos_hornos_de_vizcaya = {
+			
+			picture = SPR_altos_hornos_de_vizcaya
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+
+			available = {
+			}
+			
+			research_bonus = {
+				industry = -0.05
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+			}
+		}
+
+		SPR_campsa = {
+			
+			picture = SPR_campsa
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+
+			available = {
+			}
+			
+			research_bonus = {
+				synth_resources = 0.05
+			}
+			
+			traits = { refinery_concern }
+			
+			modifier = {
+			}
+		}
+
 	}
 }

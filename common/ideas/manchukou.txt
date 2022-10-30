@@ -1,6 +1,48 @@
 ideas = {
 	
 	country = {
+	
+		MAN_resource = {
+			
+		
+			allowed = {
+			always = no
+			}
+
+			allowed_civil_war = {
+			    has_government = communism
+			}
+		
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = { 
+			    local_resources_factor = 0.15
+			    production_speed_infrastructure_factor = 0.15
+				production_speed_synthetic_refinery_factor = 0.05
+				production_speed_synthetic_rubber_refinery_factor = 0.05
+		    }
+				
+		}
+		MAN_imperial_pretender = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+			
+			picture = jap_intervene_in_china
+			
+			modifier = {
+			 political_power_cost = 0.2
+			}
+		}
 		MAN_exiled_imperial_family = {
 
 			allowed = {
@@ -16,12 +58,31 @@ ideas = {
 			picture = state_shintoism
 			
 			modifier = {
-				army_morale_factor = 0.1
-				stability_factor = 0.1
-				war_support_factor = 0.05
+				war_support_factor = 0.1
+				stability_weekly = 0.001
 			}
 		}
+		MAN_imperial_family = {
 
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+
+			picture = state_shintoism
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				stability_weekly = 0.001
+				consumer_goods_factor = -0.05
+			}
+		}
 		MAN_banditry = {
 
 			available = {
@@ -193,7 +254,7 @@ ideas = {
 			picture = generic_army_war_college
 			
 			modifier = {
-				max_command_power = 20
+				max_command_power = 25
 			}
 		}
 
@@ -230,10 +291,17 @@ ideas = {
 
 			picture = generic_war_preparation
 			
+        	research_bonus = {
+        		special_tech = 0.15
+        	}
+			
 			modifier = {
-				army_morale_factor = 0.05
-				army_core_attack_factor = 0.05
-				army_core_defence_factor = 0.05
+				army_defence_factor = 0.1
+				army_attack_factor = 0.1
+				army_morale_factor = 0.1
+				army_org_Factor = 0.1
+				supply_consumption_factor = -0.1
+				special_forces_cap = 0.1
 			}
 		}
 
@@ -272,7 +340,7 @@ ideas = {
 
 			picture = man_five_year_plan_air
 			
-			research_bonus = { air_equipment = 0.1 }
+			research_bonus = { air_equipment = 0.05 }
 
 			modifier = {
 				production_speed_arms_factory_factor = 0.05
@@ -319,7 +387,7 @@ ideas = {
 			
 			research_bonus = { industry = 0.05 }
 			modifier = {
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
 			}
 		}
 		MAN_underground_gun_shops = {
@@ -426,50 +494,7 @@ ideas = {
 			}
 		}
 	}
-
-	political_advisor = {
-
-		MAN_megata_toshiro = {
-
-			picture = generic_political_advisor_asia_2
-			
-			allowed = {
-				original_tag = MAN
-			}
-			
-			traits = { armaments_organizer }
-		}
-
-		MAN_nalan_kang_an = {
-
-			picture = generic_political_advisor_asia_3
-				
-			allowed = {
-				original_tag = MAN
-			}
-			
-			traits = { fortification_engineer }
-		}
-
-		MAN_songgotu_zhanshan = {
-
-			picture = generic_political_advisor_asia_1
-			
-			allowed = {
-				original_tag = MAN
-			}
-
-			available = {
-				if = {
-					limit = { has_dlc = "Waking the Tiger" }
-					has_completed_focus = MAN_invite_japanese_investors
-				}
-			}
-			
-			traits = { captain_of_industry }
-		}
-	}
-
+   
 	aircraft_manufacturer = {
 		designer = yes
 
@@ -486,9 +511,7 @@ ideas = {
 				NOT = { has_dlc = "Waking the Tiger" }
 			}
 			
-			research_bonus = {
-				air_equipment = 0.15
-			}
+			research_bonus = { air_equipment = -0.05 } 
 			
 			traits = { light_aircraft_manufacturer }
 						
@@ -510,11 +533,9 @@ ideas = {
 				has_dlc = "Waking the Tiger"
 			}
 
-			cost = 75
+			cost = 150
 			
-			research_bonus = {
-				air_equipment = 0.15
-			}
+			research_bonus = { air_equipment = -0.05 }
 			
 			traits = { light_aircraft_manufacturer }
 						
@@ -535,11 +556,9 @@ ideas = {
 				has_dlc = "Waking the Tiger"
 			}
 
-			cost = 75
+			cost = 150
 			
-			research_bonus = {
-				air_equipment = 0.15
-			}
+			research_bonus = { air_equipment = -0.05 } 
 			
 			traits = { medium_aircraft_manufacturer }
 						
@@ -560,11 +579,9 @@ ideas = {
 				has_dlc = "Waking the Tiger"
 			}
 
-			cost = 75
+			cost = 150
 			
-			research_bonus = {
-				air_equipment = 0.15
-			}
+			research_bonus = { air_equipment = -0.05 } 
 			
 			traits = { heavy_aircraft_manufacturer }
 						
@@ -587,6 +604,8 @@ ideas = {
 				has_dlc = "Waking the Tiger"
 				original_tag = MAN
 			}
+			
+			research_bonus = { industry = 0.05 }
 
 			traits = {
 				construction_company

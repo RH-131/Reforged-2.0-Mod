@@ -5,19 +5,17 @@
 #BUL_is_democratic_socialist_ai
 #BUL_is_democratic_liberal_ai
 #BUL_is_fascist_axis_ai
-#BUL_is_monarchist_ferdinand_ai
 
 ideas = {
 
 
-##    ##    ###    ######## ####  #######  ##    ##    ###    ##           ######  ########  #### ########  #### ########  ######  
-###   ##   ## ##      ##     ##  ##     ## ###   ##   ## ##   ##          ##    ## ##     ##  ##  ##     ##  ##     ##    ##    ## 
-####  ##  ##   ##     ##     ##  ##     ## ####  ##  ##   ##  ##          ##       ##     ##  ##  ##     ##  ##     ##    ##       
-## ## ## ##     ##    ##     ##  ##     ## ## ## ## ##     ## ##           ######  ########   ##  ########   ##     ##     ######  
-##  #### #########    ##     ##  ##     ## ##  #### ######### ##                ## ##         ##  ##   ##    ##     ##          ## 
-##   ### ##     ##    ##     ##  ##     ## ##   ### ##     ## ##          ##    ## ##         ##  ##    ##   ##     ##    ##    ## 
-##    ## ##     ##    ##    ####  #######  ##    ## ##     ## ########     ######  ##        #### ##     ## ####    ##     ######  
-
+##    ##    ###    ######## ####  #######  ##    ##    ###    ##           ######  ########  #### ########  #### ########  ######
+###   ##   ## ##      ##     ##  ##     ## ###   ##   ## ##   ##          ##    ## ##     ##  ##  ##     ##  ##     ##    ##    ##
+####  ##  ##   ##     ##     ##  ##     ## ####  ##  ##   ##  ##          ##       ##     ##  ##  ##     ##  ##     ##    ##
+## ## ## ##     ##    ##     ##  ##     ## ## ## ## ##     ## ##           ######  ########   ##  ########   ##     ##     ######
+##  #### #########    ##     ##  ##     ## ##  #### ######### ##                ## ##         ##  ##   ##    ##     ##          ##
+##   ### ##     ##    ##     ##  ##     ## ##   ### ##     ## ##          ##    ## ##         ##  ##    ##   ##     ##    ##    ##
+##    ## ##     ##    ##    ####  #######  ##    ## ##     ## ########     ######  ##        #### ##     ## ####    ##     ######
 
 	country = { #DLC
 
@@ -34,46 +32,49 @@ ideas = {
 			removal_cost = -1
 
 			cancel = {
-				has_country_flag = BUL_uk_demands_nap_with_balkan_nation_flag
-				OR = {
-					has_non_aggression_pact_with = GRE
-					has_non_aggression_pact_with = YUG
-					has_non_aggression_pact_with = ROM
-					has_non_aggression_pact_with = TUR
-				}
+				has_war = yes
 			}
 
 			on_remove = {
-				if = {
-					limit = {
-						has_country_flag = BUL_uk_demands_nap_with_balkan_nation_flag
-						NOT = { has_country_flag = BUL_refused_arms_restrictions_flag }
-						NOT = { has_country_flag = BUL_uk_gives_in_to_pressure_flag }
-					}
-					country_event = bftb_bulgaria_rearmament.4
-					ENG = { country_event = bftb_bulgaria_rearmament.5 }
-				}
-				if = {
-					limit = { has_country_flag = BUL_refused_arms_restrictions_flag }
-					clr_country_flag = BUL_refused_arms_restrictions_flag
-				}
-				if = {
-					limit = { has_country_flag = BUL_uk_gives_in_to_pressure_flag }
-					clr_country_flag = BUL_uk_gives_in_to_pressure_flag
-				}
-				if = {
-					limit = { has_country_flag = BUL_uk_demands_nap_with_balkan_nation_flag }
-					clr_country_flag = BUL_uk_demands_nap_with_balkan_nation_flag
-				}
 				country_lock_all_division_template = no
 				set_rule = {
 					can_not_declare_war = no
 				}
 			}
-			
+
 			modifier = {
-				industrial_capacity_factory = -0.25
-				industrial_capacity_dockyard = -0.25
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				custom_modifier_tooltip = BUL_army_restrictions_mobilization_law_tt
+			}
+		}
+
+		BUL_army_restrictions_2 = {
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				tag = BUL
+			}
+			removal_cost = -1
+
+			cancel = {
+				has_war = yes
+			}
+
+			on_remove = {
+				country_lock_all_division_template = no
+				set_rule = {
+					can_not_declare_war = no
+				}
+			}
+
+			modifier = {
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
 				custom_modifier_tooltip = BUL_army_restrictions_mobilization_law_tt
 			}
 		}
@@ -91,9 +92,8 @@ ideas = {
 			removal_cost = -1
 
 			cancel = {
-				BUL_has_restored_greater_bulgaria = yes
 			}
-			
+
 			modifier = {
 				stability_factor = -0.1
 				stability_weekly = -0.003
@@ -116,9 +116,8 @@ ideas = {
 			removal_cost = -1
 
 			cancel = {
-				BUL_has_restored_greater_bulgaria = yes
 			}
-			
+
 			modifier = {
 				stability_factor = -0.1
 				war_support_factor = -0.1
@@ -127,7 +126,7 @@ ideas = {
 		}
 
 		BUL_bulgarian_irredentism = {
-			picture = bul_bulgarian_irredentism 
+			picture = bul_bulgarian_irredentism
 
 			allowed = {
 				original_tag = BUL
@@ -140,12 +139,12 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				stability_factor = -0.1
-				justify_war_goal_time = -0.25 
+				justify_war_goal_time = -0.25
 				generate_wargoal_tension = -0.75
-				war_support_factor = 0.05
+				war_support_weekly = 0.003
 			}
 		}
 
@@ -160,10 +159,10 @@ ideas = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				stability_factor = -0.1
-				political_power_gain = -0.3 
+				political_power_gain = -0.3
 				opinion_gain_monthly_factor = -0.15
 			}
 		}
@@ -179,10 +178,10 @@ ideas = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				stability_factor = -0.1
-				political_power_gain = -0.3 
+				political_power_gain = -0.3
 			}
 		}
 
@@ -198,7 +197,7 @@ ideas = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				stability_factor = -0.1
 			}
@@ -215,7 +214,7 @@ ideas = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				stability_factor = -0.1
 				opinion_gain_monthly_factor = -0.15
@@ -234,7 +233,7 @@ ideas = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				stability_factor = -0.1
 				opinion_gain_monthly_factor = -0.25
@@ -248,19 +247,19 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 				has_country_leader = {
-					character = BUL_boris_iii
+					name = "Boris III"
 				}
 			}
 
 			allowed_civil_war = {
 				has_country_leader = {
-					character = BUL_boris_iii
+					name = "Boris III"
 				}
 				NOT = { has_government = communism }
-				NOT = { has_government = democratic }		
+				NOT = { has_government = democratic }
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_factor = 0.1
 			}
@@ -273,19 +272,19 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 				has_country_leader = {
-					character = BUL_boris_iii
+					name = "Boris III"
 				}
 			}
 
 			allowed_civil_war = {
 				has_country_leader = {
-					character = BUL_boris_iii
+					name = "Boris III"
 				}
 				NOT = { has_government = communism }
 				NOT = { has_government = democratic }
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_factor = 0.2
 			}
@@ -298,19 +297,19 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 				has_country_leader = {
-					character = BUL_boris_iii
+					name = "Boris III"
 				}
 			}
 
 			allowed_civil_war = {
 				has_country_leader = {
-					character = BUL_boris_iii
+					name = "Boris III"
 				}
 				NOT = { has_government = communism }
 				NOT = { has_government = democratic }
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_factor = 0.3
 				drift_defence_factor = 0.15
@@ -323,18 +322,18 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 				has_country_leader = {
-					character = BUL_boris_iii
+					name = "Boris III"
 				}
 			}
 
 			allowed_civil_war = {
 				has_country_leader = {
-					character = BUL_boris_iii
+					name = "Boris III"
 				}
-				BUL_has_abolished_monarchy = no
+
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_factor = -0.15
 			}
@@ -347,26 +346,25 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 				has_country_leader = {
-					character = BUL_boris_iii
+					name = "Boris III"
 				}
 			}
 
 			allowed_civil_war = {
 				has_country_leader = {
-					character = BUL_boris_iii
+					name = "Boris III"
 				}
-				has_completed_focus = BUL_seek_cooperation_with_the_tsar
 				NOT = {
 					any_other_country = {
 						tag = BUL
 						has_country_leader = {
-							character = BUL_boris_iii
+							name = "Boris III"
 						}
 					}
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_factor = -0.1
 				join_faction_tension = -0.2
@@ -392,7 +390,7 @@ ideas = {
 				has_country_flag = BUL_zveno_coup_flag
 				has_country_flag = BUL_zveno_destroyed_flag
 			}
-			
+
 			modifier = {
 				army_leader_cost_factor = 0.25
 				training_time_factor = 0.15
@@ -411,9 +409,9 @@ ideas = {
 				has_government = communism
 			}
 			removal_cost = -1
-			
+
 			modifier = {
-				war_support_factor = 0.05
+				war_support_weekly = 0.003
 				communism_drift = 0.3
 				drift_defence_factor = 0.15
 			}
@@ -434,11 +432,11 @@ ideas = {
 
 			cancel = {
 				OR = {
-					has_country_flag = BUL_ff_destroyed_flag 
+					has_country_flag = BUL_ff_destroyed_flag
 					has_country_flag = BUL_ff_civil_war_flag
 				}
 			}
-			
+
 			modifier = {
 				stability_weekly = -0.003
 				political_power_factor = -0.25
@@ -461,11 +459,11 @@ ideas = {
 
 			cancel = {
 				OR = {
-					has_country_flag = BUL_ff_destroyed_flag 
+					has_country_flag = BUL_ff_destroyed_flag
 					has_country_flag = BUL_ff_civil_war_flag
 				}
 			}
-			
+
 			modifier = {
 				stability_weekly = -0.002
 				political_power_factor = -0.25
@@ -488,11 +486,11 @@ ideas = {
 
 			cancel = {
 				OR = {
-					has_country_flag = BUL_ff_destroyed_flag 
+					has_country_flag = BUL_ff_destroyed_flag
 					has_country_flag = BUL_ff_civil_war_flag
 				}
 			}
-			
+
 			modifier = {
 				stability_weekly = -0.001
 				political_power_factor = -0.15
@@ -511,7 +509,7 @@ ideas = {
 				NOT = { has_government = communism }
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				weekly_manpower = 500
 			}
@@ -526,16 +524,15 @@ ideas = {
 
 			allowed_civil_war = {
 				OR = {
-					has_completed_focus = BUL_found_the_brannik
 					has_government = neutrality
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				conscription_factor = 0.1
 				political_advisor_cost_factor = -0.25
-				war_support_factor = 0.05
+				war_support_weekly = 0.001
 			}
 		}
 
@@ -553,7 +550,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				trade_laws_cost_factor = -0.50
 				consumer_goods_factor = -0.05
@@ -571,11 +568,11 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			
+
 			modifier = {
-				stability_weekly = 0.01
-				political_power_gain = 0.5
-				compliance_gain = 0.15
+				stability_weekly = 0.002
+				political_power_gain = 0.3
+				compliance_gain = 0.01
 			}
 		}
 
@@ -590,9 +587,9 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			
+
 			modifier = {
-				production_speed_industrial_complex_factor = 0.05		
+				production_speed_industrial_complex_factor = 0.05
 			}
 		}
 
@@ -607,7 +604,7 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				production_speed_buildings_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.02
@@ -628,7 +625,7 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				production_speed_buildings_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.05
@@ -649,13 +646,12 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			
+
 			modifier = {
-				production_speed_buildings_factor = 0.15
+				production_speed_buildings_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.1
 				production_factory_max_efficiency_factor = 0.1
 				global_building_slots_factor = 0.2
-				consumer_goods_factor = -0.02
 			}
 		}
 
@@ -670,7 +666,7 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				consumer_goods_factor = -0.05
 			}
@@ -687,9 +683,9 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			
+
 			modifier = {
-				industrial_capacity_factory = 0.05
+				industrial_capacity_factory = 0.1
 			}
 		}
 
@@ -706,11 +702,14 @@ ideas = {
 			removal_cost = -1
 
 			equipment_bonus = {
-				small_plane_airframe = {
+				fighter_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				heavy_fighter_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
 			}
-			
+
 			modifier = {
 				air_accidents_factor = -0.25
 				air_range_factor = 0.1
@@ -769,7 +768,7 @@ ideas = {
 			modifier = {
 				experience_gain_navy_factor = 0.1
 				experience_gain_army_factor = 0.1
-				army_leader_cost_factor = -0.2
+				army_leader_cost_factor = -0.25
 			}
 		}
 
@@ -790,7 +789,7 @@ ideas = {
 				conscription_factor = 0.05
 				experience_gain_navy_factor = 0.1
 				experience_gain_army_factor = 0.1
-				army_leader_cost_factor = -0.2
+				army_leader_cost_factor = -0.25
 			}
 		}
 
@@ -811,15 +810,10 @@ ideas = {
 				non_core_manpower = 0.05
 				experience_gain_navy_factor = 0.1
 				experience_gain_army_factor = 0.1
-				army_leader_cost_factor = -0.15
-				navy_leader_cost_factor = -0.15
-				army_leader_start_attack_level = 1
-				army_leader_start_defense_level	= 1
-				navy_leader_start_attack_level = 1
-				navy_leader_start_defense_level = 1
+				army_leader_cost_factor = -0.25
+				navy_leader_cost_factor = -0.25
 				army_morale_factor = 0.1
 				max_command_power = 25
-				justify_war_goal_time = -0.5
 			}
 		}
 
@@ -842,8 +836,8 @@ ideas = {
 				non_core_manpower = 0.05
 				experience_gain_navy_factor = 0.1
 				experience_gain_army_factor = 0.1
-				army_leader_cost_factor = -0.15
-				navy_leader_cost_factor = -0.15
+				army_leader_cost_factor = -0.25
+				navy_leader_cost_factor = -0.25
 				army_leader_start_attack_level = 1
 				army_leader_start_defense_level	= 1
 				navy_leader_start_attack_level = 1
@@ -874,8 +868,8 @@ ideas = {
 				non_core_manpower = 0.05
 				experience_gain_navy_factor = 0.15
 				experience_gain_army_factor = 0.15
-				army_leader_cost_factor = -0.15
-				navy_leader_cost_factor = -0.15
+				army_leader_cost_factor = -0.25
+				navy_leader_cost_factor = -0.25
 				army_leader_start_attack_level = 1
 				army_leader_start_defense_level	= 1
 				navy_leader_start_attack_level = 1
@@ -906,8 +900,8 @@ ideas = {
 				non_core_manpower = 0.05
 				experience_gain_navy_factor = 0.15
 				experience_gain_army_factor = 0.15
-				army_leader_cost_factor = -0.3
-				navy_leader_cost_factor = -0.3
+				army_leader_cost_factor = -0.5
+				navy_leader_cost_factor = -0.5
 				army_leader_start_attack_level = 2
 				army_leader_start_defense_level	= 2
 				navy_leader_start_attack_level = 2
@@ -938,8 +932,8 @@ ideas = {
 				non_core_manpower = 0.05
 				experience_gain_navy_factor = 0.05
 				experience_gain_army_factor = 0.05
-				army_leader_cost_factor = -0.15
-				navy_leader_cost_factor = -0.15
+				army_leader_cost_factor = -0.25
+				navy_leader_cost_factor = -0.25
 				army_leader_start_attack_level = 1
 				army_leader_start_defense_level	= 1
 				navy_leader_start_attack_level = 1
@@ -1054,7 +1048,7 @@ ideas = {
 			}
 			removal_cost = -1
 
-			cancel = { 
+			cancel = {
 				OR = {
 					has_country_flag = BUL_bs_destroyed_flag
 					has_country_flag = BUL_bs_integrated_flag
@@ -1090,7 +1084,7 @@ ideas = {
 				}
 			}
 
-			cancel = { 
+			cancel = {
 				has_war_with = BUL
 			}
 
@@ -1134,17 +1128,17 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				send_volunteer_divisions_required = -0.75
 				send_volunteer_size = 3
 				send_volunteers_tension = -1
-			} 
+			}
 		}
 
 		BUL_volunteers_in_spain_nationalist = {
@@ -1153,17 +1147,17 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				send_volunteer_divisions_required = -0.75
 				send_volunteer_size = 3
 				send_volunteers_tension = -1
-			} 
+			}
 		}
 
 		BUL_the_peoples_militia_directorate = {
@@ -1172,16 +1166,16 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				drift_defence_factor = 0.15
 				foreign_subversive_activites = -0.5
-			} 
+			}
 		}
 
 		BUL_the_peoples_militia_directorate_lar = {
@@ -1192,18 +1186,18 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				operative_slot = 1
 				enemy_operative_capture_chance_factor = 0.15
 				intelligence_agency_defense = 0.15
 				drift_defence_factor = 0.15
-			} 
+			}
 		}
 
 		BUL_elites_crushed = {
@@ -1212,17 +1206,17 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
-				political_power_factor = -0.20
-				military_leader_cost_factor = 0.20
-				political_advisor_cost_factor = 0.20
-			} 
+				political_power_factor = -0.25
+				military_leader_cost_factor = 0.25
+				political_advisor_cost_factor = 0.25
+			}
 		}
 
 		BUL_government_reforms_communists_01 = {
@@ -1231,16 +1225,16 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				consumer_goods_factor = -0.05
 				conscription = 0.02
-			} 
+			}
 		}
 
 		BUL_government_reforms_communists_02 = {
@@ -1251,17 +1245,17 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				consumer_goods_factor = -0.05
 				conscription = 0.02
 				industrial_capacity_factory = 0.1
-			} 
+			}
 		}
 
 		BUL_trained_youth_wings = {
@@ -1270,17 +1264,17 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				conscription_factor = 0.15
 				training_time_factor = -0.1
 				army_org_factor = -0.05
-			} 
+			}
 		}
 
 		BUL_anti_capitalism = { #This NS relies on hidden NSs with targeted modifiers to be applied to the appropriate nations
@@ -1289,7 +1283,7 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				tag = BUL
 				has_government = communism
@@ -1299,7 +1293,7 @@ ideas = {
 			on_remove = {
 				set_country_flag = BUL_anti_capitalism_ns_expired_flag
 			}
-			
+
 			modifier = {
 				custom_modifier_tooltip = BUL_anti_capitalism_tt
 			}
@@ -1311,7 +1305,7 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				tag = BUL
 			}
@@ -1326,7 +1320,7 @@ ideas = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				army_core_attack_factor = 0.15
 				army_core_defence_factor = 0.15
@@ -1338,13 +1332,13 @@ ideas = {
 			picture = por_iberian_workers_united
 
 			allowed = {
-				BUL_is_balkan_nation = yes
+				original_tag = BUL
 			}
 
 			allowed_civil_war = {
 				always = yes
 			}
-		
+
 			removal_cost = -1
 
 			cancel = {
@@ -1353,7 +1347,7 @@ ideas = {
 					NOT = { country_exists = BUL }
 				}
 			}
-			
+
 			modifier = {
 				communism_drift = 0.2
 			}
@@ -1369,7 +1363,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-		
+
 			removal_cost = -1
 
 			targeted_modifier = {
@@ -1389,9 +1383,9 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-		
+
 			removal_cost = -1
-			
+
 			modifier = {
 				consumer_goods_factor = -0.05
 				trade_laws_cost_factor = -0.35
@@ -1409,9 +1403,9 @@ ideas = {
 			allowed_civil_war = {
 				NOT = { has_government = communism }
 			}
-		
+
 			removal_cost = -1
-			
+
 			modifier = {
 				conscription_factor = 0.05
 				mobilization_laws_cost_factor = -0.35
@@ -1421,7 +1415,7 @@ ideas = {
 
 		BUL_total_war_02 = {
 			name = BUL_total_war
-			
+
 			picture = can_wartime_prices_and_trade_board
 
 			allowed = {
@@ -1431,24 +1425,19 @@ ideas = {
 			allowed_civil_war = {
 				NOT = { has_government = communism }
 			}
-		
+
 			removal_cost = -1
-			
+
 			modifier = {
 				conscription_factor = 0.05
 				mobilization_laws_cost_factor = -0.35
 				economy_cost_factor = -0.35
-			}
-
-			targeted_modifier = {
-				tag = SOV
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
+				winter_attrition_factor = -0.1
 			}
 		}
 
 		BUL_ferdinands_puppet = {
-			
+
 			picture = generic_monarchist_uprising
 
 			allowed = {
@@ -1458,9 +1447,9 @@ ideas = {
 			allowed_civil_war = {
 				is_subject_of = BUL
 			}
-		
+
 			removal_cost = -1
-			
+
 			modifier = {
 				cic_to_overlord_factor = 0.4
 				mic_to_overlord_factor = 0.4
@@ -1469,7 +1458,7 @@ ideas = {
 		}
 
 		BUL_the_fate_of_the_balkans = {
-			
+
 			picture = bul_the_fate_of_the_balkans
 
 			allowed = {
@@ -1483,9 +1472,9 @@ ideas = {
 					has_government = democratic
 				}
 			}
-		
+
 			removal_cost = -1
-			
+
 			modifier = {
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
@@ -1493,7 +1482,7 @@ ideas = {
 		}
 
 		BUL_the_bulgarian_threat = {
-			
+
 			picture = bul_the_fate_of_the_balkans
 
 			allowed = {
@@ -1503,16 +1492,16 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-		
+
 			removal_cost = -1
-			
+
 			modifier = {
 				surrender_limit = -0.2
 			}
 		}
 
 		BUL_toppling_giants = {
-			
+
 			picture = chi_wargaming_division
 
 			allowed = {
@@ -1522,13 +1511,13 @@ ideas = {
 			allowed_civil_war = {
 				tag = BUL
 			}
-		
+
 			removal_cost = -1
 
 			on_remove = {
 				set_country_flag = BUL_toppling_giants_ns_expired_flag
 			}
-			
+
 			modifier = {
 				surrender_limit = 0.2
 				weekly_manpower = 1000
@@ -1537,7 +1526,7 @@ ideas = {
 		}
 
 		BUL_nationalist_propaganda = {
-			
+
 			picture = generic_morale_bonus
 
 			allowed = {
@@ -1547,11 +1536,11 @@ ideas = {
 			allowed_civil_war = {
 				has_government = neutrality
 			}
-		
+
 			removal_cost = -1
-			
+
 			modifier = {
-				war_support_factor = 0.05
+				war_support_weekly = 0.005
 				weekly_manpower = 500
 				neutrality_drift = 0.1
 			}
@@ -1559,7 +1548,7 @@ ideas = {
 
 		BUL_nationalist_propaganda_fascism = {
 			name = BUL_nationalist_propaganda
-			
+
 			picture = generic_morale_bonus
 
 			allowed = {
@@ -1569,11 +1558,11 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-		
+
 			removal_cost = -1
-			
+
 			modifier = {
-				war_support_factor = 0.05
+				war_support_weekly = 0.005
 				weekly_manpower = 500
 				fascism_drift = 0.1
 			}
@@ -1581,7 +1570,7 @@ ideas = {
 
 		BUL_nationalist_propaganda_weak = {
 			name = BUL_nationalist_propaganda
-			
+
 			picture = generic_morale_bonus
 
 			allowed = {
@@ -1591,13 +1580,13 @@ ideas = {
 			allowed_civil_war = {
 				has_government = neutrality
 			}
-		
+
 			removal_cost = -1
 
 			on_add = {
 				add_manpower = 10000
 			}
-			
+
 			modifier = {
 				war_support_factor = 0.05
 				neutrality_drift = 0.1
@@ -1606,7 +1595,7 @@ ideas = {
 
 		BUL_nationalist_propaganda_weak_fascism = {
 			name = BUL_nationalist_propaganda
-			
+
 			picture = generic_morale_bonus
 
 			allowed = {
@@ -1616,20 +1605,20 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-		
+
 			removal_cost = -1
 
 			on_add = {
 				add_manpower = 10000
 			}
-			
+
 			modifier = {
 				war_support_factor = 0.05
 				fascism_drift = 0.1
 			}
 		}
 
-		BUL_guardians_of_the_balkans = {	
+		BUL_guardians_of_the_balkans = {
 			picture = YUG_federal_defense_council
 
 			allowed = {
@@ -1639,9 +1628,9 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-		
+
 			removal_cost = -1
-			
+
 			modifier = {
 				army_core_attack_factor = 0.15
 				army_core_defence_factor = 0.15
@@ -1664,9 +1653,9 @@ ideas = {
 			allowed_civil_war = {
 				is_subject_of = BUL
 			}
-		
+
 			removal_cost = -1
-			
+
 			modifier = {
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
@@ -1688,11 +1677,11 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
-				war_support_weekly = 0.001
+				war_support_weekly = 0.005
 				conscription = 0.01
 			}
 		}
@@ -1707,12 +1696,12 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				fascism_drift = 0.02
-				conscription_factor = 0.35
+				conscription_factor = 0.1
 			}
 		}
 
@@ -1724,16 +1713,16 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				always = yes
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				economy_cost_factor = -0.5
-				production_speed_industrial_complex_factor = 0.1
-			} 
+				production_speed_industrial_complex_factor = 0.05
+			}
 		}
 
 		BUL_government_reforms_fascists_02 = {
@@ -1744,7 +1733,7 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1753,14 +1742,14 @@ ideas = {
 			on_add = {
 				add_ideas = limited_exports
 			}
-			
+
 			modifier = {
 				economy_cost_factor = -0.5
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.075
 				consumer_goods_factor = -0.02
 				trade_laws_cost_factor = 0.5
 				min_export = -0.15
-			} 
+			}
 		}
 
 		BUL_government_reforms_fascists_03 = {
@@ -1771,20 +1760,20 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				always = yes
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				economy_cost_factor = -0.5
-				production_speed_industrial_complex_factor = 0.2
-				consumer_goods_factor = -0.07
+				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_factor = -0.05
 				trade_laws_cost_factor = 0.5
 				min_export = -0.15
 				local_resources_factor = 0.15
-			} 
+			}
 		}
 
 		BUL_petorka = {
@@ -1793,17 +1782,17 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				tag = BUL
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				political_advisor_cost_factor = -0.30
 				political_power_factor = 0.05
 				democratic_drift = 0.05
-			} 
+			}
 		}
 
 		BUL_government_reforms_democratic_01 = {
@@ -1814,17 +1803,17 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				always = yes
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				consumer_goods_factor = -0.05
 				production_speed_buildings_factor = 0.05
 				global_building_slots_factor = 0.1
-			} 
+			}
 		}
 
 		BUL_government_reforms_democratic_02 = {
@@ -1835,19 +1824,19 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				always = yes
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				industrial_capacity_factory = 0.05
 				production_factory_max_efficiency_factor = 0.05
 				production_factory_start_efficiency_factor = 0.1
 				line_change_production_efficiency_factor = 0.1
 				industrial_capacity_dockyard = 0.05
-			} 
+			}
 		}
 
 		BUL_third_bulgarian_state = {
@@ -1856,20 +1845,20 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 			}
-		
+
 			allowed_civil_war = {
 				always = yes
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				stability_weekly = 0.002
 				research_speed_factor = 0.05
-			} 
+			}
 		}
 
 		BUL_the_fight_against_tyranny = {
-			
+
 			picture = SPR_anti_fascist_crusade
 
 			allowed = {
@@ -1879,9 +1868,9 @@ ideas = {
 			allowed_civil_war = {
 				tag = BUL
 			}
-		
+
 			removal_cost = -1
-			
+
 			modifier = {
 				fascism_drift = -0.15
 				army_morale_factor = 0.05
@@ -1892,7 +1881,7 @@ ideas = {
 		}
 
 		BUL_the_fight_against_bolshevism = {
-			
+
 			picture = ger_bulwark_against_bolshevism
 
 			allowed = {
@@ -1902,20 +1891,20 @@ ideas = {
 			allowed_civil_war = {
 				tag = BUL
 			}
-		
+
 			removal_cost = -1
 
 			on_remove = {
 				set_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
 			}
-			
+
 			modifier = {
 				custom_modifier_tooltip = BUL_the_fight_against_bolshevism_ns_target_tt
 			}
 		}
 
 		BUL_bulgarian_capital_injection = {
-			
+
 			picture = generic_foreign_capital
 
 			allowed = {
@@ -1925,9 +1914,9 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-		
+
 			removal_cost = -1
-			
+
 			modifier = {
 				consumer_goods_factor = -0.05
 				drift_defence_factor = -0.5
@@ -1937,20 +1926,19 @@ ideas = {
 
 	}
 
+########  ########  ######  ####  ######   ##    ## ######## ########   ######
+##     ## ##       ##    ##  ##  ##    ##  ###   ## ##       ##     ## ##    ##
+##     ## ##       ##        ##  ##        ####  ## ##       ##     ## ##
+##     ## ######    ######   ##  ##   #### ## ## ## ######   ########   ######
+##     ## ##             ##  ##  ##    ##  ##  #### ##       ##   ##         ##
+##     ## ##       ##    ##  ##  ##    ##  ##   ### ##       ##    ##  ##    ##
+########  ########  ######  ####  ######   ##    ## ######## ##     ##  ######
 
-########  ########  ######  ####  ######   ##    ## ######## ########   ######  
-##     ## ##       ##    ##  ##  ##    ##  ###   ## ##       ##     ## ##    ## 
-##     ## ##       ##        ##  ##        ####  ## ##       ##     ## ##       
-##     ## ######    ######   ##  ##   #### ## ## ## ######   ########   ######  
-##     ## ##             ##  ##  ##    ##  ##  #### ##       ##   ##         ## 
-##     ## ##       ##    ##  ##  ##    ##  ##   ### ##       ##    ##  ##    ## 
-########  ########  ######  ####  ######   ##    ## ######## ##     ##  ######  
 
+	tank_manufacturer = {
 
-	tank_manufacturer = { 
-		
 		designer = yes
-		
+
 		BUL_german_tank_designer = { #DLC
 			name = henschel
 
@@ -1960,289 +1948,104 @@ ideas = {
 
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			available = {
-				has_country_flag = BUL_german_military_agreements_flag
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_german_tank_designer_flag }
-					}
-					GER = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
 				OR = {
 					is_subject = no
-					is_subject_of = GER
+
 				}
-				is_in_faction_with = GER
-				NOT = { has_completed_focus = BUL_nationalization }
 			}
 
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_german_tank_designer_flag }
-					}
-					random_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-					set_country_flag = BUL_contract_with_german_tank_designer_flag
-				}		
-			}
-			
 			research_bonus = {
-				armor = 0.15
+				armor = -0.05
 			}
-			
-			traits = { fast_tank_manufacturer }
-				
+
+			traits = { GER_Krupp_tank_manufacturer }
+			modifier = { tank_manufacturer_cost_factor = -0.33 }
+			equipment_bonus = {
+
+				medium_assault_gun_equipment = {
+					reliability = -0.05
+					soft_attack = 0.1
+					armor_value = 0.05
+					build_cost_ic = 0.05
+				}
+
+				medium_tank_aa_chassis = {
+					reliability = -0.05
+					air_attack = 0.1
+					armor_value = 0.05
+					build_cost_ic = 0.05
+				}
+
+				medium_tank_artillery_chassis = {
+					reliability = -0.05
+					soft_attack = 0.1
+					armor_value = 0.05
+					build_cost_ic = 0.05
+				}
+
+				medium_tank_chassis = {
+					reliability = -0.05
+					soft_attack = 0.1
+					hard_attack = 0.1
+					armor_value = 0.05
+					build_cost_ic = 0.05
+				}
+			}
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-
-		BUL_british_tank_designer = { #DLC
-			name = vickers_armstrong_eng
-
-			picture = vickers_armstrong_eng
-
-			cost = 100
-
-			allowed = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			available = {
-				has_country_flag = BUL_british_military_agreements_flag
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_british_tank_designer_flag }
-					}
-					ENG = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				OR = {
-					is_subject = no
-					is_subject_of = ENG
-				}
-				is_in_faction_with = ENG
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_british_tank_designer_flag }
-					}
-					random_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-					set_country_flag = BUL_contract_with_british_tank_designer_flag
-				}		
-			}
-			
-			research_bonus = {
-				armor = 0.15
-			}
-			
-			traits = { medium_tank_manufacturer }
-				
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		BUL_soviet_tank_designer = { #DLC
-			name = okmo
-
-			picture = okmo
-
-			cost = 100
-
-			allowed = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			available = {
-				has_country_flag = BUL_soviet_military_agreements_flag
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_soviet_tank_designer_flag }
-					}
-					SOV = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				OR = {
-					is_subject = no
-					is_subject_of = SOV
-				}
-				is_in_faction_with = SOV
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_soviet_tank_designer_flag }
-					}
-					random_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-					set_country_flag = BUL_contract_with_soviet_tank_designer_flag
-				}		
-			}
-			
-			research_bonus = {
-				armor = 0.15
-			}
-			
-			traits = { heavy_tank_manufacturer }
-				
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
 		BUL_italian_tank_designer = {
 			name = fiat
-			
+
 			picture = fiat
 
 			cost = 100
 
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			available = {
-				has_country_flag = BUL_italian_military_agreements_flag
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_italian_tank_designer_flag }
-					}
-					ITA = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				OR = {
-					is_subject = no
-					is_subject_of = ITA
-				}
-				is_in_faction_with = ITA
-				NOT = { has_completed_focus = BUL_nationalization }
 			}
 
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_italian_tank_designer_flag }
-					}
-					random_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-					set_country_flag = BUL_contract_with_italian_tank_designer_flag
-				}		
-			}
-			
 			research_bonus = {
-				armor = 0.15
+				armor = -0.05
 			}
-			
-			traits = { infantry_tank_manufacturer }
+
+			traits = { GER_ckd_tank_manufacturer }
+			modifier = { tank_manufacturer_cost_factor = -0.33 }
+			equipment_bonus = {
+				light_tank_chassis = {
+					build_cost_ic = -0.05 reliability = 0.05
+				}
+				light_tank_destroyer_chassis = {
+					build_cost_ic = -0.05 reliability = 0.05
+				}
+				light_tank_artillery_chassis = {
+					build_cost_ic = -0.05 reliability = 0.05
+				}
+				medium_assault_gun_equipment = {
+					build_cost_ic = -0.05 reliability = 0.05
+				}
+			}
 		}
 	}
 
-	naval_manufacturer = { 
-			
+	naval_manufacturer = {
+
 		designer = yes
-		
+
 		BUL_varna_naval_dockyard = {
-			
+
 			picture = generic_naval_manufacturer_2
-			
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
@@ -2254,14 +2057,15 @@ ideas = {
 			}
 
 			research_bonus = {
-				naval_equipment = 0.1
+				naval_equipment = -0.05
 			}
-			
-			traits = { coastal_defence_naval_manufacturer }
+
+			traits = { convoy_escort_naval_manufacturer }
 
 			modifier = {
 				custom_modifier_tooltip = BUL_national_naval_designer_upgrade_tt
 				repair_speed_factor = 0.05
+				naval_manufacturer_cost_factor = -0.33
 			}
 		}
 
@@ -2269,10 +2073,9 @@ ideas = {
 			name = BUL_varna_naval_dockyard
 
 			picture = generic_naval_manufacturer_2
-			
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
@@ -2286,182 +2089,28 @@ ideas = {
 			research_bonus = {
 				naval_equipment = 0.15
 			}
-			
-			traits = { coastal_defence_naval_manufacturer }
+
+			traits = { convoy_escort_naval_manufacturer }
 
 			modifier = {
 				repair_speed_factor = 0.1
 				refit_speed = 0.1
+				naval_manufacturer_cost_factor = -0.33
 			}
-		}
-
-		BUL_british_naval_designer = {
-			name = yarrow_shipbuilders
-
-			picture = yarrow_shipbuilders
-
-			cost = 75
-
-			allowed = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			available = {
-				has_country_flag = BUL_british_naval_agreements_flag
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_british_naval_designer_flag }
-					}
-					ENG = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				NOT = { has_war_with = ENG }
-				OR = {
-					is_subject = no
-					is_subject_of = ENG
-				}
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_british_naval_designer_flag }
-					}
-					random_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = dockyard
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = dockyard
-							level = 1
-							instant_build = yes
-						}
-					}
-					set_country_flag = BUL_contract_with_british_naval_designer_flag
-				}		
-			}
-						
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-			
-			traits = { convoy_escort_naval_manufacturer }							
-		}
-
-		BUL_soviet_naval_designer = {
-			name = nevskoye_design_bureau
-			
-			picture = nevskoye_design_bureau
-
-			cost = 75
-
-			allowed = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			available = {
-				has_country_flag = BUL_soviet_naval_agreements_flag
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_soviet_naval_designer_flag }
-					}
-					SOV = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				NOT = { has_war_with = SOV }
-				OR = {
-					is_subject = no
-					is_subject_of = SOV
-				}
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_soviet_naval_designer_flag }
-					}
-					random_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = dockyard
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = dockyard
-							level = 1
-							instant_build = yes
-						}
-					}
-					set_country_flag = BUL_contract_with_soviet_naval_designer_flag
-				}		
-			}
-			
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-			
-			traits = { naval_manufacturer }
 		}
 
 		BUL_italian_naval_designer = {
 			name = crda
 
-			picture = crda	
+			picture = crda
 
 			cost = 75
-			
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			available = {
-				has_country_flag = BUL_italian_naval_agreements_flag
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_italian_naval_designer_flag }
-					}
-					ITA = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				NOT = { has_war_with = ITA }
-				OR = {
-					is_subject = no
-					is_subject_of = ITA
-				}
-				NOT = { has_completed_focus = BUL_nationalization }
 			}
 
 			on_add = {
@@ -2486,27 +2135,26 @@ ideas = {
 						}
 					}
 					set_country_flag = BUL_contract_with_italian_naval_designer_flag
-				}		
+				}
 			}
-						
+
 			research_bonus = {
-				naval_equipment = 0.15
+				naval_equipment = -0.05
 			}
-			
+			modifier = { naval_manufacturer_cost_factor = -0.33 }
 			traits = { naval_manufacturer }
 		}
 	}
 
 	aircraft_manufacturer = {
-		
+
 		designer = yes
 
-		BUL_dar = { #DLC			
+		BUL_dar = { #DLC
 			picture = bul_dar
-			
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
@@ -2516,17 +2164,18 @@ ideas = {
 			available = {
 				has_completed_focus = BUL_darzhavna_aeroplanna_rabotilnitsa
 			}
-						
+
 			research_bonus = {
-				air_equipment = 0.1
+				air_equipment = -0.05
 			}
-			
+
 			traits = { light_aircraft_manufacturer }
 
 			modifier = {
 				custom_modifier_tooltip = BUL_national_military_designer_upgrade_tt
+				aircraft_manufacturer_cost_factor = -0.33
 			}
-			
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -2534,12 +2183,11 @@ ideas = {
 
 		BUL_dar_improved = { #DLC
 			name = dar
-			
+
 			picture = bul_dar
-			
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
@@ -2549,27 +2197,27 @@ ideas = {
 			available = {
 				has_completed_focus = BUL_darzhavna_aeroplanna_rabotilnitsa
 			}
-						
+
 			research_bonus = {
-				air_equipment = 0.15
+				air_equipment = -0.05
 			}
-			
+
 			traits = { light_aircraft_manufacturer }
-			
+
 			modifier = {
 				air_accidents_factor = -0.05
 				air_interception_agility_factor = 0.02
 				air_air_superiority_agility_factor = 0.02
+				aircraft_manufacturer_cost_factor = -0.33
 			}
 		}
 
 		BUL_kaproni_bulgarski = { #DLC
-			
+
 			picture = bul_kaproni_bulgarski
 
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
@@ -2579,15 +2227,16 @@ ideas = {
 			available = {
 				has_completed_focus = BUL_kaproni_bulgarski
 			}
-						
+
 			research_bonus = {
-				air_equipment = 0.1
+				air_equipment = -0.05
 			}
-			
+
 			traits = { CAS_manufacturer }
 
 			modifier = {
 				custom_modifier_tooltip = BUL_national_military_designer_upgrade_tt
+				aircraft_manufacturer_cost_factor = -0.33
 			}
 		}
 
@@ -2595,10 +2244,9 @@ ideas = {
 			name = BUL_kaproni_bulgarski
 
 			picture = bul_kaproni_bulgarski
-			
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
@@ -2608,17 +2256,18 @@ ideas = {
 			available = {
 				has_completed_focus = BUL_kaproni_bulgarski
 			}
-						
+
 			research_bonus = {
-				air_equipment = 0.15
+				air_equipment = -0.05
 			}
-			
+
 			traits = { CAS_manufacturer }
-			
+
 			modifier = {
 				air_range_factor = 0.05
 				air_strategic_bomber_bombing_factor = 0.02
 				air_cas_present_factor = 0.02
+				aircraft_manufacturer_cost_factor = -0.33
 			}
 		}
 
@@ -2631,245 +2280,38 @@ ideas = {
 
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			available = {
-				has_country_flag = BUL_german_aeronautical_agreements_flag
 				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_german_aircraft_designer_flag }
-					}
-					GER = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				NOT = { has_war_with = GER }
-				OR = {
 					is_subject = no
-					is_subject_of = GER
+
 				}
-				NOT = { has_completed_focus = BUL_nationalization }
+
 			}
 
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_german_aircraft_designer_flag }
-					}
-					random_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-					set_country_flag = BUL_contract_with_german_aircraft_designer_flag
-				}		
-			}
-						
 			research_bonus = {
-				air_equipment = 0.15
+				air_equipment = -0.05
 			}
-			
+
 			traits = { heavy_aircraft_manufacturer }
-			
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
 			ai_will_do = {
 				factor = 1
 			}
 		}
-
-		BUL_british_aircraft_designer = { #DLC
-			name = fairey_aviation
-			
-			picture = fairey_aviation
-
-			cost = 75
-
-			allowed = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			available = {
-				has_country_flag = BUL_british_aeronautical_agreements_flag
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_british_aircraft_designer_flag }
-					}
-					ENG = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				NOT = { has_war_with = ENG }
-				OR = {
-					is_subject = no
-					is_subject_of = ENG
-				}
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_british_aircraft_designer_flag }
-					}
-					random_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-					set_country_flag = BUL_contract_with_british_aircraft_designer_flag
-				}		
-			}
-						
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { naval_aircraft_manufacturer }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		BUL_soviet_aircraft_designer = { #DLC
-			name = ilyushin_design_bureau
-			
-			picture = ilyushin_design_bureau
-
-			cost = 75
-
-			allowed = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			available = {
-				has_country_flag = BUL_soviet_aeronautical_agreements_flag
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_soviet_aircraft_designer_flag }
-					}
-					SOV = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				NOT = { has_war_with = SOV }
-				OR = {
-					is_subject = no
-					is_subject_of = SOV
-				}
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_soviet_aircraft_designer_flag }
-					}
-					random_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-					set_country_flag = BUL_contract_with_soviet_aircraft_designer_flag
-				}		
-			}
-						
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { medium_aircraft_manufacturer }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-		dar = { #VANILLA
-			
-			picture = generic_air_manufacturer_1
-
-			
-			allowed = {
-				original_tag = BUL
-				NOT = { has_dlc = "Battle for the Bosporus" }
-			}
-						
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { light_aircraft_manufacturer }
-			
-			# licenced Focke-Wulf Fw 44, built own trainers DAR 6 and DAR 9.
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}	
 	}
 
 	materiel_manufacturer = {
-		
+
 		designer = yes
-		
+
 		BUL_dvf = { #DLC
 
 			picture = bul_darzhavna_voenna_fabrika
-			
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
@@ -2879,15 +2321,16 @@ ideas = {
 			available = {
 				has_completed_focus = BUL_darzhavna_voenna_fabrika
 			}
-			
+
 			research_bonus = {
-				infantry_weapons = 0.1
+				infantry_weapons = -0.05
 			}
-			
+
 			traits = { infantry_equipment_manufacturer }
-			
+
 			modifier = {
 				custom_modifier_tooltip = BUL_national_military_designer_upgrade_tt
+				materiel_manufacturer_cost_factor = -0.33
 			}
 		}
 
@@ -2895,10 +2338,9 @@ ideas = {
 			name = BUL_dvf
 
 			picture = bul_darzhavna_voenna_fabrika
-			
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
@@ -2908,26 +2350,26 @@ ideas = {
 			available = {
 				has_completed_focus = BUL_darzhavna_voenna_fabrika
 			}
-			
+
 			research_bonus = {
-				infantry_weapons = 0.15
+				infantry_weapons = -0.05
 			}
-			
+
 			traits = { infantry_equipment_manufacturer }
-			
+
 			modifier = {
 				army_infantry_attack_factor = 0.03
 				army_infantry_defence_factor = 0.03
+				materiel_manufacturer_cost_factor = -0.33
 			}
 		}
 
 		BUL_dvf_sopot = { #DLC
 
 			picture = generic_artillery_manufacturer_1
-			
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
@@ -2937,15 +2379,16 @@ ideas = {
 			available = {
 				has_completed_focus = BUL_found_dvf_sopot
 			}
-			
+
 			research_bonus = {
-				artillery = 0.1
+				artillery = -0.05
 			}
-			
+
 			traits = { artillery_manufacturer }
-			
+
 			modifier = {
 				custom_modifier_tooltip = BUL_national_military_designer_upgrade_tt
+				materiel_manufacturer_cost_factor = -0.33
 			}
 		}
 
@@ -2953,10 +2396,9 @@ ideas = {
 			name = BUL_dvf_sopot
 
 			picture = generic_artillery_manufacturer_1
-			
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
@@ -2966,16 +2408,17 @@ ideas = {
 			available = {
 				has_completed_focus = BUL_found_dvf_sopot
 			}
-			
+
 			research_bonus = {
-				artillery = 0.15
+				artillery = -0.05
 			}
-			
+
 			traits = { artillery_manufacturer }
-			
+
 			modifier = {
 				army_artillery_attack_factor = 0.03
 				army_artillery_defence_factor = 0.03
+				materiel_manufacturer_cost_factor = -0.33
 			}
 		}
 
@@ -2985,204 +2428,23 @@ ideas = {
 			picture = opel
 
 			cost = 75
-			
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			available = {
-				has_country_flag = BUL_german_military_agreements_flag
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_german_materiel_designer_flag }
-					}
-					GER = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				NOT = { has_war_with = GER }
-				OR = {
-					is_subject = no
-					is_subject_of = GER
-				}
-				NOT = { has_completed_focus = BUL_nationalization }
+
 			}
 
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_german_materiel_designer_flag }
-					}
-					random_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-					set_country_flag = BUL_contract_with_german_materiel_designer_flag
-				}		
-			}
-			
 			research_bonus = {
-				motorized_equipment = 0.15
+				motorized_equipment = -0.05
 			}
-			
+			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			traits = { motorized_equipment_manufacturer }
 		}
-
-		BUL_british_materiel_designer = { #DLC
-			name = vauxhall
-
-			picture = vauxhall
-
-			cost = 75
-			
-			allowed = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			available = {
-				has_country_flag = BUL_british_military_agreements_flag
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_british_materiel_designer_flag }
-					}
-					ENG = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				NOT = { has_war_with = ENG }
-				OR = {
-					is_subject = no
-					is_subject_of = ENG
-				}
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_british_materiel_designer_flag }
-					}
-					random_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-					set_country_flag = BUL_contract_with_british_materiel_designer_flag
-				}		
-			}
-			
-			research_bonus = {
-				motorized_equipment = 0.15
-			}
-			
-			traits = { motorized_equipment_manufacturer }
-		}
-
-		BUL_soviet_materiel_designer = { #DLC
-			name = gaz
-
-			picture = gaz
-
-			cost = 75
-			
-			allowed = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			available = {
-				has_country_flag = BUL_soviet_military_agreements_flag
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_soviet_materiel_designer_flag }
-					}
-					SOV = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				NOT = { has_war_with = SOV }
-				OR = {
-					is_subject = no
-					is_subject_of = SOV
-				}
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_soviet_materiel_designer_flag }
-					}
-					random_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-					set_country_flag = BUL_contract_with_soviet_materiel_designer_flag
-				}		
-			}
-			
-			research_bonus = {
-				motorized_equipment = 0.15
-				mot_rockets = 0.50
-			}
-			
-			traits = { motorized_equipment_manufacturer }
-		}
-
 		BUL_italian_materiel_designer = {
-			
+
 			name = lancia
 
 			picture = lancia
@@ -3191,75 +2453,29 @@ ideas = {
 
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			available = {
-				has_country_flag = BUL_italian_military_agreements_flag
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_italian_materiel_designer_flag }
-					}
-					ITA = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				NOT = { has_war_with = ITA }
-				OR = {
-					is_subject = no
-					is_subject_of = ITA
-				}
-				NOT = { has_completed_focus = BUL_nationalization }
+
 			}
 
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_italian_materiel_designer_flag }
-					}
-					random_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-					set_country_flag = BUL_contract_with_italian_materiel_designer_flag
-				}		
-			}
-			
 			research_bonus = {
-				motorized_equipment = 0.15
+				motorized_equipment = -0.05
 			}
-			
+			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			traits = { motorized_equipment_manufacturer }
 		}
 	}
 
 	industrial_concern = {
-		
+
 		BUL_petrol_ad = {
-			
+
 			picture = bul_petrol_ad
-		
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}	
+			}
 
 			visible = {
 				NOT = { has_completed_focus = BUL_utmost_optimization }
@@ -3271,41 +2487,40 @@ ideas = {
 					has_completed_focus = BUL_nationalization
 				}
 			}
-			
+
 			research_bonus = {
 				synth_resources = 0.05
-				industry = 0.05
+				industry = -0.05
 			}
-			
+
 			traits = { refinery_concern }
 
 			modifier = {
 				custom_modifier_tooltip = BUL_national_industrial_concern_upgrade_tt
-			}			
+			}
 		}
 
 		BUL_petrol_ad_improved = {
 			name = BUL_petrol_ad
 
 			picture = bul_petrol_ad
-		
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
 				has_completed_focus = BUL_invigorate_national_industry
 				has_completed_focus = BUL_utmost_optimization
-			}	
-			
+			}
+
 			research_bonus = {
 				synth_resources = 0.15
-				industry = 0.05
+				industry = -0.05
 			}
-			
+
 			traits = { refinery_concern }
-			
+
 			modifier = {
 				fuel_gain_factor_from_states = 0.1
 				production_oil_factor = 0.05
@@ -3313,12 +2528,11 @@ ideas = {
 		}
 
 		BUL_ira = {
-			
+
 			picture = bul_ira
-		
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
@@ -3330,38 +2544,37 @@ ideas = {
 					has_completed_focus = BUL_invigorate_national_industry
 					has_completed_focus = BUL_nationalization
 				}
-			}		
-			
-			research_bonus = {
-				electronics = 0.1
 			}
-			
+
+			research_bonus = {
+				electronics = 0.5
+			}
+
 			traits = { electronics_developer }
 
 			modifier = {
 				custom_modifier_tooltip = BUL_national_industrial_concern_upgrade_tt
-			}	
+			}
 		}
 
 		BUL_ira_improved = {
 			name = BUL_ira
 
 			picture = bul_ira
-		
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
 				has_completed_focus = BUL_invigorate_national_industry
 				has_completed_focus = BUL_utmost_optimization
 			}
-			
+
 			research_bonus = {
-				electronics = 0.15
+				electronics = -0.05
 			}
-			
+
 			traits = { electronics_developer }
 
 			modifier = {
@@ -3372,12 +2585,11 @@ ideas = {
 		}
 
 		BUL_pirin = {
-			
+
 			picture = bul_pirin
-		
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
@@ -3392,9 +2604,9 @@ ideas = {
 			}
 
 			research_bonus = {
-				industry = 0.05
+				industry = -0.05
 			}
-			
+
 			traits = { construction_company }
 
 			modifier = {
@@ -3406,21 +2618,20 @@ ideas = {
 			name = BUL_pirin
 
 			picture = bul_pirin
-		
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
 				has_completed_focus = BUL_invigorate_national_industry
 				has_completed_focus = BUL_utmost_optimization
 			}
-			
+
 			research_bonus = {
-				industry = 0.15
+				industry = -0.05
 			}
-			
+
 			traits = { construction_company }
 
 			modifier = {
@@ -3429,12 +2640,11 @@ ideas = {
 		}
 
 		BUL_vulkan_cement = {
-			
+
 			picture = generic_industrial_concern_3
-		
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
@@ -3451,33 +2661,32 @@ ideas = {
 			modifier = {
 				custom_modifier_tooltip = BUL_national_industrial_concern_upgrade_tt
 			}
-			
+
 			research_bonus = {
-				industry = 0.1
+				industry = -0.05
 			}
-			
+
 			traits = { industrial_concern }
 		}
 
 		BUL_vulkan_cement_improved = {
 			name = BUL_vulkan_cement
-			
+
 			picture = generic_industrial_concern_3
-		
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			visible = {
 				has_completed_focus = BUL_invigorate_national_industry
 				has_completed_focus = BUL_utmost_optimization
 			}
-			
+
 			research_bonus = {
-				industry = 0.15
+				industry = -0.05
 			}
-			
+
 			traits = { industrial_concern }
 
 			modifier = {
@@ -3488,40 +2697,16 @@ ideas = {
 
 		BUL_german_industrial_concern = { #DLC
 			name = krupp
-			
+
 			picture = krupp
 
 			cost = 75
-		
+
 			allowed = {
 				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
 			}
 
 			available = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_german_industrial_concern_flag }
-					}
-					GER = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				NOT = { has_war_with = GER }
-				OR = {
-					is_subject = no
-					is_subject_of = GER
-				}
-				custom_trigger_tooltip = {
-					tooltip = BUL_foreign_industrial_concern_requirements_ger_tt
-					NOT = { check_variable = { BUL_german_industrial_investments < BUL_industrial_investments_medium_cap } }
-				}
-				NOT = { has_completed_focus = BUL_nationalization }
 			}
 
 			on_add = {
@@ -3530,1116 +2715,14 @@ ideas = {
 						NOT = { has_country_flag = BUL_contract_with_german_industrial_concern_flag }
 					}
 					set_country_flag = BUL_contract_with_german_industrial_concern_flag
-				}		
+				}
 			}
-			
+
 			research_bonus = {
-				industry = 0.15
-			}
-			
-			traits = { industrial_concern }
-		}
-
-		BUL_british_industrial_concern = { #DLC
-			name = english_electric
-			
-			picture = english_electric
-
-			cost = 75
-		
-			allowed = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
+				industry = -0.05
 			}
 
-			available = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_british_industrial_concern_flag }
-					}
-					ENG = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				NOT = { has_war_with = ENG }
-				OR = {
-					is_subject = no
-					is_subject_of = ENG
-				}
-				custom_trigger_tooltip = {
-					tooltip = BUL_foreign_industrial_concern_requirements_eng_tt
-					NOT = { check_variable = { BUL_british_industrial_investments < BUL_industrial_investments_medium_cap } }
-				}
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_british_industrial_concern_flag }
-					}
-					set_country_flag = BUL_contract_with_british_industrial_concern_flag
-				}		
-			}
-			
-			research_bonus = {
-				electronics = 0.15
-			}
-			
-			traits = { electronics_concern }
-		}
-
-		BUL_soviet_industrial_concern = { #DLC
-			name = stalingrad_tractor_factory
-			
-			picture = stalingrad_tractor_factory
-
-			cost = 75
-		
-			allowed = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			available = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_soviet_industrial_concern_flag }
-					}
-					SOV = { #Scripted trigger for this generates confusing tt due to indentation
-						has_opinion = {
-							target = ROOT
-							value > 49
-						}
-						has_capitulated = no
-						BUL_is_valid_subject = yes
-					}
-				}
-				NOT = { has_war_with = SOV }
-				OR = {
-					is_subject = no
-					is_subject_of = SOV
-				}
-				custom_trigger_tooltip = {
-					tooltip = BUL_foreign_industrial_concern_requirements_sov_tt
-					NOT = { check_variable = { BUL_soviet_industrial_investments < BUL_industrial_investments_medium_cap } }
-				}
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-
-			on_add = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = BUL_contract_with_soviet_industrial_concern_flag }
-					}
-					set_country_flag = BUL_contract_with_soviet_industrial_concern_flag
-				}		
-			}
-			
-			research_bonus = {
-				industry = 0.15
-			}
-			
 			traits = { industrial_concern }
 		}
 	}
-
-
-##     ## #### ########  ########  ######## ##    ##    #### ########  ########    ###     ######  
-##     ##  ##  ##     ## ##     ## ##       ###   ##     ##  ##     ## ##         ## ##   ##    ## 
-##     ##  ##  ##     ## ##     ## ##       ####  ##     ##  ##     ## ##        ##   ##  ##       
-#########  ##  ##     ## ##     ## ######   ## ## ##     ##  ##     ## ######   ##     ##  ######  
-##     ##  ##  ##     ## ##     ## ##       ##  ####     ##  ##     ## ##       #########       ## 
-##     ##  ##  ##     ## ##     ## ##       ##   ###     ##  ##     ## ##       ##     ## ##    ## 
-##     ## #### ########  ########  ######## ##    ##    #### ########  ######## ##     ##  ######  
-
-
-	hidden_ideas = {
-
-		BUL_anti_capitalism_eng = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = ENG
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_fra = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = FRA
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_ger = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = GER
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_ita = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = ITA
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_sov = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = SOV
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_spr = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = SPR
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_hol = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = HOL
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_aus = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = AUS
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_hun = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = HUN
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_cze = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = CZE
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_pol = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = POL
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_rom = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = ROM
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_yug = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = YUG
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_gre = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = GRE
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_tur = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = TUR
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_swe = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = SWE
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_fin = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = FIN
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_den = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = DEN
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_nor = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = NOR
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_swi = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = SWI
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_por = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = POR
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_bel = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = BEL
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_ire = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = IRE
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_lux = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = LUX
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_alb = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = ALB
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_est = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = EST
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_lat = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = LAT
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-
-		BUL_anti_capitalism_lit = {
-			name = BUL_anti_capitalism
-
-			picture = eng_tackle_capitalism
-
-			allowed = {
-				original_tag = BUL
-			}
-		
-			allowed_civil_war = {
-				tag = BUL
-				if = {
-					limit = {
-						has_completed_focus = BUL_the_anti_capitalist_fight
-					}
-					has_government = communism
-				}	
-			}
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = LIT
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			cancel = {
-				OR = {
-					has_country_flag = BUL_anti_capitalism_ns_expired_flag
-					has_country_flag = BUL_toppling_giants_ns_expired_flag
-					has_country_flag = BUL_the_fight_against_bolshevism_ns_expired_flag
-				}
-			}
-		}
-	}
-
 }

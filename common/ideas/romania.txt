@@ -1,6 +1,557 @@
 ideas = {
 
 	country = {
+        ROM_noil = { 
+
+			picture = generic_goods_red_bonus
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+			
+			research_bonus = {
+				industry = 0.05
+			}
+			
+			modifier = {
+			    political_power_factor = 0.05
+				stability_factor = 0.1
+				local_resources_factor = 0.1
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.025
+				min_export = 0.1
+				conscription_factor = 0.05
+			}
+		}
+        ROM_nomoreoil = { 
+
+			picture = generic_goods_red_bonus
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+			
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			modifier = {
+			    political_power_factor = 0.05
+				local_resources_factor = 0.2
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				min_export = 0.2
+				conscription_factor = 0.1
+			}
+		}
+		
+		ROM_expanded_axis_oil_trade = {
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+
+			research_bonus = {
+				industry = 0.1 
+			}
+			
+			modifier = {
+				fuel_gain_factor = 0.1
+				max_fuel_factor = 0.4
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1	
+				conscription_factor = -0.02						
+			}
+		}
+
+		ROM_expanded_axis_oil_trade2 = {
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+
+			research_bonus = {
+				industry = 0.1 
+			}
+			
+			modifier = {
+				fuel_gain_factor = 0.20
+				max_fuel_factor = 0.5
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.15	
+				conscription_factor = -0.05					
+			}
+		}
+		
+		ROM_the_resource_curse_1 = { #The Oil Must Flow 
+
+			picture = ROM_the_resource_curse
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+			
+			modifier = {
+				stability_factor = -0.1
+				local_resources_factor = 0.1
+				min_export = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		ROM_the_resource_curse_2 = {
+
+			picture = ROM_the_resource_curse
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+			
+			modifier = {
+				stability_factor = -0.15
+				local_resources_factor = 0.15
+				min_export = 0.15
+				consumer_goods_factor = -0.08
+			}
+		}
+
+		ROM_the_resource_curse_3 = {
+
+			picture = ROM_the_resource_curse
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+			
+			modifier = {
+				stability_factor = -0.2
+				local_resources_factor = 0.20
+				min_export = 0.2
+				consumer_goods_factor = -0.10
+			}
+		}
+
+		ROM_agrarian_economy = {
+
+			picture = ROM_agricultural_economy
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+
+			research_bonus = {
+				industry = -0.5
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.1				
+			}
+		}
+
+		ROM_agrarian_economy_effectivized = {
+
+			picture = ROM_agricultural_economy
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+
+			research_bonus = {
+				industry = -0.25
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.05				
+			}
+		}
+
+		ROM_repair_organization = {
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+			industry_repair_factor = 0.07
+			industry_free_repair_factor = 0.15
+		}
+		
+		}
+
+		ROM_investors = {
+	
+			picture = ROM_waning_influence_of_democracy
+			
+			modifier = {
+				local_resources_factor = 0.10		
+				conscription_factor = 0.05
+			}
+		}
+
+		ROM_waning_influence_of_democracy = {
+
+			picture = ROM_waning_influence_of_democracy
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+
+			research_bonus = {
+			}
+			
+			modifier = {
+				neutrality_drift = 0.02				
+			}
+		}
+
+		ROM_waning_influence_of_democracy2 = {
+
+			picture = ROM_waning_influence_of_democracy
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			cancel = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+
+			allowed_civil_war = {
+			}
+
+			research_bonus = {
+			}
+			
+			modifier = {
+				neutrality_drift = 0.04
+				stability_factor = 0.05 			
+			}
+		}
+
+		ROM_romanian_officers = {
+
+			picture = ROM_corruption_in_the_army
+
+			allowed = {
+				always = no # Added via focus
+				}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+				army_org_factor = -0.2
+				land_doctrine_cost_factor = 0.10
+				air_doctrine_cost_factor = 0.10
+				naval_doctrine_cost_factor = 0.10
+
+			}
+		}
+
+		ROM_order_of_the_dragon = {
+
+			picture = ROM_corruption_in_the_army
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			modifier = {
+				experience_gain_air = 0.05
+				experience_gain_air_factor = 0.1
+				air_mission_xp_gain_factor = 0.1
+				air_training_xp_gain_factor = 0.2
+				army_bonus_air_superiority_factor = 0.10
+				air_superiority_efficiency = 0.10
+				air_ace_generation_chance_factor = 0.25		
+				air_wing_xp_loss_when_killed_factor = -0.10		
+			}
+		}
+
+		ROM_iron_guard = {
+
+			name = ROM_iron_guard 
+
+			picture = ROM_violent_paramilitary_groups
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {				
+				political_power_gain = -0.25 
+				stability_factor = -0.2 
+				fascism_drift = 0.01 
+			}
+		}
+
+		ROM_iron_guard2 = {
+
+			name = ROM_iron_guard
+
+			picture = ROM_violent_paramilitary_groups
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {				
+				political_power_gain = -0.25 
+				stability_factor = -0.2 
+				fascism_drift = 0.05
+			}
+		}
+
+		ROM_iron_guard3 = {
+
+			name = ROM_iron_guard
+
+			picture = ROM_violent_paramilitary_groups
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {				
+				stability_factor = 0.05 
+				fascism_drift = 0.03
+				war_support_weekly = 0.001 
+			}
+		}
+
+		ROM_scavenge_everything = {
+			removal_cost = -1
+
+			picture = MEX_callistas
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {				
+				equipment_capture = 0.05
+			}
+		}
+
+		ROM_army_tensions = {
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			cancel = {
+			}
+			
+			modifier = {				
+				stability_factor = -0.1 
+				fascism_drift = 0.02
+			}
+		}
+
+		ROM_german_influence = {
+
+			picture = german_advisors
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+
+			research_bonus = {
+			}
+			
+			modifier = {
+				fascism_drift = 0.01
+				stability_factor = 0.05				
+			}
+		}
+
+		ROM_industrialization_1 = {
+
+			name = SPA_national_recovery
+
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			research_bonus = {
+			}
+			
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = 0.1
+				local_resources = -0.5 		
+			}
+		}
+
+		ROM_industrialization_2 = {
+
+			name = SPA_national_recovery
+
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			research_bonus = {
+			}
+					
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = 0.075
+				local_resources = -0.35
+			}
+		}
+
+		ROM_industrialization_3 = {
+
+			name = SPA_national_recovery
+
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			research_bonus = {
+			}
+			
+			modifier = {
+				stability_factor = -0.1
+
+				consumer_goods_factor = 0.05
+				local_resources = -0.20		
+			}
+		}
+
+		ROM_industrialization_4 = {
+
+			name = SPA_national_recovery
+
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.025
+				local_resources = -0.10		
+			}
+		}
+
 		ROM_revenge_against_soviet = {
 
 			picture = anti_soviet_pact
@@ -20,50 +571,6 @@ ideas = {
 			modifier = {
 				fascism_drift = 0.1
 				fascism_acceptance = 100
-			}
-		}
-	
-		ROM_revenge_against_germany = {
-
-			picture = generic_communism_drift_bonus
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-			
-			modifier = {
-				communism_drift = 0.1
-				communism_acceptance = 100
-			}
-		}
-
-		ROM_romanian_volunteer_brigades = {
-
-			picture = generic_volunteer_expedition_bonus
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}
-
-			rule = { can_send_volunteers = yes }
-			
-			modifier = {
-				send_volunteer_divisions_required = -1
-				send_volunteer_size = 1
 			}
 		}
 
@@ -87,53 +594,6 @@ ideas = {
 			}
 		}
 
-		ROM_flexible_foreign_policy = {
-
-			picture = generic_flexible_foreign_policy
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}
-
-			rule = {
-				can_join_opposite_factions = yes
-			}
-			
-			modifier = {
-				improve_relations_maintain_cost_factor = -0.5
-			}
-		}
-
-		ROM_flexible_foreign_policy_2 = {
-
-			picture = generic_flexible_foreign_policy2
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}
-
-			rule = {
-				can_join_opposite_factions = yes
-			}
-			
-			modifier = {
-				join_faction_tension = -1.0
-				improve_relations_maintain_cost_factor = -0.5
-			}
-		}
-
 		ROM_king_carol_ii_hedonist = {
 
 			removal_cost = -1
@@ -143,21 +603,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				OR = {
-					AND = {
-						POL = { has_country_flag = attempted_royal_takeover_in_ROM }
-						NOT = { has_government = neutrality }
-						has_country_flag = POL_non_michael_romania
-					}
-					AND = {
-						POL = { NOT = { has_country_flag = attempted_royal_takeover_in_ROM } }
-						has_government = neutrality
-					}
-				}			
+				has_government = neutrality
 			}
 
 			modifier = {
-				
+				stability_factor = -0.1 
 			}
 		}
 
@@ -172,21 +622,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				OR = {
-					AND = {
-						POL = { has_country_flag = attempted_royal_takeover_in_ROM }
-						NOT = { has_government = neutrality }
-						has_country_flag = POL_non_michael_romania
-					}
-					AND = {
-						POL = { NOT = { has_country_flag = attempted_royal_takeover_in_ROM } }
-						has_government = neutrality
-					}
-				}
+				has_government = neutrality
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.2
+				consumer_goods_factor = 0.03
 			}
 		}
 
@@ -201,21 +641,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				OR = {
-					AND = {
-						POL = { has_country_flag = attempted_royal_takeover_in_ROM }
-						NOT = { has_government = neutrality }
-						has_country_flag = POL_non_michael_romania
-					}
-					AND = {
-						POL = { NOT = { has_country_flag = attempted_royal_takeover_in_ROM } }
-						has_government = neutrality
-					}
-				}
+				has_government = neutrality
 			}
 
 			modifier = {
-				industrial_capacity_factory = -0.25
+				industrial_capacity_factory = -0.1
 			}
 		}
 
@@ -230,17 +660,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				OR = {
-					AND = {
-						POL = { has_country_flag = attempted_royal_takeover_in_ROM }
-						NOT = { has_government = neutrality }
-						has_country_flag = POL_non_michael_romania
-					}
-					AND = {
-						POL = { NOT = { has_country_flag = attempted_royal_takeover_in_ROM } }
-						has_government = neutrality
-					}
-				}			
+				has_government = neutrality
 			}
 
 			modifier = {
@@ -259,17 +679,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				OR = {
-					AND = {
-						POL = { has_country_flag = attempted_royal_takeover_in_ROM }
-						NOT = { has_government = neutrality }
-						has_country_flag = POL_non_michael_romania
-					}
-					AND = {
-						POL = { NOT = { has_country_flag = attempted_royal_takeover_in_ROM } }
-						has_government = neutrality
-					}
-				}
+				has_government = neutrality
 			}
 
 			modifier = {
@@ -288,41 +698,10 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				OR = {
-					AND = {
-						POL = { has_country_flag = attempted_royal_takeover_in_ROM }
-						NOT = { has_government = neutrality }
-						has_country_flag = POL_non_michael_romania
-					}
-					AND = {
-						POL = { NOT = { has_country_flag = attempted_royal_takeover_in_ROM } }
-						has_government = neutrality
-					}
-				}
-			}
-			
-			modifier = {
-				neutrality_drift = 0.02
-			}
-		}
-
-		ROM_king_carol_ii_handled_2 = {
-
-			picture = generic_king_handled
-			name = ROM_king_carol_ii_handled
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
 				has_government = democratic
 			}
 			
 			modifier = {
-				democratic_drift = 0.02
 			}
 		}
 
@@ -339,7 +718,71 @@ ideas = {
 			}			
 
 			modifier = {
-				conscription = 0.01
+				conscription = 0.015
+			}
+		}
+		
+		ROM_fascist_assault_divisions = {
+		
+			picture = ROM_violent_paramilitary_groups
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}			
+
+			modifier = {
+				army_defence_factor = 0.025
+				army_attack_factor = 0.025
+				conscription = 0.005
+				fascism_drift = 0.02
+				stability_factor = -0.05
+			}
+		}
+		
+		ROM_secure_balkan_interests = {
+			
+			picture = ROM_corruption_in_the_army
+			
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}			
+
+			modifier = {
+				resistance_damage_to_garrison = -0.25
+				non_core_manpower = 0.10
+				compliance_gain = 0.01
+			}
+		}
+		
+		ROM_rightful_balkan_empire = {
+			
+			picture = ROM_corruption_in_the_army
+			
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}			
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.025
+				industrial_capacity_factory = 0.05
 			}
 		}
 
@@ -374,8 +817,8 @@ ideas = {
 			}
 			
 			modifier = {
-				consumer_goods_factor = 0.15
-				political_power_gain = -0.25
+				consumer_goods_factor = 0.10
+				political_power_gain = -0.15
 			}
 		}
 
@@ -411,28 +854,11 @@ ideas = {
 			}
 			
 			modifier = {				
-				resistance_damage_to_garrison = -0.1
-				foreign_subversive_activites = -0.4
-			}
-		}
-
-		ROM_iron_guard = {
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}
-			
-			modifier = {				
-				resistance_damage_to_garrison = -0.2 
-				foreign_subversive_activites = -0.2
-				army_core_attack_factor = 0.05
-				army_core_defence_factor = 0.05
+				resistance_damage_to_garrison = -0.15
+				stability_weekly = 0.001
+				war_support_weekly = 0.001 
+				compliance_gain = 0.01
+				resistance_target = -0.05
 			}
 		}
 
@@ -464,19 +890,21 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = democratic 
-			}				
+			}
 
+			rule = { 
+			}
 			
 			modifier = {
-				guarantee_tension = -1.0
-				guarantee_cost = -0.5
+				stability_factor = 0.15
+				drift_defence_factor = 0.75									
 			}
 		}
 
-		ROM_a_deal_with_the_devil = {
+		ROM_preserve_greater_romania2 = {
 
-			picture = generic_deal_with_the_devil
+			picture = ROM_preserve_greater_romania
+			name = ROM_preserve_greater_romania
 
 			removal_cost = -1
 			
@@ -485,17 +913,22 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = communism
 			}
-			
+
+			rule = {
+			}
+
 			modifier = {
-				communism_drift = 0.01
+				stability_factor = 0.2
+				political_power_gain = 0.05
+				drift_defence_factor = 0.50 										
 			}
 		}
+		
+		ROM_preserve_greater_romania3 = {
 
-		ROM_a_deal_with_the_devil_2 = {
-
-			picture = generic_deal_with_the_devil
+			picture = ROM_preserve_greater_romania
+			name = ROM_preserve_greater_romania
 
 			removal_cost = -1
 			
@@ -504,18 +937,129 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = communism
+			}
+
+			rule = {
+			}
+
+			modifier = {
+				stability_factor = 0.25
+				political_power_gain = 0.05
+				drift_defence_factor = 0.25 										
+			}
+		}
+		
+		ROM_preserve_greater_romania4 = {
+
+			picture = ROM_preserve_greater_romania
+			name = ROM_preserve_greater_romania
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+
+			modifier = {
+				stability_factor = 0.30
+				political_power_gain = 0.05
+				drift_defence_factor = 0.25
+				conscription_factor = 0.10				
+			}
+		}
+		
+		ROM_preserve_greater_romania_german = {
+
+			picture = ROM_preserve_greater_romania
+			name = ROM_preserve_greater_romania
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+
+			rule = { 
+			}
+
+			modifier = {
+				stability_factor = 0.25
+				political_power_gain = 0.05
+				consumer_goods_factor = 0.02
+				production_speed_arms_factory_factor = 0.10				
+			}
+		}
+		
+		ROM_ger_tank_success = {
+		
+			picture = eng_imperial_conscription
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				light_tank_chassis = {
+					soft_attack = 0.10 instant = yes 
+				}
+			}
+
+			equipment_bonus = {
+				medium_tank_chassis = {
+					soft_attack = 0.05 instant = yes 
+					hard_attack = 0.05 instant = yes
+				}
+			}
+			
+		}
+		
+		ROM_ger_tank_success_2	= {
+		
+			picture = eng_imperial_conscription
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				light_tank_chassis = {
+					soft_attack = 0.10 instant = yes
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+
+			equipment_bonus = {
+				medium_tank_chassis = {
+					soft_attack = 0.05 instant = yes 
+					hard_attack = 0.05 instant = yes
+					build_cost_ic = -0.05 instant = yes
+				}
 			}
 			
 			modifier = {
-				communism_drift = 0.01
-				conscription = 0.01
+				license_armor_purchase_cost = -0.75	
 			}
 		}
 
-		ROM_agrarian_reform = {
+		ROM_airforce_purchases_abroad = {
 
-			picture = generic_agrarian_society
+			picture = generic_war_preparation
 
 			removal_cost = -1
 			
@@ -528,43 +1072,7 @@ ideas = {
 			}
 			
 			modifier = {
-				consumer_goods_factor = -0.05
-			}
-		}
-
-		ROM_exploit_the_baita_mines = {
-
-			picture = generic_exploit_mines
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}
-			
-			modifier = {
-				production_speed_nuclear_reactor_factor = 0.25
-			}
-		}
-
-		ROM_balkans_dominance = {
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}
-			
-			modifier = {
-				justify_war_goal_time = -0.25
+				license_air_purchase_cost = -0.75	
 			}
 		}
 
@@ -602,7 +1110,7 @@ ideas = {
 			}
 			
 			modifier = {
-				army_leader_cost_factor = -0.3
+				army_leader_cost_factor = -0.5
 			}
 		}
 
@@ -621,48 +1129,40 @@ ideas = {
 			picture = generic_air_bonus
 
 			equipment_bonus = {
-				small_plane_airframe = {
-					build_cost_ic = -0.1
+				fighter_equipment = {
+					build_cost_ic = -0.08
 					instant = yes
 				}
-				cv_small_plane_airframe = {
-					build_cost_ic = -0.1
+				cv_fighter_equipment = {
+					build_cost_ic = -0.08
 					instant = yes
 				}
-				small_plane_cas_airframe = {
-					build_cost_ic = -0.1
+				CAS_equipment = {
+					build_cost_ic = -0.08
 					instant = yes
 				}
-				cv_small_plane_cas_airframe = {
-					build_cost_ic = -0.1
+				cv_CAS_equipment = {
+					build_cost_ic = -0.08
 					instant = yes
 				}
-				small_plane_naval_bomber_airframe = {
-					build_cost_ic = -0.1
+				cv_nav_bomber_equipment = {
+					build_cost_ic = -0.08
 					instant = yes
 				}
-				cv_small_plane_naval_bomber_airframe = {
-					build_cost_ic = -0.1
+				nav_bomber_equipment = {
+					build_cost_ic = -0.08
 					instant = yes
 				}
-				medium_plane_airframe = {
-					build_cost_ic = -0.1
+				tac_bomber_equipment = {
+					build_cost_ic = -0.08
 					instant = yes
 				}
-				medium_plane_fighter_airframe = {
-					build_cost_ic = -0.1
+				heavy_fighter_equipment = {
+					build_cost_ic = -0.08
 					instant = yes
 				}
-				medium_plane_scout_plane_airframe = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-				large_plane_airframe = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-				large_plane_maritime_patrol_plane_airframe = {
-					build_cost_ic = -0.1
+				strat_bomber_equipment = {
+					build_cost_ic = -0.08
 					instant = yes
 				}
 			}
@@ -670,6 +1170,61 @@ ideas = {
 			modifier = {
 				air_ace_generation_chance_factor = 0.10
 			}
+		}
+
+        ROM_local_development_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_air_bonus
+
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+				cv_fighter_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+				CAS_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+				cv_CAS_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+				cv_nav_bomber_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+				nav_bomber_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+				tac_bomber_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+				heavy_fighter_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+				strat_bomber_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+			}
+
 		}
 
 		ROM_acquire_licenses = {
@@ -687,8 +1242,7 @@ ideas = {
 			}
 			
 			modifier = {
-				license_air_purchase_cost = -0.5
-				license_tech_difference_speed = 0.2
+				license_air_purchase_cost = -0.1
 			}
 		}
 
@@ -707,7 +1261,76 @@ ideas = {
 			}
 			
 			modifier = {
-				license_armor_purchase_cost = -0.25
+				consumer_goods_factor = 0.02
+				industrial_capacity_factory = 0.10
+				
+			}
+		}
+
+		ROM_acquire_modern_tanks2 = {
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.03
+				industrial_capacity_factory = 0.15				
+			}
+		}
+
+		ROM_rearm_men = {
+		
+			picture = generic_reserve_divisions
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+		
+		ROM_expand_the_army = {
+
+			picture = generic_reserve_divisions
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+			
+			modifier = {
+				minimum_training_level = -0.2
+				conscription = 0.005
 			}
 		}
 
@@ -724,9 +1347,48 @@ ideas = {
 			allowed_civil_war = {
 
 			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
 			
 			modifier = {
-				conscription_factor = 0.07
+				mobilization_speed = 0.2 	
+				experience_loss_factor = -0.10
+				minimum_training_level = -0.2
+				conscription = 0.005		
+			}
+		}
+
+		ROM_grand_army = {
+
+			picture = generic_reserve_divisions
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+			
+			modifier = {
+				supply_consumption_factor = -0.1
+				mobilization_speed = 0.2 
+				land_reinforce_rate	= 0.05		
+				experience_loss_factor = -0.30
+				minimum_training_level = -0.1 
+                conscription = 0.015				
 			}
 		}
 
@@ -745,10 +1407,9 @@ ideas = {
 			}
 			
 			equipment_bonus = {
-				ship_hull_cruiser = { #If you change this - Change the custom tooltip too: ROM_coastal_defense_ships_tech_tt
+				heavy_cruiser = { #If you change this - Change the custom tooltip too: ROM_coastal_defense_ships_tech_tt
 					armor_value = 0.2
-					lg_attack = 0.1
-					build_cost_ic = -0.1
+					hg_attack = 0.1
 					instant = yes
 				}
 			}
@@ -768,25 +1429,48 @@ ideas = {
 
 			}
 			
-			equipment_bonus = { #If you change this - Change the custom tooltip too: ROM_coastal_defense_ships_tech_tt
-				ship_hull_cruiser = {
+			equipment_bonus = {
+				heavy_cruiser = { #If you change this - Change the custom tooltip too: ROM_coastal_defense_ships_tech_tt
 					armor_value = 0.2
 					hg_attack = 0.1
-					build_cost_ic = -0.1
 					instant = yes
 				}
 			
-				ship_hull_light = {
+				destroyer = { #If you change this - Change the custom tooltip too: ROM_coastal_defense_ships_tech_tt
 					torpedo_attack = 0.2
+					lg_attack = -0.2
 					instant = yes
 				}
 			}
 		}
 	}
-	
+
+	tank_research = { 
+
+		pzinz_rom_research = {
+			
+			picture = generic_tank_manufacturer_3
+
+			available = {
+				has_completed_focus = ROM_modernize_the_army
+			}
+			
+			cost = 35
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			research_bonus = { armor = 0.15 }  traits = { tank_research_trait }		
+
+		}
+
+	}	
 	tank_manufacturer = { 
 		
 		designer = yes
+
+
 		
 		pzinz_rom = {
 			
@@ -798,22 +1482,95 @@ ideas = {
 			}
 			
 			research_bonus = {
-				armor = 0.15
+				armor = -0.05
+			}
+			modifier = { tank_manufacturer_cost_factor = -0.33 }
+			traits = { GER_Krupp_tank_manufacturer }
+
+			available = {
+				has_completed_focus = ROM_focus_on_support_tanks
 			}
 			
-			traits = { tank_manufacturer }
-
 			equipment_bonus = {
-				light_tank_chassis = {
-					reliability = -0.02
-					armor_value = 0.05			
+			   
+				medium_tank_chassis = {
+					reliability = -0.05
+					soft_attack = 0.10
+					armor_value = 0.05				
+					build_cost_ic = 0.05
 				}
+
+				medium_tank_artillery_chassis = {
+					reliability = -0.05
+					soft_attack = 0.10
+					armor_value = 0.05
+					build_cost_ic = 0.05
+				}
+
+				medium_tank_destroyer_chassis = {
+					reliability = -0.05
+					hard_attack = 0.1
+					armor_value = 0.05
+					build_cost_ic = 0.05
+				}
+				medium_tank_aa_chassis = {
+					reliability = -0.05
+					air_attack = 0.1
+					armor_value = 0.05
+					build_cost_ic = 0.05
+				}
+				medium_assault_gun_equipment = {
+					reliability = -0.05
+					hard_attack = 0.10
+					soft_attack = 0.10
+					armor_value = 0.05
+					build_cost_ic = 0.05
+				}
+				
 			}
 			
 			modifier = {
 				# heavily armored light tanks 7TP, weak vs air ,diesel powered
 			}
 		}
+
+		ROM_state_army_arsenal = {
+			
+			picture = generic_tank_manufacturer_3
+
+			cost = 50
+
+			allowed = {
+				original_tag = ROM
+				has_dlc = "Death or Dishonor"
+			}
+			
+			research_bonus = {
+				armor = -0.05
+			}
+			modifier = { tank_manufacturer_cost_factor = -0.33 }
+			traits = { GER_ckd_tank_manufacturer }
+
+			equipment_bonus = {
+				light_tank_chassis = {
+					build_cost_ic = -0.10 reliability = -0.05  
+				}
+				light_tank_destroyer_chassis = {
+					build_cost_ic = -0.10 reliability = -0.05
+				}
+				light_tank_artillery_chassis = {
+					build_cost_ic = -0.10 reliability = -0.05
+				} 
+				medium_assault_gun_equipment = {
+					build_cost_ic = -0.10 reliability = -0.05 
+				}
+			}
+			
+			modifier = {
+				equipment_conversion_speed = 0.1
+			}
+		}
+
 
 		ROM_leonidas_works = {
 			
@@ -822,7 +1579,7 @@ ideas = {
 			cost = 50
 
 			available = {
-				has_completed_focus = ROM_mobile_tank_destroyers
+				has_completed_focus = ROM_focus_on_support_tanks
 			}
 			
 			allowed = {
@@ -831,32 +1588,55 @@ ideas = {
 			}
 			
 			research_bonus = {
-				armor = 0.05
+				armor = -0.05
 			}
-			
-			traits = { tank_manufacturer }
+			modifier = { tank_manufacturer_cost_factor = -0.33 }
+			traits = { GER_Krupp_tank_manufacturer }
 
 			equipment_bonus = {
+
+				medium_assault_gun_equipment = {
+					reliability = -0.05
+					soft_attack = 0.15
+					breakthrough = 0.10
+					maximum_speed = 0.10
+					build_cost_ic = 0.10
+				}
+
 				light_tank_destroyer_chassis = {
-					reliability = 0.2
-					hard_attack = 0.05
-					ap_attack = 0.05
+					reliability = -0.05
+					hard_attack = 0.15
+					ap_attack = 0.1
+					maximum_speed = 0.1
+					build_cost_ic = 0.1
 				}
-				medium_tank_destroyer_chassis = {
-					reliability = 0.2
-					hard_attack = 0.05
-					ap_attack = 0.05
+
+			    light_tank_chassis = {
+					reliability = -0.05
+					soft_attack = 0.15
+					hard_attack = 0.10
+					maximum_speed = 0.1
+					build_cost_ic = 0.10
 				}
-				heavy_tank_destroyer_chassis = {
-					reliability = 0.2
-					hard_attack = 0.05
-					ap_attack = 0.05
-				}				
+
+				light_tank_artillery_chassis = {
+					reliability = -0.05
+					soft_attack = 0.15
+					maximum_speed = 0.1
+					build_cost_ic = 0.10
+				}
+				light_tank_aa_chassis = {
+					reliability = -0.05
+					air_attack = 0.10
+					maximum_speed = 0.1
+					build_cost_ic = 0.1
+				}
 			}
 			
 			modifier = {
 				equipment_conversion_speed = 0.1
 			}
+			
 		}
 	}
 
@@ -873,16 +1653,64 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.15
+				industry = -0.05
 				
 			}
 			
 			traits = { industrial_concern }
 		}
 
-				
-	}
+		ROM_reichswerke_hermann_goring = {
 
+			name = reichswerke_hermann_goring
+			picture = reichswerke_hermann_goring 
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			traits = { trait_industrial_concern }
+
+			available = {
+				has_completed_focus = ROM_reichswerke_subsidiary
+			}
+
+			modifier = {	
+				industrial_capacity_factory = 0.1
+				local_resources_factor = 0.1
+				political_power_cost = 0.1
+				stability_factor = -0.1 
+			}
+
+			ai_will_do = { 
+				factor = 100
+			}
+
+			cost = 100 
+		}
+
+
+	}
+ 
+    industrial_research = {
+		
+		
+		ROM_ROMLOC_research = {
+		
+			picture = industrial_concern_1
+			
+			allowed = {
+				original_tag = ROM
+				has_dlc = "Death or Dishonor"
+			}
+			
+			research_bonus = {
+				industry = 0.15
+				
+			}		
+            traits = { industrial_research_trait }			
+		}			
+	}
 	naval_manufacturer = { 			
 		
 		designer = yes
@@ -897,9 +1725,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.15
+				naval_equipment = 0.10
 			}
-			
+			modifier = { naval_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {
 				# cant find enough info 
 			}
@@ -925,9 +1753,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.15
+				naval_equipment = 0.10
 			}
-			
+			modifier = { naval_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {
 				ship_hull_light = {
 					lg_attack = 0.1
@@ -962,9 +1790,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.15
+				naval_equipment = 0.10
 			}
-			
+			modifier = { naval_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {
 				ship_hull_cruiser = {
 					hg_attack = 0.2
@@ -984,14 +1812,43 @@ ideas = {
 			}
 		}
 	}
+    naval_research = { 			
 
+		constanta_shipyard_research = {
+			
+			picture = generic_naval_manufacturer_2
+
+			available = {
+				has_completed_focus = ROM_modernize_the_army
+			}
+			
+			cost = 35
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			research_bonus = { naval_equipment = 0.15 } traits = { naval_research_trait }
+			
+			equipment_bonus = {
+				# cant find enough info 
+			}
+						
+			modifier = {
+			}
+		}
+
+	}
 	materiel_manufacturer = {
 		
 		designer = yes
 		
 		
-		ROM_vauxhall = {
+		ROM_lancia = {
 			
+			picture = lancia 
+			name = lancia
+
 			picture = vauxhall
 
 			allowed = {
@@ -1001,59 +1858,22 @@ ideas = {
 			cost = 75
 
 			available = {
-				has_country_flag = ENG_mot_chosen
+				has_completed_focus = ROM_invite_axis_motor_companies
 			}
 			
 			research_bonus = {
-				motorized_equipment = 0.15
+				motorized_equipment = -0.05
 			}
-			
+			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			traits = { motorized_equipment_manufacturer }
 
 			equipment_bonus = {
 				motorized_equipment = {
-					maximum_speed = 0.05
+					maximum_speed = 0.1 instant = yes
 				}
 				mechanized_equipment = {
-					maximum_speed = 0.05
+					maximum_speed = 0.1
 				}
-			}
-			
-		}
-
-		ROM_ford = {
-			
-			picture = ford_motor_company
-
-			cost = 75
-
-			allowed = {
-				original_TAG = ROM
-				has_dlc = "Death or Dishonor"
-			}
-			
-
-			available = {
-				has_country_flag = USA_mot_chosen
-			}
-			
-			research_bonus = {
-				motorized_equipment = 0.15
-			}
-			
-			traits = { motorized_equipment_manufacturer }
-
-			equipment_bonus = {
-				motorized_equipment = {
-					build_cost_ic = -0.05
-				}
-				mechanized_equipment = {
-					build_cost_ic = -0.05
-				}
-			}
-
-			modifier = {
-
 			}
 			
 		}
@@ -1068,9 +1888,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				motorized_equipment = 0.15
+				motorized_equipment = -0.05
 			}
-			
+			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			traits = { motorized_equipment_manufacturer }
 			
 		}
@@ -1085,9 +1905,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				infantry_weapons = 0.15
+				infantry_weapons = -0.05
 			}
-			
+			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			traits = { infantry_equipment_manufacturer }
 			
 		}
@@ -1102,9 +1922,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				artillery = 0.15
+				artillery = -0.05 
 			}
-			
+			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			traits = { artillery_manufacturer }
 			
 		}
@@ -1121,16 +1941,16 @@ ideas = {
 			}
 
 			available = {
-				has_country_flag = GER_mot_chosen
+				has_completed_focus = ROM_invite_axis_motor_companies
 			}
 			
 			research_bonus = {
-				motorized_equipment = 0.15
+				motorized_equipment = -0.05
 			}
-
+			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {
 				motorized_equipment = {
-					reliability = 0.1
+					reliability = 0.1 instant = yes
 				}
 				mechanized_equipment = {
 					reliability = 0.1
@@ -1139,12 +1959,259 @@ ideas = {
 			
 			traits = { motorized_equipment_manufacturer }
 		}
+
+		ROM_hanomag = {	
+
+			name = GER_hanomag
+			picture = hanomag
+
+			allowed = {
+				original_tag = ROM 
+			}
+
+			ai_will_do = {
+				factor = 0
+			}			
+
+			available = {
+				GER = {
+					has_completed_focus = GER_hanomag
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = -0.05
+			}
+			modifier = { materiel_manufacturer_cost_factor = -0.33 }
+			equipment_bonus = {
+				mechanized_equipment = {
+					breakthrough = 0.15 hardness = 0.2 armor_value = 0.2 build_cost_ic = 0.05 
+				}
+				armored_cars_equipment = {
+					breakthrough = 0.1 soft_attack = 0.05 hardness = 0.05 build_cost_ic = 0.05 
+				}
+			}
+			
+			traits = { GER_mechanized_equipment_manufacturer }
+		}
 	}
+	materiel_research = {
+		
+		ROM_malaxa_research = {
+			
+			picture = generic_motorized_equipment_manufacturer_1
+
+			available = {
+				has_completed_focus = ROM_modernize_the_army
+			}
+			
+			cost = 35
+
+			allowed = {
+				original_TAG = ROM
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			traits = { motorized_research_trait }	
+		}
+
+		ROM_cugir_research = {
+			
+			picture = idea_ROM_cugir #used with permission from Turning Point mod
+
+			available = {
+				has_completed_focus = ROM_modernize_the_army
+			}
+			
+			cost = 35
+
+			allowed = {
+				original_TAG = ROM
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { materiel_research_trait }	
+		
+		}
+
+		ROM_resita_research = {
+			
+			picture = generic_artillery_manufacturer_1
+
+			available = {
+				has_completed_focus = ROM_modernize_the_army
+			}
+			
+			cost = 35
+
+			allowed = {
+				original_TAG = ROM
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+	        traits = { artillery_research_trait }	
+		}
 	
+		
+	}
+	aircraft_research = { 		
+
+
+		ROM_iar_research = {
+			
+			picture = generic_air_manufacturer_2
+
+			available = {
+				has_completed_focus = ROM_modernize_the_army
+			}
+			
+			cost = 35
+
+			allowed = {
+				original_tag = ROM
+
+			}
+			
+			research_bonus = { air_equipment = 0.15 } traits = { aircraft_research_trait }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
 	aircraft_manufacturer = { 		
 			
 		designer = yes
-		
+
+		ROM_messerschmitt = {
+
+			name = messerschmitt 
+			picture = messerschmitt 
+			
+			available = {
+				ROM = {
+					has_completed_focus = ROM_invite_german_air_companies
+				}
+			}
+
+			allowed = {
+				tag = ROM 
+			}
+
+			ai_will_do = {
+				factor = 100
+			}			
+
+			research_bonus = {
+				air_equipment = -0.05
+			}
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
+			equipment_bonus = {
+				fighter_equipment = {
+					air_agility = 0.1 air_range = 0.08  
+				}
+				heavy_fighter_equipment = {
+					reliability = 0.1 air_range = 0.1  
+				}		
+				jet_fighter_equipment = {
+					air_agility = 0.1 air_range = 0.1  
+				}
+			}
+			
+			traits = { GER_messerschmitt_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ROM_junkers = { 
+
+			name = junkers 
+			picture = junkers 
+			
+			available = {
+				ROM = {
+					has_completed_focus = ROM_invite_german_air_companies
+				}
+			}
+
+
+			research_bonus = {
+				air_equipment = -0.05
+			}
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
+			allowed = {
+				tag = ROM 
+			}
+
+			cost = 0 
+
+			equipment_bonus = {
+				CAS_equipment = {
+					air_ground_attack = 0.10 reliability = -0.1 build_cost_ic = -0.05 
+				}
+			}			
+
+			traits = { GER_junkers_manufacturer }
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		ROM_focke_wulf = {
+			
+			name = focke_wulf 
+			picture = focke_wulf 
+			
+			available = {
+				AND = {
+					ROM = {
+						has_completed_focus = ROM_invite_german_air_companies
+					}
+					GER = {
+						has_completed_focus = GER_air_innovation_2
+					}
+				}
+			}
+
+			allowed = {
+				tag = ROM 
+			}
+
+			cost = 150
+
+			research_bonus = {
+				air_equipment = -0.05
+			}
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
+			equipment_bonus = {
+				fighter_equipment = {
+					air_agility = 0.1 air_attack = 0.08
+				}
+				heavy_fighter_equipment = {
+					air_agility = 0.1 air_attack = 0.1  
+				}
+				jet_fighter_equipment = {
+					air_agility = 0.1 air_attack = 0.1  
+				}
+			}		
+			
+			traits = { GER_focke_wulf_manufacturer }
+			
+			ai_will_do = {
+				factor = 100
+			}
+		}
+
 		iar = {
 			
 			picture = generic_air_manufacturer_2
@@ -1159,9 +2226,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.15
+				air_equipment = -0.05
 			}
-			
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
 			traits = { light_aircraft_manufacturer }
 			
 			equipment_bonus = {
@@ -1182,7 +2249,7 @@ ideas = {
 					limit = {
 						has_dlc = "Death or Dishonor"
 					}
-					has_completed_focus = ROM_invest_in_the_iar
+					has_completed_focus = ROM_iar_80
 				}
 			}
 
@@ -1194,26 +2261,24 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.05
+				air_equipment = -0.05
 			}			
-			
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {
 				# produced the IAR-80 fighter/ground attack aircraft around 350 of them during 36-44
-				small_plane_airframe = {
+				fighter_equipment = {
 					air_attack = 0.1
 				}
-				cv_small_plane_airframe = {
+				cv_fighter_equipment = {
 					air_attack = 0.1
 				}
-				small_plane_cas_airframe = {
+				CAS_equipment = {
 					air_ground_attack = 0.1
 				}
-				cv_small_plane_cas_airframe = {
+				cv_CAS_equipment = {
 					air_ground_attack = 0.1
 				}
 			}
-
-			traits = { aircraft_manufacturer }
 			
 			ai_will_do = {
 				factor = 1
@@ -1230,23 +2295,21 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.1
+				air_equipment = -0.05
 			}			
-			
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {
 				
-				small_plane_airframe = {
-					air_agility = 0.15
+				fighter_equipment = {
+					air_agility = 0.1
 				}
-				cv_small_plane_airframe = {
-					air_agility = 0.15
+				cv_fighter_equipment = {
+					air_agility = 0.1
 				}
-				medium_plane_fighter_airframe = {
-					air_agility = 0.15
+				heavy_fighter_equipment = {
+					air_agility = 0.1
 				}
 			}
-
-			traits = { aircraft_manufacturer }
 			
 			ai_will_do = {
 				factor = 1
@@ -1263,26 +2326,24 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.1
+				air_equipment = -0.05
 			}			
-			
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {
 				
-				medium_plane_airframe = {
+				tac_bomber_equipment = {
 					air_ground_attack = 0.1
 					build_cost_ic = -0.1
 				}
-				small_plane_naval_bomber_airframe = {
+				nav_bomber_equipment = {
 					naval_strike_attack = 0.1
 					build_cost_ic = -0.1
 				}
-				cv_small_plane_naval_bomber_airframe = {
+				cv_nav_bomber_equipment = {
 					naval_strike_attack = 0.1
 					build_cost_ic = -0.1
 				}
 			}
-
-			traits = { aircraft_manufacturer }
 			
 			ai_will_do = {
 				factor = 1

@@ -1,2 +1,648 @@
 ideas = {
+    country = {
+		MON_officer_purged = {
+			removal_cost = -1
+
+			picture = officers_purged
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			cancel = {
+				has_war_with = GER 
+			}
+			
+			modifier = {
+				land_doctrine_cost_factor = 0.20
+				air_doctrine_cost_factor = 0.20
+			}
+		}
+        MON_advisors = {
+
+            picture = por_volunteers_in_the_war
+
+            allowed = {
+            original_tag = "MON"
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+			
+			modifier = {
+				land_doctrine_cost_factor = -0.05
+			}
+
+			modifier = {
+			    winter_attrition_factor = -0.4
+				acclimatization_cold_climate_gain_factor = 0.2
+				supply_consumption_factor = -0.175
+				training_time_factor = -0.1 
+				special_forces_cap = 0.025
+			}
+        }
+		MON_winter_offensive = {
+		
+			allowed = {
+				always = no # Triggered via event
+			}
+			
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				land_reinforce_rate = 0.05
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				enemy_army_bonus_air_superiority_factor = -0.2
+				ai_focus_aggressive_factor = 0.5
+			}
+			
+			removal_cost = -1
+		}
+		MON_spirit_of_genghis_idea = {
+		
+			picture = FRA_army_of_aggression_focus
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}		
+			
+			equipment_bonus = {
+				horse_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+		MONAF = {
+		           
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+			
+			picture = generic_air_research		
+            
+			modifier = {
+				air_doctrine_cost_factor = -0.05
+			}
+			
+			modifier = {
+				experience_gain_air = 0.05
+				experience_gain_air_factor = 0.1
+				air_mission_xp_gain_factor = 0.1
+				air_training_xp_gain_factor = 0.2
+			}
+		}
+		MON_agrarian_reform1 = {
+
+			picture = generic_agrarian_society
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.01
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = -0.30
+				production_speed_infrastructure_factor = 0.25
+				local_resources_factor = 0.1
+			}
+		}
+		MON_agrarian_reform2 = {
+
+			picture = generic_goods_red_bonus
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+			    political_power_cost = 0.5
+				consumer_goods_factor = -0.03
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_infrastructure_factor = 0.25
+                local_resources_factor = 0.1				
+			}
+		}
+		MON_agrarian_reform3 = {
+
+			picture = generic_goods_red_bonus
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+			    political_power_cost = 0.75
+				consumer_goods_factor = -0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.2
+				production_speed_infrastructure_factor = 0.25
+                local_resources_factor = 0.1				
+			}
+		}
+			MON_Rogue_state = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = MON
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				stability_factor = -0.2
+				political_power_cost = 0.15
+			}
+		}	
+		
+			MON_Rogue_state_2 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = MON
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				stability_factor = -0.15
+				political_power_cost = 0.10
+			}
+		}
+		
+			MON_Rogue_state_3 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = MON
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				stability_factor = -0.10
+				political_power_cost = 0.10
+			}
+		}
+		
+		MON_Rual_population = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = MON
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				war_support_factor = -0.15
+				research_speed_factor = -0.15
+			}
+		}
+		
+		
+		MON_Rual_population_2 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = MON
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				war_support_factor = -0.1			
+				research_speed_factor = -0.12
+			}
+		}
+		
+		MON_Rual_population_3 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = MON
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_speed_factor = -0.1
+			}
+		}		
+		
+		MON_Mongolian_Police = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				stability_weekly = 0.001
+				political_power_cost = 0.25
+			}
+		}
+		
+		
+		MON_Armed_State = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_oppression
+			
+			modifier = {
+				conscription = 0.015
+				conscription_factor = 0.1
+			}
+		}
+		
+		MON_Armed_State_2 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_oppression
+			
+			modifier = {
+				conscription = 0.04
+				conscription_factor = 0.2
+			}
+		}
+		
+				MON_idea_economic_aid = {
+
+			picture = generic_goods_red_bonus
+			
+			available = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				horse_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				infantry_equipment = {
+					build_cost_ic = -0.025 
+					instant = yes
+				}
+			}
+		}
+		
+		MON_Internal_security = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.25
+			}
+		}
+		
+		MON_Internal_security_1 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.23
+			}
+		}
+		
+		MON_Internal_security_2 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.21
+			}
+		}
+		
+		MON_Internal_security_3 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.19
+			}
+		}
+		
+	    MON_Internal_security_4 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.17
+			}
+		}
+		
+		MON_Internal_security_5 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.15
+			}
+		}
+    }
+
+	industrial_concern = {	
+		
+		sino_soviet_resource_surveyors = {
+		
+			picture = stalingrad_tractor_factory
+
+			available = {
+			}
+
+			allowed = {
+				has_DLC = "Waking the Tiger"
+			    original_tag = MON
+			}
+			
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.1
+			}
+			
+			traits = { refinery_concern }
+
+			ai_will_do = {
+				factor = 1
+			}
+
+		}
+	}
+	
+	
+	aircraft_manufacturer = {
+		
+		designer = yes
+		
+		mig_design_bureau1 = {
+			picture = mig_design_bureau
+			
+			allowed = {
+				original_tag = MON
+			}
+			research_bonus = {
+				air_equipment = -0.05
+			}
+
+			equipment_bonus = {		
+				fighter_equipment = {
+					air_agility = 0.1 reliability = 0.05 
+				} 					
+			}
+			
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
+		}
+		
+		ilyushin_design_bureau1 = {
+			picture = ilyushin_design_bureau
+			
+			allowed = {
+				original_tag = MON
+			}				
+			research_bonus = {
+				air_equipment = -0.05
+			}
+
+			equipment_bonus = {		
+				CAS_equipment = {
+					air_ground_attack = 0.15 reliability = 0.15 air_defence = 0.15 build_cost_ic = -0.1 
+				}				
+				fighter_equipment = {
+					air_attack = 0.075 air_agility = 0.075
+				}					
+			}
+			
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
+		}
+		
+		tupolev_design_bureau1 = {
+			picture = tupolev_design_bureau
+			
+			allowed = {
+				original_tag = MON
+			}
+			research_bonus = {
+				air_equipment = -0.05
+			}
+
+			equipment_bonus = {		
+				tac_bomber_equipment = {
+					air_ground_attack = 0.1 reliability = 0.1  
+				}
+				heavy_fighter_equipment = {
+					air_attack = 0.1 air_range = 0.05
+				}						
+			}
+			
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
+		}
+		
+		yakovlev_design_bureau1 = {
+			picture = yakovlev_design_bureau
+			
+			allowed = {
+				original_tag = MON
+			}
+			research_bonus = {
+				air_equipment = -0.05
+			}
+
+			equipment_bonus = {		
+				fighter_equipment = {
+					air_attack = 0.1 air_range = 0.05
+				}						
+			}
+			
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
+		}		
+	}	
 }

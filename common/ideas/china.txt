@@ -15,8 +15,12 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				land_doctrine_cost_factor = -0.10
+			 experience_gain_army = 0.01
 			}
+			
+			modifier = {
+			    land_doctrine_cost_factor = -0.05
+		    }
 		}
 
 		CHI_civil_war_deserters = {
@@ -65,7 +69,19 @@ ideas = {
 			}
 
 		}
+		CHI_scorch_earth_idea = {
 
+			picture = FRA_scw_intervention_republicans_focus
+			name = CHI_scorched_earth_tactics
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+				resistance_damage_to_garrison = 0.5
+			}
+		}
 		#####################
 		##### WTT IDEAS #####
 		#####################
@@ -107,8 +123,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_attack_factor = -0.3
-				army_defence_factor = -0.3
+				army_attack_factor = -0.35
+				army_defence_factor = -0.2
 				mobilization_speed = -0.3
 			}
 
@@ -131,8 +147,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_attack_factor = -0.2
-				army_defence_factor = -0.2
+				army_attack_factor = -0.25
+				army_defence_factor = -0.15
 				mobilization_speed = -0.2
 			}
 
@@ -299,8 +315,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				political_power_cost = 0.2
 				consumer_goods_factor = 0.05
-				industrial_capacity_factory = -0.05
+				min_export = 0.05
 			}
 		}
 
@@ -320,8 +337,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.10
-				industrial_capacity_factory = -0.10
+				political_power_cost = 0.3
+				consumer_goods_factor = 0.1
+				min_export = 0.08
 			}
 		}
 		
@@ -340,8 +358,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				political_power_cost = 0.4
 				consumer_goods_factor = 0.15
-				industrial_capacity_factory = -0.15
+				min_export = 0.1
 			}
 		}
 		
@@ -360,8 +379,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.20
-				industrial_capacity_factory = -0.20
+				political_power_cost = 0.4
+				consumer_goods_factor = 0.2
+				min_export = 0.1
 			}
 		}
 
@@ -380,8 +400,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				political_power_cost = 0.5
 				consumer_goods_factor = 0.25
-				industrial_capacity_factory = -0.25
+				min_export = 0.15
 			}
 		}		
 
@@ -462,7 +483,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_core_defence_factor = 0.15
+				army_core_defence_factor = 0.05
 			}
 		}
 
@@ -483,8 +504,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_core_defence_factor = 0.15
-				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
 			}
 		}
 
@@ -503,7 +524,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_core_attack_factor = 0.1
+				army_core_attack_factor = 0.05
 			}
 		}
 
@@ -542,7 +563,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				max_command_power = 10
+				max_command_power = 5
 				experience_gain_army = 0.05
 			}
 		}
@@ -562,8 +583,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_leader_cost_factor = -0.3
-				army_leader_start_planning_level = 1
+				army_leader_cost_factor = -0.5
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 1
+
+
 			}
 		}
 
@@ -757,9 +781,7 @@ ideas = {
 				original_tag = CHI
 			}
 			
-			research_bonus = {
-				air_equipment = 0.15
-			}
+			research_bonus = { air_equipment = 0.15 } traits = { aircraft_research_trait }
 			
 			traits = { medium_aircraft_manufacturer }
 			
@@ -770,8 +792,7 @@ ideas = {
 			}
 		}
 	}
-
-	industrial_concern = {
+	industrial_research = {
 
 		CHI_mining_commission = {
 
@@ -786,14 +807,14 @@ ideas = {
 				original_tag = CHI
 			}
 
-			cost = 5 # ai doesnt like free ones. but lets fix this later
+			cost = 25
 			
 			ai_will_do = {
-				factor = 200
+				factor = 1
 			}
 
 			modifier = {
-				local_resources_factor = 0.1
+				local_resources_factor = 0.2
 			}
 		}
 	}

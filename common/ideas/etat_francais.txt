@@ -1,0 +1,368 @@
+ideas = {
+	country = {
+		EFR_petain = {
+			allowed = {
+				always = yes
+			}
+
+            picture = generic_pp_unity_bonus
+			
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			rule = {
+				can_join_factions = no 
+			}
+			modifier = {
+			    political_power_factor = -0.15
+				communism_acceptance = -20
+				democratic_acceptance = -20
+				fascism_acceptance = 10
+				enemy_justify_war_goal_time = 10
+				send_volunteer_size = 4
+			}
+		}
+		EFR_combat = {
+
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+            picture = generic_infantry_bonus
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+        	research_bonus = {
+        		special_tech = 0.1
+        	}
+			
+			modifier = {
+				army_core_attack_factor = -0.15
+				army_core_defence_factor = -0.15
+        		special_forces_cap = 0.05
+    			non_core_manpower = 0.05
+			}
+		}
+		EFR_war = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = FRA_factory_strikes
+
+			modifier = {
+			    fuel_gain_from_states = 100.0
+		        production_lack_of_resource_penalty_factor = -1.0
+			}
+		}
+		
+		EFR_air = {
+			picture = generic_air_research
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.35
+				}
+				tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.35
+				}
+				nav_bomber_equipment = {
+				    instant = yes
+					build_cost_ic = 0.35
+				}
+				strat_bomber_equipment = {
+				    instant = yes
+					build_cost_ic = 0.35
+				}
+			}
+		}
+		
+		EFR_production_debuff = {
+			picture = generic_local_self_management
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				light_tank_chassis = {
+					instant = yes
+					build_cost_ic = 0.10
+				}
+				medium_tank_chassis = {
+				    instant = yes
+					build_cost_ic = 0.40
+				}
+				heavy_tank_chassis = {
+				    instant = yes
+					build_cost_ic = 0.60
+				}
+			}
+		}
+			
+		EFR_french_volunteer_army_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				stability_factor = -0.05
+				army_org_Factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		EFR_french_volunteer_army_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				stability_factor = -0.1
+				army_org_Factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+		
+		EFR_naval_bonus = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			modifier = {
+				industrial_capacity_dockyard = 0.10
+			}
+		}
+		EFR_irredentism = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.025
+				production_factory_max_efficiency_factor = 0.025
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.15
+			}
+		}
+
+		EFR_war_repairs = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = FRA_factory_strikes
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		EFR_german_war_repairs = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = FRA_factory_strikes
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industry_repair_factor = 0.10
+			}
+		}
+
+		idea_EFR_chantiers_de_la_jeunesse = {
+
+			picture = ast_all_in
+
+			allowed = {
+				original_tag = EFR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+                production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.1
+				production_speed_synthetic_rubber_refinery_factor = 0.1
+				industry_repair_factor = 0.05
+			}
+		}
+		idea_EFR_secret_military_researches = {
+			allowed = {
+				always = no
+				original_research_slots < 5
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+
+			removal_cost = -1
+			picture = generic_research_bonus
+		}
+		idea_EFR_STO = {
+		 
+		    picture = generic_manpower_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = -0.01
+			}
+		}
+		idea_EFR_STO2 = {
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = -0.02
+			}
+		}
+		idea_EFR_STO3 = {
+
+			picture = HUN_strengthen_fascists
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = -0.015
+			}
+		}
+		idea_EFR_rationning = {
+
+			picture = generic_agrarian_reform
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			    fuel_gain_factor_from_states = 0.1 
+				fuel_gain_factor = 0.1
+			}
+		}
+		idea_EFR_recycling = {
+
+			picture = generic_navy_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			    industrial_capacity_dockyard = -0.05
+				refit_speed = 0.15
+				repair_speed_factor = 0.1
+			}
+		}
+	}
+	
+}

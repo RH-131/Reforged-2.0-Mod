@@ -1,2 +1,187 @@
 ideas = {
+	country = {
+		imperial_austerity_idea = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		elite_schools_focus = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		
+		divided_nation_full = {
+			
+			
+			allowed = {
+				original_tag = SIA
+			}
+
+			removal_cost = -1
+			picture = great_depression
+			modifier = {
+				political_power_cost = 0.35
+				conscription_factor = -0.25
+				stability_factor = -0.3
+			}
+		}
+		
+		divided_nation_half = {
+			
+			picture = great_depression
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.25
+				conscription_factor = -0.15
+				stability_factor = -0.2
+			}
+		}
+		
+		rice_reforms = {
+		
+		   removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_agrarian_society
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		
+		democratic_leanings = {
+              
+			removal_cost = -1 
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				drift_defence_factor = 0.25
+				foreign_subversive_activites = -0.25
+				stability_factor = -0.03
+				trade_opinion_factor = 0.2
+			}
+		}
+        volunteer_force = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_ast_volunteer_defence_corps
+			
+			rule = {
+				can_send_volunteers = yes
+			}
+
+			modifier = {
+				send_volunteer_divisions_required = -1
+				send_volunteer_size = 4
+			}
+		}
+		fascist_leanings = {
+              
+			removal_cost = -1 
+			allowed = {
+				always = no
+			}
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				foreign_subversive_activites = -0.25
+				stability_factor = 0.05
+				political_power_gain = 0.2
+			}
+		}
+		
+		fascist_military = {
+		 
+		  picture = generic_volunteer_expedition_bonus
+		  modifier = {
+		   conscription = 0.05
+		  }		
+		}
+		
+		SIA_paramilitarism = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+	
+			modifier = {
+				army_defence_factor = 0.1
+				army_attack_factor = 0.1
+				army_morale_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+		
+		mobile_divisions_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.1
+				land_reinforce_rate = 0.02
+			}			
+		}
+	}
 }

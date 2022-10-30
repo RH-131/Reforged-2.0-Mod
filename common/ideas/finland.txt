@@ -1,8 +1,41 @@
 ideas = {
 
 	country = {
-		sisu = {
-			
+		FIN_valpo_idea = {
+
+			picture = office_of_strategic_services
+			allowed = {
+				always = no
+			}
+			name = FIN_valpo
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1			
+
+			modifier = {
+				intelligence_agency_defense = 1
+			}
+		}
+	    FIN_winter_war_defence = {
+
+			picture = ger_bulwark_against_bolshevism
+
+		    allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+			    
+				army_defence_factor = 0.25
+				max_dig_in = 3
+				dig_in_speed_factor = 0.4
+			}
+		}
+		FIN_german_advisors = {
+		
 			allowed = {
 				always = no
 			}
@@ -13,39 +46,223 @@ ideas = {
 				}
 			}
 
+			picture = german_advisors
 			removal_cost = -1
 			
 			modifier = {
-				army_morale_factor = 0.25
-				attrition = -0.1
-				army_core_attack_factor = 0.2
-				army_core_defence_factor = 0.2
+			 experience_gain_army = 0.01
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.1
 			}
 		}
+		continuation_war_idea = {
 
-		winter_war_ns = {
-			picture = tur_sub_zero_survival_training
+			picture = ger_bulwark_against_bolshevism
+
+		    allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.25
+				army_attack_factor = -0.25
+				cas_damage_reduction = 0.5	
+			}
+		}
+		continuation_war_idea_push = {
+
+			picture = ger_bulwark_against_bolshevism
+
+			name = continuation_war_idea
+		    
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.25
+				army_attack_factor = -0.15
+				cas_damage_reduction = 0.5
+			}
+		}
+		continuation_war_idea_hold = {
+
+			picture = ger_bulwark_against_bolshevism
+
+			name = continuation_war_idea
+		    
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.25
+				army_attack_factor = -0.25
+				army_defence_factor = 0.1
+				cas_damage_reduction = 0.5
+			}
+		}
+		FIN_revenge = {
+
+			picture = generic_morale_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+			    stability_factor = 0.1
+				war_support_factor = 0.25
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		FIN_militarisation_idea = {
+
+			picture = man_five_year_plan_industry
+
+		    allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+			    conversion_cost_civ_to_mil_factor = -0.2
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		sisu = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.05
+				attrition = -0.15
+				winter_attrition_factor = -0.5
+				acclimatization_cold_climate_gain_factor = 0.25
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.25
+				equipment_capture = 0.02
+				stability_factor = 0.05
+				conscription_factor = 0.05
+				conscription = 0.04
+			}
+		}
+        
+		FIN_motitus_tactics = {
+		
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_army_of_aggression_focus
+			
+			modifier = {
+				winter_attrition_factor = -0.3
+				out_of_supply_factor = -0.1
+		
+			}
+		}
+		
+		FIN_advisors = {
+		
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_army_of_aggression_focus
+			modifier = {
+				winter_attrition_factor = -0.05
+				acclimatization_cold_climate_gain_factor = 0.1
+			}
+		}
+		
+		FIN_white_guard_idea = {
+		
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.05	
+			}
+		}
+	
+		FIN_mannerheim_legacy_idea = {
+		
+		picture = FRA_fortification_focus
+		
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.15
+			}
+		}
+				
+        civilian_kitchens_idea = {
+			
+			
 			allowed = {
 				always = no
 			}
 
 			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		FIN_communism_banned = {
+			picture = anti_soviet_pact
+			allowed = {
 				always = no
 			}
 
-			cancel = {
-				NOT = { has_war_with = SOV }
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
 			}
 
-			removal_cost = -1
-			
 			modifier = {
-				conscription = 0.03
-				mobilization_speed = 0.85
-				winter_attrition_factor = -0.1
-				army_core_defence_factor = 0.1
+				communism_drift = -0.15
 			}
 		}
+        
 	}
 
 	# TECHNOLOGY
@@ -63,12 +280,10 @@ ideas = {
 				original_tag = FIN
 			}
 			
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-			
+			research_bonus = { naval_equipment = -0.05 }
+
 			# submarine and defence ship production
-			
+			modifier = { naval_manufacturer_cost_factor = -0.33 }
 			traits = { naval_manufacturer }
 		}
 	}
@@ -87,12 +302,10 @@ ideas = {
 				original_tag = FIN
 			}
 			
-			research_bonus = {
-				air_equipment = 0.15
-			}
+			research_bonus = { air_equipment = -0.05 } 
 			
 			traits = { light_aircraft_manufacturer }
-			
+			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
 			# assembled Junkers, fast bombers
 		
 			ai_will_do = {
