@@ -2,92 +2,74 @@ leader_planning_skills = {
 
 	### NAVY ###
 	1 = {
-		cost = 100
+		cost = 200
 		type = navy
 		modifier = {
-			naval_hit_chance = 0.05
+			naval_hit_chance = 0.025
 			naval_coordination = 0.01
 		}
 	}
 
 	2 = {
-		cost = 200
+		cost = 400
 		type = navy
 		modifier = {
-			naval_hit_chance = 0.1
+			naval_hit_chance = 0.05
 			naval_coordination = 0.03
 		}
 	}
 
 	3 = {
-		cost = 400
+		cost = 800
 		type = navy
 		modifier = {
-			naval_hit_chance = 0.15
+			naval_hit_chance = 0.075
 			naval_coordination = 0.05
 		}
 	}
 
 	4 = {
-		cost = 800
+		cost = 1600
 		type = navy
 		modifier = {
-			naval_hit_chance = 0.2
+			naval_hit_chance = 0.1
 			naval_coordination = 0.07
 		}
 	}
 
 	5 = {
-		cost = 1600
+		cost = 3200
 		type = navy
 		modifier = {
-			naval_hit_chance = 0.25
+			naval_hit_chance = 0.125
 			naval_coordination = 0.09
 		}
 	}
 
 	6 = {
-		cost = 3200
+		cost = 6400
 		type = navy
 		modifier = {
-			naval_hit_chance = 0.3
-			naval_coordination = 0.12
+			naval_hit_chance = 0.15
+			naval_coordination = 0.11
 		}
 	}
 
 	7 = {
-		cost = 6400
+		cost = 12800
 		type = navy
 		modifier = {
-			naval_hit_chance = 0.35
-			naval_coordination = 0.14
+			naval_hit_chance = 0.175
+			naval_coordination = 0.13
 		}
 	}
 
 	8 = {
-		cost = 12800
-		type = navy
-		modifier = {
-			naval_hit_chance = 0.40
-			naval_coordination = 0.16
-		}
-	}
-
-	9 = {
 		cost = 25600
 		type = navy
 		modifier = {
-			naval_hit_chance = 0.45
-			naval_coordination = 0.18
-		}
-	}
-
-	10 = {
-		cost = 51200
-		type = navy
-		modifier = {
-			naval_hit_chance = 0.50
-			naval_coordination = 0.20
+			naval_hit_chance = 0.20
+			naval_coordination = 0.15
 		}
 	}
 
@@ -98,6 +80,7 @@ leader_planning_skills = {
 		modifier = {
 			planning_speed = 0.05
 			max_planning = 0.02
+			land_reinforce_rate = 0.01
 		}
 	}
 		
@@ -107,6 +90,7 @@ leader_planning_skills = {
 		modifier = {
 			planning_speed = 0.1
 			max_planning = 0.04
+			land_reinforce_rate = 0.02
 		}
 	}
 	
@@ -117,6 +101,7 @@ leader_planning_skills = {
 		modifier = {
 			planning_speed = 0.15
 			max_planning = 0.06
+			land_reinforce_rate = 0.03
 		}
 	}
 	
@@ -126,6 +111,7 @@ leader_planning_skills = {
 		modifier = {
 			planning_speed = 0.2
 			max_planning = 0.08
+			land_reinforce_rate = 0.04
 		}
 	}
 	
@@ -135,6 +121,7 @@ leader_planning_skills = {
 		modifier = {
 			planning_speed = 0.25
 			max_planning = 0.1
+			land_reinforce_rate = 0.05
 		}
 	}
 
@@ -144,6 +131,7 @@ leader_planning_skills = {
 		modifier = {
 			planning_speed = 0.3
 			max_planning = 0.12
+			land_reinforce_rate = 0.06
 		}
 	}
 
@@ -153,6 +141,7 @@ leader_planning_skills = {
 		modifier = {
 			planning_speed = 0.35
 			max_planning = 0.14
+			land_reinforce_rate = 0.07
 		}
 	}
 
@@ -162,24 +151,7 @@ leader_planning_skills = {
 		modifier = {
 			planning_speed = 0.4
 			max_planning = 0.16
-		}
-	}
-
-	9 = {
-		cost = 25600
-		type = corps_commander
-		modifier = {
-			planning_speed = 0.45
-			max_planning = 0.18
-		}
-	}
-	
-	10 = {
-		cost = 51200
-		type = corps_commander
-		modifier = {
-			planning_speed = 0.5
-			max_planning = 0.2
+		    land_reinforce_rate = 0.08
 		}
 	}
 	
@@ -237,6 +209,7 @@ leader_planning_skills = {
 		modifier = {
 			planning_speed = 0.3
 			max_planning = 0.12
+			
 		}
 	}	
 
@@ -258,21 +231,4 @@ leader_planning_skills = {
 		}
 	}	
 
-	9 = {
-		cost = 25600
-		type = field_marshal
-		modifier = {
-			planning_speed = 0.45
-			max_planning = 0.18
-		}
-	}
-	
-	10 = {
-		cost = 51200
-		type = field_marshal
-		modifier = {
-			planning_speed = 0.5
-			max_planning = 0.2
-		}
-	}
 }
