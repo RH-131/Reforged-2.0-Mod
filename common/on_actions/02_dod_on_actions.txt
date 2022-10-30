@@ -1,11 +1,5 @@
 on_actions = {
 
-	on_startup = {
-		effect = {
-			YUG = { save_global_event_target_as = yugoslavia_wedding_partner }
-		}
-	}
-
 	#FROM is war target
 	on_declare_war = {
 		effect = {
@@ -22,6 +16,7 @@ on_actions = {
 						OR = {
 							is_in_faction_with = GER
 							is_in_faction_with = ENG
+		
 						}
 					}
 				}
@@ -114,55 +109,57 @@ on_actions = {
 			}
 		}
 	}
-	
-	#ROOT = attacking side
-	#FROM = defending side
-	#fired when two countries end up at war with each other (on_war is fired when a country goes to war against anyone and is not fired again when it enters war against another country unless it went to peace first)
-	on_war_relation_added = {
-		effect = {
-			if = {
-				limit = { 
-					FROM = {
-						original_tag = YUG 
-					}
-				}
-				every_country = {
-					limit = {
-						is_subject_of = YUG
-						OR = {
-							original_tag = BOS
-							original_tag = HRZ
-							original_tag = CRO
-							original_tag = MAC
-							original_tag = SLV
-							original_tag = KOS
-							original_tag = MNT
-							original_tag = HUN
-							original_tag = TRA
-						}
-					}
-					add_to_war = {
-						targeted_alliance = YUG
-						enemy = ROOT
-						hostility_reason = asked_to_join
-					}
-				}
-			}
-		}
-	}
 
 	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
 	on_state_control_changed = {
 		effect = {
-			if = {
+			if = { ###SEALION
 				limit = {
-					FROM.FROM = { is_core_of = ROM }
+					FROM.FROM = { is_core_of = ENG }
+					ROOT = { 
+						OR = {
+							tag = GER 			
+							is_in_faction_with = GER
+						} 
+					}
+					NOT = {
+						USA = {
+							has_country_flag = USA_sealion_has_begun
+						}
+					}
 				}
-				FROM = {
-					set_country_flag = ROM_lost_starting_state
+				ENG = {
+					country_event = britain.42
+				}
+				USA = {
+					set_country_flag = USA_sealion_has_begun
+				}
+			}
+			if = { ###invasion of North America
+				limit = {
+					FROM.FROM = { 
+						OR = { 
+							is_core_of = USA 
+							is_core_of = CAN
+							is_core_of = MEX							
+						}
+					}
+					ROOT = { 
+						OR = {
+							tag = GER 			
+							is_in_faction_with = GER
+							tag = JAP
+							is_in_faction_with = JAP 
+						} 
+					}
+				}
+				USA = {
+					news_event = { hours = 4 id = news.483 }
+				}
+				USA = {
+					set_country_flag = USA_sealion_has_begun
 				}
 			}
 		}
 	}
-
 }

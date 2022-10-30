@@ -1,19 +1,144 @@
 on_actions = {
-	# country
+	on_startup = {
+		effect = {
+			GER = {
+				if = {
+					limit = { 
+						GER = { 
+							is_ai = yes 
+						}
+					} 
+					add_offsite_building = { type = industrial_complex level = 30 }
+					add_offsite_building = { type = arms_factory level = 40 }
+				}
+			}
+			FRA = {
+				if = {
+					limit = { 
+						FRA = { 
+							is_ai = yes 
+						}
+						GER = {
+							is_ai = no 
+						}
+					}
+					delete_unit_template_and_units = {
+						division_template = "Division de Cavalerie"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Brigade Coloniale"
+					}
+					add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 15000 producer = FRA }
+					add_equipment_to_stockpile = { type = support_equipment_1 amount = 4000 producer = FRA }
+					add_equipment_to_stockpile = { type = horse_equipment_0 amount = 4000 producer = FRA } 
+				}
+			}
+
+			SOV = {
+				516 = { set_state_flag = SOV_gulag_economy_flag }
+				644 = { set_state_flag = SOV_gulag_economy_flag }
+				562 = { set_state_flag = SOV_gulag_economy_flag }
+				579 = { set_state_flag = SOV_gulag_economy_flag }
+				574 = { set_state_flag = SOV_gulag_economy_flag }
+				575 = { set_state_flag = SOV_gulag_economy_flag }
+				576 = { set_state_flag = SOV_gulag_economy_flag }
+				577 = { set_state_flag = SOV_gulag_economy_flag }
+				580 = { set_state_flag = SOV_gulag_economy_flag }
+
+				if = {
+					limit = { SOV = { is_ai = yes } }
+					delete_unit_template_and_units = {
+						division_template = "Motostrelkovaya Diviziya"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Strelkovaya Diviziya Special"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Kavaleriyskaya Diviziya" 
+					}
+					delete_unit_template_and_units = {
+						division_template = "NKVD Pogranichnaya Diviziya"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Mekhanizirovaniy Korpus"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Mekhanizirovaniy Brigada"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Vozdushno-Desantnaya Brigada"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Gornostrelkovaya Diviziya"
+					}
+
+					add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 15000 producer = SOV }
+					add_equipment_to_stockpile = { type = support_equipment_1 amount = 8000 producer = SOV }
+					add_equipment_to_stockpile = { type = pack_artillery_equipment_1 amount = 1500 producer = SOV }
+					add_equipment_to_stockpile = { type = horse_equipment_0 amount = 8000 producer = SOV } 
+					add_equipment_to_stockpile = { type = armored_cars_equipment_1 amount = 1500 producer = SOV } 
+					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 3000 producer = SOV } 
+					add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 500 producer = SOV } 
+					load_oob = "SOV_tanks_ai"
+				}
+			}
+			USA = {
+				country_event = { id = usa.31 days = 20 }
+			}
+			ENG = {
+				if = {
+					limit = { SOV = { is_ai = yes } }
+					delete_unit_template_and_units = {
+						division_template = "Cavalry Brigade"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Army Tank Brigade"
+					}
+				}	
+			}
+			ENG = {
+				country_event = { id = britain.16 days = 20 } 
+			}
+			if = {
+				limit = { GER = { is_ai = yes } }
+				GER = { add_ideas = ger_ai }
+			}
+			if = {
+				limit = { JAP = { is_ai = yes } }
+				JAP = { add_ideas = jap_ai }
+			}
+		    if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				IRQ = {
+					give_resource_rights = { receiver = ENG state = 291 }
+					give_resource_rights = { receiver = ENG state = 676 }
+				}
+				MAN = {
+					give_resource_rights = { receiver = JAP state = 716 }
+					give_resource_rights = { receiver = JAP state = 328 }
+				}
+				SIA = {
+					give_resource_rights = { receiver = JAP state = 724 }
+				}
+			}
+			#Mexican oil concessions
+		    if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				MEX = {
+					give_resource_rights = { receiver = ENG state = 476 }
+					give_resource_rights = { receiver = ENG state = 477 }
+					give_resource_rights = { receiver = USA state = 479 }
+					give_resource_rights = { receiver = USA state = 480 }
+				}
+			}
+		}
+	}
+	# country 		
 	on_new_term_election = {
-		random_events = {
-			100 = usa.6
-			100 = usa.7
-			100 = usa.8
-			100 = usa.9
-			100 = usa.10
-			100 = usa.11
-			100 = usa.12
-		}
-		random_events = {
-			100 = spain.9
-			100 = lar_spain.1
-		}
 		random_events = {
 			100 = election.2
 			100 = election.3
@@ -37,15 +162,15 @@ on_actions = {
 		}
 	}
 
-	# country, FROM = ace, PREV = enemy ace
+	# country, FROM = ace, PREV = enemy ace 
 	# This event fires twice, once for each ace.
 	on_aces_killed_each_other = {
 		random_events = {
 			100 = aces_killed_each_other.1
 		}
 	}
-
-	# country, FROM = our ace,
+	
+	# country, FROM = our ace, 
 	# PREV = enemy ace, has killed FROM
 	on_ace_killed_by_ace = {
 		random_events = {
@@ -53,7 +178,7 @@ on_actions = {
 		}
 	}
 
-	# country, FROM = our ace,
+	# country, FROM = our ace, 
 	# PREV = enemy ace, killed by FROM
 	on_ace_killed_other_ace = {
 		random_events = {
@@ -61,26 +186,23 @@ on_actions = {
 		}
 	}
 
-	# our ace is killed by no name
 	# country, FROM = ace
 	on_ace_killed = {
 		random_events = {
 			100 = ace_died.1
 		}
 	}
-
 	# our ace died in accident
 	# country, FROM = ace
 	on_ace_killed_on_accident = {
-
+	
 	}
-
+	
 	# enemy ace is killed by our non name
 	# country, FROM = enemy ace
 	on_non_ace_killed_other_ace = {
-
+	
 	}
-
 	# During justifying wargoals
 	# triggered daily, so make sure there is a sink somewhere not firing events
 	# country, FROM = target nation
@@ -135,13 +257,13 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					FROM = { state = 378 }
+					FROM = { state = 378 }					
 				}
 				set_country_flag = achievement_has_nuked_california
 			}
 			if = {
 				limit = {
-					FROM = { is_core_of = AST }
+					FROM = { is_core_of = AST }					
 				}
 				set_country_flag = achievement_AST_nuke_self
 			}
@@ -178,7 +300,7 @@ on_actions = {
 				}
 				set_global_flag = JAP_nuke_1
 			}
-
+			
 			news_event = { id = nuke_dropped.2 days = 1}
 			news_event = { id = nuke_dropped.3 days = 1}
 			news_event = { id = nuke_dropped.4 days = 1}
@@ -194,6 +316,11 @@ on_actions = {
 		}
 		random_events = {
 			100 = nuke_dropped.0
+		}
+	}
+
+	on_monthly = {
+		effect = {
 		}
 	}
 
@@ -214,23 +341,17 @@ on_actions = {
 			}
 		}
 	}
-
+	
 	on_leave_faction = {
 		effect = {
 			if = {
-				limit = {
-					has_country_flag = TO_joined_brussels_treaty
-				}
-				clr_country_flag = TO_joined_brussels_treaty
-			}
-			if = {
-				limit = {
+				limit = { 
 					AND = {
-						tag = CAN
+						tag = CAN 	
 						NOT = { has_dlc = "Together for Victory" }
 					}
 				}
-				abandon_colony_tag = yes
+				drop_cosmetic_tag = yes
 			}
 			FROM = {
 				add_opinion_modifier = {
@@ -238,7 +359,7 @@ on_actions = {
 					target = ROOT
 					days = 365
 				}
-
+			
 				add_opinion_modifier = {
 					modifier = faction_traitor_trade
 					target = ROOT
@@ -302,14 +423,14 @@ on_actions = {
 					original_tag = SOV
 					has_government = communism
 					FROM = {
-						has_idea = anti_soviet_pact
+						has_idea = anti_soviet_pact 
 					}
 				}
 				FROM = {
 					remove_ideas = anti_soviet_pact
 				}
 			}
-
+	
 			# Sunset invasion check
 			if = {
 				limit = {
@@ -334,7 +455,7 @@ on_actions = {
 					}
 				}
 				set_country_flag = achievement_failed_sunset_invasion
-			}
+			}			
 		}
 	}
 
@@ -345,7 +466,7 @@ on_actions = {
 			#Remove anti_soviet_pact if joining commie Soviet in faction
 			if = {
 				limit = {
-					has_idea = anti_soviet_pact
+					has_idea = anti_soviet_pact 
 					FROM = {
 						original_tag = SOV
 						has_government = communism
@@ -379,7 +500,6 @@ on_actions = {
 				}
 				set_country_flag = achievement_failed_sunset_invasion
 			}
-
 			# Romania shouldn't declare war on Bulgaria on historical mode, if both are going to join the Axis
 			if = {
 				limit = {
@@ -394,100 +514,76 @@ on_actions = {
 						value = 200
 					}
 				}
-			}
+			}																						 
 		}
 	}
 
 	#FROM is war target
 	on_declare_war = {
 		effect = {
-			#make sure Germany doesn't force ideology on France for the achievement
 			if = {
 				limit = {
-					FROM = { original_tag = FRA }
-					tag = GER
+					FROM = { tag = SOV }
+					ROOT = { tag = GER }
 				}
-				set_country_flag = invalid_for_danzig_achievement
-			}
-			#make sure warlords don't use the same guy
-			if = {
-				limit = {
-					OR = {
-						original_tag = YUN
-						original_tag = SIK
-						original_tag = GXC
-						original_tag = SHX
-						original_tag = XSM
+				GER = {
+					swap_ideas = {
+						remove_idea = general_staff
+						add_idea = general_staff2
 					}
 				}
-				if = {
-					limit = {
-						ROOT = {
-							original_tag = FROM
-							NOT = { has_country_flag = warlord_replaced }
+			}
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+					OR = {
+						AND = {
+							has_naval_treaty_trigger = yes
+							FROM = {
+								is_major = yes
+							}
+						}
+						AND = {
+							is_major = yes
+							FROM = {
+								has_naval_treaty_trigger = yes
+							}
 						}
 					}
-					ROOT = {
-						retire_country_leader = yes
-						set_country_flag = warlord_replaced
-					}
-					FROM = {
-						warlord_rule_all_parties = yes
-					}
 				}
-			}
-			#make sure Dominions lose the dominion tag
-			if = {
-				limit = {
-					OR = {
-						original_tag = CAN
-						original_tag = RAJ
-						original_tag = MAL
-						original_tag = INS
-					}
+				every_country = {
+					limit = { has_naval_treaty_trigger = yes }
+					remove_naval_treaty_effect = yes
+					#MTG_TODO_GABRIEL: news event
 				}
-				if = {
-					limit = {
-						ROOT = {
-							original_tag = FROM
-						}
-					}
-					abandon_colony_tag = yes
-					FROM = {
-						abandon_colony_tag = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					FROM = {
-						OR = {
-							has_idea = american_protection_drift_democratic
-							has_idea = american_protection_drift_communism
-							has_idea = american_protection_drift_fascism
-							has_idea = american_protection_defence_democratic
-							has_idea = american_protection_defence_communism
-							has_idea = american_protection_defence_fascism
-						}
-					}
-					NOT = {
-						tag = USA
-						is_in_faction_with = USA # I guess USA will not go to war with someone they are in faction with
-						has_war_with = USA
-						#USA = { has_war_with = FROM } Should USA enforce peace in a nation it is already at war with?
-					}
-					OR = {
-						has_idea = american_protection_drift_democratic
-						has_idea = american_protection_drift_communism
-						has_idea = american_protection_drift_fascism
-						has_idea = american_protection_defence_democratic
-						has_idea = american_protection_defence_communism
-						has_idea = american_protection_defence_fascism
-					}
-				}
-				FROM = { country_event = { id = usa.16 days = 1 } }
-			}
+	        }
+			
 
+			## Soviet war after purge
+			if = {
+				limit = {
+					OR = {
+						FROM = { tag = SOV }
+						ROOT = { tag = SOV }
+					}
+					SOV = {
+						NOT = { has_country_flag = SOV_war_since_purge }
+						has_completed_focus = SOV_great_purge
+					}
+				}
+				SOV = { set_country_flag = SOV_war_since_purge }
+			}							
+            #Greece if ita or ger is a  player
+			if = {
+				limit = {
+				OR = {
+					FROM = { tag = GRE }
+					ROOT = { tag = GRE }
+				}
+				OR = { ITA = { is_ai = no } GER = { is_ai = no } }			
+			    }		
+				GRE = { add_ideas = GRE_spirit_of_spartans }
+			}
 			# Remove pact opinion modifiers if at war with Germany
 			if = {
 				limit = {
@@ -506,36 +602,75 @@ on_actions = {
 					remove_ideas = anti_soviet_pact
 				}
 			}
+			if = {
+				limit = {
+					FIN = { has_completed_focus = FIN_abandoned }
+					ROOT = {
+						TAG = FIN
+					}
+					FROM = {
+						TAG = SOV
+					}
+				}
+				FIN = { complete_national_focus = FIN_continuation_war }	 
+			}
+			if = {
+				limit = {
+					FIN = { has_completed_focus = FIN_abandoned }
+					ROOT = {
+						TAG = SOV
+					}
+					FROM = {
+						TAG = FIN
+					}
+				}
+				FIN = { complete_national_focus = FIN_continuation_war }	 
+			}
 			#Germany has started a war - allies should try to contain Germany
 			if = {
 				limit = {
 					ROOT = {
 						TAG = GER
 					}
-					NOT = {
-						has_global_flag = GER_has_started_war
+					FROM = {
+						TAG = POL
 					}
 				}
-				set_global_flag = GER_has_started_war
+				ENG = { country_event = { id = britain.38 days = 7 } }		
+				SAF = { country_event = { id = britain.38 days = 7 } }	
+				CAN = { country_event = { id = britain.38 days = 7 } }
+				AST = { country_event = { id = britain.38 days = 7 } }
+				NZL = { country_event = { id = britain.38 days = 7 } }
+				RAJ = { country_event = { id = britain.38 days = 7 } }		
+				FRA = {
+					add_timed_idea = {
+						idea = FRA_saarland
+						days = 14
+					}
+				}
 			}
-
-
-
-			#Call Anti-Soviet pact members to war
 			if = {
 				limit = {
 					ROOT = {
-						original_tag = SOV
-						has_government = communism
+						TAG = GER
 					}
+					FROM = {
+						TAG = POL
+					}
+					NOT = { has_global_flag = sov_yes_pact }
+				}
+				SOV = { country_event = { id = germany.248 days = 3 } }				
+			}			
+			#Call Anti-Soviet pact members to war
+			if = {
+				limit = {
+					ROOT = { tag = SOV }
 					FROM = { has_idea = anti_soviet_pact }
 				}
-				save_event_target_as = anti_soviet_pact_aggressor
 				FROM = {
 					country_event = { id = germany.84 days = 1 }
 				}
 			}
-
 			#Remove MEFO bills if Germany goes to war
 			if = {
 				limit = {
@@ -614,31 +749,10 @@ on_actions = {
 					}
 				}
 			}
-
-			if = {
-				limit = {
-					FROM = {
-						has_civil_war = yes
-						original_tag = SPR
-					}
-					has_civil_war = yes
-					original_tag = SPR
-
-				}
-				random_country = {
-					limit = {
-						original_tag = FRA
-						OR = {
-							has_completed_focus = FRA_right_wing_rhetoric
-							has_completed_focus = FRA_utilize_the_leagues
-						}
-					}
-					country_event = { id = france.32 }
-				}
-			}
+		
 		}
 	}
-
+	
 	# When a new faction is formed
 	on_faction_formed = {
 		effect = {
@@ -646,96 +760,216 @@ on_actions = {
 		}
 	}
 
+	on_war = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						FROM = {
+							has_idea = free_trade 
+						}					
+						ROOT = {
+							has_idea = free_trade 
+						}
+					}
+				}
+				add_ideas = export_focus
+			}
+			if = {
+				limit = {
+					OR = {
+						FROM = {
+							OR = {
+								has_idea = disarmed_nation 
+								has_idea = volunteer_only
+							}
+						}					
+						ROOT = {
+						    OR = {
+								has_idea = disarmed_nation 
+								has_idea = volunteer_only
+							}
+						}
+					}
+				}
+				add_ideas = limited_conscription
+			}		
+		}	
+	}	
 	# ROOT is capitulated country, FROM is winner
 	on_capitulation = {
 		effect = {
 			if = {
 				limit = {
-					tag = SOV
-					FIN = {
-						has_war_with = SOV
-						is_in_faction = no
-						is_ai = no
-						controls_state = 219
-						any_war_score > 14
-					}
-					NOT = { has_global_flag = finnish_him_achievement_flag }
+					ROOT = { original_tag = JAP }
+					USA = { has_idea = USA_jap_is_ai }
 				}
-				set_global_flag = finnish_him_achievement_flag
+				USA = { remove_ideas = USA_jap_is_ai }
 			}
 			if = {
 				limit = {
-					tag = GER
-					FROM = {
-						tag = SOV
-					}
-					NOT = { has_global_flag = fall_of_berlin_sov }
+					ROOT = { original_tag = POL }
+					FROM = { original_tag = GER }
 				}
-				play_victory_parade_effect = yes
+				FRA = {
+					add_timed_idea = {
+						idea = FRA_phoney 
+						days = 180 
+					}
+				}
 			}
 			if = {
 				limit = {
-					tag = GER
+					ROOT = { original_tag = POL }
+					FROM = { original_tag = HUN }
 				}
-				8 = {
-					if = {
-						limit = { is_core_of = ROOT }
-						remove_core_of = ROOT
+				FRA = {
+					add_timed_idea = {
+						idea = FRA_phoney
+						days = 180 
 					}
 				}
-				28 = {
-					if = {
-						limit = { is_core_of = ROOT }
-						remove_core_of = ROOT
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = POL }
+					FROM = { original_tag = ROM }
+				}
+				FRA = {
+					add_timed_idea = {
+						idea = FRA_phoney 
+						days = 180 
 					}
 				}
-				807 = {
-					if = {
-						limit = { is_core_of = ROOT }
-						remove_core_of = ROOT
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = POL }
+					FROM = { original_tag = CZE }
+				}
+				FRA = {
+					add_timed_idea = {
+						idea = FRA_phoney 
+						days = 180 
 					}
 				}
-				85 = {
-					if = {
-						limit = { is_core_of = ROOT }
-						remove_core_of = ROOT
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = DEN }
+					FROM = { original_tag = GER }
+					GER = { is_ai = yes }
+				}
+				GER = { load_oob = "GER_invade_Norway" }
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = NOR }
+					FROM = { original_tag = GER }
+				}
+				FRA = {
+					add_timed_idea = {
+						idea = French_Malaise 
+						days = 365 
+					}
+					remove_ideas = FRA_phoney
+				}
+				hidden_effect = {
+					play_song = "Boum (Charles Trenet)"
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = NOR }
+					FROM = { original_tag = ROM }
+				}
+				FRA = {
+					add_timed_idea = {
+						idea = French_Malaise 
+						days = 365 
 					}
 				}
+				hidden_effect = {
+					play_song = "Boum (Charles Trenet)"
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = NOR }
+					FROM = { original_tag = HUN }
+				}
+				FRA = {
+					add_timed_idea = {
+						idea = French_Malaise 
+						days = 365 
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = NOR }
+					FROM = { original_tag = CZE }
+				}
+				FRA = {
+					add_timed_idea = {
+						idea = French_Malaise 
+						days = 365 
+					}
+				}
+				hidden_effect = {
+					play_song = "Boum (Charles Trenet)"
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = NOR }
+					FROM = { original_tag = ITA }
+				}
+				FRA = {
+					add_timed_idea = {
+						idea = French_Malaise 
+						days = 365 
+					}
+				}
+				hidden_effect = {
+					play_song = "Boum (Charles Trenet)"
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = INS }
+					FROM = { original_tag = JAP }
+				}
+				country_event = { hours = 6 id = news.471 }
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = RAJ }
+					FROM = { original_tag = JAP }
+				}
+				USA = { add_ideas = raj_capitulated }
+				USA =  { country_event = { id = usa.67 } }
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = AST }
+					FROM = { original_tag = JAP }
+				}
+				USA = { add_ideas = ast_capitulated }
+				USA =  { country_event = { id = usa.71 }}
 			}
 			if = {
 				limit = {
 					NOT = { original_tag = GER }
 					NOT = { has_government = fascism }
-					has_civil_war = no
-					NOT = {
-						AND = {
-							FROM = {
-								original_tag = SPR
-							}
-							original_tag = SPR
-						}
-					}
+					NOT = { has_civil_war = yes }
 				}
-				news_event = { id = country_capitulated.0 days = 0 }
 			}
+			news_event = { id = country_capitulated.0 days = 0 }
 			if = {
-				limit = { tag = FRA }
-				set_global_flag = FRA_already_surrendered
-				set_variable = { global.FRA_capitulation_days = global.num_days }
-			}
-			if = {
-				limit = {
-					FROM = { tag = JAP }
-					ROOT = { tag = CHI }
-				}
-				JAP = { JAP_intervene_in_china_remove = yes }
-			}
-
-			if = {
-				limit = {
+				limit = { 
 					original_tag = POL
 					has_government = neutrality
-					NOT = { has_completed_focus = POL_fulfil_fifth_of_november }
 				}
 				retire_country_leader = yes
 			}
@@ -745,51 +979,373 @@ on_actions = {
 				}
 				remove_ideas = YUG_idea_economic_aid
 			}
-			if = {
-				limit = {
-					original_tag = DEN
-					any_country = {
-						OR = {
-							tag = ROOT
-							is_in_faction_with = ROOT
-						}
-						100 = { is_controlled_by = PREV }
-					}
+			if =  { #bug fix to central africa flipping to GER on BEL capitulation
+                limit = {
+                    ROOT = { tag = BEL is_in_faction = yes }
+                    FROM = { is_in_faction_with = GER }
+                }
 
+                if = { limit = { 295 = { CONTROLLER = { is_in_faction_with = GER } } }
+                    BEL = { set_state_controller = 295 }
+                }
+
+                if = { limit = { 538 = { CONTROLLER = { is_in_faction_with = GER } } }
+                    BEL = { set_state_controller = 538 }
+                }
+
+                if = { limit = { 718 = { CONTROLLER = { is_in_faction_with = GER } } }
+                    BEL = { set_state_controller = 718 }
+                }
+
+                if = { limit = { 768 = { CONTROLLER = { is_in_faction_with = GER } } }
+                    BEL = { set_state_controller = 768 }
+                }
+				if = { limit = { 769 = { CONTROLLER = { is_in_faction_with = GER } } }
+                    BEL = { set_state_controller = 769 }
+                }
+            }
+
+			if =  { #AA Line Peace 
+                limit = {
+                    ROOT = { original_tag = "SOV" }
+                    FROM = { is_in_faction_with = GER }
+                }
+				# German Occupation Zone
+
+				SOV = {
+					white_peace = GER	
+					news_event = { id = news.4 days = 5 }		
+					diplomatic_relation = { country = GER relation = non_aggression_pact }
+			
 				}
-				country_event = { id = wtt_denmark.1 days = 1 }
-			}
-			if = {
-				limit = {
-					original_tag = FRA
-					has_government = democratic
-					NOT = { has_global_flag = achievement_france_surrender } #might as well use the achievement flag to check if france.10 fired
-					16 = { is_controlled_by = GER } # Don't fire if someone else is the occupier of Paris
-					is_subject = no
-					is_in_faction_with = ENG
-					has_war_with = GER
+
+				GER = {
+					set_country_flag = GER_victory_over_the_soviet_union
+					diplomatic_relation = { country = SOV relation = non_aggression_pact }
 				}
-				# Revoke all guarantees
-				every_other_country = {
+
+				FIN = {
+					transfer_state = 146
+					transfer_state = 216
+					transfer_state = 215
+					transfer_state = 147
+					transfer_state = 213
+				}
+
+				PER = {
+					transfer_state = 419
+					transfer_state = 420 
+					transfer_state = 226
+					transfer_state = 418
+					transfer_state = 416 
+				}
+
+				if = {
 					limit = {
-						is_guaranteed_by = ROOT
+						ROM = { is_in_faction_with = GER }
 					}
-					ROOT = {
-						diplomatic_relation = {
-							country = PREV
-							relation = guarantee
-							active = no
+					ROM = {
+						transfer_state = 80
+						transfer_state = 78 
+						transfer_state = 766 
+					}
+					else = {
+						GER = {
+							transfer_state = 80
+							transfer_state = 78 
+							transfer_state = 766 
 						}
 					}
 				}
-				country_event = france.10
+
+				GER = {
+					transfer_state = 208
+					transfer_state = 209
+					transfer_state = 210
+					transfer_state = 242
+					transfer_state = 243
+					transfer_state = 224
+					transfer_state = 220
+					transfer_state = 240
+					transfer_state = 260
+					transfer_state = 245
+					transfer_state = 218
+					transfer_state = 238
+					transfer_state = 237
+					transfer_state = 236
+					transfer_state = 247
+					transfer_state = 248
+					transfer_state = 223
+					transfer_state = 254
+					transfer_state = 256
+					transfer_state = 250
+					transfer_state = 195
+					transfer_state = 398
+					transfer_state = 137
+					transfer_state = 651
+
+					transfer_state = 217
+					transfer_state = 265
+					transfer_state = 239
+					transfer_state = 257
+					transfer_state = 258
+					transfer_state = 222
+					transfer_state = 205
+					transfer_state = 219
+					transfer_state = 265
+					transfer_state = 246
+					transfer_state = 263
+					transfer_state = 244
+					transfer_state = 264
+					transfer_state = 351
+
+					transfer_state = 253
+					transfer_state = 252
+					transfer_state = 255
+					transfer_state = 239
+					transfer_state = 401
+					transfer_state = 407
+					transfer_state = 406
+					transfer_state = 652
+					transfer_state = 251
+					transfer_state = 249
+					transfer_state = 399
+					transfer_state = 400
+					transfer_state = 397
+					transfer_state = 214
+					transfer_state = 262
+					transfer_state = 229
+					transfer_state = 230
+					transfer_state = 231
+					transfer_state = 232
+					transfer_state = 233
+					transfer_state = 234
+					transfer_state = 235
+					transfer_state = 93
+					transfer_state = 91
+					transfer_state = 89
+					transfer_state = 199
+					transfer_state = 201
+					transfer_state = 198
+					transfer_state = 202
+					transfer_state = 193
+					transfer_state = 192
+					transfer_state = 203
+					transfer_state = 197
+					transfer_state = 225
+					transfer_state = 259
+					transfer_state = 226
+					transfer_state = 196
+					transfer_state = 200
+					transfer_state = 221
+					transfer_state = 228
+					transfer_state = 227
+					transfer_state = 97
+					transfer_state = 94
+					transfer_state = 95
+					transfer_state = 96
+					transfer_state = 194
+					transfer_state = 204
+					transfer_state = 206
+					transfer_state = 207
+					transfer_state = 241
+					transfer_state = 11
+					transfer_state = 784
+					transfer_state = 189
+					transfer_state = 12
+					transfer_state = 190
+					transfer_state = 13
+					transfer_state = 191
+				}		
+			}
+
+			if =  { #fall of france
+                limit = {
+                    ROOT = { tag = FRA is_in_faction_with = ENG }
+                    FROM = { is_in_faction_with = GER }
+                }
+				ENG = {				
+					load_oob = ENG_France_Merchant_fleet 
+					add_timed_idea = { idea = ENG_darkest_hour	days = 365 }
+					news_event = { id = news.44 }	
+				}
+				# German Occupation Zone
+				FRA = {
+					set_cosmetic_tag = FRA_FREE	
+					set_country_flag = free_france			
+					set_capital = { state = 539 }
+					add_ideas = allied_construction_engineers
+					country_event = france.10
+					if = { limit = { has_idea = FRA_disjointed_government}
+					remove_ideas = FRA_disjointed_government }
+					if = { limit = { is_ai = yes }					
+						load_oob = FRA_ai						
+					}
+					
+                    FRA_maurice_gamelin = { remove_unit_leader_role = yes }
+                    FRA_maxime_weygand = { remove_unit_leader_role = yes }
+                    FRA_alphonse_georges = { remove_unit_leader_role = yes }
+					FRA_charles_huntziger = { remove_unit_leader_role = yes }
+					FRA_antoinemariebenoît_besson = { remove_unit_leader_role = yes }
+					FRA_rené_olry = { remove_unit_leader_role = yes }
+					FRA_rené_prioux = { remove_unit_leader_role = yes }
+					FRA_georges_blanchard = { remove_unit_leader_role = yes }
+					FRA_charlesmarie_condé = { remove_unit_leader_role = yes }
+					FRA_paul_legentilhomme = { remove_unit_leader_role = yes }
+				}
+				GER = {
+					set_state_controller = 28
+					set_state_controller = 17
+					set_state_controller = 27
+					set_state_controller = 18
+					set_state_controller = 29
+					set_state_controller = 15
+					set_state_controller = 16
+					set_state_controller = 24
+					set_state_controller = 30
+					set_state_controller = 14
+					set_state_controller = 23
+					set_state_controller = 19
+					set_state_controller = 785		
+					country_event = { days = 7 id = germany.236 }
+					country_event = { days = 7 id = germany.107 }
+					country_event = { days = 2 id = germany.320 }
+					remove_ideas = GER_blitzkrieg
+					remove_ideas = GER_phoney_war
+					every_state = {
+						limit = {has_state_flag = atlantikwall_state}
+						add_dynamic_modifier = {
+							modifier = atlantikwall_5
+						}
+					}
+					ITA = {
+						add_ideas = ITA_atlantikwall_5
+					}
+					every_country = {
+						limit = {
+							NOT = {
+								tag = USA
+							}
+							OR = {
+								tag = ENG
+								is_in_faction_with = ENG
+							}
+						}
+						add_ideas = ENG_atlantikwall_5
+					}
+					set_country_flag = GER_atlantikwall_5
+				}		
+				EFR = {
+					add_state_core = 20
+					add_state_core = 21
+					add_state_core = 22
+				    add_state_core = 25
+					add_state_core = 26
+					add_state_core = 31
+					add_state_core = 32
+					add_state_core = 33
+					add_state_core = 1
+					add_state_core = 735
+					
+					transfer_state = 26
+					transfer_state = 22
+					transfer_state = 31
+					transfer_state = 25
+					transfer_state = 20
+					transfer_state = 33
+					transfer_state = 1
+					transfer_state = 21
+					transfer_state = 735
+					transfer_state = 32
+
+					transfer_state = 677
+					transfer_state = 680
+					transfer_state = 554
+					transfer_state = 458
+					transfer_state = 459
+					transfer_state = 460
+					transfer_state = 461
+					transfer_state = 462
+				
+					transfer_state = 665
+					transfer_state = 671
+					transfer_state = 670
+					transfer_state = 741
+					transfer_state = 286
+					transfer_state = 513
+					transfer_state = 553
+					set_capital = { state = 26 }
+					remove_ideas = EFR_war
+					diplomatic_relation = { country = ENG relation = non_aggression_pact }	
+					diplomatic_relation = { country = ENG relation = military_access }
+                    diplomatic_relation = { country = FRA relation = military_access }					
+					diplomatic_relation = { country = FRA relation = non_aggression_pact }
+					diplomatic_relation = { country = SAF relation = non_aggression_pact }
+					diplomatic_relation = { country = CAN relation = non_aggression_pact }
+					diplomatic_relation = { country = RAJ relation = non_aggression_pact }
+					diplomatic_relation = { country = AST relation = non_aggression_pact }
+					diplomatic_relation = { country = NZL relation = non_aggression_pact }
+					diplomatic_relation = { country = GER relation = non_aggression_pact }					
+					every_state = {
+						limit = {
+							NOT = {
+								is_core_of = FRA
+							}
+							is_controlled_by = EFR
+						}
+						add_claim_by  = FRA
+					}
+					28 = {
+						remove_core_of = EFR
+					}
+				}
 			}
 			if = {
 				limit = {
-					original_tag = GER
-					has_government = fascism
+					tag = POL
+					has_global_flag = sov_yes_pact
+		            SOV = { exists = yes }
+		            NOT =  { GER = { has_war_with = SOV } }
 				}
-				set_global_flag = germany_lost_the_war
+				GER = { country_event = germany.14 } 
+			}			
+			if = {
+				limit = {
+					tag = DEN
+				}
+				ENG = { country_event = usa.48 } 
+			}
+			if = {
+				limit = {
+					tag = NOR
+				}
+				ENG = { load_oob = ENG_Norway_Merchant_fleet } 
+			}
+         	if = {
+				limit = {
+					original_tag = BEL
+					BEL = { has_war_with = GER }
+					BEL = { is_in_faction_with = ENG } 
+		            ENG = { has_capitulated = no }
+				}
+				#ENG = {
+				#	set_autonomy = { target = BEL autonomy_state = autonomy_colony }
+				#}
+				BEL = {
+					load_oob = BEL_ai					
+				}
+			}
+         	if = {
+				limit = {
+					original_tag = HOL
+					HOL = { has_war_with = GER }
+					HOL = { is_in_faction_with = ENG } 
+		            ENG = { has_capitulated = no }
+				}
+				#ENG = {
+				#	set_autonomy = { target = HOL autonomy_state = autonomy_dominion }
+				#	set_autonomy = { target = INS autonomy_state = autonomy_dominion }
+				#}
 			}
 		}
 	}
@@ -797,6 +1353,20 @@ on_actions = {
 	# ROOT is previously capitulated country
 	on_uncapitulation = {
 		effect = {
+			if = {
+				limit = {
+					ROOT = { original_tag = RAJ }
+				}
+				USA = { remove_ideas = raj_capitulated }
+				USA =  { country_event = { id = usa.68 } }
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = AST }
+				}
+				USA = { remove_ideas = ast_capitulated }
+				USA =  { country_event = { id = usa.72 }}
+			}
 			if = {
 				limit = {
 					original_tag = FRA
@@ -807,9 +1377,9 @@ on_actions = {
 			}
 		}
 	}
-
+    
 	on_government_change = {
-		effect = {
+		effect = {			
 			#Make sure Soviet can always create factions
 			if = {
 				limit = {
@@ -877,11 +1447,18 @@ on_actions = {
 					remove_ideas = anti_nazi_coup
 				}
 			}
+			if = {
+				limit = { has_government = fascism }
+				if = {
+					limit = { has_idea = free_trade }
+					add_ideas = export_focus
+				}
+			}
 			#Replace the following two with events for SOV if they are not communist.
 			#if = {
-			#	limit = {
+			#	limit = { 
 			#		OR = {
-			#			has_idea = trotskyite_plot
+			#			has_idea = trotskyite_plot 
 			#			has_idea = trotskyite_plot_purged
 			#		}
 			#		NOT = {
@@ -902,7 +1479,6 @@ on_actions = {
 					original_tag = ROOT
 				}
 				set_politics = {
-					ruling_party = democratic
 					elections_allowed = yes
 				}
 			}
@@ -916,46 +1492,8 @@ on_actions = {
 			#End of SCW
 			if = {
 				limit = {
-					NOT = { has_dlc = "La Resistance" }
 					FROM = {
 						original_tag = SPR
-					}
-					ROOT = {
-						original_tag = SPR
-						has_government = fascism
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							is_historical_focus_on = no
-							has_completed_focus = SPA_supremacy_of_the_communion
-						}
-					}
-					add_timed_idea = { idea = SPA_recovering_from_civil_war days = 2190 }
-				}
-				if = {
-					limit = {
-						is_historical_focus_on = yes
-						NOT = {
-							has_completed_focus = SPA_supremacy_of_the_communion
-						}
-					}
-					add_ideas = SPA_recovering_from_civil_war #keep the spirit on historical mode, keeping them out of the war
-				}
-			}
-			#End of SCW
-			if = {
-				limit = {
-					FROM = {
-						original_tag = SPR
-					}
-					ROOT = {
-						original_tag = SPR
-						OR = {
-							has_government = democratic
-							has_government = communism
-						}
 					}
 				}
 				ROOT = {
@@ -964,10 +1502,9 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					has_government = democratic
+					has_government = democratic			
 				}
 				set_politics = {
-					ruling_party = democratic
 					elections_allowed = yes
 				}
 			}
@@ -980,44 +1517,11 @@ on_actions = {
 					}
 					original_tag = GER
 					has_government = neutrality
-					NOT = { is_subject_of = HOL }
 				}
 				set_global_flag = { flag = civil_war_olympics value = 1 days = 30 }
 				country_event = { id = wtt_germany.18 days = 1 }
 			}
-			#End of US civil war
-			if = {
-				limit = {
-					original_tag = USA
-					OR = {
-						has_government = neutrality
-						has_government = fascism
-					}
-				}
-				news_event = { id = mtg_news.7 days = 4 random_days = 5 }
-			}
-			#End of Balkan war
-			if = {
-				limit = {
-					has_dlc = "Death or Dishonor"
-					original_tag = YUG
-				}
-				every_other_country = {
-					limit = {
-						has_country_flag = yugoslav_puppet_flag
-					}
-					white_peace = PREV
-					PREV = { puppet = PREV }
-					set_autonomy = { target = THIS autonomy_state = autonomy_integrated_puppet }
-				}
-				if = {
-					limit = {
-						FROM = { has_focus_tree = yugoslavian_focus }
-					}
-					load_focus_tree = { tree = yugoslavian_focus keep_completed = yes }
-					unlock_national_focus = YUG_end_the_regency
-				}
-			}
+
 			#End of ideology Civil War
 			if = {
 				limit = {
@@ -1027,26 +1531,12 @@ on_actions = {
 				set_country_flag = { flag = won_ideology_civil_war value = 1 days = 365 }
 				country_event = { id = generic.11 days = 1 }
 			}
-			if = {
-				limit = {
-					original_tag = BUL
-					has_focus_tree = generic_focus
-				}
-				if = {
-					limit = { has_idea = BUL_second_national_catastrophe }
-					remove_ideas = BUL_second_national_catastrophe
-				}
-				if = {
-					limit = { has_idea = BUL_second_national_catastrophe_02 }
-					remove_ideas = BUL_second_national_catastrophe_02
-				}
-			}
 		}
 	}
 
 	#used when puppeting in a peace conference
 	#ROOT = nation being puppeted, FROM = overlord
-
+	
 	on_puppet = {
 		effect = {
 			if = {
@@ -1057,34 +1547,21 @@ on_actions = {
 						original_tag = GER
 					}
 					has_government = communism
-					OR = {
-						has_country_leader = { name = "Wilhelm Pieck" }
-						has_country_leader = { character = GER_wilhelm_pieck }
-					}
+					has_country_leader = { name = "Wilhelm Pieck" }
 					FROM = {
 						original_tag = SOV
 						has_government = communism
-						has_country_leader = { character = SOV_iosif_stalin } # Would look silly if Trotsky released Stalin's Puppet
+						has_country_leader = { name = "Joseph Stalin" } # Would look silly if Trotsky released Stalin's Puppet
 					}
 				}
 				add_country_leader_trait = stalins_puppet
-			}
-			if = {
-				limit = {
-					NOT = { has_elections = yes }
-					has_government = democratic
-				}
-				set_politics = {
-					ruling_party = democratic
-					elections_allowed = yes
-				}
-			}
+			}	
 		}
 	}
-
+	
 	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
 	#ROOT = nation being released, FROM = overlord
-
+	
 	on_release_as_puppet = {
 		effect = {
 			if = {
@@ -1095,2292 +1572,29 @@ on_actions = {
 						original_tag = GER
 					}
 					has_government = communism
-					OR = {
-						has_country_leader = { name = "Wilhelm Pieck" }
-						has_country_leader = { character = GER_wilhelm_pieck }
-					}					FROM = {
+					has_country_leader = { name = "Wilhelm Pieck" }
+					FROM = {
 						original_tag = SOV
 						has_government = communism
-						has_country_leader = { character = SOV_iosif_stalin } # Would look silly if Trotsky released Stalin's Puppet
+						has_country_leader = { name = "Joseph Stalin" } # Would look silly if Trotsky released Stalin's Puppet
 					}
 				}
 				add_country_leader_trait = stalins_puppet
 			}
-			if = {
-				limit = {
-					NOT = { has_elections = yes }
-					has_government = democratic
-				}
-				set_politics = {
-					ruling_party = democratic
-					elections_allowed = yes
-				}
-			}
 		}
 	}
-
-	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
-	on_annex = {
+	
+	on_unit_leader_created = {
 		effect = {
-			every_country = {
-				limit = {
-					OR = {
-						original_tag = RAJ
-						original_tag = CAN
-						original_tag = MAL
-						original_tag = INS
-					}
-					is_puppet = no
-				}
-				abandon_colony_tag = yes
-			}
 		}
 	}
-
-	#Not run on a specific country.
-	on_startup = {
+	
+	on_unit_leader_level_up = {
 		effect = {
-			GER = { #Axis and Poland just didn't get along
-				add_ai_strategy = {
-				   type = alliance
-				   id = POL
-				   value = -2000
-				}
-			}
-			POL = {
-				add_ai_strategy = {
-				   type = alliance
-				   id = GER
-				   value = -2000
-				}
-			}
-			GER = {
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = GER_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = GER_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						40 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							GER = {
-								set_country_flag = GER_AI_RANDOM_FASCIST
-								set_add_fascist_game_weight_large = yes
-							}
-						}
-						35 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							GER = {
-								set_country_flag = GER_AI_RANDOM_KAISER
-								set_add_unaligned_game_weight_large = yes
-							}
-						}
-						25 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							GER = {
-								set_country_flag = GER_AI_RANDOM_DEMOCRATIC
-								set_add_democratic_game_weight_large = yes
-							}
-						}
-					}
-				}
-			}
-			ITA = {
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = ITA_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = ITA_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						35 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							ITA = {
-								set_country_flag = ITA_AI_RANDOM_FASCIST_HISTORICAL
-							}
-							set_add_fascist_game_weight_large = yes
-						}
-						25 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							ITA = {
-								set_country_flag = ITA_AI_RANDOM_FASCIST_BALBO
-							}
-							set_add_fascist_game_weight_large = yes
-						}
-						25 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							ITA = {
-								set_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI
-							}
-						}
-						25 = {
-							ITA = {
-								set_country_flag = ITA_AI_RANDOM_MONARCHIST
-							}
-						}
-						15 = {
-							ITA = {
-								set_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY
-							}
-						}
-						20 = {
-							ITA = {
-								set_country_flag = ITA_AI_RANDOM_COMMUNIST_PLAN
-							}
-						}
-						20 = {
-							ITA = {
-								set_country_flag = ITA_AI_RANDOM_DEMOCRATIC_PLAN
-							}
-						}
-					}
-				}
-			}
-			CHI = { #No game weighting here
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = CHI_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = CHI_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						50 = { CHI = { set_country_flag = CHI_AI_RANDOM_HISTORICAL } }
-						50 = { CHI = { set_country_flag = CHI_AI_RANDOM_ALTERNATE } }
-					}
-				}
-			}
-			MAN = {
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = MAN_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = MAN_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						40 = { MAN = { set_country_flag = MAN_AI_RANDOM_OBEDIENCE } }
-						60 = { MAN = { set_country_flag = MAN_AI_RANDOM_INDEPENDENCE } }
-					}
-				}
-			}
-			PRC = {
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = PRC_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = PRC_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						34 = { PRC = { set_country_flag = PRC_AI_RANDOM_HISTORICAL } }
-						33 = { PRC = { set_country_flag = PRC_AI_RANDOM_ALTERNATE_1 } }
-						33 = { PRC = { set_country_flag = PRC_AI_RANDOM_ALTERNATE_2 } }
-					}
-				}
-			}
-			SOV = {
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = SOV_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = SOV_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						50 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL }
-							set_add_communist_weight_small = yes
-						}
-						50 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_OPPOSITION }
-							set_add_communist_weight_small = yes
-						}
-						50 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_OPPOSITION_COOPERATIVE }
-							set_add_communist_weight_small = yes
-						}
-						50 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_OPPOSITION }
-							set_add_communist_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-						}
-						50 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_OPPOSITION_COOPERATIVE }
-							set_add_communist_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-						}
-						50 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_OPPOSITION_COOPERATIVE }
-							set_add_communist_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-						}
-						50 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_TSARIST }
-							set_add_unaligned_game_weight_large = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-						}
-						50 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST }
-							set_add_fascist_game_weight_large = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-						}
-					}
-				}
-			}
-			FRA = {
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = FRA_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = FRA_ai_behavior
-								option = RANDOM
-							}
-						}
-						NOT = { has_dlc = "La Resistance" }
-					}
-					random_list = {
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_country_flag = FRA_AI_COMMUNIST
-							set_add_communist_weight_small = yes
-						}
-						40 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_country_flag = FRA_AI_RANDOM_DEMOCRATIC_ALTERNATE
-							set_add_democratic_game_weight_large = yes
-						}
-						30 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
-							set_add_democratic_game_weight_large = yes
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_country_flag = FRA_AI_FASCIST
-							set_add_fascist_game_weight_large = yes
-						}
-					}
-				}
-			}
-			FRA = {
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = FRA_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = FRA_ai_behavior
-								option = RANDOM
-							}
-						}
-						has_dlc = "La Resistance"
-					}
-					random_list = {
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_country_flag = FRA_AI_COMMUNIST
-							set_add_communist_weight_small = yes
-						}
-						40 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_country_flag = FRA_AI_DEMOCRATIC_ALTERNATE
-							set_add_democratic_game_weight_large = yes
-						}
-						25 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
-							set_add_democratic_game_weight_large = yes
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_country_flag = FRA_AI_FASCIST
-							set_add_fascist_game_weight_large = yes
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							random_list = {
-								35 = { set_country_flag = FRA_AI_ORLEANIST }
-								50 = { set_country_flag = FRA_AI_LEGITIMIST }
-								15 = { set_country_flag = FRA_AI_BONAPARTIST }
-							}
-							set_add_unaligned_game_weight_large = yes
-						}
-					}
-				}
-			}
-			JAP = {
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = JAP_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = JAP_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						40 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							JAP = { set_country_flag = JAP_AI_RANDOM_FASCIST }
-							set_add_fascist_game_weight_large = yes
-						}
-						35 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							JAP = { set_country_flag = JAP_AI_RANDOM_NEUTRALITY }
-							set_add_unaligned_game_weight_large = yes
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							JAP = { set_country_flag = JAP_AI_RANDOM_DEMOCRATIC }
-							set_add_democratic_game_weight_large = yes
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							JAP = { set_country_flag = JAP_AI_RANDOM_COMMUNIST }
-							set_add_communist_weight_small = yes
-						}
-					}
-				}
-			}
-			ROM = {
-				if = {
-					limit = {
-						has_dlc = "Death or Dishonor"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = ROM_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = ROM_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						25 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_country_flag = ROM_AI_RANDOM_BALKAN_DOMINANCE
-							set_add_unaligned_weight_small = yes
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_country_flag = ROM_AI_RANDOM_DEMOCRATIC
-							set_add_democratic_weight_small = yes
-						}
-						40 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_country_flag = ROM_AI_RANDOM_FASCIST_HISTORICAL
-							set_add_fascist_weight_small = yes
-						}
-						25 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_country_flag = ROM_AI_RANDOM_COMMUNIST
-							set_add_communist_weight_small = yes
-						}
-					}
-				}
-			}
-			HUN = {
-				if = {
-					limit = {
-						has_dlc = "Death or Dishonor"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = HUN_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = HUN_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						5 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_country_flag = HUN_AI_RANDOM_COMMUNIST
-							set_add_communist_weight_small = yes
-						}
-						20 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_country_flag = HUN_AI_RANDOM_AUSTRIA_HUNGARY
-							set_add_unaligned_weight_small = yes
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_country_flag = HUN_AI_RANDOM_DEMOCRATIC
-							set_add_democratic_weight_small = yes
-						}
-						40 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_country_flag = HUN_AI_RANDOM_FASCIST_HISTORICAL
-							set_add_fascist_weight_small = yes
-						}
-						25 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_country_flag = HUN_AI_RANDOM_FASCIST_ALTERNATE
-							set_add_fascist_weight_small = yes
-						}
-					}
-				}
-			}
-			CZE = {
-				if = {
-					limit = {
-						has_dlc = "Death or Dishonor"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = CZE_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = CZE_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_country_flag = CZE_AI_RANDOM_COMMUNIST
-							set_add_communist_weight_small = yes
-						}
-						20 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_country_flag = CZE_AI_RANDOM_DEMOCRATIC
-							set_add_democratic_weight_small = yes
-						}
-						30 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_country_flag = CZE_AI_RANDOM_DEMOCRATIC_ALTERNATE
-							set_add_democratic_weight_small = yes
-						}
-						30 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_country_flag = CZE_AI_RANDOM_HISTORICAL
-							set_add_democratic_weight_small = yes
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_country_flag = CZE_AI_RANDOM_FASCIST
-							set_add_fascist_weight_small = yes
-						}
-					}
-				}
-			}
-			YUG = {
-				if = {
-					limit = {
-						has_dlc = "Death or Dishonor"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = YUG_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = YUG_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						20 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_country_flag = YUG_AI_RANDOM_COMMUNIST
-							set_add_communist_weight_small = yes
-						}
-						20 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_country_flag = YUG_AI_RANDOM_DEMOCRATIC
-							set_add_democratic_weight_small = yes
-						}
-						40 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_country_flag = YUG_AI_RANDOM_HISTORICAL
-							set_add_unaligned_weight_small = yes
-						}
-						20 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_country_flag = YUG_AI_RANDOM_FASCIST
-							set_add_fascist_weight_small = yes
-						}
-					}
-				}
-			}
-			AST = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = AST_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = AST_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						15 = { set_country_flag = AST_AI_RANDOM_COMMUNIST }
-						30 = { set_country_flag = AST_AI_RANDOM_DEMOCRATIC_ALTERNATE }
-						40 = { set_country_flag = AST_AI_DEMOCRATIC_HISTORICAL }
-						15 = { set_country_flag = AST_AI_RANDOM_FASCIST }
-					}
-				}
-			}
-			CAN = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = CAN_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = CAN_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						15 = { set_country_flag = CAN_AI_RANDOM_COMMUNIST }
-						30 = { set_country_flag = CAN_AI_RANDOM_DEMOCRATIC_ALTERNATE }
-						40 = { set_country_flag = CAN_AI_DEMOCRATIC_HISTORICAL }
-						15 = { set_country_flag = CAN_AI_RANDOM_FASCIST }
-					}
-				}
-			}
-			SAF = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = SAF_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = SAF_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						25 = { set_country_flag = SAF_AI_RANDOM_COMMUNIST }
-						25 = { set_country_flag = SAF_AI_RANDOM_DEMOCRATIC_ALTERNATE }
-						30 = { set_country_flag = SAF_AI_DEMOCRATIC_HISTORICAL }
-						20 = { set_country_flag = SAF_AI_RANDOM_FASCIST }
-					}
-				}
-			}
-			NZL = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = NZL_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = NZL_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						20 = { set_country_flag = NZL_AI_RANDOM_COMMUNIST }
-						25 = { set_country_flag = NZL_AI_RANDOM_DEMOCRATIC_ALTERNATE }
-						30 = { set_country_flag = NZL_AI_DEMOCRATIC_HISTORICAL }
-						25 = { set_country_flag = NZL_AI_RANDOM_FASCIST }
-					}
-				}
-			}
-			RAJ = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = RAJ_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = RAJ_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						25 = { set_country_flag = RAJ_AI_RANDOM_COMMUNIST }
-						50 = { set_country_flag = RAJ_AI_DEMOCRATIC_HISTORICAL }
-						25 = { set_country_flag = RAJ_AI_RANDOM_FASCIST }
-					}
-				}
-			}
-			POL = {
-				if = {
-					limit = {
-						OR = {
-							has_dlc = "Poland: United and Ready"
-							has_dlc = "No Step Back"
-						}
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = POL_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = POL_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_country_flag = POL_AI_RANDOM_COMMUNIST
-							set_add_communist_weight_small = yes
-						}
-						50 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_country_flag = POL_AI_RANDOM_HISTORICAL
-							set_add_unaligned_weight_small = yes
-						}
-						20 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_country_flag = POL_AI_RANDOM_DEMOCRATIC
-							set_add_democratic_weight_small = yes
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_country_flag = POL_AI_RANDOM_FASCIST
-							set_add_fascist_weight_small = yes
-						}
-						5 = {
-							set_country_flag = POL_AI_RANDOM_FASCIST_INDEPENDENT
-							set_add_fascist_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-						}
-						6 = {
-							set_country_flag = POL_AI_RANDOM_COMMONWEALTH
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-						}
-						6 = {
-							set_country_flag = POL_AI_RANDOM_ROMANIA
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-						}
-						6 = {
-							set_country_flag = POL_AI_RANDOM_HABSBURG
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-						}
-						3 = {
-							set_country_flag = POL_AI_RANDOM_BERMONDT
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-						}
-					}
-				}
-			}
-			ENG = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = ENG_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = ENG_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = ENG_AI_RANDOM_COMMUNIST
-						}
-						25 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_game_weight_large = yes
-							set_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE
-						}
-						30 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_game_weight_large = yes
-							set_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
-						}
-						20 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_game_weight_large = yes
-							set_country_flag = ENG_AI_RANDOM_NEUTRALITY
-						}
-						20 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_game_weight_large = yes
-							set_country_flag = ENG_AI_RANDOM_FASCIST
-						}
-					}
-				}
-			}
-			USA = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = USA_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = USA_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						20 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = USA_AI_RANDOM_COMMUNIST
-						}
-						30 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_game_weight_large = yes
-							set_country_flag = USA_AI_RANDOM_DEMOCRATIC_ALTERNATE
-						}
-						30 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_game_weight_large = yes
-							set_country_flag = USA_AI_DEMOCRATIC_HISTORICAL
-						}
-						20 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_game_weight_large = yes
-							set_country_flag = USA_AI_RANDOM_FASCIST
-						}
-					}
-				}
-			}
-			HOL = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = HOL_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = HOL_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = HOL_AI_RANDOM_COMMUNIST
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = HOL_AI_RANDOM_DEMOCRATIC_ALTERNATE_1
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = HOL_AI_RANDOM_DEMOCRATIC_ALTERNATE_2
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = HOL_AI_RANDOM_DEMOCRATIC_ALTERNATE_3
-						}
-						25 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-							set_country_flag = HOL_AI_RANDOM_NEUTRALITY
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = HOL_AI_RANDOM_FASCIST
-						}
-					}
-				}
-			}
-			MEX = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = MEX_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = MEX_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						25 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = MEX_AI_SECULAR_REPUBLIC
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = MEX_AI_SOCIAL_CATHOLICISM
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = MEX_AI_FASCIST_DICTATORSHIP
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-							set_country_flag = MEX_AI_THEOCRATIC_ORDER
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = MEX_AI_SOVIET_REPUBLIC
-						}
-						15 = {
-							set_country_flag = MEX_AI_CARDENISMO
-						}
-					}
-				}
-			}
-			SPR = {
-				if = {
-					limit = {
-						has_dlc = "La Resistance"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = SPR_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = SPR_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						40 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = SPR_AI_RANDOM_NATIONALIST_HISTORICAL
-						}
-						25 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = SPR_AI_RANDOM_SECOND_REPUBLIC
-						}
-						20 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = SPR_AI_RANDOM_FALANGIST
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-							set_country_flag = SPR_AI_RANDOM_CARLIST
-						}
-						15 = { set_country_flag = SPR_AI_RANDOM_ANARCHIST }
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = SPR_AI_RANDOM_INDEPENDENT_COMMUNIST
-						}
-						20 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = SPR_AI_RANDOM_STALINIST
-						}
-					}
-				}
-			}
-			POR = {
-				if = {
-					limit = {
-						has_dlc = "La Resistance"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = POR_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = POR_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						25 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-							set_country_flag = POR_AI_RANDOM_NEUTRALITY_HISTORICAL
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = POR_AI_RANDOM_FASCIST_AXIS
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = POR_AI_RANDOM_FASCIST_FIFTH_EMPIRE
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-							set_country_flag = POR_AI_RANDOM_NEUTRALITY_MONARCHIST
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = POR_AI_RANDOM_DEMOCRATIC
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = POR_AI_RANDOM_COMMUNIST_COMINTERN
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = POR_AI_RANDOM_COMMUNIST_INDEPENDENT
-						}
-					}
-				}
-			}
-			BUL = {
-				if = {
-					limit = {
-						has_dlc = "Battle for the Bosporus"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = BUL_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = BUL_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						20 = { #What ideology even is this diplomatically
-							set_country_flag = BUL_AI_RANDOM_HISTORICAL
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = BUL_AI_RANDOM_COMMUNIST
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = BUL_AI_RANDOM_COMMUNIST_BALKAN_FEDERATION
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = BUL_AI_RANDOM_FASCIST_AXIS
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = BUL_AI_RANDOM_THE_RETURN_OF_FERDINAND
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = BUL_AI_RANDOM_DEMOCRATIC_LIBERAL
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = BUL_AI_RANDOM_DEMOCRATIC_SOCIALIST
-						}
-					}
-				}
-			}
-			GRE = {
-				if = {
-					limit = {
-						has_dlc = "Battle for the Bosporus"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = GRE_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = GRE_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						20 = {
-							set_country_flag = GRE_AI_RANDOM_NEUTRALITY_HISTORICAL
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-							set_country_flag = GRE_AI_RANDOM_MONARCHIST
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-							set_country_flag = GRE_AI_RANDOM_MONARCHIST_ALTERNATE
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = GRE_AI_RANDOM_COMMUNIST
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = GRE_AI_RANDOM_COMMUNIST_ALTERNATE
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = GRE_AI_RANDOM_DEMOCRATIC
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = GRE_AI_RANDOM_FASCISM
-						}
-						5 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = GRE_AI_RANDOM_FASCISM_ALTERNATE
-						}
-					}
-				}
-			}
-			TUR = {
-				if = {
-					limit = {
-						has_dlc = "Battle for the Bosporus"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = TUR_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = TUR_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						20 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-							set_country_flag = TUR_AI_RANDOM_NEUTRALITY_HISTORICAL
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-							set_country_flag = TUR_AI_RANDOM_ALT_KEMALIST
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = TUR_AI_RANDOM_COMMUNISM
-						}
-						5 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = TUR_AI_RANDOM_COMMUNISM_ALTERNATE
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = TUR_AI_RANDOM_DEMOCRATIC
-						}
-						5 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = TUR_AI_RANDOM_DEMOCRATIC_ALTERNATE
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = TUR_AI_RANDOM_FASCISM
-						}
-						5 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = TUR_AI_RANDOM_FASCISM_ALTERNATE
-						}
-						5 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-							set_country_flag = TUR_AI_RANDOM_BALKAN_ENTENTE
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-							set_country_flag = TUR_AI_RANDOM_OTTOMAN
-						}
-					}
-				}
-			}
-			LIT = {
-				if = {
-					limit = {
-						has_dlc = "No Step Back"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = LIT_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = LIT_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						15 = { set_country_flag = LIT_AI_RANDOM_HISTORICAL }
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = LIT_AI_RANDOM_COMMUNIST
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = LIT_AI_RANDOM_FASCIST
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_unaligned = no
-							}
-							set_add_unaligned_weight_small = yes
-							set_country_flag = LIT_AI_RANDOM_MONARCHY
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = LIT_AI_RANDOM_DEMOCRATIC
-						}
-					}
-				}
-			}
-			LAT = {
-				if = {
-					limit = {
-						has_dlc = "No Step Back"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = LAT_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = LAT_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						20 = { set_country_flag = LAT_AI_RANDOM_HISTORICAL }
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = LAT_AI_RANDOM_COMMUNIST
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = LAT_AI_RANDOM_FASCIST
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = LAT_AI_RANDOM_DEMOCRATIC
-						}
-					}
-				}
-			}
-			EST = {
-				if = {
-					limit = {
-						has_dlc = "No Step Back"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = EST_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = EST_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						20 = {
-							set_country_flag = EST_AI_RANDOM_HISTORICAL
-						}
-						15 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_communist = no
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = EST_AI_RANDOM_COMMUNIST
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_fascist = no
-							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = EST_AI_RANDOM_FASCIST
-						}
-						10 = {
-							modifier = {
-								factor = 0.25
-								game_weight_can_add_democratic = no
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = EST_AI_RANDOM_DEMOCRATIC
-						}
-					}
-				}
-			}
-			ETH = {
-				if = {
-					limit = {
-						has_dlc = "By Blood Alone"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = ETH_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = ETH_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						20 = { set_country_flag = ETH_AI_RANDOM_HISTORICAL }
-						15 = { set_country_flag = ETH_AI_RANDOM_IMPERIAL }
-						20 = { set_country_flag = ETH_AI_RANDOM_STALINIST}
-						20 = { set_country_flag = ETH_AI_RANDOM_ANARCHIST}
-						20 = { set_country_flag = ETH_AI_RANDOM_COLLABORATIONIST}
-						20 = { set_country_flag = ETH_AI_RANDOM_INDEPENDENT_FASCIST}
-						#TODO_TA Set Correct values
-						#15 = {
-						#	modifier = {
-						#		factor = 0.25
-						#		game_weight_can_add_communist = no
-						#	}
-						#	set_add_communist_weight_small = yes
-						#	set_country_flag = ETH_AI_RANDOM_COMMUNIST
-						#}
-						#10 = {
-						#	modifier = {
-						#		factor = 0.25
-						#		game_weight_can_add_fascist = no
-						#	}
-						#	set_add_fascist_weight_small = yes
-						#	set_country_flag = ETH_AI_RANDOM_FASCIST
-						#}
-						#10 = {
-						#	modifier = {
-						#		factor = 0.25
-						#		game_weight_can_add_democratic = no
-						#	}
-						#	set_add_democratic_weight_small = yes
-						#	set_country_flag = ETH_AI_RANDOM_DEMOCRATIC
-						#}
-					}
-				}
-			}
-			SWI = {
-				if = {
-					limit = {
-						has_dlc = "By Blood Alone"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = SWI_AI_BEHAVIOR
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = SWI_AI_BEHAVIOR
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						20 = { set_country_flag = SWI_AI_RANDOM_HISTORICAL }
-						15 = { set_country_flag = SWI_AI_RANDOM_ALLIED_DEMOCRATIC }
-						20 = { set_country_flag = SWI_AI_RANDOM_EXPANSIONIST_DEMOCRATIC }
-						20 = { set_country_flag = SWI_AI_RANDOM_IMPERIAL }
-						25 = { set_country_flag = SWI_AI_RANDOM_FASCIST }
-					}
-				}
-			}
+			
 		}
 	}
-
-
-	#ROOT = country that joined a war
-	on_war = {
-		effect = {
-			if = {
-				limit = {
-					tag = USA
-					has_war_with = JAP
-					NOT = { has_global_flag = day_of_infamy_happened }
-					has_country_leader = { character = USA_franklin_delano_roosevelt ruling_only = yes }
-				}
-				play_day_of_infamy_effect = yes
-			}
-			if = {
-				limit = {
-					tag = ENG
-					has_war_with = GER
-					has_country_leader = { character = ENG_neville_chamberlain ruling_only = yes }
-				}
-				play_war_with_germany_effect = yes
-			}
-		}
-	}
-	#ROOT = attacking side
-	#FROM = defending side
-	#fired when two countries end up at war with each other (on_war is fired when a country goes to war against anyone and is not fired again when it enters war against another country unless it went to peace first)
-	on_war_relation_added = {
-		effect = {
-			if = {
-				limit = {
-					tag = GER
-					FROM = {
-						tag = SOV
-						has_government = communism
-					}
-				}
-				set_global_flag = { flag = barbarossa_counter value = 1 days = 60 }
-			}
-			if = {
-				limit = {
-					ROOT = { original_tag = GER }
-					ROOT = { GER_has_mefo_bills = yes }
-					NOT = { FROM = { original_tag = GER } }
-				}
-				ROOT = {
-					GER_remove_mefo_bills = yes
-					set_country_flag = mefo_bills_removed_through_war
-				}
-			}
-			if = {
-				limit = {
-					FROM = { original_tag = GER }
-					FROM = { GER_has_mefo_bills = yes }
-					NOT = { ROOT = { original_tag = GER } }
-				}
-				FROM = {
-					GER_remove_mefo_bills = yes
-					set_country_flag = mefo_bills_removed_through_war
-				}
-			}
-		}
-	}
-	#ROOT - country that just went to peace
-	on_peaceconference_ended = {
-		effect = {
-			if = {
-				limit = {
-					tag = USA
-					is_historical_focus_on = yes
-					has_global_flag = day_of_infamy_happened
-					has_government = democratic
-					JAP = { has_government = democratic }
-				}
-				play_guns_are_silent_effect = yes
-			}
-		}
-	}
-
-	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
-	on_state_control_changed = {
-		effect = {
-			if = {
-				limit = {
-					tag = FRA #to avoid third party taking over
-					FROM = {
-						is_in_faction_with = GER
-					}
-					FROM.FROM = {
-						is_core_of = FRA
-						NOT = {
-							state = 459
-							state = 460
-							state = 513
-						}
-					}
-					FRA = {
-						has_capitulated = yes
-						is_in_faction_with = USA
-					}
-					NOT = { has_global_flag = d_day_happened }
-				}
-				play_order_of_the_day_effect = yes
-			}
-			if = {
-				limit = {
-					tag = "PHI"
-					FROM = {
-						is_in_faction_with = JAP
-					}
-					FROM.FROM = {
-						is_core_of = "PHI"
-					}
-					"PHI" = {
-						has_capitulated = yes
-						is_in_faction_with = USA
-					}
-					NOT = { has_global_flag = i_have_returned_happened }
-				}
-				play_i_have_returned_effect = yes
-			}
-			if = {
-				limit = {
-					OR = {
-						TAG = ENG
-						TAG = USA
-						TAG = AST
-						TAG = FRA
-						TAG = CAN
-						TAG = NZL
-						TAG = SAF
-					}
-					FROM = { original_tag = GER }
-					FROM = { has_war_with = ROOT }
-					FROM.FROM = { state = 16 }
-				}
-				news_event = news.134
-			}
-			if = {
-				limit = {
-					OR = {
-						TAG = ENG
-						TAG = USA
-					}
-					FROM = { original_tag = GER }
-					FROM = { has_war_with = ROOT }
-					FROM.FROM = { state = 126 }
-				}
-				news_event = news.137
-			}
-			if = {
-				limit = {
-					OR = {
-						# TAG = POL # don't include POL as the event is about Soviet capture of Warsaw
-						TAG = SOV
-					}
-					NOT = { SOV = { has_war_with = POL } }
-					FROM = { original_tag = GER }
-					FROM = { has_war_with = ROOT }
-					FROM.FROM = { state = 10 }
-				}
-				news_event = news.139
-			}
-			if = {
-				limit = {
-					tag = GER
-					divisions_in_state = { state = FROM.FROM size > 0 }
-					FROM = {
-						original_tag = GER
-						has_government = fascism
-						has_civil_war = yes
-					}
-				}
-				FROM.FROM = {
-					set_state_flag = nazi_state_withdrawn
-					random_list = {
-						20 = {
-							set_state_flag = nazi_state_withdrawn1
-						}
-						20 = {
-							set_state_flag = nazi_state_withdrawn2
-						}
-						20 = {
-							set_state_flag = nazi_state_withdrawn3
-						}
-						20 = {
-							set_state_flag = nazi_state_withdrawn4
-						}
-						20 = {
-							set_state_flag = nazi_state_withdrawn5
-						}
-					}
-					state_event = { id = wtt_germany.49 trigger_for = controller }
-				}
-			}
-			if = {
-				limit = {
-					tag = GER
-					64 = { is_controlled_by = GER }
-					any_other_country = {
-						original_tag = GER
-						has_government = fascism
-						has_civil_war = yes
-						owns_state = 64
-					}
-					NOT = { has_global_flag = fall_of_berlin_civil_war }
-				}
-				set_global_flag = fall_of_berlin_civil_war
-				country_event = { id = wtt_germany.50 days = 1 random_hours = 3 }
-			}
-			if = {
-				limit = {
-					tag = GER
-					has_country_flag = germany_war_return_kaiser
-					has_government = neutrality
-					FROM = {
-						original_tag = HOL
-						has_country_flag = netherlands_refused_return_kaiser
-					}
-					OR = {
-						7 = { is_controlled_by = GER }
-						HOL = { is_subject_of = GER }
-					}
-				}
-				country_event = { id = wtt_germany.6 }
-			}
-			if = {
-				limit = {
-					tag = CSA
-					has_war = yes
-					FROM = {
-						tag = USA
-					}
-					FROM.FROM = {
-						is_core_of = USA
-						not = { has_state_flag = USA_civil_war_state_cooldown }
-					}
-				}
-				FROM.FROM = {
-					save_event_target_as = CSA_liberated_state
-					set_state_flag = {
-						flag = USA_civil_war_state_cooldown
-						days = 180
-						value = 1
-					}
-					state_event = { id = mtg_usa_civil_war_fascists.201 trigger_for = controller }
-				}
-			}
-			if = {
-				limit = {
-					tag = USA
-					has_war_with = CSA
-					FROM = {
-						tag = CSA
-					}
-					FROM.FROM = {
-						OR = {
-							is_core_of = CSA
-							is_claimed_by = USA
-						}
-						not = { has_state_flag = USA_civil_war_state_cooldown }
-					}
-				}
-				FROM.FROM = {
-					save_event_target_as = USA_liberated_state
-					set_state_flag = {
-						flag = USA_civil_war_state_cooldown
-						days = 180
-						value = 1
-					}
-					state_event = { id = mtg_usa_civil_war_fascists.202 trigger_for = controller }
-				}
-			}
-			if = {
-				limit = {
-					original_tag = USA
-					has_civil_war = yes
-					tag = event_target:USA_civil_war_democrats
-					has_country_flag = citizen_militia_spawned
-					FROM.FROM = {
-						is_core_of = USA
-						has_state_flag = USA_citizen_militia
-						not = { has_state_flag = USA_militia_spawned }
-					}
-				}
-				FROM.FROM = {
-					set_state_flag = USA_militia_spawned
-					state_event = { id = mtg_usa_civil_war_fascists.1000 trigger_for = controller }
-				}
-			}
-			if = {
-				limit = {
-					FROM.FROM = {
-						state = 85
-						has_dynamic_modifier = { modifier = international_city }
-					}
-					FROM = {
-						OR = {
-							original_tag = POL
-							tag = POL
-						}
-					}
-				}
-				FROM.FROM = { remove_dynamic_modifier = { modifier = international_city } }
-			}
-		}
-	}
-
-
-
-	# From is owner country
-	on_army_leader_daily = {
-		effect = {
-			if = {
-				limit = {
-					check_variable = { random < 0.02 }
-					NOT = { has_trait = sick }
-					set_temp_variable = { temp = sum_unit_terrain_modifier@sickness_chance }
-					divide_temp_variable = { temp = num_units }
-					check_variable = { temp > 0.75 }
-					NOT = { has_unit_leader_flag = recently_sick }
-				}
-				add_timed_unit_leader_trait = {
-					trait = sick
-					days = 30
-				}
-				unit_leader_event = { id = generic.17 }
-			}
-		}
-	}
-
-	# From is owner country
-	on_army_leader_won_combat = {
-		effect = {
-			if = {
-				limit = {
-					set_temp_variable = { chance = 0.001 }
-					set_temp_variable = { factor = 1.0 }
-					add_to_temp_variable = { factor = leader_modifier@wounded_chance_factor }
-					multiply_temp_variable = { chance = factor }
-					check_variable = { random < chance }
-					NOT = { has_trait = wounded }
-				}
-				add_timed_unit_leader_trait = {
-					trait = wounded
-					days = 90
-				}
-				unit_leader_event = { id = generic.18 }
-			}
-		}
-	}
-
-	# From is owner country
-	on_army_leader_lost_combat = {
-		effect = {
-			if = {
-				limit = {
-					set_temp_variable = { chance = 0.005 }
-					set_temp_variable = { factor = 1.0 }
-					add_to_temp_variable = { factor = leader_modifier@wounded_chance_factor }
-					multiply_temp_variable = { chance = factor }
-					check_variable = { random < chance }
-					NOT = { has_trait = wounded }
-				}
-				add_timed_unit_leader_trait = {
-					trait = wounded
-					days = 90
-				}
-				unit_leader_event = { id = generic.18 }
-			}
-		}
-	}
-
+	
 	on_army_leader_promoted = {
 		effect = {
 			add_timed_unit_leader_trait = {
@@ -3389,7 +1603,6 @@ on_actions = {
 			}
 		}
 	}
-
 	# root country that invades
 	# scope state that is invaded
 	# from scope state that the invasion started
@@ -3397,8 +1610,8 @@ on_actions = {
 	# 	effect = {
 	# 	}
 	# }
-
-
+	
+	
 	# root country that paradrops
 	# scope state that is paradroped into
 	# from scope state that the paradrop started
@@ -3407,7 +1620,7 @@ on_actions = {
 		    set_country_flag = has_paradropped_flag
 		}
 	}
-	on_ruling_party_change = {
+	on_ruling_party_change = { 
 		# temp var old_ideology_token is available for effects
 		effect = {
 			every_controlled_state = {
@@ -3420,30 +1633,4 @@ on_actions = {
 			}
 		}
 	}
-
-	on_unit_leader_promote_from_ranks_veteran = { #Unit leader scope, FROM is unit
-		effect = {
-			FROM = {
-				add_random_valid_trait_from_unit = {
-					character = ROOT
-				}
-			}
-			set_unit_leader_flag = field_promotion_achievement
-		}
-	}
-
-	on_unit_leader_promote_from_ranks_green = { #Unit leader scope, FROM is unit
-		effect = {
-			set_unit_leader_flag = field_promotion_achievement
-		}
-	}
-
-	on_add_history = { #Unit Scope
-		effect = {
-			#add_unit_medal_to_latest_entry = {
-			#	unit_medals = iron_cross_second_class
-			#} #This would add a unit medal to the history entry you just received
-		}
-	}
-
 }
