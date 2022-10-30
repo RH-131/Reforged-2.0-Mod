@@ -1,0 +1,1858 @@
+﻿focus_tree = {
+	id = irish_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = IRE
+		}
+	}	
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1400 }
+
+	focus = {
+		id = constitution_of_ireland
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 12
+		y = 0
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+			
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		#prerequisite = { focus = AST_workers_paradise }
+		#mutually_exclusive = { focus = expand_loyalist_influence }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 200
+		}	
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = the_1937_elections
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 1
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+			date > 1937.1.24
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = constitution_of_ireland }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_cosmetic_tag = IRL
+		}	
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = fianna_fail_majority_government
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 2
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+			
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = the_1937_elections }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+            add_country_leader_trait = propaganda_expert	
+		}	
+		ai_will_do = {
+		}
+	}
+	
+
+		
+	focus = {
+		id = offences_against_the_state_act
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 3
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = invite_british_investors }
+		prerequisite = { focus = fianna_fail_majority_government }
+		#mutually_exclusive = { focus = fianna_fail_majority_government }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = IRE_offences_against_the_state_act_idea
+				days = 180
+			}
+		}	
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = invite_british_investors
+		icon = GFX_focus_chi_british_cooperation
+		x = 2
+		y = 2
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = the_1937_elections }
+		#mutually_exclusive = { focus = irish_neutrality }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = IRE_british_investors_idea
+			134 = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+			}
+		}	
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = prepare_for_war
+		icon = GFX_goal_generic_military_sphere
+		x = 1
+		y = 4
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		    date > 1938.9.1
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = offences_against_the_state_act }
+		#mutually_exclusive = { focus = irish_neutrality }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = IRE_prepare_for_war
+			remove_ideas = IRE_unstable_republic
+		}	
+		ai_will_do = {
+		}
+	}
+		
+	focus = {
+		id = plan_w
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 5
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = prepare_for_war }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = plan_w_idea
+		}	
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = IRE_defs
+		icon = GFX_goal_generic_defence
+		cost = 5
+		prerequisite = {
+			focus = prepare_for_war
+		}
+		x = 2
+		y = 5
+				ai_will_do = {
+						factor = 1
+					}
+
+				completion_reward = {
+						add_ideas = IRE_island_defences_idea
+					}
+
+
+	}
+	
+	focus = {
+		id = irish_schools_neutral
+		icon = GFX_focus_research
+		x = 1
+		y = 6
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = IRE_defs }
+		prerequisite = { focus = plan_w }
+		#mutually_exclusive = { focus = irish_neutrality }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}	
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = expand_public_works
+		icon = GFX_focus_generic_industry_2
+		x = 7
+		y = 1
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+			
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = constitution_of_ireland }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = IRE_public_works_idea
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = railways
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 5
+		y = 2
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = expand_public_works }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		135 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes } 
+				}
+		134 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes } 
+				}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = invest_in_connaught
+		icon = GFX_focus_generic_industry_1
+		x = 4
+		y = 3
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+			
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = railways }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			134 = { add_extra_state_shared_building_slots = 2 }
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = textile_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 4
+		y = 4
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 10
+		prerequisite = { focus = invest_in_connaught }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			134 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = invest_in_munster
+		icon = GFX_focus_generic_industry_1
+		x = 6
+		y = 3
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+			
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = railways }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			135 = { add_extra_state_shared_building_slots = 2 }
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = clare_aluminium_plants
+		icon = GFX_focus_generic_aluminum
+		x = 6
+		y = 4
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 10
+		prerequisite = { focus = invest_in_munster }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			135 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = aluminium
+				amount = 12
+				state = 113
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	focus = {
+		id = industrial_modernisation
+		icon = GFX_goal_generic_production
+		x = 5
+		y = 5
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = clare_aluminium_plants }
+		prerequisite = { focus = textile_industry }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		134 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes } 
+				}
+		135 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes } 
+				}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = national_roads
+		icon = GFX_goal_generic_construction
+		x = 9
+		y = 2
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = expand_public_works }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		113 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes } 
+				}
+		}	
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = invest_in_leinster
+		icon = GFX_goal_generic_construct_civilian
+		x = 10
+		y = 3
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = national_roads }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			113 = { add_extra_state_shared_building_slots = 2 }
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = dublin_military_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 8
+		y = 4
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 10
+		prerequisite = { focus = military_research_institute }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			113 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = military_research_institute
+		icon = GFX_focus_research
+		x = 8
+		y = 3
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = national_roads }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			 add_research_slot = 1
+			IRE = {
+   			    modify_tech_sharing_bonus = {
+         			id = commonwealth_research
+         			bonus = 0.05
+    			}
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = dublin_steel_works
+		icon = GFX_focus_generic_steel
+		x = 10
+		y = 4
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 10
+		prerequisite = { focus = invest_in_leinster }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			113 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 113
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = modernise_esb
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 9
+		y = 5
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		cost = 5
+		prerequisite = { focus = dublin_military_factories }
+		prerequisite = { focus = dublin_steel_works }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = electronics }
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = coal_cattle_pact
+		icon = GFX_goal_generic_consumer_goods
+		x = 7
+		y = 6
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = modernise_esb focus = industrial_modernisation }	
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = industry 
+				}
+			swap_ideas = {
+				remove_idea = IRE_trade_war
+				add_idea = IRE_less_trade_war
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = negotiate_trade_deals
+		icon = GFX_goal_generic_major_alliance
+		x = 7
+		y = 7
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = coal_cattle_pact }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = IRE_less_trade_war
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+		
+	focus = {
+		id = emergency_powers_act
+		icon = GFX_focus_generic_treaty
+		x = 7
+		y = 8
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = negotiate_trade_deals }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = IRE_emergency_powers_act
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = fuel_rations
+		icon = GFX_goal_generic_oil_refinery
+		x = 5
+		y = 9
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = emergency_powers_act }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+			bonus = 1
+			uses = 2
+				technology = fuel_refining4
+				technology = fuel_refining5
+				technology = advanced_oil_processing
+				technology = modern_oil_processing
+				technology = advanced_rubber_processing
+				technology = modern_rubber_processing
+			}
+			add_ideas = IRE_fuel_rations_idea
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = motorways
+		icon = GFX_goal_generic_construction2
+		x = 9
+		y = 9
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = emergency_powers_act }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		113 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes } 
+				}
+		134 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes } 
+				}
+		135 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes } 
+				}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = emergency_arms_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 7
+		y = 9
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+			has_war = yes
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = emergency_powers_act }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			135 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	focus = {
+		id = shipbuilding_grants
+		icon = GFX_goal_generic_amphibious_assault
+		x = 22
+		y = 3
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = dublin_shipbuilding }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		    navy_experience = 50
+			custom_effect_tooltip = IRE_shipbuilding_grants_tt
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = modernise_irish_army
+		icon = GFX_goal_generic_army_doctrines
+		x = 15
+		y = 1
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = constitution_of_ireland }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 50
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = modernise_infantry_weapons
+		icon = GFX_goal_generic_small_arms
+		x = 12
+		y = 2
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = modernise_irish_army }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = infantry_weapons 
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = irish_artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = 12
+		y = 3
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = modernise_infantry_weapons }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = advanced_artillery
+		icon = GFX_goal_generic_army_artillery
+		x = 12
+		y = 4
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = irish_artillery }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus =1
+				uses = 1
+				category = artillery
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = lessons_of_great_war
+		icon = GFX_goal_generic_air_doctrine
+		x = 14
+		y = 2
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = modernise_irish_army }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = IRE_lessons_of_great_war_idea
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = dublin_war_college
+		icon = GFX_focus_generic_military_mission
+		x = 14
+		y = 3
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = lessons_of_great_war }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = IRE_dublin_war_college_idea
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			remove_ideas = IRE_incompetent_army
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = support_equipment
+		icon = GFX_goal_generic_production
+		x = 16
+		y = 2
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = modernise_irish_army }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = irish_red_cross
+		icon = GFX_goal_generic_build_tank
+		x = 16
+		y = 3
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = support_equipment }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = hospital_tech
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = IRE_motorised_infantry
+		icon = GFX_goal_generic_army_motorized
+		x = 18
+		y = 2
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = modernise_irish_army }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = motorized_equipment
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = irish_tank_corps
+		icon = GFX_goal_generic_army_tanks
+		x = 18
+		y = 3
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = IRE_motorised_infantry }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = tank_modernisation
+		icon = GFX_focus_generic_army_tanks2
+		x = 18
+		y = 4
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = irish_tank_corps }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = reclaim_treaty_ports
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 22
+		y = 1
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = constitution_of_ireland }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		113 = {
+			add_building_construction = {
+				type = naval_base
+				level = 4
+				province = 11293
+				instant_build = yes
+			}	
+		}	
+		}
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = dublin_shipbuilding
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 22
+		y = 2
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = reclaim_treaty_ports }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			113 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = irish_destroyers
+		icon = GFX_focus_generic_destroyer
+		x = 20
+		y = 3
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = dublin_shipbuilding }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = asw_tech }
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = dd_tech }
+			add_ideas = IRE_destroyer_production_idea
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = irish_submarines
+		icon = GFX_goal_generic_navy_submarine
+		x = 24
+		y = 3
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = dublin_shipbuilding }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = ss_tech }
+			add_ideas = IRE_submarine_production_idea
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = irish_radar
+		icon = GFX_goal_generic_radar
+		x = 24
+		y = 4
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = irish_submarines }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = radar_tech }
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = irish_cruisers
+		icon = GFX_focus_generic_cruiser2
+		x = 20
+		y = 4
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = irish_destroyers }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+			add_ideas = IRE_cruiser_production_idea
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = naval_bombers
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 22
+		y = 4
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 5
+		prerequisite = { focus = shipbuilding_grants }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = naval_bomber }
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = irish_air_corps
+		icon = GFX_goal_generic_build_airforce
+		x = 15
+		y = 5
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = modernise_irish_army }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+				air_experience = 50
+				add_ideas = RAJ_aid_british_hardware_stockpiles_idea
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = fighters
+		icon = GFX_goal_generic_air_fighter2
+		x = 13
+		y = 6
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = irish_air_corps }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = light_fighter 
+					category = cat_heavy_fighter
+					}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = light_bombers
+		icon = GFX_goal_generic_air_fighter
+		x = 15
+		y = 6
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = irish_air_corps }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = tactical_bomber }
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = close_air_support
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 14
+		y = 7
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = fighters OR = light_bombers }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = cas_bomber }
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = heavy_bombers
+		icon = GFX_goal_generic_air_bomber
+		x = 14
+		y = 8
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = close_air_support }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = cat_strategic_bomber }
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = air_base_expansion
+		icon = GFX_goal_generic_air_production
+		x = 17
+		y = 6
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = irish_air_corps }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			113 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = POL_air_modernisations_program
+				bonus = 1
+				uses = 1
+				category = air_equipment
+			}
+		}	
+		ai_will_do = {
+		}
+		
+		
+	}
+	
+	focus = {
+		id = aviation_school
+		icon = GFX_goal_generic_air_doctrine
+		x = 17
+		y = 7
+		#relative_position_id = AST_empower_the_workers
+	
+		available = {
+		}
+	
+		bypass = {
+		}
+		
+		cost = 7.16
+		prerequisite = { focus = air_base_expansion }
+		#mutually_exclusive = { focus = colonial_power }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 3
+				category = air_doctrine
+			}	
+			add_ideas = SAF_joint_air_training_scheme
+		}	
+		ai_will_do = {
+		}
+		
+	}
+}		

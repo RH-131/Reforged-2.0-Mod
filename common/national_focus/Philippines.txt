@@ -1,0 +1,1610 @@
+focus_tree = {
+	id = philippines_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = PHI
+		}
+	}
+
+	default = no
+
+
+	############################
+	#### INDUSTRIAL SECTION ####
+	############################
+
+	focus = {
+		id = PHI_the_industrialized_islands_plan
+		icon = GFX_goal_generic_construct_civilian
+		x = 3
+		y = 0
+		cost = 7.15
+		
+		available = {
+			has_completed_focus = PHI_elect_new_congressmen
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PHI_the_unified_islands_plan
+				bonus = 1.25
+				uses = 1
+				category = construction_tech
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_urbanize_the_islands
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PHI_the_industrialized_islands_plan }
+		x = 3
+		y = 1
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = PHI_urbanize_the_islands
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_manila_central_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = PHI_urbanize_the_islands }
+		x = 3
+		y = 2
+		cost = 7.15
+
+		ai_will_do = {
+			factor = 10
+		}
+
+
+		completion_reward = {
+			623 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			327 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Manila - Daqupan
+			build_railway = {
+				level = 2
+				start_province = 10265
+				target_province = 1415
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_fund_armscor
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = PHI_urbanize_the_islands }
+		x = 1
+		y = 2
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			327 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+		 }
+		add_extra_state_shared_building_slots = 1
+	 }
+ }
+}
+
+	focus = {
+		id = PHI_seize_illegal_weapons_manufacturer
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = PHI_fund_armscor }
+
+		x = 1
+		y = 3
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = PHI_seize_illegal_weapons_manufacturer_1 }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 92 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+			}
+		}
+	}
+}
+	focus = {
+		id = PHI_national_defence_fund
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = PHI_manila_central_railway }
+		x = 3
+		y = 3
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = PHI_manila_central_railway_1 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = PHI_manila_central_railway_1
+			}
+			add_ideas = PHI_industrial
+		}
+	}
+
+	focus = {
+		id = PHI_expanded_chromium_mining
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = PHI_urbanize_the_islands }
+		x = 5
+		y = 2
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		add_resource = {
+				type = chromium
+				amount = 12
+				state = 327
+		}
+		add_resource = {
+				type = steel
+				amount = 6
+				state = 327
+		}
+	}
+}
+
+	focus = {
+		id = PHI_develop_palawan
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PHI_expanded_chromium_mining }
+		x = 5
+		y = 3
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		623 = {
+      add_manpower = 150000
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		626 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+    add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+
+focus = {
+	id = PHI_develop_mindano
+	icon = GFX_goal_generic_consumer_goods
+	prerequisite = { focus = PHI_expanded_chromium_mining }
+	x = 7
+	y = 3
+	cost = 7.16
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	627 = {
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+		}
+	}
+		add_resource = {
+			type = rubber
+			amount = 5
+			state = 627
+	 }
+ }
+}
+
+
+	focus = {
+		id = PHI_additional_research_slot1
+		icon = GFX_focus_research
+		prerequisite = { focus = PHI_national_defence_fund focus = PHI_develop_palawan focus= PHI_seize_illegal_weapons_manufacturer focus = PHI_develop_mindano }
+		x = 3
+		y = 4
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+
+	focus = {
+		id = PHI_american_computer_imports
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = PHI_develop_palawan focus = PHI_develop_mindano focus = PHI_national_defence_fund focus = PHI_seize_illegal_weapons_manufacturer }
+		x = 5
+		y = 4
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = PHI_american_computer_imports
+				bonus = 1
+				uses = 1
+				category = computing_tech
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_synth_oil
+    icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = PHI_develop_palawan focus = PHI_develop_mindano focus = PHI_national_defence_fund focus = PHI_seize_illegal_weapons_manufacturer }
+		x = 1
+		y = 4
+		cost = 7.16
+
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_resource = {
+			 type = oil
+			 amount = 5
+			 state = 626
+	 }
+			add_tech_bonus = {
+				name = synth_bonus
+				bonus = 1
+				uses = 2
+				category = synth_resources
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_study_enemy_ciphers
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = PHI_additional_research_slot1 }
+		x = 3
+		y = 5
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = PHI_study_enemy_ciphers
+				bonus = 1
+				uses = 1
+				category = encryption_tech
+				category = decryption_tech
+			}
+		}
+	}
+
+
+	############################
+	####### ARMY SECTION #######
+	############################
+
+
+	focus = {
+		id = PHI_teachings_of_the_usaffe
+		icon = GFX_goal_generic_build_tank
+
+		x = 10
+		y = 0
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		available = {
+			has_completed_focus = PHI_elect_new_congressmen
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    army_experience = 60
+			add_doctrine_cost_reduction = {
+				name = PHI_teachings_of_the_usaffe
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			#1x 50% cost reduction for one land doctrine research
+		}
+	}
+
+	focus = {
+		id = PHI_defense_of_manila
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = PHI_teachings_of_the_usaffe }
+
+		x = 11
+		y = 1
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = PHI_defense_of_manila
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			#1x 50% reduction in land doctrine research
+			327 = {
+				add_building_construction = {
+					type = bunker
+					province = 10265
+					level = 3
+					instant_build = yes
+				}
+			}
+      327 = {
+			add_building_construction = {
+				type = coastal_bunker
+				province = 10265
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+
+	focus = {
+		id = PHI_island_hopping_strategy
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = PHI_defense_of_manila }
+
+		x = 11
+		y = 2
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = PHI_island_hopping
+			add_tech_bonus = {
+				name = PHI_island_hopping_strategy
+				bonus = 1
+				uses = 1
+				category = tp_tech
+			}
+			#1x 50% reduction in transport tech
+		}
+	}
+
+	focus = {
+		id = PHI_american_doctrines
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = PHI_island_hopping_strategy }
+    mutually_exclusive = { focus = PHI_japanese_doctrines }
+		x = 12
+		y = 3
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = PHI_american_doctrines
+			cost_reduction = 0.5
+			uses = 1
+			category = cat_superior_firepower
+		 }
+		}
+	}
+
+	focus = {
+		id = PHI_japanese_doctrines
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = PHI_island_hopping_strategy }
+    mutually_exclusive = { focus = PHI_american_doctrines }
+		x = 10
+		y = 3
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = PHI_japanese_doctrines
+			cost_reduction = 0.5
+			uses = 1
+			category = cat_grand_battle_plan
+		}
+	}
+}
+
+	focus = {
+		id = PHI_american_imports
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = PHI_teachings_of_the_usaffe}
+
+		x = 9
+		y = 1
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = PHI_american_imports
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+			#1x 50% for Infantry Equipment
+		}
+	}
+
+	focus = {
+		id = PHI_lighting_warfare
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = PHI_american_imports }
+
+		x = 8
+		y = 2
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_modernising_the_cavalry
+				bonus = 1
+				uses = 1
+				category = motorized_equipment
+			}
+			#50% research bonus for Motorised
+		}
+	}
+
+	focus = {
+		id = PHI_study_european_tanks
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = PHI_lighting_warfare }
+
+		x = 8
+		y = 4
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = PHI_study_european_tanks
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+			#50% armor research
+		}
+	}
+
+	focus = {
+		id = PHI_create_main_battle_tanks
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = PHI_study_european_tanks }
+
+		x = 8
+		y = 5
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = PHI_study_european_tanks
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+			#1x 25% reduction on research for medium tanks
+		}
+	}
+
+	focus = {
+		id = PHI_import_new_howitzers
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = PHI_japanese_doctrines focus = PHI_american_doctrines }
+
+		x = 12
+		y = 4
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = PHI_import_new_howitzers
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+			#1 x 50% for Artillery Equipment
+		}
+	}
+
+	focus = {
+		id = PHI_anti_tank_guns
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = PHI_japanese_doctrines focus = PHI_american_doctrines }
+
+		x = 10
+		y = 4
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = PHI_anti_tank_guns
+				bonus = 1
+				uses = 1
+				category = cat_anti_tank
+			}
+			#1x 50% bonus for Anti-Tank guns
+		}
+	}
+
+	focus = {
+		id = PHI_army_modernisation
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = PHI_import_new_howitzers focus = PHI_anti_tank_guns }
+
+		x = 11
+		y = 5
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = PHI_army_modernisation
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+			#1 x 50% for Infantry Equipment
+		}
+	}
+
+
+	############################
+	##### AIRFORCE SECTION #####
+	############################
+
+
+	focus = {
+		id = PHI_air_base_expansion
+		icon = GFX_goal_generic_air_production
+
+		x = 16
+		y = 0
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_completed_focus = PHI_elect_new_congressmen
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    air_experience = 60
+			random_owned_controlled_state = {
+				prioritize = { 10 }
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_air_base_expansion_1
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_fighter_modernisation
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = PHI_air_base_expansion }
+
+		x = 17
+		y = 1
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_fighter_modernisation
+				bonus = 1
+				uses = 1
+				category = light_fighter
+			}
+			#1x50% research bonus to fighter models
+		}
+	}
+
+
+
+	focus = {
+		id = PHI_air_innovations
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = PHI_air_base_expansion }
+
+		x = 15
+		y = 1
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = POL_air_innovations
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			#1x50% research bonus to Air Doctrine Research
+		}
+	}
+
+	focus = {
+		id = PHI_heavy_fighter_concept
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = PHI_air_innovations focus = PHI_fighter_modernisation }
+
+		x = 16
+		y = 2
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_heavy_fighter_concept
+				bonus = 1
+				uses = 1
+				category = cat_heavy_fighter
+			}
+			#1x 50% research bonus to Heavy Fighters
+		}
+	}
+
+	focus = {
+		id = PHI_naval_bomber_experiments
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = PHI_air_innovations }
+
+		x = 14
+		y = 2
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_naval_bomber_experiments
+				bonus = 1
+				uses = 1
+				category = naval_bomber
+			}
+			#1x50% research bonus to NAV
+		}
+	}
+
+	focus = {
+		id = PHI_medium_bomber_focus
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = PHI_heavy_fighter_concept focus = PHI_air_innovations }
+		mutually_exclusive = { focus = PHI_light_bomber_focus }
+
+		x = 15
+		y = 3
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_medium_bomber_focus
+				bonus = 1
+				uses = 1
+				category = tactical_bomber
+			}
+			#1 x 50% research bonus to Tactical Bomber models
+		}
+	}
+
+	focus = {
+		id = PHI_light_bomber_focus
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = PHI_heavy_fighter_concept focus = PHI_fighter_modernisation }
+		mutually_exclusive = { focus = PHI_medium_bomber_focus }
+
+		x = 17
+		y = 3
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_light_bomber_focus
+				bonus = 1
+				uses = 1
+				category = cas_bomber
+			}
+			#1 x 50% research bonus to CAS
+		}
+	}
+
+	focus = {
+		id = PHI_air_modernisations_program
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = PHI_light_bomber_focus focus = PHI_medium_bomber_focus }
+
+		x = 16
+		y = 4
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = POL_air_modernisations_program
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			#1x 50% reduction in an air doctrine research
+
+		}
+	}
+
+	focus = {
+		id = PHI_rocket_development
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = PHI_air_modernisations_program }
+
+		x = 16
+		y = 5
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_rocket_development
+				bonus = 1
+				uses = 1
+				category = jet_technology
+				category = rocketry
+			}
+			#1x50% research to Rockets and Jet Engine Research
+		}
+	}
+
+
+	############################
+	####### NAVY SECTION #######
+	############################
+
+
+	focus = {
+		id = PHI_shipyard_expansion
+		icon = GFX_goal_generic_construct_naval_dockyard
+
+		x = 21
+		y = 0
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_completed_focus = PHI_elect_new_congressmen
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    navy_experience = 60
+			random_owned_controlled_state = {
+				prioritize = { 85 }
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = PHI_shipyard_expansion_1
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_license_foreign_ships
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = PHI_shipyard_expansion }
+
+		x = 22
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_study_foreign_built_ships
+				bonus = 1
+				uses = 1
+				category = dd_tech
+			}
+			#1x 50% research bonus for Destroyers
+		}
+	}
+
+	focus = {
+		id = PHI_anti_sub_defense_force
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = PHI_license_foreign_ships }
+
+		x = 23
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_a_cruiser_navy
+				bonus = 1
+				uses = 1
+				category = cl_tech
+			}
+			#1x50% research bonus to Light Cruisers
+		}
+	}
+
+	focus = {
+		id = PHI_import_submarine_techology
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = PHI_shipyard_expansion }
+
+		x = 20
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_import_submarine_technology
+				bonus = 1
+				uses = 1
+				category = ss_tech
+			}
+			#1 x50% research bonus for Submarines
+		}
+	}
+
+	focus = {
+		id = PHI_commerce_attack
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = PHI_import_submarine_techology }
+		x = 19
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = POL_commerce_attack
+				cost_reduction = 0.5
+				uses = 1
+				category = submarine_doctrine
+			}
+			#1x50% research bonus to Submarine Doctrine
+		}
+	}
+
+	focus = {
+		id = PHI_study_allied_and_axis_naval_tactics
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = PHI_import_submarine_techology focus = PHI_license_foreign_ships }
+
+		x = 21
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = POL_the_twin_threats
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			#1x50% bonus to Naval Doctrine Research
+		}
+	}
+
+	focus = {
+		id = PHI_island_defense
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = PHI_study_allied_and_axis_naval_tactics }
+		mutually_exclusive = { focus = PHI_strike_force }
+		x = 22
+		y = 3
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_coastal_defense
+				bonus = 1
+				uses = 1
+				category = ss_tech
+			}
+			add_tech_bonus = {
+				name = POL_coastal_defense
+				bonus = 1
+				uses = 1
+				category = dd_tech
+			}
+			#1x50% research bonus to destroyers & 1 x50% bonus to Submarines
+		}
+	}
+
+	focus = {
+		id = PHI_strike_force
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = PHI_study_allied_and_axis_naval_tactics }
+		mutually_exclusive = { focus = PHI_island_defense }
+		x = 20
+		y = 3
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_strike_force
+				bonus = 1
+				uses = 1
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				name = POL_strike_force
+				bonus = 1
+				uses = 1
+				category = ca_tech
+			}
+			#1x50% research bonus to Light Cruisers & 1x50% bonus to Heavy Cruisers
+		}
+	}
+
+	focus = {
+		id = PHI_pacific_navy
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = PHI_strike_force focus = PHI_island_defense }
+
+		x = 21
+		y = 4
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = POL_baltic_navy
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			#1x50% bonus to Naval Doctrine research
+		}
+	}
+
+	############################
+	##### POLITICS SECTION #####
+	############################
+
+
+	focus = {
+		id = PHI_post_indenpence_stabilization
+		icon = GFX_goal_generic_demand_territory
+
+		x = 25
+		y = 0
+		cost = 7.15
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+			PHI = {
+   			    modify_tech_sharing_bonus = {
+         			id = MEX_USA_tech_group
+         			bonus = 0.15
+    			}
+			}
+			set_popularities = {
+				democratic = 80
+				fascism = 10
+				communism = 10
+				neutrality = 0
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_follow_the_american_way
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = PHI_post_indenpence_stabilization}
+
+		x = 25
+		y = 1
+		cost = 7.15
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = PHI_american_way
+			327 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = PHI_elect_new_congressmen
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = PHI_follow_the_american_way }
+
+		x = 25
+		y = 2
+		cost = 7.15
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			remove_ideas = PHI_ideological_rebels
+			add_ideas = ENG_prepare_for_the_inevitable_idea
+		}
+	}
+
+	focus = {
+		id = PHI_european_intervention
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = PHI_elect_new_congressmen }
+
+		x = 25
+		y = 3
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+			remove_ideas = PHI_unstable_state
+			#As per generic
+		}
+	}
+
+	focus = {
+		id = PHI_ally_funded_development
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = PHI_the_filipino_corridor}
+		available = {
+			country_exists = ENG
+		}
+
+		x = 24
+		y = 5
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			327 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_the_filipino_corridor
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = PHI_european_intervention}
+		available = {
+			country_exists = ENG
+		}
+
+		x = 25
+		y = 4
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_opinion_modifier = { target = ENG modifier = POL_draw_closer_to_britain }
+			ENG = { add_opinion_modifier = { target = ROOT modifier = POL_draw_closer_to_britain } }
+            add_ideas = RAJ_aid_british_hardware_stockpiles_idea
+		}
+		#Relation boost with the UK
+	}
+    focus = {
+		id = PHI_accept_refugees
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = PHI_the_filipino_corridor }
+
+		x = 26
+		y = 5
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			327 = {
+			   add_manpower = 250000
+			}
+			623 = {
+				add_manpower = 250000
+	  	    }
+        }
+    }
+	focus = {
+		id = PHI_lost1
+		icon = GFX_USA_fight_fascist_with_fire
+		x = 28
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 100 
+		}
+		available_if_capitulated = yes		
+		
+		available = { 
+			PHI = {
+				has_capitulated = yes 
+			}
+			is_ai = no
+		}
+
+		bypass = {
+		}
+		
+		completion_reward = {
+			PHI = {
+				become_exiled_in = { target = USA legitimacy = 1.0 }	
+			}
+			add_ideas = PHI_fighting_on
+		}
+
+	}
+	focus = {
+		id = PHI_lost2
+		icon = GFX_USA_executive_office_of_the_president
+		prerequisite = { focus = PHI_lost1 }
+		relative_position_id = PHI_lost1
+		x = 0
+		y =1
+		cost = 5
+		ai_will_do = {
+			factor = 100 
+		}
+		available_if_capitulated = yes		
+		
+		available = { 
+			PHI = {
+				has_capitulated = yes 
+			}
+            is_ai = no
+		}
+
+		bypass = {
+		}
+		
+		completion_reward = {
+		    add_offsite_building = {
+		    	type = arms_factory
+		    	level = 35
+		    }
+		    add_offsite_building = {
+		    	type = dockyard
+		    	level = 5
+		    }
+		}
+	}
+	focus = {
+		id = PHI_lost3
+		icon = GFX_USA_reorganize_the_army_departments
+		prerequisite = { focus = PHI_lost2 }
+		relative_position_id = PHI_lost2
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 100 
+		}
+		available_if_capitulated = yes		
+		
+		available = { 
+			PHI = {
+				has_capitulated = yes 
+			}
+            is_ai = no
+		}
+
+		bypass = {
+		}
+		
+		completion_reward = {
+			add_manpower = 50000
+			add_ideas = PHI_refugee_volunteers
+		}
+	}
+	focus = {
+		id = PHI_lost4
+		icon = GFX_focus_por_the_fifth_empire
+		prerequisite = { focus = PHI_lost3 }
+		relative_position_id = PHI_lost3
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 100 
+		}
+		available_if_capitulated = yes		
+		
+		available = { 
+			PHI = {
+				has_capitulated = yes 
+			}
+            is_ai = no
+		}
+
+		bypass = {
+		}
+		
+		completion_reward = {
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = POR }
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 750 producer = POR }
+			add_equipment_to_stockpile = { type = support_equipment_1 amount = 500 producer = POR }
+			add_equipment_to_stockpile = { type = radio_equipment amount = 500 producer = POR }
+			add_equipment_to_stockpile = { type = horse_equipment_0 amount = 500 producer = POR }
+			add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 250 producer = POR }
+			add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 250 producer = POR }
+			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 100 producer = POR }
+		}
+	}
+	focus = {
+		id = PHI_lost5
+		icon = GFX_SOV_mechanized_wave
+		prerequisite = { focus = PHI_lost4 }
+		relative_position_id = PHI_lost4
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 100 
+		}
+		available_if_capitulated = yes		
+		
+		available = { 
+			PHI = {
+				has_capitulated = yes 
+			}
+            is_ai = no
+		}
+
+		bypass = {
+		}
+		
+		completion_reward = {
+			add_ideas = PHI_irredentism
+		}
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,1677 @@
+focus_tree = {
+	id = Mongolia
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MON
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1350 }
+
+	#Focus for Reaffirm relations with the USSR
+	focus = {
+		id = MON_reaffirmrelationswiththeussr
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 0
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+			completion_reward = {
+			add_political_power = 100
+		}
+		
+	}
+
+	#Focus for Consolidate power
+	focus = {
+		id = MON_consolidatepower
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		x = 2
+		y = 7
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_findscapegoatsforthegreatterror }
+		ai_will_do = {
+			factor = 1
+		}
+		
+	  completion_reward = {
+	         remove_ideas = MON_Internal_security_5
+			 add_research_slot = 1	
+	  }
+	}
+
+	#Focus for Assist the herdsmen
+	focus = {
+		id = MON_assisttheherdsmen
+		icon = GFX_herdsmen
+		x = 17
+		y = 4
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_agriculturaladvancements }
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = MON_spirit_of_genghis_idea
+			create_corps_commander = {
+				name = "Kublai"
+				picture = "portrait_kublai.dds"
+				traits = { cavalry_leader cavalry_expert war_hero }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 4
+				logistics_skill = 4
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = MON_khan			
+		}
+		
+	}
+
+	#Focus for Army reform
+	focus = {
+		id = MON_armyreform
+		icon = GFX_europeandoctrinebrz
+		x = 9
+		y = 4
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_connecttotranssiberianrailway 
+		}
+		prerequisite = { 
+			focus = MON_reformborderguards
+		}
+		prerequisite = { 
+			focus = MON_purgeofthearmy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			army_experience = 25		
+			add_doctrine_cost_reduction = {
+				name = MON_army_maneuvers
+				cost_reduction = 0.50
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		
+	}
+
+	#Focus for Expand MPRA
+	focus = {
+		id = MON_expandmpra
+		icon = GFX_monarmedforces
+		x = 6
+		y = 6
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_armymechanization
+		}
+		ai_will_do = {
+			factor = 1
+		}
+				available = {
+		}
+		
+							completion_reward = {
+			add_manpower = 50000
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}	
+			add_doctrine_cost_reduction = {
+				name = MON_army_maneuvers
+				cost_reduction = 0.50
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	#Focus for Elevate ministry of internal affairs
+	focus = {
+		id = MON_elevateministryofinternalaffairs
+		icon = GFX_monministry
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_reaffirmrelationswiththeussr }
+		ai_will_do = {
+			factor = 1
+		}
+		
+					completion_reward = {
+			MON = { country_event = mongolia.1 }						
+			add_ideas = MON_Mongolian_Police
+						add_tech_bonus = {
+				name = spy_bonus
+				bonus = 0.50
+				uses = 1
+				category = electronics
+		    }
+		
+		}
+		
+	}
+
+	#Focus for Ulaanbaatar factory complex
+	focus = {
+		id = MON_ulaanbaatarfactorycomplex
+		icon = GFX_monindustry3
+		x = 15
+		y = 2
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_sovietindustrialassistance }
+		ai_will_do = {
+			factor = 1
+		}
+		
+						available = {
+		}
+		
+				completion_reward = {
+			617 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+	}
+
+	#Focus for Mutual assistance pact
+	focus = {
+		id = MON_mutualassistancepact
+		icon = GFX_monmutualassistance
+		x = 0
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_purgegenden }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+				available = {
+
+		}
+		
+				completion_reward = {
+			add_political_power = 50
+		}
+		
+	}
+
+	#Focus for Defensive preparations
+	focus = {
+		id = MON_defensivepreparations
+		icon = GFX_mondefensiveop
+		x = 15
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+				available = {
+				has_idea = MON_Mongolian_Police
+		}	
+		
+		bypass = {
+			330 = { NOT = { is_owned_and_controlled_by = MON} }
+			330 = { NOT = { is_owned_and_controlled_by = MON} }	
+		}
+		
+				completion_reward = {			
+						330 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					}
+							add_building_construction = {
+							type = bunker
+							level = 5
+							province = 4801
+							instant_build = yes
+						}				
+
+				}	
+			add_war_support = 0.10				
+			if = { limit = { 330 = { is_owned_and_controlled_by = MON } }
+				330 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 5
+					instant_build = yes
+				}				
+				}
+			}
+		}
+	}
+
+	#Focus for Soviet Industrial Assistance
+	focus = {
+		id = MON_sovietindustrialassistance
+		icon = GFX_goal_generic_soviet_construction
+		x = 15
+		y = 1
+		cost = 7.16
+		available_if_capitulated = yes
+
+
+		prerequisite = { 
+			focus = MON_woolwashingfactory 
+			focus = MON_healthandeducationservices 
+			focus = MON_defensivepreparations 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+		
+	}
+
+	#Focus for August Storm
+	focus = {
+		id = MON_auguststorm
+		icon = GFX_auguststorm
+		x = 4
+		y = 8
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_orderarmoreddivision 
+		}
+		prerequisite = { 
+			focus = MON_consolidatepower 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {		
+			SOV = { 
+				has_war_with = JAP
+			}
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			add_ideas = partisan_suppression_focus
+			add_ideas = CHI_war_of_anti_imperialism			
+		}
+		
+	}
+
+	#Focus for Expand mining operations
+	focus = {
+		id = MON_expandminingoperations
+		icon = GFX_monexcav
+		x = 12
+		y = 4
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_connecttotranssiberianrailway }
+		ai_will_do = {
+			factor = 1
+		}
+		
+				available = {
+		}
+		
+				completion_reward = {
+			617 = {
+				add_resource = {
+					type = tungsten
+					amount = 20
+				}
+				add_resource = {
+					type = aluminium
+					amount = 20
+				}
+			}
+						add_tech_bonus = {
+				name = SAF_expand_the_mining_industry
+				bonus = 0.50
+				uses = 1
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+		}
+		
+		
+		
+	}
+
+	#Focus for Expand mining operations II
+	focus = {
+		id = MON_expandminingoperationsii
+		icon = GFX_monexcav2
+		x = 12
+		y = 7
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_narrowgaugerailway }
+		ai_will_do = {
+			factor = 1
+		}
+		
+						available = {
+		}
+		
+				completion_reward = {
+			617 = {
+				add_resource = {
+					type = chromium
+					amount = 20
+				}
+				add_resource = {
+					type = steel
+					amount = 20
+				}				
+			}
+						add_tech_bonus = {
+				name = SAF_expand_the_mining_industry
+				bonus = 0.50
+				uses = 1
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+		}
+		
+	}
+
+	#Focus for Connect to Trans Siberian railway
+	focus = {
+		id = MON_connecttotranssiberianrailway
+		icon = GFX_monrailroads
+		x = 13
+		y = 2
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_sovietindustrialassistance }
+		ai_will_do = {
+			factor = 1
+		}
+		
+				bypass = {	
+		}
+		
+		available = {
+		}		
+		
+		
+		
+			completion_reward = {				
+				617 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				330 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				618 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				#Ulaanbaatar - Irkutsk
+				build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				start_province = 4801
+				target_province = 1762
+				}
+			}			
+		}
+
+	#Focus for Reduce illiteracy
+	focus = {
+		id = MON_reduceilliteracy
+		icon = GFX_SovietResarchslot
+		x = 17
+		y = 2
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_sovietindustrialassistance }
+		prerequisite = { 
+			focus = MON_healthandeducationservices
+		}		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		}
+		
+				completion_reward = {
+			add_research_slot = 1
+										swap_ideas = {
+			remove_idea = MON_Rual_population_2
+			add_idea = MON_Rual_population_3		
+		    }	
+		}
+
+	}
+
+	#Focus for Purge of the army
+	focus = {
+		id = MON_purgeofthearmy
+		icon = GFX_goal_anti_comintern_pact
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_breakupjapanesespyrings }
+		ai_will_do = {
+			factor = 1
+		}
+		
+								completion_reward = {
+	               add_political_power = 25
+										swap_ideas = {
+			remove_idea = MON_Internal_security_3
+			add_idea = MON_Internal_security_4	
+		    }					   
+	  }
+		
+		
+	}
+
+	#Focus for Pardon Lkhümbe affair prisoners
+	focus = {
+		id = MON_pardonlkhmbeaffairprisoners
+		icon = GFX_monpardoning
+		x = 0
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_mutualassistancepact }
+		ai_will_do = {
+			factor = 1
+		}
+		
+			completion_reward = {
+					 add_stability = 0.05
+		    }
+	}
+
+	#Focus for Central theater show trials
+	focus = {
+		id = MON_centraltheatershowtrials
+		icon = GFX_monpurgetime
+		x = 4
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+				available = {
+				has_idea = MON_Mongolian_Police
+		}
+		
+		
+						completion_reward = {
+	        add_political_power = 25
+										swap_ideas = {
+			remove_idea = MON_Internal_security
+			add_idea = MON_Internal_security_1		
+		    }				
+	    }	
+	}
+
+	#Focus for Purge Genden
+	focus = {
+		id = MON_purgegenden
+		icon = GFX_mongenden
+		x = 0
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_elevateministryofinternalaffairs }
+		ai_will_do = {
+			factor = 1
+		}
+		
+				completion_reward = {
+create_country_leader = {
+	name = "Anandyn Amar"
+	desc = "POLITICS_ANANDYN_AMAR_DESC"
+	picture = GFX_portrait_mon_anandyn_amar
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+	      silent_mule
+	     }
+        }
+	  }
+	}
+
+	#Focus for Purge Anandyn Amar
+	focus = {
+		id = MON_purgeanandynamar
+		icon = GFX_goal_generic_attack_allies
+		x = 2
+		y = 5
+		cost = 7.16
+		available = {
+			date > 1939.02.01 
+			}			
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_pardonlkhmbeaffairprisoners 
+		}
+		prerequisite = { 
+			focus = MON_propagandacampaign 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {			
+            create_country_leader = {
+	            name = "Khorloogiin Choibalsan"
+	            desc = "POLITICS_ANANDYN_AMAR_DESC"
+	            picture = portrait_Choibalsan.dds
+	            expire = "1965.1.1"
+	            ideology = marxism
+	            traits = {
+			    	mongolian_stalin     
+		        }
+            }
+	    }
+	}
+
+	#Focus for The enemies within
+	focus = {
+		id = MON_theenemieswithin
+		icon = GFX_focus_smiling_buddha
+		x = 4
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_centraltheatershowtrials }
+		ai_will_do = {
+			factor = 1
+		}
+		
+								completion_reward = {
+	           add_political_power = 25
+										swap_ideas = {
+			remove_idea = MON_Internal_security_1
+			add_idea = MON_Internal_security_2		
+		    }							   
+	  }
+		
+	}
+
+	#Focus for Propaganda campaign
+	focus = {
+		id = MON_propagandacampaign
+		icon = GFX_monpropaganda
+		x = 4
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_purgeofthearmy }
+		ai_will_do = {
+			factor = 1
+		}
+		
+								completion_reward = {
+	          add_political_power = 25
+										swap_ideas = {
+			remove_idea = MON_Internal_security_4
+			add_idea = MON_Internal_security_5
+		    }			  
+	  }
+		
+	}
+
+	#Focus for Break up Japanese spy rings.
+	focus = {
+		id = MON_breakupjapanesespyrings
+		icon = GFX_crushjapan
+		x = 4
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_theenemieswithin }
+		ai_will_do = {
+			factor = 1
+		}
+		
+								completion_reward = {
+	               add_political_power = 25
+											swap_ideas = {
+			remove_idea = MON_Internal_security_2
+			add_idea = MON_Internal_security_3	
+		    }	
+	  }
+		
+	}
+
+	#Focus for Army Mechanization
+	focus = {
+		id = MON_armymechanization
+		icon = GFX_montruck
+		x = 6
+		y = 5
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_armyreform }
+		ai_will_do = {
+			factor = 1
+		}
+		
+				completion_reward = {
+			army_experience = 25
+						add_tech_bonus = {
+				name = MON_armor_effort
+				bonus = 1.0
+				uses = 1
+				category = armor
+				}			
+			add_tech_bonus = {
+				name = MON_truck
+				bonus = 1
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+		
+		
+	}
+
+	#Focus for Stop border raiders
+	focus = {
+		id = MON_stopborderraiders
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 7
+		y = 1
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_moscowmilitaryadvisors }
+		ai_will_do = {
+			factor = 1
+		}
+		
+		
+				completion_reward = {
+			army_experience = 25
+			if = {
+				limit = {
+					has_idea = MON_Rogue_state_3
+				}
+				remove_ideas = { MON_Rogue_state_3 }
+			}
+			if = {
+				limit = {
+					has_idea = MON_Rogue_state
+				}
+				swap_ideas = {
+					remove_idea = MON_Rogue_state
+					add_idea = MON_Rogue_state_2
+				}
+			}	
+			if = {
+				limit = {
+					has_idea = MON_Rogue_state_2
+				}
+				swap_ideas = {
+					remove_idea = MON_Rogue_state_2
+					add_idea = MON_Rogue_state_3
+				}
+			}				
+			add_doctrine_cost_reduction = {
+				name = MON_army_maneuvers
+				cost_reduction = 0.50
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		
+	}
+
+	#Focus for Reform border guards
+	focus = {
+		id = MON_reformborderguards
+		icon = GFX_monborderguard
+		x = 7
+		y = 2
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_stopborderraiders }
+		ai_will_do = {
+			factor = 1
+		}
+		
+							completion_reward = {							
+			add_ideas = MON_Armed_State
+		}
+		
+	}
+
+	#Focus for Local production of military equipment.
+	focus = {
+		id = MON_localproductionofmilitaryequipment
+		icon = GFX_monmilitaryfactory
+		x = 15
+		y = 3
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_ulaanbaatarfactorycomplex }
+		ai_will_do = {
+			factor = 1
+		}
+		
+								available = {
+		}
+		
+				completion_reward = {
+			
+			618 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+		
+	}
+
+	#Focus for Artillery modernisation
+	focus = {
+		id = MON_artillerymodernisation
+		icon = GFX_monartillery
+		x = 9
+		y = 6
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_universalconscriptionprogram }
+		ai_will_do = {
+			factor = 1
+		}
+		
+				completion_reward = {
+			add_tech_bonus = {
+				name = MON_domestic_artillery_production
+				bonus = 1.00
+				uses = 2
+				category = artillery
+			}
+		}
+		
+		
+	}
+
+	#Focus for Order Armored Division
+	focus = {
+		id = MON_orderarmoreddivision
+		icon = GFX_focus_generic_tank_production
+		x = 6
+		y = 7
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_expandmpra }
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		}
+	    completion_reward = {
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis
+					amount = 150
+					producer = MON
+				}	
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis
+					amount = 100
+					producer = MON
+				}			
+	    }
+	}
+
+	#Focus for Health and education services
+	focus = {
+		id = MON_healthandeducationservices
+		icon = GFX_monforthepeople
+		x = 18
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+				available = {
+				has_idea = MON_Mongolian_Police
+		}
+				completion_reward = {		
+								swap_ideas = {
+				remove_idea = MON_Rual_population
+				add_idea = MON_Rual_population_2		
+			}
+		}		
+	}
+
+	#Focus for Wool washing factory
+	focus = {
+		id = MON_woolwashingfactory
+		icon = GFX_monindustry1
+		x = 12
+		y = 0
+		cost = 7.16
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+				available = {
+				has_idea = MON_Mongolian_Police
+		}
+		
+				completion_reward = {
+			618 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+	}
+
+	#Focus for New equipment for the army
+	focus = {
+		id = MON_newequipmentforthearmy
+		icon = GFX_focus_generic_combined_arms
+		x = 9
+		y = 7
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_artillerymodernisation }
+		ai_will_do = {
+			factor = 1
+		}
+		
+						completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			
+						add_tech_bonus = {
+				name = mong_armor_effort
+				bonus = 2.0
+				uses = 1
+				category = armor
+				}
+							add_tech_bonus = {
+				name = mong_sa_engineer_corps
+				bonus = 1.0
+				uses = 1
+				category = support_tech
+			}
+		}
+		
+	}
+
+	#Focus for Industrial re-calibration
+	focus = {
+		id = MON_industrialrecalibration
+		icon = GFX_monindustry4
+		x = 15
+		y = 4
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_localproductionofmilitaryequipment }
+		ai_will_do = {
+			factor = 1
+		}
+		
+						available = {
+						date > 1939.1.01 
+		}
+		
+				completion_reward = {			
+			617 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}	
+            add_ideas = war_economy			
+            swap_ideas = {
+				remove_idea = MON_agrarian_reform1
+				add_idea = MON_agrarian_reform2
+			}				
+			
+									add_tech_bonus = {
+				name = spy2_bonus
+				bonus = 0.50
+				uses = 2
+				category = electronics
+		    }
+		}
+	}
+
+	#Focus for Mongolian lend lease
+	focus = {
+		id = MON_mongolianlendlease
+		icon = GFX_monsovietll
+		x = 16
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_assisttheherdsmen 
+		}
+		prerequisite = { 
+			focus = MON_industrialrecalibration 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+				available = {
+			SOV = { 
+				has_war_with = GER
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MON_agrarian_reform2
+				add_idea = MON_agrarian_reform3
+			}
+			add_ideas = tot_economic_mobilisation 
+		    SOV = {
+                add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 2500 producer = MON }
+				add_equipment_to_stockpile = { type = support_equipment_1 amount = 250 producer = MON }
+				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 350 producer = MON }
+				add_equipment_to_stockpile = { type = radio_equipment amount = 350 producer = MON }
+				add_equipment_to_stockpile = { type = horse_equipment_0 amount = 1000 producer = MON }
+			}
+		}
+	}
+
+	#Focus for Industrial support for Soviet Union
+	focus = {
+		id = MON_industrialsupportforsovietunion
+		icon = GFX_monindustryll
+		x = 14
+		y = 7
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_militarylendlease }
+		ai_will_do = {
+			factor = 1
+		}
+		
+						completion_reward = {
+			SOV = {
+				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 1000 producer = MON }
+				add_equipment_to_stockpile = { type = support_equipment_1 amount = 100 producer = MON }
+				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100 producer = MON }
+				add_equipment_to_stockpile = { type = radio_equipment amount = 100 producer = MON }
+				add_equipment_to_stockpile = { type = horse_equipment_0 amount = 500 producer = MON }
+			408 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		}
+	}
+
+	#Focus for Donations campaign
+	focus = {
+		id = MON_donationscampaign
+		icon = GFX_mongolgold
+		x = 16
+		y = 8
+		cost = 7.16
+		available_if_capitulated = yes
+
+		prerequisite = {		
+			focus = MON_industrialsupportforsovietunion 
+		}
+		
+		prerequisite = {		
+			focus = MON_aratsquadron  
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = { 	
+        SOV = {
+				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 2500 producer = MON }
+				add_equipment_to_stockpile = { type = support_equipment_1 amount = 350 producer = MON }
+				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 250 producer = MON }
+				add_equipment_to_stockpile = { type = radio_equipment amount = 350 producer = MON }
+				add_equipment_to_stockpile = { type = horse_equipment_0 amount = 1000 producer = MON }
+        }
+       }		
+
+	}
+
+	#Focus for Revolutionary Mongolian tank division
+	focus = {
+		id = MON_revolutionarymongoliantankdivision
+		icon = GFX_montank
+		x = 18
+		y = 6
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_mongolianlendlease }
+		ai_will_do = {
+			factor = 1
+			}
+		available = {
+		}
+
+			completion_reward = {
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis
+					amount = 300
+					producer = MON
+				}	
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis
+					amount = 200
+					producer = MON
+				}
+            }
+    }
+
+	#Focus for Arat squadron
+	focus = {
+		id = MON_aratsquadron
+		icon = GFX_monplanez
+		x = 18
+		y = 7
+		cost = 7.16
+		available = {
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_revolutionarymongoliantankdivision }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+				add_equipment_to_stockpile = {
+					type = fighter_equipment
+					amount = 100
+					producer = MON
+				}			
+				add_equipment_to_stockpile = {
+					type = heavy_fighter_equipment
+					amount = 100
+					producer = MON
+				}	
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment
+					amount = 100
+					producer = MON
+				}	
+				add_equipment_to_stockpile = {
+					type = CAS_equipment
+					amount = 100
+					producer = MON
+				}
+        }		
+	}
+
+	#Focus for Military lend-lease
+	focus = {
+		id = MON_militarylendlease
+		icon = GFX_monmilitaryll
+		x = 14
+		y = 6
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_mongolianlendlease }
+		ai_will_do = {
+			factor = 1
+		}
+		
+								completion_reward = {
+			SOV = {
+				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 1000 producer = MON }
+				add_equipment_to_stockpile = { type = support_equipment_1 amount = 100 producer = MON }
+				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100 producer = MON }
+				add_equipment_to_stockpile = { type = radio_equipment amount = 100 producer = MON }
+				add_equipment_to_stockpile = { type = horse_equipment_0 amount = 500 producer = MON }
+			408 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		}
+		
+	}
+
+	#Focus for Local production of heavy military equipment
+	focus = {
+		id = MON_localproductionofheavymilitaryequipment
+		icon = GFX_monlocalmilitaryprod
+		x = 11
+		y = 8
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_newequipmentforthearmy 
+			focus = MON_expandminingoperationsii 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+						available = {
+		}
+		
+				completion_reward = {	
+			330 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Universal conscription program
+	focus = {
+		id = MON_universalconscriptionprogram
+		icon = GFX_monrecruitment
+		x = 9
+		y = 5
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_armyreform }
+		ai_will_do = {
+			factor = 1
+		}
+			completion_reward = {
+			swap_ideas = {
+				remove_idea = MON_Armed_State
+				add_idea = MON_Armed_State_2		
+			}
+		}
+	}
+
+	#Focus for Urbanisation plan
+	focus = {
+		id = MON_urbanisationplan
+		icon = GFX_monstuff
+		x = 12
+		y = 5
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_expandminingoperations }
+		ai_will_do = {
+			factor = 1
+		}
+						available = {
+						has_idea = MON_Rual_population_3
+		}
+						completion_reward = {
+						remove_ideas = MON_Rual_population_3
+			if = {
+				limit = {
+					has_idea = MON_Rogue_state_3
+				}
+				remove_ideas = { MON_Rogue_state_3 }
+			}
+			if = {
+				limit = {
+					has_idea = MON_Rogue_state
+				}
+				swap_ideas = {
+					remove_idea = MON_Rogue_state
+					add_idea = MON_Rogue_state_2
+				}
+			}	
+			if = {
+				limit = {
+					has_idea = MON_Rogue_state_2
+				}
+				swap_ideas = {
+					remove_idea = MON_Rogue_state_2
+					add_idea = MON_Rogue_state_3
+				}
+			}				
+		}
+	}
+
+	#Focus for Agricultural advancements
+	focus = {
+		id = MON_agriculturaladvancements
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 17
+		y = 3
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_reduceilliteracy }
+		ai_will_do = {
+			factor = 1
+		}
+		
+										available = {
+		}
+		
+				completion_reward = {
+			330 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				     }
+			      }
+			if = {
+				limit = {
+					has_idea = MON_Rogue_state_3
+				}
+				remove_ideas = { MON_Rogue_state_3 }
+			}
+			if = {
+				limit = {
+					has_idea = MON_Rogue_state
+				}
+				swap_ideas = {
+					remove_idea = MON_Rogue_state
+					add_idea = MON_Rogue_state_2
+				}
+			}	
+			if = {
+				limit = {
+					has_idea = MON_Rogue_state_2
+				}
+				swap_ideas = {
+					remove_idea = MON_Rogue_state_2
+					add_idea = MON_Rogue_state_3
+				}
+			}				
+
+		}
+		
+		
+	}
+
+	#Focus for Narrow gauge railway
+	focus = {
+		id = MON_narrowgaugerailway
+		icon = GFX_monrailway
+		x = 12
+		y = 6
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_urbanisationplan }
+		ai_will_do = {
+			factor = 1
+		}
+		
+						bypass = {			
+		}
+		available = {
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = MON_fund_owen_gun_research
+				bonus = 1.0
+				uses = 2
+				technology = tech_logistics_company
+				technology = tech_logistics_company2
+				technology = tech_logistics_company3
+				technology = tech_logistics_company4
+			}				
+				330 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				617 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				618 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}	
+			#laanbaatar - Irkutsk
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				start_province = 4801
+				target_province = 1762
+			}
+		}
+	}
+
+	#Focus for Find scapegoats for the Great Terror
+	focus = {
+		id = MON_findscapegoatsforthegreatterror
+		icon = GFX_findwhotoblame
+		x = 2
+		y = 6
+		cost = 7.16
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_purgeanandynamar }
+		ai_will_do = {
+			factor = 1
+		}
+				completion_reward = {	
+				remove_ideas = MON_officer_purged
+				
+		}			
+	}
+
+	#Focus for Moscow military advisors
+	focus = {
+		id = MON_moscowmilitaryadvisors
+		icon = GFX_monrussianofficers
+		x = 7
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+				available = {
+				has_idea = MON_Mongolian_Police
+		}
+		
+								completion_reward = {
+			army_experience = 25
+						add_ideas = MON_advisors
+		}
+	}
+	
+	focus = {
+		id = MON_basesforsovietaircraft
+		icon = GFX_focus_CZE_military_aeronautical_institute
+		prerequisite = { focus = MON_modernsovfighters }	
+		x = 20
+		y = 2
+		cost = 7.16
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+				available = {
+		}			
+		completion_reward = {
+        air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = MON_death_from_down_under
+				cost_reduction = 0.50
+				uses = 1
+				category = air_doctrine
+			}	
+			330 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			618 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			617 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = MON_modernsovfighters
+		icon = GFX_sovietfighters
+		prerequisite = { focus = MON_sovietairschool }	
+		x = 21
+		y = 1
+		cost = 7.16
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = MON_cac_boomerang
+				bonus = 1
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = MON_sovietairschool
+		icon = GFX_airtraining
+		x = 21
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+				available = {
+				has_idea = MON_Mongolian_Police
+		}		
+		
+		completion_reward = {
+		    air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = MON_death_from_down_under
+				cost_reduction = 0.50
+				uses = 1
+				category = air_doctrine
+			}	
+          add_ideas = MONAF
+		}
+	}	
+	
+	focus = {
+		id = MON_localdevelopmentoffighterplanes
+		icon = GFX_localplaneproduction
+		prerequisite = { focus = MON_reduceilliteracy focus = MON_basesforsovietaircraft }				
+		x = 19
+		y = 3
+		cost = 7.16
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+          add_ideas = ROM_local_development
+		}
+	}	
+	
+	focus = {
+		id = MON_localdevelopmentofbomba
+		icon = GFX_sovietbombers
+		prerequisite = { focus = MON_modernsovfighters }			
+		x = 22
+		y = 3
+		cost = 7.16
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+          	add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1
+				uses = 2
+				category = tactical_bomber
+				category = cas_bomber			
+			}
+		}
+	}	
+	
+	focus = {
+		id = MON_lessonsofkhalkingol
+		icon = GFX_MON_air
+		prerequisite = { focus = MON_basesforsovietaircraft focus = MON_localdevelopmentofbomba }		
+		x = 20
+		y = 4
+		cost = 7.16
+		available_if_capitulated = yes
+		available = {
+		    date > 1939.1.1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			air_experience = 100
+			add_ideas = FRA_air_dominance
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			add_doctrine_cost_reduction = {
+				name = MON_death_from_down_under
+				cost_reduction = 0.50
+				uses = 1
+				category = air_doctrine
+			}		
+		}
+	}
+
+	focus = {
+		id = MON_tireplant
+		icon = GFX_tireplant
+		prerequisite = { focus = MON_woolwashingfactory }			
+		x = 12
+		y = 1
+		cost = 7.16
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+				available = {	
+		}
+		
+		completion_reward = {
+			add_resource = {
+				type = rubber
+				amount = 15
+				state = 618
+			}
+			add_resource = {
+				type = oil
+				amount = 30
+				state = 618
+			}				
+		}
+	}	
+
+#End of focuses 
+ }

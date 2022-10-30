@@ -1,17 +1,14 @@
 ﻿search_filter_prios = {
 	FOCUS_FILTER_POLITICAL = 1010
+
+	
+ 
+	
 	
 	FOCUS_FILTER_RESEARCH = 522
+
 	
 	FOCUS_FILTER_INDUSTRY = 509
-
-	FOCUS_FILTER_BALANCE_OF_POWER = 200
-	FOCUS_FILTER_SOV_POLITICAL_PARANOIA = 111
-	FOCUS_FILTER_PROPAGANDA = 110
-	FOCUS_FILTER_MISSIOLINI = 110
-	FOCUS_FILTER_ARMY_XP = 103
-	FOCUS_FILTER_NAVY_XP = 102
-	FOCUS_FILTER_AIR_XP = 101
 
 }
 
@@ -41,9 +38,9 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 5
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
 				name = land_doc_bonus
-				cost_reduction = 0.5
+				bonus = 1.0
 				uses = 1
 				category = land_doctrine
 			}
@@ -112,9 +109,9 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 5
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
 				name = land_doc_bonus
-				cost_reduction = 0.5
+				bonus = 1.0
 				uses = 1
 				category = land_doctrine
 			}
@@ -183,9 +180,9 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 5
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
 				name = land_doc_bonus
-				cost_reduction = 0.5
+				bonus = 1.0
 				uses = 1
 				category = land_doctrine
 			}
@@ -291,9 +288,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}			
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
 				name = air_doc_bonus
-				cost_reduction = 0.5
+				bonus = 1.0
 				uses = 1
 				category = air_doctrine
 			}			
@@ -346,9 +343,9 @@ focus_tree = {
 					ROOT = { set_country_flag = aviation_effort_AB }
 				}
 			}
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
 				name = air_doc_bonus
-				cost_reduction = 0.5
+				bonus = 1.0
 				uses = 1
 				category = air_doctrine
 			}
@@ -374,8 +371,7 @@ focus_tree = {
 				name = fighter_bonus
 				bonus = 1.0
 				uses = 2
-				category = light_fighter
-				category = cat_heavy_fighter
+				category = light_air 
 			}
 		}
 	}
@@ -399,8 +395,8 @@ focus_tree = {
 				name = bomber_bonus
 				bonus = 1.0
 				uses = 2
-				category = cat_strategic_bomber
-				category = tactical_bomber
+				category = medium_air
+				category = heavy_air
 			}
 		}
 	}
@@ -428,9 +424,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
 				name =  air_doc_bonus
-				cost_reduction = 0.5
+				bonus = 1.0
 				uses = 1
 				category = air_doctrine
 			}
@@ -485,9 +481,9 @@ focus_tree = {
 					ROOT = { set_country_flag = aviation_effort_2_AB }
 				}
 			}
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
 				name =  air_doc_bonus
-				cost_reduction = 0.5
+				bonus = 1.0
 				uses = 1
 				category = air_doctrine
 			}
@@ -734,9 +730,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
 				name = sub_op_bonus
-				cost_reduction = 0.5
+				bonus = 1.0
 				uses = 2
 				technology = convoy_interdiction_ti
 				technology = unrestricted_submarine_warfare
@@ -776,9 +772,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
 				name = fleet_in_being_bonus
-				cost_reduction = 0.25
+				bonus = 1.0
 				uses = 2
 				category = fleet_in_being_tree
 			}
@@ -1774,10 +1770,6 @@ focus_tree = {
 					has_idea = neutrality_idea
 				}
 			}
-			modifier = {
-				factor = 20
-				has_idea = SOV_russian_political_influence
-			}
 		}
 
 		completion_reward = {
@@ -1821,10 +1813,6 @@ focus_tree = {
 					is_historical_focus_on = yes
 					NOT = { has_government = fascism }
 				}
-			}
-			modifier = {
-				factor = 10
-				has_idea = SOV_russian_political_influence
 			}
 		}
 
@@ -2001,12 +1989,6 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				tag = AUS
-			}
-			modifier = {
-				factor = 0
-				tag = SAU
-				is_in_faction_with = SOV
-				SOV = { has_government = communism }
 			}
 		}
 
