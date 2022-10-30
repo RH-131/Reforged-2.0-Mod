@@ -16,9 +16,10 @@
 
 ROM_be_nice_to_hitler = {
 	allowed = {
-		original_tag = ROM
+		tag = ROM
 	}
 	enable = {
+		tag = ROM
 		has_completed_focus = ROM_trade_treaty_with_germany
 	}
 	abort={
@@ -34,9 +35,10 @@ ROM_be_nice_to_hitler = {
 
 ROM_build_early_civ = {
 	allowed = {
-		original_tag = ROM
+		tag = ROM
 	}
 	enable = {
+		tag = ROM
 		date < 1937.10.15
 		has_war = no
 	}
@@ -52,14 +54,15 @@ ROM_build_early_civ = {
 
 ROM_highway_to_the_danger_zone_78 = { # bessarabia
 	allowed = {
-		original_tag = ROM
+		tag = ROM
 	}
 	enable = {
+		tag = ROM
 		has_war = no
 		date > 1938.1.1
 		78 = {
 			is_controlled_by = ROM
-			infrastructure < 4
+			infrastructure < 8
 		}
 	}
 
@@ -75,20 +78,21 @@ ROM_highway_to_the_danger_zone_78 = { # bessarabia
 
 ROM_highway_to_the_danger_zone_766 = { # s. bessarabia
 	allowed = {
-		original_tag = ROM
+		tag = ROM
 	}
 	enable = {
+		tag = ROM
 		has_war = no
 		date > 1938.1.1
 		78 = {
 			OR = {
 				NOT = { is_controlled_by = ROM }
-				infrastructure > 3
+				infrastructure > 7
 			}
 		}
 		766 = {
 			is_controlled_by = ROM
-			infrastructure < 4
+			infrastructure < 8
 		}
 	}
 
@@ -104,26 +108,27 @@ ROM_highway_to_the_danger_zone_766 = { # s. bessarabia
 
 ROM_highway_to_the_danger_zone_79 = { # Moldova
 	allowed = {
-		original_tag = ROM
-	}
+		tag = ROM
+	}	
 	enable = {
+		tag = ROM
 		has_war = no
 		date > 1938.1.1
 		78 = {
 			OR = {
 				NOT = { is_controlled_by = ROM }
-				infrastructure > 3
+				infrastructure > 7
 			}
 		}
 		766 = {
 			OR = {
 				NOT = { is_controlled_by = ROM }
-				infrastructure > 3
+				infrastructure > 7
 			}
 		}
 		79 = {
 			is_controlled_by = ROM
-			infrastructure < 4
+			infrastructure < 8
 		}
 	}
 

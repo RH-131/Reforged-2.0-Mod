@@ -12,39 +12,66 @@
 
 british_help_against_germany = {
 	allowed = {
-		original_tag = POL
+		tag = POL
 	}
 	enable = {
-		OR = {
-			GER = { has_completed_focus = GER_second_vienna_award }
-			GER = { has_war_with = POL }
-		}
+		tag = POL
+		GER = { has_war_with = POL }		
 		country_exists = ENG
 	}
 	abort = {
 		NOT = { country_exists = ENG }
 	}
-
+	
 	ai_strategy = {
 		type = befriend
-		id = "ENG"
+		id = "ENG"			
 		value = 200
 	}
 	ai_strategy = {
 		type = alliance
-		id = "ENG"
+		id = "ENG"			
 		value = 200
+	}	
+}
+defend_against_adolfo = {
+	allowed = {
+		tag = POL
 	}
+	enable = {
+		tag = POL	
+		country_exists = GER
+	}
+	abort = {
+		NOT = { country_exists = GER }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "GER"			
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = "GER"
+		value = -100
+	}	
+	ai_strategy = {
+		type = ignore
+		id = "SOV"
+		value = 500
+	}		
 }
 
 POL_template_design = {
 	allowed = {
-		original_tag = POL
+		tag = POL
 	}
 	enable = {
-		date < 1940.1.1
+		original_tag = POL
+		date < 1940.1.1				
 	}
-	abort = {
+	abort = { 
 		date > 1940.1.1
 	}
 
@@ -59,7 +86,7 @@ POL_template_design = {
 		id = cavalry
 		value = -100
 	}
-
+	
 	ai_strategy = {
 		type = template_prio
 		id = light_armor
@@ -83,30 +110,10 @@ POL_template_design = {
 		id = paratroopers
 		value = -50
 	}
-
+	
 	ai_strategy = {
 		type = template_prio
 		id = infantry
 		value = 75
-	}
-}
-
-dont_ally_germany_pls = {
-	allowed = {
-		original_tag = POL
-	}
-	enable = {
-		is_historical_focus_on = yes
-		NOT = { has_government = fascism }
-	}
-
-	abort = {
-		has_global_flag = poland_swap_danzig
-	}
-
-	ai_strategy = {
-		type = alliance
-		id = "GER"
-		value = -5000
 	}
 }

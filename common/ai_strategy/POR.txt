@@ -14,53 +14,44 @@
 
 # Make POR want to send stuff to Republican Spain
 POR_helps_SPD_win_civil_war = {
-	allowed = {
-		original_tag = POR
-		has_dlc = "La Resistance"
-	}
 	enable = {
-		SPR_scw_in_progress = yes
+		tag = POR
 		NOT = { has_government = fascism }
-		has_completed_focus = POR_support_the_spanish_republic
 		country_exists = SPD
+		has_dlc = "La Resistance"
 	}
 	abort = {
 		OR = {
 			NOT = { country_exists = SPD }
-			SPD = { has_completed_focus = SPR_a_red_iberia }
 			has_government = fascism
 			has_global_flag = scw_over
 		}
 	}
-
+	
 	ai_strategy = {
 		type = support
-		id = SPD
-		value = 50
+		id = SPD			
+		value = 0
 	}
 
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = SPD
-		value = 50
+		value = 0
 	}
 
 }
 
 # Make POR want to send stuff to Nationalist Spain
 POR_helps_SPA_win_civil_war = {
-	allowed = {
-		original_tag = POR
-		has_dlc = "La Resistance"
-	}
 	enable = {
-		SPR_scw_in_progress = yes
-		OR = {
+		tag = POR
+		OR = { 
 			has_government = fascism
 			has_government = neutrality
 		}
-		has_completed_focus = POR_support_the_spanish_nationalists
 		country_exists = SPA
+		has_dlc = "La Resistance"
 	}
 	abort = {
 		OR = {
@@ -72,32 +63,28 @@ POR_helps_SPA_win_civil_war = {
 			has_global_flag = scw_over
 		}
 	}
-
+	
 	ai_strategy = {
 		type = support
-		id = SPA
-		value = 50
+		id = SPA			
+		value = 0
 	}
 
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = SPA
-		value = 50
+		value = 0
 	}
 
 }
 
 # Make POR want to send stuff to Carlist Spain
 POR_helps_SPB_win_civil_war = {
-	allowed = {
-		original_tag = POR
-		has_dlc = "La Resistance"
-	}
 	enable = {
-		SPR_scw_in_progress = yes
+		tag = POR
 		has_government = neutrality
-		has_completed_focus = POR_support_a_spanish_monarchy_in_the_war
 		country_exists = SPB
+		has_dlc = "La Resistance"
 	}
 	abort = {
 		OR = {
@@ -106,17 +93,17 @@ POR_helps_SPB_win_civil_war = {
 			has_global_flag = scw_over
 		}
 	}
-
+	
 	ai_strategy = {
 		type = support
-		id = SPB
-		value = 50
+		id = SPA			
+		value = 0
 	}
 
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = SPB
-		value = 50
+		id = SPA
+		value = 0
 	}
 
 }
