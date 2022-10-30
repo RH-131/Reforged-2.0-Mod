@@ -3,175 +3,138 @@
 is_available_fighter_HUN = {
 	OR = {
 		AND = {
-			has_tech = fighter1
-			ROOT = { 
-				NOT = { has_tech = fighter1}
+			has_tech = fighter_1936
+			HUN = { 
+				NOT = { has_tech = fighter_1936}
 			}
 		}
 		AND = {
-			has_tech = fighter2
-			ROOT = { 
-				NOT = { has_tech = fighter2}
+			has_tech = fighter_1938
+			HUN = { 
+				NOT = { has_tech = fighter_1938}
 			}
 		}
 		AND = {
-			has_tech = fighter3
-			ROOT = { 
-				NOT = { has_tech = fighter3}
-			}
-		}
-		AND = {
-			has_tech = basic_small_airframe
-			ROOT = { 
-				NOT = { has_tech = basic_small_airframe}
-			}
-		}
-		AND = {
-			has_tech = improved_small_airframe
-			ROOT = { 
-				NOT = { has_tech = improved_small_airframe}
-			}
-		}
-		AND = {
-			has_tech = advanced_small_airframe
-			ROOT = { 
-				NOT = { has_tech = advanced_small_airframe}
+			has_tech = fighter_1940
+			HUN = { 
+				NOT = { has_tech = fighter_1940}
 			}
 		}
 	}
 	NOT = {
-		has_war_with = ROOT
+		has_war_with = HUN
 	}
 }
 
 is_available_heavy_fighter_HUN = {
 	OR = {
 		AND = {
-			has_tech = heavy_fighter1
-			ROOT = { 
-				NOT = { has_tech = heavy_fighter1}
+			has_tech = heavy_fighter_1936
+			HUN = { 
+				NOT = { has_tech = heavy_fighter_1936}
 			}
 		}
 		AND = {
-			has_tech = heavy_fighter2
-			ROOT = { 
-				NOT = { has_tech = heavy_fighter2}
+			has_tech = heavy_fighter_1938
+			HUN = { 
+				NOT = { has_tech = heavy_fighter_1938}
 			}
 		}
 		AND = {
-			has_tech = heavy_fighter3
-			ROOT = { 
-				NOT = { has_tech = heavy_fighter3}
-			}
-		}
-		AND = {
-			has_tech = basic_medium_airframe
-			ROOT = { 
-				NOT = { has_tech = basic_medium_airframe}
-			}
-		}
-		AND = {
-			has_tech = improved_medium_airframe
-			ROOT = { 
-				NOT = { has_tech = improved_medium_airframe}
-			}
-		}
-		AND = {
-			has_tech = advanced_medium_airframe
-			ROOT = { 
-				NOT = { has_tech = advanced_medium_airframe}
+			has_tech = heavy_fighter_1940
+			HUN = { 
+				NOT = { has_tech = heavy_fighter_1940}
 			}
 		}
 	}
 	NOT = {
-		has_war_with = ROOT
+		has_war_with = HUN
 	}
 }
 
 is_available_cas_HUN = {
 	OR = {
 		AND = {
-			has_tech = CAS1
-			ROOT = { 
-				NOT = { has_tech = CAS1}
+			has_tech = CAS_1937
+			HUN = { 
+				NOT = { has_tech = CAS_1937}
 			}
 		}
 		AND = {
-			has_tech = CAS2
-			ROOT = { 
-				NOT = { has_tech = CAS2}
+			has_tech = CAS_1939
+			HUN = { 
+				NOT = { has_tech = CAS_1939}
 			}
 		}
 		AND = {
-			has_tech = CAS3
-			ROOT = { 
-				NOT = { has_tech = CAS3}
-			}
-		}
-		AND = {
-			has_tech = basic_small_airframe
-			ROOT = { 
-				NOT = { has_tech = basic_small_airframe}
-			}
-		}
-		AND = {
-			has_tech = improved_small_airframe
-			ROOT = { 
-				NOT = { has_tech = improved_small_airframe}
-			}
-		}
-		AND = {
-			has_tech = advanced_small_airframe
-			ROOT = { 
-				NOT = { has_tech = advanced_small_airframe}
+			has_tech = CAS_1941
+			HUN = { 
+				NOT = { has_tech = CAS_1941}
 			}
 		}
 	}
 	NOT = {
-		has_war_with = ROOT
+		has_war_with = HUN
 	}
 }
 
 is_available_tac_HUN = {
 	OR = {
 		AND = {
-			has_tech = tactical_bomber1
-			ROOT = { 
-				NOT = { has_tech = tactical_bomber1}
+			has_tech = tactical_bomber_1934
+			HUN = { 
+				NOT = { has_tech = tactical_bomber_1937}
 			}
 		}
 		AND = {
-			has_tech = tactical_bomber2
-			ROOT = { 
-				NOT = { has_tech = tactical_bomber2}
+			has_tech = tactical_bomber_1937
+			HUN = { 
+				NOT = { has_tech = tactical_bomber_1937}
 			}
 		}
 		AND = {
-			has_tech = tactical_bomber3
-			ROOT = { 
-				NOT = { has_tech = tactical_bomber3}
-			}
-		}
-		AND = {
-			has_tech = basic_medium_airframe
-			ROOT = { 
-				NOT = { has_tech = basic_medium_airframe}
-			}
-		}
-		AND = {
-			has_tech = improved_medium_airframe
-			ROOT = { 
-				NOT = { has_tech = improved_medium_airframe}
-			}
-		}
-		AND = {
-			has_tech = advanced_medium_airframe
-			ROOT = { 
-				NOT = { has_tech = advanced_medium_airframe}
+			has_tech = tactical_bomber_1939
+			HUN = { 
+				NOT = { has_tech = tactical_bomber_1939}
 			}
 		}
 	}
 	NOT = {
-		has_war_with = ROOT
+		has_war_with = HUN
+	}
+}
+
+#Country scope
+HUN_has_axis_bills = {
+	if = {
+		limit = { has_idea = HUN_axis_bills_1 }
+		has_idea = HUN_axis_bills_1
+	}
+	else_if = {
+		limit = { has_idea = HUN_axis_bills_2 }
+		has_idea = HUN_axis_bills_2
+	}
+	else_if = {
+		limit = { has_idea = HUN_axis_bills_3 }
+		has_idea = HUN_axis_bills_3
+	}
+	else_if = {
+		limit = { has_idea = HUN_axis_bills_4 }
+		has_idea = HUN_axis_bills_4
+	}
+	else_if = {
+		limit = { has_idea = HUN_axis_bills_5 }
+		has_idea = HUN_axis_bills_5
+	}
+	else_if = {
+		limit = { has_idea = HUN_axis_bills_6 }
+		has_idea = HUN_axis_bills_6
+	}
+	else_if = {
+		limit = { has_idea = HUN_axis_bills_7 }
+		has_idea = HUN_axis_bills_7
+	}
+	else = {		
+		has_idea = HUN_axis_bills_1
 	}
 }

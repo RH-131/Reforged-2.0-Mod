@@ -3,21 +3,21 @@
 is_available_fighter_YUG = {
 	OR = {
 		AND = {
-			has_tech = fighter1
+			has_tech = fighter_1936
 			YUG = { 
-				NOT = { has_tech = fighter1}
+				NOT = { has_tech = fighter_1936}
 			}
 		}
 		AND = {
-			has_tech = fighter2
+			has_tech = fighter_1938
 			YUG = { 
-				NOT = { has_tech = fighter2}
+				NOT = { has_tech = fighter_1938}
 			}
 		}
 		AND = {
-			has_tech = fighter3
+			has_tech = fighter_1940
 			YUG = { 
-				NOT = { has_tech = fighter3}
+				NOT = { has_tech = fighter_1940}
 			}
 		}
 	}
@@ -29,21 +29,21 @@ is_available_fighter_YUG = {
 is_available_heavy_fighter_YUG = {
 	OR = {
 		AND = {
-			has_tech = heavy_fighter1
+			has_tech = heavy_fighter_1936
 			YUG = { 
-				NOT = { has_tech = heavy_fighter1}
+				NOT = { has_tech = heavy_fighter_1936}
 			}
 		}
 		AND = {
-			has_tech = heavy_fighter2
+			has_tech = heavy_fighter_1938
 			YUG = { 
-				NOT = { has_tech = heavy_fighter2}
+				NOT = { has_tech = heavy_fighter_1938}
 			}
 		}
 		AND = {
-			has_tech = heavy_fighter3
+			has_tech = heavy_fighter_1940
 			YUG = { 
-				NOT = { has_tech = heavy_fighter3}
+				NOT = { has_tech = heavy_fighter_1940}
 			}
 		}
 	}
@@ -55,21 +55,21 @@ is_available_heavy_fighter_YUG = {
 is_available_cas_YUG = {
 	OR = {
 		AND = {
-			has_tech = CAS1
+			has_tech = CAS_1937
 			YUG = { 
-				NOT = { has_tech = CAS1}
+				NOT = { has_tech = CAS_1937}
 			}
 		}
 		AND = {
-			has_tech = CAS2
+			has_tech = CAS_1939
 			YUG = { 
-				NOT = { has_tech = CAS2}
+				NOT = { has_tech = CAS_1939}
 			}
 		}
 		AND = {
-			has_tech = CAS3
+			has_tech = CAS_1941
 			YUG = { 
-				NOT = { has_tech = CAS3}
+				NOT = { has_tech = CAS_1941}
 			}
 		}
 	}
@@ -81,37 +81,25 @@ is_available_cas_YUG = {
 is_available_tac_YUG = {
 	OR = {
 		AND = {
-			has_tech = tactical_bomber1
+			has_tech = tactical_bomber_1934
 			YUG = { 
-				NOT = { has_tech = tactical_bomber1}
+				NOT = { has_tech = tactical_bomber_1934}
 			}
 		}
 		AND = {
-			has_tech = tactical_bomber2
+			has_tech = tactical_bomber_1937
 			YUG = { 
-				NOT = { has_tech = tactical_bomber2}
+				NOT = { has_tech = tactical_bomber_1937}
 			}
 		}
 		AND = {
-			has_tech = tactical_bomber3
+			has_tech = tactical_bomber_1939
 			YUG = { 
-				NOT = { has_tech = tactical_bomber3}
+				NOT = { has_tech = tactical_bomber_1939}
 			}
 		}
 	}
 	NOT = {
 		has_war_with = YUG
-	}
-}
-
-is_yug_cosmetic_tag = {
-	OR = {
-		has_cosmetic_tag = SER	
-		has_cosmetic_tag = vojvodina	
-		has_cosmetic_tag = dalmatia	
-		has_cosmetic_tag = BOS_without_HRZ	
-		has_country_flag = yug_transylvania_flag
-		has_country_flag = yug_croatia_flag
-		has_country_flag = yug_bosnia_flag
 	}
 }
