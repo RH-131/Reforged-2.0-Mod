@@ -1,67 +1,47 @@
-# Aleksandra Kollontay has an unsed portrait
-# Viktor Baydalakov has an unused portrait
-
-characters = {
-
-
-  ####    ####   #    #  #    #  #####  #####   #   #      #       ######    ##    #####   ######  #####    ####  
- #    #  #    #  #    #  ##   #    #    #    #   # #       #       #        #  #   #    #  #       #    #  #      
- #       #    #  #    #  # #  #    #    #    #    #        #       #####   #    #  #    #  #####   #    #   ####  
- #       #    #  #    #  #  # #    #    #####     #        #       #       ######  #    #  #       #####        # 
- #    #  #    #  #    #  #   ##    #    #   #     #        #       #       #    #  #    #  #       #   #   #    # 
-  ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   ####  
-                                                                                                                  
-
-	SOV_iosif_stalin = {
-		name = SOV_iosif_stalin
-		portraits = {
-			civilian = {
-				large = GFX_portrait_SOV_iosif_stalin
-			}
-			army = {
-				large = GFX_portrait_SOV_iosif_stalin
-				small = GFX_portrait_SOV_iosif_stalin_small
+characters={
+	SOV_joseph_stalin ={
+		name = "Joseph Stalin"
+		portraits ={
+			civilian ={
+				large = "gfx/leaders/SOV/Portrait_Soviet_Joseph_Stalin.dds"
 			}
 		}
-		country_leader = {
-			ideology = stalinism
-			traits = { stalin_heart_of_steel }
-			expire = "1953.3.1.1"
-			id = -1
+		country_leader ={
+			desc = "POLITICS_JOSEPH_STALIN_DESC"
+			ideology=stalinism
+			traits={}
+			expire = "1953.3.1"
+			id=-1
 		}
 	}
-
-	#TODO: This should be a country leader token added to Stalin in the appropriate event/focus/whatever
-	SOV_tsar_iosif_stalin = {
-		name = "Tsar Joseph I"
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_SOV_tsar_stalin"
+	SOV_konstantin_rodzaevsky = {
+		name = "Konstantin Rodzaevsky"
+		portraits ={
+			civilian ={
+				large = "gfx/leaders/SOV/Portrait_Soviet_Konstantin_Rodzaevsky.dds"
 			}
 		}
-		country_leader = {
-			ideology = despotism
-			expire = "1953.3.1.1"
-			id = -1
+		country_leader ={
+			desc = "POLITICS_KONSTANTIN_RODZAEVSKY_DESC"
+			ideology=fascism_ideology
+			traits={}
+			expire = "1953.3.1"
+			id=-1
 		}
 	}
-
-	# Kerensky and Rodzaevsky moved to the bottom of the file
-
-	SOV_tsar_vladimir_kirillovich = {
-		name = SOV_tsar_vladimir_kirillovich
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_SOV_vladimir_kirillovich"
+	SOV_alexander_fyodorovich_kerensky = {
+		name = "Alexander Fyodorovich Kerensky"
+		portraits ={
+			civilian ={
+				large = "gfx/leaders/SOV/Portrait_Soviet_Generic_1.tga"
 			}
 		}
-		country_leader = {
-			ideology = despotism
-			expire = "1953.3.1.1"
-			id = -1
-			traits = {
-				emperor_and_autocrat_of_all_the_russias
-			}
+		country_leader ={
+			desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
+			ideology=socialism
+			traits={}
+			expire = "1953.3.1"
+			id=-1
 		}
 	}
 	SOV_tsar_vsevolod_ivanovich = {
@@ -77,518 +57,1539 @@ characters = {
 			id = -1
 		}
 	}
-
-	SOV_metropolitan_meletius = {
-		name = SOV_metropolitan_meletius
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_SOV_patriarch_meletius"
-			}
-			army = {
-				small = "GFX_idea_SOV_patriarch_meletius"
-			}
-		}
-		country_leader = {
-			ideology = despotism
-			expire = "1953.3.1.1"
-			id = -1
-			traits = {
-				defier_of_the_sun_god supreme_representative_of_god_on_earth
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_patriarch_meletius
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
-				NOT = {
-					has_completed_focus = SOV_the_third_rome
+	SOV_stepan_krasovsky={
+		advisor={
+			slot = high_command
+			idea_token = stepan_krasovsky
+			ledger  = air 
+				allowed  = {
+					original_tag  = SOV
 				}
-			}
-			available = {
-				has_completed_focus = SOV_the_hands_do
-				NOT = {
-					has_completed_focus = SOV_the_third_rome
-				}
-			}
-			traits = {
-				the_masses_opium
-			}
-		}	
-	}
-
-	SOV_supreme_soviet = { #Country Leader role added via focus
-		name = SOV_supreme_soviet
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_SOV_supreme_soviet
-			}
-		}
-	}
-
-	SOV_provisional_government = {
-		name = SOV_provisional_government
-
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_SOV_white_transitionary_council"
-			}
-		}
-		country_leader = {
-			ideology = despotism
-			expire = "1953.3.1.1"
-			id = -1
-			traits = {
-				emigre_connections desperate_gambit dysfunctional_assembly
-			}
-		}
-	}
-
-
-   # #    #####   #    #  #   #      #        ######    ##    #####   ######  #####    ####  
-  #   #   #    #  ##  ##   # #       #        #        #  #   #    #  #       #    #  #      
- #     #  #    #  # ## #    #        #        #####   #    #  #    #  #####   #    #   ####  
- #######  #####   #    #    #        #        #       ######  #    #  #       #####        # 
- #     #  #   #   #    #    #        #        #       #    #  #    #  #       #   #   #    # 
- #     #  #    #  #    #    #        #######  ######  #    #  #####   ######  #    #   ####  
-                                                                                             
-
-	SOV_georgy_zhukov = {
-		name = SOV_georgy_zhukov
-
-		portraits = {
-			army = {
-				small = "GFX_idea_georgy_zhukov"
-				large = GFX_portrait_SOV_georgy_zhukov
-			}
-		}
-
-		corps_commander = {
-			traits = { media_personality armor_officer war_hero winter_specialist }
-			skill = 5
-			attack_skill = 5
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 5
-			legacy_id = 410
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-
-		advisor = {
-			cost = 150
-			slot = theorist
-			idea_token = georgy_zhukov
-			ledger = army
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				has_completed_focus = SOV_positive_heroism
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
+				available  = {
+					not  = {
+						has_country_flag  = counter_purge 
 					}
-					NOT = { has_character_flag = SOV_exiled_flag }
 				}
-			}
-			traits = {
-				mass_assault_expert
-			}
-		}		
-	}
-
-	SOV_konstantin_rokossovsky = {
-		name = SOV_konstantin_rokossovsky
-
-		portraits = {
-			army = {
-				small = "GFX_idea_konstantin_rokossovsky"
-				large = GFX_portrait_SOV_konstantin_rokossovsky
+				traits  = {
+					air_air_combat_training_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="stepan_krasovsky"
+		portraits={
+			army={
+				small="GFX_idea_stepan_krasovsky"
 			}
 		}
-
+	}
+	SOV_sergei_khudyakov={
+		advisor={
+			slot = high_command
+			idea_token = sergei_khudyakov
+			ledger  = air 
+				allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_2_group_b 
+					}
+				}
+				traits  = {
+					air_close_air_support_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="sergei_khudyakov"
+		portraits={
+			army={
+				small="GFX_idea_sergei_khudyakov"
+			}
+		}
+	}
+	SOV_aleksandr_vasilevsky={
+		advisor={
+			slot = high_command
+			idea_token = aleksandr_vasilevsky
+			ledger  = army 
+				allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_2_group_b 
+					}
+					hidden_trigger  = {
+						not  = {
+							any_other_country  = {
+								has_war_with  = SOV
+								original_tag  = SOV
+								has_unit_leader  = 407.000
+							}
+						}
+					}
+				}
+				traits  = {
+					army_regrouping_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="aleksandr_vasilevsky"
+		portraits={
+			army={
+				small="GFX_idea_aleksandr_vasilevsky"
+			}
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Aleksandr_Vasilevsky.dds"
+			}
+		}
 		corps_commander = {
-			traits = { brilliant_strategist trait_cautious armor_officer }
-			skill = 4
+			traits = { motorized_officer politically_connected }
+			skill = 3
 			attack_skill = 3
 			defense_skill = 4
 			planning_skill = 2
-			logistics_skill = 4
-			legacy_id = 402
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-
-		advisor = {
-			slot = high_command
-			idea_token = konstantin_rokossovsky
-			ledger = army
-			allowed = {
-				original_tag = SOV
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 403.000
-						}
-					}
-				}
-			}
-			available = {
-				has_completed_focus = SOV_positive_heroism
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				army_armored_3
-			}
-				cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
-	SOV_aleksandr_vasilevsky = {
-		name = SOV_aleksandr_vasilevsky
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_aleksandr_vasilevsky"
-				large = "GFX_portrait_SOV_aleksandr_vasilevsky"
-			}
-		}
-		corps_commander = {
-			traits = { armor_officer politically_connected }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 2
+			logistics_skill = 3
 			legacy_id = 407
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
-
-		advisor = {
-			slot = high_command
-			idea_token = aleksandr_vasilevsky
-			ledger = army
-			allowed = {
-				original_tag = SOV
+	}
+	SOV_konstantin_vershinin={
+		advisor={
+			slot = air_chief
+			idea_token = konstantin_vershinin
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_2_group_b 
+					}
+				}
+				traits  = {
+					air_chief_ground_support_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="konstantin_vershinin"
+		portraits={
+			army={
+				small="GFX_idea_konstantin_vershinin"
 			}
-			available = {
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 407.000
+		}
+	}
+	SOV_mikhail_kalinin={
+		advisor={
+			slot = political_advisor
+			idea_token = mikhail_kalinin
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purged_kalinin 
+					}
+					not  = {
+						has_country_flag  = counter_purge 
+					}
+				}
+				traits  = {
+					popular_figurehead 
+				}
+		}
+		name="mikhail_kalinin"
+		portraits={
+			army={
+				small="GFX_idea_mikhail_kalinin"
+			}
+		}
+	}
+	SOV_ivan_konev={
+		advisor={
+			slot = high_command
+			idea_token = ivan_konev
+			ledger  = army 
+				allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = counter_purge 
+					}
+					custom_trigger_tooltip  = {
+						tooltip  = SOV_konev_civil_war
+						not  = {
+							any_other_country  = {
+								has_war_with  = SOV
+								original_tag  = SOV
+								has_unit_leader  = 408.000
+							}
 						}
 					}
 				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
+				traits  = {
+					army_concealment_3 
 				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="ivan_konev"
+		portraits={
+			army={
+				small="GFX_idea_ivan_konev"
 			}
-			traits = {
-				army_regrouping_2
-			}
-				cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}	
-	}
-
-	SOV_boris_shaposhnikov = {
-		name = SOV_boris_shaposhnikov
-		portraits = {
 			army = {
-				small = "GFX_idea_boris_shaposhnikov"
-				large = GFX_portrait_SOV_boris_shaposhnikov
+				large = "gfx/leaders/SOV/Portrait_Soviet_Ivan_Konev.dds"
 			}
 		}
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = boris_shaposhnikov
-			ledger = army
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				military_theorist
-			}
-		}
-
 		corps_commander = {
-			traits = { career_officer trait_cautious }
-			skill = 3
+			traits = { armor_officer brilliant_strategist }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = 408
+		}
+	}
+	SOV_ivan_yumashev={
+		advisor={
+			slot = navy_chief
+			idea_token = ivan_yumashev
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_1_group_b 
+					}
+				}
+				traits  = {
+					navy_chief_decisive_battle_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="ivan_yumashev"
+		portraits={
+			army={
+				small="GFX_idea_ivan_yumashev"
+			}
+		}
+	}
+	SOV_nikolay_kuznetsov={
+		advisor={
+			slot = navy_chief
+			idea_token = nikolay_kuznetsov
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_2_group_b 
+					}
+				}
+				traits  = {
+					navy_chief_reform_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="nikolay_kuznetsov"
+		portraits={
+			army={
+				small="GFX_idea_nikolay_kuznetsov"
+			}
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Vasily_Kuznetsov.dds"
+			}
+		}
+		corps_commander = {
+			traits = { commando infantry_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	SOV_lazar_kaganovich={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_lazar_kaganovich
+			allowed  = {
+					original_tag  = SOV
+				}
+				traits  = {
+					SOV_iron_fisted_brute SOV_georgian_gangster 
+				}
+				modifier  = {
+					stability_weekly  = -0.005
+					production_speed_infrastructure_factor  = 0.150
+					production_speed_industrial_complex_factor  = 0.100
+					production_speed_synthetic_refinery_factor  = 0.100
+					production_speed_rail_way_factor = 0.150
+					production_speed_supply_node_factor = 0.150
+				}
+		}
+		name="SOV_lazar_kaganovich"
+		portraits={
+			army={
+				small="GFX_idea_advisor_generic_27"
+			}
+		}
+	}
+	SOV_gordey_levchenko={
+		advisor={
+			slot = high_command
+			idea_token = gordey_levchenko
+			ledger  = navy 
+				allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_2_group_a 
+					}
+					hidden_trigger  = {
+						not  = {
+							any_other_country  = {
+								has_war_with  = SOV
+								original_tag  = SOV
+								has_unit_leader  = 406.000
+							}
+						}
+					}
+				}
+				traits  = {
+					navy_capital_ship_1 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="gordey_levchenko"
+		portraits={
+			army={
+				small="GFX_idea_gordey_levchenko"
+			}
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Gordey_Levchenko.dds"
+			}
+		}
+		navy_leader = {
+			traits = { green_water_expert }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 1
+			legacy_id = 406
+		}
+	}
+	SOV_soviet_vsevolod_merkulov={
+		advisor={
+			slot = political_advisor
+			idea_token = soviet_vsevolod_merkulov
+			available  = {
+					has_intelligence_agency  = yes 
+				}
+				allowed  = {
+					original_tag  = SOV
+					has_dlc = "La Resistance"
+				}
+				traits  = {
+					head_of_intelligence 
+				}
+		}
+		name="soviet_vsevolod_merkulov"
+		portraits={
+			army={
+				small="GFX_idea_soviet_vsevolod_merkulov"
+			}
+		}
+	}
+	SOV_yakov_smushkevich={
+		advisor={
+			slot = air_chief
+			idea_token = yakov_smushkevich
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_2_group_a 
+					}
+				}
+				traits  = {
+					air_chief_safety_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="yakov_smushkevich"
+		portraits={
+			army={
+				small="GFX_idea_yakov_smushkevich"
+			}
+		}
+	}
+	SOV_yakov_cherevichenko={
+		advisor={
+			slot = high_command
+			idea_token = yakov_cherevichenko
+			ledger  = army 
+				allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = counter_purge 
+					}
+				}
+				traits  = {
+					army_infantry_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="yakov_cherevichenko"
+		portraits={
+			army={
+				small="GFX_idea_yakov_cherevichenko"
+			}
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Yakov_Cherevichenko.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader }
+			skill = 2
 			attack_skill = 2
 			defense_skill = 3
 			planning_skill = 2
-			logistics_skill = 3
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			logistics_skill = 2
 		}
 	}
-
-	SOV_nikolay_vatutin = {
-		name = SOV_nikolay_vatutin
-		portraits = {
+	SOV_nikolai_vatutin={
+		advisor={
+			slot = high_command
+			idea_token = nikolai_vatutin
+			ledger  = army 
+				allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = counter_purge 
+					}
+				}
+				traits  = {
+					army_logistics_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="nikolai_vatutin"
+		portraits={
+			army={
+				small="GFX_idea_nikolai_vatutin"
+			}
 			army = {
-				large = GFX_portrait_SOV_nikolay_vatutin
-				small=GFX_portrait_SOV_nikolay_vatutin_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Nikolai_Fyodorovich_Vatutin.dds"
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless infantry_officer }
+			traits = { infantry_leader trait_cautious }
 			skill = 3
-			attack_skill = 1
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	SOV_nikolai_bulganin={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_nikolai_bulganin
+			allowed  = {
+					original_tag  = SOV
+				}
+				traits  = {
+					SOV_stalins_agent 
+				}
+				modifier  = {
+					political_power_factor  = 0.100
+					planning_speed  = 0.150
+					max_planning  = 0.050
+					high_command_cost_factor  = 0.500
+				}
+		}
+		name="SOV_nikolai_bulganin"
+		portraits={
+			army={
+				small="GFX_idea_advisor_generic_29"
+			}
+		}
+	}
+	SOV_vyacheslav_molotov={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_vyacheslav_molotov
+			allowed  = {
+					original_tag  = SOV
+				}
+				traits  = {
+					tough_negotiator 
+				}
+				modifier  = {
+					political_power_gain  = 0.050
+					drift_defence_factor  = 0.150
+					opinion_gain_monthly_same_ideology_factor  = 0.050
+					opinion_gain_monthly_factor  = 0.150
+					improve_relations_maintain_cost_factor  = -0.350
+				}
+		}
+		name="SOV_vyacheslav_molotov"
+		portraits={
+			army={
+				small="GFX_idea_SOV_vyacheslav_molotov"
+			}
+		}
+	}
+	SOV_mikhail_tukhachevsky={
+		advisor={
+			slot = theorist
+			idea_token = mikhail_tukhachevsky
+			ledger  = army 
+			allowed  = {
+				original_tag  = SOV
+			}
+			available  = {
+				NOT  = {
+					has_country_flag  = purge_1_group_a 
+				}
+				NOT = {
+					has_idea = vasily_chuikov_theorist
+					has_idea = georgy_zhukov
+					has_idea = simyon_timoshenko_theorist
+					has_idea = boris_shaposhnikov
+				}
+			}
+			ai_will_do  = {
+				factor  = 500.000
+			}
+			cost  = 250.000
+			traits  = {
+				mass_assault_expert 
+			}
+		}
+		name="mikhail_tukhachevsky"
+		portraits={
+			army={
+				small="GFX_idea_mikhail_tukhachevsky"
+			}
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Mikhail_Tukhachevsky.dds"
+			}
+		}
+		field_marshal = {
+			traits = { brilliant_strategist career_officer infantry_leader }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	SOV_filipp_golikov={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_filipp_golikov
+			allowed  = {
+					original_tag  = SOV
+				}
+				cost  = 100.000
+				traits  = {
+					SOV_boot_licker SOV_military_unintelligence 
+				}
+				modifier  = {
+					political_power_gain  = 0.250
+					intel_network_gain  = -0.150
+				}
+				research_bonus  = {
+					electronics  = -0.400
+				}
+		}
+		name="SOV_filipp_golikov"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_1"
+			}
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Filipp_Golikov.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer career_officer reservist }
+			skill = 2
+			attack_skill = 2
 			defense_skill = 3
 			planning_skill = 3
-			logistics_skill = 3
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			logistics_skill = 1
 		}
 	}
-
-	SOV_ivan_konev = {
-		name = SOV_ivan_konev
-		portraits = {
+	SOV_mikoyan_anastas_ivanovich={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_mikoyan_anastas_ivanovich
+			allowed  = {
+					original_tag  = SOV
+				}
+				traits  = {
+					SOV_commissar_of_trade 
+				}
+				modifier  = {
+					industrial_capacity_factory  = 0.050
+					trade_opinion_factor  = 0.050
+					min_export  = 0.100
+				}
+				research_bonus  = {
+				}
+		}
+		name="SOV_mikoyan_anastas_ivanovich"
+		portraits={
+			army={
+				small="GFX_idea_advisor_generic_22"
+			}
+		}
+	}
+	SOV_pavel_rychagov={
+		advisor={
+			slot = air_chief
+			idea_token = pavel_rychagov
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_2_group_a 
+					}
+				}
+				traits  = {
+					air_chief_all_weather_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="pavel_rychagov"
+		portraits={
+			army={
+				small="GFX_idea_pavel_rychagov"
+			}
+		}
+	}
+	SOV_vasily_chuikov={
+		advisor={
+			slot = army_chief
+			idea_token = vasily_chuikov_1
+			ledger  = army 
+				allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+				}
+				traits  = {
+					army_chief_maneuver_1 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		advisor={
+			slot = theorist
+			idea_token = vasily_chuikov_theorist
+			ledger  = army 
+			allowed  = {
+				original_tag  = SOV
+			}
+			available  = {
+				NOT = {
+					has_idea = mikhail_tukhachevsky
+					has_idea = georgy_zhukov
+					has_idea = simyon_timoshenko_theorist
+					has_idea = boris_shaposhnikov
+				}
+			}
+			ai_will_do  = {
+				factor  = -50.000
+			}
+			cost  = 250.000
+			traits  = {
+				mobile_warfare_expert 
+			}
+		}
+		name="vasily_chuikov_1"
+		portraits={
+			army={
+				small="GFX_idea_vasily_chuikov_1"
+			}
 			army = {
-				small = "GFX_idea_SOV_ivan_konev"
-				large = "GFX_portrait_SOV_ivan_konev"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Vasily_Chuykov.dds"
 			}
 		}
-		advisor = {
-			slot = high_command
-			idea_token = ivan_konev
-			ledger = army
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = SOV_konev_civil_war
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 408.000
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				army_concealment_2
-			}
-				cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-
 		corps_commander = {
-			traits = { harsh_leader armor_officer politically_connected }
-			skill = 5
-			attack_skill = 4
-			defense_skill = 5
+			traits = { brilliant_strategist career_officer }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 5
-			legacy_id = 408
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			legacy_id = 4555
 		}
 	}
-
-	SOV_semyon_timoshenko = {
-		name = SOV_semyon_timoshenko
-		portraits = {
-			army = {
-				small = "GFX_idea_semyon_timoshenko"
-				large = "GFX_portrait_SOV_semyon_timoshenko"
+	SOV_mikhail_frinovsky={
+		advisor={
+			slot = navy_chief
+			idea_token = mikhail_frinovsky
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_1_group_a 
+					}
+				}
+				traits  = {
+					navy_chief_commerce_raiding_1 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="mikhail_frinovsky"
+		portraits={
+			army={
+				small="GFX_idea_mikhail_frinovsky"
 			}
 		}
-		advisor = {
+	}
+	SOV_ivan_proskurov={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_ivan_proskurov
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+				}
+				traits  = {
+					SOV_military_intelligence_officer 
+				}
+				modifier  = {
+					intel_network_gain  = 0.150
+					war_support_weekly  = 0.002
+				}
+				research_bonus  = {
+					electronics  = 0.150
+				}
+				modifier  = {
+				}
+		}
+		name="SOV_ivan_proskurov"
+		portraits={
+			army={
+				small="GFX_idea_advisor_generic_18"
+			}
+		}
+	}
+	SOV_andrei_zhdanov={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_andrei_zhdanov
+			allowed  = {
+					original_tag  = SOV
+				}
+				traits  = {
+					SOV_communist_purist 
+				}
+				modifier  = {
+					political_power_factor  = -0.300
+					stability_weekly  = 0.005
+					communism_drift  = 0.020
+				}
+		}
+		name="SOV_andrei_zhdanov"
+		portraits={
+			army={
+				small="GFX_idea_advisor_generic_13"
+			}
+		}
+	}
+	SOV_lavrentiy_beria={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_lavrentiy_beria
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					custom_trigger_tooltip  = {
+						tooltip  = SOV_beria_idea
+						has_country_flag  = purge_2_group_a 
+					}
+					not  = {
+						has_country_flag  = counter_purge 
+					}
+				}
+				traits  = {
+					SOV_secret_police_chief_2 
+				}
+				modifier  = {
+					political_power_factor  = 0.350
+					political_advisor_cost_factor  = 0.200
+					army_chief_cost_factor  = 0.200
+					foreign_subversive_activites  = -0.600
+					weekly_manpower  = -300.000
+				}
+		}
+		name="SOV_lavrentiy_beria"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_4"
+			}
+		}
+	}
+	SOV_georgy_zhukov={
+		advisor={
+			slot = theorist
+			idea_token = georgy_zhukov
+			ledger  = army 
+			allowed  = {
+				original_tag  = SOV
+			}
+			available  = {
+				NOT  = {
+					has_country_flag  = counter_purge 
+				}
+				NOT = {
+					has_idea = mikhail_tukhachevsky
+					has_idea = vasily_chuikov_theorist
+					has_idea = simyon_timoshenko_theorist
+					has_idea = boris_shaposhnikov
+				}
+			}
+			ai_will_do  = {
+				factor  = 500.000
+			}
+			cost  = 250.000
+			traits  = {
+				mass_assault_expert 
+			}
+		}
+		advisor={
 			slot = army_chief
-			idea_token = semyon_timoshenko
-			allowed = {
-				original_tag = SOV
+			idea_token = georgy_zhukov_chief
+			allowed  = {
+				original_tag  = SOV
 			}
-			available = {
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 404.000
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+			available  = {
 			}
-			traits = {
-				army_chief_reform_2
+			traits  = {
+				army_chief_organizational_3 
 			}
-				cost = 100
-			ai_will_do = {
-				factor = 1.000
+			ai_will_do  = {
+				factor  = 12.000
 			}
 		}
-
-		corps_commander = {
-			traits = { career_officer cavalry_officer politically_connected }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 3
-			legacy_id = 404
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+		name="georgy_zhukov"
+		portraits={
+			army={
+				small="GFX_idea_georgy_zhukov"
+			}
 		}
 	}
-
-	SOV_kliment_voroshilov = {
-		name = SOV_kliment_voroshilov
-
-		portraits = {
-			army = {
-				small = "GFX_idea_kliment_voroshilov"
-				large = GFX_portrait_SOV_kliment_voroshilov
+	SOV_nikolai_yezhov={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_nikolai_yezhov
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+				}
+				available  = {
+					not  = {
+						has_country_flag  = counter_purge 
+					}
+					not  = {
+						has_country_flag  = purge_2_group_a 
+					}
+				}
+				traits  = {
+					SOV_secret_police_chief 
+				}
+				modifier  = {
+					political_power_factor  = 0.250
+					political_advisor_cost_factor  = 0.200
+					army_chief_cost_factor  = 0.200
+					foreign_subversive_activites  = -0.400
+					weekly_manpower  = -200.000
+				}
+		}
+		name="SOV_nikolai_yezhov"
+		portraits={
+			army={
+				small="GFX_idea_advisor_generic_10"
 			}
 		}
-		advisor = {
+	}
+	SOV_pyotr_smirnov={
+		advisor={
+			slot = navy_chief
+			idea_token = pyotr_smirnov
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_1_group_a 
+					}
+				}
+				traits  = {
+					navy_chief_naval_aviation_1 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="pyotr_smirnov"
+		portraits={
+			army={
+				small="GFX_idea_pyotr_smirnov"
+			}
+		}
+	}
+	SOV_pavel_zhigarev={
+		advisor={
+			slot = high_command
+			idea_token = pavel_zhigarev
+			ledger  = air 
+				allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = counter_purge 
+					}
+				}
+				traits  = {
+					air_airborne_1 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="pavel_zhigarev"
+		portraits={
+			army={
+				small="GFX_idea_pavel_zhigarev"
+			}
+		}
+	}
+	SOV_ivan_maisky={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_ivan_maisky
+			allowed  = {
+				original_tag  = SOV
+			}
+			modifier  = {
+				political_power_gain  = 0.100
+				consumer_goods_factor  = -0.010
+			}
+			traits  = {
+				SOV_ambassador_to_the_british 
+			}
+		}
+		name="SOV_ivan_maisky"
+		portraits={
+			army={
+				small="GFX_idea_advisor_generic_30"
+			}
+		}
+	}
+	SOV_alexander_yegorov={
+		advisor={
+			slot = army_chief
+			idea_token = alexander_yegorov
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_1_group_a 
+					}
+				}
+				traits  = {
+					army_chief_defensive_2 
+				}
+				ai_will_do  = {
+					factor  = 12.000
+				}
+		}
+		name="alexander_yegorov"
+		portraits={
+			army={
+				small="GFX_idea_alexander_yegorov"
+			}
+		}
+	}
+	SOV_kliment_voroshilov={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_kliment_voroshilov
+			allowed  = {
+					original_tag  = SOV
+				}
+				traits  = {
+					SOV_figurehead SOV_marshal 
+				}
+				modifier  = {
+					stability_factor  = 0.200
+					communism_drift  = 0.050
+					experience_gain_army  = -0.500
+					land_doctrine_cost_factor = 0.20
+				}
+		}
+		advisor={
 			slot = army_chief
 			idea_token = kliment_voroshilov
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 405.000
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_1_group_b 
+					}
+					hidden_trigger  = {
+						not  = {
+							any_other_country  = {
+								has_war_with  = SOV
+								original_tag  = SOV
+								has_unit_leader  = 405.000
+							}
 						}
 					}
 				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
+				traits  = {
+					army_chief_drill_1 
 				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="kliment_voroshilov"
+		portraits={
+			army={
+				small="GFX_idea_kliment_voroshilov"
 			}
-			traits = {
-				army_chief_drill_1
-			}
-				cost = 50
-			ai_will_do = {
-				factor = 1.000
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Kliment_Voroshilov.dds"
 			}
 		}
-
 		field_marshal = {
-			traits = { old_guard inflexible_strategist politically_connected }
+			traits = { old_guard politically_connected inflexible_strategist }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = 405
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
 
-	SOV_mikhail_tukhachevsky = {
-		name = SOV_mikhail_tukhachevsky
-		portraits = {
+	SOV_vladimir_kasatonov={
+		advisor={
+			slot = high_command
+			idea_token = vladimir_kasatonov
+			ledger  = navy 
+				allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_1_group_b 
+					}
+					hidden_trigger  = {
+						not  = {
+							any_other_country  = {
+								has_war_with  = SOV
+								original_tag  = SOV
+								has_unit_leader  = 403.000
+							}
+						}
+					}
+				}
+				traits  = {
+					navy_submarine_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="vladimir_kasatonov"
+		portraits={
+			army={
+				small="GFX_idea_vladimir_kasatonov"
+			}
 			army = {
-				small = "GFX_idea_mikhail_tukhachevsky"
-				large = GFX_portrait_SOV_mikhail_tukhachevsky
+				large = "gfx/leaders/SOV/Portrait_Soviet_Vladimir_Kasatonov.dds"
 			}
 		}
-		advisor = {
-			cost = 150
+		navy_leader = {
+			traits = { seawolf }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+			legacy_id = 403
+		}
+	}
+	SOV_nikita_khrushchev={
+		advisor={
+			slot = political_advisor
+			idea_token = nikita_khrushchev
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purged_khrushchev 
+					}
+					not  = {
+						has_country_flag  = counter_purge 
+					}
+				}
+				traits  = {
+					comintern_workhorse 
+				}
+				modifier  = {
+					stability_weekly  = 0.002
+					stability_factor  = 0.050
+				}
+				do_effect  = {
+					not  = {
+						has_government  = communism 
+					}
+				}
+				ai_will_do  = {
+					factor  = 0.000
+				}
+		}
+		name="nikita_khrushchev"
+		portraits={
+			army={
+				small="GFX_idea_nikita_khrushchev"
+			}
+		}
+	}
+
+	SOV_sergei_kruglov={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_sergei_kruglov
+			available  = {
+					has_completed_focus  = SOV_stalin_constitution 
+				}
+				allowed  = {
+					original_tag  = SOV
+				}
+				traits  = {
+					SOV_commissar_of_internal_affairs 
+				}
+				modifier  = {
+					consumer_goods_factor  = -0.020
+					political_power_gain  = -0.150
+				}
+				research_bonus  = {
+					military_police  = 0.200
+				}
+		}
+		name="SOV_sergei_kruglov"
+		portraits={
+			army={
+				small="GFX_idea_advisor_generic_28"
+			}
+		}
+	}
+	SOV_alexander_novikov={
+		advisor={
+			slot = air_chief
+			idea_token = alexander_novikov
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_2_group_a 
+					}
+				}
+				traits  = {
+					air_chief_reform_3 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="alexander_novikov"
+		portraits={
+			army={
+				small="GFX_idea_alexander_novikov"
+			}
+		}
+	}
+	SOV_Yefrem_Solovev={
+		advisor={
+			slot = high_command
+			idea_token = SOV_6
+			ledger  = navy 
+				allowed  = {
+					original_tag  = SOV
+				}
+				traits  = {
+					navy_screen_1 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="SOV_6"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+	}
+	SOV_Demyan_Frdorov={
+		advisor={
+			slot = air_chief
+			idea_token = SOV_4
+			allowed  = {
+					original_tag  = SOV
+				}
+				traits  = {
+					air_air_superiority_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="SOV_4"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
+	}
+	SOV_alexander_golovanov = {
+		advisor={
 			slot = theorist
-			idea_token = mikhail_tukhachevsky
-			ledger = army
-			allowed = {
-				original_tag = SOV
+			idea_token = alexander_golovanov
+			ledger = air
+			allowed  = {
+				original_tag  = SOV
 			}
 			available = {
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_idea = sergei_rudenko
+					has_idea = SOV_7
 				}
 			}
-			traits = {
-				mass_assault_expert
+			cost = 150
+			traits  = {
+				air_warfare_theorist 
 			}
 		}
-
-		field_marshal = {
-			traits = { brilliant_strategist career_officer trait_reckless infantry_officer offensive_doctrine }
-			skill = 4
-			attack_skill = 3
-			defense_skill = 4
-			planning_skill = 4
-			logistics_skill = 2
-			legacy_id = 401
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+		name="alexander_golovanov"
+		portraits={
+			army={
+				small="GFX_idea_alexander_golovanov"
+			}
 		}
 	}
-
-	SOV_semyon_budyonny = {
-		name = SOV_semyon_budyonny
-		portraits = {
+	SOV_sergei_rudenko = {
+		advisor={
+			slot = theorist
+			idea_token = sergei_rudenko
+			ledger = air
+			allowed  = {
+				original_tag  = SOV
+			}
+			available = {
+				NOT = {
+					has_idea = alexander_golovanov
+					has_idea = SOV_7
+				}
+			}
+			cost = 200
+			traits  = {
+				close_air_support_proponent 
+			}
+		}
+		name="sergei_rudenko"
+		portraits={
+			army={
+				small="GFX_idea_sergei_rudenko"
+			}
+		}
+	}
+	SOV_SOV_7 = {
+		advisor={
+			slot = theorist
+			idea_token = SOV_7
+			ledger = air
+			allowed  = {
+				original_tag  = SOV
+			}
+			available = {
+				NOT = {
+					has_idea = alexander_golovanov
+					has_idea = sergei_rudenko
+				}
+			}
+			cost = 200
+			traits  = {
+				victory_through_airpower 
+			}
+		}
+		name="SOV_7"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_5"
+			}
+		}
+	}
+	SOV_igor_kurchatov = {
+		advisor={
+			slot = theorist_research
+			idea_token = igor_kurchatov
+			allowed  = {
+				original_tag  = SOV
+			}
+			cost = 150
+			research_bonus = {
+				nuclear = 0.10
+			}
+			traits  = {
+				nuclear_scientist 
+			}
+		}
+		name="igor_kurchatov"
+		portraits={
+			army={
+				small="GFX_idea_igor_kurchatov"
+			}
+		}
+	}
+	SOV_sergei_korolev = {
+		advisor={
+			slot = theorist_research
+			idea_token = sergei_korolev
+			allowed  = {
+				original_tag  = SOV
+			}
+			cost = 150
+			research_bonus = {
+				rocketry = 0.15
+			}
+			traits  = {
+				rocket_scientist 
+			}
+		}
+		name="sergei_korolev"
+		portraits={
+			army={
+				small="GFX_idea_sergei_korolev"
+			}
+		}
+	}
+	SOV_sergey_gorshkov = {
+		advisor={
+			slot = theorist
+			idea_token = sergey_gorshkov
+			ledger = navy
+			allowed  = {
+				original_tag  = SOV
+			}
+			available = {
+				NOT = {
+					has_idea = vladimir_tributs
+				}
+				NOT = { has_country_flag = counter_purge }
+			}
+			cost = 150
+			traits  = {
+				naval_theorist 
+			}
+		}
+		name="sergey_gorshkov"
+		portraits={
+			army={
+				small="GFX_idea_sergey_gorshkov"
+			}
 			army = {
-				large = "GFX_portrait_SOV_semyon_budyonny"
-				small=GFX_portrait_SOV_semyon_budyonny_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Sergey_Gorshkov.dds"
+			}
+		}
+		navy_leader = {
+			traits = { navy_career_officer bold }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+			legacy_id = 411
+		}
+	}
+	SOV_vladimir_tributs = {
+		advisor={
+			slot = theorist
+			idea_token = vladimir_tributs
+			ledger = navy
+			allowed  = {
+				original_tag  = SOV
+			}
+			available = {
+				NOT = {
+					has_idea = sergey_gorshkov
+				}
+			}
+			cost = 250
+			traits  = {
+				grand_fleet_proponent 
+			}
+		}
+		name="vladimir_tributs"
+		portraits={
+			army={
+				small="GFX_idea_vladimir_tributs"
+			}
+		}
+	}
+	SOV_SOV_dmitry_ustinov = {
+		advisor={
+			slot = theorist_production
+			idea_token = SOV_dmitry_ustinov
+			allowed  = {
+				original_tag  = SOV
+			}
+			cost = 150
+			modifier = {
+				conversion_cost_civ_to_mil_factor= -0.25
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				line_change_production_efficiency_factor = 0.2
+				stability_weekly = -0.002
+			}
+			traits  = {
+				SOV_peoples_commissar_of_armaments 
+			}
+		}
+		name="SOV_dmitry_ustinov"
+		portraits={
+			army={
+				small="GFX_idea_advisor_generic_23"
+			}
+		}
+	}
+	SOV_SOV_nikolai_voznesensky = {
+		advisor={
+			slot = theorist_production
+			idea_token = SOV_nikolai_voznesensky
+			allowed  = {
+			    OR = {
+				    original_tag  = SOV
+					original_tag  = MON
+				}
+			}
+			cost = 150
+			traits  = {
+				captain_of_industry 
+			}
+		}
+		name="SOV_nikolai_voznesensky"
+		portraits={
+			army={
+				small="GFX_idea_advisor_generic_19"
+			}
+		}
+	}
+	SOV_georgy_malenkov = {
+		advisor={
+			slot = theorist_production
+			idea_token = georgy_malenkov
+			allowed  = {
+			    OR = {
+				    original_tag  = SOV
+					original_tag  = MON
+				}
+			}
+			cost = 150
+			traits  = {
+				war_industrialist 
+			}
+		}
+		name="georgy_malenkov"
+		portraits={
+			army={
+				small="GFX_idea_advisor_generic_34"
+			}
+		}
+	}
+	SOV_semyon_budyonny = {
+		name = "Semyon Budyonny"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_semyon_budyonny.dds"
+			}
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Semyon_Budyonny.dds"
 			}
 		}
 		field_marshal = {
-			traits = { old_guard inflexible_strategist politically_connected }
+			traits = { old_guard politically_connected inflexible_strategist }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
 	SOV_ivan_chernyakhovsky = {
-		name = SOV_ivan_chernyakhovsky
-		portraits = {
+		name = "Ivan Chernyakhovsky"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_ivan_chernyakhovsky.dds"
+			}
 			army = {
-				large = "GFX_portrait_SOV_ivan_chernyakhovsky"
-				small= "GFX_idea_SOV_ivan_chernyakhovsky"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Ivan_Chernyakhovsky.dds"
 			}
 		}
 		corps_commander = {
@@ -598,17 +1599,16 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 413
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
 	SOV_issa_pliyev = {
-		name = SOV_issa_pliyev
-		portraits = {
+		name = "Issa Pliyev"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_issa_pliyev.dds"
+			}
 			army = {
-				large = "GFX_portrait_SOV_issa_pliyev"
-				small= "GFX_idea_SOV_issa_pliyev"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Issa_Pliyev.dds"
 			}
 		}
 		corps_commander = {
@@ -618,3287 +1618,630 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
 	SOV_leonid_govorov = {
-		name = SOV_leonid_govorov
-		portraits = {
+		name = "Leonid Govorov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_leonid_govorov.dds"
+			}
 			army = {
-				large = "GFX_portrait_SOV_leonid_govorov"
-				small= "GFX_idea_SOV_leonid_govorov"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Leonid_Govorov.dds"
 			}
 		}
 		corps_commander = {
-			skill = 3
+			traits = { infantry_officer }
+			skill = 2
 			attack_skill = 3
 			defense_skill = 2
-			planning_skill = 3
+			planning_skill = 2
 			logistics_skill = 2
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
 	SOV_grigory_kulik = {
-		name = SOV_grigory_kulik
-		portraits = {
+		name = "Grigory Kulik"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_grigory_kulik.dds"
+			}
 			army = {
-				large = GFX_portrait_SOV_grigory_kulik
-				small=GFX_portrait_SOV_grigory_kulik_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Grigory_Kulik.dds"
 			}
 		}
 		corps_commander = {
-			traits = { old_guard inflexible_strategist career_officer politically_connected }
+			traits = { old_guard career_officer politically_connected inflexible_strategist }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
 	SOV_kirill_meretskov = {
-		name = SOV_kirill_meretskov
-		portraits = {
+		name = "Kirill Meretskov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_kirill_meretskov.dds"
+			}
 			army = {
-				large = GFX_portrait_SOV_kirill_meretskov
-				small=GFX_portrait_SOV_kirill_meretskov_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Kirill_Meretskov.dds"
 			}
 		}
 		corps_commander = {
 			traits = { trait_reckless infantry_officer }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_filipp_golikov = {
-		name = SOV_filipp_golikov
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_filipp_golikov"
-				small= "GFX_idea_SOV_filipp_golikov"
-			}
-		}
-		corps_commander = {
-			traits = { career_officer }
-			skill = 3
+			skill = 2
 			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
 		}
 	}
-
 	SOV_andrey_yeryomenko = {
-		name = SOV_andrey_yeryomenko
-		portraits = {
+		name = "Andrey Yeryomenko"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_andrey_yeryomenko.dds"
+			}
 			army = {
-				large = "GFX_portrait_SOV_andrey_yeryomenko"
-				small= GFX_portrait_SOV_andrey_yeryomenko_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Andrey_Yeryomenko.dds"
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless cavalry_officer }
+			traits = { cavalry_officer trait_reckless }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	SOV_georgiy_zakharov = {
+		name = "Georgiy Zakharov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_georgiy_zakharov.dds"
+			}
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Georgiy_Zakharov.dds"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer bearer_of_artillery }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	SOV_max_reyter = {
+		name = "Max Reyter"
+		portraits={
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Georgiy_Zakharov.dds"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer reservist }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	SOV_nikandr_chibisov = {
+		name = "Nikandr Chibisov"
+		portraits={
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Nikandr_Yevlampyevich_Chibisov.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer trickster }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	SOV_andrey_vlasov = {
+		name = "Andrey Vlasov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_andrey_vlasov.dds"
+			}
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Andrey_Vlasov.dds"
+			}
+		}
+		corps_commander = {
+			traits = { winter_specialist infantry_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = 412
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
-	SOV_georgy_zakharov = {
-		name = SOV_georgy_zakharov
-		portraits = {
-			army = {
-				large = GFX_portrait_SOV_georgy_zakharov
-				small=GFX_portrait_SOV_georgy_zakharov_small
-			}
-		}
-		corps_commander = {
-			traits = { career_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_yakov_cherevichenko = {
-		name = SOV_yakov_cherevichenko
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_yakov_cherevichenko"
-				small= "GFX_idea_SOV_yakov_cherevichenko"
-			}
-		}
-		corps_commander = {
-			traits = { cavalry_officer }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_maks_reyter = {
-		name = SOV_maks_reyter
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_maks_reyter"
-				small=GFX_portrait_SOV_maks_reyter_small
-			}
-		}
-		corps_commander = {
-			traits = { career_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_nikandr_chibisov = {
-		name = SOV_nikandr_chibisov
-		portraits = {
-			army = {
-				large = GFX_portrait_SOV_nikandr_chibisov
-				small=GFX_portrait_SOV_nikandr_chibisov_small
-			}
-		}
-		corps_commander = {
-			traits = { trickster }
-			skill = 3
-			attack_skill = 1
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 3
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_vasily_kuznetsov = {
-		name = SOV_vasily_kuznetsov
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_vasily_kuznetsov"
-				small= "GFX_idea_SOV_vasily_kuznetsov"
-			}
-		}
-		corps_commander = {
-			traits = { infantry_officer commando }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_andrey_vlasov = {
-		name = SOV_andrey_vlasov
-		portraits = {
-			army = {
-				large = GFX_portrait_SOV_andrey_vlasov
-				small=GFX_portrait_SOV_andrey_vlasov_small
-			}
-		}
-		corps_commander = {
-			traits = { infantry_officer winter_specialist }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 1
-			logistics_skill = 3
-			legacy_id = 0
-			visible = {
-				if = {
-					limit = {
-						SOV = { has_country_flag = vlasov_owner_flag }
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-				if = {
-					limit = {
-						GER = { has_country_flag = vlasov_owner_flag }
-					}
-					NOT = {
-						has_character_flag = vlasov_imprisoned_flag
-					}
-				}
-			}
-		}
-	}
-
 	SOV_ivan_fedyuninsky = {
-		name = SOV_ivan_fedyuninsky
-		portraits = {
+		name = "Ivan Fedyuninsky"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_ivan_fedyuninsky.dds"
+			}
 			army = {
-				large = GFX_portrait_SOV_ivan_fedyuninsky
-				small=GFX_portrait_SOV_ivan_fedyuninsky_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Ivan_Fedyuninsky.dds"
 			}
 		}
 		corps_commander = {
-			traits = { infantry_officer }
+			traits = { infantry_officer reservist }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
 	SOV_maksim_purkayev = {
-		name = SOV_maksim_purkayev
-		portraits = {
+		name = "Maksim Purkayev"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_maksim_purkayev.dds"
+			}
 			army = {
-				large = GFX_portrait_SOV_maksim_purkayev
-				small=GFX_portrait_SOV_maksim_purkayev_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Maksim_Purkayev.dds"
 			}
 		}
 		corps_commander = {
 			traits = { career_officer }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 3
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_kuzma_galitsky = {
-		name = SOV_kuzma_galitsky
-		portraits = {
-			army = {
-				large = GFX_portrait_SOV_kuzma_galitsky
-				small=GFX_portrait_SOV_kuzma_galitsky_small
-			}
-		}
-		corps_commander = {
-			traits = { infantry_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_markian_popov = {
-		name = SOV_markian_popov
-		portraits = {
-			army = {
-				large = GFX_portrait_SOV_markian_popov
-				small=GFX_portrait_SOV_markian_popov_small
-			}
-		}
-		corps_commander = {
-			traits = { brilliant_strategist infantry_officer winter_specialist }
 			skill = 2
 			attack_skill = 2
-			defense_skill = 1
+			defense_skill = 2
 			planning_skill = 2
-			logistics_skill = 2
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			logistics_skill = 1
 		}
 	}
-
-	SOV_nikolay_berzarin = {
-		name = SOV_nikolay_berzarin
-		portraits = {
+	SOV_kuzma_galitsky = {
+		name = "Kuzma Galitsky"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_kuzma_galitsky.dds"
+			}
 			army = {
-				large = GFX_portrait_SOV_nikolay_berzarin
-				small=GFX_portrait_SOV_nikolay_berzarin_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Kuzma_Galitsky.dds"
 			}
 		}
 		corps_commander = {
-			traits = { infantry_officer }
+			traits = { infantry_officer reservist }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	SOV_markian_popov = {
+		name = "Markian Popov"
+		portraits={
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Matkian_Popov.dds"
+			}
+		}
+		corps_commander = {
+			traits = { winter_specialist armor_officer brilliant_strategist }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	SOV_nikolai_berzarin = {
+		name = "Nikolai Berzarin"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_nikolai_berzarin.dds"
+			}
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Nikolay_Berzarin.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 2
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
-	SOV_aleksandr_gorbatov = {
-		name = SOV_aleksandr_gorbatov
-		portraits = {
+	SOV_alexander_gorbatov = {
+		name = "Alexander Gorbatov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_alexander_gorbatov.dds"
+			}
 			army = {
-				large = GFX_portrait_SOV_aleksandr_gorbatov
-				small=GFX_portrait_SOV_aleksandr_gorbatov_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Aleksandr_Gorbatov.dds"
 			}
 		}
 		corps_commander = {
-			traits = { career_officer cavalry_officer }
+			traits = { career_officer infantry_officer reservist }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 3
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
 	SOV_kirill_moskalenko = {
-		name = SOV_kirill_moskalenko
-		portraits = {
+		name = "Kirill Moskalenko"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_kirill_moskalenko.dds"
+			}
 			army = {
-				large = GFX_portrait_SOV_kirill_moskalenko
-				small=GFX_portrait_SOV_kirill_moskalenko_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Kirill_Moskalenko.dds"
 			}
 		}
 		corps_commander = {
+			traits = { armor_officer }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 2
 			planning_skill = 3
 			logistics_skill = 3
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
 	SOV_dmitry_lelyushenko = {
-		name = SOV_dmitry_lelyushenko
-		portraits = {
+		name = "Dmitry Lelyushenko"
+		portraits={
 			army = {
-				large = GFX_portrait_SOV_dmitry_lelyushenko
-				small=GFX_portrait_SOV_dmitry_lelyushenko_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Dmitri_Danilovich_Lelyushenko.dds"
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless armor_officer }
+			traits = { armor_officer trait_reckless }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
-	SOV_andrey_grechko = {
-		name = SOV_andrey_grechko
-		portraits = {
+	SOV_andrei_grechko = {
+		name = "Andrei Grechko"
+		portraits={
 			army = {
-				large = "GFX_portrait_SOV_andrey_grechko"
-				small= "GFX_idea_SOV_andrey_grechko"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Andrei_Antonovich_Grechko.dds"
 			}
 		}
 		corps_commander = {
 			traits = { cavalry_officer }
 			skill = 3
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 3
 			planning_skill = 3
-			logistics_skill = 3
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			logistics_skill = 2
 		}
 	}
-
 	SOV_rodion_malinovsky = {
-		name = SOV_rodion_malinovsky
-		portraits = {
+		name = "Rodion Malinovsky"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_rodion_malinovsky.dds"
+			}
 			army = {
-				large = GFX_portrait_SOV_rodion_malinovsky
-				small=GFX_portrait_SOV_rodion_malinovsky_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Rodion_Malinovsky.dds"
 			}
 		}
 		corps_commander = {
-			traits = { old_guard career_officer trait_cautious politically_connected }
+			traits = { career_officer old_guard trait_cautious politically_connected }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
-	SOV_vasily_chuykov = {
-		name = SOV_vasily_chuykov
-		portraits = {
+	SOV_filipp_oktyabrskiy = {
+		name = "Filipp Oktyabrskiy"
+		portraits={
 			army = {
-				large = GFX_portrait_SOV_vasily_chuykov
-				small=GFX_portrait_SOV_vasily_chuykov_small
-			}
-		}
-		corps_commander = {
-			traits = { brilliant_strategist career_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-######################
-#### NAVY LEADRES ####
-######################
-
-	SOV_filipp_oktyabrsky = {
-		name = SOV_filipp_oktyabrsky
-		portraits = {
-			army = {
-				large = GFX_portrait_SOV_filipp_oktyabrsky
-				small=GFX_portrait_SOV_filipp_oktyabrsky_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Filipp_Oktyabrsky.dds"
 			}
 		}
 		navy_leader = {
-			traits = { ironside ground_pounder }
+			traits = { ground_pounder ironside }
 			skill = 2
-			attack_skill = 3
+			attack_skill = 2
 			defense_skill = 2
 			maneuvering_skill = 1
 			coordination_skill = 1
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
-	SOV_sergey_gorshkov = {
-		name = SOV_sergey_gorshkov
-		portraits = {
-			navy = {
-				small = "GFX_idea_sergey_gorshkov"
-			}
-			army = {
-				large = GFX_portrait_SOV_sergey_gorshkov
-			}
-		}
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = sergey_gorshkov
-			ledger = navy
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = { naval_theorist }
-		}
-
-		navy_leader = {
-			traits = { bold navy_career_officer }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			maneuvering_skill = 3
-			coordination_skill = 2
-			legacy_id = 411
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_gordey_levchenko = {
-		name = SOV_gordey_levchenko
-		portraits = {
-			navy = {
-				small = "GFX_idea_gordey_levchenko"
-			}
-			army = {
-				large = GFX_portrait_SOV_gordey_levchenko
-			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = gordey_levchenko
-			ledger = navy
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 406
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				navy_capital_ship_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
-			}
-		}
-
-		navy_leader = {
-			traits = { green_water_expert }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			maneuvering_skill = 1
-			coordination_skill = 2
-			legacy_id = 406
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_arseny_golovko = {
-		name = SOV_arseny_golovko
-		portraits = {
-			navy = {
-				small = "GFX_idea_arseniy_golovko"
-			}
-			army = {
-				large = GFX_portrait_SOV_arseny_golovko
-			}
-		}
-		advisor = {
+	SOV_arseniy_golovko={
+		advisor={
 			slot = high_command
 			idea_token = arseniy_golovko
-			ledger = navy
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 409.000
+			ledger  = army 
+				allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = counter_purge 
+					}
+					hidden_trigger  = {
+						not  = {
+							any_other_country  = {
+								has_war_with  = SOV
+								original_tag  = SOV
+								has_unit_leader  = 409.000
+							}
 						}
 					}
 				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
+				traits  = {
+					navy_amphibious_assault_2 
 				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="arseniy_golovko"
+		portraits={
+			army={
+				small="GFX_idea_arseniy_golovko"
 			}
-			traits = {
-				navy_amphibious_assault_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Arseniy_Golovko.dds"
 			}
 		}
-
 		navy_leader = {
-			traits = { spotter arctic_water_expert }
+			traits = { arctic_water_expert spotter }
 			skill = 4
 			attack_skill = 3
 			defense_skill = 4
 			maneuvering_skill = 3
 			coordination_skill = 3
 			legacy_id = 409
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
-
-	SOV_vladimir_kasatonov = {
-		name = SOV_vladimir_kasatonov
-		portraits = {
-			navy = {
-				small = "GFX_idea_vladimir_kasatonov"
-			}
-			army = {
-				large = GFX_portrait_SOV_vladimir_kasatonov
+	SOV_andrey_vyshinsky={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_andrey_vyshinsky
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					has_completed_focus  = SOV_stalin_constitution 
+				}
+				traits  = {
+					SOV_stalins_justice 
+				}
+				modifier  = {
+					stability_weekly  = 0.003
+					stability_factor  = 0.050
+					consumer_goods_factor  = -0.010
+					communism_drift  = 0.050
+					industrial_capacity_factory  = -0.050
+					industrial_capacity_dockyard  = -0.050
+				}
+		}
+		name="SOV_andrey_vyshinsky"
+		portraits={
+			army={
+				small="GFX_idea_advisor_generic_24"
 			}
 		}
-		advisor = {
-			slot = high_command
-			idea_token = vladimir_kasatonov
-			ledger = navy
-			allowed = {
-				original_tag = SOV
+	}
+	SOV_boris_lvovich_vannikov={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_boris_lvovich_vannikov
+			allowed  = {
+				original_tag  = SOV
 			}
-			available = {
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 403.000
+			available  = {
+				has_completed_focus  = SOV_infantry_development 
+			}
+			modifier  = {
+				war_support_factor  = 0.050
+				winter_attrition_factor  = -0.250
+				supply_consumption_factor  = -0.050
+			}
+			traits  = {
+				SOV_commissar_of_ammunition 
+			}
+		}
+		name="SOV_boris_lvovich_vannikov"
+		portraits={
+			army={
+				small="GFX_idea_SOV_boris_lvovich_vannikov"
+			}
+		}
+	}
+	SOV_semyon_timoshenko={
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_semyon_timoshenko
+			allowed  = {
+				original_tag  = SOV
+			}
+			modifier  = {
+				experience_gain_army  = -0.100
+			}
+			research_bonus  = {
+				armor  = 0.050
+				infantry  = 0.050
+				artillery  = 0.050
+				motorized_equipment  = 0.100
+			}
+			traits  = {
+				SOV_army_modernizer 
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = semyon_timoshenko
+			ledger  = army 
+				allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_1_group_b 
+					}
+					hidden_trigger  = {
+						not  = {
+							any_other_country  = {
+								has_war_with  = SOV
+								original_tag  = SOV
+								has_unit_leader  = 404.000
+							}
 						}
 					}
 				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
+				traits  = {
+					army_chief_reform_2 
 				}
-			}
-			traits = {
-				navy_submarine_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
-			}
+				ai_will_do  = {
+					factor  = 1.000
+				}
 		}
-
-		navy_leader = {
-			traits = { seawolf }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			maneuvering_skill = 2
-			coordination_skill = 2
-			legacy_id = 403
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_stepan_krasovsky = {
-		name = SOV_stepan_krasovsky
-		portraits = {
-			army = {
-				small = "GFX_idea_stepan_krasovsky"
-			}
-		}
-
-		advisor = {
-			slot = high_command
-			idea_token = stepan_krasovsky
-			ledger = air
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				air_air_combat_training_2
-			}
-				cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	SOV_vladimir_tributs = {
-		name = SOV_vladimir_tributs
-		portraits = {
-			army = {
-				small = "GFX_idea_vladimir_tributs"
-			}
-		}
-
-		advisor = {
-			cost = 150
+		advisor={
 			slot = theorist
-			idea_token = vladimir_tributs
-			ledger = navy
-			allowed = {
-				original_tag = SOV
+			idea_token = simyon_timoshenko_theorist
+			ledger  = army 
+			allowed  = {
+				original_tag  = SOV
 			}
-			traits = {
-				grand_fleet_proponent
-			}
-		}
-	}
-
-	SOV_sergey_khudyakov = {
-		name = SOV_sergey_khudyakov
-		portraits = {
-			army = {
-				small = "GFX_idea_sergei_khudyakov"
-			}
-		}
-
-		advisor = {
-			slot = high_command
-			idea_token = sergei_khudyakov
-			ledger = air
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				air_close_air_support_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
-	SOV_konstantin_vershinin = {
-		name = SOV_konstantin_vershinin
-		portraits = {
-			army = {
-				small = "GFX_idea_konstantin_vershinin"
-			}
-		}
-
-		advisor = {	
-			slot = air_chief
-			idea_token = konstantin_vershinin
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				air_chief_ground_support_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	SOV_sergey_rudenko = {
-		name = SOV_sergey_rudenko
-		portraits = {
-			army = {
-				small = "GFX_idea_sergei_rudenko"
-			}
-		}
-
-		advisor = {
-			cost = 150
-			
-			slot = theorist
-			idea_token = sergei_rudenko
-			ledger = air
-			allowed = {
-				original_tag = SOV
-			}
-			
-			traits = {
-				close_air_support_proponent
-			}
-		}		
-	}
-
-	SOV_ivan_yumashev = {
-		name = SOV_ivan_yumashev
-		portraits = {
-			army = {
-				small = "GFX_idea_ivan_yumashev"
-			}
-		}
-
-		advisor = {
-			slot = navy_chief
-			idea_token = ivan_yumashev
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				navy_chief_decisive_battle_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
-			}
-		}
-	}
-
-	SOV_nikolay_kuznetsov = {
-		name = SOV_nikolay_kuznetsov
-		portraits = {
-			army = {
-				small = "GFX_idea_nikolay_kuznetsov"
-			}
-		}
-
-		advisor = {
-			slot = navy_chief
-			idea_token = nikolay_kuznetsov
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				navy_chief_reform_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
-			}
-		}		
-	}
-
-	SOV_yakov_smushkevich = {
-		name = SOV_yakov_smushkevich
-		portraits = {
-			army = {
-				small = "GFX_idea_yakov_smushkevich"
-			}
-		}
-
-		advisor = {	
-			slot = air_chief
-			idea_token = yakov_smushkevich
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				air_chief_safety_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}	
-	}
-
-	SOV_pavel_rychagov = {
-		name = SOV_pavel_rychagov
-		portraits = {
-			army = {
-				small = "GFX_idea_pavel_rychagov"
-			}
-		}
-
-		advisor = {
-			slot = air_chief
-			idea_token = pavel_rychagov
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				air_chief_all_weather_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
-	SOV_aleksandr_golovanov = {
-		name = SOV_aleksandr_golovanov
-		portraits = {
-			army = {
-				small = "GFX_idea_alexander_golovanov"
-			}
-		}
-
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = alexander_golovanov
-			ledger = air
-			allowed = {
-				original_tag = SOV
-			}
-			traits = { air_warfare_theorist }
-		}		
-	}
-
-	SOV_mikhail_frinovsky = {
-		name = SOV_mikhail_frinovsky
-		portraits = {
-			army = {
-				small = "GFX_idea_mikhail_frinovsky"
-			}
-		}
-
-		advisor = {
-			slot = navy_chief
-			idea_token = mikhail_frinovsky
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				navy_chief_commerce_raiding_1
-			}
-			cost = 50
-			ai_will_do = {
-				factor = 0.200
-			}
-		}
-	}
-
-	SOV_igor_kurchatov = {
-		name = SOV_igor_kurchatov
-		portraits = {
-			army = {
-				small = "GFX_idea_igor_kurchatov"
-			}
-		}
-
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = igor_kurchatov
-			ledger = army
-			allowed = {
-				original_tag = SOV
-			}
-			research_bonus = {
-				nuclear = 0.150
-			}
-			traits = {
-				nuclear_scientist
-			}
-		}		
-	}
-
-	SOV_sergey_korolyov = {
-		name = SOV_sergey_korolyov
-		portraits = {
-			army = {
-				small = "GFX_idea_sergei_korolev"
-			}
-		}
-
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = sergei_korolev
-			ledger = air
-			allowed = {
-				original_tag = SOV
-			}
-			research_bonus = {
-				rocketry = 0.150
-			}
-			traits = {
-				rocket_scientist
-			}
-		}		
-	}
-
-	SOV_pavel_zhigarev = {
-		name = SOV_pavel_zhigarev
-		portraits = {
-			army = {
-				small = "GFX_idea_pavel_zhigarev"
-			}
-		}
-
-		advisor = {
-			slot = high_command
-			idea_token = pavel_zhigarev
-			ledger = air
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				air_airborne_1
-			}
-			cost = 50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	SOV_pyotr_smirnov = {
-		name = SOV_pyotr_smirnov
-		portraits = {
-			army = {
-				small = "GFX_idea_pyotr_smirnov"
-			}
-		}
-
-		advisor = {
-			slot = navy_chief
-			idea_token = pyotr_smirnov
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
+			available  = {
 				NOT = {
-					has_country_flag = purge_1_group_a
+					has_idea = mikhail_tukhachevsky
+					has_idea = vasily_chuikov_theorist
+					has_idea = georgy_zhukov
+					has_idea = boris_shaposhnikov
 				}
 			}
-			traits = {
-				navy_chief_naval_aviation_1
+			ai_will_do  = {
+				factor  = -50.000
 			}
-				cost = 50
-			ai_will_do = {
-				factor = 0.200
+			cost  = 250.000
+			traits  = {
+				grand_battle_plan_expert 
 			}
-		}		
-	}
-
-	SOV_aleksandr_yegorov = {
-		name = SOV_aleksandr_yegorov
-		portraits = {
+		}
+		name="semyon_timoshenko"
+		portraits={
+			army={
+				small="GFX_idea_semyon_timoshenko"
+			}
 			army = {
-				small = "GFX_idea_aleksandr_yegorov"
-				large = "GFX_portrait_SOV_aleksandr_yegorov"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Semyon_Timoshenko.dds"
 			}
 		}
-		advisor = {
-			slot = army_chief
-			idea_token = SOV_aleksandr_yegorov
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				army_chief_defensive_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-
-		field_marshal = {
-			traits = { career_officer inflexible_strategist trait_reckless }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 2
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}	
-	}
-
-	SOV_vasily_blyukher = {
-		name = SOV_vasily_blyukher
-		portraits = {
-			army = {
-				small = "GFX_portrait_SOV_blyukher_small" #"gfx/interface/ideas/idea_SOV_blyukher.dds"
-				large = "GFX_portrait_SOV_blyukher"
-			}
-		}
-		advisor = {
-			slot = army_chief
-			idea_token = SOV_vasily_blyukher
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				army_chief_maneuver_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-
-		field_marshal = {
-			traits = { old_guard career_officer infantry_officer organizer }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 3
-			logistics_skill = 4
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_aleksandr_novikov = {
-		name = SOV_aleksandr_novikov
-		portraits = {
-			army = {
-				small = "GFX_idea_alexander_novikov"
-			}
-		}
-		advisor = {
-			slot = air_chief
-			idea_token = alexander_novikov
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				air_chief_reform_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-
-	##### NSB #####
-
-	SOV_vitaly_primakov = {
-		name = SOV_vitaly_primakov
-
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_vasily_primakov"
-				small = "GFX_portrait_SOV_vasily_primakov_small"
-			}
-		}
-
 		corps_commander = {
-			traits = { cavalry_officer trait_reckless war_hero cavalry_leader }
-			skill = 3
-			attack_skill = 3
+			traits = { cavalry_officer politically_connected career_officer }
+			skill = 2
+			attack_skill = 2
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 3
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			legacy_id = 404
 		}
 	}
-
-	SOV_vasily_korzh = {
-		name = SOV_vasily_korzh
-		portraits = {
+	SOV_konstantin_rokossovsky={
+		advisor={
+			slot = high_command
+			idea_token = konstantin_rokossovsky
+			ledger  = army 
+				allowed  = {
+					original_tag  = SOV
+					hidden_trigger  = {
+						not  = {
+							any_other_country  = {
+								has_war_with  = SOV
+								original_tag  = SOV
+								has_unit_leader  = 403.000
+							}
+						}
+					}
+				}
+				available  = {
+					not  = {
+						has_country_flag  = purge_1_group_b 
+					}
+				}
+				traits  = {
+					army_armored_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="konstantin_rokossovsky"
+		portraits={
+			army={
+				small="GFX_idea_konstantin_rokossovsky"
+			}
 			army = {
-				large = "GFX_portrait_SOV_vasily_korzh"
-				small = GFX_portrait_SOV_vasily_korzh_small
+				large = "gfx/leaders/SOV/Portrait_Soviet_Konstantin_Rokossovsky.dds"
 			}
 		}
-
 		corps_commander = {
-			traits = { trait_cautious war_hero trickster }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 3
-			logistics_skill = 3
-			legacy_id = 0
-			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				has_completed_focus = SOV_organization_of_the_partisans
-			}
-		}
-	}
-
-	SOV_sidor_kovpak = {
-		name = SOV_sidor_kovpak
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_sidor_kovpak"
-				small = GFX_portrait_SOV_sidor_kovpak_small
-			}
-		}
-
-		corps_commander = {
-			traits = { trait_reckless war_hero commando }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
-			legacy_id = 0
-			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				has_completed_focus = SOV_organization_of_the_partisans
-			}
-		}
-	}
-
-	SOV_lev_dovator = {
-		name = SOV_lev_dovator
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_lev_dovator"
-				small = GFX_portrait_SOV_lev_dovator_small
-			}
-		}
-
-		corps_commander = {
-			traits = { cavalry_officer trait_reckless cavalry_leader ranger }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 3
-			legacy_id = 0
-			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				has_completed_focus = SOV_restore_cossack_units
-			}
-		}
-	}
-
-	SOV_pavel_rybalko = {
-		name = SOV_pavel_rybalko
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_pavel_rybalko"
-				small = GFX_portrait_SOV_pavel_rybalko_small
-			}
-		}
-
-		corps_commander = {
-			traits = { cavalry_officer armor_officer panzer_leader panzer_expert }
-			skill = 3
+			traits = { infantry_officer armor_officer trait_cautious }
+			skill = 4
 			attack_skill = 4
-			defense_skill = 1
+			defense_skill = 4
 			planning_skill = 2
 			logistics_skill = 3
-			legacy_id = 0
-			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				has_completed_focus = SOV_the_glory_of_the_red_army
-			}
+			legacy_id = 402
 		}
 	}
-
-
-	###  ##   ##  ##  ###  ## ###      ##  ###  #   # #   #         
-	#   #  # #   #  #  #  #    #      #  # #  # ## ##  # #  {~._.~} 
-	##  ####  #  #     #   #   #      #### ###  # # #   #    ( Y )  
-	#   #  #   # #  #  #    #  #      #  # #  # #   #   #   ()~*~() 
-	#   #  # ##   ##  ### ##   #      #  # #  # #   #   #   (_)-(_) 
-	SOV_anton_denikin = {
-		name = SOV_anton_denikin
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_anton_denikin"
-				small = "GFX_idea_SOV_anton_denikin"
-			}
-		}
-		advisor = {
-			slot = army_chief
-			idea_token = anton_denikin
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}				
-			traits = {
-				army_chief_drill_1
-			}
-			cost = 50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		
-		field_marshal = {
-			traits = { old_guard inflexible_strategist }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
-			}
-		}
-	}
-
-
-
-	SOV_pyotr_krasnov = {
-		name = SOV_pyotr_krasnov
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_pyotr_krasnov"
-				small = "GFX_idea_SOV_pyotr_krasnov"
-			}
-		}
-		field_marshal = {
-			traits = { cavalry_leader }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
-			}
-		}
-	}
-
-	SOV_konstantin_nechayev = {
-		name = SOV_konstantin_nechayev
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_konstantin_nechayev"
-				small = "GFX_idea_SOV_konstantin_nechayev"
-			}
-		}
-		field_marshal = {
-			traits = { infantry_officer war_hero }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 3
-			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
-			}
-		}
-	}
-
-	SOV_vladimir_kosmin = {
-		name = SOV_vladimir_kosmin
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_vladimir_kosmin"
-				small = "GFX_idea_SOV_vladimir_kosmin"
-			}
-		}
-		field_marshal = {
-			traits = { winter_expert trait_mountaineer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
-			}
-		}
-	}
-
-	SOV_aleksandr_rodzyanko = {
-		name = SOV_aleksandr_rodzyanko
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_aleksandr_rodzyanko"
-				small = "GFX_idea_SOV_aleksandr_rodzyanko"
-			}
-		}
-		field_marshal = {
-			traits = { cavalry_officer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
-			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
-			}
-		}
-	}
-
-	SOV_andrey_shkuro = {
-		name = SOV_andrey_shkuro
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_andrey_shkuro"
-				small = "GFX_idea_SOV_andrey_shkuro"
-			}
-		}
-		field_marshal = {
-			traits = { trait_reckless cavalry_officer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 3
-			logistics_skill = 1
-			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
-			}
-		}
-	}
-
-
-	###   ##  #   ### ### ###  ##   ##  #        ##  ###  #   # ###  ##  ##  ###   ## 
-	#  # #  # #    #   #   #  #  # #  # #       #  # #  # #   #  #  #   #  # #  # #   
-	###  #  # #    #   #   #  #    #### #       #### #  #  # #   #   #  #  # ###   #  
-	#    #  # #    #   #   #  #  # #  # #       #  # #  #  # #   #    # #  # #  #   # 
-	#     ##  ### ###  #  ###  ##  #  # ###     #  # ###    #   ### ##   ##  #  # ##  
-
-
-	SOV_mikhail_kalinin = {
-		name = SOV_mikhail_kalinin
-		portraits = {
-			army = {
-				small = "GFX_idea_mikhail_kalinin"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				SOV_advisor_is_aligned_left = yes 
-				SOV_advisor_is_aligned_right = yes 
-				SOV_advisor_is_aligned_centre = yes 
-			}
-			has_government = communism
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = mikhail_kalinin
-			allowed = {
-				original_tag = SOV
-			}
-			
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				popular_figurehead 
-			}
-		}
-	}
-	
-	SOV_nikita_khrushchyov = {
-		name = SOV_nikita_khrushchyov
-		portraits = {
-			army = {
-				small = "GFX_idea_nikita_khrushchev"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				SOV_advisor_is_aligned_left = yes 
-				SOV_advisor_is_aligned_right = yes 
-				SOV_advisor_is_aligned_centre = yes 
-			}
-			has_government = communism
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = nikita_khrushchyov
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				political_commissar 
-			}
-		}
-	}
-
-	SOV_nikolay_voznesensky = {
-		name = SOV_nikolay_voznesensky
-
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_nikolay_voznesensky"
-			}
-		}
-		allowed_civil_war = {
-				has_government = communism
-			}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_nikolay_voznesensky
-			name = SOV_nikolay_voznesensky 
-			allowed = {
-				original_tag = SOV
-			}
-			
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			traits = {
-				captain_of_industry 
-			}
-		}
-	}
-
-	SOV_lazar_kaganovich = {
-		name = SOV_lazar_kaganovich
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_lazar_kaganovich"
-			}
-		}
-		allowed_civil_war = {
-				has_government = communism
-			}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_lazar_kaganovich
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				has_completed_focus = SOV_finish_the_five_year_plan 
-			}
-			
-			traits = {
-				iron_lazar 
-			}
-		}
-	}
-
-	SOV_genrikh_yagoda = {
-		name = SOV_genrikh_yagoda
-
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_genrikh_yagoda"
-			}
-		}
-
-		allowed_civil_war = {
-			OR = {
-				has_completed_focus = SOV_the_plan_for_the_coup #Goes to right oppo if aligned via Plan for the Coup
-				AND = { #If not aligned by Right oppo, then stays with Stalin
-					original_tag = SOV
-					NOT = { tag = SOV }
-					NOT = {
-						any_other_country = {
-							original_tag = SOV
-							has_completed_focus = SOV_the_plan_for_the_coup
-						}
-					}
-				}
-			}
-			has_government = communism
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_genrikh_yagoda
-			removal_cost = -1
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			traits = {
-				head_of_the_nkvd_yagoda_initial
-			}
-			on_add = {
-				ROOT = { add_to_variable = { SOV_paranoia_weekly_modifiers_amount = 1 } }
-				ROOT = { SOV_paranoia_modifier_update_gui_tooltip = yes }
-			}
-			on_remove = {
-				ROOT = { subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 1 } }
-				ROOT = { SOV_paranoia_modifier_update_gui_tooltip = yes }
-			}
-		}
-	}
-
-	SOV_nikolay_yezhov = {
-		name = SOV_nikolay_yezhov
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_nikolay_yezhov"
-			}
-		}
-
-		allowed_civil_war = {
-			OR = {
-				has_completed_focus = SOV_the_plan_for_the_coup #Goes to right oppo if aligned via Plan for the Coup
-				AND = { #If not aligned by Right oppo, then stays with Stalin
-					original_tag = SOV
-					NOT = { tag = SOV }
-					NOT = {
-						any_other_country = {
-							original_tag = SOV
-							has_completed_focus = SOV_the_plan_for_the_coup
-						}
-					}
-				}
-			}
-			has_government = communism
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_nikolay_yezhov
-			removal_cost = -1
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				NOT = { has_idea = SOV_genrikh_yagoda }
-				NOT = { has_idea = SOV_lavrenty_beriya }
-			}
-			traits = {
-				head_of_the_nkvd_yezhov_initial 
-			}
-			on_add = {
-				ROOT = { add_to_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } }
-				SOV_paranoia_modifier_update_gui_tooltip = yes
-			}
-			on_remove = {
-				ROOT = { subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } }
-				SOV_paranoia_modifier_update_gui_tooltip = yes
-			}
-		}
-	}
-
-	SOV_lavrenty_beriya = {
-		#LA RESISTANCE
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-			allowed_civil_war = {
-				original_tag = SOV
-				has_government = communism
-				NOT = { tag = SOV }
-			}
-			name = SOV_lavrenty_beriya
-			portraits = {
-				civilian = {
-					large = "GFX_portrait_SOV_lavrenty_beriya"
-				}
-				army = {
-					small = "GFX_idea_SOV_lavrenty_beriya"
-				}
-			}
-
-			advisor = {
-				slot = political_advisor
-				idea_token = SOV_lavrenty_beriya
-				name = SOV_lavrenty_beriya
-				removal_cost = -1
-				allowed = {
-					original_tag = SOV
-				}
-				visible = {
-					NOT = {
-						has_character_flag = SOV_character_purged_flag 
-					}
-				}
-				available = {
-					NOT = { has_idea = SOV_nikolay_yezhov }
-					NOT = { has_idea = SOV_genrikh_yagoda }
-					NOT = { is_country_leader = yes }
-				}
-
-				traits = {
-					head_of_the_nkvd_beriya_initial
-				}
-				on_add = {
-					ROOT = { add_to_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } }
-					SOV_paranoia_modifier_update_gui_tooltip = yes
-				}
-				on_remove = {
-					ROOT = { subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } }
-					SOV_paranoia_modifier_update_gui_tooltip = yes
-				}
-			}
-		}
-		#NO LA RESISTANCE
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
-			allowed_civil_war = {
-				original_tag = SOV
-				NOT = { tag = SOV }
-				has_government = communism
-			}
-			name = SOV_lavrenty_beriya
-			portraits = {
-				civilian = {
-					large = "GFX_portrait_SOV_lavrenty_beriya"
-				}
-				army = {
-					small = "GFX_idea_SOV_lavrenty_beriya"
-				}
-			}
-			advisor = {
-				slot = political_advisor
-				idea_token = SOV_lavrenty_beriya
-				name = SOV_lavrenty_beriya
-				removal_cost = -1
-				allowed = {
-					original_tag = SOV
-				}
-				visible = {
-					NOT = {
-						has_character_flag = SOV_character_purged_flag 
-					}
-				}
-				available = {
-					NOT = { has_idea = SOV_nikolay_yezhov }
-					NOT = { has_idea = SOV_genrikh_yagoda }
-				}
-
-				traits = {
-					head_of_the_nkvd_beriya_initial
-				}
-				on_add = {
-					ROOT = { add_to_variable = { SOV_paranoia_weekly_modifiers_amount = 3 } }
-					SOV_paranoia_modifier_update_gui_tooltip = yes
-				}
-				on_remove = {
-					ROOT = { subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 3 } }
-					SOV_paranoia_modifier_update_gui_tooltip = yes
-				}
-			}
-		}
-	}
-
-	SOV_vsevolod_merkulov = {
-		name = SOV_vsevolod_merkulov
-		portraits = {
-			army = {
-				small = "GFX_idea_soviet_vsevolod_merkulov"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				SOV_advisor_is_aligned_left = yes 
-				SOV_advisor_is_aligned_right = yes 
-				SOV_advisor_is_aligned_centre = yes 
-			}
-			has_government = communism
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_vsevolod_merkulov
-			allowed = {
-				original_tag = SOV
-				has_dlc = "La Resistance"
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				has_intelligence_agency = yes
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				head_of_intelligence 
-			}
-		}
-	}
-
-	SOV_vyacheslav_molotov = {
-		name = SOV_vyacheslav_molotov
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_vyacheslav_molotov"
-			}
-		}
-		allowed_civil_war = {
-			has_government = communism
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_vyacheslav_molotov
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				has_completed_focus = SOV_policy_of_individual_security
-			}
-			traits = {
-				pc_for_foreign_affairs_molotov 
-			}
-		}
-	}
-
-	SOV_maksim_litvinov = {
-		name = SOV_maksim_litvinov
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_maksim_litvinov"
-			}
-		}
-		allowed_civil_war = {
-			has_government = communism
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_maksim_litvinov
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				has_completed_focus = SOV_policy_of_collective_security 
-			}
-			traits = {
-				pc_for_foreign_affairs_litvinov 
-			}
-		}
-	}
-
-	SOV_lev_trotsky = {
-		name = SOV_lev_trotsky
-		portraits = {
-			civilian = {
-				large = GFX_portrait_SOV_lev_trotsky
-			}
-			army = {
-				small = "GFX_idea_SOV_lev_trotsky"
-			}
-		}
-		allowed_civil_war = { 
-			OR = {
-				AND = {
-					tag = SOV 
-					has_government = communism
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_lev_trotsky
-			allowed = {
-				original_tag = SOV
-			}
-			on_add = {
-				set_global_flag = flag_trotsky_returning_to_ussr_from_mexico
-				MEX = { country_event = { id = mexico.22 } }		
-			}
-			
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-				NOT = {
-					has_global_flag = trotsky_dead
-				}
-			}
-			available = {
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				OR = {
-					has_completed_focus = SOV_integrate_smirnovs_bloc
-					has_completed_focus = SOV_return_democracy_to_the_party
-				}
-				is_country_leader = no
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-				IF = {
-					limit = {
-						has_global_flag = flag_mexico_invited_trotsky_to_government
-						NOT = { has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico }
-						SOV_is_opposition = yes 
-					}
-					MEX = { 
-						NOT = { has_idea = MEX_leon_trotsky }
-						NOT = { has_country_leader = { character = MEX_leon_trotsky } } 
-					}
-				}
-			}
-			traits = {
-				pc_military_naval_affairs
-			}
-		}
-	}
-
-	SOV_ivan_smirnov = {
-		name = SOV_ivan_smirnov
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_SOV_ivan_smirnov"
-			}
-			army = {
-				small = "GFX_idea_SOV_ivan_smirnov_imprisoned"
-			}
-		}
-		allowed_civil_war = { 
-			OR = {
-				AND = {
-					tag = SOV 
-					has_government = communism
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_ivan_smirnov
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = { has_character_flag = SOV_character_purged_flag }
-				
-			}
-			available = {
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				OR = {
-					has_completed_focus = SOV_integrate_smirnovs_bloc
-					has_completed_focus = SOV_return_democracy_to_the_party
-				}
-				is_country_leader = no
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				head_directorate_of_new_buildings 
-			}
-		}
-	}
-
-	SOV_ivar_smilga = {
-		name = SOV_ivar_smilga
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_ivar_smilga_imprisoned"
-			}
-		}
-		allowed_civil_war = { 
-			OR = {
-				AND = {
-					tag = SOV 
-					has_government = communism
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_ivar_smilga
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				OR = {
-					has_completed_focus = SOV_integrate_smirnovs_bloc
-					has_completed_focus = SOV_return_democracy_to_the_party
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				soviet_economist
-			}
-		}
-	}
-
-
-	SOV_karl_radek = {
-		name = SOV_karl_radek
-
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_karl_radek"
-			}
-		}
-
-		allowed_civil_war = {
-			OR = {
-				AND = {
-					tag = SOV
-					SOV_is_left_opposition = yes 
-					has_completed_focus = SOV_bring_old_trotskyists_back
-				}
-				AND = {
-					tag = SOV
-					SOV_is_right_opposition = yes 
-					has_completed_focus = SOV_cooperation_against_stalin 
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_karl_radek
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				OR = {
-					AND = {
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_bring_old_trotskyists_back
-					}
-					AND = {
-						SOV_is_right_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				international_revolutionary 
-			}
-		}
-	}
-
-	SOV_yevgeny_preobrazhensky = {
-		name = SOV_yevgeny_preobrazhensky
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_yevgeny_preobrazhensky"
-			}
-		}
-
-		allowed_civil_war = {
-			OR = {
-				AND = {
-					tag = SOV
-					SOV_is_left_opposition = yes 
-					has_completed_focus = SOV_bring_old_trotskyists_back
-				}
-				AND = {
-					tag = SOV
-					SOV_is_right_opposition = yes 
-					has_completed_focus = SOV_cooperation_against_stalin 
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_yevgeny_preobrazhensky
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				OR = {
-					AND = {
-						tag = SOV
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_bring_old_trotskyists_back
-					}
-					AND = {
-						tag = SOV
-						SOV_is_right_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				ecomonist_publicist 
-			}
-		}
-	}
-
-	SOV_aleksandr_shlyapnikov = {
-		name = SOV_aleksandr_shlyapnikov
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_aleksandr_shlyapnikov_imprisoned"
-			}
-		}
-		allowed_civil_war = { 
-			OR = {
-				AND = {
-					tag = SOV 
-					has_government = communism
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_aleksandr_shlyapnikov
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				OR = {
-					SOV_is_left_opposition = yes
-					has_completed_focus = SOV_return_democracy_to_the_party
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				left_trade_unionist
-			}
-		}
-	}
-
-	SOV_nikolay_bukharin = {
-		name = SOV_nikolay_bukharin
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_SOV_nikolay_bukharin"
-			}
-			army = {
-				small = "GFX_idea_SOV_nikolay_bukharin"
-			}
-		}
-
-		allowed_civil_war = {
-			OR = {
-				SOV_is_right_opposition = yes 
-				AND = {
-					SOV_is_left_opposition = yes 
-					has_completed_focus = SOV_cooperation_against_stalin 
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
-			}
-
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_nikolay_bukharin
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				OR = {
-					SOV_is_right_opposition = yes 
-					AND = {
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
-					}
-				}
-				is_country_leader = no
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				economy_reformer 
-			}
-		}
-	}
-	
-	SOV_aleksey_rykov = {
-		name = SOV_aleksey_rykov
-
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_SOV_aleksey_rykov"
-			}
-			army = {
-				small = "GFX_idea_SOV_aleksey_rykov"
-			}
-		}
-
-		allowed_civil_war = {
-			OR = {
-				SOV_is_right_opposition = yes 
-				AND = {
-					SOV_is_left_opposition = yes 
-					has_completed_focus = SOV_cooperation_against_stalin 
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_aleksey_rykov
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				OR = {
-					SOV_is_right_opposition = yes 
-					AND = {
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
-					}
-				}
-				is_country_leader = no
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			
-			traits = {
-				peoples_commissar_for_posts_and_telegraphs 
-			}
-		}
-	}
-
-	SOV_mikhail_tomsky = {
-		name = SOV_mikhail_tomsky
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_mikhail_tomsky"
-			}
-		}
-		allowed_civil_war = { 
-			OR = {
-				AND = {
-					tag = SOV 
-					has_government = communism
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_mikhail_tomsky
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				OR = {
-					SOV_is_right_opposition = yes
-					has_completed_focus = SOV_return_democracy_to_the_party
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				right_trade_unionist 
-			}
-		}
-	}
-
-	SOV_grigory_sokolnikov = {
-		name = SOV_grigory_sokolnikov
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_grigory_sokolnikov"
-			}
-		}
-		allowed_civil_war = {
-			has_government = communism
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_grigory_sokolnikov
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				OR = {
-					has_completed_focus = SOV_the_need_for_policy_changes 
-					has_completed_focus = SOV_return_democracy_to_the_party
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				peoples_commissar_of_finance 
-			}
-		}
-	}
-
-	SOV_grigory_zinovyev = {
-		name = SOV_grigory_zinovyev
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_SOV_grigory_zinovyev"
-			}
-			army = {
-				small = "GFX_idea_SOV_grigory_zinovyev_imprisoned"
-			}
-		}
-		allowed_civil_war = { 
-			OR = {
-				AND = {
-					tag = SOV 
-					has_government = communism
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_grigory_zinovyev
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				has_completed_focus = SOV_align_the_zinovyevites
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-					AND = {
-						has_completed_focus = SOV_the_plan_for_the_coup
-						has_completed_focus = SOV_coup_detat
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				communist_theorist
-			}
-		}		
-	}
-	
-	SOV_lev_kamenev = {
-		name = SOV_lev_kamenev
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_SOV_lev_kamenev"
-			}
-			army = {
-				small = "GFX_idea_SOV_lev_kamenev_imprisoned"
-			}
-		}
-		allowed_civil_war = { 
-			OR = {
-				AND = {
-					tag = SOV 
-					has_government = communism
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_lev_kamenev
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				has_completed_focus = SOV_align_the_zinovyevites
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				appeasing_technocrat 
-			}
-		}
-	}
-
-	SOV_martemyan_ryutin = {
-		name = SOV_martemyan_ryutin
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_martemyan_ryutin_imprisoned"
-			}
-		}
-
-		allowed_civil_war = {
-			OR = {
-				AND = {
-					SOV_is_left_opposition = yes 
-					has_completed_focus = SOV_liberate_ryutin
-				}
-				AND = {
-					SOV_is_right_opposition = yes 
-					has_completed_focus = SOV_liberate_ryutin 
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism
-				}
-			}
-		}
-
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_martemyan_ryutin
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				has_completed_focus = SOV_liberate_ryutin
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				anti_stalinist_propagandist 
-			}
-		}
-	}
-	
-	SOV_patriarch_sergy = {
-		name = SOV_patriarch_sergy
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_patriarch_sergy"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_patriarch_sergy
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				OR = {
-					has_completed_focus = SOV_patriarch_of_all_russia
-					has_completed_focus = SOV_the_declaration
-				}
-			}
-			traits = {
-				patriarch_of_moscow_and_all_russia 
-			}
-		}
-	}
-	
-	SOV_metropolitan_anastasy = {
-		name = SOV_metropolitan_anastasy
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_metropolitan_anastasy"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_metropolitan_anastasy
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
-			}
-			available = {
-				has_completed_focus = SOV_return_of_the_rocor
-			}
-			traits = {
-				orthodox_rabblerouser
-			}
-		}		
-	}
-
-	SOV_metropolitan_nikolay = {
-		name = SOV_metropolitan_nikolay
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_metropolitan_nikolay"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_metropolitan_nikolay
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
-			}
-			available = {
-				has_completed_focus = SOV_the_declaration
-			}
-			traits = {
-				theocratic_diplomat
-			}
-		}
-	}
-
-	SOV_metropolitan_aleksy = {
-		name = SOV_metropolitan_aleksy
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_metropolitan_aleksy"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_metropolitan_aleksy
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				has_completed_focus = SOV_the_declaration
-			}
-			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
-			}
-			traits = {
-				driver_of_the_faithful
-			}
-		}		
-	}
-
-	SOV_anastasy_vonsyatsky = {
-		name = SOV_anastasy_vonsyatsky
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_anastasy_vonsyatsky"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_anastasy_vonsyatsky
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				the_foreign_connection
-			}
-		}		
-	}
-
-	SOV_grigory_semyonov = {
-		name = SOV_grigory_semyonov
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_grigory_semyonov"
-				large = "GFX_portrait_SOV_grigory_semyonov"
-			}
-		}
-
-		corps_commander = {
-			traits = { cavalry_officer cavalry_leader }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 3
-			legacy_id = 0
-			visible = {
-				OR = {
-					has_idea = SOV_grigory_semyonov
-					has_completed_focus = SOV_approach_semyonov
-				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_grigory_semyonov
-			allowed = {
-				OR = {
-					original_tag = SOV
-					original_tag = MAN # This is where he starts the game
-				}
-			}
-			available = {
-				if = { 
-					limit = { tag = MAN }
-					custom_trigger_tooltip = {
-					 	tooltip = SOV_grigory_semyonov_man_tt
-					 	SOV_soviet_civil_war_not_started = yes 
-					 	NOT = { SOV = { has_completed_focus = SOV_approach_semyonov } }
-					}
-				}
-				
-				if = {
-					limit = { tag = SOV }
-					has_completed_focus = SOV_approach_semyonov
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			traits = {
-				ataman_transbaikal_host
-			}
-		}		
-	}
-
-	SOV_nikolay_ustryalov = {
-		name = SOV_nikolay_ustryalov
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_nikolay_ustryalov"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_nikolay_ustryalov
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				has_completed_focus = SOV_consolidate_power
-			}
-			traits = {
-				political_chameleon
-			}
-		}		
-	}
-
-	SOV_aleksandr_kazembek = {
-		name = SOV_aleksandr_kazembek
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_aleksandr_kazembek"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_aleksandr_kazembek
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				has_completed_focus = SOV_reconvene_the_zemsky_sobor
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				mladorossi_theorist
-			}
-		}
-	}
-
-
- #######                                         #     #                                                     #                                                       
- #        #    #  #  #       ######   ####       ##   ##  #  #       #  #####    ##    #####   #   #        # #    #####   #    #  #   ####    ####   #####    ####  
- #         #  #   #  #       #       #           # # # #  #  #       #    #     #  #   #    #   # #        #   #   #    #  #    #  #  #       #    #  #    #  #      
- #####      ##    #  #       #####    ####       #  #  #  #  #       #    #    #    #  #    #    #        #     #  #    #  #    #  #   ####   #    #  #    #   ####  
- #          ##    #  #       #            #      #     #  #  #       #    #    ######  #####     #        #######  #    #  #    #  #       #  #    #  #####        # 
- #         #  #   #  #       #       #    #      #     #  #  #       #    #    #    #  #   #     #        #     #  #    #   #  #   #  #    #  #    #  #   #   #    # 
- #######  #    #  #  ######  ######   ####       #     #  #  ######  #    #    #    #  #    #    #        #     #  #####     ##    #   ####    ####   #    #   ####  
-                                                                                                                                                                     
- 	#THEORIST - AIR
-	SOV_aleksandr_prokofyev_seversky = {
-		name = SOV_aleksandr_prokofyev_seversky
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_aleksandr_prokofyev_seversky"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
-		}
-		advisor = {
-			cost = 100
+	SOV_boris_shaposhnikov={
+		advisor={
 			slot = theorist
-			idea_token = SOV_aleksandr_prokofyev_seversky
-			ledger = air
-			allowed = {
-				original_tag = SOV
+			idea_token = boris_shaposhnikov
+			ledger  = army 
+			allowed  = {
+				original_tag  = SOV
 			}
-			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = { victory_through_airpower }
-		}
-	}
-
-	#CHIEF OF AIRFORCE
-	SOV_vyacheslav_tkachyov = {
-		name = SOV_vyacheslav_tkachyov
-
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_vyacheslav_tkachyov"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
-		}
-
-		advisor = {
-			cost = 100
-			slot = air_chief
-			idea_token = SOV_vyacheslav_tkachyov
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = { air_chief_reform_2 }
-		}
-	}
-
-	#CHIEF OF AIRFORCE
-	SOV_yan_nagursky = {
-		name = SOV_yan_nagursky
-
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_yan_nagursky"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
-		}
-		
-		advisor = {
-			cost = 100
-			slot = air_chief
-			idea_token = SOV_yan_nagursky
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = { air_chief_all_weather_2 }
-		}
-	}
-
-	#MHC - Air
-	SOV_vasily_yanchenko = {
-		name = SOV_vasily_yanchenko
-
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_vasily_yanchenko"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
-		}
-		
-		advisor = {
-			cost = 100
-			slot = high_command
-			idea_token = SOV_vasily_yanchenko
-			ledger = air
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = { air_air_superiority_2 }
-		}
-	}	
-
-
-  ####    ####   #    #  #    #  #####  #####   #   #      #       ######    ##    #####   ######  #####    ####  
- #    #  #    #  #    #  ##   #    #    #    #   # #       #       #        #  #   #    #  #       #    #  #      
- #       #    #  #    #  # #  #    #    #    #    #        #       #####   #    #  #    #  #####   #    #   ####  
- #       #    #  #    #  #  # #    #    #####     #        #       #       ######  #    #  #       #####        # 
- #    #  #    #  #    #  #   ##    #    #   #     #        #       #       #    #  #    #  #       #   #   #    # 
-  ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   ####  
-
-	SOV_konstantin_rodzayevsky = {
-		instance = {
-			allowed = {
-				has_dlc = "No Step Back"
-			}
-			name = SOV_konstantin_rodzayevsky
-
-			portraits = {
-				civilian = {
-					large = GFX_portrait_SOV_konstantin_rodzayevsky
-				}
-				army = {
-					small = "GFX_idea_konstantin_rodzaevsky"
-				}
-			}
-
-			country_leader = {
-				ideology = fascism_ideology
-				traits = { fascist_orchestrator }
-				expire = "1953.3.1.1"
-				id = -1
-			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "No Step Back" }
-			}
-			name = SOV_konstantin_rodzayevsky
-
-			portraits = {
-				army = {
-					small = "GFX_idea_konstantin_rodzaevsky"
-				}
-			}
-			advisor = {
-				slot = political_advisor
-				idea_token = konstantin_rodzaevsky
-				allowed = {
-					original_tag = SOV
-				}
-				visible = {
-					NOT = {
-						has_character_flag = SOV_character_purged_flag 
-					}
-				}
-				available = {
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-					if = {
-						limit = {
-							has_character_flag = SOV_exiled_flag
-						}
-						NOT = { has_character_flag = SOV_exiled_flag }
-					}
-				}
-				traits = {
-					fascist_demagogue 
-				}
-				do_effect = {
-					NOT = {
-						has_government = fascism 
-					}
-				}
-				ai_will_do = {
-					factor = 0.000
-				}
-			}
-		}
-	}
-
-	SOV_aleksandr_kerensky = {
-		name = SOV_aleksandr_kerensky
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_SOV_aleksandr_kerensky
-			}
-			army = {
-				small = "GFX_idea_alexander_kerensky"
-			}
-		}
-		country_leader = {
-			ideology = socialism
-			expire = "1953.3.1.1"
-			id = -1
-		}
-		allowed_civil_war = { tag = SOV}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_aleksandr_kerensky
-			allowed = {
-					original_tag = SOV
-			}
-			visible = {
+			available  = {
 				NOT = {
-					has_character_flag = SOV_character_purged_flag 
+					has_idea = mikhail_tukhachevsky
+					has_idea = vasily_chuikov_theorist
+					has_idea = georgy_zhukov
+					has_idea = simyon_timoshenko_theorist
+					
 				}
 			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+			traits  = {
+				military_theorist 
 			}
-			traits = {
-				democratic_reformer 
+		}
+		name="boris_shaposhnikov"
+		portraits={
+			army={
+				small="GFX_idea_boris_shaposhnikov"
 			}
-			do_effect = {
-				NOT = {
-					has_government = democratic 
-				}
+			army = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Boris_Shaposhnikov.dds"
 			}
-			ai_will_do = {
-				factor = 0.000
-			}
+		}
+		field_marshal = {
+			traits = { trait_cautious expert_delegator logistics_wizard }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
 		}
 	}
 }

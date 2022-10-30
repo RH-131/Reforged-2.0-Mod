@@ -1,95 +1,283 @@
 characters={
 	INS_sukarno={
-		name=INS_sukarno
+		name="Sukarno"
 		portraits={
 			civilian={
-				large=GFX_portrait_INS_sukarno
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
 			}
 		}
 		country_leader={
 			ideology=socialism
-			traits = {
-			}
-			expire="1965.1.1.1"
+			expire="1953.3.1.1"
 			id=-1
 		}
 	}
-	INS_a_t_van_starkenborgh_stachouwer={
-		name=INS_a_t_van_starkenborgh_stachouwer
+	INS_amir_sjarifuddin_harahap={
+		name="Amir Sjarifuddin Harahap"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	INS_suharto={
+		name="Suharto"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_fascism.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	INS_sutan_sjahrir={
+		name="Sutan Sjahrir"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
+			}
+		}
+		country_leader={
+			ideology=moderatism
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	INS_a._t._van_starkenborgh_stachouwer={
+		name="A. T. van Starkenborgh Stachouwer"
 		portraits={
 			civilian={
 				large="GFX_portrait_indonesia_at_van_starkenborgh"
 			}
 		}
 		country_leader={
-			ideology=conservatism 
-			traits = {
-			}
-			expire="1965.1.1.1"
+			ideology=conservatism
+			expire="1953.3.1.1"
 			id=-1
 		}
 	}
-	INS_amir_sjarifuddin_harahap={
-		name=INS_amir_sjarifuddin_harahap
-		portraits={
-			civilian={
-				large=GFX_portrait_INS_amir_sjarifuddin_harahap
+	INS_Voget_Vanderbilt = {
+		advisor={
+			slot = political_advisor
+			idea_token = INS_Voget_Vanderbilt
+			picture = generic_political_advisor_asia_2
+				
+			allowed = {
+				original_tag = INS
 			}
-		}
-		country_leader={
-			ideology=marxism
-			traits = {
-			}
-			expire="1965.1.1.1"
-			id=-1
+			
+			traits = { technocrat }
 		}
 	}
-	INS_suharto={
-		name=INS_suharto
-		portraits={
-			civilian={
-				large=GFX_portrait_INS_suharto
+	INS_Godewyn_Eugenius = {
+		advisor={
+			slot = political_advisor
+			idea_token = INS_Godewyn_Eugenius
+			picture = generic_political_advisor_asia_3
+				
+			allowed = {
+				original_tag = INS
 			}
-		}
-		country_leader={
-			ideology=fascism_ideology
-			traits = {
-			}
-			expire="1965.1.1.1"
-			id=-1
+			
+			traits = { smooth_talking_charmer }
 		}
 	}
-	INS_sutan_sjahrir={
-		name=INS_sutan_sjahrir
-		portraits={
-			civilian={
-				large=GFX_portrait_INS_sutan_sjahrir
+	INS_Hein_ter_Poorten = {
+		name="Hein Ter Poorten"
+		advisor={
+			slot = army_chief
+			idea_token = INS_Hein_ter_Poorten
+			picture = generic_army_asia_4
+
+			allowed = {
+				original_tag = INS
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
 			}
 		}
-		country_leader={
-			ideology=moderatism
-			traits = {
-			}
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	INS_hein_ter_poorten={
-		name =HOL_hein_ter_poorten
+		
 		portraits={
 			army={
-				large="GFX_portrait_hol_hein_ter_poorten"
-				small="GFX_idea_HOL_hein_ter_poorten"
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
 			}
 		}
-		field_marshal={
-			traits={ logistics_wizard inspirational_leader }
-			skill=3
+		corps_commander={
+			traits={ hill_fighter }
+			skill=2
 			attack_skill=2
-			defense_skill=3
+			defense_skill=1
 			planning_skill=2
-			logistics_skill=3
+			logistics_skill=2
 			legacy_id=-1
+		}
+	}
+	INS_Richard_Peirse = {
+		advisor={
+			slot = air_chief
+			idea_token = INS_Richard_Peirse
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = INS
+			}
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	INS_Henry_Hart = {
+		advisor={
+			slot = navy_chief
+			idea_token = INS_Henry_Hart
+			picture = generic_navy_asia_3
+			
+			allowed = {
+				original_tag = INS
+			}
+			
+			traits = { navy_chief_decisive_battle_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	INS_Ahmad_Surya = {
+		advisor={
+			slot = high_command
+			idea_token = INS_Ahmad_Surya
+			ledger = army
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = INS
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	INS_Abyasa_Satria = {
+		advisor={
+			slot = high_command
+			idea_token = INS_Abyasa_Satria
+			ledger = army
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = INS
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	INS_Dumadi_Joyo = {
+		advisor={
+			slot = high_command
+			idea_token = INS_Dumadi_Joyo
+			ledger = army
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = INS
+			}
+			
+			traits = { army_armored_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	INS_Yuda_Netro = {
+		advisor={
+			slot = theorist
+			idea_token = MAN_hung_zhehuang
+			ledger = army
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = INS
+			}
+			
+			
+			
+			traits = { military_theorist }
+		}
+	}
+	INS_Reza_Fitri = {
+		advisor={
+			slot = theorist
+			idea_token = INS_Reza_Fitri
+			ledger = navy
+
+			picture = generic_navy_asia_1
+			
+			allowed = {
+				original_tag = INS
+			}
+			
+			
+			
+			traits = { naval_theorist }
+		}
+	}	
+	INS_Bayu_Dewi = { 
+		advisor={
+			slot = theorist
+			idea_token = INS_Bayu_Dewi
+			ledger = air
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = INS
+			}
+			
+			
+			
+			traits = { air_warfare_theorist }
+		}
+	}
+	INS_Ten_Eyck_Smid = {
+		advisor={
+			slot = theorist_production
+			idea_token = INS_Ten_Eyck_Smid
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = INS
+			}
+			
+			traits = { captain_of_industry }
 		}
 	}
 }
