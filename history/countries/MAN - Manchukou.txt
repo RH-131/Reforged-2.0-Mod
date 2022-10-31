@@ -1,12 +1,11 @@
 ﻿capital = 328
+#player
+set_country_flag = JAP_puppet
+
+set_stability = 0.30
+set_war_support = 0.70
 
 oob = "MAN_1936"
-
-set_technology = {
-	infantry_weapons = 1
-	gw_artillery = 1
-	
-}
 
 if = {
 	limit = { has_dlc = "Waking the Tiger" }
@@ -15,126 +14,104 @@ if = {
 	set_country_flag = MAN_western_bandits
 	add_ideas = MAN_banditry
 	add_ideas = MAN_kwantung_veto
-	add_ideas = MAN_low_legitimacy_5
+	add_ideas = MAN_low_legitimacy_1
+	add_ideas = partial_economic_mobilisation
+	add_ideas = MAN_exiled_imperial_family
+	add_ideas = german_advisors
+	add_ideas = MAN_imperial_pretender
+	add_ideas = MAN_resource
+	add_ideas = airandnavy_idea
 }
-
-recruit_character = MAN_aisin_gioro_puyi
-recruit_character = MAN_zhang_haipeng
-recruit_character = MAN_zhang_jinghui
-recruit_character = MAN_aisin_gioro_xiqia
-recruit_character = MAN_yoshiko_kawashima
-recruit_character = MAN_zhao_shangzhi
-recruit_character = MAN_changlin_linge
-recruit_character = MAN_kyoiji_tomonaga
-recruit_character = MAN_yonimitsu_kasahara
-recruit_character = MAN_deng_linge
-recruit_character = MAN_hung_zhehuang
-recruit_character = MAN_nakajima_kesago
-recruit_character = MAN_yin_zuoqian
-recruit_character = MAN_hesehn_tiemei
-recruit_character = MAN_xian_yuan
-recruit_character = MAN_guan_xingde
-
 if = {
-	limit = { has_dlc = "No Step Back" }
-	recruit_character = SOV_grigory_semyonov
-	SOV_grigory_semyonov = { 
-		set_character_flag = SOV_exiled_army_leader
+	limit = {
+		has_dlc = "Man the Guns"
 	}
-}
-
-set_convoys = 5
-
-328 = { #Kirin
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-715 = { #Liaoning
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-714 = { #Heilungkiang
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-717 = { #Hungkiang
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-761 = { #Hulunbuir
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-
-1939.1.1 = {
-
-	add_to_war = {
-		targeted_alliance = JAP
-		enemy = CHI
-		hostility_reason = puppet
-	}
-	
-	add_political_power = 1198
-	add_command_power = 100
-	
-	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
-
-
-	if = {
-		limit = { has_dlc = "Waking the Tiger" }
-
-		
-		#No bandits
-		unlock_national_focus = MAN_pacify_the_countryside
-		remove_ideas = MAN_banditry
-
-		complete_national_focus = MAN_army_modernization
-		complete_national_focus = MAN_mukden_military_academy
-		complete_national_focus = MAN_law_university
-		complete_national_focus = MAN_obedience
-
-		#Five year plan
-		unlock_national_focus = MAN_first_five_year_plan
-		add_timed_idea = { days = 1275 idea = MAN_five_year_plan_industry }
-
-		complete_national_focus = MAN_trade_delegation
-		complete_national_focus = MAN_expand_the_textile_industry
-		complete_national_focus = MAN_hoankyoku
-		complete_national_focus = MAN_invite_japanese_investors
-		complete_national_focus = MAN_expand_the_railways
-		complete_national_focus = MAN_develop_aluminum_sources
-		complete_national_focus = MAN_social_research_unit
-	}
-	
-	oob = "MAN_1939"
 	set_technology = {
-		#doctrines
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		fuel_silos = 1
-		construction1 = 1
-		construction2 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
+		
+		early_ship_hull_frigate = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		improved_secondary_battery = 1		
+		basic_heavy_battery = 1
+		basic_medium_battery = 1
+		improved_ship_torpedo_launcher = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		coastal_defense_ships = 1
+		basic_secondary_battery = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		cruiser_submarines = 1			
+		mtg_transport = 1	
 	}
 }
+add_ideas = {
+	no_spies_idea
+	
+}
+set_research_slots = 3
+
+add_to_tech_sharing_group = JAP_technological_exchange
+
+
+diplomatic_relation = {
+	relation = military_access
+	country = MEN
+	active = yes
+}
+
+MEN = {
+	diplomatic_relation = {
+		relation = military_access
+		country = MAN
+		active = yes
+	}
+}
+
+set_technology = {
+	################# infantry ###############
+	infantry_weapons = 1  
+	fuel_silos = 1 
+	field_equipment = 1 
+	tech_radio_1 = 1
+    infantry_weapons1 = 1	
+	tech_mountaineers = 1
+	marines = 1
+	special_equipment = 1
+	################## support ##################
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	################## artillery ###############
+	artillery1 = 1 
+	gw_pack_artillery = 1
+	interwar_antiair = 1
+	################## armor ##############
+	jap_light_tank_1934 = 1 
+	jap_light_tank_1936 = 1
+	jap_tech_armored_cars = 1
+	jap_tech_armored_cars2 = 1
+	jap_motorised_infantry = 1
+	################## aircraft ##############
+	fighter_1934 = 1
+	fighter_1936 = 1
+	heavy_fighter_1936 = 1
+	tactical_bomber_1934 = 1
+	############### economy ############
+	starting_industry = 1
+	basic_machine_tools = 1
+}
+
+set_convoys = 250
 
 set_politics = {
 	ruling_party = fascism
@@ -143,9 +120,108 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	fascism = 80
-	neutrality = 20
+	fascism = 100
 }
 
-1939.1.1 = {
+if = {
+	limit = { has_dlc = "Man the Guns"}
+	set_naval_oob = "MAN_navy"
 }
+
+if = {
+	limit = { has_dlc = "Man the Guns"}
+		### Destroyer Variants
+		create_equipment_variant = {
+			name = "Mutsuki Class" #collection of various WWI and early interwar ships with similiar capabilities
+			type = ship_hull_light_1
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_anti_air_slot = empty
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				mid_1_custom_slot = ship_torpedo_1
+				rear_1_custom_slot = ship_depth_charge_1
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Momi Class" 
+			type = ship_hull_light_1
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_anti_air_slot = empty
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				mid_1_custom_slot = empty
+				rear_1_custom_slot = empty
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Fubuki Class"
+			type = ship_hull_light_1
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_2
+				fixed_ship_anti_air_slot = empty
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_torpedo_slot = ship_torpedo_2
+				mid_1_custom_slot = ship_torpedo_2
+				rear_1_custom_slot = ship_depth_charge_1
+			}
+		}
+		# Frigates #
+		create_equipment_variant = {
+			name = "Shimushu Class"
+			type = ship_hull_frigate_1
+			name_group = JAP_DE_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_radar_slot_1 = ship_sonar_1
+				fixed_ship_radar_slot_2 = empty
+				fixed_ship_engine_slot = light_ship_engine_1
+				rear_1_custom_slot = ship_depth_charge_1
+			}
+		}
+}
+
+recruit_character = MAN_aisin_gioro_puyi
+recruit_character = MAN_zhang_haipeng
+recruit_character = MAN_zhang_jinghui
+recruit_character = MAN_aisin_gioro_xiqia
+recruit_character = MAN_yoshiko_kawashima
+recruit_character = MAN_oboi_linge
+recruit_character = MAN_songgotu_xingde
+recruit_character = MAN_zheng_xiaoxu
+recruit_character = MAN_nalan_kang_an
+recruit_character = MAN_guan_xingde
+recruit_character = MAN_nakajima_kesago
+recruit_character = MAN_yin_zuoqian
+recruit_character = MAN_yonimitsu_kasahara
+recruit_character = MAN_kyoiji_tomonaga
+recruit_character = MAN_hesehn_tiemei
+recruit_character = MAN_hung_zhehuang
+recruit_character = MAN_xian_yuan
+recruit_character = MAN_deng_linge
+recruit_character = MAN_megata_toshiro
+recruit_character = MAN_songgotu_zhanshan
+recruit_character = PRC_ziao_jingguang
+recruit_character = PRC_liang_shen
+recruit_character = PRC_su_yu
+recruit_character = PRC_chen_yi
+recruit_character = PRC_zhou_enlai
+recruit_character = PRC_gao_qiu
+recruit_character = JAP_zengo_yoshida

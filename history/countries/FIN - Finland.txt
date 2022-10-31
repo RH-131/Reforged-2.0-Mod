@@ -8,46 +8,44 @@ if = {
 		set_naval_oob = "FIN_1936_naval_legacy"
 	}
 }
-
 set_research_slots = 3
 
-recruit_character = FIN_risto_heikki_ryti
-recruit_character = FIN_aimo_aaltonen
-recruit_character = FIN_vilho_annala
-recruit_character = FIN_kyosti_kallio
-recruit_character = FIN_carl_mannerheim
-recruit_character = FIN_erik_heinrichs
-recruit_character = FIN_vilho_petter_nenonen
-recruit_character = FIN_olavi_arho
-recruit_character = FIN_valio_porvari
-recruit_character = FIN_jarl_lundqvist
-recruit_character = FIN_hugo_osterman
-recruit_character = FIN_lauri_malmberg
-recruit_character = FIN_olavi_sarko
-recruit_character = FIN_vaino_valve
-recruit_character = FIN_akseli_anttila
-recruit_character = FIN_harald_ohquist
-recruit_character = FIN_eero_rahola
-recruit_character = FIN_karl_oesch
-recruit_character = FIN_lauri_tiainen
-recruit_character = FIN_ralf_torngren
-recruit_character = FIN_antti_hackzell
-recruit_character = FIN_ake_henrik_gartz
+set_stability = 0.65 
+set_war_support = 0.7
 
-
-add_ideas = {
-	limited_conscription
-}
-
-set_technology = {
-	infantry_weapons = 1
+set_technology = { #player 
+	###################### infantry #########
+	infantry_weapons = 1  
+	fuel_silos = 1 
+	field_equipment = 1 
+	tech_radio_1 = 1 
 	infantry_weapons1 = 1
-	gw_artillery = 1			
-	interwar_antiair = 1
+	bicycle_infantry = 1
+	axis_motorised_infantry = 1
+	tech_dig_1 = 1
+	tech_mountaineers = 1
+	special_equipment = 1
+	############## artillery ############
+	artillery1 = 1 
+	gw_pack_artillery = 1
+    interwar_antiair = 1	
+	axis_light_tank_1934 = 1 
+	axis_tech_armored_cars = 1
+    axis_rivetted_armour = 1
+	axis_basic_tank_engines = 1
+	############## support ############
 	tech_support = 1		
 	tech_recon = 1
 	tech_engineers = 1
+	tech_field_hospital = 1
+	############# aircraft ############
+	ger_fighter_1934 = 1
+	ger_tactical_bomber_1934 = 1	
+	aluminum_frame = 1
+	############### economy #############
+	starting_industry = 1
 	basic_train = 1
+	
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -59,91 +57,17 @@ if = {
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
+		
+		
 		early_ship_hull_light = 1
 		early_ship_hull_submarine = 1
 		early_ship_hull_cruiser = 1
 		basic_battery = 1
+		basic_secondary_battery = 1
 		coastal_defense_ships = 1
 	}
 }
-
-set_convoys = 5
-
-add_ideas = {
-	limited_conscription
-}
-
-1939.1.1 = {
-	add_political_power = 1198
-	add_command_power = 100
-	
-	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
-	
-	oob = "FIN_1939"
-	if = {
-		limit = { has_dlc = "By Blood Alone" }
-			set_air_oob = "FIN_1939_air_bba"
-		else = {
-			set_air_oob = "FIN_1939_air_legacy"
-			set_technology = {
-				early_fighter = 1
-				early_bomber = 1
-				CAS1 = 1		
-			}
-		}
-	}
-	set_technology = {
-		interwar_artillery = 1
-		interwar_antitank = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		support_weapons2 = 1
-
-		#doctrines
-		#Air
-		force_rotation = 1
-		fighter_baiting = 1
-
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		submarine_operations = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		fuel_silos = 1
-		oil_processing = 1
-		improved_oil_processing = 1
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-		dispersed_industry3 = 1
-	}
-}
+set_convoys = 30
 
 set_politics = {
 	ruling_party = neutrality
@@ -158,19 +82,43 @@ set_popularities = {
 	neutrality = 79
 }
 
-1939.1.1 = {
-	set_politics = {
-		ruling_party = neutrality
-		last_election = "1939.7.1"
-		election_frequency = 36
-		elections_allowed = yes
-	}
-}
-
-
+recruit_character = FIN_risto_heikki_ryti
+recruit_character = FIN_aimo_aaltonen
+recruit_character = FIN_vilho_annala
+recruit_character = FIN_erik_heinrichs
+recruit_character = FIN_vilho_petter_nenonen
+recruit_character = FIN_kyösti_kallio
+recruit_character = FIN_carl_gustaf_mannerheim
+recruit_character = FIN_karl_lennart_oesch
+recruit_character = FIN_antti_hackzell
+recruit_character = FIN_1
+recruit_character = FIN_jarl_lundqvist
+recruit_character = FIN_hugo_osterman
+recruit_character = FIN_2
+recruit_character = FIN_olavi_sarko
+recruit_character = FIN_mauno_pekkala
+recruit_character = FIN_akseli_anttila
+recruit_character = FIN_karl_oesch
+recruit_character = FIN_olavi_arho
+recruit_character = FIN_valio_porvari
+recruit_character = FIN_carl_mannerheim
+recruit_character = FIN_lauri_malmberg
+recruit_character = FIN_vaino_tanner
+recruit_character = FIN_rainer_von_fieandt
+recruit_character = FIN_vaino_valve
+recruit_character = FIN_harald_ohquist
+recruit_character = FIN_eero_rahola
+recruit_character = FIN_lauri_tiainen
+recruit_character = FIN_ralf_torngren
+recruit_character = FIN_ake_henrik_gartz
+ 
 add_ideas = {
+    FIN_communism_banned
 	sisu
+	limited_conscription
+	airandnavy_idea
 }
+
 
 ### VARIANTS ###
 # 1936 Start #
@@ -189,7 +137,7 @@ if = {
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
 			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = ship_mine_layer_sub
+			rear_1_custom_slot = empty
 		}
 	}
 	create_equipment_variant = {
@@ -223,3 +171,4 @@ if = {
 		}
 	}
 }
+

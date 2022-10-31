@@ -2,34 +2,24 @@
 
 oob = "GXC_1936"
 
-set_stability = 0.6
-set_war_support = 0.4
 # Starting tech
 set_technology = {
-	infantry_weapons = 1
-	mass_assault = 1
+	################# infantry ###############
+	infantry_weapons = 1  fuel_silos = 1
+	field_equipment = 1
+	################## support ##################
+	tech_recon = 1
+	tech_support = 1
+	################## artillery ###############
+	artillery1 = 1
+	gw_pack_artillery = 1
+	
+	################## armor ##############
+	light_tank_1934 = 1
+	################## aircraft ##############
+	tactical_bomber_1934 = 1
+
 }
-
-recruit_character = GXC_li_zongren
-recruit_character = GXC_chen_jitang
-recruit_character = GXC_liu_peng
-recruit_character = GXC_zhang_lu
-recruit_character = GXC_li_ting
-recruit_character = GXC_bai_yeung
-recruit_character = GXC_heng_lo
-recruit_character = GXC_yu_hanmou
-recruit_character = GXC_zha_zemin
-recruit_character = GXC_huo_duyi
-recruit_character = GXC_niu_keung
-recruit_character = GXC_bai_chongxi
-recruit_character = GXC_teng_qingshan
-recruit_character = GXC_do_liang
-recruit_character = GXC_huang_shaohong
-recruit_character = GXC_yang_hulin
-recruit_character = GXC_wang_shuming
-recruit_character = GXC_li_jishen
-recruit_character = GXC_lei_zhong
-
 
 if = {
 	limit = {
@@ -41,56 +31,7 @@ if = {
 	}
 }
 
-1939.1.1 = {
-	
-	oob = "GXC_1939"
-
-	add_political_power = 1198
-	add_command_power = 100
-	
-	if = {
-		limit = {
-			has_dlc = "Waking the Tiger"
-		}
-
-		CHI = { add_to_faction = PREV }
-		add_to_war = {
-			targeted_alliance = CHI
-			enemy = JAP
-			hostility_reason = asked_to_join
-		}
-
-		complete_national_focus = CHI_secure_internal_politics
-		complete_national_focus = CHI_cooperation_with_the_nationalists
-		complete_national_focus = CHI_industrial_investment
-		complete_national_focus = CHI_public_education_reform
-		complete_national_focus = CHI_long_term_economic_planning
-		complete_national_focus = CHI_technological_cooperation
-		complete_national_focus = CHI_local_arms_production
-		complete_national_focus = CHI_new_model_province
-		complete_national_focus = CHI_root_out_corruption
-		complete_national_focus = CHI_land_reform
-		complete_national_focus = CHI_reform_the_administration
-		complete_national_focus = CHI_heavy_weapons_development
-		else = {
-			#generic focuses
-			complete_national_focus = army_effort
-			complete_national_focus = equipment_effort
-			complete_national_focus = motorization_effort
-			complete_national_focus = aviation_effort
-			complete_national_focus = naval_effort
-			complete_national_focus = flexible_navy
-			complete_national_focus = industrial_effort
-			complete_national_focus = construction_effort
-			complete_national_focus = production_effort
-		}
-	}
-
-}
-
-
-
-set_convoys = 5
+set_convoys = 15
 
 set_politics = {
 	ruling_party = neutrality
@@ -100,4 +41,26 @@ set_politics = {
 }
 set_popularities = {
 	neutrality = 100
+}
+
+create_country_leader = {
+	name = "Li Zongren"
+	desc = "POLITICS_LI_ZONGREN_DESC"
+	picture = "gfx/leaders/GXC/Portrait_Guanxi_Clique_Li_Zongren.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Chen Jitang"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
 }

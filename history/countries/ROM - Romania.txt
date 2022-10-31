@@ -1,19 +1,6 @@
 ﻿capital = 46
 
-if = {
-	limit = {
-		NOT = {
-			has_dlc = "No Step Back"
-		}
-	}
-	set_oob = "ROM_1936"
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_oob = "ROM_1936_nsb"
-}
+oob = "ROM_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "ROM_1936_naval_mtg"
@@ -21,327 +8,88 @@ if = {
 		set_naval_oob = "ROM_1936_naval_legacy"
 	}
 }
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "ROM_1936_air_bba"
-		set_technology = {
-			iw_small_airframe = 1
-			aa_lmg = 1
-			engines_1 = 1
-		}
-	else = {
-		set_air_oob = "ROM_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
+set_research_slots = 3
 
-		}
+ROM = {
+	#Pick from list of the sane events first
+	random_list = {
+		100 = { country_event = { id = romania.7 days = 2 random_days = 20 } }
 	}
 }
 
-set_research_slots = 3
 set_stability = 0.6
-set_war_support = 0.6
+set_war_support = 0.3
 
-recruit_character = ROM_gheorghe_tatarescu
-recruit_character = ROM_constantin_ion_parhon
-recruit_character = ROM_armand_calinescu
-recruit_character = ROM_corneliu_codreanu
-recruit_character = ROM_petre_dumitrescu
-recruit_character = ROM_ion_antonescu
-recruit_character = ROM_ioan_mihail_racovita
-recruit_character = ROM_gheorghe_avramescu
-recruit_character = ROM_constantin_sanatescu
-recruit_character = ROM_horia_macellariu
-recruit_character = ROM_gheorghe_potopeanu
-recruit_character = ROM_emanoil_ionescu
-recruit_character = ROM_gheorghe_mihail
-recruit_character = ROM_ermil_gheorghiu
-recruit_character = ROM_nicolae_sova
-recruit_character = ROM_gheorghe_jienescu
-recruit_character = ROM_paul_teodorescu
-recruit_character = ROM_gheorghe_vasiliu
-recruit_character = ROM_iuliu_maniu
-recruit_character = ROM_petru_groza
-recruit_character = ROM_gheorghe_gheorghiu_dej
-recruit_character = ROM_nicolae_malaxa
-recruit_character = ROM_mihail_sturdza
-recruit_character = ROM_gheorghe_argeseanu
-recruit_character = ROM_king_michael
-recruit_character = ROM_octavian_goga
 
 # Starting tech
-set_technology = {
-	tech_support = 1		
-	tech_engineers = 1
+set_technology = { #player 
+	################### infantry ################
+	infantry_weapons = 1  
+	fuel_silos = 1 
+	field_equipment = 1 
+	fuel_refining = 1
+	tech_radio_1 = 1 
+	infantry_weapons1 = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
-	infantry_weapons = 1
-	infantry_weapons1 = 1
-	gw_artillery = 1
-	interwar_antiair = 1
-	basic_train = 1
-}
+	special_equipment = 1
+	tech_dig_1 = 1
+	################### support ################
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	##################artillery #################
+	artillery1 = 1 
+	gw_pack_artillery = 1
+	heavy_artillery1 = 1
+	################## armor ##################
+	axis_light_tank_1934 = 1 
+	axis_motorised_infantry = 1
+	axis_tech_armored_cars = 1
+	axis_basic_tank_engines = 1
+	axis_rivetted_armour = 1
+	################# aircraft ###########
+	ger_fighter_1934 = 1
+	ger_tactical_bomber_1934 = 1
 
-if = {
-	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
-	set_technology = {
-		gwtank = 1
-		basic_light_tank = 1
-	}
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_technology = {
-		gwtank_chassis = 1
-		basic_light_tank_chassis = 1
-	}
+	################# economy #################
+	starting_industry = 1
+	basic_train = 1
+	
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	set_technology = {
 		early_submarine = 1
 		early_destroyer = 1
+		transport = 1 
 	}
 }
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
+		
+		early_ship_hull_frigate = 1
 		early_ship_hull_light = 1
 		early_ship_hull_submarine = 1
 		basic_ship_hull_submarine = 1
 		basic_battery = 1
 		basic_torpedo = 1
 		basic_depth_charges = 1
+		mtg_transport = 1 
 	}
 }
 
-#Ideas
-if = {
-	limit = {
-		has_dlc = "Death or Dishonor"
-	}
-	add_ideas = {
-		ROM_king_carol_ii_hedonist
-	}
-	give_guarantee = CZE
-	give_guarantee = GRE
-	give_guarantee = TUR
-	give_guarantee = YUG
-}
-if = {
-	limit = {
-		AND = {  
-			NOT = { has_dlc = "Death or Dishonor" }
-			has_dlc = "Battle for the Bosporus"
-		}
-	}
-	give_guarantee = GRE
-	give_guarantee = TUR
-	give_guarantee = YUG
-}
 add_ideas = neutrality_idea
+add_ideas = ROM_agrarian_economy 
+add_ideas = ROM_the_resource_curse_1
+add_ideas = ROM_waning_influence_of_democracy
+add_ideas = ROM_romanian_officers
+add_ideas = ROM_iron_guard
+add_ideas = ROM_king_carol_ii_hedonist
+add_ideas = airandnavy_idea
 
-#Kick off kings crazy life
-if = {
-	limit = {
-		has_dlc = "Death or Dishonor"
-	}
-	ROM = {
-		#Pick from list of the sane events first
-		random_list = {
-			100 = { country_event = { id = DOD_romania.81 days = 2 random_days = 20 } }
-		}
-	}
-}
-
-if = {
-	limit = {
-		#has_dlc = Battle for the Bosporus
-	}
-	add_opinion_modifier = { 
-		target = GRE
-		modifier = BFTB_balkan_pact_ally
-	}
-	add_opinion_modifier = { 
-		target = TUR
-		modifier = BFTB_balkan_pact_ally
-	}
-	add_opinion_modifier = { 
-		target = YUG
-		modifier = BFTB_balkan_pact_ally
-	}
-	add_opinion_modifier = { 
-		target = BUL
-		modifier = BFTB_balkan_pact_enemy
-	}
-	add_opinion_modifier = { 
-		target = HUN
-		modifier = BFTB_balkan_pact_enemy
-	}
-}
-
-set_convoys = 10
-1939.1.1 = {
-	
-	remove_ideas = neutrality_idea
-
-	add_political_power = 1198
-	add_command_power = 100
-
-	set_technology = {
-		interwar_artillery = 1
-		interwar_antitank = 1
-		tech_recon = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-
-		#doctrines
-		#Air
-		force_rotation = 1
-		fighter_baiting = 1
-		
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		convoy_sailing = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		fuel_silos = 1
-		oil_processing = 1
-		improved_oil_processing = 1
-		construction1 = 1
-		construction2 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-	}
-
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		set_technology = {
-			basic_submarine = 1
-		}
-	}
-	if = {
-		limit = { has_dlc = "By Blood Alone" }
-			set_technology = {
-				engines_2 = 1
-				basic_small_airframe = 1
-				improved_small_airframe = 1
-			}
-		else = {
-			set_technology = {
-				fighter1 = 1
-				early_bomber = 1
-				tactical_bomber1 = 1
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			has_dlc = "Death or Dishonor"
-		}
-		complete_national_focus = ROM_preserve_greater_romania
-		complete_national_focus = ROM_army_maneuvers
-		complete_national_focus = ROM_expand_the_air_force
-		complete_national_focus = ROM_civil_works
-		complete_national_focus = ROM_agrarian_reform
-		complete_national_focus = ROM_local_development
-		complete_national_focus = ROM_army_war_college
-		complete_national_focus = ROM_danubian_transport_network
-		complete_national_focus = ROM_malaxa
-		complete_national_focus = ROM_flexible_foreign_policy
-		complete_national_focus = ROM_air_superiority
-		complete_national_focus = ROM_expand_the_galati_shipyards
-		complete_national_focus = ROM_trade_treaty_with_germany
-		complete_national_focus = ROM_iar_80
-		complete_national_focus = ROM_appoint_allied_friendly_government
-		complete_national_focus = ROM_cas
-		complete_national_focus = ROM_royal_guards_divisions
-		complete_national_focus = ROM_the_zb_53
-		complete_national_focus = ROM_vanatori_de_munte
-		complete_national_focus = ROM_hunedoara_steel_works
-		complete_national_focus = ROM_appoint_german_friendly_government
-		complete_national_focus = ROM_invite_german_advisors
-		complete_national_focus = ROM_iron_guard
-
-		#King stuff
-		unlock_national_focus = ROM_institute_royal_dictatorship
-		unlock_national_focus = ROM_revise_the_constitution
-		create_country_leader = {
-			name = "Carol II"
-			desc = "POLITICS_CAROL_II_DESC"
-			picture = GFX_Portrait_romania_Carol_II			
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {
-				hedonist
-				camarilla_leader
-			}
-			id = 550
-		}
-		#ROM = {
-		#	#Pick from list of the sane events first
-		#	random_list = {
-		#		100 = { country_event = { id = DOD_romania.80 days = 2 random_days = 20 } }
-		#	}
-		#}
-
-		else = {		
-			#generic focuses
-			complete_national_focus = army_effort
-			complete_national_focus = equipment_effort
-			complete_national_focus = motorization_effort
-			complete_national_focus = aviation_effort
-			complete_national_focus = naval_effort
-			complete_national_focus = large_navy
-			complete_national_focus = industrial_effort
-			complete_national_focus = construction_effort
-			complete_national_focus = production_effort
-		}
-	}
-	
-	if = {
-		limit = { NOT = { has_dlc = "No Step Back" } }
-		set_oob = "ROM_1939"
-	}
-	if = {
-		limit = { has_dlc = "No Step Back" } 
-		set_oob = "ROM_1939_nsb"
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "ROM_1939_naval_mtg"
-		else = {
-			set_naval_oob = "ROM_1939_naval_legacy"
-		}
-	}
-	if = {
-		limit = { has_dlc = "By Blood Alone" }
-			set_air_oob = "ROM_1939_air_bba"
-		else = {
-			set_air_oob = "ROM_1939_air_legacy"
-		}
-	}
-}
+set_convoys = 40
 
 set_politics = {
 	ruling_party = democratic
@@ -349,43 +97,52 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = yes
 }
+
 set_popularities = {
 	democratic = 60
-	fascism = 18
+	fascism = 14
 	communism = 2
-	neutrality = 20
+	neutrality = 24
 }
 
-1939.1.1 = {
-	set_politics = {
-		ruling_party = neutrality
-		last_election = "1939.7.15"
-		election_frequency = 48
-		elections_allowed = no
-	}
-	set_popularities = {
-		democratic = 20
-		fascism = 35
-		communism = 2
-		neutrality = 43
-	}
-}
+recruit_character = ROM_gheorghe_tatarescu
+recruit_character = ROM_constantin_ion_parhon
+recruit_character = ROM_armand_calinescu
+recruit_character = ROM_octavian_goga
+recruit_character = ROM_petre_dumitrescu
+recruit_character = ROM_ioan_mihail_racovita
+recruit_character = ROM_ion_antonescu
+recruit_character = ROM_horia_macellariu
+recruit_character = ROM_gheorghe_avramescu
+recruit_character = ROM_corneliu_zelea_codreanu
+recruit_character = ROM_gheorge_potopeanu
+recruit_character = ROM_gheorghe_potopeanu
+recruit_character = ROM_david_popescu
+recruit_character = ROM_istrate_micescu
+recruit_character = ROM_emanoil_ionescu
+recruit_character = ROM_gheorghe_mihail
+recruit_character = ROM_mihail_moruzov
+recruit_character = ROM_mihai_antonescu
+recruit_character = ROM_ermil_gheorghiu
+recruit_character = ROM_gheorge_dobre
+recruit_character = ROM_nicolae_sova
+recruit_character = ROM_gheorghe_jienescu
+recruit_character = ROM_gheorghe_vasiliu
+recruit_character = ROM_nicolae_titulescu
+recruit_character = ROM_stefan_tsanev
+recruit_character = ROM_paul_teodorescu
+recruit_character = ROM_gheorghe_arganeseanu
+recruit_character = ROM_ion_gigurtu
+recruit_character = ROM_mihail_sturza
+recruit_character = ROM_constantin_sanatescu
+recruit_character = ROM_constantin_bratianu
+recruit_character = ROM_constantin_papanace
+recruit_character = ROM_constantin_argetoianu
+recruit_character = ROM_nicolae_malaxa
+recruit_character = ROM_iuliu_maniu
+
 ### VARIANTS ###
 # 1936 Start #
-if = {
-	limit = {
-		has_dlc = "By Blood Alone"
-	}
-	create_equipment_variant = {
-		name = "IAR 14" 
-		type = small_plane_airframe_0
-		modules = {
-			fixed_main_weapon_slot = light_mg_2x
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = empty
-		}
-	}
-}
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Ship Variants ###
@@ -411,7 +168,7 @@ if = {
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
 			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = ship_mine_layer_sub
+			rear_1_custom_slot = empty
 		}
 	}
 	# Destroyers #
@@ -427,7 +184,7 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = light_ship_engine_1
 			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = ship_mine_layer_1
+			mid_1_custom_slot = empty
 			rear_1_custom_slot = empty
 		}
 		obsolete = yes
@@ -444,7 +201,7 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = light_ship_engine_1
 			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = ship_mine_layer_1
+			mid_1_custom_slot = empty
 			rear_1_custom_slot = ship_depth_charge_1
 		}
 	}

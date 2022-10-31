@@ -1,128 +1,79 @@
 ﻿capital = 327
 
 oob = "PHI_1936"
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "PHI_1936_air_bba"
-	else = {
-		set_air_oob = "PHI_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
-			early_bomber = 1
-		}
-	}
+
+add_ideas = {
+	no_spies_idea
+	PHI_unstable_state
+	PHI_ideological_rebels
+	PHI_american_advisors
+	limited_conscription
+	partial_economic_mobilisation
+    refinery_idea
+	airandnavy_idea
 }
+
+set_research_slots = 3
 
 # Starting tech
 set_technology = {
-	infantry_weapons = 1
-	infantry_weapons1 = 1
+	################# infantry ###############
+	infantry_weapons = 1  
+	fuel_silos = 1 
+	field_equipment = 1 
+	tech_radio_1 = 1
+    infantry_weapons1 = 1	
+	tech_mountaineers = 1
+	special_equipment = 1
+	################## support ##################
+	tech_recon = 1
 	tech_support = 1		
 	tech_engineers = 1
-	gw_artillery = 1
+	################## artillery ###############
+	artillery1 = 1 
+	gw_pack_artillery = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
+	################## armor ##############
+	usa_light_tank_1934 = 1 
+	usa_motorised_infantry = 1
+	################## aircraft ##############
+	usa_fighter_1934 = 1
+	usa_tactical_bomber_1934 = 1
+	############### economy ############
+	starting_industry = 1
 }
-
-set_convoys = 5
-
-recruit_character = PHI_manuel_luis_quezón
-recruit_character = PHI_pedro_p_baguisa
-recruit_character = PHI_deodato_jacinto
-recruit_character = PHI_hermano_jacinto
-recruit_character = PHI_pelagio_cruz
-recruit_character = PHI_jose_v_andrada
-recruit_character = PHI_leoncio_s_tan
-recruit_character = PHI_benito_n_ebuen
-recruit_character = PHI_basilio_fernando
-recruit_character = PHI_basilio_j_valdez
-recruit_character = PHI_santiago_nuval
-recruit_character = PHI_heraclio_alano
-recruit_character = PHI_ramon_a_alcaraz
-recruit_character = PHI_victor_h_dizon
-recruit_character = PHI_edwin_andrews
-recruit_character = PHI_eustacio_orobia
-recruit_character = PHI_vicente_p_lim
-recruit_character = PHI_emilio_aguinaldo
-recruit_character = PHI_juan_sumulong
-recruit_character = PHI_sergio_osmena
-
-1939.1.1 = {
-
-	add_political_power = 1198
-	add_command_power = 100
-	
-	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
-	
-	oob = "PHI_1939"
-	if = {
-		limit = { has_dlc = "By Blood Alone" }
-			set_air_oob = "PHI_1936_air_bba" #no difference between 36 and 39 airforces
-		else = {
-			set_air_oob = "PHI_1936_air_legacy"
-		}
-	}
+if = {
+	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
-		interwar_artillery = 1
-		interwar_antiair = 1
-		tech_recon = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-
-		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		convoy_sailing = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		fuel_silos = 1
-		construction1 = 1
-		construction2 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-	}
-	if = {
-		limit = {
-			NOT = {
-				has_dlc = "No Step Back"
-			}
-		}
-		set_technology = {
-			gwtank = 1
-			basic_light_tank = 1
-		}
-	}
-	if = {
-		limit = {
-			
-			has_dlc = "No Step Back"
-			
-		}
-		set_technology = {
-			gwtank_chassis = 1
-			basic_light_tank_chassis = 1
-		}
+	
+		early_ship_hull_frigate = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		improved_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		improved_airplane_launcher = 1
+		mtg_transport = 1 
 	}
 }
+
+set_convoys = 100
 
 set_politics = {
 	ruling_party = democratic
@@ -130,8 +81,36 @@ set_politics = {
 	election_frequency = 72
 	elections_allowed = yes
 }
-set_popularities = {
-	democratic = 82
-	fascism = 9
-	communism = 9
-}
+
+add_to_tech_sharing_group = MEX_USA_tech_group
+
+set_stability = 0.60
+set_war_support = 0.50
+
+recruit_character = PHI_manuel_luis_quezón
+recruit_character = PHI_pedro_p._baguisa
+recruit_character = PHI_richard_marshall
+recruit_character = PHI__leonard_t._gerow
+recruit_character = PHI_josé_aguainaldo
+recruit_character = PHI_ladislao_díaz
+recruit_character = PHI_sergio_osmena
+recruit_character = PHI_emilio_aguinaldo
+recruit_character = PHI_leoncio_s_tan
+recruit_character = PHI_basilio_j_valdez
+recruit_character = PHI_pelagio_cruz
+recruit_character = PHI_edwin_andrews
+recruit_character = PHI_santiago_nuval
+recruit_character = PHI_eustacio_orobia
+recruit_character = PHI_vicente_p_lim
+recruit_character = PHI_heraclio_alano
+recruit_character = PHI_basilio_fernando 
+recruit_character = PHI_jose_v_andrada
+recruit_character = PHI_phraya_preechacholayudha
+recruit_character = PHI_benito_n_ebuen
+recruit_character = PHI_ramon_a_alcaraz
+recruit_character = PHI_victor_h_dizon
+recruit_character = PHI_juan_sumulong
+recruit_character = SWI_johannes_baumann
+recruit_character = SWI_roger_masson
+recruit_character = BEL_georges_timmermans
+recruit_character = SWE_folke_högberg
