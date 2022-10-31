@@ -548,7 +548,7 @@ USA_ARM_01 =
 
 	can_use = { always = yes }
 
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor"  }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { USA_INF_01 }
@@ -634,10 +634,10 @@ USA_PAR_01 =
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		82 = { "%dnd Airborne 'All American' Division" }
-		101 = { "%dst Airborne 'Screaming Eagles' Division" }
 		11 = { "%dth Airborne 'The Angels' Division" }
 		13 = { "%dth Airborne 'Golden Unicorns' Division" }
+		82 = { "%dnd Airborne 'All American' Division" }
+		101 = { "%dst Airborne 'Screaming Eagles' Division" }
 		17 = { "%dth Airborne 'Golden Talons' Division" }
 		18 = { "%dth Airborne Division" }
 		21 = { "%dst Airborne Division" }

@@ -104,7 +104,7 @@ AST_INF_01 =
 		52 = { "%dnd Infantry Division" }
 		53 = { "%drd Infantry Division" }
 
-		# This list covers both the Citizens Military Force (CMF) and Australian Imperial Force (AIF) infantry divisions either extant during the interwar years or raised during the war.  It'd be possible to split the lists in two (CMF and AIF divisions having their own list, as CMF divisions only served in Australia and Australian territories (or thereabouts) but that's probably overkill, given they all had the same naming convention - probably makes more sense for the player in-game to have their militia and infantry divisions use the same name list, as far as I understand the system).
+		# This list covers both the Citizens Military Force (CMF) and Australian Imperial Force (AIF) infantry divisions either extant during the interwar years or raised during the war.  It'd be possible to split the lists in two (CMF and AIF divisions having their own list, as CMF divisions only served in Australia and Australian territories (or thereabouts) but that's probably overkill, given they all had the same naming convention - probably makes more sense for the player in-game to have their light_infantry and infantry divisions use the same name list, as far as I understand the system).
 		# Australia only raised 12 infantry divisions historically.  This list is longer to avoid things like the 22th Infantry Division for Australias that build lots of divisions.
 	}
 }
@@ -241,7 +241,7 @@ AST_ARM_01 =
 
 	can_use = { always = yes }
 
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor"  }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { AST_CAV_01 }
@@ -252,12 +252,12 @@ AST_ARM_01 =
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		1 = { "%dst Armoured Division" }
-		2 = { "%dnd Armoured Division" } #Formed from 2nd Motor Division
-		3 = { "%drd Armoured Division" } #Formed from 1st Motor Division
-		4 = { "%dth Armoured Division" }
-		5 = { "%dth Armoured Division" }
-		6 = { "%dth Armoured Division" }
+		1 = { "%dst 'Wild Crocs' Armoured Division" }
+		2 = { "%dnd 'Jumping Cangaroos' Armoured Division" } #Formed from 2nd Motor Division
+		3 = { "%drd 'Steel fuckers' Armoured Division" } #Formed from 1st Motor Division
+		4 = { "%dth 'Sydney Opera House's Armoured Division'" }
+		5 = { "%dth 'Outback Cangaroos' Armoured Division" }
+		6 = { "%dth 'Mates' Armoured Division'" }
 		7 = { "%dth Armoured Division" }
 		8 = { "%dth Armoured Division" }
 		9 = { "%dth Armoured Division" }

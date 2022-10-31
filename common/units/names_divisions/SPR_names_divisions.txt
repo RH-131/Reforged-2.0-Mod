@@ -178,7 +178,7 @@ SPR_ARM_01 =
 
 	can_use = { always = yes }
 
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { SPR_INF_01 }
@@ -345,10 +345,7 @@ SPA_INF_01 =
 	for_countries = { SPR }
 
 	can_use = { 
-		OR = {
-			has_government = fascism 
-			has_completed_focus = SPA_unify_the_nationalist_front
-		}
+		has_government = fascism 
 	}
 
 	division_types = { "infantry" }

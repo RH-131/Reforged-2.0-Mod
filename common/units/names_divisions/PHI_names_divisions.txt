@@ -202,7 +202,7 @@ PHI_ARM_01 =
 
 	can_use = { always = yes }
 
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor"  }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { PHI_INF_01 }
@@ -230,7 +230,7 @@ PHI_PAR_01 =
 {
 	name = "Airborne Division"
 
-	for_countries = { PHI MAL BOT KEN PAK ZIM }				# Includes active nations and releasable (former) British colonies
+	for_countries = { PHI MAL }				# Includes active nations and releasable (former) British colonies
 
 	can_use = { always = yes }
 
