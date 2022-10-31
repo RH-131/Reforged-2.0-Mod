@@ -3,12 +3,6 @@ equipments = {
 	ship_hull_light = {
 		year = 1922
 
-		can_be_produced = {
-			NOT = {
-				has_idea = BUL_army_restrictions
-			}
-		}
-
 		is_archetype = yes
 		is_buildable = no
 		type = screen_ship
@@ -26,7 +20,7 @@ equipments = {
 		module_slots = {
 			fixed_ship_battery_slot = {
 				required = yes
-				allowed_module_categories = { ship_light_battery dp_light_battery}
+				allowed_module_categories = { ship_light_battery }
 			}
 			fixed_ship_anti_air_slot = {
 				required = no
@@ -53,8 +47,6 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					ship_torpedo
-					ship_mine_warfare
-					ship_mine_layer
 					ship_anti_air
 					ship_depth_charge
 				}
@@ -100,7 +92,7 @@ equipments = {
 		surface_detection = 20
 		sub_detection = 1
 		surface_visibility = 10
-		naval_speed = 30
+		naval_speed = 25
 		reliability = 0.80
 		
 		naval_range = 1500
@@ -119,7 +111,6 @@ equipments = {
 	}
 
 	ship_hull_light_1 = {
-		abbreviation = "hdb"
 		year = 1922
 
 		archetype = ship_hull_light
@@ -130,7 +121,6 @@ equipments = {
 	}
 
 	ship_hull_light_2 = {
-		abbreviation = "hdc"
 		year = 1936
 
 		archetype = ship_hull_light
@@ -150,12 +140,9 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					ship_torpedo
-					ship_mine_warfare
-					ship_mine_layer
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
-					dp_light_battery
 				}
 			}
 			rear_1_custom_slot = mid_1_custom_slot
@@ -179,7 +166,6 @@ equipments = {
 	}
 
 	ship_hull_light_3 = {
-		abbreviation = "hdd"
 		year = 1940
 
 		archetype = ship_hull_light
@@ -201,31 +187,24 @@ equipments = {
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
-					dp_light_battery
 				}
 			}
 			mid_1_custom_slot = {
 				required = no
 				allowed_module_categories = {
 					ship_torpedo
-					ship_mine_warfare
-					ship_mine_layer
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
-					dp_light_battery
 				}
 			}
 			rear_1_custom_slot = {
 				required = no
 				allowed_module_categories = {
 					ship_torpedo
-					ship_mine_warfare
-					ship_mine_layer
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
-					dp_light_battery
 				}
 			}
 		}
@@ -251,7 +230,6 @@ equipments = {
 	}
 
 	ship_hull_light_4 = {
-		abbreviation = "hde"
 		year = 1944
 
 		archetype = ship_hull_light
@@ -272,19 +250,15 @@ equipments = {
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
-					dp_light_battery
 				}
 			}
 			mid_1_custom_slot = {
 				required = no
 				allowed_module_categories = {
 					ship_torpedo
-					ship_mine_warfare
-					ship_mine_layer
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
-					dp_light_battery
 				}
 			}
 			mid_2_custom_slot = mid_1_custom_slot
@@ -292,12 +266,9 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					ship_torpedo
-					ship_mine_warfare
-					ship_mine_layer
 					ship_depth_charge
 					ship_anti_air
 					ship_light_battery
-					dp_light_battery
 				}
 			}
 		}
@@ -344,7 +315,7 @@ equipments = {
 		surface_detection = 20
 		sub_detection = 5
 		surface_visibility = 10
-		naval_speed = 30
+		naval_speed = 25
 		reliability = 0.80
 		
 		naval_range = 1500
@@ -356,7 +327,6 @@ equipments = {
 		
 		build_cost_ic = 400
 		resources = {
-			#oil = 1
 			steel = 2
 		}
 		
@@ -392,7 +362,7 @@ equipments = {
 		surface_detection = 25
 		sub_detection = 10
 		surface_visibility = 10
-		naval_speed = 30
+		naval_speed = 25
 		reliability = 0.85
 
 		naval_range = 1800
@@ -408,7 +378,6 @@ equipments = {
 
 		build_cost_ic = 500
 		resources = {
-			#oil = 1
 			steel = 3
 		}		
 		manpower = 325
@@ -444,7 +413,7 @@ equipments = {
 		surface_detection = 40
 		sub_detection = 10
 		surface_visibility = 10
-		naval_speed = 30
+		naval_speed = 25
 		reliability = 0.90
 
 		naval_range = 2000
@@ -459,7 +428,6 @@ equipments = {
 		}
 		build_cost_ic = 500
 		resources = {
-			#oil = 2
 			steel = 3
 		}
 		manpower = 400
@@ -495,7 +463,7 @@ equipments = {
 		surface_detection = 40
 		sub_detection = 10
 		surface_visibility = 10
-		naval_speed = 30
+		naval_speed = 25
 		reliability = 0.92
 
 		naval_range = 2500
@@ -511,10 +479,10 @@ equipments = {
 
 		build_cost_ic = 500
 		resources = {
-			#oil = 2
 			steel = 4
 			chromium = 1
 		}		
 		manpower = 500
 	}
 }
+

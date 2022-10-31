@@ -3,12 +3,6 @@ equipments = {
 	small_plane_airframe = {
 		year = 1933
 
-		can_be_produced = {
-			NOT = {
-				has_idea = BUL_army_restrictions
-			}
-		}
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
@@ -22,7 +16,6 @@ equipments = {
 			naval_bomber
 			suicide
 		}
-		allow_mission_type = training
 		group_by = archetype
 		sprite = light_plane
 		air_map_icon_frame = 1
@@ -30,18 +23,20 @@ equipments = {
 		substitute = cv_small_plane_airframe
 		
 		interface_overview_category_index = 1
-		air_superiority = 1
+		air_superiority = 0.5
 		reliability = 0.8
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
+		#Space taken in convoy
 		lend_lease_cost = 8
-		manpower = 20
-		fuel_consumption = 0.05
-		build_cost_ic = 6
+		supply_consumption = 0.01
+		build_cost_ic = 25
 		resources = {
 			aluminium = 2
 			rubber = 1
 		}
+		fuel_consumption = 0.16
+		manpower = 20
 
 		module_slots = {
 			fixed_main_weapon_slot = {
@@ -96,10 +91,6 @@ equipments = {
 					plane_special_module_defense_turret
 				}
 			}
-		}
-		module_count_limit = {
-			module = guided_anti_ship_missile
-			count < 2
 		}
 
 		module_count_limit = {
@@ -158,11 +149,6 @@ equipments = {
 		}
 
 		module_count_limit = {
-			category = nav_bomber_weapon
-			count < 2
-		}
-
-		module_count_limit = {
 			category = plane_special_module_bomb_sights
 			count < 2
 		}
@@ -198,7 +184,6 @@ equipments = {
 
 	small_plane_airframe_0 = { #Inter-War
 		abbreviation = "afs0"
-		derived_variant_name = fighter_equipment_0
 		year = 1933
 
 		archetype = small_plane_airframe
@@ -216,7 +201,6 @@ equipments = {
 
 	small_plane_airframe_1 = { #Basic
 		abbreviation = "afs1"
-		derived_variant_name = fighter_equipment_1
 		year = 1936
 
 		archetype = small_plane_airframe
@@ -230,7 +214,7 @@ equipments = {
 		weight = 4
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 7
+		build_cost_ic = 17
 		resources = {
 			aluminium = 3
 			rubber = 1
@@ -293,7 +277,6 @@ equipments = {
 	}
 	small_plane_airframe_2 = { #Improved
 		abbreviation = "afs2"
-		derived_variant_name = fighter_equipment_2
 		year = 1939
 
 		archetype = small_plane_airframe
@@ -307,7 +290,7 @@ equipments = {
 		weight = 5
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 8
+		build_cost_ic = 18
 		resources = {
 			aluminium = 3
 			rubber = 1
@@ -397,7 +380,6 @@ equipments = {
 
 	small_plane_airframe_3 = { #Advanced
 		abbreviation = "afs3"
-		derived_variant_name = fighter_equipment_3
 		year = 1942
 
 		archetype = small_plane_airframe
@@ -411,7 +393,7 @@ equipments = {
 		weight = 6
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 9
+		build_cost_ic = 19
 		resources = {
 			aluminium = 4
 			rubber = 1
@@ -508,7 +490,6 @@ equipments = {
 
 	small_plane_airframe_4 = { #modern
 		abbreviation = "afs4"
-		derived_variant_name = jet_fighter_equipment_1 # We should use "jet" for this or any of the ones below, but this is good enough for now.
 		year = 1945
 
 		archetype = small_plane_airframe
@@ -522,7 +503,7 @@ equipments = {
 		weight = 7
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 12
+		build_cost_ic = 22
 		resources = {
 			aluminium = 4
 			rubber = 1
@@ -623,11 +604,7 @@ equipments = {
 	cv_small_plane_airframe = {
 		year = 1933
 
-		can_be_produced = {
-			NOT = {
-				has_idea = BUL_army_restrictions
-			}
-		}
+		
 
 		is_archetype = yes
 		is_convertable = yes
@@ -645,25 +622,25 @@ equipments = {
 			naval_bomber
 			suicide
 		}
-		allow_mission_type = training
 		group_by = archetype
 		sprite = light_plane
-		air_map_icon_frame = 16
+		air_map_icon_frame = 1
 		interface_category = interface_category_air
 		
 		interface_overview_category_index = 1
-		air_superiority = 1
+		air_superiority = 0.5
 		reliability = 0.8
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
 		lend_lease_cost = 8
-		manpower = 20
-		fuel_consumption = 0.05
-		build_cost_ic = 8
+		build_cost_ic = 23
+		supply_consumption = 0.01
 		resources = {
 			aluminium = 2
 			rubber = 1
 		}
+		fuel_consumption = 0.15
+		manpower = 20
 
 		module_slots = {
 			fixed_main_weapon_slot = {
@@ -718,11 +695,6 @@ equipments = {
 					plane_special_module_air_air_radar
 				}
 			}
-		}
-
-		module_count_limit = {
-			module = guided_anti_ship_missile
-			count < 2
 		}
 
 		module_count_limit = {
@@ -781,11 +753,6 @@ equipments = {
 		}
 
 		module_count_limit = {
-			category = nav_bomber_weapon
-			count < 2
-		}
-
-		module_count_limit = {
 			category = plane_special_module_bomb_sights
 			count < 2
 		}
@@ -821,7 +788,6 @@ equipments = {
 
 	cv_small_plane_airframe_0 = { #Inter-War
 		abbreviation = "afc0"
-		derived_variant_name = cv_fighter_equipment_0
 		year = 1933
 
 		archetype = cv_small_plane_airframe
@@ -839,7 +805,6 @@ equipments = {
 
 	cv_small_plane_airframe_1 = { #Basic
 		abbreviation = "afc1"
-		derived_variant_name = cv_fighter_equipment_1
 		year = 1936
 
 		archetype = cv_small_plane_airframe
@@ -853,7 +818,7 @@ equipments = {
 		weight = 6
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 10.5
+		build_cost_ic = 20.5
 		resources = {
 			aluminium = 3
 			rubber = 1
@@ -915,7 +880,6 @@ equipments = {
 	}
 	cv_small_plane_airframe_2 = { #Improved
 		abbreviation = "afc2"
-		derived_variant_name = cv_fighter_equipment_2
 		year = 1939
 
 		archetype = cv_small_plane_airframe
@@ -929,7 +893,7 @@ equipments = {
 		weight = 7
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 11.5
+		build_cost_ic = 21.5
 		resources = {
 			aluminium = 3
 			rubber = 1
@@ -1018,7 +982,6 @@ equipments = {
 
 	cv_small_plane_airframe_3 = { #Advanced
 		abbreviation = "afc3"
-		derived_variant_name = cv_fighter_equipment_3
 		year = 1942
 
 		archetype = cv_small_plane_airframe
@@ -1032,7 +995,7 @@ equipments = {
 		weight = 8
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 13
+		build_cost_ic = 23
 		resources = {
 			aluminium = 4
 			rubber = 1
@@ -1141,7 +1104,7 @@ equipments = {
 		weight = 9
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 16.5
+		build_cost_ic = 26.5
 		resources = {
 			aluminium = 4
 			rubber = 1
@@ -1265,14 +1228,14 @@ equipments = {
 		interface_category = interface_category_air
 		
 		interface_overview_category_index = 4
-		air_superiority = 1
+		air_superiority = 0.75
 		reliability = 0.8
 		naval_strike_attack = 1
-		naval_strike_targetting = 1
+		naval_strike_targetting = 7.5
 		lend_lease_cost = 10
 		manpower = 40
 		fuel_consumption = 0
-		build_cost_ic = 8
+		build_cost_ic = 18
 		resources = {
 			aluminium = 2
 			rubber = 1
@@ -1440,11 +1403,6 @@ equipments = {
 		}
 
 		module_count_limit = {
-			category = nav_bomber_weapon
-			count < 3
-		}
-
-		module_count_limit = {
 			category = plane_special_module_bomb_sights
 			count < 2
 		}
@@ -1480,7 +1438,6 @@ equipments = {
 
 	medium_plane_airframe_0 = { #Inter-War
 		abbreviation = "afm0"
-		derived_variant_name = tac_bomber_equipment_0
 		year = 1933
 
 		archetype = medium_plane_airframe
@@ -1498,7 +1455,6 @@ equipments = {
 
 	medium_plane_airframe_1 = { #Basic
 		abbreviation = "afm1"
-		derived_variant_name = tac_bomber_equipment_1
 		year = 1936
 
 		archetype = medium_plane_airframe
@@ -1512,7 +1468,7 @@ equipments = {
 		weight = 10
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 10
+		build_cost_ic = 20
 		resources = {
 			aluminium = 3
 			rubber = 1
@@ -1625,7 +1581,6 @@ equipments = {
 
 	medium_plane_airframe_2 = { #Improved
 		abbreviation = "afm2"
-		derived_variant_name = tac_bomber_equipment_2
 		year = 1939
 
 		archetype = medium_plane_airframe
@@ -1639,7 +1594,7 @@ equipments = {
 		weight = 12
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 12
+		build_cost_ic = 22
 		resources = {
 			aluminium = 4
 			rubber = 1
@@ -1768,7 +1723,6 @@ equipments = {
 
 	medium_plane_airframe_3 = { #Advanced
 		abbreviation = "afm3"
-		derived_variant_name = tac_bomber_equipment_3
 		year = 1942
 
 		archetype = medium_plane_airframe
@@ -1782,7 +1736,7 @@ equipments = {
 		weight = 14
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 15
+		build_cost_ic = 25
 		resources = {
 			aluminium = 5
 			rubber = 1
@@ -1923,7 +1877,6 @@ equipments = {
 
 	medium_plane_airframe_4 = { #Modern
 		abbreviation = "afm4"
-		derived_variant_name = jet_tac_bomber_equipment_1
 		year = 1945
 
 		archetype = medium_plane_airframe
@@ -1937,7 +1890,7 @@ equipments = {
 		weight = 16
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 16
+		build_cost_ic = 26
 		resources = {
 			aluminium = 5
 			rubber = 1
@@ -2102,14 +2055,14 @@ equipments = {
 		interface_category = interface_category_air
 		
 		interface_overview_category_index = 5
-		air_superiority = 0.01
+		air_superiority = 0.05
 		reliability = 0.8
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
 		lend_lease_cost = 10
 		manpower = 80
 		fuel_consumption = 0.16
-		build_cost_ic = 18
+		build_cost_ic = 28
 		resources = {
 			aluminium = 3
 			rubber = 2
@@ -2226,7 +2179,6 @@ equipments = {
 				}
 			}
 		}
-
 		module_count_limit = {
 			module = fixed_explosive_charge
 			count < 2
@@ -2270,11 +2222,6 @@ equipments = {
 		module_count_limit = {
 			module = tank_buster_2
 			count < 3
-		}
-
-		module_count_limit = {
-			category = nav_bomber_weapon
-			count < 4
 		}
 
 		module_count_limit = {
@@ -2325,7 +2272,6 @@ equipments = {
 
 	large_plane_airframe_1 = { #Basic
 		abbreviation = "afl1"
-		derived_variant_name = strat_bomber_equipment_1
 		year = 1936
 
 		archetype = large_plane_airframe
@@ -2339,7 +2285,7 @@ equipments = {
 		weight = 25
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 20
+		build_cost_ic = 30
 		resources = {
 			aluminium = 3
 			rubber = 2
@@ -2460,7 +2406,6 @@ equipments = {
 
 	large_plane_airframe_2 = { #Improved
 		abbreviation = "afl2"
-		derived_variant_name = strat_bomber_equipment_2
 		year = 1939
 
 		archetype = large_plane_airframe
@@ -2474,7 +2419,7 @@ equipments = {
 		weight = 30
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 22
+		build_cost_ic = 32
 		resources = {
 			aluminium = 4
 			rubber = 2
@@ -2620,7 +2565,6 @@ equipments = {
 
 	large_plane_airframe_3 = { #Advanced
 		abbreviation = "afl3"
-		derived_variant_name = strat_bomber_equipment_3
 		year = 1942
 
 		archetype = large_plane_airframe
@@ -2634,7 +2578,7 @@ equipments = {
 		weight = 35
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 24
+		build_cost_ic = 34
 		resources = {
 			aluminium = 5
 			rubber = 2
@@ -2780,7 +2724,6 @@ equipments = {
 
 	large_plane_airframe_4 = { #Modern
 		abbreviation = "afl4"
-		derived_variant_name = jet_strat_bomber_equipment_1
 		year = 1945
 
 		archetype = large_plane_airframe
@@ -2794,7 +2737,7 @@ equipments = {
 		weight = 42
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 25
+		build_cost_ic = 35
 		resources = {
 			aluminium = 6
 			rubber = 2
@@ -2937,5 +2880,84 @@ equipments = {
 			}
 		}
 	}
+
+}
+duplicate_archetypes = {
+
+	# small_plane
+
+	small_plane_cas_airframe = {
+		archetype = small_plane_airframe
+		type = cas
+		picture = archetype_CAS_equipment
+		air_map_icon_frame = 2
+		interface_overview_category_index = 0
+		substitute = cv_small_plane_cas_airframe
+	}
+	cv_small_plane_cas_airframe = {
+		archetype = cv_small_plane_airframe
+		type = cas
+		#ai_type = cv_cas
+		picture = archetype_CAS_equipment
+		air_map_icon_frame = 2
+		interface_overview_category_index = 0
+		default_carrier_composition_weight = 1
+	}
+
+	small_plane_naval_bomber_airframe = {
+		archetype = small_plane_airframe
+		type = naval_bomber
+		picture = archetype_heavy_fighter_equipment
+		air_map_icon_frame = 3
+		interface_overview_category_index = 2
+		substitute = cv_small_plane_naval_bomber_airframe
+	}
+	cv_small_plane_naval_bomber_airframe = {
+		archetype = cv_small_plane_airframe
+		type = naval_bomber
+		#ai_type = cv_naval_bomber
+		picture = archetype_heavy_fighter_equipment
+		air_map_icon_frame = 3
+		interface_overview_category_index = 2
+		default_carrier_composition_weight = 1
+	}
+
+
+	# medium_plane
+
+	medium_plane_fighter_airframe = {
+		archetype = medium_plane_airframe
+		type = fighter
+		ai_type = heavy_fighter
+		for_each = {
+			air_superiority = { set = 1.25 }
+		}
+		sprite = light_plane
+		air_map_icon_frame = 8
+		interface_overview_category_index = 3
+	}
+
+	medium_plane_scout_plane_airframe = {
+		archetype = medium_plane_airframe
+		type = scout_plane
+		for_each = {
+			air_superiority = { set = 0 }
+		}
+		sprite = scout_plane
+		air_map_icon_frame = 13
+		interface_overview_category_index = 7
+		forbid_mission_type = training
+	}
+
+	# large_plane
+
+	large_plane_maritime_patrol_plane_airframe = {
+		archetype = large_plane_airframe
+		type = maritime_patrol_plane
+		air_map_icon_frame = 14
+		interface_overview_category_index = 8
+	}
+
+	# Non-BBA archetypes
 
 }
