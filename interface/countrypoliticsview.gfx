@@ -1,5 +1,4 @@
 spriteTypes = {
-	
 	#Government in Exile
 
 	spriteType = {
@@ -48,7 +47,7 @@ spriteTypes = {
 		textureFile2 = "gfx/interface/government_in_exile/legitimacy_progress_bar_long_bg.dds"
 		size = { x = 212 y = 17 }
 		effectFile = "gfx/FX/progress.lua"
-	}	
+	}				 
 
 	#Autonomy Stuff
 
@@ -56,7 +55,7 @@ spriteTypes = {
 		name = "GFX_subject_overlay"
 		texturefile = "gfx/interface/autonomy/subject_overlay.dds"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"		
-	}
+	}		
 
 	progressbartype = {
 		name = "GFX_subject_progressbar_long"
@@ -123,13 +122,11 @@ spriteTypes = {
 		name = "GFX_autonomy_integrated_puppet_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_integrated_puppet_icon.dds"
 	}
-	
 	spriteType = {
 		name = "GFX_autonomy_collaboration_government_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_collaboration_government.dds"
 	}
-	
-	spriteType = {
+	spriteType = {   
 		name = "GFX_autonomy_level_button"
 		textureFile = "gfx/interface/autonomy/autonomy_level_button.dds"
 	}
@@ -163,15 +160,9 @@ spriteTypes = {
 		name = "GFX_autonomy_wtt_imperial_protectorate_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_imperial_protectorate.dds"
 	}
-
-	spriteType = {
+    spriteType = {
 		name = "GFX_autonomy_supervised_state_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_supervised_state.dds"
-	}
-
-	spriteType = {
-		name = "GFX_autonomy_personal_union_icon"
-		textureFile = "gfx/interface/autonomy/autonomy_personal_union_puppet.dds"
 	}
 	
 	#-------------
@@ -191,8 +182,8 @@ spriteTypes = {
 		pause_on_loop = 0.0
 		alwaystransparent = yes
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
-	}
-
+	}	
+	
 	frameAnimatedSpriteType = {
 		name = "GFX_spirit_glow"
 		texturefile = "gfx/interface/officer_corp/spirit_glow.dds"
@@ -244,7 +235,6 @@ spriteTypes = {
 		textureFile = "gfx/interface/rules_sum_icon.dds"
 	}
 
-
 	spriteType = {
 		name = "GFX_idea_slot_high_command"
 		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
@@ -271,6 +261,26 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_slot_theorist_naval"
+		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_theorist_air"
+		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_slot_theorist_research"
+		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_slot_theorist_production"
+		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_slot_industrial_concern"
 		textureFile = "gfx/interface/idea_slot_industrial_concern.dds"
 	}
@@ -293,6 +303,31 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_slot_tank_manufacturer"
 		textureFile = "gfx/interface/idea_slot_tank_manufacturer.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_slot_industrial_research"
+		textureFile = "gfx/interface/idea_slot_industrial_research.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_materiel_research"
+		textureFile = "gfx/interface/idea_slot_materiel_research.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_naval_research"
+		textureFile = "gfx/interface/idea_slot_naval_research.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_aircraft_research"
+		textureFile = "gfx/interface/idea_slot_aircraft_research.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_tank_research"
+		textureFile = "gfx/interface/idea_slot_tank_research.dds"
 	}
 
 	spriteType = {
@@ -399,7 +434,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_categories"
 		texturefile = "gfx/interface/idea_categories.dds"
-		noOfFrames = 6
+		noOfFrames = 8
 	}
 
 	spriteType = {
@@ -417,24 +452,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/idea_entry_bg_2.dds"
 		noOfFrames = 2
 	}
-
 	spriteType = {
 		name = "GFX_idea_entry_bg_3"
 		texturefile = "gfx/interface/idea_entry_bg_3.dds"
 		noOfFrames = 2
 	}
-
-	spriteType = {
+	spriteType = {	   
 		name = "GFX_pol_factions_strip"
 		texturefile = "gfx\\interface\\pol_factions_strip.tga"
 		noOfFrames = 4
 	}
-
-	spriteType = {
+    spriteType = {
 		name = "GFX_icon_exiled_governments"
 		texturefile = "gfx/interface/icon_exiled_governments.dds"
 	}
-
 	spriteType = {
 		name = "GFX_icon_collaboration"
 		texturefile = "gfx/interface/occupation/collaboration_icon.dds"
@@ -443,8 +474,7 @@ spriteTypes = {
 		name = "GFX_icon_collaboration_and_exiles"
 		texturefile = "gfx/interface/occupation/collaboration_and_exiles_icon.dds"
 	}
-	
-	spriteType = {
+	spriteType = {   
 		name = "GFX_icon_manage_subjects"
 		texturefile = "gfx/interface/icon_manage_subjects.dds"
 	}
@@ -453,7 +483,6 @@ spriteTypes = {
 		name = "GFX_icon_occupied_territories"
 		texturefile = "gfx/interface/icon_occupied_territories.dds"
 	}
-
 	spriteType = {
 		name = "GFX_ideology_neutrality_group"
 		texturefile = "gfx/interface/ideologies/neutrality_group.dds"
@@ -473,12 +502,10 @@ spriteTypes = {
 		name = "GFX_ideology_democratic_group"
 		texturefile = "gfx/interface/ideologies/democratic_group.dds"
 	}
-
 	spriteType = {
 		name = "GFX_ideology_anarchism"
 		texturefile = "gfx/interface/ideologies/anarchism.dds"
 	}
-	
 	spriteType = {
 		name = "GFX_ideology_unknown"
 		texturefile = "gfx/interface/ideologies/unknown.dds"
@@ -580,7 +607,6 @@ spriteTypes = {
 		name = "GFX_leader_unknown"
 		textureFile = "gfx/leaders/leader_unknown.dds"
 		legacy_lazy_load = no
-		generate_mip_maps = yes
 	}
 	
 	spriteType = {
@@ -601,9 +627,8 @@ spriteTypes = {
 	
 	pieChartType = {
 		name = "GFX_political_chart_small"
-		size = 26
-	}
-
+		size = 26	   		 
+	}	
 	circularProgressBarType = {
 		name = "GFX_textured_pie_chart"
 		textureFile1 = "gfx/interface/ideas/idea_volunteer_only.dds"
@@ -611,8 +636,7 @@ spriteTypes = {
 		size = 30
 		rotation = 90
 		amount = 75
-	}	
-
+	}
 	spriteType = {
 		name = "GFX_pol_goal_progress_frame"
 		textureFile = "gfx//interface//pol_goal_progress_frame.dds"
@@ -652,7 +676,7 @@ spriteTypes = {
 		textureFile = "gfx//interface//occupation_policy_button_selected.dds"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}	
-	
+
 	frameAnimatedSpriteType = {
 		name = "GFX_tutorial_politics_icon_glow"
 		texturefile = "gfx//interface//tutorial//politics_icon_glow.dds"

@@ -1,5 +1,6 @@
 spriteTypes = {	
 
+	
 	spriteType = {
 		name = "GFX_clip"
 		texturefile = "gfx/interface/clip.dds"
@@ -16,7 +17,40 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_trait_bearer_of_artillery"
 		texturefile = "gfx/interface/traits/trait_bearer_of_artillery.dds"
-	}			
+	}	
+	
+	spriteType = {
+		name = "GFX_trait_artillery_leader"
+		texturefile = "gfx/interface/traits/trait_art.tga"
+	}
+	spriteType = {
+		name = "GFX_trait_reservist"
+		texturefile = "gfx/interface/traits/personal/trait_spanish_civil_war.tga"
+	}
+	spriteType = {
+		name = "GFX_trait_Waffen_SS"
+		texturefile = "gfx/interface/traits/personal/trait_Waffen_SS.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_motorized_officer"
+		texturefile = "gfx/interface/traits/personal/trait_motorized_officer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_motorized_leader"
+		texturefile = "gfx/interface/traits/trait_motorized_leader.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_spearhead_specialist"
+		texturefile = "gfx/interface/trait_spearhead_specialist.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_trait_motorized_expert"
+		texturefile = "gfx/interface/traits/trait_motorized_expert.tga"
+	}
 		
 	spriteType = {
 		name = "GFX_trait_naval_invader"
@@ -71,7 +105,8 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_trait_spotter"
 		texturefile = "gfx/interface/traits/trait_spotter.dds"
-	}		
+	}
+    	
 		
 	spriteType = {
 		name = "GFX_trait_superior_tactician"
@@ -86,7 +121,8 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_trait_seawolf"
 		texturefile = "gfx/interface/traits/trait_seawolf.dds"
-	}		
+	}	
+    	
 		
 	spriteType = {
 		name = "GFX_trait_urban_assault_specialist"
@@ -281,11 +317,6 @@ spriteTypes = {
 		name = "GFX_trait_armor_officer"
 		texturefile = "gfx/interface/traits/personal/trait_armor_officer.dds"
 	}
-
-	spriteType = {
-		name = "GFX_trait_engineer_officer"
-		texturefile = "gfx/interface/traits/personal/trait_engineer_officer.dds"
-	}
 	
 	spriteType = {
 		name = "GFX_trait_hidden_sympathies"
@@ -333,6 +364,14 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_trait_kwantung_veto"
+		texturefile = "gfx/interface/traits/personal/trait_japan_kwantung_veto.dds"																	   
+	}	
+	spriteType = {
+        name = "GFX_trait_barbarossa_river"
+        texturefile = "gfx/interface/traits/personal/GFX_trait_barbarossa_river.dds"
+    }	
+	spriteType = {
 		name = "GFX_trait_trait_SPA_nationalist_sympathies"
 		texturefile = "gfx/interface/traits/personal/trait_SPA_nationalist_sympathies.dds"
 	}
@@ -366,47 +405,6 @@ spriteTypes = {
 		name = "GFX_trait_reassigned"
 		texturefile = "gfx/interface/traits/personal/trait_reassigned.dds"
 	}
-	
-	spriteType = {
-		name = "GFX_trait_trait_TUR_kemalist_champion"
-		texturefile = "gfx/interface/traits/personal/trait_tur_kemalist_champion.dds"
-	}
-		
-	spriteType = {
-		name = "GFX_trait_trait_GRE_venezelist_loyalist"
-		texturefile = "gfx/interface/traits/personal/trait_gre_venezelist_loyalist.dds"
-	}
-		
-	spriteType = {
-		name = "GFX_trait_trait_GRE_stauch_monarchist"
-		texturefile = "gfx/interface/traits/personal/trait_gre_stauch_monarchist.dds"
-	}
-		
-	spriteType = {
-		name = "GFX_trait_trait_BUL_zveno_member"
-		texturefile = "gfx/interface/traits/personal/trait_bul_zveno_member.dds"
-	}
-		
-	spriteType = {
-		name = "GFX_trait_trait_BUL_tsar_loyalist"
-		texturefile = "gfx/interface/traits/personal/trait_bul_tsar_loyalist.dds"
-	}
-		
-	spriteType = {
-		name = "GFX_trait_trait_BUL_ff_sympathizer"
-		texturefile = "gfx/interface/traits/personal/trait_bul_ff_sympathizer.dds"
-	}
-			
-	spriteType = {
-		name = "GFX_trait_trait_GRE_marxist_acolyte"
-		texturefile = "gfx/interface/traits/personal/trait_gre_marxist_acolyte.dds"
-	}
-			
-	spriteType = {
-		name = "GFX_trait_trait_GRE_fascist_sympathizer"
-		texturefile = "gfx/interface/traits/personal/trait_gre_fascist_sympathizer.dds"
-	}
-	
 	#######
 	
 	spriteType = {
@@ -490,7 +488,6 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
 	}
 
-
 	#### Leader trait icons ####
 
 	spriteType = {
@@ -568,13 +565,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/traits/trait_winter_expert.dds"
 	}	
 
-	spriteType = {
-		name = "GFX_trait_ETH_hero_of_ethiopia"
-		texturefile = "gfx/interface/traits/personal/trait_war_hero.dds"
-	}
-
-	
-	# Admiral Traits
+    	# Admiral Traits
 	
 	
 	spriteType = {
@@ -585,6 +576,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_trait_admiral_blue_water_expert"
 		texturefile = "gfx/interface/traits/trait_admiral_blue_water_expert.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_trait_admiral_brown_water_expert"
+		texturefile = "gfx/interface/traits/trait_admiral_brown_water_expert.dds"
 	}	
 
 	spriteType = {
@@ -701,14 +697,11 @@ spriteTypes = {
 		name = "GFX_trait_admiral_silent_hunter"
 		texturefile = "gfx/interface/traits/trait_admiral_silent_hunter.dds"
 	}	
-	
-	spriteType = {
+    spriteType = {
 		name = "GFX_trait_admiral_screening_master"
 		texturefile = "gfx/interface/traits/trait_admiral_screening_master.dds"
 	}	
-
-
-	# operatives
+# operatives
 	spriteType = {
 		name = "GFX_trait_operative_commando"
 		texturefile = "gfx/interface/traits/trait_operative_commando.dds"
@@ -770,6 +763,4 @@ spriteTypes = {
 			name = "GFX_trait_operative_demolition_expert"
 			texturefile = "gfx/interface/traits/trait_operative_demolition_expert.dds"
 	}
-
-
 }

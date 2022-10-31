@@ -75,18 +75,16 @@ spriteTypes = {
 		textureFile = "gfx/interface/modifiers_snow_icons.dds"
 		noOfFrames = 2
 	}
-
+	
 	spriteType = {
 		name = "GFX_modifiers_flooded_icon"
 		textureFile = "gfx/interface/modifiers_flooded_icon.dds"
 	}
-
 	spriteType = {
 		name = "GFX_modifiers_unplanned_offensive_icon"
 		textureFile = "gfx/interface/modifiers_unplanned_offensive_icon.dds"
 	}
-
-	spriteType = {
+	spriteType = {	   
 		name = "GFX_impassable_icon"
 		textureFile = "gfx/interface/modifiers_impassable_icon.dds"
 	}	
@@ -162,17 +160,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_buildings_strip"
 		textureFile = "gfx/interface/buildings/building_icon_strip.dds"
-		noOfFrames = 16
+		noOfFrames = 17
 	}
 	
 	spriteType = {
 		name = "GFX_buildings_railway_gun"
 		textureFile = "gfx/interface/buildings/building_railway_gun.dds"
-	}
-
-	spriteType = {
-		name = "GFX_building_fort_icon"
-		textureFile = "gfx/interface/buildings/building_fort_icon.dds"
 	}
 
 	spriteType = {
@@ -202,6 +195,18 @@ spriteTypes = {
 		textureFile = "gfx/interface/building_level_bar.dds"
 		noOfFrames = 4
 	}
+
+	spriteType = {
+		name = "GFX_occupation_policy"
+		textureFile = "gfx/interface/occupation_policy.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_occupation_policy_selected"
+		textureFile = "gfx/interface/occupation_policy_selected.dds"
+		noOfFrames = 4
+	}
+
 
 	# TERRAIN		
 	spriteType = {
@@ -458,6 +463,11 @@ spriteTypes = {
 		textureFile = "gfx/interface/terrains/terrain_shallow_sea_night.dds"
 	}
 
+	spriteType = {
+		name = "GFX_terrain_water_shallow_sea_rain"
+		textureFile = "gfx/interface/terrains/terrain_shallow_sea_rain.dds"
+	}
+
 	# Archipelago	
 	spriteType = {
 		name = "GFX_terrain_water_fjords_day"
@@ -526,14 +536,10 @@ spriteTypes = {
 		name = "GFX_nuke_button"
 		textureFile = "gfx/interface/stateview_nuke_button.dds"
 	}
-
 	spriteType = {
 		name = "GFX_modifiers_sabotaged_resource"
 		textureFile = "gfx/interface/occupation/sabotaged_resource.dds"
 	}
-	
-	### STATE MODIFIERS ###
-	
 	spriteType = {
 		name = "GFX_modifiers_tur_kemalist_loyalties"
 		textureFile = "gfx/interface/state_modifiers/modifiers_tur_kemalist_loyalties.dds"
@@ -633,58 +639,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_modifiers_SOV_capital_of_the_tsars"
 		textureFile = "gfx/interface/state_modifiers/modifiers_SOV_capital_of_the_tsars.dds"
-	}
-	spriteType = {
-		name = "GFX_modifiers_ETH_state_decentralization"
-		textureFile = "gfx/interface/state_modifiers/modifiers_ETH_state_decentralization.dds"
-	}
-	spriteType = {
-		name = "GFX_modifiers_ETH_state_development"
-		textureFile = "gfx/interface/state_modifiers/modifiers_ETH_state_development.dds"
-	}
-	spriteType = {
-		name = "GFX_modifiers_demilitarize_zone"
-		textureFile = "gfx/interface/state_modifiers/modifiers_demilitarize_zone.dds"
-	}
-	spriteType = {
-		name = "GFX_modifiers_ETH_arranged_territorial_expansion"
-		textureFile = "gfx/interface/state_modifiers/modifiers_ETH_arranged_territorial_expansion.dds"
-	}
-	spriteType = {
-		name = "GFX_modifiers_generic_fascist_corporatism"
-		textureFile = "gfx/interface/state_modifiers/modifiers_generic_fascist_corporatism.dds"
-	}
-	spriteType = {
-		name = "GFX_modifiers_generic_railways"
-		textureFile = "gfx/interface/state_modifiers/modifiers_generic_railways.dds"
-	}
-		spriteType = {
-		name = "GFX_modifiers_generic_military_industry"
-		textureFile = "gfx/interface/state_modifiers/modifiers_generic_military_industry.dds"
-	}
-		spriteType = {
-		name = "GFX_modifiers_SWI_attack_from_the_mountains"
-		textureFile = "gfx/interface/state_modifiers/modifiers_SWI_attack_from_the_mountains.dds"
-	}
-		spriteType = {
-		name = "GFX_modifiers_generic_defense"
-		textureFile = "gfx/interface/state_modifiers/modifiers_generic_defense.dds"
-	}
-		spriteType = {
-		name = "GFX_modifiers_SWI_spiritual_resistance"
-		textureFile = "gfx/interface/state_modifiers/modifiers_SWI_spiritual_resistance.dds"
-	}
-		spriteType = {
-		name = "GFX_modifiers_generic_supply"
-		textureFile = "gfx/interface/state_modifiers/modifiers_generic_supply.dds"
-	}
-		spriteType = {
-		name = "GFX_modifiers_ITA_mafia_on_the_rise"
-		textureFile = "gfx/interface/state_modifiers/modifiers_ITA_mafia_on_the_rise.dds"
-	}
-		spriteType = {
-		name = "GFX_modifiers_ITA_established_mafia"
-		textureFile = "gfx/interface/state_modifiers/modifiers_ITA_established_mafia.dds"
 	}
 
 }

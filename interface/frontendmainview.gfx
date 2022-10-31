@@ -1,5 +1,3 @@
-#background sprite is in frontendmainviewbg.gfx
-
 spriteTypes = {
 	textSpriteType = {
 		name = "GFX_main_lobby_button"
@@ -7,7 +5,6 @@ spriteTypes = {
 		noOfFrames = 3
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
-
 	SpriteType = {
 		name = "GFX_main_lobby_button_highlight"
 		textureFile = "gfx/interface/main_lobby_button_transparent.dds"
@@ -32,7 +29,7 @@ spriteTypes = {
 		name = "GFX_main_lobby_divider"
 		textureFile = "gfx/interface/main_lobby_divider.dds"
 	}
-
+	
 	spriteType = {
 		name = "GFX_frontend_game_logo"
 		texturefile = "gfx/interface/logo_game.dds"
@@ -47,12 +44,22 @@ spriteTypes = {
 		name = "GFX_alpha_stamp"
 		texturefile = "gfx/interface/alpha_stamp.dds"
 	}
-
+	spriteType = {
+		name = "GFX_discord_logo"
+		texturefile = "gfx/interface/discord_logo.tga"
+	}
+	spriteType = {
+		name = "GFX_icon_privacy"
+		texturefile = "gfx/interface/icon_privacy.dds"
+	}
+	spriteType = {
+		name = "GFX_oak_logo"
+		texturefile = "gfx/interface/logo_oak.dds"
+	}
 	spriteType = {
 		name = "GFX_socialview_icon"
 		texturefile = "gfx/interface/icons/pi_icon.dds"
 	}
-
 	frameAnimatedSpriteType = {
 		name = "GFX_subscription_widget"
 		textureFile = "gfx/interface/sub/main/subscription_widget.dds"
@@ -68,5 +75,4 @@ spriteTypes = {
 		name = "GFX_subscription_widget_active"
 		textureFile = "gfx/interface/sub/main/subscription_widget_active.dds"
 	}
-
 }
