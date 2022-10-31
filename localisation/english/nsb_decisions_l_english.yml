@@ -81,7 +81,6 @@
  EST_anti_vaps_propaganda_desc:0 "We tow the line when promoting anti-fascism in our nation. Many opposed to fascism are democrats and communists, but perhaps they may be convinced to support the dictatorship in our joint-effort to curb the rise of fascism."
  EST_delay_the_crackdown:0 "Delay the Crackdown"
  EST_delay_the_crackdown_desc:0 "Although we would prefer that the Vaps be dealt with expediently, we cannot risk throwing the country into disarray and the crackdown must be postponed."
- EST_vapsid_takeover:0 "A Vapsid government is already ruling the country"
  LAT_perkonkrust_revolt_category:1 "The Pērkonkrusts Revolt"
  LAT_perkonkrust_revolt_category_desc:1 "Ultranationalists glorifying the Baltic tribes and the Latvian ethnicity, the Pērkonkrusts are an existential threat to the Latvia we have fought hard to create. The Pērkonkrusts are an infection on a wounded national pride and must be eliminated."
  LAT_perkonkrust_uprising:1 "Pērkonkrusts Uprising"
@@ -355,7 +354,7 @@
  decision_only_once_tt:0 "\nThis decision can only be activated once."
  
  decision_cost_CP_50_pp_15:0 "£command_power  §Y50§! £pol_power  §Y15§!"
- decision_cost_CP_50_pp_15_blocked:1 "£command_power  §R50§! £pol_power  §RY15§!"
+ decision_cost_CP_50_pp_15_blocked:0 "£command_power  §Y50§! £pol_power  §Y15§!"
  decision_cost_CP_50_pp_15_tooltip:0 "It costs £command_power  §Y50§! £pol_power  §Y15§! to take the decision"
  
 
@@ -401,7 +400,6 @@
  SOV_pressure_government_effects_tt:0 "This event will pressure §Y[FROM.GetFlag][FROM.GetNameDefCap]§! to join the §Y[ROOT.GetFactionName]§! or to replace their current government by a §Y[ROOT.GetRulingIdeology]§! one. ([FROM.GetNameDefCap] can still refuse)"
  SOV_promote_rallies_effects_tt:0 "This event will promote §Y[GetIdeologyNameWithCaps]§! throughout §Y[FROM.GetFlag][FROM.GetNameDefCap]§! and will §Ydestabilize the country§! should the [FROM.GetAdjective] government oppose the rallies."
  SOV_preparations_for_operation_countenance:0 "Preparations for Operation Countenance"
- SOV_operation_countenance:0 "Operation Countenance"
  SOV_preparations_for_operation_countenance_tt:0 "We will have §Y[?SOV.SOV_operation_countenance_preparation_days] days§! to prepare before the begining of $SOV_operation_countenance$ and the declaration of war on [PER.GetNameDef]. \n$SOV_preparations_for_operation_countenance_mission_tt$\n"
  SOV_preparations_for_operation_countenance_mission_tt:0 "Once §Y$SOV_operation_countenance$§! mission is active, [GetOperationCountenanceTooltip] troops will have §Y[?SOV.SOV_operation_countenance_mission_days] days§! to capitulate [PER.GetNameDef], before they attempt to join another faction and our population start worrying about our military capabilities."
  SOV_operation_countenance_tt_alone:0 "[ROOT.GetAdjective]"
