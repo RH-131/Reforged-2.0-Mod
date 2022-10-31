@@ -1,13 +1,11 @@
 sub_units = {
 	military_police = {
-		abbreviation = "MP"
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
 		ai_priority = 0
 		active = no
 		affects_speed = no
-
 		type = {
 			infantry
 			support
@@ -16,27 +14,34 @@ sub_units = {
 		group = support
 		
 		categories = {
+			
 			category_support_battalions
 			category_army
 		}
 
 	
-		combat_width = 0
+		combat_width = 0.0
 	
 		#Size Definitions
 		max_strength = 1
-		max_organisation = 0	
+		max_organisation = 75
 		default_morale = 0.3
-		manpower = 500
-		training_time = 180
+		manpower = 400
+		training_time = 120
 
 		#Misc Abilities
 		weight = 0.1
-		supply_consumption = 0.02
+		supply_consumption = 0.08
 		can_be_parachuted = yes
 		
+
 		# Important Ability
 		suppression_factor = 0.20
+		
+		defense = -0.25
+		breakthrough = -0.5
+		soft_attack = -0.5
+		hard_attack = -0.5
 
 		essential = {
 			infantry_equipment
@@ -44,9 +49,8 @@ sub_units = {
 		}
 		
 		need = {
-			support_equipment = 10
-			infantry_equipment = 40
+			support_equipment = 15
+			infantry_equipment = 20
 		}
-
 	}
 }

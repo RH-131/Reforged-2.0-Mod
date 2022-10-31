@@ -1,13 +1,10 @@
 sub_units = {
 	field_hospital = {
-		abbreviation = "HOS"
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
-		ai_priority = 0
 		active = no
 		affects_speed = no
-
 		type = {
 			infantry
 			support
@@ -19,36 +16,34 @@ sub_units = {
 			category_support_battalions
 			category_army
 		}
-
 	
-		combat_width = 0
+		combat_width = 0.0
 	
 		#Size Definitions
-		max_strength = 2
+		max_strength = 15
 		max_organisation = 20
-		default_morale = 0.3
-		manpower = 500
+		default_morale = 0.45
+		manpower = 400
 		training_time = 120
 
 		#Misc Abilities
 		weight = 0.1
-		supply_consumption = 0.05
+		supply_consumption = 0.08
 		can_be_parachuted = yes
 
 		# Important Ability
-		casualty_trickleback = 0.20
-		experience_loss_factor = -0.10
-
+		casualty_trickleback = 0.2
+		experience_loss_factor = -0.15
 		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
-
+        
 		essential = {
 			support_equipment
 			motorized_equipment
 		}
 		
 		need = {
-			support_equipment = 30
-			motorized_equipment = 20
+			support_equipment = 25
+			motorized_equipment = 15
 		}
 	}
 }
