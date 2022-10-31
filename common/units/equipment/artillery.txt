@@ -1,19 +1,15 @@
 equipments = {
-
+	# Artillery
 	artillery_equipment = {
-		year = 1934
-
 		is_archetype = yes
-		picture = archetype_artillery_equipment		
 		type = {
 			artillery
-			infantry #adding infantry type
-			#motorized #Removing motorized type
+			infantry
 		}
 		group_by = archetype
 		
 		interface_category = interface_category_land
-
+		
 		#Misc Abilities
 		reliability = 0.8
 
@@ -21,80 +17,290 @@ equipments = {
 		defense = 10
 		breakthrough = 6
 		hardness = 0
-		armor_value = 0
+		armor_value = 0	
 
 		#Offensive Abilities
 		soft_attack = 25
 		hard_attack = 2
 		ap_attack = 5
-		air_attack = 0
+		air_attack = 0		
+		
 
 		#Space taken in convoy
-		lend_lease_cost = 4
+		lend_lease_cost = 4		
 		
-		build_cost_ic = 3.5
-		resources = {
-			tungsten = 1
-			steel = 2
-		}
-	}
-
-	artillery_equipment_1 = {
-		year = 1934
-
-		archetype = artillery_equipment
-		priority = 50
-		visual_level = 0
-	}
-	
-	artillery_equipment_2 = {
-		year = 1939
-
-		archetype = artillery_equipment
-		parent = artillery_equipment_1
-		priority = 50
-		visual_level = 1
-
-		defense = 15
-		breakthrough = 7
-		soft_attack = 30
-		
-		build_cost_ic = 4
-		resources = {
-			tungsten = 1
-			steel = 2
-		}
-	}
-	
-	artillery_equipment_3 = {
-		year = 1942
-
-		archetype = artillery_equipment
-		parent = artillery_equipment_2
-		priority = 50
-		visual_level = 2
-		
-		defense = 18
-		breakthrough = 8
-		soft_attack = 34
-		
-		build_cost_ic = 4.5
+		build_cost_ic = 7		
 		resources = {
 			tungsten = 1
 			steel = 3
 		}
 	}
+	
+	artillery_equipment_1 = { #1936
+		archetype = artillery_equipment
+		
+		priority = 50
+		visual_level = 0
+		
+		#Defensive Abilities
+		defense = 10
+		breakthrough = 6
+		hardness = 0
+		armor_value = 0
+		reliability = 0.8
 
-	# Nebelwerfers!
-	rocket_artillery_equipment = {
-		year = 1940
+		#Offensive Abilities
+		soft_attack = 28
+		hard_attack = 2
+		ap_attack = 5
+		air_attack = 0
+		
+		build_cost_ic = 9
+		resources = {
+			tungsten = 1
+			steel = 3
+		}
+	}
+	artillery_equipment_2 = { #1939
+		archetype = artillery_equipment
+		parent = artillery_equipment_1
+		priority = 50
+		visual_level = 1
 
+		#Misc Abilities
+		reliability = 0.8 
+		
+		#Defensive Abilities
+		defense = 15
+		breakthrough = 7
+		hardness = 0
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 33
+		hard_attack = 3			
+		ap_attack = 18
+		
+		build_cost_ic = 10
+		resources = {
+			tungsten = 1
+			steel = 3
+		}
+	}
+	artillery_equipment_3 = { #1944
+		archetype = artillery_equipment
+		parent = artillery_equipment_2
+		priority = 50
+		visual_level = 2
+		
+		#Misc Abilities
+		reliability = 0.85
+		
+		#Defensive Abilities
+		defense = 18
+		breakthrough = 8
+				
+		hardness = 0
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 38		 
+		hard_attack = 4			
+		ap_attack = 20
+		
+		build_cost_ic = 11
+		resources = {
+			tungsten = 1
+			steel = 3
+		}
+	}
+	#Pack artillery
+	pack_artillery_equipment = {
 		is_archetype = yes
-		picture = archetype_rocket_artillery_equipment		
+		type = {
+			artillery
+			infantry
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Defensive Abilities
+		defense = 10
+		breakthrough = 5
+		hardness = 0
+		armor_value = 0
+		reliability = 0.8
+
+		#Offensive Abilities
+		soft_attack = 24
+		hard_attack = 1
+		ap_attack = 2
+		air_attack = 0
+		
+
+		#Space taken in convoy
+		lend_lease_cost = 3
+		
+		build_cost_ic = 5
+		resources = {
+			tungsten = 1
+			steel = 2
+		}
+	}
+	pack_artillery_equipment_1 = {
+		archetype = pack_artillery_equipment
+		priority = 50
+		visual_level = 0
+	}
+	
+	pack_artillery_equipment_2 = {
+		archetype = pack_artillery_equipment
+		parent = pack_artillery_equipment_1
+		priority = 50
+		visual_level = 0
+		
+		#Defensive Abilities
+		defense = 12
+		breakthrough = 5
+		hardness = 0
+		armor_value = 0
+		reliability = 0.8
+
+		#Offensive Abilities
+		soft_attack = 29
+		hard_attack = 1
+		ap_attack = 4
+		air_attack = 0
+		
+
+		#Space taken in convoy
+		lend_lease_cost = 3
+		
+		build_cost_ic = 7
+	}
+	
+	
+	# Heavy Artillery									
+	heavy_artillery_equipment = {
+		is_archetype = yes
+		type = {
+			artillery
+			infantry
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Defensive Abilities
+		defense = 12
+		breakthrough = 8
+		hardness = 0
+		armor_value = 0
+		reliability = 0.8
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 3
+		ap_attack = 6
+		air_attack = 0
+		
+
+		#Space taken in convoy
+		lend_lease_cost = 5
+		
+		build_cost_ic = 12
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+	
+	# Mid war
+	heavy_artillery_equipment_1 = {
+		archetype = heavy_artillery_equipment
+		priority = 50
+		visual_level = 2
+		
+		#Defensive Abilities
+		defense = 12
+		breakthrough = 8
+		hardness = 0
+		armor_value = 0
+		reliability = 0.8
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 3
+		ap_attack = 10
+		air_attack = 0
+		
+		build_cost_ic = 12.5
+		resources = {
+			tungsten = 1
+			steel = 4
+		}
+	}
+	heavy_artillery_equipment_2 = {
+		archetype = heavy_artillery_equipment
+		parent = heavy_artillery_equipment_1
+		priority = 50
+		visual_level = 2
+		
+		#Misc Abilities
+		reliability = 0.8 
+		
+		#Defensive Abilities
+		defense = 18
+		breakthrough = 10
+		hardness = 0
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 40
+		hard_attack = 5			
+		ap_attack = 20
+		
+		build_cost_ic = 13.5
+		resources = {
+			tungsten = 1
+			steel = 4
+		}
+	}
+	heavy_artillery_equipment_3 = {
+		archetype = heavy_artillery_equipment
+		parent = heavy_artillery_equipment_2
+		priority = 50
+		visual_level = 2
+		
+		#Misc Abilities
+		reliability = 0.85
+		
+		#Defensive Abilities
+		defense = 22
+		breakthrough = 12
+				
+		hardness = 0
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 46		 
+		hard_attack = 7			
+		ap_attack = 25
+		
+		build_cost_ic = 14.5
+		resources = {
+			tungsten = 1
+			steel = 4
+		}
+	}
+
+	# Rocket Artillery  Nebelwerfers!
+	rocket_artillery_equipment = {
+		is_archetype = yes
 		type = { 
 			artillery
-			motorized
-			rocket
+			infantry
 		}
 		group_by = archetype
 		
@@ -104,98 +310,55 @@ equipments = {
 		reliability = 0.8
 
 		#Defensive Abilities
-		defense = 12
-		breakthrough = 9
+		defense = 18
+		breakthrough = 12
 		hardness = 0
 		armor_value = 0
 
 		#Offensive Abilities
-		soft_attack = 30
+		soft_attack = 32
 		hard_attack = 1
 		ap_attack = 2
-		air_attack = 0
+		air_attack = 0.0
 		
-		build_cost_ic = 4
+		lend_lease_cost = 4
+		
+		build_cost_ic = 11
 		resources = {
-			tungsten = 2
-			steel = 1
+			tungsten = 1
+			steel = 2
+			chromium = 1
 		}
 	}
-	
-	rocket_artillery_equipment_1 = {
-		year = 1940
-
+	rocket_artillery_equipment_0 = {
 		archetype = rocket_artillery_equipment
 		priority = 60
 		visual_level = 0
 	}
-	
-	rocket_artillery_equipment_2 = {
-		year = 1943
+	rocket_artillery_equipment_1 = {
+		archetype = rocket_artillery_equipment
+		priority = 60
+		visual_level = 0
+		
+		defense = 18
+		breakthrough = 12
+		soft_attack = 32
+		build_cost_ic = 11
 
+	}
+	rocket_artillery_equipment_2 = {
 		archetype = rocket_artillery_equipment
 		parent = rocket_artillery_equipment_1
 		priority = 60
 		visual_level = 1
 		
-		defense = 15
-		breakthrough = 12
-		soft_attack = 38
+		reliability = 0.85
 		
-		build_cost_ic = 5
-		resources = {
-			tungsten = 2
-			steel = 1
-		}
-	}
-	
-	#Katyusha 
-	motorized_rocket_equipment = {
-		year = 1934
-
-		is_archetype = yes
-		picture = archetype_motorized_rocket_equipment			
-		type = { 
-			artillery
-			motorized
-			rocket
-		}
-		group_by = archetype
-		
-		interface_category = interface_category_land
-		
-		#Misc Abilities
-		reliability = 0.8
-
-		#Defensive Abilities
-		defense = 15
-		breakthrough = 12
-		hardness = 0
-		armor_value = 0
-
-		#Offensive Abilities
-		soft_attack = 36
-		hard_attack = 1
-		ap_attack = 2
-		air_attack = 0
+		defense = 22
+		breakthrough = 16
+		soft_attack = 42
+		ap_attack = 5
 		
 		build_cost_ic = 12
-		resources = {
-			#oil = 1
-			rubber = 1
-			tungsten = 2
-			steel = 1
-		}
-
-		fuel_consumption = 0.12
 	}
-	
-	motorized_rocket_equipment_1 = {
-		year = 1939
-
-		archetype = motorized_rocket_equipment
-		priority = 70
-		visual_level = 0
-	}
-	
 }
