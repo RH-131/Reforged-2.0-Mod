@@ -7,13 +7,50 @@
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
+		infantry = { x = 4 y = 2 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
+		infantry = { x = 4 y = 1 }
 		infantry = { x = 2 y = 0 }
 		infantry = { x = 2 y = 1 }
 		infantry = { x = 2 y = 2 }
+		infantry = { x = 4 y = 0 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
 	}
+	support = {
+		DIV_HQ = { x = 0 y = 0 } 
+		artillery = { x = 0 y = 1 }  # Full howitzer regiment
+		recon = { x = 1 y = 0 }   
+		engineer = { x = 1 y = 1 }  
+		anti_air_company = { x = 0 y = 2 }	  
+	}
+}
+division_template = {
+	name = "Irish Marines"		
+    division_names_group = IRE_MAR_01	
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		marine = { x = 2 y = 0 }
+		marine = { x = 2 y = 1 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+	}
+	support = {
+		DIV_HQ = { x = 0 y = 0 } 
+		pack_artillery = { x = 0 y = 1 }  # Full howitzer regiment
+		recon = { x = 1 y = 0 }   
+		engineer = { x = 1 y = 1 }  
+        anti_air_company = { x = 0 y = 2 }	
+	}	
+	priority = 2
 }
 
 
@@ -24,7 +61,15 @@ units = {
 		location = 11293
 		division_template = "Infantry Division"		# Represents Ireland's four regional commands 
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "Army 2nd High Command"
+		location = 11293
+		division_template = "Infantry Division"		# Represents Ireland's four regional commands 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
 
 	}
 }
@@ -37,7 +82,89 @@ instant_effect = {
 			creator = "IRE"
 		}
 		requested_factories = 1
-		progress = 0.75
+		progress = 0.47
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "IRE"
+		}
+		requested_factories = 1
+		progress = 0.74
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = special_equipment_1
+			creator = "IRE" 
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = radio_equipment_1
+			creator = "IRE"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = horse_equipment_0
+			creator = "IRE" 
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "IRE" 
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = anti_air_equipment_1
+			creator = "IRE" 
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "IRE" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_1936
+			creator = "IRE" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = heavy_fighter_equipment_1936
+			creator = "IRE" 
+		}
+		requested_factories = 1
+		progress = 0.4
 		efficiency = 100
 	}
 }

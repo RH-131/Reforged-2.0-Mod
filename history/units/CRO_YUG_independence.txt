@@ -8,16 +8,34 @@ division_template = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
-
+		
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
+		
+      	infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
 
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+		anti_tank_brigade =  { x = 3 y = 3 }
+		
+		artillery_heavy = { x = 4 y = 0 }
+		anti_air = { x = 4 y = 1 }
 	}
+	
 	support = {
-		engineer = { x = 0 y = 0 }   
+		DIV_HQ = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+		maintenance_company = { x = 1 y = 0 }
+		logistics_company = { x = 1 y = 1 }
+		field_hospital = { x = 1 y = 2 }
 	}
 }
+
 division_template = {
 	name = "Alpine Odred"			# Mountain Brigade	
 
@@ -27,8 +45,33 @@ division_template = {
 		mountaineers = { x = 0 y = 0 }
 		mountaineers = { x = 0 y = 1 }
 		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+		
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 1 y = 3 }
+		
+      	mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		mountaineers = { x = 2 y = 2 }
+
+		pack_artillery_brigade = { x = 3 y = 0 }
+		pack_artillery_brigade = { x = 3 y = 1 }
+		pack_artillery_brigade = { x = 3 y = 2 }
+		anti_tank_brigade =  { x = 3 y = 3 }
+	}
+	
+	support = {
+		DIV_HQ = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+		maintenance_company = { x = 1 y = 0 }
+		logistics_company = { x = 1 y = 1 }
+		field_hospital = { x = 1 y = 2 }
 	}
 }
+
 division_template = {
 	name = "Konjièka Divizija" 			# Cavalry Division
 
@@ -36,22 +79,62 @@ division_template = {
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
-		cavalry = { x = 0 y = 1 }
-		cavalry = { x = 0 y = 2 }
-
-		cavalry = { x = 1 y = 0 }
+       	cavalry = { x = 0 y = 1 }
+       	cavalry = { x = 0 y = 2 }
+       	cavalry = { x = 0 y = 3 }
+		
+        cavalry = { x = 1 y = 0 }
 		cavalry = { x = 1 y = 1 }
 		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+
+		artillery_brigade_mot = { x = 2 y = 0 }
+		artillery_brigade_mot = { x = 2 y = 1 }
 	}
+
+	support = {
+		DIV_HQ = { x = 0 y = 0 }
+	   	recon = { x = 0 y = 1 }
+		logistics_company = { x = 1 y = 0 }
+	}
+	priority = 0
 }
+
 division_template = {
-	name = "Bataljon Bornih Kola" 			# Tank Battalion
+	name = "Lake Tenkovske Divizija" 			# Tank Division
 
 	division_names_group = CRO_ARM_01
 
 	regiments = {
 		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		
+		motorized = { x = 2 y = 0 }
+       	motorized = { x = 2 y = 1 }
+    	armored_car = { x = 2 y = 2 }
+    	motorized = { x = 2 y = 3 }
+
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+		armored_car = { x = 3 y = 2 }
+		motorized = { x = 3 y = 3 }
+		
 	}
+
+	support = {
+		DIV_HQ = { x = 0 y = 0 }
+       	recon = { x = 0 y = 1 }
+       	engineer = { x = 0 y = 2 }
+		maintenance_company = { x = 1 y = 0 }
+		logistics_company = { x = 1 y = 1 }
+	}
+	priority = 2
 }
 
 units = {
@@ -106,6 +189,36 @@ units = {
 		start_experience_factor = 0
 	}
 	division= {	
+		#name = "6. Pesadijska Divizija"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 3592
+		division_template = "Hrvatsko domobranstvo"
+		start_experience_factor = 0
+	}
+	division= {	
+		#name = "7. Pesadijska Divizija"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 3592
+		division_template = "Hrvatsko domobranstvo"
+		start_experience_factor = 0
+	}
+	division= {	
+		#name = "8. Pesadijska Divizija"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 3592
+		division_template = "Hrvatsko domobranstvo"
+		start_experience_factor = 0
+	}
+	division= {	
 		#name = "1. Konjièka Divizija"
 		division_name = {    # New syntax for compatibility with name lists
 			is_name_ordered = yes
@@ -115,5 +228,15 @@ units = {
 		division_template = "Konjièka Divizija"
 		start_experience_factor = 0
 	}
+	division= {	
+		#name = "1. Bornih Kola Divizija "
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11581
+		division_template = "Divizija Bornih Kola"
+		start_experience_factor = 0
+	}	
 }
 

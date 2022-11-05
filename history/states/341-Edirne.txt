@@ -4,7 +4,8 @@ state= {
 	name="STATE_341"
 	manpower = 363947
 	resources={
-
+		steel = 10
+		chromium = 45
 	}
 	
 	state_category = town
@@ -15,8 +16,9 @@ state= {
 			11842 5
 		}
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
+			infrastructure = 5
+			industrial_complex = 5
+			arms_factory = 7
 			849 = {
 				naval_base = 3
 				coastal_bunker = 2
@@ -24,16 +26,6 @@ state= {
 		}
 		add_core_of = TUR
 
-		1936.1.1.1 = { 
-			if = {
-				limit = { has_dlc = "Battle for the Bosporus" }
-				set_demilitarized_zone = yes
-			}
-		}
-
-		1936.11.9.1 = {
-			set_demilitarized_zone = no
-		}
 	}
 	provinces=
 	{

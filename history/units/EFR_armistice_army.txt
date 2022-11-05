@@ -1,0 +1,69 @@
+﻿### OOB ###
+division_template = {
+	name = "Division d'Infanterie Vichy"		# Infantry Division
+division_names_group = FRA_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+	}
+	support = {  
+		DIV_HQ = { x = 0 y = 0 } 
+		artillery = { x = 0 y = 1 }  # Full howitzer regiment
+		recon = { x = 1 y = 0 }   
+		engineer = { x = 1 y = 1 }  
+		anti_air_company = { x = 0 y = 2 } 
+	}
+}
+
+units = {
+	##### armistice army #####
+
+	division = {
+		name = "1. Division Militaire"
+		location = 641  # Bourg En Bresse
+		division_template = "Division d'Infanterie Vichy"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "2. Division Militaire"
+		location = 641  # Lyon
+		division_template = "Division d'Infanterie Vichy"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "3. Division Militaire"
+		location = 641  # Marseille
+		division_template = "Division d'Infanterie Vichy"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "FRA" } }
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "4. Division Militaire"
+		location = 641  # Marseille
+		division_template = "Division d'Infanterie Vichy"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "FRA" } }
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "5. Division Militaire"
+		location = 641  # Marseille
+		division_template = "Division d'Infanterie Vichy"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "FRA" } }
+		start_experience_factor = 0.5
+	}
+}

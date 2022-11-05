@@ -1,0 +1,40 @@
+﻿units= {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Main Fleet"			
+		naval_base = 11805 # Lisbon
+		task_force = {				
+			name = "The Invincible Aegir Fleet"			
+			location = 11805 # Lisbon	
+			# Heavy Group
+		    ship = { name = "NRP Pedro Nunes" pride_of_the_fleet = yes definition = heavy_cruiser start_experience_factor = 0.2 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = POR version_name = "Pedro Nunes Class" } } }
+            # Medium Group
+			ship = { name = "NRP Vasco da Gama" definition = light_cruiser start_experience_factor = 0.2 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = POR version_name = "Atlântico Class" } } }
+			ship = { name = "NRP Atlântico" definition = light_cruiser start_experience_factor = 0.2 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = POR version_name = "Atlântico Class" } } }
+			# Light Group
+			ship = { name = "NRP Vouga" definition = destroyer start_experience_factor = 0.2 equipment = { ship_hull_light_2 = { amount = 1 owner = POR version_name = "Vouga Class" } } }	
+			ship = { name = "NRP Tejo" definition = destroyer start_experience_factor = 0.2 equipment = { ship_hull_light_2 = { amount = 1 owner = POR version_name = "Vouga Class" } } }	
+			ship = { name = "NRP Lima" definition = destroyer start_experience_factor = 0.2 equipment = { ship_hull_light_2 = { amount = 1 owner = POR version_name = "Vouga Class" } } }				
+			ship = { name = "NRP Douro" definition = destroyer start_experience_factor = 0.2 equipment = { ship_hull_light_2 = { amount = 1 owner = POR version_name = "Vouga Class" } } }
+		}				
+	}
+	fleet = {
+		name = "Raiding Fleet"			
+		naval_base = 11805 # Lisbon
+		task_force = {				
+			name = "Raid Group"			
+			location = 11805 # Lisbon
+            # Submarine Group  1
+			ship = { name = "NRP Delfim" definition = submarine start_experience_factor = 0.2 equipment = { ship_hull_submarine_2 = { amount = 1 owner = POR version_name = "Delfim Class" } } }
+			ship = { name = "NRP Espadarte" definition = submarine start_experience_factor = 0.2 equipment = { ship_hull_submarine_2 = { amount = 1 owner = POR version_name = "Delfim Class" } } }			
+			ship = { name = "NRP Afonso de Albuquerque" definition = submarine start_experience_factor = 0.2 equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = POR version_name = "Afonso de Albuquerque Class" } } }							
+        }
+    }	
+} 
+
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+}
+

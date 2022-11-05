@@ -1,14 +1,21 @@
 state={
 	id=714
 	name="STATE_714"
-
+	
+	resources={
+		oil=15 # was: 1
+		steel=15
+		aluminium=15 # was: 1
+	}
+	
 	history={
 		owner = MAN
 		add_core_of = CHI
 		add_core_of = MAN
 		add_core_of = PRC
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
+			industrial_complex = 2
 
 		}
 

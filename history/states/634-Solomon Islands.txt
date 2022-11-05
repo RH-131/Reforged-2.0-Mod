@@ -1,12 +1,17 @@
 state={
 	id=634
 	name="STATE_634"
-
+	
+	resources={
+		rubber=5
+	}
+	
 	history={
+		set_state_flag = AST_control_wall
 		owner = AST
-		add_core_of = SOL
+		add_core_of = NGA
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			1269 = {
 				naval_base = 2
 

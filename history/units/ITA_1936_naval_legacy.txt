@@ -1,4 +1,6 @@
-﻿##### NAVAL UNITS #####
+﻿
+		
+##### NAVAL UNITS #####
 units = {
 	### ITALY ###
 	fleet = {
@@ -190,14 +192,15 @@ units = {
 			ship = { name = "RCT Antonio Mosto" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }
 			ship = { name = "RCT Ippolito Nievo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }
 			ship = { name = "RCT Fratelli Cairoli" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }
-			# Aquila-Class DDs (Esploratori Leggeri) (Transferred to Spain in 1937)
-			ship = { name = "RCT Aquila" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-			ship = { name = "RCT Falco" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
 		}
 
 		task_force = {
 			name = "VII Gruppo Sommergibili"
 			location = 6891 # La Maddalena, Sardinia
+								  
+																																				 
+																																					
+	
 
 			# LXXI Squadriglia Sommergibili
 			ship = { name = "RSmg Medusa" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
@@ -307,11 +310,11 @@ units = {
 
 	fleet = {
 		name = "Comando Navale Mar Rosso"
-		naval_base = 12766 # Massawa, Eritrea
+		naval_base = 4159 # Messina, Sicily
 
 		task_force = {
 			name = "Squadra del Mar Rosso"
-			location = 12766 # Massawa, Eritrea
+			location = 4159 # Messina, Sicily
 
 			# III Squadriglia Cacciatorpediniere
 			ship = { name = "RCT Francesco Nullo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }
@@ -329,7 +332,7 @@ units = {
 
 		task_force = {
 			name = "VIII Gruppo Sommergibili"
-			location = 12766 # Massawa, Eritrea
+			location = 4159 # Messina, Sicily
 
 			# LXXXI Squadriglia Sommergibili
 			ship = { name = "RSmg Luigi Settembrini" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
@@ -341,11 +344,15 @@ units = {
 }
 #######################
 
+
+						 
 ##### STARTING PRODUCTION #####
+						 
 instant_effect = {
 	if = {
 		limit = { is_tutorial = no }
 
+				   
 		# BB: "RN Conte di Cavour" (Refitted & Recommissioned: 1-Jun, 1937)
 		add_equipment_production = {
 			equipment = {
@@ -417,4 +424,4 @@ instant_effect = {
 		}
 	}
 }
-###############################
+###############################				 

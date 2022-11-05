@@ -1,29 +1,47 @@
 ﻿division_template = {
+	name = "Sanjiao Jun"			# Represents three-division infantry corps (generally poorly-equipped militias)
+	division_names_group = CHI_INF_01
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 2 y = 0 }
+	}
+	support = {
+		DIV_HQ = { x = 0 y = 0 } 
+		engineer = { x = 0 y = 1 } 
+	}
+}
+division_template = {
 	name = "Juntuán"				# Represents: German-trained divisions (better equipment than rest),
 	division_names_group = CHI_INF_01
 									# 	as well as two-division infantry corps (generally poorly-equipped militias),
 	regiments = {					#	and local militia groups.
 		infantry = { x = 0 y = 0 }	# Note: Chinese divisions were brigade-sized compared other nations' armies
 		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
-	}
-
-	priority = 0 # garrison
-}
-division_template = {
-	name = "Sanjiao Jun"			# Represents three-division infantry corps (generally poorly-equipped militias)
-	division_names_group = CHI_INF_01
-
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		
 		infantry = { x = 2 y = 0 }
 		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+				
 	}
+	support = {
+		DIV_HQ = { x = 0 y = 0 } 
+		pack_artillery = { x = 0 y = 1 }  
+		recon = { x = 1 y = 0 }   
+		engineer = { x = 1 y = 1 } 
+	}
+	priority = 2 
 }
+
 division_template = {
 	name = "Qibing Jun"		# Represents two-division cavalry corps (generally poorly-equipped)
 	division_names_group = CHI_CAV_01
@@ -31,6 +49,7 @@ division_template = {
 	regiments = {
 		cavalry = { x = 0 y = 0 }
 		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
 		cavalry = { x = 1 y = 0 }
 		cavalry = { x = 1 y = 1 }
 	}
@@ -65,6 +84,12 @@ units = {
 		division_template = "Sanjiao Jun"
 		start_experience_factor = 0.2
 	}
+	division = {
+		name = "291 Bubing Shi"
+		location = 4140
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
 
 	##### First War Area (CO: Cheng Qian) #####
 	division = { # "4 Qibing Jun"
@@ -75,7 +100,7 @@ units = {
 		location = 4925
 		division_template = "Qibing Jun"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.9
+		start_equipment_factor = 0.7
 
 	}
 	### 2nd Army Group (CO: Liu Shi) ###
@@ -85,8 +110,359 @@ units = {
 			name_order = 3
 		}
 		location = 12408
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "4 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 12408
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "5 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 12408
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "6 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 12408
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "7 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 12408
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "8 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 12408
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "9 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 12408
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "10 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 12408
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "11 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 12408
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "12 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 12408
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "13 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 12408
 		division_template = "Juntuán"
-		start_experience_factor = 0.1
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "14 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "15 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "16 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "17 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "18 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "19 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "20 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "21 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 21
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "22 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "23 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 23
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "24 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 24
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "25 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = { # "26 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 26
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "27 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "28 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 28
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "29 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 29
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "30 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 30
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "31 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 31
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "32 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 32
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "33 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 33
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "34 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 34
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "35 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 35
+		}
+		location = 12408
+		division_template = "Juntuán"
+		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
 
 	}
@@ -129,7 +505,7 @@ units = {
 		location = 8072
 		division_template = "Juntuán"
 		start_equipment_factor = 0.7
-		start_experience_factor = 0.1
+		start_experience_factor = 0.5
 	}
 	## 14th Army ##
 	division = {
@@ -148,7 +524,7 @@ units = {
 		}
 		location = 1069
 		division_template = "Sanjiao Jun"
-		start_experience_factor = 0.1
+		start_experience_factor = 0.5
 		start_equipment_factor = 0.7
 	}
 	division = { # "1 Qibing Jun"
@@ -170,7 +546,6 @@ units = {
 		division_template = "Qibing Jun"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.7
-
 	}
 	### 7th Army Group (CO: Fu Zuoyi) ###
 	division = { # "4 Bubing Shi"
@@ -250,43 +625,43 @@ units = {
 		location = 7027
 		division_template = "Sanjiao Jun"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.9
+		start_equipment_factor = 0.7
 
 	}
 	division = {
 		name = "1 Fujian Jingbei"
 		location = 9974
-		division_template = "Juntuán"		# Garrison unit (poor equipment and training)
-		start_equipment_factor = 0.9
+		division_template = "Sanjiao Jun"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.7
 		start_experience_factor = 0.1
 	}
 	division = {
 		name = "2 Fujian Jingbei"
 		location = 4169
-		division_template = "Juntuán"		# Garrison unit (poor equipment and training)
-		start_equipment_factor = 0.9
+		division_template = "Sanjiao Jun"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.7
 		start_experience_factor = 0.1
 	}
 	division = {
 		name = "3 Fujian Jingbei"
 		location = 4196
-		division_template = "Juntuán"		# Garrison unit (poor equipment and training)
-		start_equipment_factor = 0.8
+		division_template = "Sanjiao Jun"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.7
 		start_experience_factor = 0.1
 	}
 	## Shanghai Defense Force ##
 	division = {
 		name = "Shanghai Jingbei"
 		location = 7014
-		division_template = "Juntuán"		# Garrison unit (poor equipment and training)
-		start_equipment_factor = 0.9
+		division_template = "Sanjiao Jun"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.7
 		start_experience_factor = 0.1
 	}
 	division = {
 		name = "Lu zhan Shi"
 		location = 7014
-		division_template = "Juntuán"		# Garrison unit (poor equipment and training)
-		start_equipment_factor = 0.8
+		division_template = "Sanjiao Jun"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.7
 		start_experience_factor = 0.1
 	}
 	## 8th Army (CO: Zhang Fakui) ##
@@ -315,8 +690,8 @@ units = {
 	division = {
 		name = "8 Lujun Shi"
 		location = 4925
-		division_template = "Juntuán"
-		start_equipment_factor = 0.8
+		division_template = "Sanjiao Jun"
+		start_equipment_factor = 0.7
 		start_experience_factor = 0.1
 	}
 	## 9th Army (CO: Zhang Zhizhong) ##
@@ -326,7 +701,7 @@ units = {
 			name_order = 436
 		}
 		location = 7191
-		division_template = "Sanjiao Jun"		# German-trained division (frontline infantry, better equipment and experience)
+		division_template = "Sanjiao Jun"	# German-trained division (frontline infantry, better equipment and experience)
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 
@@ -357,7 +732,7 @@ units = {
 	division = {
 		name = "10 Lujun Shi"
 		location = 10076
-		division_template = "Juntuán"
+		division_template = "Sanjiao Jun"
 		start_equipment_factor = 0.7
 		start_experience_factor = 0.1
 	}
@@ -382,61 +757,6 @@ units = {
 		division_template = "Sanjiao Jun"		# German-trained division (frontline infantry, better equipment and experience)
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
-
-	}
-	division = { # "4 Juntuán"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 4
-		}
-		location = 12076
-		division_template = "Juntuán"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.8
-
-	}
-	division = { # "18 Juntuán"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 18
-		}
-		location = 12076
-		division_template = "Juntuán"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.8
-
-	}
-	division = { # "39 Juntuán"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 39
-		}
-		location = 4042
-		division_template = "Juntuán"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.8
-
-	}
-	division = { # "54 Juntuán"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 54
-		}
-		location = 4042
-		division_template = "Juntuán"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.9
-
-	}
-	division = { # "74 Juntuán"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 74
-		}
-		location = 4042
-		division_template = "Juntuán"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.8
 
 	}
 	### 19th Army Group (CO: Xu Yue) ###
@@ -468,7 +788,7 @@ units = {
 			name_order = 25
 		}
 		location = 1096
-		division_template = "Juntuán"
+		division_template = "Sanjiao Jun"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.7
 
@@ -478,44 +798,19 @@ units = {
 	division = {
 		name = "Wuhan Jingbei"
 		location = 4619
-		division_template = "Juntuán"		# Garrison unit (poor equipment and training)
-		start_equipment_factor = 0.8
+		division_template = "Sanjiao Jun"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.7
 		start_experience_factor = 0.1
 	}
 	### River Defense Force (CO: ) ###
 	division = {
 		name = "11 Lujun Shi"
 		location = 1036
-		division_template = "Juntuán"
-		start_equipment_factor = 0.8
-		start_experience_factor = 0.1
-	}
-	division = {
-		name = "12 Lujun Shi"
-		location = 7637
-		division_template = "Juntuán"
+		division_template = "Sanjiao Jun"
 		start_equipment_factor = 0.7
 		start_experience_factor = 0.1
-	}
-	division = { # "43 Juntuán"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 43
-		}
-		location = 9959
-		division_template = "Juntuán"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
-
 	}
 	### Capital Garrison Force (CO: ) ###
-	division = {
-		name = "2 Lujun Shi"
-		location = 11913
-		division_template = "Juntuán"
-		start_equipment_factor = 0.8
-		start_experience_factor = 0.1
-	}
 	division = { # "Peixun Shi"
 		division_name = {
 			is_name_ordered = yes
@@ -530,28 +825,14 @@ units = {
 	division = {
 		name = "1 Nanking Jingbei"
 		location = 11913
-		division_template = "Juntuán"		# Garrison unit (poor equipment and training)
+		division_template = "Sanjiao Jun"		# Garrison unit (poor equipment and training)
 		start_equipment_factor = 0.7
 		start_experience_factor = 0.1
 	}
 	division = {
 		name = "2 Nanking Jingbei"
 		location = 11913
-		division_template = "Juntuán"		# Garrison unit (poor equipment and training)
-		start_equipment_factor = 0.7
-		start_experience_factor = 0.1
-	}
-	division = {
-		name = "3 Nanking Jingbei"
-		location = 11913
-		division_template = "Juntuán"		# Garrison unit (poor equipment and training)
-		start_equipment_factor = 0.7
-		start_experience_factor = 0.1
-	}
-	division = {
-		name = "4 Nanking Jingbei"
-		location = 11913
-		division_template = "Juntuán"		# Garrison unit (poor equipment and training)
+		division_template = "Sanjiao Jun"	# Garrison unit (poor equipment and training)
 		start_equipment_factor = 0.7
 		start_experience_factor = 0.1
 	}
@@ -571,8 +852,8 @@ units = {
 	division = {
 		name = "Qingdao Jingbei"
 		location = 10000
-		division_template = "Juntuán"		# Garrison unit (poor equipment and training)
-		start_equipment_factor = 0.9
+		division_template = "Sanjiao Jun"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.7
 		start_experience_factor = 0.1
 	}
 	## 3rd Army (CO: Han Fuqu) ##
@@ -582,9 +863,9 @@ units = {
 			name_order = 12
 		}
 		location = 4205
-		division_template = "Juntuán"
+		division_template = "Sanjiao Jun"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.8
+		start_equipment_factor = 0.7
 
 	}
 	division = { # "40 Juntuán"
@@ -593,24 +874,106 @@ units = {
 			name_order = 40
 		}
 		location = 4205
-		division_template = "Juntuán"
+		division_template = "Sanjiao Jun"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.7
 
+	}
+	
+}
+
+
+### Air Forces ###
+air_wings = {
+
+	# 1134
+	608 = { 
+		fighter_equipment_1934 = { owner = "CHI" amount = 50 }	
+	}
+	
+	613 = {
+		fighter_equipment_1934 = { owner = "CHI" amount = 100 } 		
+		tac_bomber_equipment_1934 =  { owner = "CHI" amount = 50 }	
 	}
 }
 
 
 
-
-instant_effect = {
+instant_effect = { #player
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_0
 			creator = "CHI"
 		}
+		requested_factories = 14
+		progress = 0.55
+		efficiency = 15
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 15
+	}
+	add_equipment_production = {
+		equipment = {
+			type = radio_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 15
+	}
+	add_equipment_production = {
+		equipment = {
+			type = horse_equipment_0
+			creator = "CHI"
+		}
 		requested_factories = 2
 		progress = 0.55
-		efficiency = 100
-	}	
+		efficiency = 15
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 15
+	}
+	add_equipment_production = {
+		equipment = {
+			type = pack_artillery_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 15
+	}
+	
+	
+	
+	############################# equipment stockpile
+
+	add_equipment_to_stockpile = {
+		type = horse_equipment_0
+			amount = 2000
+			producer = CHI
+		}	
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_1
+			amount = 1000
+			producer = GER
+		}
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_1
+			amount = 3000
+			producer = CHI
+		}	
+	
 }

@@ -5,6 +5,7 @@
 	regiments = {
 		infantry = { x = 0 y = 0 }	# Note: Chinese divisions were brigade-sized compared other nations' armies
 		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 	}
@@ -15,12 +16,18 @@ division_template = {
 	division_names_group = PRC_GAR_01
 
 	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 0 y = 3 }
+		
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+		
+		light_infantry = { x = 2 y = 0 }
+		light_infantry = { x = 2 y = 1 }
+		light_infantry = { x = 2 y = 2 }
 	}
 	priority = 1
 }
@@ -106,14 +113,67 @@ units = {
 }
 
 ##### STARTING PRODUCTION #####
-instant_effect = {
+instant_effect = { #player
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_0
 			creator = "PRC"
 		}
-		requested_factories = 2
+		requested_factories = 4
 		progress = 0.33
-		efficiency = 100
+		efficiency = 15
 	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = horse_equipment_0
+			creator = "PRC"
+		}
+		requested_factories = 1
+		progress = 0.33
+		efficiency = 15
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "PRC"
+		}
+		requested_factories = 1
+		progress = 0.33
+		efficiency = 15
+	}
+	add_equipment_production = {
+		equipment = {
+			type = special_equipment_1
+			creator = "PRC"
+		}
+		requested_factories = 1
+		progress = 0.33
+		efficiency = 15
+	}
+	add_equipment_production = {
+		equipment = {
+			type = pack_artillery_equipment_1
+			creator = "PRC"
+		}
+		requested_factories = 1
+		progress = 0.33
+		efficiency = 15
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_0
+			amount = 1800
+			producer = SOV
+		}
+	
+	add_equipment_to_stockpile = {
+		type = horse_equipment_0
+			amount = 600
+			producer = PRC
+		}
+	add_equipment_to_stockpile = {
+		type = special_equipment_1
+			amount = 400
+			producer = PRC
+		}
 }

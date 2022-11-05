@@ -5,14 +5,22 @@ state={
 	manpower = 2161650
 	
 	state_category = city
-
+	
+	resources={
+		aluminium=10 # was: 1
+		steel=20
+		tungsten=10
+		chromium=10 # was: 1
+		oil=30
+	}
+	
 	history={
 		owner = SOV
 		victory_points = {
 			1821 5
 		}
 		buildings = {
-			infrastructure = 3 #was: 6
+			infrastructure = 6 #was: 6
 			arms_factory = 2
 			industrial_complex = 1
 			air_base = 1

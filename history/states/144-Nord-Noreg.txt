@@ -7,14 +7,16 @@ state={
 	state_category = rural
 	
 	resources={
-		steel=9 # was: 12
-		tungsten = 15 # was: 20
+		steel=9 
+		tungsten = 15 
 	}
 
 	history={
 		owner = NOR
+		set_state_flag = atlantikwall_state
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
+			industrial_complex = 1
 			air_base = 1
 			192 = {
 				naval_base = 3

@@ -2,7 +2,7 @@
 state = {
 	id = 256
 	name = "STATE_256"
-	manpower = 786030 #Was 1572061 but was divided by 2 due to the state being split in half
+	manpower = 1572061 #Was 1572061 but was divided by 2 due to the state being split in half
 	
 	state_category = town
 
@@ -12,7 +12,8 @@ state = {
 		}
 		owner = SOV
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
+			industrial_complex = 3
 		}
 		add_core_of = SOV
 		add_core_of = CHU

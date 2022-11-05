@@ -2,17 +2,19 @@
 state = {
 	id = 156
 	name = "STATE_156"
-	manpower = 1772000 # was 2966315 before Puglia was added
+	manpower = 2966315 # was 2966315 before Puglia was added
 	
 	state_category = town
 	history = {
 		owner = ITA
+		set_state_flag = GER_atlantikwall
 		victory_points = {
 			9990 1 
 		}
 		buildings = {
-			infrastructure = 2 #was: 5
-			dockyard = 1
+			infrastructure = 5
+			arms_factory = 2
+			dockyard = 4
 			fuel_silo = 1
 			9990 = {
 				naval_base = 2

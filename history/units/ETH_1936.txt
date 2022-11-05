@@ -1,7 +1,8 @@
-﻿division_template = {
-	name = "Kebur Zabagna"				# Imperial Bodyguard
-	division_names_group = ETH_INF_01
+﻿
 
+division_template = {
+	name = "Kebur Zabagna"				# Imperial Bodyguard of roughly 9 batallions - so on the high end, 7200 men - this division is 8100
+		division_names_group = ETH_INF_01
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -11,27 +12,36 @@
 		infantry = { x = 1 y = 2 }
 		infantry = { x = 2 y = 0 }
 		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
+		pack_artillery_brigade = { x = 2 y = 2 }
+		pack_artillery_brigade = { x = 2 y = 3 }
 	}
-	priority = 2
+	support = {
+		DIV_HQ = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	    engineer = { x = 1 y = 0 }
+		pack_artillery = { x = 1 y = 1 }
+	}
 }
-
 division_template = {
-	name = "Infantry Division"		
-	division_names_group = ETH_INF_01
-
-	# Note: Represents both regular infantry and militia units
+	name = "Regulars Sefari" #Modernized provincial armed forces of about 6500 per division	
+		division_names_group = ETH_INF_01
 	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+	support = {
+		DIV_HQ = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	    engineer = { x = 1 y = 0 }
+		pack_artillery = { x = 1 y = 1 }
 	}
 }
 division_template = {
-	name = "Mountain Division"		
-	division_names_group = ETH_MNT_01
-
+	name = "Mountain Sefari"	#Non-modernized mountaineer division of about 10000
+	division_names_group = ETH_INF_01
 	regiments = {
 		mountaineers = { x = 0 y = 0 }
 		mountaineers = { x = 0 y = 1 }
@@ -39,201 +49,134 @@ division_template = {
 		mountaineers = { x = 1 y = 0 }
 		mountaineers = { x = 1 y = 1 }
 		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		pack_artillery_brigade = { x = 2 y = 2 }
+		pack_artillery_brigade = { x = 2 y = 3 }
+	}
+	support = {
+		DIV_HQ = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	    engineer = { x = 1 y = 0 }
+		pack_artillery = { x = 1 y = 1 }	
 	}
 }
-
-
 units = {
 	##### Imperial Army #####
-	division = { # "Kebur Zabagna"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
+	division = {
+		name = "Kebur Zabagna 1"
 		location = 5010
-		division_template = "Kebur Zabagna"			# Elite emperor's guard
-		start_experience_factor = 0.2
+		division_template = "Kebur Zabagna"			
+		start_experience_factor = 0.6
 	}
-
-	### Northern Front ###
-	## Gojjam Provincial Armed Forces #
-	#division = { # "1st Gojjam Levies"
-	#	division_name = {
-	#		is_name_ordered = yes
-	#		name_order = 2
-	#	}
-	#	location = 4954
-	#	division_template = "Infantry Division"		# Militia
-	#	start_experience_factor = 0.1
-	#	start_equipment_factor = 0.5
-	#}
-	#division = { # "2nd Gojjam Levies"
-	#	division_name = {
-	#		is_name_ordered = yes
-	#		name_order = 3
-	#	}
-	#	location = 4954
-	#	division_template = "Infantry Division"		# Militia
-	#	start_equipment_factor = 0.5
-	#	start_experience_factor = 0.1
-	#}
-	# Wolqayt, Semien and Welega-Ardjo Provincial Armed Forces #
-	division = { # "Wolqayt-Semien Sefari"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 4
-		}
-		location = 13238
-		division_template = "Mountain Division"		# Regular Infantry
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
-
+	division = {
+		name = "Kebur Zabagna 2"
+		location = 5010
+		division_template = "Kebur Zabagna"			
+		start_experience_factor = 0.6
 	}
-	division = { # "Welega-Ardjo Sefari"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 5
-		}
-		location = 2072
-		division_template = "Infantry Division"		# Regular Infantry
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
-
+	division = {
+		name = "Kebur Zabagna 3"
+		location = 5010
+		division_template = "Kebur Zabagna"			
+		start_experience_factor = 0.6
 	}
-	# Tigray Provincial Armed Forces #
-	division = { # "1st Tigray Sefari"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 6
-		}
-		location = 13237
-		division_template = "Infantry Division"		# Militia
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
+	division = {
+		name = "Kebur Zabagna 4"
+		location = 5010
+		division_template = "Kebur Zabagna"			
+		start_experience_factor = 0.6
 	}
-	division = { # "2nd Tigray Sefari"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 7
-		}
-		location = 1984
-		division_template = "Infantry Division"		# Militia
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
+	division = {
+		name = "Mountain Sefari 1"
+		location = 5010
+		division_template = "Mountain Sefari"			
+		start_experience_factor = 0.6
 	}
-	# Wag and Begemder Provincial Armed Forces #
-	division = { # "Wag Sefari"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 10
-		}
-		location = 2072
-		division_template = "Infantry Division"		# Militia
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
+	division = {
+		name = "Mountain Sefari 2"
+		location = 5010
+		division_template = "Mountain Sefari"			
+		start_experience_factor = 0.6
 	}
-	division = { # "1st Begemder Sefari"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 8
-		}
-		location = 7944
-		division_template = "Infantry Division"		# Militia
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
+	division = {
+		name = "Regulars Sefari 1"
+		location = 5010
+		division_template = "Regulars Sefari"			
+		start_experience_factor = 0.4
 	}
-	division = { # "2nd Begemder Sefari"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 9
-		}
-		location = 7944
-		division_template = "Infantry Division"		# Militia
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
+	division = {
+		name = "Regulars Sefari 2"
+		location = 5010
+		division_template = "Regulars Sefari"			
+		start_experience_factor = 0.4
 	}
-
-	### Southern Front ###
-	division = { # "Ogaden Sefari"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 11
-		}
-		location = 12812
-		division_template = "Infantry Division"		# Militia
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
+	division = {
+		name = "Regulars Sefari 3"
+		location = 5010
+		division_template = "Regulars Sefari"			
+		start_experience_factor = 0.4
 	}
-	division = { # "Arusi Sefari"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 12
-		}
-		location = 8062
-		division_template = "Infantry Division"		# Militia
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
+	division = {
+		name = "Regulars Sefari 4"
+		location = 5010
+		division_template = "Regulars Sefari"			
+		start_experience_factor = 0.4
 	}
-	# Willubabor and Sidamo Provincial Armed Forces #
-	division = { # "Illubabor Sefari"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 13
-		}
-		location = 8062
-		division_template = "Infantry Division"		# Militia
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
+	division = {
+		name = "Regulars Sefari 5"
+		location = 5010
+		division_template = "Regulars Sefari"			
+		start_experience_factor = 0.4
 	}
-	division = { # "1st Sidamo Sefari"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 14
-		}
-		location = 4995
-		division_template = "Infantry Division"		# Regular Infantry
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
-
-	}
-	division = { # "2nd Sidamo Sefari"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 15
-		}
-		location = 4995
-		division_template = "Infantry Division"		# Regular Infantry
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
-
+	division = {
+		name = "Regulars Sefari 6"
+		location = 5010
+		division_template = "Regulars Sefari"			
+		start_experience_factor = 0.4
 	}
 }
-
-
-### No air forces (small handful of various aircraft in 1935) ###
 
 #########################
 ## STARTING PRODUCTION ##
 #########################
 
 instant_effect = {
-
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_0
+			type = infantry_equipment_1
 			creator = "ETH"
 		}
-		requested_factories = 2
-		progress = 0.1
-		efficiency = 50
+		requested_factories = 1
+		progress = 0.27
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "ETH"
+		}
+		requested_factories = 1
+		progress = 0.27
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = radio_equipment_1
+			creator = "ETH"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = pack_artillery_equipment_1
+			creator = "ETH" 
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
 	}
 
 }

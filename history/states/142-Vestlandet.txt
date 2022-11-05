@@ -7,25 +7,27 @@ state={
 	state_category = town
 	
 	resources={
-		chromium=1 # was: 2
-		aluminium=15 # was: 22
+		chromium=1
+		aluminium=15
 	}
 
 	history={
 		owner = NOR
+		set_state_flag = atlantikwall_state
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 5
 			industrial_complex = 2
+			arms_factory = 1
 			air_base = 1
 			9296 = {
 				naval_base = 3
 				coastal_bunker = 1
 			}
-			53 = {
+			137 = {
 				naval_base = 1
 				coastal_bunker = 1
 			}
-			122 = {
+			6145 = {
 				naval_base = 3
 				coastal_bunker = 2
 			}
@@ -34,10 +36,10 @@ state={
 			9296 1
 		}
 		victory_points = {
-			53 1
+			137 1
 		}
 		victory_points = {
-			122 3
+			6145 3
 		}
 		add_core_of = NOR
 	}

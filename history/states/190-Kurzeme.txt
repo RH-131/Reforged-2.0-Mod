@@ -3,6 +3,10 @@ state={
 	id=190
 	name="STATE_190"
 	
+	manpower= 379500
+	buildings_max_level_factor=1.000
+	state_category=rural
+	
 	state_category = rural
 	
 	history={
@@ -14,7 +18,7 @@ state={
 		}
 		owner = LAT
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 7
 			9262 = {
 				naval_base = 1
 			}
@@ -28,7 +32,5 @@ state={
 	}
 
 	local_supplies=5.0 
-	manpower=315500
-	buildings_max_level_factor=1.000
-	state_category=rural
+	
 }

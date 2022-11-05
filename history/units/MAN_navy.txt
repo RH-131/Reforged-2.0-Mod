@@ -1,0 +1,13 @@
+﻿units= {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Main Fleet"			
+		naval_base = 964 
+		task_force = {				
+			name = "The Destroyer Fleet"			
+			location = 964 # Lisbon	
+			ship = { name = "Yayai" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Mutsuki Class"} } }
+			ship = { name = "Uzukir" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Mutsuki Class"} } }
+		}				
+	}
+}

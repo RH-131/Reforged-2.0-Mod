@@ -6,12 +6,14 @@ state={
 	state_category = town
 	
 	resources={
-		steel=26 # was: 36
+		steel= 36
+		tungsten = 18
+		oil = 4
 	}
 
 	history={
 		owner = FRA
-		add_core_of = ALG
+		set_state_flag = GER_atlantikwall
 
 		victory_points = {
 			1145 5 
@@ -20,7 +22,7 @@ state={
 			7132 5 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
 			air_base = 5
 			1145 = {
 				naval_base = 2
