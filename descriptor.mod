@@ -8,6 +8,6 @@ tags={
 	"Historical"
 	"Balance"
 }
-name="Oak WIP"
+name="Oak 2.0 WIP"
 supported_version="1.12.4"
 remote_file_id="2726354765"
