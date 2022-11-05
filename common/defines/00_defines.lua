@@ -863,7 +863,7 @@ NMilitary = {
 	PARACHUTE_COMPLETE_ORG = 0.1,				   -- Organisation value (in %) after unit being dropped, regardless if failed, disrupted, or successful.
 	PARACHUTE_ORG_REGAIN_PENALTY_DURATION = 120,   -- penalty in org regain after being parachuted. Value is in hours.
 	PARACHUTE_ORG_REGAIN_PENALTY_MULT = -0.8,	   -- penalty to org regain after being parachuted.
-	SHIP_MORALE_TO_ORG_REGAIN_BASE = 0.2,			   -- Base org regain per hour
+	SHIP_MORALE_TO_ORG_REGAIN_BASE = 0.6,			   -- Base org regain per hour
 	BASE_NIGHT_ATTACK_PENALTY = -0.5,
 	EXILE_EQUIPMENT = 1.0,						   -- Amount of equipment to keep
 	EXILE_ORG = 0.0,							   -- Amount of org to keep
@@ -1569,7 +1569,7 @@ NNavy = {
 		15,   -- low
 		3.0,   -- medium
 		1.0,   -- high
-		0.1,   -- I am death incarnate!
+		0.5,   -- I am death incarnate!
 	},
 
 	MIN_REPAIR_FOR_JOINING_COMBATS = { -- strikeforces/patrol forces will not join combats if they are not repaired enough
@@ -1580,16 +1580,16 @@ NNavy = {
 	},
 
 	ORG_COST_WHILE_MOVING = { -- org cost while the ships are moving
-		0.3, -- HOLD
-		0.2, -- PATROL
-		0.25, -- STRIKE FORCE
-		0.2, -- CONVOY RAIDING
-		0.2, -- CONVOY ESCORT
-		0.2, -- MINES PLANTING
-		0.2, -- MINES SWEEPING
-		0.2, -- TRAIN
-		0.3, -- RESERVE_FLEET
-		0.2, -- NAVAL_INVASION_SUPPORT
+		0.9, -- HOLD
+		0.6, -- PATROL
+		0.75, -- STRIKE FORCE
+		0.6, -- CONVOY RAIDING
+		0.6, -- CONVOY ESCORT
+		0.6, -- MINES PLANTING
+		0.6, -- MINES SWEEPING
+		0.6, -- TRAIN
+		0.9, -- RESERVE_FLEET
+		0.6, -- NAVAL_INVASION_SUPPORT
 	},
 
 	ORG_COST_WHILE_MOVING_IN_MISSION_ZONE = { -- org cost while moving in mission zone
@@ -1733,7 +1733,7 @@ NNavy = {
 	BASE_UNIT_TRANSFER_SPOTTING_SPEED = 0.0,						-- daily base spotting speed against unit trans
 	BASE_NAVAL_INVASION_SPOTTING_SPEED = 0.0,						-- daily base spotting speed against unit transfers
 
-	CONVOY_SPOTTING_SPEED_MULT = 1.0,								-- spotting speed mult against convoys
+	CONVOY_SPOTTING_SPEED_MULT = 0.66,								-- spotting speed mult against convoys
 	UNIT_TRANSFER_SPOTTING_SPEED_MULT = 5.0,						-- spotting speed mult against unit transfers
 	NAVAL_INVASION_SPOTTING_SPEED_MULT = 10.0,						-- spotting speed mult against naval invasion armies
 
@@ -1759,13 +1759,13 @@ NNavy = {
 	BASE_JOIN_COMBAT_HOURS						= 4,				-- the taskforces that wants to join existing combats will wait for at least this amount
 	LOW_ORG_FACTOR_ON_JOIN_COMBAT_DURATION		= 4.0,				-- low org of the ships will be factored in when a taskforce wants to join combat
 
-	BASE_POSITIONING												= 0.85,	-- base value for positioning
+	BASE_POSITIONING												= 0.80,	-- base value for positioning
 
 	RELATIVE_SURFACE_DETECTION_TO_POSITIONING_FACTOR				= 0.01,	-- multiples the surface detection difference between two sides. the side with higher detection will get a bonus of this value
 	MAX_POSITIONING_BONUS_FROM_SURFACE_DETECTION					= 0.05,  -- will clamp the bonus that you get from detection
 
-	HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR					= 0.3, -- if one side has more ships than the other, that side will get this penalty for each +100% ship ratio it has
-	MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO					= 0.8,  -- maximum penalty to get from larger fleets
+	HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR					= 0.4, -- if one side has more ships than the other, that side will get this penalty for each +100% ship ratio it has
+	MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO					= 0.9,  -- maximum penalty to get from larger fleets
 
 	HIGHER_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR					= 0.2;  -- penalty if other side has stronger carrier air force
 	MAX_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR 					= 0.2;  -- max penalty from stronger carrier air force
@@ -1774,9 +1774,9 @@ NNavy = {
 	MAX_POSITIONING_PENALTY_FOR_NEWLY_JOINED_SHIPS 					= 0.15,  -- the accumulated penalty from new ships will be clamped to this value
 	POSITIONING_PENALTY_HOURLY_DECAY_FOR_NEWLY_JOINED_SHIPS			= 0.003,-- the accumulated penalty from new ships will decay hourly by this value
 
-	DAMAGE_PENALTY_ON_MINIMUM_POSITIONING 							= 0.75,	-- damage penalty at 0% positioning
-	SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING				= 0.5,  -- screening efficiency (screen to capital ratio) at 0% positioning
-	AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING					= 0.7,  -- AA penalty at 0% positioning
+	DAMAGE_PENALTY_ON_MINIMUM_POSITIONING 							= 0.85,	-- damage penalty at 0% positioning
+	SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING				= 0.7,  -- screening efficiency (screen to capital ratio) at 0% positioning
+	AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING					= 0.8,  -- AA penalty at 0% positioning
 	SUBMARINE_REVEAL_ON_MINIMUM_POSITIONING                         = 1.75,  -- submarine reveal change on 0% positioning
 
 	SHIP_TO_FLEET_ANTI_AIR_RATIO									= 0.5,	-- total sum of fleet's anti air will be multiplied with this ratio and added to calculations anti-air of individual ships while air damage reduction

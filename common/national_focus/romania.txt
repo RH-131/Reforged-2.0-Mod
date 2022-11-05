@@ -3703,8 +3703,8 @@
 	}	
 
 	focus = {
-		id = ROM_german_heavy_tank
-		icon = GFX_GER_mobile_fortresses
+		id = ROM_german_heavy_tank_success
+		icon = GFX_GER_consolidate_production_lines
 		prerequisite = { focus = ROM_invite_axis_motor_companies }
 		x = 1
 		y = 1
@@ -3733,9 +3733,9 @@
 	}
 	
 	focus = {
-		id = ROM_german_heavy_tank_success
-		icon = GFX_GER_consolidate_production_lines
-		prerequisite = { focus = ROM_german_heavy_tank }
+		id = ROM_german_heavy_tank
+		icon = GFX_GER_mobile_fortresses
+		prerequisite = { focus = ROM_german_heavy_tank_success }
 		x = 1
 		y = 2
 		relative_position_id = ROM_invite_axis_motor_companies
@@ -3991,7 +3991,7 @@
 	focus = {
 		id = ROM_haide_haide_haide
 		icon = GFX_GER_kampfgruppes
-		prerequisite = { focus = ROM_mechanized_soldiers focus = ROM_german_heavy_tank focus = ROM_the_R_series focus = ROM_focus_on_support_tanks }
+		prerequisite = { focus = ROM_mechanized_soldiers focus = ROM_german_heavy_tank_success focus = ROM_the_R_series focus = ROM_focus_on_support_tanks }
 		x = 0
 		y = 4
 		relative_position_id = ROM_modernize_the_army

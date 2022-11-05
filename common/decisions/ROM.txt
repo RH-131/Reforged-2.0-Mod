@@ -1,5 +1,5 @@
 operations = {
-ROM_annex_bul = {
+	ROM_annex_bul = {
 
 		icon = generic_political_discourse
 
@@ -39,7 +39,7 @@ ROM_annex_bul = {
 			}
 		}		
 	}
-		ROM_Nav_Rearm = {
+	ROM_Nav_Rearm = {
 
 			icon = generic_naval
 		
@@ -74,5 +74,52 @@ ROM_annex_bul = {
 				}
 		
 					}
-				}
 	}
+	ROM_force_bulgarian_steel_expansion = { #48
+			icon = steel
+
+			highlight_states = {
+			highlight_state_targets = {
+				state = 48
+				}
+			}
+
+			allowed = {
+				#Everyone
+			}
+
+			available = {
+				has_completed_focus = ROM_fascist_bulg
+				has_full_control_of_state = 48
+				num_of_civilian_factories_available_for_projects > 4
+				has_tech = excavation3
+				controls_state = 48
+			}
+
+			visible = {
+
+			}
+
+			fire_only_once = yes
+
+			cost = 50
+			days_remove = 70
+
+			modifier = {
+				civilian_factory_use = 5
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			remove_effect = {
+				48 = {
+					add_resource = {
+						type = steel
+						amount = 15
+					}	
+				}
+			}
+	}
+}

@@ -563,7 +563,7 @@ focus_tree = {
 		}
 
 		available = {
-			date > 1937.03.01
+			date > 1937.05.01
 		}
 
 		bypass = {
@@ -588,7 +588,7 @@ focus_tree = {
 				remove_idea = RAJ_sikhism_encouraged
 				add_idea = RAJ_sikhism_united
 			}
-			add_stability = -0.15
+			add_stability = -0.10
 			add_ideas = partial_economic_mobilisation
 		}
 	}
@@ -976,6 +976,10 @@ focus_tree = {
 				ideology = neutrality
 				portrait = GFX_RAJ_pattabhi_sitaramayya
 			}
+			swap_ideas = {
+				remove_idea = RAJ_indian_congress_expanded
+				add_idea = RAJ_indian_congress_free
+			}
 		}
 
 		completion_reward = {
@@ -991,6 +995,10 @@ focus_tree = {
 			set_country_leader_portrait = {
 				ideology = neutrality
 				portrait = GFX_RAJ_pattabhi_sitaramayya
+			}
+			swap_ideas = {
+				remove_idea = RAJ_indian_congress_expanded
+				add_idea = RAJ_indian_congress_free
 			}
 		}
 	}
@@ -6396,7 +6404,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 4
@@ -6485,7 +6493,7 @@ focus_tree = {
 		x = 0
 		y = 3
 
-		cost = 5
+		cost = 7.15
 
 		ai_will_do = {
 			factor = 4

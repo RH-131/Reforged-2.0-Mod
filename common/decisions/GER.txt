@@ -3304,7 +3304,10 @@ foreign_politics = {
 					is_alone_or_in_faction_at_peace_with_GER = yes
 				}
 			}
-			DEN = { has_capitulated = yes }
+			#DEN = { has_capitulated = yes }
+			GER = {
+				has_full_control_of_state =  37
+			}
 			NOR = { has_capitulated = yes }
 		}
 

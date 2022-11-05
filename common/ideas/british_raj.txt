@@ -60,6 +60,7 @@ ideas = {
 			modifier = {
 				autonomy_gain = -0.2
 			    production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
 				conscription_factor = -0.02
 			}
 		}
@@ -84,10 +85,11 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				autonomy_gain = -0.25
-				conscription_factor = -0.04
+				autonomy_gain = -0.20
+				conscription_factor = -0.03
 				local_resources_factor = 0.1
 				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
 			}
 		}
 
@@ -112,9 +114,11 @@ ideas = {
 
 			modifier = {
 				autonomy_gain = -0.2
-				conscription_factor = -0.06
+				conscription_factor = -0.04
 				local_resources_factor = 0.15
 				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				production_speed_air_base_factor = 0.1
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.025
 			}
@@ -170,6 +174,33 @@ ideas = {
 				political_power_factor = 0.10
 				army_core_attack_factor = 0.025
 				army_core_defence_factor = 0.025
+			}
+		}
+		
+		RAJ_indian_congress_free = {
+
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				original_tag = RAJ
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = 0.001
+				political_power_factor = 0.10
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
 			}
 		}
 
@@ -296,11 +327,10 @@ ideas = {
 
 			removal_cost = -1
 
-			modifier = {
-				army_defence_factor = 0.03
-				army_attack_factor = 0.03
-
-			}
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.03
+				defense_bonus_against = 0.03
 		}
 
 		RAJ_prince_war_demands_siam = {
@@ -322,11 +352,10 @@ ideas = {
 
 			removal_cost = -1
 
-			modifier = {
-				army_defence_factor = 0.05
-				army_attack_factor = 0.05
-				army_morale_factor = 0.02
-
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 		}
 
@@ -350,11 +379,13 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				army_defence_factor = 0.08
-				army_attack_factor = 0.08
-				army_morale_factor = 0.04
-				army_org_factor = 0.02
-
+				army_morale_factor = 0.05
+				army_org_factor = 0.03
+			}
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.08
+				defense_bonus_against = 0.08
 			}
 		}
 
@@ -378,11 +409,13 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				army_defence_factor = 0.12
-				army_attack_factor = 0.12
-				army_morale_factor = 0.06
+				army_morale_factor = 0.75
 				army_org_factor = 0.05
-
+			}
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.12
+				defense_bonus_against = 0.12
 			}
 		}
 
