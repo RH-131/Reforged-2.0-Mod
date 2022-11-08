@@ -10,43 +10,47 @@ guiTypes = {
 	# Offset for unit counters when zoomed in, only y value used for now
 	positionType = {
 		name = "unit_counter_zoomed_in_offset"
-		position = { x = 0 y = 20 }
+		position = { x = 0 y = 20 } #MPU match counter ???
 	}
-
 
 	containerWindowType = {
 		name = "unit_counter"
 		position = { x=0 y=0 }
-		size = { width = 76 height = 24 }
+		size = { width = 76 height = 31 } #MPU match image size
 		clipping = no
-
+		
+		# Background
 		buttonType = {
 			name = "count_bg"
 			quadTextureSprite = "GFX_onmap_unit_counter"
 			position = { x=0 y=0 }
 		}
 
+		### Division Colour Marker
 		iconType ={
 			name ="group_marker"
 			spriteType = "GFX_UV_group_marker"
-			position = { x=55 y=2 }
+			position = { x=55 y=2 } #MPU move
 			alwaystransparent = yes
 		}
 
+		#ideology
 		iconType = {
 			name = "counter_ideology"
 			spriteType = "GFX_onmap_unit_counter_ideology"
-			position = { x=37 y=0 }
+			position = { x=35 y=0 } #MPU move
 			alwaystransparent = yes
 		}
-
+		
+		# Division Icon background
 		iconType = {
 			name = "counter_overlay"
 			spriteType = "GFX_onmap_unit_counter_overlay"
-			position = { x=3 y=3 }
+			position = { x=4 y=4 } #MPU move
 			alwaystransparent = yes
 		}
 
+		# Selected Icon
 		iconType = {
 			name = "count_selected"
 			spriteType = "GFX_onmap_unit_counter_selected"
@@ -63,45 +67,52 @@ guiTypes = {
 			scale = 0.8
 		}
 
+		# Division Icon
 		iconType ={
 			name ="type"
 			spriteType = "GFX_tiled_window_transparent"
-			position = { x=3 y=3 }
+			position = { x=-2 y=0 } #MPU
 			alwaystransparent = yes
+			scale = 0.5
 		}
 
+		# Unit Count
 		instantTextboxType = {
 			name = "count_txt"
-			position = { x=36 y=6 }
+			position = { x=35 y=5 }	#MPU
 			font = "Main_14"
 			maxWidth = 20
 			maxHeight = 14
 			format = center
 			alwaystransparent = yes
 		}
+		# Org
 		iconType = {
 			name = "bar_org"
 			spriteType = "GFX_mapicon_unit_bar_org"
-			position = { x=14 y=8 }
+			position = { x=3 y=4 }	#MPU
 			alwaystransparent = yes
 			rotation = 1.5708
 		}
+		# Str
 		iconType = {
 			name = "bar_str"
 			spriteType = "GFX_mapicon_unit_bar_str"
-			position = { x=14 y=12 }
+			position = { x=3 y=8 }	#MPU
 			alwaystransparent = yes
 			rotation = 1.5708
 		}
 
+		# Small Flag
 		iconType = {
 			name = "flag"
 			spriteType = "GFX_mapicon_unit_flag_stripe"
-			position = { x=5 y=15 }
+			position = { x=44 y=20 }	#MPU
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
 
+		### Large Flag
 		iconType = {
 			name = "large_flag"
 			spriteType = "GFX_mapicon_unit_large_flag_stripe"
@@ -110,54 +121,63 @@ guiTypes = {
 			scale = 0.69
 		}
 
-		iconType = {
-			name = "attrition"
-			spriteType = "GFX_unit_attrition"
-			position = { x=-4 y=-1 }
-		}
-
+		# Red !
 		iconType = {
 			name = "no_orders"
 			spriteType = "GFX_mapicon_unit_no_orders"
-			position = { x=-10 y=8 }
+			position = { x=-10 y=9 }	#MPU
 		}
 
+		# Garrison Shield
 		iconType = {
 			name = "defending_area"
 			spriteType = "GFX_mapicon_unit_area_defense"
-			position = { x=-13 y=6 }
+			position = { x=66 y=6 }	#MPU
+			scale = 0.8
 		}
 
+		# yellow !
 		iconType = {
 			name = "invalid_orders"
 			spriteType = "GFX_mapicon_unit_invalid_orders"
-			position = { x=-10 y=8 }
+			position = { x=-10 y=8 }	#MPU
 		}
 
-		iconType = {
-			name = "low_supply"
-			spriteType = "GFX_unitcounter_supply_status_strip"
-			position = { x=24 y=-4 }
-			alwaystransparent = yes
-			scale = 0.75
-		}
-
+		#Dug In Shield
 		iconType ={
 			name ="onmap_digin_icon"
 			spriteType = "GFX_onmap_digin_icon"
-			position = { x=56 y=8 }
+			position = { x=56 y=9 }	#MPU
+			scale = 1.5		#MPU
 		}
 
 		iconType ={
 			name ="onmap_training_icon"
 			spriteType = "GFX_onmap_training_icon"
-			position = { x=54 y=8 }
+			position = { x=56 y=9 }
 		}
 
+		# Move Icon
 		iconType ={
 			name ="onmap_action_icon"
 			spriteType = "GFX_onmap_action_icon"
 			position = { x=54 y=7 }
+		}
+		
+		# Jerry Can
+		iconType = {
+			name = "low_supply"
+			spriteType = "GFX_unitcounter_supply_status_strip"
+			position = { x=58 y=-5 }	#MPU
+			alwaystransparent = yes
+			scale = 0.75
+		}
+		
+		#skull
+		iconType = {
+			name = "attrition"
+			spriteType = "GFX_unit_attrition"
+			position = { x=-3 y=-5 }	#MPU
 		}
 	}
 
