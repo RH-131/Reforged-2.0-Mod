@@ -13062,8 +13062,8 @@ guiTypes = {
 	containerWindowType = {
 		name = "technology_unit_statlist_item_module"
 		position = { x=0 y=0 }
-		clipping = no		
-		
+		clipping = no
+
 		instantTextboxType = {
 			name = "production_resources"
 			position = { x= 5 y= 12 }
@@ -13073,7 +13073,7 @@ guiTypes = {
 			pdx_tooltip = "PRODUCTION_RESOURCE_DESC"
 			format = left
 		}
-		
+
 		iconType = {
 			name = "equipment_icon"
 			position = { x = 240 y = 40 }
@@ -13081,13 +13081,22 @@ guiTypes = {
 			centerposition = yes
 			frame = 1
 		}
-		
+
 		gridboxtype = {
 			name = "stats_grid"
 			position = { x = 25 y = 95 }
 			size = { width = 400 height = 400 }
 			slotsize = { width = 224 height = 30 }
 			max_slots_horizontal = 2
+			format = "UPPER_LEFT"
+		}
+
+		gridboxtype = {
+			name = "air_missions_grid"
+			position = { x = 15 y = 40 }
+			size = { width = 400 height = 70 }
+			slotsize = { width = 45 height = 60 }
+			max_slots_horizontal = 10
 			format = "UPPER_LEFT"
 		}
 	}
