@@ -2467,8 +2467,9 @@ ideas = {
 			research_bonus = { air_equipment = -0.05 } 
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {		
-				tac_bomber_equipment = {
-					air_range = 0.05 air_bombing = 0.1 
+				medium_plane_airframe = {
+					air_range = 0.05 
+					air_bombing = 0.1 
 				}	
 			}
 		}
@@ -2491,11 +2492,15 @@ ideas = {
 			research_bonus = { air_equipment = -0.05 } 
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {
-				fighter_equipment = {
-					air_range = 0.05 air_agility = 0.05 maximum_speed = 0.05
+				small_plane_airframe = {
+					air_range = 0.05 
+					air_agility = 0.05 
+					maximum_speed = 0.05
 				}	
-				cv_fighter_equipment = {
-					air_range = 0.05 air_agility = 0.05 maximum_speed = 0.05
+				cv_small_plane_airframe = {
+					air_range = 0.05 
+					air_agility = 0.05 
+					maximum_speed = 0.05
 				}					
 			}
 		}
@@ -2508,8 +2513,10 @@ ideas = {
 			research_bonus = { air_equipment = -0.05 } 
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {		
-				heavy_fighter_equipment = {
-					air_range = 0.05 air_attack = 0.05 maximum_speed = 0.05
+				medium_plane_fighter_airframe = {
+					air_range = 0.05 
+					air_attack = 0.05 
+					maximum_speed = 0.05
 				}			
 			}
 		}

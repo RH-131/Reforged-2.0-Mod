@@ -16,8 +16,7 @@ ideas = {
 				heavy_air = 0.15
 			}
 			modifier = {
-				strat_bomber_equipment_design_cost_factor = -0.75
-				jet_strat_bomber_equipment_design_cost_factor = -0.75
+				air_bombing_targetting = 0.1
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -30,8 +29,7 @@ ideas = {
 				cas_bomber = 0.15
 			}
 			modifier = {
-				CAS_equipment_design_cost_factor = -0.75
-				cv_CAS_equipment_design_cost_factor = -0.75
+				air_cas_present_factor = 0.05
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -44,8 +42,9 @@ ideas = {
 				tactical_bomber = 0.15
 			}
 			modifier = {
-				tac_bomber_equipment_design_cost_factor = -0.75
-				jet_tac_bomber_equipment_design_cost_factor = -0.75
+				air_bombing_targetting = 0.05
+				air_cas_present_factor = 0.05
+				air_nav_efficiency = 0.025
 			}
 			ai_will_do = {
 				factor = 1.5
