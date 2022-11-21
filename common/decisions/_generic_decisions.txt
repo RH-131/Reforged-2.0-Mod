@@ -386,7 +386,8 @@ economy_decisions = {
 				has_stability < 0.4
 			}
 		}
-	}	
+	}
+	
 
 	focus_on_land = {
 
@@ -1892,6 +1893,43 @@ war_measures = {
 			}
 		}
     }
+	
+	restructure_supply_system = { # boost to get a few cheap supply hubs
+
+		icon = GFX_decision_generic_construction
+
+		visible = { 
+			has_war = yes
+		}
+		fire_only_once = no
+
+		days_remove = 180
+		days_re_enable = 180
+
+		cost = 100
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				num_of_factories < 30
+				factor = 0
+			}
+		}
+
+		modifier = {
+			production_speed_supply_node_factor = 2
+		}
+
+		complete_effect = {
+			set_variable = { node_goal = num_of_supply_nodes }
+			add_to_variable = { node_goal = 3 } #maximum 3 additional nodes
+		}
+
+		cancel_trigger = {
+			
+			 check_variable = { node_goal < num_of_supply_nodes } #if the number of supply nodes exceeds the old number by +3, immediately cancel
+		}
+	}
 }
 
 foreign_politics = {
