@@ -1575,6 +1575,23 @@ create_country_leader = {
 	}	
 	
 	focus = {
+		id = MON_localdevelopmentoffighterplanes
+		icon = GFX_localplaneproduction
+		prerequisite = { focus = MON_reduceilliteracy focus = MON_basesforsovietaircraft }				
+		x = 19
+		y = 3
+		cost = 7.16
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+          add_ideas = ROM_local_development
+		}
+	}	
+	
+	focus = {
 		id = MON_localdevelopmentofbomba
 		icon = GFX_sovietbombers
 		prerequisite = { focus = MON_modernsovfighters }			
