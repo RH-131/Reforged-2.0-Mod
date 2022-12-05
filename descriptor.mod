@@ -9,5 +9,5 @@ tags={
 	"Balance"
 }
 name="Oak 2.0 WIP"
-supported_version="1.12.5"
+supported_version="1.12.6"
 remote_file_id="2726354765"
