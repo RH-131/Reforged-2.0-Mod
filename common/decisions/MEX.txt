@@ -20,6 +20,10 @@ MEX_category_military_issues = {
 		fire_only_once = yes
 
 		complete_effect = {
+            add_offsite_building = { 
+			    type = industrial_complex 
+				level = 8
+			}
 			load_oob = MEXhuman
 			load_oob = MEX_1936_naval_mtg
 		}		
