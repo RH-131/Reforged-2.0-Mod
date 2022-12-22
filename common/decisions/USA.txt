@@ -1548,7 +1548,54 @@ USA_unique_measures = {
 			}
 		}
 	}
+	
+	USA_fix_mark_14 = {
 
+		icon = oppression
+
+		available = {
+			NOT = {
+				has_country_flag = USA_victory_program_flag
+			}
+			has_completed_focus = USA_victory_program
+			has_idea = USA_mark_14
+		}
+
+		visible = {
+			always = yes
+			has_idea = USA_mark_14
+            NOT = { tag = SOV }			
+		}
+
+		fire_only_once = no
+
+		days_remove = 180
+		days_re_enable = 180
+
+		cost = 100
+
+		complete_effect = {
+			USA = { remove_ideas = USA_mark_14 }
+			set_country_flag = USA_victory_program_flag
+			add_timed_idea = {
+				idea = USA_mark_14_buord
+				days = 180
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = USA_victory_program_flag
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+		}
+	}
+	
 	USA_homeland_defense = {
 
 		icon = generic_prepare_civil_war
