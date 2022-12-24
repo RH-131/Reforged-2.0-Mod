@@ -134,7 +134,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -155,7 +155,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			799 = {
+			309 = {
 				add_resource = {
 					type = aluminium
 					amount = 15
@@ -256,25 +256,22 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			669 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
+			689 = {
+				add_resource = {
+					type = steel
+					amount = 20
 				}
 			}
-			738 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
+			692 = {
+				add_resource = {
+					type = tungsten
+					amount = 10
 				}
 			}
-			668 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
+			308 = {
+				add_resource = {
+					type = chromium
+					amount = 10
 				}
 			}
 		}
@@ -336,7 +333,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			799 = {
+			309 = {
 				add_building_construction = {
 					type = coastal_bunker
 					level = 3
@@ -355,17 +352,17 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			800 = {
+			687 = {
 				add_building_construction = {
 					type = coastal_bunker
 					level = 3
-					province = 10906
+					province = 4982
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = bunker
 					level = 3
-					province = 10906
+					province = 4982
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -413,11 +410,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			669 = {
+			689 = {
 				add_building_construction = {
 					type = naval_base
 					level = 3
-					province = 12371
+					province = 12477
 					instant_build = yes
 				}
 			}
@@ -438,15 +435,15 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			799 = {
+			689 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				if = {
 					limit = {
-						799 = {
+						689 = {
 							free_building_slots = {
 								building = industrial_complex
 								size > 1
@@ -479,7 +476,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}	
 		completion_reward = {
-			800 = {
+			692 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -487,7 +484,31 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						800 = {
+						692 = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			308 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				if = {
+					limit = {
+						308 = {
 							free_building_slots = {
 								building = industrial_complex
 								size > 1
@@ -556,7 +577,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			798 = {
+			689 = {
 			    add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
@@ -598,7 +619,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			799 = {
+			309 = {
 			    add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -624,7 +645,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			798 = {
+			689 = {
 			    add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
@@ -1786,7 +1807,7 @@ focus_tree = {
 				uses = 1
 				category = air_doctrine
 			}
-			799 = {
+			309 = {
 				add_building_construction = {
 					type = air_base
 					level = 3
@@ -1953,7 +1974,7 @@ focus_tree = {
 				uses = 1
 				category = air_doctrine
 			}
-			799 = {			
+			309 = {			
 				add_building_construction = {
 					type = air_base
 					level = 2
@@ -2765,10 +2786,10 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			799 = {
+			689 = {
 				if = {
 					limit = {
-						799 = {
+						689 = {
 							free_building_slots = {
 								building = dockyard
 								size > 1
@@ -2804,17 +2825,17 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			800 = {
+			309 = {
 				add_building_construction = {
 					type = coastal_bunker
 					level = 2
-					province = 153
+					province = 12828
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = bunker
 					level = 2
-					province = 10968
+					province = 12828
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -2832,13 +2853,13 @@ focus_tree = {
 				add_building_construction = {
 					type = coastal_bunker
 					level = 2
-					province = 153
+					province = 12885
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = bunker
 					level = 2
-					province = 10968
+					province = 12885
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -2856,13 +2877,13 @@ focus_tree = {
 				add_building_construction = {
 					type = coastal_bunker
 					level = 2
-					province = 153
+					province = 4982
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = bunker
 					level = 2
-					province = 10968
+					province = 4982
 					instant_build = yes
 				}
 				add_building_construction = {
