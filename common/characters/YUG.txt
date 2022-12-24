@@ -84,10 +84,10 @@ characters={
 		corps_commander={
 			traits={ trickster }
 			skill=3
-			attack_skill=2
+			attack_skill=3
 			defense_skill=3
 			planning_skill=3
-			logistics_skill=2
+			logistics_skill=3
 			legacy_id=-1
 		}
 	}
@@ -135,13 +135,47 @@ characters={
 				large="GFX_Portrait_yugoslavia_danilo_kalafatovic"
 			}
 		}
-		field_marshal={
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
 			legacy_id=-1
+		}
+	}
+	TUR_refik_saydam={
+		advisor={
+			slot = theorist
+			idea_token = TUR_refik_saydam
+			ledger  = air 
+				allowed  = {
+					original_tag  = YUG
+				}
+				
+				traits  = {
+					air_warfare_theorist 
+				}
+		}
+		name="TUR_refik_saydam"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+	}
+	TUR_kazim_ozalp = {
+		advisor={
+			slot = theorist_production
+			idea_token = TUR_kazim_ozalp
+			ledger  = civilian 
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			traits = { war_industrialist }
 		}
 	}
 	YUG_milutin_nedić={
@@ -171,8 +205,8 @@ characters={
 			traits={ thorough_planner }
 			skill=3
 			attack_skill=3
-			defense_skill=2
-			planning_skill=2
+			defense_skill=3
+			planning_skill=3
 			logistics_skill=3
 			legacy_id=-1
 		}
@@ -200,9 +234,9 @@ characters={
 				large="GFX_Portrait_yugoslavia_petar_kosic"
 			}
 		}
-		corps_commander={
+		navy_leader={
 			skill=2
-			attack_skill=1
+			attack_skill=2
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
@@ -235,13 +269,35 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={ old_guard_navy navy_career_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			traits={  navy_career_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			maneuvering_skill=3
+			coordination_skill=3
 			legacy_id=-1
+		}
+	}
+	TUR_erkan_gataly={
+		advisor={
+			slot = high_command
+			idea_token = TUR_erkan_gataly
+			ledger  = navy 
+				allowed  = {
+					original_tag  = YUG
+				}
+				traits  = {
+					navy_fleet_logistics_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="TUR_erkan_gataly"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_2"
+			}
 		}
 	}
 	YUG_borivoje_mirkovic={
@@ -274,7 +330,7 @@ characters={
 					original_tag  = YUG
 				}
 				traits  = {
-					democratic_reformer 
+					adventurous_daredevil 
 				}
 				ai_will_do  = {
 					factor  = 0.000
@@ -335,7 +391,7 @@ characters={
 					original_tag  = YUG
 				}
 				traits  = {
-					communist_revolutionary 
+					nationalist_symbol 
 				}
 				ai_will_do  = {
 					factor  = 0.000
@@ -345,6 +401,24 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_generic_communist_europe"
+			}
+		}
+	}
+	TUR_hassan_saka={
+		advisor={
+			slot = political_advisor
+			idea_token = TUR_hassan_saka
+			allowed  = {
+					original_tag  = YUG
+				}
+				traits  = {
+					smooth_talking_charmer 
+				}
+		}
+		name="TUR_hassan_saka"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_2"
 			}
 		}
 	}
@@ -404,7 +478,7 @@ characters={
 					factor  = 1.000
 				}
 		}
-		name="YUG_3"
+		name="Nerd 1"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_4"
@@ -443,7 +517,7 @@ characters={
 					factor  = 1.000
 				}
 		}
-		name="YUG_2"
+		name="Nerd 2"
 		portraits={
 			army={
 				small="GFX_idea_generic_air_europe_3"
