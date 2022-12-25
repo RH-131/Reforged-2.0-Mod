@@ -1630,6 +1630,53 @@ USA_unique_measures = {
 		}
 	}	
 
+	USA_doolittle_raid = {
+		icon = generic_operation
+		
+		allowed = {
+			tag = USA
+		}
+
+		available = {
+			ships_in_area = { area = 177 size < 50 }
+			ships_in_area = { area = 177 type = carrier size < 3 }
+		}
+		
+		activation = {
+			has_war_with = JAP
+			has_equipment = {
+				tac_bomber_equipment_1939 > 16
+			}
+			ships_in_area = { area = 177 size > 49 }
+			ships_in_area = { area = 177 type = carrier size > 1 }
+		}
+		
+		days_mission_timeout = 14
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		fire_only_once = yes
+		
+		timeout_effect = {
+			news_event = { hours = 24 id = news.492 }
+			hidden_effect = {
+				ROOT = {
+					send_equipment = {
+						target = PAR
+						type = tac_bomber_equipment_1939
+						amount = 16
+					}
+				}
+			}
+		}
+		complete_effect = {
+			add_stability = -0.10
+			add_war_support = -0.15
+		}
+	}
+	
 	USA_torch = {
 		icon = generic_operation
 		
