@@ -1650,7 +1650,7 @@ USA_unique_measures = {
 			ships_in_area = { area = 177 size > 49 }
 			ships_in_area = { area = 177 type = carrier size > 1 }
 		}
-		
+		is_good = yes
 		days_mission_timeout = 14
 		
 		ai_will_do = {
@@ -1673,11 +1673,16 @@ USA_unique_measures = {
 					damage_building = { type = arms_factory damage = 0.2 }
 					damage_building = { type = industrial_complex damage = 0.2 }
 				}
+				set_global_flag = USA_doolittle_raid
+				JAP = {
+					add_stability = -0.05
+					add_war_support = -0.10
+				}
 			}
 		}
 		complete_effect = {
-			add_stability = -0.10
-			add_war_support = -0.15
+			add_stability = -0.05
+			add_war_support = -0.10
 		}
 	}
 	
