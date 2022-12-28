@@ -782,7 +782,10 @@ ideas = {
 			}
 			traits = { GER_Krupp_tank_manufacturer }
 			available = {
+			OR = {
 				has_completed_focus = ITA_Armor_Effort
+				original_tag = YUG
+				}
 			}
 			modifier = { tank_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {

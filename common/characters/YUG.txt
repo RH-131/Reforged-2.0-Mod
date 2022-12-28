@@ -84,9 +84,9 @@ characters={
 		corps_commander={
 			traits={ trickster }
 			skill=3
-			attack_skill=3
+			attack_skill=4
 			defense_skill=3
-			planning_skill=3
+			planning_skill=2
 			logistics_skill=3
 			legacy_id=-1
 		}
@@ -103,10 +103,10 @@ characters={
 		}
 		corps_commander={
 			traits={ urban_assault_specialist }
-			skill=3
+			skill=4
 			attack_skill=3
-			defense_skill=2
-			planning_skill=2
+			defense_skill=4
+			planning_skill=4
 			logistics_skill=3
 			legacy_id=-1
 		}
@@ -136,6 +136,7 @@ characters={
 			}
 		}
 		corps_commander={
+		   traits = { infantry_leader trait_mountaineer }
 			skill=3
 			attack_skill=3
 			defense_skill=3
@@ -466,19 +467,19 @@ characters={
 	}
 	YUG_3={
 		advisor={
-			slot = army_chief
+			slot = high_command
 			idea_token = YUG_3
 			allowed  = {
 					original_tag  = YUG
 				}
 				traits  = {
-					army_chief_reform_2 
+					army_infantry_2 
 				}
 				ai_will_do  = {
 					factor  = 1.000
 				}
 		}
-		name="Nerd 1"
+		name="Vladimir Cukavac"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_4"
@@ -505,13 +506,13 @@ characters={
 	}
 	YUG_2={
 		advisor={
-			slot = air_chief
+			slot = high_command
 			idea_token = YUG_2
 			allowed  = {
 					original_tag  = YUG
 				}
 				traits  = {
-					air_naval_strike_1 
+					army_armored_1 
 				}
 				ai_will_do  = {
 					factor  = 1.000
