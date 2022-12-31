@@ -263,7 +263,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		mutually_exclusive = { focus = BUL_utmost_optimization }
 
 		available = {
 			NOT = { has_government = democratic }
@@ -344,13 +343,12 @@ focus_tree = {
 	focus = {
 		id = BUL_utmost_optimization
 
-		prerequisite = { focus = BUL_increase_industry_investments focus = BUL_expand_the_tobacco_industry }
+		prerequisite = { focus = BUL_increase_industry_investments }
 		icon = GFX_focus_generic_industry_3
 		relative_position_id = BUL_increase_industry_investments
 		x = 0
 		y = 2
 		cost = 10
-		mutually_exclusive = { focus = BUL_nationalization }
 
 		available = {
 			NOT = { has_idea = BUL_second_national_catastrophe }			

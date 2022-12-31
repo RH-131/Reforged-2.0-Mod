@@ -202,6 +202,28 @@ ideas = {
 				industrial_capacity_dockyard = 0.15
 			}
 		}
+		
+		EFR_german_industry_support = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ger_mefo_bills
+
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.20
+				industrial_capacity_dockyard = 0.05
+			}
+		}
 
 		EFR_war_repairs = {
 			removal_cost = -1
