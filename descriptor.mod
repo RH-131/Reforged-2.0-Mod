@@ -4,6 +4,7 @@ replace_path="history/countries"
 replace_path="history/states"
 replace_path="map/strategicregions"
 replace_path="map/supplyareas"
+replace_path="common/modifiers/00_static_modifiers"
 tags={
 	"Historical"
 	"Balance"

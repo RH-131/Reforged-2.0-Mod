@@ -268,9 +268,9 @@ ideas = {
 			picture = generic_goods_red_bonus
 			
 			modifier = {
-				consumer_goods_factor = -0.03
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
+				consumer_goods_factor = -0.01
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.075
 				stability_factor = 0.05
 			}
 		}
@@ -287,9 +287,30 @@ ideas = {
 			picture = generic_goods_red_bonus
 			
 			modifier = {
-				consumer_goods_factor = -0.05
-				industrial_capacity_factory = 0.1
-				industrial_capacity_dockyard = 0.1
+				consumer_goods_factor = -0.03
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				stability_factor = 0.1
+			}
+		}
+		
+		AST_invest_in_victory_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_all_in
+			
+			modifier = {
+				consumer_goods_factor = -0.03
+				industrial_capacity_factory = 0.225
+				industrial_capacity_dockyard = 0.225
+				production_speed_arms_factory_factor = 0.1
 				stability_factor = 0.1
 			}
 		}
