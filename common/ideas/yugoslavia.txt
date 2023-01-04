@@ -59,6 +59,7 @@ ideas = {
 			
 			modifier = {
 				max_planning = 0.1
+				special_forces_cap = 0.025
 			}
 		}
 		
@@ -136,6 +137,7 @@ ideas = {
 			
 			modifier = {
 				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
 			}
 		}
 		
@@ -308,7 +310,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_factor = 0.25
+				political_power_factor = 0.2
 			}
 		}
 		
@@ -327,7 +329,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription = 0.01
+				conscription = 0.02
 			}
 		}
 		
@@ -426,7 +428,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_factor = -0.25
+				political_power_factor = -0.20
+				global_building_slots_factor = 0.15
 			}
 		}
 		
@@ -449,7 +452,7 @@ ideas = {
 			}
 		}
 		
-		YUG_idea_local_light_infantrys = {
+		YUG_idea_local_militias = {
 			
 			picture = YUG_local_light_infantrys
 
@@ -464,7 +467,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription = 0.02
+				conscription = 0.01
 			}
 		}
 		

@@ -3097,6 +3097,8 @@ foreign_politics = {
 			ITA = {
 				has_border_war_with = GRE
 			}
+			NOT = { is_in_faction_with = YUG } 
+			
 		}
 
 		ai_will_do = { 
@@ -3164,6 +3166,35 @@ foreign_politics = {
 				LIT = {
 					country_event = { id = baltic.4 }
 				}
+			}
+		}
+	}
+	
+	GER_demand_yug = {
+		icon = ger_reichskommissariats
+		fire_only_once = yes
+
+		
+		allowed = {
+		   tag = GER
+		}
+		
+		available = {
+			is_in_faction_with = YUG
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+		    transfer_state = 102
+            transfer_state = 853
+			ITA = {
+			    transfer_state = 103
+			}
+			YUG = {
+			    transfer_state = 163
 			}
 		}
 	}
@@ -3592,10 +3623,15 @@ foreign_politics = {
 						target = GRE
 						type = annex_everything
 					}
-					declare_war_on = {
-						target = YUG
-						type = annex_everything
-					}	
+					if = {
+						limit = {
+							NOT = { is_in_faction_with = YUG  }
+						}
+						declare_war_on = {
+							target = YUG
+							type = annex_everything
+						}	
+					}				
 				}	
 		}
 	}

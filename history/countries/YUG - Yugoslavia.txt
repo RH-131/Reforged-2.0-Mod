@@ -30,6 +30,9 @@ add_ideas = {
 set_technology = {
 	################# infantry ###############
 	infantry_weapons = 1  
+	field_equipment = 1 
+	tech_radio_1 = 1 
+	infantry_weapons1 = 1
 	fuel_silos = 1
 	field_equipment = 1
 	tech_mountaineers = 1
@@ -42,9 +45,11 @@ set_technology = {
 	################## artillery ###############
 	artillery1 = 1 
 	gw_pack_artillery = 1
+	interwar_antiair = 1
 	################## armor ##############
-	light_tank_1934 = 1 
-	motorised_infantry = 1
+	axis_light_tank_1934 = 1 
+	axis_light_tank_1936 = 1 
+	axis_motorised_infantry = 1
 	################## aircraft ##############
 	fighter_1934 = 1
 	tactical_bomber_1934 = 1
@@ -63,7 +68,6 @@ if = {
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
-		
 		early_ship_hull_frigate = 1
 		early_ship_hull_light = 1
 		basic_ship_hull_light = 1
@@ -90,7 +94,7 @@ set_popularities = {
 	neutrality = 60
 }
 
-set_stability = 0.6
+set_stability = 0.60
 
 recruit_character = YUG_prince_paul
 recruit_character = YUG_milan_grol
@@ -118,6 +122,10 @@ recruit_character = YUG_dusan_simovic
 recruit_character = YUG_draza_mihailovic
 recruit_character = YUG_dimitrije_ljotic
 recruit_character = YUG_ivan_ribar
+recruit_character = TUR_kazim_ozalp
+recruit_character = TUR_refik_saydam
+recruit_character = TUR_erkan_gataly
+recruit_character = TUR_hassan_saka
 
 ### VARIANTS ###
 # 1936 Start #

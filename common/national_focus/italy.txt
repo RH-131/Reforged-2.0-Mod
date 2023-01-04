@@ -306,12 +306,12 @@ focus_tree = {
 				}	
 			}
 			add_equipment_to_stockpile = {
-				type = cv_fighter_equipment
+				type = cv_fighter_equipment_1936
 				amount = 20
 				producer = ITA 
 			}
 			add_equipment_to_stockpile = {
-				type = cv_nav_bomber_equipment
+				type = cv_nav_bomber_equipment_1936
 				amount = 20
 				producer = ITA 
 			}
@@ -3123,7 +3123,10 @@ focus_tree = {
 			factor = 10
 		}
         available = {
+		OR = {
 		YUG = { has_capitulated = yes }
+		is_in_faction_with = YUG
+		}
 		GRE = { has_capitulated = yes }
 		has_political_power > 200
 		}

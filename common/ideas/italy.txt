@@ -734,7 +734,10 @@ ideas = {
 
 
 			allowed = {
-				original_tag = ITA
+			    OR = {
+				    original_tag = ITA
+				    original_tag = YUG
+				}
 			}
 			traits = { GER_ckd_tank_manufacturer }
 			research_bonus = {
@@ -772,11 +775,17 @@ ideas = {
 
 
 			allowed = {
-				 original_tag = ITA
+			    OR = {
+				    original_tag = ITA
+				    original_tag = YUG
+				}
 			}
 			traits = { GER_Krupp_tank_manufacturer }
 			available = {
+			OR = {
 				has_completed_focus = ITA_Armor_Effort
+				original_tag = YUG
+				}
 			}
 			modifier = { tank_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {
@@ -1035,7 +1044,10 @@ ideas = {
 		crda = {
 
 			allowed = {
-				original_tag = ITA
+			    OR = {
+				    original_tag = ITA
+				    original_tag = YUG
+				}
 			}
 
 			research_bonus = {
@@ -1047,7 +1059,10 @@ ideas = {
 		ansaldo_navy = {
 
 			allowed = {
-				original_tag = ITA
+			    OR = {
+				    original_tag = ITA
+				    original_tag = YUG
+				}
 			}
 
 
@@ -1062,7 +1077,10 @@ ideas = {
 		    picture = generic_naval_manufacturer_1
 
 			allowed = {
-				original_tag = ITA
+			    OR = {
+				    original_tag = ITA
+				    original_tag = YUG
+				}
 			}
 
 			research_bonus = {
@@ -1076,7 +1094,10 @@ ideas = {
 		    picture = generic_naval_manufacturer_2
 
 			allowed = {
-				original_tag = ITA
+			    OR = {
+				    original_tag = ITA
+				    original_tag = YUG
+				}
 			}
 
 			research_bonus = {

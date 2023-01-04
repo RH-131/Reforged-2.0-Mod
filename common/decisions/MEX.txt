@@ -3,28 +3,6 @@ MEX_category_military_issues = {
 
 	# Decision to send support to the communists in the Spanish Civil War
 	
-    MEX_human = {
-
-		icon = generic_bureaucracy
-
-		allowed = {
-			tag = MEX			
-		}
-
-		available = {
-			is_ai = no
-		}
-
-		cost = 0
-
-		fire_only_once = yes
-
-		complete_effect = {
-			load_oob = MEXhuman
-			load_oob = MEX_1936_naval_mtg
-		}		
-	}
-	
 	develop_mexico_rubber_plantations = { #277
 		
 		icon = rubber

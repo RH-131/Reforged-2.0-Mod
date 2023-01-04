@@ -1894,12 +1894,12 @@ operations = {
 
 		visible = {
 			tag = ENG
-			FRA = { is_ai = yes }
-			country_exists = FRA
-			date > 1940.3.1
+			HOL = { is_ai = yes }
+			country_exists = HOL
+			date > 1936.3.1
 		}
 		available = {
-			date > 1940.3.1
+			HOL = { is_ai = yes }
 		}
 
 		cost = 0
@@ -1908,19 +1908,15 @@ operations = {
 
 
 		complete_effect = {
-			FRA = {
-				transfer_navy = {
-					target = ENG
-				}
-			}
-			annex_country = {
-                target = FRA
-                transfer_troops = yes
-			}
+			transfer_state = 308
+			transfer_state = 695
+			transfer_state = 309
+			transfer_state = 692
+	 		transfer_state = 689
 			every_state = {
-			    limit = { is_core_of = SEN }
+			    limit = { is_core_of = CRC }
 				set_resistance = 0
-				set_compliance = 100
+				set_compliance = 70
 			}
 		}		
 	}
