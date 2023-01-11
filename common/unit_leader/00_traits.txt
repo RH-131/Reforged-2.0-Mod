@@ -65,7 +65,7 @@ leader_traits = {
 		}
 		
 		non_shared_modifier = {
-			experience_gain_factor = -0.25
+			experience_gain_factor = -0.1
 		}
 	}	
 	
@@ -89,8 +89,8 @@ leader_traits = {
 		trait_type = personality_trait
 
 		corps_commander_modifier = {
-			max_commander_army_size = 48
-			experience_gain_factor = -0.50
+			max_commander_army_size = 60
+			experience_gain_factor = -0.25
 		}
 		new_commander_weight = {
 			factor = 0
@@ -687,7 +687,7 @@ leader_traits = {
 
 		modifier = {
 			cavalry_attack_factor = 0.10	
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 		
 		slot = high_command
@@ -717,7 +717,7 @@ leader_traits = {
 		modifier = {
 			motorized_attack_factor = 0.1
 			mechanized_attack_factor = 0.1
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 		
 		ai_will_do = {
@@ -742,7 +742,7 @@ leader_traits = {
 		
 		modifier = {
 			army_infantry_defence_factor = 0.10
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 		
 		slot = high_command
@@ -766,7 +766,7 @@ leader_traits = {
 		cost = 1000
 		
 		corps_commander_modifier = {
-			max_commander_army_size = 6
+			max_commander_army_size = 8
 		}
 		
 		slot = high_command
@@ -835,7 +835,7 @@ leader_traits = {
 			terrain_penalty_reduction = 0.2
 			acclimatization_cold_climate_gain_factor = 0.1
 			acclimatization_hot_climate_gain_factor = 0.1
-			max_commander_army_size = -2
+			max_commander_army_size = -4
 		}
 		
 		ai_will_do = {
@@ -896,7 +896,7 @@ leader_traits = {
 			fort = {
                 attack = 0.05
             }
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 		
 		slot = high_command
@@ -924,7 +924,7 @@ leader_traits = {
 		modifier = {
 			army_armor_attack_factor = 0.05 
 			army_armor_defence_factor = 0.05
-			max_commander_army_size = -2		
+			max_commander_army_size = -4		
 		}
 		
 		slot = high_command
@@ -956,7 +956,7 @@ leader_traits = {
 
 		modifier = {
 			out_of_supply_factor = -0.5
-			max_commander_army_size = -2
+			max_commander_army_size = -4
 		}
 
 		slot = high_command
@@ -982,6 +982,7 @@ leader_traits = {
 				movement = 0.05
 				attack = 0.1
 				defence = 0.1
+				max_commander_army_size = -2
 			}
 		}
 		
@@ -1004,6 +1005,7 @@ leader_traits = {
 				movement = 0.05
 				attack = 0.1
 				defence = 0.1
+				max_commander_army_size = -2
 			}
 		}
 		
@@ -1026,6 +1028,7 @@ leader_traits = {
 				movement = 0.05
 				attack = 0.1
 				defence = 0.1
+				max_commander_army_size = -2
 			}
 		}
 		
@@ -1048,6 +1051,7 @@ leader_traits = {
 				movement = 0.05
 				attack = 0.1
 				defence = 0.1
+				max_commander_army_size = -2
 			}
 		}
 		
@@ -1070,6 +1074,7 @@ leader_traits = {
 				movement = 0.05
 				attack = 0.1
 				defence = 0.1
+				max_commander_army_size = -2
 			}
 		}
 		
@@ -1092,6 +1097,7 @@ leader_traits = {
 				movement = 0.05
 				attack = 0.1
 				defence = 0.1
+				max_commander_army_size = -2
 			}
 		}
 		
@@ -1114,6 +1120,7 @@ leader_traits = {
 				movement = 0.05
 				attack = 0.1
 				defence = 0.1
+				max_commander_army_size = -2
 			}
 		}
 		
@@ -1135,7 +1142,7 @@ leader_traits = {
 		modifier = {
 			amphibious_invasion = 0.3 # 30% faster invasions
 			invasion_preparation = -0.3
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 		
 		ai_will_do = {
@@ -1165,7 +1172,7 @@ leader_traits = {
 		modifier = {
 			army_armor_defence_factor = 0.1
 			army_armor_attack_factor = 0.1
-			max_commander_army_size = -2
+			max_commander_army_size = -4
 		}
 		
 		custom_effect_tooltip = INCREASED_BLITZ_AND_ENCIRCLEMENT_CHANCE
@@ -1193,7 +1200,7 @@ leader_traits = {
 		modifier = {
 			motorized_defence_factor = 0.1
 			mechanized_defence_factor = 0.1
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 				
 		ai_will_do = {
@@ -1215,7 +1222,7 @@ leader_traits = {
 		    army_armor_attack_factor = 0.05
 			mechanized_attack_factor = 0.1
 			motorized_attack_factor = 0.1
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 		
 		custom_effect_tooltip = INCREASED_BLITZ_AND_ENCIRCLEMENT_CHANCE
@@ -1245,7 +1252,7 @@ leader_traits = {
 		modifier = {
 			cavalry_attack_factor = 0.10
 			cavalry_defence_factor = 0.15
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 		
 		ai_will_do = {
@@ -1277,7 +1284,7 @@ leader_traits = {
 			fort = {
 				attack = 0.1
 			}
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 		enable_ability = siege_artillery
 		
@@ -1328,7 +1335,7 @@ leader_traits = {
 
 		modifier = {
 			army_infantry_attack_factor = 0.15
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 		
 		ai_will_do = {
@@ -1375,7 +1382,7 @@ leader_traits = {
 
 		modifier = {
 			extra_marine_supply_grace = 240
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 		
 		enable_ability = faster_naval_invasion_planning
@@ -1398,7 +1405,7 @@ leader_traits = {
 
 		modifier = {
 			shore_bombardment_bonus = 0.25
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 		
 		ai_will_do = {
@@ -1442,7 +1449,7 @@ leader_traits = {
 
 		modifier = {
 			extra_paratrooper_supply_grace = 240
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 		
 		enable_ability = glider_planes
@@ -1468,7 +1475,7 @@ leader_traits = {
 		modifier = {
 			cas_damage_reduction = 0.5
 			air_superiority_bonus_in_combat = -0.5
-			max_commander_army_size = -2
+			max_commander_army_size = -3
 		}
 		
 		slot = high_command
