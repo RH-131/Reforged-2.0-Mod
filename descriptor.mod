@@ -1,4 +1,4 @@
-version="1.01.01"
+version="1.05.01"
 replace_path="common/units/names_divisions"
 replace_path="history/countries"
 replace_path="history/states"
@@ -10,5 +10,5 @@ tags={
 	"Balance"
 }
 name="Oak 2.0 WIP"
-supported_version="1.12.7"
+supported_version="1.12.8"
 remote_file_id="2726354765"
