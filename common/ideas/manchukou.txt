@@ -58,8 +58,9 @@ ideas = {
 			picture = state_shintoism
 			
 			modifier = {
-				war_support_factor = 0.1
+				war_support_factor = -0.1
 				stability_weekly = 0.001
+				stability_factor = -0.1
 			}
 		}
 		MAN_imperial_family = {
@@ -84,14 +85,6 @@ ideas = {
 			}
 		}
 		MAN_banditry = {
-
-			available = {
-				OR = {
-					has_country_flag = MAN_northern_bandits
-					has_country_flag = MAN_eastern_bandits
-					has_country_flag = MAN_western_bandits
-				}
-			}
 
 			allowed = {
 				always = no
@@ -130,112 +123,6 @@ ideas = {
 				trade_laws_cost_factor = 0.25
 				mobilization_laws_cost_factor = 0.25
 				economy_cost_factor = 0.25
-			}
-		}
-
-		MAN_low_legitimacy_5 = {
-			
-			name = MAN_low_legitimacy
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				original_tag = MAN
-			}
-			
-			removal_cost = -1
-
-			picture = man_low_legitimacy
-			
-			modifier = {
-				stability_factor = -0.5
-				war_support_factor = -0.5
-			}
-		}
-		MAN_low_legitimacy_4 = {
-			
-			name = MAN_low_legitimacy
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				original_tag = MAN
-			}
-			
-			removal_cost = -1
-
-			picture = man_low_legitimacy2
-			
-			modifier = {
-				stability_factor = -0.4
-				war_support_factor = -0.4
-			}
-		}
-		MAN_low_legitimacy_3 = {
-			
-			name = MAN_low_legitimacy
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				original_tag = MAN
-			}
-			
-			removal_cost = -1
-
-			picture = man_low_legitimacy3
-			
-			modifier = {
-				stability_factor = -0.3
-				war_support_factor = -0.3
-			}
-		}
-		MAN_low_legitimacy_2 = {
-			
-			name = MAN_low_legitimacy
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				original_tag = MAN
-			}
-			
-			removal_cost = -1
-
-			picture = man_low_legitimacy4
-			
-			modifier = {
-				stability_factor = -0.2
-				war_support_factor = -0.2
-			}
-		}
-		MAN_low_legitimacy_1 = {
-			
-			name = MAN_low_legitimacy
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				original_tag = MAN
-			}
-			
-			removal_cost = -1
-
-			picture = man_low_legitimacy5
-			
-			modifier = {
-				stability_factor = -0.1
-				war_support_factor = -0.1
 			}
 		}
 
