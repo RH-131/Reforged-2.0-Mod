@@ -6241,7 +6241,7 @@ SOV_5_year_plan_decisions = {
 				set_state_flag = SOV_exhausted_resources
     		}
  			custom_effect_tooltip = SOV_5_year_plan_tt 
-  			add_to_variable = { var = 5_year_plan_progress value = 2 }				  		
+  			add_to_variable = { var = five_year_plan_progress value = 2 }				  		
 		}
 	}
 
@@ -6300,7 +6300,7 @@ SOV_5_year_plan_decisions = {
 				set_state_flag = SOV_exhausted_resources
     		}
  			custom_effect_tooltip = SOV_5_year_plan_tt   
-  			add_to_variable = { var = 5_year_plan_progress value = 2 }	
+  			add_to_variable = { var = five_year_plan_progress value = 2 }	
 					
 		}
 	}
@@ -6360,7 +6360,7 @@ SOV_5_year_plan_decisions = {
 				set_state_flag = SOV_exhausted_resources 				
     		}
  			custom_effect_tooltip = SOV_5_year_plan_tt  
- 			add_to_variable = { var = 5_year_plan_progress value = 2 }	
+ 			add_to_variable = { var = five_year_plan_progress value = 2 }	
 
 		}
 	}
@@ -6420,7 +6420,7 @@ SOV_5_year_plan_decisions = {
 				set_state_flag = SOV_exhausted_resources 								
     		}
 			custom_effect_tooltip = SOV_5_year_plan_tt  
- 			add_to_variable = { var = 5_year_plan_progress value = 2 }	
+ 			add_to_variable = { var = five_year_plan_progress value = 2 }	
 		}
 	}
 
@@ -6479,7 +6479,7 @@ SOV_5_year_plan_decisions = {
 				set_state_flag = SOV_exhausted_resources
     		}
  			custom_effect_tooltip = SOV_5_year_plan_tt   		
- 			add_to_variable = { var = 5_year_plan_progress value = 2 }	
+ 			add_to_variable = { var = five_year_plan_progress value = 2 }	
 		}
 	}	
 
@@ -6542,7 +6542,7 @@ SOV_5_year_plan_decisions = {
 			}
 			custom_effect_tooltip = SOV_develop_magnitogorsk_decision_tt  
  			custom_effect_tooltip = SOV_5_year_plan_tt   		
- 			add_to_variable = { var = 5_year_plan_progress value = 2 }				
+ 			add_to_variable = { var = five_year_plan_progress value = 2 }				
 		}
 
 		ai_will_do = {
@@ -6681,7 +6681,7 @@ SOV_5_year_plan_decisions = {
 		icon = generic_construction
 
 		available = {
-			check_variable = { var = 5_year_plan_progress value = 100 compare = greater_than_or_equals }						
+			check_variable = { var = five_year_plan_progress value = 100 compare = greater_than_or_equals }						
 		}
 
 		days_mission_timeout = 770
@@ -6706,7 +6706,7 @@ SOV_5_year_plan_decisions = {
 			add_political_power = -150
 			SOV = { country_event = { days = 1 id = soviet.119 } }
 			set_variable = {
-			    var = 5_year_plan_progress
+			    var = five_year_plan_progress
 			    value = 0
 			}
 		}
@@ -6725,7 +6725,7 @@ SOV_5_year_plan_decisions = {
 
  			custom_effect_tooltip = SOV_5_year_plan_3_tt   	
 			set_variable = {
-			    var = 5_year_plan_progress
+			    var = five_year_plan_progress
 			    value = 0
 			}
 			hidden_effect = { 
@@ -6739,7 +6739,7 @@ SOV_5_year_plan_decisions = {
 		icon = generic_construction
 
 		available = {
-			check_variable = { var = 5_year_plan_progress value = 100 compare = greater_than_or_equals }						
+			check_variable = { var = five_year_plan_progress value = 100 compare = greater_than_or_equals }						
 		}
 
 		days_mission_timeout = 1825
