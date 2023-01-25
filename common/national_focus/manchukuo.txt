@@ -12,7 +12,7 @@ focus_tree = {
 	
 
 	default = no
-
+	
 	focus = {
 		id = MAN_pacify_the_countryside
 		icon = GFX_goal_generic_major_war
@@ -49,6 +49,49 @@ focus_tree = {
     			}
 			}
 			unlock_decision_category_tooltip = MAN_banditry_category
+			set_variable = { MAN_maintain_control_timer = 180 }
+			custom_effect_tooltip = MAN_pacify_the_countryside_effect_tooltip
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = MAN_songgotu_zhanshan
+		}
+	}
+	
+	focus = {
+		id = MAN_violent_response
+		icon = GFX_goal_generic_major_war
+		relative_position_id = MAN_pacify_the_countryside
+		x = 6
+		y = 0
+
+		cost = 7.15
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			MAN = {
+   			    modify_tech_sharing_bonus = {
+         			id = JAP_technological_exchange
+         			bonus = 0.15
+    			}
+			}
 			set_variable = { MAN_maintain_control_timer = 180 }
 			custom_effect_tooltip = MAN_pacify_the_countryside_effect_tooltip
 			custom_effect_tooltip = available_political_advisor
@@ -1087,7 +1130,7 @@ focus_tree = {
 		id = MAN_army_effort
 		icon = GFX_goal_generic_allies_build_infantry
 		 x = 14
-         y = 0
+         y = 12
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1107,7 +1150,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = MAN_army_effort }
 		x = 12
-		y = 1
+		y = 13
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1128,7 +1171,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = MAN_equipment_effort }
 		x = 12
-		y = 2
+		y = 14
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1148,7 +1191,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = MAN_army_effort }
 		x = 16
-		y = 1
+		y = 13
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1168,7 +1211,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = MAN_motorized }
 		x = 16
-		y = 2
+		y = 14
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1188,7 +1231,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = MAN_army_effort }
 		x = 14
-		y = 1
+		y = 13
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1208,7 +1251,7 @@ focus_tree = {
 		prerequisite = { focus = MAN_doctrine_inf_1 }
 		prerequisite = { focus = MAN_equipment_effort_2 focus = MAN_tanks }
 		x = 14
-		y = 3
+		y = 15
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1226,7 +1269,7 @@ focus_tree = {
 		id = MAN_aviation_effort
 		icon = GFX_goal_generic_build_airforce
 		x = 19
-		y = 0
+		y = 12
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1309,7 +1352,7 @@ focus_tree = {
 		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = MAN_aviation_effort }
 		x = 19
-		y = 1
+		y = 13
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1331,7 +1374,7 @@ focus_tree = {
 		prerequisite = { focus = MAN_air_force }
 		mutually_exclusive = { focus = MAN_heavy }
 		x = 18
-		y = 2
+		y = 14
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1354,7 +1397,7 @@ focus_tree = {
 		prerequisite = { focus = MAN_air_force }
 		mutually_exclusive = { focus = MAN_tactical_air}
 		x = 20
-		y = 2
+		y = 14
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1377,7 +1420,7 @@ focus_tree = {
 		prerequisite = { focus = MAN_heavy focus = MAN_tactical_air }
 		
 		x = 18
-		y = 3
+		y = 15
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1402,7 +1445,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = MAN_heavy focus = MAN_tactical_air }
 		x = 20
-		y = 3
+		y = 15
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1420,7 +1463,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = MAN_air_doct_1 }
 		x = 20
-		y = 4
+		y = 16
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -1438,7 +1481,7 @@ focus_tree = {
 		id = MAN_navy_funds
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 23
-		y = 0
+		y = 12
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1482,7 +1525,7 @@ focus_tree = {
 		prerequisite = { focus = MAN_navy_funds }
 		mutually_exclusive = { focus = MAN_navy_doc_2 }
 		x = 22
-		y = 1
+		y = 13
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1502,7 +1545,7 @@ focus_tree = {
 		prerequisite = { focus = MAN_navy_funds }
 		mutually_exclusive = { focus = MAN_navy_doc_1 }
 		x = 24
-		y = 1
+		y = 13
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1521,7 +1564,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_submarine
 		prerequisite = { focus = MAN_navy_doc_1 focus = MAN_navy_doc_2}
 		x = 24
-		y = 2
+		y = 14
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1556,7 +1599,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = MAN_navy_doc_1 focus = MAN_navy_doc_2}
 		x = 22
-		y = 2
+		y = 14
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1590,7 +1633,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = MAN_destroyer_effort focus = MAN_submarine_effort }
 		x = 23
-		y = 3
+		y = 15
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1627,7 +1670,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = MAN_big_ship_effort }
 		x = 23
-		y = 4
+		y = 16
 		cost = 5
 
 		available_if_capitulated = yes
