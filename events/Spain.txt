@@ -107,7 +107,6 @@ country_event = {
 			set_war_support = 0.5
 			add_ideas = SPA_death_before_surrender 
 			add_ideas = SPA_spanish_civil_war_industry
-			load_oob = SPR_fleet
 		    remove_ideas = SPR_military_disloyalty
 		    remove_ideas = SPR_political_violence
 		    remove_ideas = SPR_national_strikes_1
@@ -173,6 +172,7 @@ country_event = {
 		add_ideas = SPA_recovering_from_civil_war 	
 		remove_ideas = SPA_death_before_surrender
 		remove_ideas = SPA_spanish_civil_war_industry
+		load_oob = SPR_fleet
 		delete_unit_template_and_units = { division_template = "Brigada Legionario" }
 		every_state = {
 			limit = {
