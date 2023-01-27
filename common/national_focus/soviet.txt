@@ -468,7 +468,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = SOV_nikolai_voznesensky
 			custom_effect_tooltip = SOV_5_year_plan_2_tt
- 			add_to_variable = { var = 5_year_plan_progress value = 5 }	
+ 			add_to_variable = { var = five_year_plan_progress value = 5 }	
 		}
 	}
 
@@ -491,7 +491,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = georgy_malenkov		
 			custom_effect_tooltip = SOV_5_year_plan_2_tt
- 			add_to_variable = { var = 5_year_plan_progress value = 5 }	
+ 			add_to_variable = { var = five_year_plan_progress value = 5 }	
 		}
 	}
 
@@ -555,7 +555,7 @@ focus_tree = {
  			if	= {
 				limit = {has_idea = SOV_idea_2_5_year_plan }
 				
-				add_to_variable = { var = 5_year_plan_progress value = 2 }	
+				add_to_variable = { var = five_year_plan_progress value = 2 }	
 			}				
 
 			hidden_effect = {
@@ -624,7 +624,7 @@ focus_tree = {
  			if	= {
 				limit = {has_idea = SOV_idea_2_5_year_plan }
 				
-				add_to_variable = { var = 5_year_plan_progress value = 2 }	
+				add_to_variable = { var = five_year_plan_progress value = 2 }	
 			}				
 
 			hidden_effect = {
@@ -824,7 +824,7 @@ focus_tree = {
  			custom_effect_tooltip = SOV_5_year_plan_tt   		
  			if	= {
 				limit = {has_idea = SOV_idea_2_5_year_plan }			
-				add_to_variable = { var = 5_year_plan_progress value = 2 }	
+				add_to_variable = { var = five_year_plan_progress value = 2 }	
 			}								
 			hidden_effect = {
 				every_owned_state = {		
@@ -887,7 +887,7 @@ focus_tree = {
  			custom_effect_tooltip = SOV_5_year_plan_tt
 			if	= {
 				limit = {has_idea = SOV_idea_2_5_year_plan }				
-				add_to_variable = { var = 5_year_plan_progress value = 2 }	
+				add_to_variable = { var = five_year_plan_progress value = 2 }	
 			}
 			if = {
 				limit = {
@@ -2454,7 +2454,7 @@ focus_tree = {
 			activate_mission_tooltip = SOV_3_5_year_plan_mission
 			
 			set_variable = {
-			    var = 5_year_plan_progress
+			    var = five_year_plan_progress
 			    value = 0
 			}
 			hidden_effect = {
@@ -2640,7 +2640,7 @@ focus_tree = {
 				}												
 			}	
  			custom_effect_tooltip = SOV_5_year_plan_tt   		
- 			add_to_variable = { var = 5_year_plan_progress value = 2 }				
+ 			add_to_variable = { var = five_year_plan_progress value = 2 }				
 
 			hidden_effect = {
 				every_owned_state = {		
@@ -2862,7 +2862,7 @@ focus_tree = {
 				}												
 			}	
  			custom_effect_tooltip = SOV_5_year_plan_tt   		
- 			add_to_variable = { var = 5_year_plan_progress value = 2 }				
+ 			add_to_variable = { var = five_year_plan_progress value = 2 }				
 
 			hidden_effect = {
 				every_owned_state = {		
@@ -3030,7 +3030,7 @@ focus_tree = {
 				}												
 			}	
  			custom_effect_tooltip = SOV_5_year_plan_tt   		
- 			add_to_variable = { var = 5_year_plan_progress value = 2 }				
+ 			add_to_variable = { var = five_year_plan_progress value = 2 }				
 
 			hidden_effect = {
 				every_owned_state = {		
@@ -3634,7 +3634,7 @@ focus_tree = {
 				set_state_flag = SOV_5_year_plan_IC
 			}			
 			custom_effect_tooltip = SOV_5_year_plan_2_tt
- 			add_to_variable = { var = 5_year_plan_progress value = 5 }	
+ 			add_to_variable = { var = five_year_plan_progress value = 5 }	
 
 			add_timed_idea = {
 				idea = SOV_weapons_manufacturers2
@@ -3943,7 +3943,7 @@ focus_tree = {
 				set_state_flag = SOV_5_year_plan_IC
 			}			
 			custom_effect_tooltip = SOV_5_year_plan_2_tt
- 			add_to_variable = { var = 5_year_plan_progress value = 5 }	
+ 			add_to_variable = { var = five_year_plan_progress value = 5 }	
 		}
 	}
 
