@@ -146,7 +146,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-
+			add_ideas = MAN_national_defense_state
 		}
 
 		completion_reward = {
@@ -182,11 +182,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			add_ideas = MAN_five_year
 		}
 
 		completion_reward = {
-			country_event = wtt_manchukou.11
+			add_ideas = MAN_five_year
 		}
 	}
 	
@@ -227,6 +227,12 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
+			add_tech_bonus = {
+				category = excavation_tech
+				bonus = 1.0
+				uses = 1
+				name = MAN_trade_delegation
+			}
 		}
 	}
 	
@@ -238,14 +244,13 @@ focus_tree = {
 		y = 2
 		relative_position_id = MAN_national_defense_state
 
-		cost = 7.16
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 
-		available = {
-           date > 1938.5.1		
+		available = {	
 		}
 
 		bypass = {
@@ -276,7 +281,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = MAN_pacify_the_countryside
 
-		cost = 7.16
+		cost = 5
 
 		ai_will_do = {
 			factor = 6
@@ -300,16 +305,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 150
-            add_tech_bonus = {
-					bonus = 1
-					uses = 3
-					name = JAP_heavy_industry_development
-					technology = fuel_refining4
-					technology = fuel_refining5
-					technology = advanced_oil_processing
-					technology = modern_oil_processing
-					technology = advanced_rubber_processing
-					technology = modern_rubber_processing
+            swap_ideas = {
+				remove_idea = MAN_imperial_family
+				add_idea = MAN_imperial_family2
 			}
 		}
 	}
@@ -444,7 +442,6 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = { has_idea = MAN_banditry }
 			NOT = { has_war_with = JAP }
 		}
 
@@ -457,8 +454,24 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-			every_state = {
-				limit = { has_state_flag = GER_industrial_effort_2_2IC }
+			add_timed_idea = { idea = MAN_jap_settlers days = 180 }
+			610 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			715 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			611 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -469,27 +482,30 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_owned_state = {
-				limit = { is_fully_controlled_by = ROOT }
-				add_manpower = 25417
+			add_timed_idea = { idea = MAN_jap_settlers days = 180 }
+			610 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = MAN_invite_japanese_settlers_2IC
 			}
-			random_owned_state = {
-				limit = { is_fully_controlled_by = ROOT }
-				add_manpower = 33846
+			715 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = MAN_invite_japanese_settlers_2IC
+			}
+			611 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -520,45 +536,30 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = MAN_songgotu_zhanshan
-			random_state = {
-				limit = {
-					has_state_flag = MAN_invite_japanese_investors_IC
-				}
-				add_extra_state_shared_building_slots = 2
+			328 = {
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					type = arms_factory
+					level = 3
 					instant_build = yes
 				}
 			}
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 328 }
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
+			328 = {
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					type = arms_factory
+					level = 3
 					instant_build = yes
 				}
-				set_state_flag = MAN_invite_japanese_investors_IC
 			}
 		}
 	}
 	
 	focus = {
-		id = MAN_expand_the_textile_industry
+		id = MAN_expand_jehol_production
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = MAN_invite_japanese_investors }
 		x = 0
@@ -584,36 +585,24 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = MAN_expand_the_textile_industry_IC
-				}
-				add_extra_state_shared_building_slots = 10
+			610 = {
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
-					type = industrial_complex
-					level = 10
+					type = arms_factory
+					level = 3
 					instant_build = yes
 				}
 			}
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
+			610 = {
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					type = arms_factory
+					level = 3
 					instant_build = yes
 				}
-				set_state_flag = MAN_expand_the_textile_industry_IC
 			}
 		}
 	}
@@ -626,7 +615,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_national_defense_state
 
-		cost = 7.16
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -645,36 +634,22 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = MAN_expand_the_textile_industry_IC
-				}
-				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = industrial_complex
-					level = 10
-					instant_build = yes
-				}
+			add_ideas = MAN_resource_demand
+			add_tech_bonus = {
+				category = excavation_tech
+				bonus = 1.0
+				uses = 1
+				name = MAN_resource_expension_demand
 			}
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = MAN_expand_the_textile_industry_IC
+			add_ideas = MAN_resource_demand
+			add_tech_bonus = {
+				category = excavation_tech
+				bonus = 1.0
+				uses = 1
+				name = MAN_resource_expension_demand
 			}
 		}
 	}
@@ -707,16 +682,26 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			716 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			unlock_decision_tooltip = MAN_develop_kirin_aluminium_deposits
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-					name = MAN_develop_aluminum_sources
-					bonus = 1
-					uses = 1
-					category = excavation_tech
+			716 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
+			}
 			unlock_decision_tooltip = MAN_develop_kirin_aluminium_deposits
 		}
 	}
@@ -748,7 +733,15 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			716 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			unlock_decision_tooltip = MAN_develop_liaotung_iron_ore_deposits
 		}
 
 		completion_reward = {
@@ -843,7 +836,7 @@ focus_tree = {
 					is_fully_controlled_by = ROOT
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 			}
 		}
 	}
@@ -1005,7 +998,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = MAN_domestic_revival
+				bonus = 1
+				uses = 2
+				category = industry
+			}
 		}
 	}
 	
@@ -1040,7 +1038,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = MAN_imperial_pretender
+				add_idea = MAN_imperial_claim
+			}
 		}
 	}
 
@@ -1074,7 +1075,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			remove_ideas = MAN_imperial_pretender
+			swap_ideas = {
+				remove_idea = MAN_imperial_claim
+				add_idea = MAN_imperial_emperor
+			}
 		}
 	}
 
@@ -1109,6 +1113,243 @@ focus_tree = {
 
 		completion_reward = {
 			add_research_slot = 1			
+		}
+	}
+	
+	focus = {
+		id = MAN_banditry_solution
+		icon = GFX_focus_research
+		x = 12
+		y = 0
+		relative_position_id = MAN_pacify_the_countryside
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {			
+		}
+	}
+	
+	focus = {
+		id = MAN_ruthless_resolution
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_banditry_solution }
+		x = -1
+		y = 1
+		relative_position_id = MAN_banditry_solution
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {			
+		}
+	}
+	
+	focus = {
+		id = MAN_ruthless_fist
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_ruthless_resolution }
+		x = -1
+		y = 2
+		relative_position_id = MAN_banditry_solution
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {			
+		}
+	}
+	
+	focus = {
+		id = MAN_iron_thumb
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_ruthless_fist }
+		x = -1
+		y = 3
+		relative_position_id = MAN_banditry_solution
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {			
+		}
+	}
+	
+	focus = {
+		id = MAN_improve_rural_infra
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_banditry_solution }
+		x = 1
+		y = 1
+		relative_position_id = MAN_banditry_solution
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {			
+		}
+	}
+	
+	focus = {
+		id = MAN_fair_labor_laws
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_improve_rural_infra }
+		x = 1
+		y = 2
+		relative_position_id = MAN_banditry_solution
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {			
+		}
+	}
+	
+	focus = {
+		id = MAN_recruit_former_bandits
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_fair_labor_laws }
+		x = 1
+		y = 3
+		relative_position_id = MAN_banditry_solution
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {			
 		}
 	}
 
