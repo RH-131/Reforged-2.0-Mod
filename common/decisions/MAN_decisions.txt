@@ -44,7 +44,7 @@ prospect_for_resources = {
 			328 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 24
 				}
 			}
 		}	
@@ -71,11 +71,6 @@ prospect_for_resources = {
 		visible = {
 			has_completed_focus = MAN_expand_showa_steel_works
 			controls_state = 716
-			716 = {
-				NOT = {
-					has_state_flag = liaotung_steel_developed
-				}
-			}
 		}
 
 		fire_only_once = yes
@@ -92,7 +87,7 @@ prospect_for_resources = {
 			716 = {
 				add_resource = {
 					type = steel
-					amount = 16
+					amount = 32
 				}
 			}
 		}
