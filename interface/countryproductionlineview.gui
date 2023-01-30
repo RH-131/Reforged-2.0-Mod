@@ -1132,7 +1132,7 @@ guiTypes = {
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
-		size = { width=375 height=100%% }
+		size = { width=495 height=100%% }
 		click_to_front = yes
 
 		background = {
@@ -1394,8 +1394,7 @@ guiTypes = {
 
 			background = {
 				name = "Background"
-				spriteType = "GFX_tiled_generic_bg_1"
-				#spriteType = "GFX_tiled_window_transparent"
+				spriteType = "GFX_mini_bg"
 			}
 
 			iconType = {
@@ -1518,8 +1517,8 @@ guiTypes = {
 			position = { x= 0 y = 0 }
 		}
 
-		iconType = {
-			name ="priority_frame"
+		buttonType = {
+			name ="increase_priority"
 			spriteType = "GFX_conveyor_group_btn_frame"
 			position = { x= 2 y = 1 }
 		}
@@ -1591,7 +1590,7 @@ guiTypes = {
 		iconType = {
 			name ="carrier_fighter_icon"
 			spriteType = "GFX_airwing_carrier_icon"
-			position = { x=20 y=88 }
+			position = { x=231 y=62 }
 			centerposition = yes
 			alwaystransparent = yes
 		}
@@ -1627,13 +1626,13 @@ guiTypes = {
 		iconType = {
 			name = "creator_flag"
 			quadTextureSprite ="GFX_flag_small"
-			position = { x = 245 y = 53 }
+			position = { x = 245 y = 52 }
 		}
 
 		iconType = {
 			name ="equipment_designer"
 			spriteType = "GFX_tech_idea_bg"
-			position = { x = 230 y = 51 }
+			position = { x = 181 y = 50 }
 			scale = 0.6
 			alwaystransparent = yes
 		}
@@ -1682,8 +1681,8 @@ guiTypes = {
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 170
-			maxHeight = 20
-			fixedsize = yes
+			maxHeight = 19
+			multiline = no
 			format = left
 			alwaystransparent = yes
 		}
@@ -1693,7 +1692,8 @@ guiTypes = {
 			position = { x = 10 y = 31 }
 			font = "hoi_16mbs"
 			maxWidth = 150
-			maxHeight = 30
+			maxHeight = 33
+			fixedsize = yes
 			format = left
 			alwaystransparent = yes
 		}
@@ -1890,7 +1890,7 @@ guiTypes = {
 		iconType = {
 			name ="carrier_fighter_icon"
 			spriteType = "GFX_airwing_carrier_icon"
-			position = { x=20 y=44 }
+			position = { x=140 y=44 }
 			centerposition = yes
 			alwaystransparent = yes
 		}
@@ -2447,7 +2447,7 @@ guiTypes = {
 		iconType = {
 			name ="equipment_designer"
 			spriteType = "GFX_tech_idea_bg"
-			position = { x = 238 y = 49 }
+			position = { x = 45 y = 54 }
 			scale = 0.5
 			alwaystransparent = yes
 		}
@@ -2462,7 +2462,7 @@ guiTypes = {
 		iconType = {
 			name = "creator_flag"
 			quadTextureSprite ="GFX_flag_small"
-			position = { x = 245 y = 53 }
+			position = { x = 246 y = 55 }
 		}
 
 		buttonType = {
@@ -2662,8 +2662,8 @@ guiTypes = {
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 167
-			maxHeight = 20
-			fixedsize = yes
+			maxHeight = 19
+			multiline = no
 			format = left
 			alwaystransparent = yes
 		}
@@ -2673,7 +2673,8 @@ guiTypes = {
 			position = { x = 12 y = 32 }
 			font = "hoi_16mbs"
 			maxWidth = 150
-			maxHeight = 30
+			maxHeight = 33
+			fixedsize = yes
 			format = left
 			alwaystransparent = yes
 		}
@@ -2748,39 +2749,20 @@ guiTypes = {
 			position = { x=3 y=36 }
 			alwaystransparent = yes
 		}
-		
-		iconType = {
-			name = "need_state_icon"
-			position = { x=245 y=78 }
-			quadTextureSprite = "GFX_prod_line_target_strip"
-		}
 
-		instantTextboxType = {
-			name = "total_need"
-			position = { x = 145 y = 86 }
-			textureFile = ""
-			font = "hoi_16mbs"
-			borderSize = {x = 0 y = 0}
-			maxWidth = 100
-			maxHeight = 20
-			text = "Total need: 200"
-			format = right
-			#alwaystransparent = yes
-		}
-
-		iconType = {
-			name ="equipment_designer"
-			spriteType = "GFX_tech_idea_bg"
-			position = { x = 238 y = 49 }
-			scale = 0.5
-			alwaystransparent = yes
-		}
-
-		iconType = {
-			name = "creator_flag"
-			quadTextureSprite ="GFX_flag_small"
-			position = { x = 245 y = 53 }
-		}
+		#iconType = {
+		#	name ="equipment_designer"
+		#	spriteType = "GFX_tech_idea_bg"
+		#	position = { x = 238 y = 49 }
+		#	scale = 0.5
+		#	alwaystransparent = yes
+		#}
+#
+		#iconType = {
+		#	name = "creator_flag"
+		#	quadTextureSprite ="GFX_flag_small"
+		#	position = { x = 245 y = 53 }
+		#}
 
 		buttonType = {
 			name = "increase_amount"
@@ -3247,9 +3229,9 @@ guiTypes = {
 			position = { x = 55 y = 3 }
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
-			maxWidth = 145
-			maxHeight = 20
-			fixedsize = yes
+			maxWidth = 167
+			maxHeight = 19
+			multiline = no
 			format = left
 			alwaystransparent = yes
 		}
@@ -3259,7 +3241,8 @@ guiTypes = {
 			position = { x = 12 y = 32 }
 			font = "hoi_16mbs"
 			maxWidth = 150
-			maxHeight = 30
+			maxHeight = 33
+			fixedsize = yes
 			format = left
 			alwaystransparent = yes
 		}
@@ -3510,8 +3493,8 @@ guiTypes = {
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 170
-			maxHeight = 20
-			fixedsize = yes
+			maxHeight = 19
+			multiline = no
 			format = left
 			alwaystransparent = yes
 		}
@@ -3521,7 +3504,8 @@ guiTypes = {
 			position = { x = 10 y = 31 }
 			font = "hoi_16mbs"
 			maxWidth = 150
-			maxHeight = 30
+			maxHeight = 33
+			fixedsize = yes
 			format = left
 			alwaystransparent = yes
 		}
@@ -4196,14 +4180,14 @@ guiTypes = {
 		iconType = {
 			name ="sub_tech"
 			spriteType = "GFX_land_equipment_role_icons"
-			position = { x=250 y=40 }
+			position = { x=300 y=40 }
 			frame = 1
 			alwaystransparent = yes
 		}
 
 		iconType = {
 			name = "carrier_fighter_icon"
-			position = { x = 270 y = 55 }
+			position = { x = 310 y = 55 }
 			spriteType = "GFX_airwing_carrier_icon"
 			alwaystransparent = yes
 		}
@@ -4244,7 +4228,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "variant"
-			position = { x=300 y=37 }
+			position = { x=417 y=37 }
 			spriteType = "GFX_create_variants_button"
 			clicksound = click_default
 			frame = 1
@@ -4274,7 +4258,7 @@ guiTypes = {
 			position = { x = 341 y = 52 }
 			alwaystransparent = yes
 		}
-		
+
 		iconType = {
 			name ="blueprint_icon"
 			spriteType = "GFX_blueprint"
@@ -4324,7 +4308,7 @@ guiTypes = {
 		iconType = {
 			name = "creator_flag"
 			quadTextureSprite ="GFX_flag_small"
-			position = { x = 344 y = 10 }
+			position = { x = 347 y = 25 }
 		}
 
 		iconType = {
@@ -4350,10 +4334,10 @@ guiTypes = {
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = "Maus"
-			maxWidth = 290
-			maxHeight = 20
+			maxWidth = 308
+			maxHeight = 19
+			multiline = no
 			format = left
-			fixedsize = yes
 			alwaystransparent = yes
 		}
 
@@ -4364,8 +4348,9 @@ guiTypes = {
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
 			text = "Perkele-tankki"
-			maxWidth = 160
-			maxHeight = 30
+			maxWidth = 308
+			maxHeight = 17
+			multiline = no
 			format = left
 			alwaystransparent = yes
 		}
@@ -4432,7 +4417,7 @@ guiTypes = {
 			position = { x = 348 y = 52 }
 			alwaystransparent = yes
 		}
-		
+
 		iconType = {
 			name ="blueprint_icon"
 			spriteType = "GFX_blueprint"
