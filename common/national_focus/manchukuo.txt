@@ -1119,8 +1119,10 @@ focus_tree = {
 	focus = {
 		id = MAN_banditry_solution
 		icon = GFX_focus_research
-		x = 12
-		y = 0
+		prerequisite = { focus = MAN_pacify_the_countryside }
+		prerequisite = { focus = MAN_japan_assistance }
+		x = 10
+		y = 1
 		relative_position_id = MAN_pacify_the_countryside
 
 		cost = 5
@@ -1153,6 +1155,7 @@ focus_tree = {
 		id = MAN_ruthless_resolution
 		icon = GFX_focus_research
 		prerequisite = { focus = MAN_banditry_solution }
+		mutually_exclusive = { focus = MAN_improve_rural_infra }
 		x = -1
 		y = 1
 		relative_position_id = MAN_banditry_solution
@@ -1255,6 +1258,7 @@ focus_tree = {
 		id = MAN_improve_rural_infra
 		icon = GFX_focus_research
 		prerequisite = { focus = MAN_banditry_solution }
+		mutually_exclusive = { focus = MAN_ruthless_resolution }
 		x = 1
 		y = 1
 		relative_position_id = MAN_banditry_solution
