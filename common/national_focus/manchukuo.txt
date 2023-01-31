@@ -126,7 +126,7 @@ focus_tree = {
 		x = -6
 		y = 1
 
-		cost = 7.16
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -145,7 +145,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-
+			remove_ideas = MAN_kwantung_veto
 		}
 
 		completion_reward = {
@@ -155,10 +155,10 @@ focus_tree = {
 	
 	
 	focus = {
-		id = MAN_jap1
+		id = MAN_japanese_advisors
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = MAN_alliance_with_the_kwantung_army }
-		mutually_exclusive = { focus = MAN_china1 }
+		mutually_exclusive = { focus = MAN_chinese_tactics }
 		relative_position_id = MAN_alliance_with_the_kwantung_army
 		x = -1
 		y = 1
@@ -182,18 +182,18 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			add_ideas = MAN_japanese_advisers
 		}
 
 		completion_reward = {
-			
+			add_ideas = MAN_japanese_advisers
 		}
 	}
 	
 	focus = {
 		id = MAN_jap2
 		icon = GFX_goal_generic_major_war
-		prerequisite = { focus = MAN_jap1 }
+		prerequisite = { focus = MAN_japanese_advisors }
 		relative_position_id = MAN_alliance_with_the_kwantung_army
 		x = -1
 		y = 2
@@ -205,7 +205,9 @@ focus_tree = {
 		}
 
 		available = {
-
+			CHI = {
+		        has_capitulated = yes 
+			}
 		}
 
 		bypass = {
@@ -217,19 +219,25 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			swap_ideas = {
+				remove_idea = MAN_japanese_advisers
+				add_idea = MAN_japanese_advisers_2
+			}
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = MAN_japanese_advisers
+				add_idea = MAN_japanese_advisers_2
+			}
 		}
 	}
 	
 	focus = {
-		id = MAN_china1
+		id = MAN_chinese_tactics
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = MAN_alliance_with_the_kwantung_army }
-		mutually_exclusive = { focus = MAN_jap1 }
+		mutually_exclusive = { focus = MAN_japanese_advisors }
 		relative_position_id = MAN_alliance_with_the_kwantung_army
 		x = 1
 		y = 1
@@ -253,18 +261,18 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			add_ideas = MAN_five_people_armies
 		}
 
 		completion_reward = {
-			
+			add_ideas = MAN_five_people_armies
 		}
 	}
 	
 	focus = {
 		id = MAN_china2
 		icon = GFX_goal_generic_major_war
-		prerequisite = { focus = MAN_china1}
+		prerequisite = { focus = MAN_chinese_tactics }
 		relative_position_id = MAN_alliance_with_the_kwantung_army
 		x = 1
 		y = 2
@@ -276,7 +284,9 @@ focus_tree = {
 		}
 
 		available = {
-
+			CHI = {
+		        has_capitulated = yes 
+			}
 		}
 
 		bypass = {
@@ -288,11 +298,17 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			swap_ideas = {
+				remove_idea = MAN_five_people_armies
+				add_idea = MAN_five_people_armies_2
+			}
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = MAN_five_people_armies
+				add_idea = MAN_five_people_armies_2
+			}
 		}
 	}
 	
@@ -962,20 +978,21 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			swap_ideas = {
+				remove_idea = MAN_resource_demand
+				add_idea = MAN_resource_demand_2
+			} 
+			add_research_slot = 1
+			unlock_decision_tooltip = MAN_develop_liaoning_iron_ore_deposits
 		}
 
 		completion_reward = {
-			add_research_slot = 1
-			716 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
+		swap_ideas = {
+				remove_idea = MAN_resource_demand
+				add_idea = MAN_resource_demand_2
 			}
-			unlock_decision_tooltip = MAN_develop_liaotung_iron_ore_deposits
+			add_research_slot = 1
+			unlock_decision_tooltip = MAN_develop_liaoning_iron_ore_deposits
 		}
 	}
 
@@ -1021,7 +1038,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = MAN_mukden_arsenal
+		id = MAN_economic_growth
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = MAN_collective_farms }
 		x = 0
@@ -1047,14 +1064,37 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			328 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			717 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 
 		completion_reward = {
-			716 = {
+			328 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			717 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
@@ -1063,9 +1103,9 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = MAN_mil
+		id = MAN_construction_invest
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = MAN_mukden_arsenal }
+		prerequisite = { focus = MAN_economic_growth }
 		x = 0
 		y = 3
 		relative_position_id = MAN_first_five_year_plan
@@ -1089,14 +1129,37 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			610 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			715 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 
 		completion_reward = {
-			716 = {
+			610 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			715 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
@@ -1105,9 +1168,9 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = MAN_mil2
+		id = MAN_mukden_arsenal
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = MAN_mil }
+		prerequisite = { focus = MAN_construction_invest }
 		x = 0
 		y = 4
 		relative_position_id = MAN_first_five_year_plan
@@ -1131,11 +1194,34 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			716 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			328 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 
 		completion_reward = {
 			716 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			328 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -1194,7 +1280,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = MAN_first_five_year_plan
 
-		cost = 7.16
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1213,7 +1299,10 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-
+			swap_ideas = {
+				remove_idea = MAN_imperial_pretender
+				add_idea = MAN_imperial_claim
+			}
 		}
 
 		completion_reward = {
@@ -1232,7 +1321,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = MAN_first_five_year_plan
 
-		cost = 7.16
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1264,8 +1353,10 @@ focus_tree = {
 	focus = {
 		id = MAN_research_and_education_department
 		icon = GFX_focus_research
+		prerequisite = { focus = MAN_expand_jehol_production focus = MAN_mukden_arsenal }
+		prerequisite = { focus = MAN_self_sufficient}
 		x = 3
-		y = 6
+		y = 5
 		relative_position_id = MAN_national_defense_state
 
 		cost = 7.16
@@ -1275,7 +1366,7 @@ focus_tree = {
 		}
 
 		available = {
-			num_of_factories > 50
+			num_of_factories > 70
 		}
 
 		bypass = {
@@ -1311,7 +1402,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			date > 1936.06.01
 		}
 
 		bypass = {
@@ -1323,10 +1414,13 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-
+			remove_ideas = MAN_banditry
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 
-		completion_reward = {			
+		completion_reward = {	
+			remove_ideas = MAN_banditry
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 	}
 	
@@ -1346,7 +1440,11 @@ focus_tree = {
 		}
 
 		available = {
-
+			NOT = {
+				OR = {
+					has_idea = MAN_banditry_time
+				}
+			}
 		}
 
 		bypass = {
@@ -1358,10 +1456,13 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-
+			add_ideas = MAN_bandit_ruthless
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 
-		completion_reward = {			
+		completion_reward = {
+			add_ideas = MAN_bandit_ruthless
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 	}
 	
@@ -1380,7 +1481,11 @@ focus_tree = {
 		}
 
 		available = {
-
+			NOT = {
+				OR = {
+					has_idea = MAN_banditry_time
+				}
+			}
 		}
 
 		bypass = {
@@ -1392,10 +1497,19 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-
+			swap_ideas = {
+				remove_idea = MAN_bandit_ruthless
+				add_idea = MAN_bandit_ruthless_2
+			}
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 
-		completion_reward = {			
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MAN_bandit_ruthless
+				add_idea = MAN_bandit_ruthless_2
+			}
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 	}
 	
@@ -1414,7 +1528,11 @@ focus_tree = {
 		}
 
 		available = {
-
+			NOT = {
+				OR = {
+					has_idea = MAN_banditry_time
+				}
+			}
 		}
 
 		bypass = {
@@ -1426,10 +1544,19 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-
+			swap_ideas = {
+				remove_idea = MAN_bandit_ruthless_2
+				add_idea = MAN_bandit_ruthless_3
+			}
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 
-		completion_reward = {			
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MAN_bandit_ruthless_2
+				add_idea = MAN_bandit_ruthless_3
+			}
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 	}
 	
@@ -1449,7 +1576,11 @@ focus_tree = {
 		}
 
 		available = {
-
+			NOT = {
+				OR = {
+					has_idea = MAN_banditry_time
+				}
+			}
 		}
 
 		bypass = {
@@ -1461,10 +1592,13 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-
+			add_ideas = MAN_bandit_pacify
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 
-		completion_reward = {			
+		completion_reward = {
+			add_ideas = MAN_bandit_pacify
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 	}
 	
@@ -1483,7 +1617,11 @@ focus_tree = {
 		}
 
 		available = {
-
+			NOT = {
+				OR = {
+					has_idea = MAN_banditry_time
+				}
+			}
 		}
 
 		bypass = {
@@ -1495,10 +1633,19 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-
+			swap_ideas = {
+				remove_idea = MAN_bandit_pacify
+				add_idea = MAN_bandit_pacify_2
+			}
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 
-		completion_reward = {			
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MAN_bandit_pacify
+				add_idea = MAN_bandit_pacify_2
+			}
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 	}
 	
@@ -1517,7 +1664,11 @@ focus_tree = {
 		}
 
 		available = {
-
+			NOT = {
+				OR = {
+					has_idea = MAN_banditry_time
+				}
+			}
 		}
 
 		bypass = {
@@ -1529,44 +1680,19 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-
-		}
-
-		completion_reward = {			
-		}
-	}
-
-	focus = {
-		id = MAN_hoankyoku
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 20
-		y = 1
-		relative_position_id = MAN_obedience
-
-		cost = 7.15
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		available = {
-           is_ai = no
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
+			swap_ideas = {
+				remove_idea = MAN_bandit_pacify_2
+				add_idea = MAN_bandit_pacify_3
+			}
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 
 		completion_reward = {
-			add_ideas = MAN_white_russian_advisers
+			swap_ideas = {
+				remove_idea = MAN_bandit_pacify_2
+				add_idea = MAN_bandit_pacify_3
+			}
+			add_timed_idea = { idea = MAN_banditry_time days = 70 }
 		}
 	}
 
