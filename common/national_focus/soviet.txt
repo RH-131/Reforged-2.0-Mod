@@ -2514,11 +2514,7 @@ focus_tree = {
 				has_state_flag = SOV_5_year_plan_IC
 			}		
 			ROOT = {
-				controls_state = 200
-				controls_state = 227
-				controls_state = 221
-				controls_state = 228
-				controls_state = 218
+				controls_state = 217
 				controls_state = 219
 				controls_state = 195
 			}
@@ -2584,11 +2580,7 @@ focus_tree = {
 				has_state_flag = SOV_5_year_plan_IC
 			}
 			ROOT = {
-				controls_state = 200
-				controls_state = 227
-				controls_state = 221
-				controls_state = 228
-				controls_state = 218
+				controls_state = 217
 				controls_state = 219
 				controls_state = 195
 			}
@@ -2693,11 +2685,7 @@ focus_tree = {
 			SOV_magnitogorsk_development_trigger = yes 
 			check_variable = { var = magnitogorsk_development_var value = 5 compare = greater_than_or_equals }
 			ROOT = {
-				controls_state = 200
-				controls_state = 227
-				controls_state = 221
-				controls_state = 228
-				controls_state = 218
+				controls_state = 217
 				controls_state = 219
 				controls_state = 195
 			}		
@@ -2731,11 +2719,7 @@ focus_tree = {
 				has_state_flag = SOV_5_year_plan_IC
 			}		
 			ROOT = {
-				controls_state = 200
-				controls_state = 227
-				controls_state = 221
-				controls_state = 228
-				controls_state = 218
+				controls_state = 217
 				controls_state = 219
 				controls_state = 195
 			}		
@@ -2806,11 +2790,7 @@ focus_tree = {
 				has_state_flag = SOV_5_year_plan_IC
 			}	
 			ROOT = {
-				controls_state = 200
-				controls_state = 227
-				controls_state = 221
-				controls_state = 228
-				controls_state = 218
+				controls_state = 217
 				controls_state = 219
 				controls_state = 195
 			}		
@@ -2900,11 +2880,7 @@ focus_tree = {
 				date > 1942.1.1		
 			}
 			ROOT = {
-				controls_state = 200
-				controls_state = 227
-				controls_state = 221
-				controls_state = 228
-				controls_state = 218
+				controls_state = 217
 				controls_state = 219
 				controls_state = 195
 			}
@@ -2984,11 +2960,7 @@ focus_tree = {
 				date > 1942.1.1		
 			}
 			ROOT = {
-				controls_state = 200
-				controls_state = 227
-				controls_state = 221
-				controls_state = 228
-				controls_state = 218
+				controls_state = 217
 				controls_state = 219
 				controls_state = 195
 			}
@@ -5298,6 +5270,7 @@ focus_tree = {
 				OR = {
 					surrender_progress > 0.4
 					GER = { controls_state = 218 }
+					date > 1942.10.1
 				}
 			}
 		}
@@ -5699,6 +5672,7 @@ focus_tree = {
 			OR = {
 				surrender_progress > 0.2
 				GER = { controls_state = 206 }
+				date > 1941.11.1
 			}
 		}
 		relative_position_id = SOV_retrieve_stalin_from_his_dacha
@@ -5969,7 +5943,10 @@ focus_tree = {
 		}
 
 		available = {
-			surrender_progress > 0.4
+			OR = {
+				surrender_progress > 0.4
+				date > 1943.6.1
+			}
 		}
 		x = 0
 		y = 2
@@ -6200,6 +6177,7 @@ focus_tree = {
 		            SOV = { controls_state = 266 }
 			    }
 				surrender_progress > 0.4
+				date > 1943.1.1
 			}
 		}
 

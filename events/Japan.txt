@@ -1091,7 +1091,40 @@ country_event = {
 			annex_country = { target = INS transfer_troops = no }
 		}
 		hidden_effect = {
-			annex_country = { target = INS transfer_troops = no }			
+			annex_country = { target = INS transfer_troops = no }
+			FRA = {
+			    remove_ideas = refinery_idea
+			}
+			RAJ = {    
+				remove_ideas = refinery_idea
+			}
+			CAN = {    
+				remove_ideas = refinery_idea
+			}
+		    AST = {    
+				remove_ideas = refinery_idea
+			}
+			SAF = {    
+		    	remove_ideas = refinery_idea
+			}
+		    NZL = {    
+				remove_ideas = refinery_idea
+			}
+			IRE = {    
+				remove_ideas = refinery_idea
+			}
+			ENG = {    
+		    	remove_ideas = refinery_idea
+			}
+			PHI = {
+			    remove_ideas = refinery_idea
+			}
+			MEX = {
+			    remove_ideas = refinery_idea
+			}
+			USA = {
+			    remove_ideas = refinery_idea
+			}
 		}
 		if = {
 			limit = { 333 = { owner = { original_tag = RAJ } } }
