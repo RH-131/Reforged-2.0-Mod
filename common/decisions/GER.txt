@@ -2485,12 +2485,9 @@ GER_case_anton_category = {
 		available = {
 			has_government = fascism
 			country_exists = EFR
+			date > 1942.9.1
 			EFR = { is_ai = yes }
 			USA = { has_war = yes }
-		}
-		
-		visible = {
-	        has_war_with = USA
 		}
 		
 		cost = 25
@@ -2507,10 +2504,9 @@ GER_case_anton_category = {
 			custom_effect_tooltip = GER_case_anton_tt
 			
 		}
-		days_remove = 1
+		days_remove = 70
 		remove_effect = {
 			GER = {
-				set_autonomy = { target = EFR autonomy_state = autonomy_reichsprotectorate }
 				transfer_state = 26
 				transfer_state = 22
 				transfer_state = 31

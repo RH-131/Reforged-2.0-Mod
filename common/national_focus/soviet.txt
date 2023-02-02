@@ -5138,8 +5138,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = SOV_aviation_enthusiasm
-
+			swap_ideas = {
+				add_idea = SOV_aviation_enthusiasm
+				remove_idea = SOV_outdated_airforce
+			}
+			
 			random_owned_state = {
 				add_extra_state_shared_building_slots = 5 
 				add_building_construction = {

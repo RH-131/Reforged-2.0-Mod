@@ -256,7 +256,10 @@ ITA_hold_land_category = {
 		}
 		#Fail
 		complete_effect = {
-			add_ideas = ITA_humiliating_defeat	
+			add_timed_idea = {
+				idea = ITA_humiliating_defeat
+				days = 180
+			}
 			country_event = italy.29
 		}
 	}

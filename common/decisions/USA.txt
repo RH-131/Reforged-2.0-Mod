@@ -1710,7 +1710,10 @@ USA_unique_measures = {
 		
 		remove_effect = {
 		    EFR = { remove_ideas = { EFR_petain } }
-			GER = { add_to_faction = EFR }
+			GER = { 
+				add_to_faction = EFR 
+				set_autonomy = { target = EFR autonomy_state = autonomy_reichsprotectorate }
+			}
 		    EFR = {
 				declare_war_on = {
            	    			target = USA
