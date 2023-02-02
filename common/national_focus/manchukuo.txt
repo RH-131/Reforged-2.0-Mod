@@ -1696,6 +1696,50 @@ focus_tree = {
 		}
 	}
 
+#			#####################
+#			####China States#####
+#			#####################
+
+	focus = { #Event given to Japan to determine what states Manchu takes
+		id = MAN_emperor_demands_china_land
+		icon = GFX_goal_tfv_saf_secure_interests_in_africa
+
+		x = 25
+		y = 0
+
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			CHI = {
+		        has_capitulated = yes 
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		JAP = { custom_effect_tooltip = needs_approval 
+#				country_event = tfv_south_africa.1
+				}
+		}
+	}
+
+
+#			#########################
+#			####Military Focuses#####
+#			#########################
+
+
 	focus = {
 		id = MAN_army_effort
 		icon = GFX_goal_generic_allies_build_infantry
