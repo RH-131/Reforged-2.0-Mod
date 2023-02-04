@@ -1620,7 +1620,7 @@ ENG_budget_decisions = {
 			factor = 1
 			modifier = {
 				has_equipment = {
-					fighter_equipment < 1
+					small_plane_airframe < 1
 				}
 				factor = 5
 			}
@@ -1663,7 +1663,7 @@ ENG_budget_decisions = {
 		remove_effect = {
 			clr_country_flag = ENG_bought_fighter
 			add_equipment_to_stockpile = {
-				type = fighter_equipment
+				type = small_plane_airframe
 				producer = USA
 				amount = 250
 			}
@@ -1692,7 +1692,7 @@ ENG_budget_decisions = {
 			factor = 1
 			modifier = {
 				has_equipment = {
-					heavy_fighter_equipment < 1
+					medium_plane_fighter_airframe < 1
 				}
 				factor = 5
 			}
@@ -1735,7 +1735,7 @@ ENG_budget_decisions = {
 		remove_effect = {
 			clr_country_flag = ENG_bought_fighter
 			add_equipment_to_stockpile = {
-				type = heavy_fighter_equipment
+				type = medium_plane_fighter_airframe
 				producer = USA
 				amount = 200
 			}
@@ -1761,7 +1761,7 @@ ENG_budget_decisions = {
 			factor = 1
 			modifier = {
 				has_equipment = {
-					tac_bomber_equipment < 1
+					medium_plane_airframe < 1
 				}
 				factor = 5
 			}
@@ -1804,7 +1804,7 @@ ENG_budget_decisions = {
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = tac_bomber_equipment
+				type = medium_plane_airframe
 				producer = USA
 				amount = 100
 			}
@@ -1831,7 +1831,7 @@ ENG_budget_decisions = {
 			factor = 1
 			modifier = {
 				has_equipment = {
-					tac_bomber_equipment < 1
+					large_plane_airframe < 1
 				}
 				factor = 5
 			}
@@ -1874,7 +1874,7 @@ ENG_budget_decisions = {
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = strat_bomber_equipment
+				type = large_plane_airframe
 				producer = USA
 				amount = 70
 			}

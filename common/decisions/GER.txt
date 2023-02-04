@@ -2489,7 +2489,7 @@ GER_case_anton_category = {
 			EFR = { is_ai = yes }
 			USA = { has_war = yes }
 		}
-
+		
 		cost = 25
 		fire_only_once = yes
 
@@ -2507,7 +2507,6 @@ GER_case_anton_category = {
 		days_remove = 70
 		remove_effect = {
 			GER = {
-				set_autonomy = { target = EFR autonomy_state = autonomy_reichsprotectorate }
 				transfer_state = 26
 				transfer_state = 22
 				transfer_state = 31
@@ -2516,6 +2515,7 @@ GER_case_anton_category = {
 				transfer_state = 33
 				transfer_state = 21
 				transfer_state = 32
+				transfer_state = 851
 				
 			}
 			every_state = {
@@ -4909,7 +4909,7 @@ GER_military_buildup = {
 					size < 1501
 				}
 				has_equipment = {
-					fighter_equipment < 1501
+					small_plane_airframe < 1501
 				}
 			}
 			NOT = {
@@ -4920,12 +4920,6 @@ GER_military_buildup = {
         fire_only_once = yes
 
 		visible = {
-			HUN = {
-				is_ai = yes 
-			}
-			ROM = {
-				is_ai = yes
-			}
 			has_war = yes
 			AND = {
 				has_deployed_air_force_size = {
@@ -4933,7 +4927,7 @@ GER_military_buildup = {
 					size < 1501
 				}
 				has_equipment = {
-					fighter_equipment < 1501
+					small_plane_airframe < 1501
 				}
 			}
 			NOT = {

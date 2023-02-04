@@ -9442,40 +9442,43 @@ focus_tree = {
 
 				add_manpower = -60000
 
-				division_template = {
-					name = "Home Guard"
-					priority = 2
+				if = {
+					limit = { NOT = { has_completed_focus = ENG_fight_on_the_beaches } }
+					division_template = {
+						name = "Home Guard"
+						priority = 2
 
-					regiments = {
-						light_infantry = { x = 0 y = 0 }
-						light_infantry = { x = 0 y = 1 }
-						light_infantry = { x = 0 y = 2 }
-						
-						light_infantry = { x = 1 y = 0 }
-						light_infantry = { x = 1 y = 1 }
-						light_infantry = { x = 1 y = 2 }
+						regiments = {
+							light_infantry = { x = 0 y = 0 }
+							light_infantry = { x = 0 y = 1 }
+							light_infantry = { x = 0 y = 2 }
 							
-						light_infantry = { x = 2 y = 0 }
-						light_infantry = { x = 2 y = 1 }
-						light_infantry = { x = 2 y = 2 }
-						
-						artillery_brigade = { x = 3 y = 0 }
-						artillery_brigade = { x = 3 y = 1 }
-						light_infantry = { x = 3 y = 2 }
-						
-						anti_air = { x = 4 y = 0 }
-						anti_tank_brigade = { x = 4 y = 1 }
-						light_infantry = { x = 4 y = 2 }
-						
-					}
+							light_infantry = { x = 1 y = 0 }
+							light_infantry = { x = 1 y = 1 }
+							light_infantry = { x = 1 y = 2 }
+								
+							light_infantry = { x = 2 y = 0 }
+							light_infantry = { x = 2 y = 1 }
+							light_infantry = { x = 2 y = 2 }
+							
+							artillery_brigade = { x = 3 y = 0 }
+							artillery_brigade = { x = 3 y = 1 }
+							light_infantry = { x = 3 y = 2 }
+							
+							anti_air = { x = 4 y = 0 }
+							anti_tank_brigade = { x = 4 y = 1 }
+							light_infantry = { x = 4 y = 2 }
+							
+						}
 
-			        support = {
-						DIV_HQ = { x = 0 y = 0 }
-				       	engineer = { x = 0 y = 1 }
-						anti_tank = { x = 0 y = 2 }
-						military_police = { x = 1 y = 0 }
-						recon = { x = 1 y = 1 }
-						anti_air_company = { x = 1 y = 2 }
+						support = {
+							DIV_HQ = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							anti_tank = { x = 0 y = 2 }
+							military_police = { x = 1 y = 0 }
+							recon = { x = 1 y = 1 }
+							anti_air_company = { x = 1 y = 2 }
+						}
 					}
 				}
 
@@ -10864,40 +10867,43 @@ focus_tree = {
 
 				add_manpower = -180000
 				
-				division_template = {
-					name = "Home Guard"
-					priority = 2
+				if = {
+					limit = { NOT = { has_completed_focus = ENG_home_defence } }
+					division_template = {
+						name = "Home Guard"
+						priority = 2
 
-					regiments = {
-						light_infantry = { x = 0 y = 0 }
-						light_infantry = { x = 0 y = 1 }
-						light_infantry = { x = 0 y = 2 }
-						
-						light_infantry = { x = 1 y = 0 }
-						light_infantry = { x = 1 y = 1 }
-						light_infantry = { x = 1 y = 2 }
+						regiments = {
+							light_infantry = { x = 0 y = 0 }
+							light_infantry = { x = 0 y = 1 }
+							light_infantry = { x = 0 y = 2 }
 							
-						light_infantry = { x = 2 y = 0 }
-						light_infantry = { x = 2 y = 1 }
-						light_infantry = { x = 2 y = 2 }
-						
-						artillery_brigade = { x = 3 y = 0 }
-						artillery_brigade = { x = 3 y = 1 }
-						light_infantry = { x = 3 y = 2 }
-						
-						anti_air = { x = 4 y = 0 }
-						anti_tank_brigade = { x = 4 y = 1 }
-						light_infantry = { x = 4 y = 2 }
-						
-					}
+							light_infantry = { x = 1 y = 0 }
+							light_infantry = { x = 1 y = 1 }
+							light_infantry = { x = 1 y = 2 }
+								
+							light_infantry = { x = 2 y = 0 }
+							light_infantry = { x = 2 y = 1 }
+							light_infantry = { x = 2 y = 2 }
+							
+							artillery_brigade = { x = 3 y = 0 }
+							artillery_brigade = { x = 3 y = 1 }
+							light_infantry = { x = 3 y = 2 }
+							
+							anti_air = { x = 4 y = 0 }
+							anti_tank_brigade = { x = 4 y = 1 }
+							light_infantry = { x = 4 y = 2 }
+							
+						}
 
-			        support = {
-						DIV_HQ = { x = 0 y = 0 }
-				       	engineer = { x = 0 y = 1 }
-						anti_tank = { x = 0 y = 2 }
-						military_police = { x = 1 y = 0 }
-						recon = { x = 1 y = 1 }
-						anti_air_company = { x = 1 y = 2 }
+						support = {
+							DIV_HQ = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							anti_tank = { x = 0 y = 2 }
+							military_police = { x = 1 y = 0 }
+							recon = { x = 1 y = 1 }
+							anti_air_company = { x = 1 y = 2 }
+						}
 					}
 				}
 				

@@ -37,9 +37,29 @@ ideas = {
 			picture = FRA_motorized_focus
 
 			modifier = {
-				production_speed_synthetic_rubber_refinery_factor = -0.8
+				production_speed_synthetic_rubber_refinery_factor = -0.9
 			}
 		}
+		
+		refinery_idea_usa = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_motorized_focus
+
+			modifier = {
+				production_speed_synthetic_rubber_refinery_factor = -0.65
+			}
+		}
+		
 
 		USA_the_wpa = {
 			picture = office_of_strategic_services
@@ -2330,13 +2350,22 @@ ideas = {
 					naval_strike_attack = 0.1 
 					build_cost_ic = -0.1 
 				}
+				small_plane_cas_airframe = {
+					air_ground_attack = 0.1 
+					reliability = 0.05
+				}
+				cv_small_plane_cas_airframe = {
+					air_ground_attack = 0.1
+					naval_strike_attack = 0.1
+					reliability = 0.05
+				}
 			}
 
 			research_bonus = {
 				air_equipment = -0.05
 			}
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
-			traits = { CAS_manufacturer }
+			traits = { USA_douglas }
 
 			modifier = {
 			}
@@ -2353,9 +2382,20 @@ ideas = {
 					maximum_speed = 0.1 
 					air_range = 0.1 
 				}
-				heavy_fighter_equipment = { 
-					maximum_speed = 0.1 
-					build_cost_ic = -0.1 
+				medium_plane_fighter_airframe = {
+					reliability = 0.05
+					air_agility = 0.05
+					air_range = 0.05
+					maximum_speed = 0.05
+				}
+				medium_plane_airframe = {
+					reliability = 0.05
+					air_bombing = 0.05
+					air_range = 0.05
+				}
+				medium_plane_scout_plane_airframe = {
+					air_range = 0.1
+					reliability = 0.2
 				}
 			}
 
@@ -2363,10 +2403,6 @@ ideas = {
 				air_equipment = -0.05
 			}
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
-			traits = { medium_aircraft_manufacturer }
-
-			modifier = {
-			}
 		}
 
 		boeing = {
