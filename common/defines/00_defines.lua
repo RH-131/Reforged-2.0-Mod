@@ -3771,14 +3771,14 @@ NSupply = {
 	-- defines that are used for supply reach for capital
 	-- supply flow will start from INITIAL_SUPPLY_FLOW and will be reduced by a penalty on each province it travels (which depends on how far we are from our origin, terrain etc)
 	-- a supply reach >= 1.0 considered "perfect" and will be able to fully support units on that particular province (assuming you are not over capacity)
-	CAPITAL_INITIAL_SUPPLY_FLOW = 5.0, -- starting supply from
-	CAPITAL_STARTING_PENALTY_PER_PROVINCE = 0.5, -- starting penalty that will be added as supply moves away from its origin (modified by stuff like terrain)
-	CAPITAL_ADDED_PENALTY_PER_PROVINCE = 1.2, -- added penalty as we move away from origin
+	CAPITAL_INITIAL_SUPPLY_FLOW = 6.0, -- starting supply from
+	CAPITAL_STARTING_PENALTY_PER_PROVINCE = 0.25, -- starting penalty that will be added as supply moves away from its origin (modified by stuff like terrain)
+	CAPITAL_ADDED_PENALTY_PER_PROVINCE = 0.7, -- added penalty as we move away from origin
 
 	-- defines that are used for supply reach for built nodes
-	NODE_INITIAL_SUPPLY_FLOW = 2.8,
-	NODE_STARTING_PENALTY_PER_PROVINCE = 0.50,
-	NODE_ADDED_PENALTY_PER_PROVINCE = 0.70,
+	NODE_INITIAL_SUPPLY_FLOW = 3.0,
+	NODE_STARTING_PENALTY_PER_PROVINCE = 0.20,
+	NODE_ADDED_PENALTY_PER_PROVINCE = 0.40,
 
 	-- defines that are used for supply reach for dockyards
 	NAVAL_BASE_INITIAL_SUPPLY_FLOW = 3.5,
@@ -3786,14 +3786,14 @@ NSupply = {
 	NAVAL_BASE_ADDED_PENALTY_PER_PROVINCE = 1.0,
 
 	-- Node Flow (i.e. province caps) increase by this amount per railway level of the node's bottleneck
-	NODE_FLOW_BONUS_PER_RAIL_LEVEL = 0.34,
+	NODE_FLOW_BONUS_PER_RAIL_LEVEL = 0.40,
 
 	-- rivers will transfer in between nodes as if they were this level
 	RIVER_RAILWAY_LEVEL = 1,
 
 	-- defines that are used for supply reach for floating harbors
-	FLOATING_HARBOR_INITIAL_SUPPLY_FLOW = 2.6,
-	FLOATING_HARBOR_STARTING_PENALTY_PER_PROVINCE = 0.8,
+	FLOATING_HARBOR_INITIAL_SUPPLY_FLOW = 2.4,
+	FLOATING_HARBOR_STARTING_PENALTY_PER_PROVINCE = 0.4,
 	FLOATING_HARBOR_ADDED_PENALTY_PER_PROVINCE = 0.8,
 
 	FLOATING_HARBOR_BASE_SUPPLY = 15.0, -- supply given by a floating harbor
@@ -3817,9 +3817,9 @@ NSupply = {
 	SUPPLY_FLOW_DIST_LOGISTICS_FALLOFF_MIN_PENALTY_SCALE = 0.25, -- Logistics curve never reduces penalty facor below this limit
 
 	-- The range bonus added to a fully motorized hub. This supply is added on top of the XXX_INITIAL_SUPPLY_FLOW defined above.
-	SUPPLY_HUB_FULL_MOTORIZATION_BONUS = 2.2,
+	SUPPLY_HUB_FULL_MOTORIZATION_BONUS = 2.5,
 	-- How many trucks does it cost to fully motorize a hub
-	SUPPLY_HUB_FULL_MOTORIZATION_TRUCK_COST = 50.0,
+	SUPPLY_HUB_FULL_MOTORIZATION_TRUCK_COST = 40.0,
 	-- For each additional level of motorization on a hub (i.e. contry with set motoriazation) reduce max bonus for next level by this amount
 	SUPPLY_HUB_MOTORIZATION_MARGINAL_EFFECT_DECAY = 1.6,
 
@@ -3827,7 +3827,7 @@ NSupply = {
 	-- used for calculating "flow" for railways.
 	RAILWAY_BASE_FLOW = 15.0, 		-- how much base flow railway gives when a node connected to its capital/a naval node by a railway
 	RAILWAY_FLOW_PER_LEVEL = 10.0, 	-- how much additional flow a railway level gives
-	RAILWAY_FLOW_PENALTY_PER_DAMAGED = 10.0, -- penalty to flow per damaged railway
+	RAILWAY_FLOW_PENALTY_PER_DAMAGED = 8.0, -- penalty to flow per damaged railway
 	RAILWAY_MIN_FLOW = 10.0, 		-- minimum railway flow can be reduced to
 
 	-- used for calculating "flow" from a naval node to another naval node when it is connected via a convoy route
@@ -3837,7 +3837,7 @@ NSupply = {
 
 	SUPPLY_NODE_MIN_SUPPLY_THRESHOLD = 1.0, -- if supply of a node is below this value it will be set to 0 -- Currently unused?
 
-	INFRA_TO_SUPPLY = 0.6,							-- each level of infra gives this many supply
+	INFRA_TO_SUPPLY = 0.7,							-- each level of infra gives this many supply
 	VP_TO_SUPPLY_BASE = 0.4,							-- Bonus to supply from a VP, no matter the level
 	VP_TO_SUPPLY_BONUS_CONVERSION = 0.1,			-- Bonus to supply local supplies from Victory Points, multiplied by this aspect and rounded to closest integer
 	SUPPLY_FROM_DAMAGED_INFRA = 0.3,                -- damaged infrastructure counts as this in supply calcs
