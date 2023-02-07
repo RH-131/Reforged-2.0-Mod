@@ -13,7 +13,7 @@ focus_tree = {
 
 	default = no
 	
-	continuous_focus_position = { x = 50 y = 1500 }
+	continuous_focus_position = { x = 50 y = 1000 }
 	
 	focus = {
 		id = MAN_pacify_the_countryside
@@ -1737,7 +1737,287 @@ focus_tree = {
 			remove_ideas = MAN_china
 		}
 	}
+	
+	focus = {
+		id = MAN_communist
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_emperor_demands_china_land }
+		x = -2
+		y = 1
+		relative_position_id = MAN_emperor_demands_china_land
 
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			controls_state = 622
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = MAN_china
+		}
+	}
+	
+	focus = {
+		id = MAN_communist_2
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_communist }
+		x = -2
+		y = 2
+		relative_position_id = MAN_emperor_demands_china_land
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = MAN_china
+		}
+	}
+	
+	focus = {
+		id = MAN_communist_3
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_communist_2 }
+		x = -2
+		y = 3
+		relative_position_id = MAN_emperor_demands_china_land
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = MAN_china
+		}
+	}
+	
+	###Wastes###
+	focus = {
+		id = MAN_wastes
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_emperor_demands_china_land }
+		x = 0
+		y = 1
+		relative_position_id = MAN_emperor_demands_china_land
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			controls_state = 622
+			controls_state = 283
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = MAN_china
+		}
+	}
+	
+	focus = {
+		id = MAN_wastes_2
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_wastes }
+		x = 0
+		y = 2
+		relative_position_id = MAN_emperor_demands_china_land
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = MAN_china
+		}
+	}
+	
+	focus = {
+		id = MAN_wastes_3
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_wastes_2 }
+		x = 0
+		y = 3
+		relative_position_id = MAN_emperor_demands_china_land
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = MAN_china
+		}
+	}
+	
+	###China Reborn###
+	focus = {
+		id = MAN_newchina
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_emperor_demands_china_land }
+		x = 2
+		y = 1
+		relative_position_id = MAN_emperor_demands_china_land
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			controls_state = 622
+			controls_state = 283
+			controls_state = 605
+			controls_state = 608
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = MAN_china
+		}
+	}
+	
+	focus = {
+		id = MAN_newchina_2
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_newchina }
+		x = 2
+		y = 2
+		relative_position_id = MAN_emperor_demands_china_land
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = MAN_china
+		}
+	}
+	
+	focus = {
+		id = MAN_newchina_3
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_newchina_2 }
+		x = 2
+		y = 3
+		relative_position_id = MAN_emperor_demands_china_land
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = MAN_china
+		}
+	}
 
 #			#########################
 #			####Military Focuses#####
