@@ -1729,7 +1729,13 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
+		
+		complete_tooltip = {
+			JAP = { custom_effect_tooltip = needs_approval 
+				country_event = wtt_manchukou_china.1
+				}
+			remove_ideas = MAN_china
+		}
 		completion_reward = {
 		JAP = { custom_effect_tooltip = needs_approval 
 				country_event = wtt_manchukou_china.1
@@ -1739,7 +1745,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = MAN_communist
+		id = MAN_communist_core
 		icon = GFX_focus_research
 		prerequisite = { focus = MAN_emperor_demands_china_land }
 		x = -2
@@ -1763,16 +1769,26 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
+		
+		complete_tooltip = {
+			add_state_core = 615
+			add_state_core = 622
+			add_state_core = 621
+			add_state_core = 746
+		}
+		
 		completion_reward = {
-			remove_ideas = MAN_china
+			add_state_core = 615
+			add_state_core = 622
+			add_state_core = 621
+			add_state_core = 746
 		}
 	}
 	
 	focus = {
-		id = MAN_communist_2
+		id = MAN_communist_infrastructure
 		icon = GFX_focus_research
-		prerequisite = { focus = MAN_communist }
+		prerequisite = { focus = MAN_communist_core }
 		x = -2
 		y = 2
 		relative_position_id = MAN_emperor_demands_china_land
@@ -1793,16 +1809,74 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		
+		complete_tooltip = {
+			621 = {
+				add_extra_state_shared_building_slots = 2
 
+			}
+			746 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			615 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			622 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
 		completion_reward = {
-			remove_ideas = MAN_china
+			621 = {
+				add_extra_state_shared_building_slots = 2
+
+			}
+			746 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			615 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			622 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
 	focus = {
-		id = MAN_communist_3
+		id = MAN_communist_exploit
 		icon = GFX_focus_research
-		prerequisite = { focus = MAN_communist_2 }
+		prerequisite = { focus = MAN_communist_infrastructure }
 		x = -2
 		y = 3
 		relative_position_id = MAN_emperor_demands_china_land
@@ -1823,9 +1897,14 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
+		
+		complete_tooltip = {
+			add_ideas = MAN_communist_manpower
+			unlock_decision_tooltip = MAN_develop_shaanxi_resource_deposits
+		}
 		completion_reward = {
-			remove_ideas = MAN_china
+			add_ideas = MAN_communist_manpower
+			unlock_decision_tooltip = MAN_develop_shaanxi_resource_deposits
 		}
 	}
 	
@@ -1856,14 +1935,74 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
+		
+		complete_tooltip = {
+			add_ideas = MAN_wasteland_overlord
+			756 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
+			755 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
+			604 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
+			616 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
+			754 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
+			283 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
+			753 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
+		}
+			
 		completion_reward = {
-			remove_ideas = MAN_china
+			add_ideas = MAN_wasteland_overlord
+			756 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
+			755 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
+			604 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
+			616 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
+			754 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
+			283 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
+			753 = {
+			set_resistance = 0
+			set_compliance = 55
+			}
 		}
 	}
 	
 	focus = {
-		id = MAN_wastes_2
+		id = MAN_wastes_resources
 		icon = GFX_focus_research
 		prerequisite = { focus = MAN_wastes }
 		x = 0
@@ -1877,6 +2016,9 @@ focus_tree = {
 		}
 
 		available = {
+			IF = {
+				has_completed_focus = MAN_self_sufficient
+			}
 		}
 		
 		bypass = {
@@ -1886,16 +2028,28 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
+		complete_tooltip = {
+			unlock_decision_tooltip = MAN_develop_gansu_resource_deposits
+			unlock_decision_tooltip = MAN_develop_qinghai_resource_deposits
+			swap_ideas = {
+				remove_idea = MAN_resource_demand_2
+				add_idea = MAN_resource_demand_3
+			}
+		}
 		completion_reward = {
-			remove_ideas = MAN_china
+			unlock_decision_tooltip = MAN_develop_gansu_resource_deposits
+			unlock_decision_tooltip = MAN_develop_qinghai_resource_deposits
+			swap_ideas = {
+				remove_idea = MAN_resource_demand_2
+				add_idea = MAN_resource_demand_3
+			}
 		}
 	}
 	
 	focus = {
-		id = MAN_wastes_3
+		id = MAN_wastes_connection
 		icon = GFX_focus_research
-		prerequisite = { focus = MAN_wastes_2 }
+		prerequisite = { focus = MAN_wastes_resources }
 		x = 0
 		y = 3
 		relative_position_id = MAN_emperor_demands_china_land
@@ -1916,9 +2070,78 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
+		
+		complete_tooltip = {
+			# Hsinking to Golmud
+			build_railway = {
+				level = 2
+				start_province = 4572
+				target_province = 7940
+			}
+			604 = {
+				add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+				}
+			}
+			754 = {
+				add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+				}
+			}
+			283 = {
+				add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+				}
+			}
+			753 = {
+				add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
 		completion_reward = {
-			remove_ideas = MAN_china
+			# Hsinking to Golmud
+			build_railway = {
+				level = 2
+				start_province = 4572
+				target_province = 7940
+			}
+			604 = {
+				add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+				}
+			}
+			754 = {
+				add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+				}
+			}
+			283 = {
+				add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+				}
+			}
+			753 = {
+				add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -1951,14 +2174,19 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
+		
+		complete_tooltip = {
+			add_state_core = 608
+			add_state_core = 609
+		}
 		completion_reward = {
-			remove_ideas = MAN_china
+			add_state_core = 608
+			add_state_core = 609	
 		}
 	}
 	
 	focus = {
-		id = MAN_newchina_2
+		id = MAN_newchina_sichuan
 		icon = GFX_focus_research
 		prerequisite = { focus = MAN_newchina }
 		x = 2
@@ -1983,15 +2211,20 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+			add_state_core = 605
+			add_state_core = 744
+		}
 		completion_reward = {
-			remove_ideas = MAN_china
+			add_state_core = 605
+			add_state_core = 744	
 		}
 	}
 	
 	focus = {
-		id = MAN_newchina_3
+		id = MAN_newchina_forbidden_castle
 		icon = GFX_focus_research
-		prerequisite = { focus = MAN_newchina_2 }
+		prerequisite = { focus = MAN_newchina_sichuan }
 		x = 2
 		y = 3
 		relative_position_id = MAN_emperor_demands_china_land
@@ -2003,6 +2236,9 @@ focus_tree = {
 		}
 
 		available = {
+			IF = {
+				has_completed_focus = MAN_communist_exploit
+			}
 
 		}
 		
@@ -2013,9 +2249,61 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
+		
+		complete_tooltip = {
+			swap_ideas = {
+				remove_idea = MAN_communist_manpower
+				add_idea = MAN_communist_manpower_2
+			}
+			605 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			608 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
 		completion_reward = {
-			remove_ideas = MAN_china
+			swap_ideas = {
+				remove_idea = MAN_communist_manpower
+				add_idea = MAN_communist_manpower_2
+			}
+			605 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			608 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 

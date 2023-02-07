@@ -59,6 +59,72 @@ ideas = {
 			}
 			
 		}
+		MAN_communist_manpower = {
+		
+			allowed = {
+				original_tag = MAN
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				max_planning = 0.05
+				planning_speed = 0.05
+				army_morale_factor = 0.05
+				minimum_training_level = -0.2
+				experience_gain_factor = -0.2
+				conscription_factor = 0.1
+			}
+			
+		}
+		MAN_communist_manpower_2 = {
+		
+			allowed = {
+				original_tag = MAN
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				max_planning = 0.05
+				planning_speed = 0.05
+				army_morale_factor = 0.08
+				army_org_Factor = 0.03
+				army_defence_factor = 0.025
+				army_attack_factor = 0.025
+				minimum_training_level = -0.25
+				experience_gain_factor = -0.2
+				conscription_factor = 0.1
+			}
+			
+		}
+		
+		MAN_wasteland_overlord = {
+		
+			allowed = {
+				original_tag = MAN
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				non_core_manpower = 0.05
+				compliance_gain = 0.02
+			}
+			
+		}
 		
 		MAN_imperial_pretender = {
 
@@ -528,6 +594,27 @@ ideas = {
 			modifier = {
 				local_resources_factor = 0.15
 				consumer_goods_factor = -0.02
+			}
+		}
+		
+		MAN_resource_demand_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				original_tag = MAN
+			}
+			
+			removal_cost = -1
+
+			picture = SPR_collectivized_society
+			
+			modifier = {
+				stability_factor = -0.1
+				local_resources_factor = 0.20
+				consumer_goods_factor = -0.03
 			}
 		}
 	
