@@ -1714,6 +1714,9 @@ focus_tree = {
 		}
 
 		available = {
+			IF = {
+				has_idea = MAN_china
+			}
 			CHI = {
 		        has_capitulated = yes 
 			}
@@ -1729,8 +1732,9 @@ focus_tree = {
 
 		completion_reward = {
 		JAP = { custom_effect_tooltip = needs_approval 
-				country_event = wtt_manchukou.china.1
+				country_event = wtt_manchukou_china.1
 				}
+			remove_ideas = MAN_china
 		}
 	}
 

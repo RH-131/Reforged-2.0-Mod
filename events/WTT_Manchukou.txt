@@ -1,12 +1,15 @@
-﻿add_namespace = wtt_manchukou
+﻿
+### Manchu Events ###
 
+add_namespace = wtt_manchukou
+add_namespace = wtt_manchukou_china
 
 #Manchu demands Chinese States
 
 country_event = {
-	id = wtt_manchukou.china.1
-	title = wtt_manchukou.china.1.t
-	desc = wtt_manchukou.china.1.desc
+	id = wtt_manchukou_china.1
+	title = wtt_manchukou_china.1.t
+	desc = wtt_manchukou_china.1.d
 	picture = GFX_report_event_manchukuo_army_2
 
 	is_triggered_only = yes
@@ -15,10 +18,8 @@ country_event = {
 	option = {
 		name = wtt_manchukou.china.1.a	# JAP gives communist china
 		
-		ai_chance = {
-
-		}
-		
+		ai_chance = { factor = 90 }
+			
 		effect_tooltip = {
 			MAN = {
 				transfer_state = 615
@@ -28,16 +29,20 @@ country_event = {
 			}
 		}
 		hidden_effect = {
+			MAN = {
+				transfer_state = 615
+				transfer_state = 621
+				transfer_state = 622
+				transfer_state = 746				
+			}
 		}
 	}
 	#give communist and northern wastes
 	option = {
 		name = wtt_manchukou.china.1.b	# JAP gives communist and northern wastes
 		
-		ai_chance = {
-
-		}
-		
+		ai_chance = { factor = 5 }
+			
 		effect_tooltip = {
 			MAN = {
 				transfer_state = 615
@@ -54,15 +59,26 @@ country_event = {
 			}
 		}
 		hidden_effect = {
+			MAN = {
+				transfer_state = 615
+				transfer_state = 621
+				transfer_state = 622
+				transfer_state = 746
+				transfer_state = 616
+				transfer_state = 756
+				transfer_state = 755
+				transfer_state = 754
+				transfer_state = 604
+				transfer_state = 283
+				transfer_state = 753				
+			}
 		}
 	}
 	#accept all emperor demands - communist, northern wastes, sichuan, and bejing
 	option = {
 		name = wtt_manchukou.china.1.c	# JAP gives communist, northern wastes, sichuan, and bejing
 		
-		ai_chance = {
-
-		}
+		ai_chance = { factor = 5 }
 		
 		effect_tooltip = {
 			MAN = {
@@ -87,10 +103,31 @@ country_event = {
 			}
 		}
 		hidden_effect = {
+			MAN = {
+				transfer_state = 615
+				transfer_state = 621
+				transfer_state = 622
+				transfer_state = 746
+				transfer_state = 616
+				transfer_state = 756
+				transfer_state = 755
+				transfer_state = 754
+				transfer_state = 604
+				transfer_state = 283
+				transfer_state = 753
+				transfer_state = 601
+				transfer_state = 752
+				transfer_state = 751
+				transfer_state = 605
+				transfer_state = 744
+				transfer_state = 608
+				transfer_state = 609
+			}
 		}
 	}
 
 }
+
 # Manchukou demands warlord be puppeted
 country_event = {
 	id = wtt_manchukou.1

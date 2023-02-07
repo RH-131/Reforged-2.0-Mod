@@ -133,6 +133,29 @@ prospect_for_resources = {
 	}
 }
 
+operations = {
+	
+	MAN_china_button = {
+		allowed = {
+			tag = MAN
+		}
+		visible = {
+			MAN = { is_ai = no }
+		}
+		available = {
+			CHI = {
+		        has_capitulated = yes 
+			}
+		}
+		cost = 0
+
+		fire_only_once = yes
+		complete_effect = {
+			add_political_power = 50
+			add_ideas = MAN_china
+		}
+	}
+}
 #@MAN_HUNT_BANDITS_EQUIPMENT_COST_TRIGGER = 499
 #@MAN_HUNT_BANDITS_EQUIPMENT_COST_EFFECT = -500
 #
