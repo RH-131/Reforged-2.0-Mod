@@ -17,7 +17,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_pacify_the_countryside
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_national_unity
 		x = 8
 		y = 0
 
@@ -52,7 +52,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_japan_assistance
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_jap_manchurian_project
 		relative_position_id = MAN_pacify_the_countryside
 		x = 4
 		y = 0
@@ -156,7 +156,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_japanese_advisors
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_jap_pacific_guardian
 		prerequisite = { focus = MAN_alliance_with_the_kwantung_army }
 		mutually_exclusive = { focus = MAN_chinese_tactics }
 		relative_position_id = MAN_alliance_with_the_kwantung_army
@@ -192,7 +192,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_japanese_military_control
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_generic_japanese_imperial_glory
 		prerequisite = { focus = MAN_japanese_advisors }
 		relative_position_id = MAN_alliance_with_the_kwantung_army
 		x = -1
@@ -235,7 +235,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_chinese_tactics
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_chi_whampoa_military_academy
 		prerequisite = { focus = MAN_alliance_with_the_kwantung_army }
 		mutually_exclusive = { focus = MAN_japanese_advisors }
 		relative_position_id = MAN_alliance_with_the_kwantung_army
@@ -271,7 +271,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_chinese_army_value
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_chi_united_front
 		prerequisite = { focus = MAN_chinese_tactics }
 		relative_position_id = MAN_alliance_with_the_kwantung_army
 		x = 1
@@ -804,7 +804,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_resource_expansion_demand
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_generic_steel
 		prerequisite = { focus = MAN_national_defense_state focus = MAN_first_five_year_plan }
 		x = 3
 		y = 1
@@ -954,7 +954,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_self_sufficient
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_spr_masters_of_our_own_fate
 		prerequisite = { focus = MAN_expand_showa_steel_works focus = MAN_develop_aluminum_sources }
 		x = 3
 		y = 3
@@ -1039,7 +1039,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_economic_growth
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_generic_industry_1
 		prerequisite = { focus = MAN_collective_farms }
 		x = 0
 		y = 2
@@ -1104,7 +1104,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_construction_invest
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_GOAL_nationalization
 		prerequisite = { focus = MAN_economic_growth }
 		x = 0
 		y = 3
@@ -1234,7 +1234,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_domestic_revival
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_USA_fight_against_corruption
 		prerequisite = { focus = MAN_first_five_year_plan }
 		x = 2
 		y = 1
@@ -1388,7 +1388,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_banditry_solution
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_imprison_people
 		prerequisite = { focus = MAN_pacify_the_countryside }
 		prerequisite = { focus = MAN_japan_assistance }
 		x = 10
@@ -1426,7 +1426,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_ruthless_resolution
-		icon = GFX_focus_research
+		icon = GFX_focus_CZE_german_puppet
 		prerequisite = { focus = MAN_banditry_solution }
 		mutually_exclusive = { focus = MAN_improve_rural_infra }
 		x = -1
@@ -1468,7 +1468,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_ruthless_fist
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = MAN_ruthless_resolution }
 		x = -1
 		y = 2
@@ -1515,7 +1515,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_iron_thumb
-		icon = GFX_focus_research
+		icon = GFX_GER_arbeitseinsatz
 		prerequisite = { focus = MAN_ruthless_fist }
 		x = -1
 		y = 3
@@ -1562,7 +1562,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_improve_rural_infra
-		icon = GFX_focus_research
+		icon = GFX_GOAL_the_ukraine
 		prerequisite = { focus = MAN_banditry_solution }
 		mutually_exclusive = { focus = MAN_ruthless_resolution }
 		x = 1
@@ -1604,7 +1604,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_fair_labor_laws
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = MAN_improve_rural_infra }
 		x = 1
 		y = 2
@@ -1651,7 +1651,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_recruit_former_bandits
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_manpower
 		prerequisite = { focus = MAN_fair_labor_laws }
 		x = 1
 		y = 3
@@ -1746,7 +1746,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_communist_core
-		icon = GFX_focus_research
+		icon = GFX_focus_prc_agrarian_socialism
 		prerequisite = { focus = MAN_emperor_demands_china_land }
 		x = -2
 		y = 1
@@ -1787,7 +1787,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_communist_infrastructure
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_soviet_construction
 		prerequisite = { focus = MAN_communist_core }
 		x = -2
 		y = 2
@@ -1875,7 +1875,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_communist_exploit
-		icon = GFX_focus_research
+		icon = GFX_focus_prc_maoism
 		prerequisite = { focus = MAN_communist_infrastructure }
 		x = -2
 		y = 3
@@ -1911,7 +1911,7 @@ focus_tree = {
 	###Wastes###
 	focus = {
 		id = MAN_wastes
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = MAN_emperor_demands_china_land }
 		x = 0
 		y = 1
@@ -2003,7 +2003,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_wastes_resources
-		icon = GFX_focus_research
+		icon = GFX_goal_construction_engineering
 		prerequisite = { focus = MAN_wastes }
 		x = 0
 		y = 2
@@ -2048,7 +2048,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_wastes_connection
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = MAN_wastes_resources }
 		x = 0
 		y = 3
@@ -2148,7 +2148,7 @@ focus_tree = {
 	###China Reborn###
 	focus = {
 		id = MAN_newchina
-		icon = GFX_focus_research
+		icon = GFX_focus_chi_legislative_yuan
 		prerequisite = { focus = MAN_emperor_demands_china_land }
 		x = 2
 		y = 1
@@ -2187,7 +2187,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_newchina_sichuan
-		icon = GFX_focus_research
+		icon = GFX_focus_chi_examination_yuan
 		prerequisite = { focus = MAN_newchina }
 		x = 2
 		y = 2
@@ -2223,7 +2223,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_newchina_forbidden_castle
-		icon = GFX_focus_research
+		icon = GFX_CHI_strengthen_our_hold_on_china
 		prerequisite = { focus = MAN_newchina_sichuan }
 		x = 2
 		y = 3
