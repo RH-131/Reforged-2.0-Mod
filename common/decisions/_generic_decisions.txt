@@ -1823,6 +1823,9 @@ war_measures = {
         visible = {
             has_war = yes
         }
+		remove_trigger = {
+            has_war = no
+        }
 
         fire_only_once = no
 
@@ -1831,7 +1834,7 @@ war_measures = {
 		cost = 0  #GER_war_bonds_var?50
 
 		modifier = {
-			political_power_gain = -0.25
+			political_power_gain = -0.40
 			consumer_goods_factor = -0.02
 			industrial_capacity_factory = 0.1
 			industrial_capacity_dockyard = 0.1
