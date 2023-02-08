@@ -677,7 +677,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_timed_idea = { idea = MAN_jap_settlers days = 180 }
+			add_timed_idea = { idea = MAN_jap_settlers days = 540 }
 			610 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -2427,7 +2427,7 @@ focus_tree = {
 		
 		available = {
 			IF = {
-				has_completed_focus = MAN_japanese_advisers
+				has_completed_focus = MAN_japanese_advisors
 			}
 		}
 
@@ -2444,7 +2444,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_doctrine_inf_2
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_Nora_oldguard
 		prerequisite = { focus = MAN_doctrine_inf_1 }
 		relative_position_id = MAN_army_effort
 		x = -1
@@ -2474,7 +2474,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_doctrine_inf_china
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_CHI_control_the_populace
 		prerequisite = { focus = MAN_army_effort }
 		relative_position_id = MAN_army_effort
 		x = 1
@@ -2500,7 +2500,7 @@ focus_tree = {
 	
 	focus = {
 		id = MAN_doctrine_inf_china_2
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_RAJ_prince_coup
 		prerequisite = { focus = MAN_doctrine_inf_china }
 		relative_position_id = MAN_army_effort
 		x = 1
@@ -2532,7 +2532,7 @@ focus_tree = {
 		id = MAN_aviation_effort
 		icon = GFX_goal_generic_build_airforce
 		x = 19
-		y = 12
+		y = 8
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -2540,7 +2540,10 @@ focus_tree = {
 
 		complete_tooltip = {
 			air_experience = 25
-			add_ideas = JAP_prioritize_army_aircraft_construction
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = MAN_mamc_light
+			show_ideas_tooltip = MAN_mamc_medium
+			show_ideas_tooltip = MAN_mamc_heavy
 			if = { limit = { has_country_flag = aviation_effort_AB }
 				add_building_construction = {
 					type = air_base
@@ -2557,49 +2560,15 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 25
-            add_ideas = JAP_prioritize_army_aircraft_construction
-			if = {
-				limit = {
-					capital_scope = {
-						NOT = {
-							free_building_slots = {
-								building = air_base
-								size > 1
-							}
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					ROOT = { set_country_flag = aviation_effort_AB }
-				}
-			}
-			if = {
-				limit = {
-					capital_scope = {
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
-				}
-				capital_scope = {
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					ROOT = { set_country_flag = aviation_effort_AB }
+			custom_effect_tooltip = available_designer
+            show_ideas_tooltip = MAN_mamc_light
+			show_ideas_tooltip = MAN_mamc_medium
+			show_ideas_tooltip = MAN_mamc_heavy
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
 				}
 			}
 			add_doctrine_cost_reduction = {
@@ -2607,6 +2576,43 @@ focus_tree = {
 				uses = 1
 				category = air_doctrine
 			}
+		}
+	}
+	
+	focus = {
+		id = MAN_copy_zero
+		icon = GFX_focus_jap_zero
+		prerequisite = { focus = MAN_aviation_effort }
+		x = -2
+		y = 1
+		relative_position_id = MAN_aviation_effort
+
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			IF = {
+				has_completed_focus = MAN_japanese_advisors
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			add_ideas = JAP_prioritize_naval_aircraft_construction
+		}
+
+		completion_reward = {
+			add_ideas = JAP_prioritize_naval_aircraft_construction
 		}
 	}
 	
@@ -2625,7 +2631,9 @@ focus_tree = {
 		}
 
 		available = {
-
+			IF = {
+				has_completed_focus = MAN_chinese_tactics
+			}
 		}
 
 		bypass = {
@@ -2637,22 +2645,11 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-
+			add_ideas = JAP_prioritize_army_aircraft_construction
 		}
 
 		completion_reward = {
-			716 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = MAN_mamc_light
-			show_ideas_tooltip = MAN_mamc_medium
-			show_ideas_tooltip = MAN_mamc_heavy
+			add_ideas = JAP_prioritize_army_aircraft_construction
 		}
 	}
 	
@@ -2660,8 +2657,9 @@ focus_tree = {
 		id = MAN_air_force
 		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = MAN_aviation_effort }
-		x = 19
-		y = 13
+		relative_position_id = MAN_aviation_effort
+		x = 0
+		y = 1
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -2682,8 +2680,9 @@ focus_tree = {
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = MAN_air_force }
 		mutually_exclusive = { focus = MAN_heavy }
-		x = 18
-		y = 14
+		relative_position_id = MAN_aviation_effort
+		x = 1
+		y = 2
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -2705,8 +2704,9 @@ focus_tree = {
 		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = { focus = MAN_air_force }
 		mutually_exclusive = { focus = MAN_tactical_air}
-		x = 20
-		y = 14
+		relative_position_id = MAN_aviation_effort
+		x = -1
+		y = 2
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -2727,9 +2727,9 @@ focus_tree = {
 		id = MAN_rocket_effort
 		icon = GFX_focus_rocketry
 		prerequisite = { focus = MAN_heavy focus = MAN_tactical_air }
-		
-		x = 18
-		y = 15
+		relative_position_id = MAN_aviation_effort
+		x = -2
+		y = 3
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -2753,8 +2753,9 @@ focus_tree = {
 		id = MAN_air_doct_1
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = MAN_heavy focus = MAN_tactical_air }
-		x = 20
-		y = 15
+		relative_position_id = MAN_aviation_effort
+		x = 0
+		y = 3
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -2771,8 +2772,9 @@ focus_tree = {
 		id = MAN_air_doct_2
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = MAN_air_doct_1 }
-		x = 20
-		y = 16
+		relative_position_id = MAN_aviation_effort
+		x = 0
+		y = 4
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -2789,8 +2791,8 @@ focus_tree = {
 	focus = {
 		id = MAN_navy_funds
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 23
-		y = 12
+		x = 24
+		y = 8
 		cost = 5
 
 		available_if_capitulated = yes
@@ -2814,15 +2816,15 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-		        navy_experience = 25
-				610 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
+		    navy_experience = 25
+			610 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
+			}
 				
 			}
 			
@@ -2833,8 +2835,9 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = MAN_navy_funds }
 		mutually_exclusive = { focus = MAN_navy_doc_2 }
-		x = 22
-		y = 13
+		relative_position_id = MAN_navy_funds
+		x = 1
+		y = 1
 		cost = 5
 
 		available_if_capitulated = yes
@@ -2853,8 +2856,9 @@ focus_tree = {
 		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = MAN_navy_funds }
 		mutually_exclusive = { focus = MAN_navy_doc_1 }
-		x = 24
-		y = 13
+		relative_position_id = MAN_navy_funds
+		x = -1
+		y = 1
 		cost = 5
 
 		available_if_capitulated = yes
@@ -2872,8 +2876,9 @@ focus_tree = {
 		id = MAN_submarine_effort
 		icon = GFX_goal_generic_navy_submarine
 		prerequisite = { focus = MAN_navy_doc_1 focus = MAN_navy_doc_2}
-		x = 24
-		y = 14
+		relative_position_id = MAN_navy_funds
+		x = -1
+		y = 2
 		cost = 5
 
 		available_if_capitulated = yes
@@ -2901,14 +2906,14 @@ focus_tree = {
 			}
 		}
 	}
-	
-	
+
 	focus = {
 		id = MAN_destroyer_effort
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = MAN_navy_doc_1 focus = MAN_navy_doc_2}
-		x = 22
-		y = 14
+		relative_position_id = MAN_navy_funds
+		x = 1
+		y = 2
 		cost = 5
 
 		available_if_capitulated = yes
@@ -2938,11 +2943,47 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = MAN_jap_supported_submarine_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = MAN_submarine_effort focus = MAN_destroyer_effort }
+		relative_position_id = MAN_navy_funds
+		x = -2
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+		
+		available = {
+			IF = {
+				has_completed_focus = MAN_japanese_advisors
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = JAP_improved_torpedos
+		}
+	}
+	
+	focus = {
 		id = MAN_big_ship_effort
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = MAN_destroyer_effort focus = MAN_submarine_effort }
-		x = 23
-		y = 15
+		relative_position_id = MAN_navy_funds
+		x = 0
+		y = 3
 		cost = 5
 
 		available_if_capitulated = yes
@@ -2962,6 +3003,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			716 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 			add_tech_bonus = {
 				name = naval_doctrine_bonus
 				bonus = 1
@@ -2978,8 +3027,9 @@ focus_tree = {
 		id = MAN_naval_doctrine_1
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = MAN_big_ship_effort }
-		x = 23
-		y = 16
+		relative_position_id = MAN_navy_funds
+		x = 0
+		y = 4
 		cost = 5
 
 		available_if_capitulated = yes
