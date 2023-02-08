@@ -3772,13 +3772,13 @@ NSupply = {
 	-- supply flow will start from INITIAL_SUPPLY_FLOW and will be reduced by a penalty on each province it travels (which depends on how far we are from our origin, terrain etc)
 	-- a supply reach >= 1.0 considered "perfect" and will be able to fully support units on that particular province (assuming you are not over capacity)
 	CAPITAL_INITIAL_SUPPLY_FLOW = 6.0, -- starting supply from
-	CAPITAL_STARTING_PENALTY_PER_PROVINCE = 0.25, -- starting penalty that will be added as supply moves away from its origin (modified by stuff like terrain)
-	CAPITAL_ADDED_PENALTY_PER_PROVINCE = 0.7, -- added penalty as we move away from origin
+	CAPITAL_STARTING_PENALTY_PER_PROVINCE = 0.40, -- starting penalty that will be added as supply moves away from its origin (modified by stuff like terrain)
+	CAPITAL_ADDED_PENALTY_PER_PROVINCE = 1.0, -- added penalty as we move away from origin
 
 	-- defines that are used for supply reach for built nodes
 	NODE_INITIAL_SUPPLY_FLOW = 3.0,
-	NODE_STARTING_PENALTY_PER_PROVINCE = 0.20,
-	NODE_ADDED_PENALTY_PER_PROVINCE = 0.40,
+	NODE_STARTING_PENALTY_PER_PROVINCE = 0.30,
+	NODE_ADDED_PENALTY_PER_PROVINCE = 0.50,
 
 	-- defines that are used for supply reach for dockyards
 	NAVAL_BASE_INITIAL_SUPPLY_FLOW = 3.5,
@@ -3793,7 +3793,7 @@ NSupply = {
 
 	-- defines that are used for supply reach for floating harbors
 	FLOATING_HARBOR_INITIAL_SUPPLY_FLOW = 2.4,
-	FLOATING_HARBOR_STARTING_PENALTY_PER_PROVINCE = 0.4,
+	FLOATING_HARBOR_STARTING_PENALTY_PER_PROVINCE = 0.6,
 	FLOATING_HARBOR_ADDED_PENALTY_PER_PROVINCE = 0.8,
 
 	FLOATING_HARBOR_BASE_SUPPLY = 15.0, -- supply given by a floating harbor
