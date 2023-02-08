@@ -2315,14 +2315,14 @@ focus_tree = {
 	focus = {
 		id = MAN_army_effort
 		icon = GFX_goal_generic_allies_build_infantry
-		 x = 14
-         y = 12
+		 x = 12
+         y = 8
 		cost = 7.16
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 20
+			army_experience = 25
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.50
 				uses = 1
@@ -2335,8 +2335,9 @@ focus_tree = {
 		id = MAN_equipment_effort
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = MAN_army_effort }
-		x = 12
-		y = 13
+		relative_position_id = MAN_army_effort
+		x = -3
+		y = 1
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -2345,7 +2346,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = infantry_weapons_bonus
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = infantry_weapons
 				category = artillery
 			}
@@ -2356,8 +2357,9 @@ focus_tree = {
 		id = MAN_equipment_effort_2
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = MAN_equipment_effort }
-		x = 12
-		y = 14
+		relative_position_id = MAN_army_effort
+		x = -3
+		y = 2
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -2376,8 +2378,9 @@ focus_tree = {
 		id = MAN_motorized
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = MAN_army_effort }
-		x = 16
-		y = 13
+		relative_position_id = MAN_army_effort
+		x = 3
+		y = 1
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -2396,8 +2399,9 @@ focus_tree = {
 		id = MAN_tanks
 		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = MAN_motorized }
-		x = 16
-		y = 14
+		relative_position_id = MAN_army_effort
+		x = 3
+		y = 2
 		cost = 7.16
 
 		available_if_capitulated = yes
@@ -2416,17 +2420,24 @@ focus_tree = {
 		id = MAN_doctrine_inf_1
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = MAN_army_effort }
-		x = 14
-		y = 13
+		relative_position_id = MAN_army_effort
+		x = -1
+		y = 1
 		cost = 7.16
+		
+		available = {
+			IF = {
+				has_completed_focus = MAN_japanese_advisers
+			}
+		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
-				cost_reduction = 0.50
-				uses = 1
-				category = land_doctrine
+				cost_reduction = 0.60
+				uses = 2
+				category = cat_grand_battle_plan
 			}
 		}
 	}
@@ -2435,18 +2446,84 @@ focus_tree = {
 		id = MAN_doctrine_inf_2
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = MAN_doctrine_inf_1 }
-		prerequisite = { focus = MAN_equipment_effort_2 focus = MAN_tanks }
-		x = 14
-		y = 15
+		relative_position_id = MAN_army_effort
+		x = -1
+		y = 2
 		cost = 7.16
+		
+		available = {
+			IF = {
+				has_completed_focus = MAN_japanese_military_control
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MAN_japanese_advisers_2
+				add_idea = MAN_japanese_advisers_3
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	
+	focus = {
+		id = MAN_doctrine_inf_china
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = MAN_army_effort }
+		relative_position_id = MAN_army_effort
+		x = 1
+		y = 1
+		cost = 7.16
+		
+		available = {
+			IF = {
+				has_completed_focus = MAN_chinese_tactics
+			}
+		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.50
-				uses = 1
-				category = land_doctrine
+				uses = 3
+				category = cat_mass_assault
+			}
+		}
+	}
+	
+	focus = {
+		id = MAN_doctrine_inf_china_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = MAN_doctrine_inf_china }
+		relative_position_id = MAN_army_effort
+		x = 1
+		y = 2
+		cost = 7.16
+		
+		available = {
+			IF = {
+				has_completed_focus = MAN_chinese_army_value
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MAN_five_people_armies_2
+				add_idea = MAN_five_people_armies_3
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.40
+				uses = 2
+				category = cat_mass_assault
 			}
 		}
 	}
