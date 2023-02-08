@@ -40,11 +40,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			add_political_power = 50
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = MAN_songgotu_zhanshan
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 50
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = MAN_songgotu_zhanshan
 		}
@@ -76,10 +78,45 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			add_political_power = 50
+			MAN = {
+   			    modify_tech_sharing_bonus = {
+         			id = JAP_technological_exchange
+         			bonus = 0.15
+    			}
+			}
+			610 = {
+				add_building_construction = {
+					level = 1
+					type = infrastructure
+					instant_build = yes
+				}
+			}
+			715 = {
+				add_building_construction = {
+					level = 1
+					type = infrastructure
+					instant_build = yes
+				}
+			}
+			716 = {
+				add_building_construction = {
+					level = 1
+					type = infrastructure
+					instant_build = yes
+				}
+			}
+			328 = {
+				add_building_construction = {
+					level = 1
+					type = infrastructure
+					instant_build = yes
+				}
+			}
 		}
 
 		completion_reward = {
+			add_political_power = 50
 			MAN = {
    			    modify_tech_sharing_bonus = {
          			id = JAP_technological_exchange

@@ -26,7 +26,9 @@ ideas = {
 				
 		}
 		MAN_jap_settlers = {
-		
+			
+			picture = prc_low_popular_support3
+			
 			allowed = {
 				original_tag = MAN
 			}
@@ -60,7 +62,9 @@ ideas = {
 			
 		}
 		MAN_communist_manpower = {
-		
+			
+			picture = tfv_can_conscription_crisis
+			
 			allowed = {
 				original_tag = MAN
 			}
@@ -82,7 +86,9 @@ ideas = {
 			
 		}
 		MAN_communist_manpower_2 = {
-		
+			
+			picture = tfv_can_conscription_crisis
+			
 			allowed = {
 				original_tag = MAN
 			}
@@ -182,7 +188,7 @@ ideas = {
 			picture = jap_intervene_in_china
 			
 			modifier = {
-				political_power_cost = 0.15
+				political_power_cost = 0.10
 				stability_weekly = 0.001
 				conscription_factor = 0.10
 				industrial_capacity_factory = 0.10
@@ -226,7 +232,7 @@ ideas = {
 			
 			modifier = {
 				stability_weekly = 0.001
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.025
 			}
 		}
 		MAN_imperial_family2 = {
@@ -247,8 +253,8 @@ ideas = {
 				stability_factor = 0.15
 				war_support_factor = 0.15
 				stability_weekly = 0.001
-				consumer_goods_factor = -0.06
-				political_power_gain = 0.1
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.05
 			}
 		}
 		MAN_banditry = {
@@ -289,8 +295,8 @@ ideas = {
 			
 			modifier = {
 				stability_factor = -0.1
-				industrial_capacity_factory = -0.05
-				industrial_capacity_dockyard = -0.05
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.10
 			}
 		}
 		
@@ -593,7 +599,7 @@ ideas = {
 			
 			modifier = {
 				local_resources_factor = 0.15
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.01
 			}
 		}
 		
@@ -614,7 +620,7 @@ ideas = {
 			modifier = {
 				stability_factor = -0.1
 				local_resources_factor = 0.20
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.02
 			}
 		}
 	
