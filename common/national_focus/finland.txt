@@ -1370,8 +1370,13 @@ focus_tree = {
 		
 		    SOV = {
 				has_war_with = GER
-				NOT = {
-					has_full_control_of_state = 12
+				OR = {
+					NOT = {
+						has_full_control_of_state = 808
+					}
+					NOT = {
+						has_full_control_of_state = 810
+					}
 				}
 			}
 		}
