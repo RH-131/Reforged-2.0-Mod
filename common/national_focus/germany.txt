@@ -3056,23 +3056,20 @@ focus_tree = {
 		prerequisite = { focus = GER_arbeitseinsatz }
 		prerequisite = { focus = GER_swiss_cash }
 		relative_position_id = GER_mobilize_the_reich
-		x = 0
+		x = 2
 		y = 5
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 12
 		}
 
 		available = {
 			if = {
-				limit = {
-					is_ai = no 
-				}
 				OR = {
 				    has_tech = dispersed_industry4
 				    has_tech = concentrated_industry4
 				}
-
+				date > 1942.1.1
 				has_tech = excavation4
 				has_war_with = SOV
 				has_idea = GER_economy_of_plunder_6			
@@ -3084,8 +3081,6 @@ focus_tree = {
 			GER = {
 				country_event = germany.318
 			}
-			remove_ideas = GER_swedish_trade2
-			remove_ideas = GER_disorganized_industry
 			remove_ideas = GER_economy_of_plunder_6			
 			if = {
 				limit = { has_idea = wilhelm_frick }
@@ -3110,13 +3105,40 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = { #Drang noch Osten# 
+		id = GER_drang_nach_osten
+		icon = GFX_GER_sieg_im_westen
+		prerequisite = { focus = GER_consolidate_production_lines focus = GER_specialization_of_worker_skills }
+		prerequisite = { focus = GER_arbeitseinsatz }
+		prerequisite = { focus = GER_swiss_cash }
+		relative_position_id = GER_mobilize_the_reich
+		x = -2
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+
+		available = {
+			if = {
+				date > 1941.6.22
+				has_war_with = SOV		
+			}
+		}
+		
+		completion_reward = {
+			remove_ideas = GER_disorganized_industry
+			remove_ideas = GER_swedish_trade2
+		}
+	}
 
 	focus = { # " volunteer " 
 		id = GER_volunteer_workers
 		icon = GFX_GER_arbeitseinsatz
-		prerequisite = { focus = GER_summon_fritz_todt }
-		relative_position_id = GER_summon_fritz_todt 
-		x = -2
+		prerequisite = { focus = GER_drang_nach_osten }
+		relative_position_id = GER_drang_nach_osten
+		x = 0
 		y = 1
 		cost = 5
 		available = { 
@@ -3142,13 +3164,17 @@ focus_tree = {
 	focus = {
 		id = GER_total_war
 		icon = GFX_GER_total_war
-		relative_position_id = GER_summon_fritz_todt
+		relative_position_id = GER_mobilize_the_reich
 		prerequisite = { focus = GER_summon_fritz_todt }
+		prerequisite = { focus = GER_drang_nach_osten }
 		x = 0
-		y = 1
+		y = 6
 		cost = 5
 		available = {
-			date > 1942.1.1
+			OR = {
+				date > 1943.1.1
+				casualties >2000000
+			}
 			has_war_with = USA
 			has_war_with = SOV
 		}
@@ -4039,7 +4065,7 @@ focus_tree = {
 		icon = GFX_GER_underground_factories
 		prerequisite = { focus = GER_summon_fritz_todt }
 		relative_position_id = GER_summon_fritz_todt
-		x = 2
+		x = 0
 		y = 1
 		cost = 8
 		
@@ -4706,7 +4732,10 @@ focus_tree = {
 		}
 
 		available = {
-			date > 1942.01.01
+			OR = {
+				date > 1942.4.1
+				casualties >1500000
+			}
 			has_war_with = SOV
 		}
 
@@ -6196,14 +6225,14 @@ focus_tree = {
 		relative_position_id = GER_air_innovation_2
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = yes	
 
 		available = {
-			date > 1943.1.1
+			date > 1942.1.1
 		}
 
 		completion_reward = {
@@ -6219,7 +6248,7 @@ focus_tree = {
 		relative_position_id = GER_expand_peenemuende_research_center
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -6252,7 +6281,7 @@ focus_tree = {
 		relative_position_id = GER_expand_peenemuende_research_center
 		x = -1
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -6311,7 +6340,7 @@ focus_tree = {
 		relative_position_id = GER_expand_peenemuende_research_center
 		x = -1
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -6338,7 +6367,7 @@ focus_tree = {
 		relative_position_id = GER_expand_peenemuende_research_center
 		x = 1
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -6374,7 +6403,7 @@ focus_tree = {
 		relative_position_id = GER_expand_peenemuende_research_center
 		x = 1
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}

@@ -1793,12 +1793,7 @@ focus_tree = {
 		available_if_capitulated = yes		
 		
 		available = { 
-			INS = {
-				has_capitulated = yes
-			}
-			PHI = {
-				has_capitulated = yes 
-			}
+			has_war_with = JAP
 		}
 
 		bypass = {
@@ -1809,10 +1804,9 @@ focus_tree = {
 				limit = {
 					is_controlled_by = JAP 
 					OR = {
-						is_core_of = PHI 
 						is_core_of = CHI
 						is_core_of = RAJ 
-						is_core_of = INS  
+						is_core_of = INS
 					}		
 				}
 				add_resistance_target = {
@@ -3526,10 +3520,10 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = {
-				category = heavy_air 
-				uses = 1
-				ahead_reduction = 1
-				bonus = 1 
+				category = heavy_air
+				bonus = 1
+				uses = 1 
+				name = USA_a_modern_anaconda_plan
 			}
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = boeing 
@@ -3600,10 +3594,10 @@ focus_tree = {
 				name = USA_a_modern_anaconda_plan
 			}
 			add_tech_bonus = {
-				category = heavy_air
-				bonus = 1
-				uses = 1 
-				name = USA_a_modern_anaconda_plan
+				category = heavy_air 
+				uses = 1
+				ahead_reduction = 1
+				bonus = 1 
 			}
 		}
 	}					
@@ -5463,6 +5457,24 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			if = {
+				limit = { 
+					has_idea = USA_the_wpa 
+				}
+				swap_ideas = {
+					remove_idea = USA_the_wpa
+					add_idea = USA_the_wpa2
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_idea = USA_the_wpa
+					}
+				}
+				add_ideas = USA_the_wpa
+			}
+			
 			random_owned_state = {
 				limit = {
 					is_core_of = USA  
@@ -5844,6 +5856,23 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			if = {
+				limit = { 
+					has_idea = USA_the_wpa 
+				}
+				swap_ideas = {
+					remove_idea = USA_the_wpa
+					add_idea = USA_the_wpa2
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_idea = USA_the_wpa
+					}
+				}
+				add_ideas = USA_the_wpa
+			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 5 
 				limit = {
