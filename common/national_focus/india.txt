@@ -6411,8 +6411,8 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {
-			controls_province = 1330
+			RAJ = {
+					surrender_progress > 0.1
 			}
 		}
 
@@ -6454,9 +6454,8 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {
-			controls_state = 640 #mandalay
-			controls_state = 288 #burma
+			RAJ = {
+					surrender_progress > 0.3
 			}
 		}
 
