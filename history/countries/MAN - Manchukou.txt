@@ -9,17 +9,11 @@ oob = "MAN_1936"
 
 if = {
 	limit = { has_dlc = "Waking the Tiger" }
-	set_country_flag = MAN_northern_bandits
-	set_country_flag = MAN_eastern_bandits
-	set_country_flag = MAN_western_bandits
 	add_ideas = MAN_banditry
 	add_ideas = MAN_kwantung_veto
-	add_ideas = MAN_low_legitimacy_1
 	add_ideas = partial_economic_mobilisation
 	add_ideas = MAN_exiled_imperial_family
-	add_ideas = german_advisors
 	add_ideas = MAN_imperial_pretender
-	add_ideas = MAN_resource
 	add_ideas = airandnavy_idea
 }
 if = {
@@ -42,9 +36,7 @@ if = {
 		early_ship_hull_cruiser = 1
 		basic_ship_hull_cruiser = 1
 		early_ship_hull_heavy = 1
-		basic_ship_hull_heavy = 1
 		early_ship_hull_carrier = 1
-		basic_ship_hull_carrier = 1
 		coastal_defense_ships = 1
 		basic_secondary_battery = 1
 		basic_depth_charges = 1
@@ -109,6 +101,7 @@ set_technology = {
 	############### economy ############
 	starting_industry = 1
 	basic_machine_tools = 1
+	basic_train = 1
 }
 
 set_convoys = 250
