@@ -163,6 +163,11 @@ NDiplomacy = {
 	JOINING_NAP_WAR_PENALTY = 0.15,					-- War support penalty for breaking non-breakable NAP
 	BREAKING_GUARANTEE_PENALTY = 0.2,				-- War support penalty for breaking guarantee
 	
+	-- WARNING ! if you modify the following values, you should update corresponding loc keys in games_rules_l_english.yml
+	PEACE_SCORE_TRANSFERRED_TO_FACTION_LEADER = 0.1, 		-- Part of the peace score transferred from the faction members to the faction leader (if game rule enabled)
+	PEACE_SCORE_RESET_LOW_SCORE_THRESHOLD = 0.05,			-- Winners with less than this ratio of war participation will give all their score to other players
+	PEACE_SCORE_RESET_LOW_SCORE_MINIMUM_FOR_RECEIVER = 0.1, -- Disable the previous, if no winner has at least this ratio of war participation
+	
 	PEACE_SCORE_SCALE_FACTOR = 1.35,                -- Losers' total value times this factor becomes the default total peace conference score that is distributed to the winners.
 
 	PEACE_SCORE_MINOR_BOOST_FRACTION = 0.05,        -- Low-scoring winners are boosted by receiving more of their score earlier. This value, multiplied by the total score distributed this turn, is the minimum score they will receive (up until their total allocated score).
@@ -2072,6 +2077,8 @@ NAI = {
 	DIPLOMACY_ACCEPT_CONDITIONAL_SURRENDER_OWN_SURRENDER_LIMIT = 20, -- Multiplied by recipient nation's surrender level
 	DIPLOMACY_ACCEPT_CONDITIONAL_SURRENDER_MINOR_WAR = 10,			-- Applied if recipient is a minor nation (and therefore there are no majors in this war)
 
+	MIN_POLITICAL_POWER_MONTHLY_GAIN_FOR_IMPROVE_RELATIONS = 0.50,	-- If country makes less than this PP per month, they won't improve relations
+	
 	NUM_RESOURCES_TO_ALLOW_MINOR_EMBARGO = 69,	--If we or any of our puppets have more total resources of a single category that this, we will consider embargoing countries
 	EMBARGO_WORLD_TENSION_THREAT_DIVISOR = 2.5,		--A divisor to generated world tension when applying how much we care about it in AI desire
 
@@ -3134,7 +3141,7 @@ NOperatives = {
 	AGENCY_OPERATIVE_RECRUITMENT_TIME = 30,			-- Number of days to wait to have operative to recruit when an operative slot first becomes available
 	BECOME_SPYMASTER_PP_COST = 50,					-- Number of political power used to become Spy Master
 	BECOME_SPYMASTER_MIN_UPGRADES = 3,				-- Number of agency upgrades you need before becoming Spy Master
-	BASE_COUNTER_INTELLIGENCE_RATING = 0.0,					-- Base national counter intelligence rating for all countries
+	BASE_COUNTER_INTELLIGENCE_RATING = 0.01,					-- Base national counter intelligence rating for all countries
 	AGENCY_DEFENSE_EFFECT_ON_HOSTILE_ACTION_COST = 0.05,			-- Defense factor that is responsible for multiplying the cost hostile actions against our country by its level and this value
 	INTEL_NETWORK_GAIN_RATE_ON_WRONG_CONTROLLER = -10.0,			-- Amount of network strength lost in a state when it does not have the right controller anymore
 	INTEL_NETWORK_GAIN_RATE_ON_OUT_OF_RANGE = -1.75,				-- Amount of network strength lost in a state that has the right controller but is out of range of any operative
@@ -3159,13 +3166,13 @@ NOperatives = {
 	INTEL_NETWORK_MIN_SUB_NETWORK_NATIONAL_COVERAGE_FOR_DETECTION = 0.01,	-- [0, 1] minimum national coverage of the network the operative on build intel network is in to have a chance to be discovered
 	INTEL_NETWORK_MIN_SUB_NETWORK_STRENGTH_FOR_DETECTION = 10.0,		-- [0, 100] minimum network strength of the network the operative on build intel network mission is in to have a chance to be discovered
 
-	INTEL_NETWORK_INTELLIGENCE_AGENCY_DEFENSE_TO_DETECTION_FACTOR = 2.0,	-- multiplied to the intelligence agency defense of the target of the intel network
-	INTEL_NETWORK_INTELLIGENCE_AGENCY_DEFENSE_DETECTION_SCALE_FACTOR = 0.0,	-- factor multiplied to the intelligence agency defense of the target of the intel network before being factored to the detection chance
+	INTEL_NETWORK_INTELLIGENCE_AGENCY_DEFENSE_TO_DETECTION_FACTOR = 3.0,	-- multiplied to the intelligence agency defense of the target of the intel network
+	INTEL_NETWORK_INTELLIGENCE_AGENCY_DEFENSE_DETECTION_SCALE_FACTOR = 0.05,	-- factor multiplied to the intelligence agency defense of the target of the intel network before being factored to the detection chance
 	INTEL_NETWORK_MAX_INTELLIGENCE_AGENCY_DEFENSE_DETECTION_SCALE_FACTOR = 1.0,	-- clamp the value from the multiplication of the above factor (expect a value greater or equal to 1)
 	INTEL_NETWORK_NATIONAL_COVERAGE_TO_DETECTION_CHANCE_FACTOR = 1.0,	-- multiplied to the national coverage (a value in range [0, 1]
 	INTEL_NETWORK_SUB_NETWORK_STRENGTH_TO_DETECTION_CHANCE_FACTOR = 0.1,	-- multiplied to the network strength (a value in range [0, 100]
 	INTEL_NETWORK_SUB_NETWORK_NATIONAL_COVERAGE_TO_DETECTION_CHANCE_FACTOR = 3.0,	-- multiplied to the contribution to the national coverage of the sub network (a value in range [0, 1])
-	INTEL_NETWORK_DETECTION_GLOBAL_FACTOR = 0.01,				-- global factor multiplied to the detection chance before it is multiplied a dice roll in the range [0,1000)
+	INTEL_NETWORK_DETECTION_GLOBAL_FACTOR = 0.05,				-- global factor multiplied to the detection chance before it is multiplied a dice roll in the range [0,1000)
 	BUILD_INTEL_NETWORK_DAILY_XP_GAIN = 1,
 	QUIET_INTEL_NETWORK_DAILY_XP_GAIN = 0.1,
 	OPERATIVE_MISSION_DETECTION_CHANCE_FACTOR = {
