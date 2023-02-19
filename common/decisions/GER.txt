@@ -4203,6 +4203,9 @@ foreign_politics = {
 			hidden_effect = {
 				complete_national_focus = GER_romanian_oil
 			}
+			46 = {
+				add_dynamic_modifier = { modifier = germany_oil_control_modifier }
+			}
 			ROM = {
 				give_resource_rights = { receiver = GER state = 46 }
 			}
