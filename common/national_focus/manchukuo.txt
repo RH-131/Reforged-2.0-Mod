@@ -242,8 +242,13 @@ focus_tree = {
 		}
 
 		available = {
-			CHI = {
+			OR = {
+				CHI = {
 		        has_capitulated = yes 
+				}
+				NOT = {
+				country_exists = CHI
+				}
 			}
 		}
 
@@ -321,8 +326,13 @@ focus_tree = {
 		}
 
 		available = {
+			OR = {
 			CHI = {
 		        has_capitulated = yes 
+			}
+			NOT = {
+				country_exists = CHI
+				}
 			}
 		}
 
@@ -1754,8 +1764,13 @@ focus_tree = {
 			IF = {
 				has_idea = MAN_china
 			}
-			CHI = {
+			OR = {
+				CHI = {
 		        has_capitulated = yes 
+				}
+				NOT = {
+				country_exists = CHI
+				}
 			}
 		}
 		
