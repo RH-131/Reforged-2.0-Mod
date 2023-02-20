@@ -288,8 +288,13 @@ operations = {
 			MAN = { is_ai = no }
 		}
 		available = {
-			CHI = {
+			OR = {
+				CHI = {
 		        has_capitulated = yes 
+				}
+				NOT = {
+				country_exists = CHI
+				}
 			}
 		}
 		cost = 0
