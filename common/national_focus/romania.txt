@@ -31,6 +31,7 @@
 
 		completion_reward = {
 			add_ideas = free_trade
+			add_political_power = 100
 		}
 	}
 
@@ -897,12 +898,11 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 46 }
+			84 = {
 				add_extra_state_shared_building_slots = 4 
 				add_building_construction = {
 					type = industrial_complex
-					level = 2 
+					level = 4
 					instant_build = yes 
 				}
 				add_resource = {
@@ -1023,7 +1023,7 @@
 		x = 1
 		y = 1
 		relative_position_id = ROM_improve_living_standards
-		cost = 15
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -1071,6 +1071,41 @@
 			remove_ideas = ROM_the_resource_curse_1
 			remove_ideas = ROM_industrialization_4 
  		}
+	}
+	
+	focus = {
+		id = ROM_royal_foundation
+		icon = GFX_focus_research
+		relative_position_id = ROM_improve_living_standards
+		prerequisite = { focus = ROM_the_romanian_miracle }
+		x = 1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1 
+		}
 	}
 
 	focus = {
@@ -1968,41 +2003,6 @@
 		completion_reward = {
 			add_war_support = 0.1 
 			add_stability = 0.1 
-		}
-	}
-
-	focus = {
-		id = ROM_royal_foundation
-		icon = GFX_focus_research
-		relative_position_id = ROM_operetta_fascism
-		prerequisite = { focus = ROM_operetta_fascism focus = ROM_secure_our_territorial_integrity }
-		x = -2
-		y = 1
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 9
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_research_slot = 1 
 		}
 	}
 

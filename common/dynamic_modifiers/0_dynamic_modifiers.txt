@@ -179,6 +179,15 @@ romania_control_modifier = {
 	state_resources_factor = 0.15
 }
 
+germany_oil_control_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	state_resources_factor = 0.12
+	recruitable_population_factor = -0.1
+}
+
 yugoslavia_partisans_modifier = {
 	enable = { always = yes }
 
