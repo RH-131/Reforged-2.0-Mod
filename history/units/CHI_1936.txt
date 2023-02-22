@@ -5,9 +5,14 @@
 	regiments = {
 		light_infantry = { x = 0 y = 0 }
 		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 0 y = 3 }
 		light_infantry = { x = 1 y = 0 }
 		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+		light_infantry = { x = 1 y = 3 }
 		light_infantry = { x = 2 y = 0 }
+		light_infantry = { x = 2 y = 1 }
 	}
 	support = {
 		DIV_HQ = { x = 0 y = 0 } 
@@ -18,26 +23,33 @@ division_template = {
 	name = "Juntuán"				# Represents: German-trained divisions (better equipment than rest),
 	division_names_group = CHI_INF_01
 									# 	as well as two-division infantry corps (generally poorly-equipped militias),
-	regiments = {					#	and local militia groups.
-		infantry = { x = 0 y = 0 }	# Note: Chinese divisions were brigade-sized compared other nations' armies
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-		infantry = { x = 2 y = 3 }
-				
+									#	and local militia groups.
+									# Note: Chinese divisions were brigade-sized compared other nations' armies
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 4 y = 0 }
+
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+		light_infantry = { x = 4 y = 1 }
+
+		light_infantry = { x = 2 y = 0 }
+		light_infantry = { x = 2 y = 1 }
+		light_infantry = { x = 2 y = 2 }
+
+		pack_artillery_brigade = { x = 3 y = 0 }
+		pack_artillery_brigade = { x = 3 y = 1 }
+		pack_artillery_brigade = { x = 3 y = 2 }
+		pack_artillery_brigade = { x = 4 y = 2 }
 	}
 	support = {
-		DIV_HQ = { x = 0 y = 0 } 
-		pack_artillery = { x = 0 y = 1 }  
-		recon = { x = 1 y = 0 }   
-		engineer = { x = 1 y = 1 } 
+		DIV_HQ = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 } 
+		recon = { x = 1 y = 1 }
+		pack_artillery = { x = 1 y = 0 }
 	}
 	priority = 2 
 }
@@ -967,13 +979,13 @@ instant_effect = { #player
 		}	
 	add_equipment_to_stockpile = {
 		type = infantry_equipment_1
-			amount = 1000
+			amount = 7500
 			producer = GER
 		}
 	add_equipment_to_stockpile = {
-		type = infantry_equipment_1
-			amount = 3000
-			producer = CHI
-		}	
+		type = pack_artillery_equipment_1
+			amount = 350
+			producer = GER
+		}			
 	
 }
