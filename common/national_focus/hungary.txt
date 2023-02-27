@@ -898,6 +898,14 @@ focus_tree = {
 		completion_reward = {
 			HUN_fractured_industry_level_up = yes
 			add_timed_idea = { idea = HUN_german_recovery	days = 180 }
+			154 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					level = 2
+					type = industrial_complex
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -1188,6 +1196,14 @@ focus_tree = {
 		completion_reward = {
 			HUN_fractured_industry_level_up = yes
 			add_timed_idea = { idea = HUN_italian_recovery	days = 365 }
+			154 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					level = 2
+					type = industrial_complex
+					instant_build = yes
+				}
+			}
 		}
 	}
 
