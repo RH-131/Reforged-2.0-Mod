@@ -66,8 +66,8 @@ leader_traits = {
 	technocrat = {
 		sprite = 13
 
-		production_speed_industrial_complex_factor = 0.1
-		research_speed_factor = 0.05
+		production_speed_industrial_complex_factor = 0.05
+		research_speed_factor = 0.075
 		ai_will_do = {
 			factor = 1
 		}
@@ -633,7 +633,82 @@ leader_traits = {
 			factor = 1
 		}
 	}
+
+#### Resource, Economy and Market ####
+
+	backroom_backstabber = {
+		sprite = 13
+		trade_opinion_factor = -0.25
+		consumer_goods_factor = 0.02
+		local_resources_factor = 0.1
+		min_export = -0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	smooth_talking_charmer = {
+		random = yes
+		sprite = 13
+		trade_opinion_factor = 0.2
+		consumer_goods_factor = -0.02
+		local_resources_factor = 0.10
+		min_export = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	smooth_talking_charmer_2 = {
+		random = yes
+		sprite = 13
+		trade_opinion_factor = 0.2
+		consumer_goods_factor = -0.02
+		local_resources_factor = 0.10
+		min_export = 0.10
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
+	railroad_enthusiast = { #Valentin Campa
+	    sprite = 10
+		random = no
+		production_speed_infrastructure_factor = 0.20
+		production_speed_rail_way_factor = 0.25
+		production_speed_supply_node_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	capitalist  = {
+	   random = yes
+		sprite = 13
+		consumer_goods_factor = 0.02
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+        production_factory_max_efficiency_factor = 0.05
+		trade_opinion_factor = 0.05
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	union_man = {
+		random = no
+		political_power_factor = 0.20
+		industrial_capacity_factory = -0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 #### Mexico Stuff ####
 	
 	strongman_of_san_luis_potosi = { #Saturnino Cedillo
@@ -956,19 +1031,6 @@ leader_traits = {
 		stability_factor = 0.05
 		industrial_capacity_factory = 0.05
 	}
-
-	railroad_enthusiast = { #Valentin Campa
-	    sprite = 10
-		random = no
-		production_speed_infrastructure_factor = 0.25
-		production_speed_rail_way_factor = 0.15
-		production_speed_supply_node_factor = 0.15
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 
 	defeated_and_subjugated = {
 	    war_support_factor = -0.05
@@ -1443,30 +1505,6 @@ leader_traits = {
 		}
 	}
 
-	capitalist  = {
-	   random = yes
-		sprite = 13
-		consumer_goods_factor = 0.02
-		industrial_capacity_factory = 0.05
-		industrial_capacity_dockyard = 0.05
-        production_factory_max_efficiency_factor = 0.05
-		trade_opinion_factor = 0.05
-
-		ai_will_do = {
-			factor = 10
-		}
-	}
-
-	union_man = {
-		random = no
-		political_power_factor = 0.20
-		industrial_capacity_factory = -0.02
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	political_dancer = {
 		random = no
 		political_power_factor = 0.15
@@ -1808,43 +1846,6 @@ leader_traits = {
 		air_chief_cost_factor = -0.25
 		army_chief_cost_factor = -0.25
 		navy_chief_cost_factor = -0.25
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	backroom_backstabber = {
-		sprite = 13
-		trade_opinion_factor = -0.25
-		consumer_goods_factor = 0.02
-		local_resources_factor = 0.1
-		min_export = -0.1
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	smooth_talking_charmer = {
-		random = yes
-		sprite = 13
-		trade_opinion_factor = 0.2
-		consumer_goods_factor = -0.02
-		local_resources_factor = 0.10
-		min_export = 0.1
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	smooth_talking_charmer_2 = {
-		random = yes
-		sprite = 13
-		trade_opinion_factor = 0.2
-		consumer_goods_factor = -0.02
-		local_resources_factor = 0.10
-		min_export = 0.10
 
 		ai_will_do = {
 			factor = 1
