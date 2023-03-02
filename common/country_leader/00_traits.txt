@@ -404,6 +404,13 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	
+	little_churchill = {
+		random = no
+		war_support_factor = 0.05
+		compliance_growth_on_our_occupied_states = -0.2
+		resistance_growth_on_our_occupied_states  = 0.2
+	}
 
 #### Axis Policital Advisor Traits ####
 
@@ -709,9 +716,9 @@ leader_traits = {
 	   random = yes
 		sprite = 13
 		consumer_goods_factor = 0.02
-		industrial_capacity_factory = 0.05
-		industrial_capacity_dockyard = 0.05
-        production_factory_max_efficiency_factor = 0.05
+		industrial_capacity_factory = 0.075
+		industrial_capacity_dockyard = 0.075
+        production_factory_max_efficiency_factor = 0.025
 		trade_opinion_factor = 0.05
 
 		ai_will_do = {
@@ -990,14 +997,6 @@ leader_traits = {
 	defeatist = {
 		random = no
 		war_support_factor = -0.05
-	}
-
-	little_churchill = {
-		random = no
-		war_support_factor = 0.05
-		resistance_damage_to_garrison = 0.2
-		compliance_growth_on_our_occupied_states = -0.2
-		resistance_growth_on_our_occupied_states  = 0.2
 	}
 
 	wilhelmina = {
