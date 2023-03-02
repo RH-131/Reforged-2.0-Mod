@@ -219,7 +219,7 @@ leader_traits = {
 		random = yes
 		production_speed_industrial_complex_factor = 0.05
 		production_speed_infrastructure_factor = 0.05
-		production_speed_synthetic_refinery_factor = 0.05
+		production_speed_synthetic_refinery_factor = 0.10
 
 		ai_will_do = {
 			factor = 1
@@ -247,6 +247,26 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 0.2
+		}
+	}
+	
+	quartermaster_general = {
+		sprite = 10
+		random = yes
+		production_speed_air_base_factor = 0.1
+		production_speed_naval_base_factor = 0.15
+		production_speed_bunker_factor = 0.1
+		production_speed_coastal_bunker_factor = 0.1
+		production_speed_anti_air_building_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		production_speed_supply_node_factor = 0.1
+		production_speed_rocket_site_factor = 0.15
+		production_speed_radar_station_factor = 0.15
+		production_speed_nuclear_reactor_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	
@@ -903,9 +923,9 @@ leader_traits = {
 
 		stability_factor = -0.1
 		political_power_factor = -0.1
-		experience_gain_army = 0.09
-		special_forces_attack_factor = 0.12
-	    special_forces_defence_factor = 0.12
+		experience_gain_army = 0.05
+		special_forces_attack_factor = 0.05
+	    special_forces_defence_factor = 0.05
 
 		ai_will_do = {
 			factor = 1
@@ -1047,7 +1067,7 @@ leader_traits = {
 
 	nationalist_symbol = {
 		war_support_factor = 0.05
-		stability_factor = 0.05
+		stability_weekly = -0.002
 		army_core_attack_factor = 0.1
 		army_core_defence_factor = 0.1
 	}
@@ -2002,25 +2022,6 @@ leader_traits = {
 		}
 	}
 
-	quartermaster_general = {
-		sprite = 10
-		random = yes
-		production_speed_air_base_factor = 0.1
-		production_speed_naval_base_factor = 0.15
-		production_speed_bunker_factor = 0.1
-		production_speed_coastal_bunker_factor = 0.1
-		production_speed_anti_air_building_factor = 0.1
-		production_speed_infrastructure_factor = 0.1
-		production_speed_rail_way_factor = 0.1
-		production_speed_supply_node_factor = 0.1
-		production_speed_rocket_site_factor = 0.15
-		production_speed_radar_station_factor = 0.15
-		production_speed_nuclear_reactor_factor = 0.15
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
 
 	econ_interventionist = {
 		sprite = 10
