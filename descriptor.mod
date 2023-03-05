@@ -9,6 +9,6 @@ tags={
 	"Historical"
 	"Balance"
 }
-name="Oak 2.0 WIP"
+name="Baptized Testing"
 supported_version="1.12.10"
 remote_file_id="2726354765"
