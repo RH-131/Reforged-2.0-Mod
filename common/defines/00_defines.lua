@@ -568,7 +568,7 @@ NProduction = {
 	FLOATING_HARBOR_MAX_NAV_FACTORIES_PER_LINE = 10,
 	CONVOY_MAX_NAV_FACTORIES_PER_LINE = 15,
 	CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10,
-	MAX_MIL_FACTORIES_PER_LINE = 150,
+	MAX_MIL_FACTORIES_PER_LINE = 200,
 	RAILWAY_GUN_MAX_MIL_FACTORIES_PER_LINE = 10,
 	RAILWAY_GUN_REPAIR_SPEED = 8.0,			-- Railway gun strength repair speed per factory
 	EFFICIENCY_LOSS_PER_UNUSED_DAY = 1,		-- Daily loss of efficiency for unused factory slots ( efficiency is tracked per factory slot in the production line )
@@ -665,11 +665,11 @@ NBuildings = {
 	BASE_FACTORY_REPAIR = 0.3,			-- Default repair rate before factories are taken into account
 	BASE_FACTORY_REPAIR_FACTOR = 2.0,	-- Factory speed modifier when repairing.
 	SUPPLY_PORT_LEVEL_THROUGHPUT = 3,   -- supply throughput per level of naval base
-	MAX_SHARED_SLOTS = 50,				-- Max slots shared by factories
+	MAX_SHARED_SLOTS = 60,				-- Max slots shared by factories
 	OWNER_CHANGE_EXTRA_SHARED_SLOTS_FACTOR = 0.5, --Scale factor of extra shared slots when state owner change.
 	DESTRUCTION_COOLDOWN_IN_WAR = 30,	-- Number of days cooldown between removal of buildings in war times
 
-	INFRASTRUCTURE_RESOURCE_BONUS = 0.20, -- multiplicative resource bonus for each level of (non damaged) infrastructure
+	INFRASTRUCTURE_RESOURCE_BONUS = 0.15, -- multiplicative resource bonus for each level of (non damaged) infrastructure
 	SUPPLY_ROUTE_RESOURCE_BONUS = 0.15,   -- multiplicative resource bonus for having a railway/naval connection to the capital
 	INFRASTRUCTURE_MUD_EFFECT = -0.8, -- multiplicative effect on mud growth for max infra
 },
@@ -1163,7 +1163,7 @@ NAir = {
 	COMBAT_MAX_WINGS_AT_ONCE_PORT_STRIKE = 10000,        -- we can really pounce a naval strike and escalate
 	AIR_REGION_SUPERIORITY_PIXEL_SCALE = 0.04,           -- air superiority scale = superiority/(pixels*this)
 	COMBAT_MULTIPLANE_CAP = 2.0,						-- How many planes can shoot at each plane on other side ( if there are 100 planes we are atttacking COMBAT_MULTIPLANE_CAP * 100 of our planes can shoot )
-	COMBAT_DAMAGE_SCALE = 0.10,							-- Higher value = more shot down planes
+	COMBAT_DAMAGE_SCALE = 0.20,							-- Higher value = more shot down planes
 	COMBAT_DAMAGE_SCALE_CARRIER = 8,                    -- same as above but used inside naval combat for carrier battles
 	DETECT_CHANCE_FROM_OCCUPATION = 0.15, 				-- How much the controlled provinces in area affects the air detection base value.
 	DETECT_CHANCE_FROM_RADARS = 0.6, 					-- How much the radars in area affects detection chance.
@@ -1956,7 +1956,7 @@ NRailwayGun = {
 	RAILWAY_GUN_RANGE = 30,							-- The range of railway guns in pixels
 	ATTACK_TO_FORTS_MODIFIER_FACTOR = 2,		-- Forts modifier is calculated by multiplying railway gun attack value with this and dividing by 100
 	ATTACK_TO_ENTRENCHMENT_MODIFIER_FACTOR = 0.8,		-- Entrenchment modifier is calculated by multiplying railway gun attack value with this and dividing by 100
-	ATTACK_TO_BOMBARDMENT_MODIFIER_FACTOR = 0.4,	-- Bombardment modifier is calculated by multiplying railway gun attack value with this and dividing by 100
+	ATTACK_TO_BOMBARDMENT_MODIFIER_FACTOR = 0.6,	-- Bombardment modifier is calculated by multiplying railway gun attack value with this and dividing by 100
 	DAILY_MANPOWER_GAIN_RATIO = 0.05,				-- Railway Guns will be able to gain this ratio of their max manpower daily
 	DISBAND_MANPOWER_LOSS = 0.0,					-- The ration of manpower lost on disbanding railway guns
 	ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0.2,		-- The percentage of manpower returned when an encircled unit is disbanded
