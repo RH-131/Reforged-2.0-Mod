@@ -67,6 +67,7 @@ characters={
 			available = {
 				NOT = {
 					has_idea = george_patton
+					has_idea = william_simpson
 				}
 			}
 			cost  = 150.000
@@ -570,6 +571,24 @@ characters={
 	}
 	USA_william_simpson={
 		name="William Simpson"
+		advisor={
+			slot = theorist
+			idea_token = william_simpson
+			ledger  = army 
+			allowed  = {
+				original_tag  = USA
+			}
+			available = {
+				NOT = {
+					has_idea = george_patton
+					has_idea = omar_bradley
+				}
+			}
+			cost  = 200.000
+			traits  = {
+				usa_military_theorist 
+			}
+		}
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_USA_william_hood_simpson.dds"
@@ -839,6 +858,7 @@ characters={
 				available = {
 					NOT = {
 						has_idea = omar_bradley
+						has_idea = william_simpson
 					}
 				}
 				traits  = {
