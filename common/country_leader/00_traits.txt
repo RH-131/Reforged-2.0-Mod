@@ -1,6 +1,6 @@
-@tier1 = 30
-@tier2 = 20
-@tier3 = 10
+@tier1 = 15
+@tier2 = 10
+@tier3 = 5
 
 @xp1 = 0.00
 @xp2 = 0.00
@@ -415,7 +415,6 @@ leader_traits = {
 
 	militant_socialist = {
 		random = no
-		stability_weekly = 0.001
 		production_speed_infrastructure_factor = 0.2
 		war_support_factor = 0.1
 		experience_gain_army = 0.1
@@ -437,9 +436,9 @@ leader_traits = {
 	      random = no
 		  sprite = 13
 		  political_power_factor = 0.05
-          stability_factor = -0.05
-          industrial_capacity_factory = 0.1
-		  industrial_capacity_dockyard = 0.1
+          stability_factor = -0.10
+          industrial_capacity_factory = 0.05
+		  industrial_capacity_dockyard = 0.05
 
 		 ai_will_do = {
 			factor = 1
@@ -486,6 +485,37 @@ leader_traits = {
 		ai_will_do = {
 			factor = 1
 		}
+	}
+	
+	warmonger = {
+		random = no
+		#ai_focus_aggressive_factor = 0.3
+		max_dig_in = -1
+		war_support_weekly = 0.001
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	figurehead_president = {
+		random = no
+		stability_factor = -0.05
+		political_power_factor = 0.05
+	}
+
+	great_survivor = {
+		random = no
+		stability_factor = -0.05
+		mobilization_speed = 0.25
+		minimum_training_level = -0.2
+	}
+
+	the_director = {
+		random = no
+		planning_speed = -0.1
+		max_planning = 0.1
+		army_core_attack_factor = 0.15
+		army_core_defence_factor = 0.15
 	}
 
 #### Comminterm Political Advisor Traits ####
@@ -929,7 +959,7 @@ leader_traits = {
 
 		stability_factor = -0.1
 		political_power_factor = -0.1
-		experience_gain_army = 0.05
+		experience_gain_army = 0.025
 		special_forces_attack_factor = 0.05
 	    special_forces_defence_factor = 0.05
 
@@ -1263,17 +1293,6 @@ leader_traits = {
 		}
 	}
 
-	warmonger = {
-		random = no
-		#ai_focus_aggressive_factor = 0.3
-		max_dig_in = -1
-		war_support_weekly = 0.001
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	general_tag = {
 	    random = no
 		political_power_factor = -0.01
@@ -1311,26 +1330,6 @@ leader_traits = {
 		ai_will_do = {
 			factor = 1
 		}
-	}
-
-	figurehead_president = {
-		random = no
-		stability_factor = -0.05
-		political_power_factor = 0.05
-	}
-
-	great_survivor = {
-		random = no
-		stability_factor = 0.1
-		mobilization_speed = 0.15
-	}
-
-	the_director = {
-		random = no
-		planning_speed = -0.1
-		max_planning = 0.1
-		army_core_attack_factor = 0.15
-		army_core_defence_factor = 0.15
 	}
 
 	sins_of_the_father = {
