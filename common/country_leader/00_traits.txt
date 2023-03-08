@@ -689,6 +689,18 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	
+	snuggler = {
+		random = no
+		sprite = 10
+		political_power_factor = -0.15
+		special_forces_cap = 0.02
+		conscription_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 #### Resource, Economy and Market ####
 
@@ -1684,20 +1696,6 @@ leader_traits = {
         stability_weekly = 0.002
 		production_speed_buildings_factor = 0.1
 		local_resources_factor = 0.05
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	snuggler = {
-		random = no
-		sprite = 10
-		political_power_factor = -0.05
-		industrial_capacity_factory = 0.1
-		industrial_capacity_dockyard = 0.1
-		special_forces_cap = 0.1
-		conscription_factor = 0.1
 
 		ai_will_do = {
 			factor = 1
