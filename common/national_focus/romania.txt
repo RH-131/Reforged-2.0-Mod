@@ -1473,11 +1473,24 @@
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			add_ideas = ROM_fascist_assault_divisions
+			add_doctrine_cost_reduction = {
+				name = ROM_the_sentinels_of_the_motherland 
+				cost_reduction = 0.40
+				uses = 3
+				category = land_doctrine
+			}
+			
 		}
 
 		completion_reward = {
 			add_ideas = ROM_fascist_assault_divisions
+			add_doctrine_cost_reduction = {
+				name = ROM_the_sentinels_of_the_motherland 
+				cost_reduction = 0.40
+				uses = 3
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -1652,6 +1665,7 @@
 			controls_state = 48
 			controls_state = 212
 			controls_state = 211
+			add_state_core = 801
 		}
 
 		bypass = {
@@ -1664,41 +1678,47 @@
 
 		complete_tooltip = {
 			48 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
+				set_resistance = 0
+				set_compliance = 65
+				add_dynamic_modifier = { modifier = romania_control_modifier }
 			}
-			
 			212 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
+				set_resistance = 0
+				set_compliance = 65
+				add_dynamic_modifier = { modifier = romania_control_modifier }
 			}
-			
 			211 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
+				set_resistance = 0
+				set_compliance = 65
+				add_dynamic_modifier = { modifier = romania_control_modifier }
+			}
+			801 = {
+				set_resistance = 0
+				set_compliance = 65
+				add_dynamic_modifier = { modifier = romania_control_modifier }
 			}
 		}
 
 		completion_reward = {
 			48 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
+				set_resistance = 0
+				set_compliance = 65
+				add_dynamic_modifier = { modifier = romania_control_modifier }
 			}
-			
 			212 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
+				set_resistance = 0
+				set_compliance = 65
+				add_dynamic_modifier = { modifier = romania_control_modifier }
 			}
-			
 			211 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
+				set_resistance = 0
+				set_compliance = 65
+				add_dynamic_modifier = { modifier = romania_control_modifier }
+			}
+			801 = {
+				set_resistance = 0
+				set_compliance = 65
+				add_dynamic_modifier = { modifier = romania_control_modifier }
 			}
 		}
 	}
@@ -2083,7 +2103,13 @@
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			add_ideas = ROM_the_sentinel_of_the_motherland
+			add_doctrine_cost_reduction = {
+				name = ROM_the_sentinels_of_the_motherland 
+				cost_reduction = 0.50
+				uses = 2
+				category = land_doctrine
+			}
 		}
 
 		completion_reward = {
@@ -2091,7 +2117,7 @@
 			add_doctrine_cost_reduction = {
 				name = ROM_the_sentinels_of_the_motherland 
 				cost_reduction = 0.50
-				uses = 3
+				uses = 2
 				category = land_doctrine
 			}
 		}
@@ -2248,12 +2274,14 @@
 			add_state_core = 48
 			add_state_core = 212
 			add_state_core = 211
+			add_state_core = 801
 		}
 
 		completion_reward = {
 			add_state_core = 48
 			add_state_core = 212
 			add_state_core = 211
+			add_state_core = 801
 		}
 	}
 	
