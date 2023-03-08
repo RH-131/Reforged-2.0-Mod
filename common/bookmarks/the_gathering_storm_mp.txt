@@ -122,11 +122,27 @@ bookmarks = {
 			ideas = {
 				CAN_great_depression_1
 				CAN_conscription_crisis
+				CAN_war_bonds_1
 			}
 			focuses = {
 				CAN_canada_wheat_board
 				CAN_strengthen_the_commonwealth_ties
 				CAN_if_day
+			}
+		}
+		"SAF"={
+			minor = yes
+			history = "SAF_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				SAF_ossewabrandwag_2
+				SAF_history_of_segregation
+				SAF_worker_restrictions
+			}
+			focuses = {
+				SAF_hofmeyrs_reforms
+				SAF_force_parliament_debate
+				SAF_support_the_policy_of_appeasement
 			}
 		}
 		"RAJ"={
@@ -151,6 +167,7 @@ bookmarks = {
 			ideas = {
 				AST_great_depression_1
 				AST_conscript_malus
+				AST_wall_defence3
 			}
 			focuses = {
 				AST_expand_the_raaf
@@ -158,21 +175,6 @@ bookmarks = {
 				AST_rats_of_tobruk
 			}
 		}
-		"SAF"={
-			minor = yes
-			history = "SAF_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				SAF_ossewabrandwag_2
-				SAF_history_of_segregation
-				SAF_worker_restrictions
-			}
-			focuses = {
-				SAF_hofmeyrs_reforms
-				SAF_force_parliament_debate
-				SAF_support_the_policy_of_appeasement
-			}
-		}		
 		"SPR"={
 			minor = yes
 			history = "SPR_GATHERING_STORM_DESC"
@@ -200,6 +202,7 @@ bookmarks = {
 			focuses = {
 				ROM_institute_a_royal_dictatorship
 				ROM_for_the_preservation_of_greater_romania
+				ROM_ask_codreanue_to_form_government
 			}
 		}
 		"HUN"={
@@ -208,24 +211,28 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				HUN_treaty_of_triannon
+				HUN_fractured_industry
+				HUN_lost_glory
 			}
 			focuses = {
 				HUN_secret_rearmament
 				HUN_renounce_the_treaty_of_trianon
+				HUN_bled_agreement
 			}
 		}
-		"FIN"={
+		"EFR"={
 			minor = yes
-			history = "FIN_GATHERING_STORM_DESC"
+			history = "OTHER_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-   			    FIN_communism_banned
-				sisu
+   			    EFR_irredentism
+				EFR_chantiers_de_la_jeunesse
+				GER_gestapo_idea2
 			}
 			focuses = {
-				FIN_pander_axis
-				FIN_german_knowledge
-				FIN_molotov_cocktails
+				EFR_marechal_nous_voila
+				EFR_chantiers_de_la_jeunesse
+				EFR_traitor_rises
 			}
 		}
 		
