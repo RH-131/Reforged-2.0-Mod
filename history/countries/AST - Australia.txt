@@ -22,6 +22,7 @@ set_research_slots = 3
 	set_garrison_strength = 1.0
 }
 
+set_convoys = 100
 set_stability = 0.65
 set_war_support = 0.3
 
@@ -170,8 +171,6 @@ if = {
 	}
 	add_to_tech_sharing_group = commonwealth_research
 }
-
-set_convoys = 100
 
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }

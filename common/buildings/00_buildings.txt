@@ -5,20 +5,20 @@ buildings = {
 	#    if provincial = no, then show_on_map = X is amount per state
 	# State buildings
 	infrastructure = {
-		base_cost = 1600
-		per_level_extra_cost = 200
+		base_cost = 1250
+		per_level_extra_cost = 250
 		icon_frame = 3
 		infrastructure = yes
 		max_level = 10
 		value = 1
 		show_modifier = yes
-		max_fuel_building = 0.75 #k
+		max_fuel_building = 1.00 #k
 	}
 	# Shared buildings
 	arms_factory = {
 		show_on_map = 6
 		base_cost = 7000
-		base_cost_conversion = 6500
+		base_cost_conversion = 7000
 		military_production = 1
 		icon_frame = 2
 		max_level = 40
@@ -134,7 +134,7 @@ buildings = {
 	}
 	anti_air_building = {
 		show_on_map = 3
-		base_cost = 1500
+		base_cost = 2000
 		per_level_extra_cost = 250
 		icon_frame = 9
 		anti_air = yes
@@ -159,7 +159,7 @@ buildings = {
 	}
 	fuel_silo = {
 		show_on_map = 1
-		base_cost = 4500
+		base_cost = 2500
 		icon_frame = 14
 
 		#max_level = 1
@@ -184,7 +184,7 @@ buildings = {
 	}
 	radar_station = {
 		show_on_map = 1
-		base_cost = 2800
+		base_cost = 2500
 		per_level_extra_cost = 500
 		icon_frame = 11
 		radar = yes
