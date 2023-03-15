@@ -413,6 +413,20 @@ leader_traits = {
 
 #### Axis Policital Advisor Traits ####
 
+	fascist_demagogue = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		fascism_drift = 0.1
+		stability_factor = 0.05
+		war_support_weekly = 0.001
+		stability_weekly = 0.001
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
 	militant_socialist = {
 		random = no
 		production_speed_infrastructure_factor = 0.2
@@ -1809,20 +1823,6 @@ leader_traits = {
 		# Boosts Neutrality
 		sprite = 13
 		neutrality_drift = 0.1
-
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
-	fascist_demagogue = {
-		random = no
-		# Boosts Fascism
-		sprite = 13
-		fascism_drift = 0.1
-		stability_factor = 0.05
-		war_support_weekly = 0.001
-		stability_weekly = 0.001
 
 		ai_will_do = {
 			factor = 0
