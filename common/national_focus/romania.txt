@@ -1558,98 +1558,98 @@
 		}
 	}
 	
-	focus = {
-		id = ROM_fascist_yugo
-		icon = GFX_focus_YUG_banovina_of_croatia
-		relative_position_id = ROM_co_conducator
-		prerequisite = { focus = ROM_co_conducator }
-		x = -1
-		y = 1
-
-		cost = 2.9
-
-		available = {
-		}
-
-		ai_will_do = {
-
-		}
-
-		available = {
-			controls_state = 764
-			controls_state = 107
-			controls_state = 108
-			controls_state = 106
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-			764 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
-			}
-			
-			107 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
-			}
-			
-			108 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
-			}
-			
-			106 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
-			}
-		}
-
-		completion_reward = {
-			764 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
-			}
-			
-			107 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
-			}
-			
-			108 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
-			}
-			
-			106 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
-			}
-
-		}
-	}
+#	focus = {
+#		id = ROM_fascist_yugo
+#		icon = GFX_focus_YUG_banovina_of_croatia
+#		relative_position_id = ROM_co_conducator
+#		prerequisite = { focus = ROM_co_conducator }
+#		x = -1
+#		y = 1
+#
+#		cost = 2.9
+#
+#		available = {
+#		}
+#
+#		ai_will_do = {
+#
+#		}
+#
+#		available = {
+#			controls_state = 764
+#			controls_state = 107
+#			controls_state = 108
+#			controls_state = 106
+#		}
+#
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#			764 = {
+#			set_resistance = 0
+#			set_compliance = 65
+#			add_dynamic_modifier = { modifier = romania_control_modifier }
+#			}
+#			
+#			107 = {
+#			set_resistance = 0
+#			set_compliance = 65
+#			add_dynamic_modifier = { modifier = romania_control_modifier }
+#			}
+#			
+#			108 = {
+#			set_resistance = 0
+#			set_compliance = 65
+#			add_dynamic_modifier = { modifier = romania_control_modifier }
+#			}
+#			
+#			106 = {
+#			set_resistance = 0
+#			set_compliance = 65
+#			add_dynamic_modifier = { modifier = romania_control_modifier }
+#			}
+#		}
+#
+#		completion_reward = {
+#			764 = {
+#			set_resistance = 0
+#			set_compliance = 65
+#			add_dynamic_modifier = { modifier = romania_control_modifier }
+#			}
+#			
+#			107 = {
+#			set_resistance = 0
+#			set_compliance = 65
+#			add_dynamic_modifier = { modifier = romania_control_modifier }
+#			}
+#			
+#			108 = {
+#			set_resistance = 0
+#			set_compliance = 65
+#			add_dynamic_modifier = { modifier = romania_control_modifier }
+#			}
+#			
+#			106 = {
+#			set_resistance = 0
+#			set_compliance = 65
+#			add_dynamic_modifier = { modifier = romania_control_modifier }
+#			}
+#
+#		}
+#	}
 	
 	focus = {
 		id = ROM_fascist_bulg
 		icon = GFX_focus_BUL_bulgarian_administration_of_the_balkans
 		relative_position_id = ROM_co_conducator
 		prerequisite = { focus = ROM_co_conducator }
-		x = 1
+		x = 0
 		y = 1
 
 		cost = 2.9
@@ -1723,64 +1723,64 @@
 		}
 	}
 	
-	focus = {
-		id = ROM_fascist_greece
-		icon = GFX_idea_ROM_balkans_dominance
-		relative_position_id = ROM_co_conducator
-		prerequisite = { focus = ROM_fascist_yugo focus = ROM_fascist_bulg }
-		x = 0
-		y = 2
-
-		cost = 2.9
-
-		available = {
-		}
-
-		ai_will_do = {
-
-		}
-
-		available = {
-			controls_state = 731
-			controls_state = 184
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-			731 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
-			}
-			
-			184 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
-			}
-		}
-
-		completion_reward = {
-			731 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
-			}
-			
-			184 = {
-			set_resistance = 0
-			set_compliance = 65
-			add_dynamic_modifier = { modifier = romania_control_modifier }
-			}
-		}
-	}
+#	focus = {
+#		id = ROM_fascist_greece
+#		icon = GFX_idea_ROM_balkans_dominance
+#		relative_position_id = ROM_co_conducator
+#		prerequisite = { focus = ROM_fascist_yugo focus = ROM_fascist_bulg }
+#		x = 0
+#		y = 2
+#
+#		cost = 2.9
+#
+#		available = {
+#		}
+#
+#		ai_will_do = {
+#
+#		}
+#
+#		available = {
+#			controls_state = 731
+#			controls_state = 184
+#		}
+#
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#			731 = {
+#			set_resistance = 0
+#			set_compliance = 65
+#			add_dynamic_modifier = { modifier = romania_control_modifier }
+#			}
+#			
+#			184 = {
+#			set_resistance = 0
+#			set_compliance = 65
+#			add_dynamic_modifier = { modifier = romania_control_modifier }
+#			}
+#		}
+#
+#		completion_reward = {
+#			731 = {
+#			set_resistance = 0
+#			set_compliance = 65
+#			add_dynamic_modifier = { modifier = romania_control_modifier }
+#			}
+#			
+#			184 = {
+#			set_resistance = 0
+#			set_compliance = 65
+#			add_dynamic_modifier = { modifier = romania_control_modifier }
+#			}
+#		}
+#	}
 
 	focus = {
 		id = ROM_institute_a_royal_dictatorship
@@ -2197,56 +2197,56 @@
 		}
 	}
 	
-	focus = {
-		id = ROM_greater_yugo
-		icon = GFX_focus_generic_monarchy_1
-		relative_position_id = ROM_pressure_antonescu_into_becoming_prime_minister
-		prerequisite = { focus = ROM_pressure_antonescu_into_becoming_prime_minister }
-		x = -1
-		y = 1
-
-		cost = 2.9
-
-		available = {
-		}
-
-		ai_will_do = {
-
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-			add_state_core = 764
-			add_state_core = 107
-			add_state_core = 108
-			add_state_core = 106
-		}
-
-		completion_reward = {
-			add_state_core = 764
-			add_state_core = 107
-			add_state_core = 108
-			add_state_core = 106
-		}
-	}
+#	focus = {
+#		id = ROM_greater_yugo
+#		icon = GFX_focus_generic_monarchy_1
+#		relative_position_id = ROM_pressure_antonescu_into_becoming_prime_minister
+#		prerequisite = { focus = ROM_pressure_antonescu_into_becoming_prime_minister }
+#		x = -1
+#		y = 1
+#
+#		cost = 2.9
+#
+#		available = {
+#		}
+#
+#		ai_will_do = {
+#
+#		}
+#
+#		available = {
+#
+#		}
+#
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#			add_state_core = 764
+#			add_state_core = 107
+#			add_state_core = 108
+#			add_state_core = 106
+#		}
+#
+#		completion_reward = {
+#			add_state_core = 764
+#			add_state_core = 107
+#			add_state_core = 108
+#			add_state_core = 106
+#		}
+#	}
 	
 	focus = {
 		id = ROM_greater_bulg
 		icon = GFX_ROM_integrate_bulgaria
 		relative_position_id = ROM_pressure_antonescu_into_becoming_prime_minister
 		prerequisite = { focus = ROM_pressure_antonescu_into_becoming_prime_minister }
-		x = 1
+		x = 0
 		y = 1
 
 		cost = 2.9
@@ -2285,45 +2285,45 @@
 		}
 	}
 	
-	focus = {
-		id = ROM_greater_greece
-		icon = GFX_idea_ROM_balkans_dominance
-		relative_position_id = ROM_pressure_antonescu_into_becoming_prime_minister
-		prerequisite = { focus = ROM_greater_yugo focus = ROM_greater_bulg }
-		x = 0
-		y = 2
-
-		cost = 2.9
-
-		available = {
-		}
-
-		ai_will_do = {
-
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-			add_state_core = 731
-			add_state_core = 184
-		}
-
-		completion_reward = {
-			add_state_core = 731
-			add_state_core = 184
-		}
-	}
+#	focus = {
+#		id = ROM_greater_greece
+#		icon = GFX_idea_ROM_balkans_dominance
+#		relative_position_id = ROM_pressure_antonescu_into_becoming_prime_minister
+#		prerequisite = { focus = ROM_greater_yugo focus = ROM_greater_bulg }
+#		x = 0
+#		y = 2
+#
+#		cost = 2.9
+#
+#		available = {
+#		}
+#
+#		ai_will_do = {
+#
+#		}
+#
+#		available = {
+#
+#		}
+#
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#			add_state_core = 731
+#			add_state_core = 184
+#		}
+#
+#		completion_reward = {
+#			add_state_core = 731
+#			add_state_core = 184
+#		}
+#	}
 
 	focus = {
 		id = ROM_force_the_king_to_abdicate
