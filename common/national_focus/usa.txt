@@ -3348,9 +3348,14 @@ focus_tree = {
 		}
 		available_if_capitulated = yes		
 		
-		available = { 
-			USA = {
-				has_tech = forward_observers
+		available = {
+			OR = {
+				USA = {
+					has_tech = forward_observers
+				}
+				USA = {
+					has_tech = combined_arms
+				}
 			}
 		}
 
