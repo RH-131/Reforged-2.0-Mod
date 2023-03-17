@@ -1,4 +1,4 @@
-version="1.05.01"
+version="1.05.05"
 replace_path="common/units/names_divisions"
 replace_path="history/countries"
 replace_path="history/states"
@@ -10,5 +10,5 @@ tags={
 	"Balance"
 }
 name="Baptized Testing"
-supported_version="1.12.10"
+supported_version="1.12.11"
 remote_file_id="2726354765"
