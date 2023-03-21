@@ -1008,6 +1008,32 @@ characters={
 			}
 		}
 	}
+	ITA_amerigo_gucci ={
+		advisor={
+			slot = political_advisor
+			idea_token = amerigo_gucci
+			allowed  = {
+					original_tag  = ITA
+				}
+				traits  = {
+					corrupt_kleptocrat
+				}
+				do_effect  = {
+					not  = {
+						has_government  = fascism 
+					}
+				}
+				ai_will_do  = {
+					factor  = 0.000
+				}
+		}
+		name="amerigo_gucci"
+		portraits={
+			army={
+				
+			}
+		}
+	}
 	ITA_rino_corso_fougier={
 		advisor={
 			slot = air_chief
