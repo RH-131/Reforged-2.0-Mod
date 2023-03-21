@@ -66,10 +66,7 @@ focus = {
 	}
 }
 
-
-
-
-
+	
 	focus = {
 		id = SPA_a_great_spain
 
@@ -1862,6 +1859,12 @@ technology = construction4
 	focus = {
 		id = SPA_la_division_azul
 		available = {
+			or = {
+			date > 1941.1.1
+			FRA = {
+		       has_capitulated = yes 
+			}
+			}
 		}
 		bypass = {
 		}
@@ -1877,7 +1880,9 @@ technology = construction4
 
 		completion_reward = {
 			add_ideas = SPA_la_division_azul
+			add_ideas = SPA_volunteer
 		}
+
 	}
 	###########################################
 	#				Help Germany			  #
