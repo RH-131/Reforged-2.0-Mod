@@ -41,43 +41,6 @@ characters={
 			id=-1
 		}
 	}
-	ROM_octavian_goga={
-		name="Octavian Goga"
-		advisor={
-			slot = political_advisor
-			idea_token = ROM_octavian_goga
-			allowed  = {
-					original_tag  = ROM
-				}
-				visible  = {
-					not  = {
-						has_government  = fascism 
-					}
-				}
-				available  = {
-					not  = {
-						has_government  = fascism 
-					}
-				}
-				traits  = {
-					anti_democrat 
-				}
-		}
-		portraits={
-			army={
-				small="GFX_idea_advisor_generic_10"
-			}
-			civilian={
-				large="gfx/leaders/ROM/Portrait_Romania_Octavian_Goga.dds"
-			}
-		}
-		country_leader={
-			desc="POLITICS_OCTAVIAN_GOGA_DESC"
-			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
 	ROM_petre_dumitrescu={
 		name="Petre Dumitrescu"
 		portraits={
@@ -277,34 +240,6 @@ characters={
 			}
 		}
 	}
-	ROM_istrate_micescu={
-		advisor={
-			slot = political_advisor
-			idea_token = ROM_istrate_micescu
-			allowed  = {
-					original_tag  = ROM
-				}
-				visible  = {
-					not  = {
-						has_government  = fascism 
-					}
-				}
-				available  = {
-					not  = {
-						has_government  = fascism 
-					}
-				}
-				traits  = {
-					appeaser 
-				}
-		}
-		name="ROM_istrate_micescu"
-		portraits={
-			army={
-				small="GFX_idea_advisor_generic_17"
-			}
-		}
-	}
 	ROM_emanoil_ionescu={
 		advisor={
 			slot = theorist
@@ -353,16 +288,6 @@ characters={
 			idea_token = ROM_mihail_moruzov
 			allowed  = {
 					original_tag  = ROM
-				}
-				visible  = {
-					not  = {
-						has_government  = fascism 
-					}
-				}
-				available  = {
-					not  = {
-						has_government  = fascism 
-					}
 				}
 				traits  = {
 					backroom_backstabber 
@@ -428,7 +353,7 @@ characters={
 					has_government  = fascism 
 				}
 				traits  = {
-					efficient_sociopath 
+					railroad_enthusiast
 				}
 		}
 		name="ROM_gheorge_dobre"
@@ -612,16 +537,6 @@ characters={
 			allowed  = {
 					original_tag  = ROM
 				}
-				visible  = {
-					not  = {
-						has_government  = fascism 
-					}
-				}
-				available  = {
-					not  = {
-						has_government  = fascism 
-					}
-				}
 				traits  = {
 					corrupt_kleptocrat 
 				}
@@ -687,18 +602,11 @@ characters={
 			allowed  = {
 					original_tag  = ROM
 				}
-				visible  = {
-					not  = {
-						has_government  = fascism 
-					}
-				}
 				available  = {
-					not  = {
-						has_government  = fascism 
-					}
+					has_government  = fascism 
 				}
 				traits  = {
-					social_revolutionary 
+					fascist_demagogue
 				}
 		}
 		name="ROM_constantin_bratianu"

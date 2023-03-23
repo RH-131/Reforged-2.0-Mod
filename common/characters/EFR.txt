@@ -371,6 +371,50 @@ characters={
 			}
 		}
 	}
+	EFR_raimund_germain = {
+		advisor={
+			slot = political_advisor
+			idea_token = EFR_raimund_germain
+			ledger  = civilian 
+			allowed = {
+				original_tag = EFR
+			}
+			picture = generic_political_advisor_europe_5
+			available = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			traits = { corrupt_kleptocrat }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	EFR_juste_laurent = { 
+		advisor={
+			slot = political_advisor
+			idea_token = EFR_juste_laurent
+			ledger  = civilian 
+			allowed = {
+				original_tag = EFR
+			}
+			picture = generic_political_advisor_europe_5
+			available = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			traits = { snuggler }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
 	EFR_pierre_hering = {
 		advisor={
 			slot = theorist
