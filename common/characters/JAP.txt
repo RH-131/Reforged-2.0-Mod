@@ -1386,6 +1386,48 @@ characters={
 			}
 		}
 	}
+	JAP_hitake_yanzo ={
+		advisor={
+			slot = political_advisor
+			idea_token = hitake_yanzo
+			allowed  = {
+					original_tag  = JAP
+				}
+				traits  = {
+					corrupt_kleptocrat
+				}
+				ai_will_do  = {
+					factor  = 0.000
+				}
+		}
+		name="hitake_yanzo"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_3"
+			}
+		}
+	}
+	JAP_furukawa_koji ={
+		advisor={
+			slot = political_advisor
+			idea_token = furukawa_koji
+			allowed  = {
+					original_tag  = JAP
+				}
+				traits  = {
+					falangist_industrialist
+				}
+				ai_will_do  = {
+					factor  = 0.000
+				}
+		}
+		name="furukawa_koji"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_3"
+			}
+		}
+	}
 	JAP_hajime_sugiyama={
 		advisor={
 			slot = army_chief

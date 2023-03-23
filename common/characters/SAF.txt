@@ -163,7 +163,7 @@ characters={
 				available  = {
 				}
 				traits  = {
-					backroom_backstabber 
+					smooth_talking_charmer
 				}
 				ai_will_do  = {
 					factor  = 0.000
@@ -678,6 +678,26 @@ characters={
 				small="GFX_idea_generic_political_advisor_europe_3"
 			}
 		}
+	}
+	SAF_deneys_reitz ={
+		name="SAF_deneys_reitz"
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_deneys_reitz
+			allowed  = {
+					original_tag  = SAF
+				}
+				ai_will_do  = {
+					factor  = 1.000
+					modifier  = {
+						factor  = 10.000
+					}
+				}
+				traits  = {
+					capitalist 
+				}
+		}
+
 	}
 	SAF_andries_brink={
 		advisor={
