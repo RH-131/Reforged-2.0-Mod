@@ -794,7 +794,7 @@ NMilitary = {
 	LAND_COMBAT_ORG_ARMOR_DEFLECTION_FACTOR = 0.70, -- damage reduction if armor outclassing enemy
 	LAND_COMBAT_COLLATERAL_FORT_FACTOR = 0.0075,		-- Factor to scale collateral damage to forts with.
 	LAND_COMBAT_COLLATERAL_INFRA_FACTOR = 0.0022,	-- Factor to scale collateral damage to infra with.
-	LAND_COMBAT_FORT_DAMAGE_CHANCE = 10,				-- chance to get a hit to damage on forts. (out of 100)
+	LAND_COMBAT_FORT_DAMAGE_CHANCE = 15,				-- chance to get a hit to damage on forts. (out of 100)
 	ATTRITION_DAMAGE_ORG = 0.1,					   -- damage from attrition to Organisation
 	ATTRITION_EQUIPMENT_LOSS_CHANCE = 0.08,		   -- Chance for loosing equipment when suffer attrition. Scaled up the stronger attrition is. Then scaled down by equipment reliability.
 	ATTRITION_EQUIPMENT_PER_TYPE_LOSS_CHANCE = 0.08, -- Chance for loosing equipment when suffer attrition. Scaled up the stronger attrition is. Then scaled down by equipment reliability.
@@ -822,7 +822,7 @@ NMilitary = {
 	RIVER_SMALL_START_INDEX = 0,                   -- color indices for rivers
 	RIVER_SMALL_STOP_INDEX = 6,
 	RIVER_LARGE_STOP_INDEX = 11,
-	BASE_FORT_PENALTY = -0.12, 					   -- fort penalty
+	BASE_FORT_PENALTY = -0.08, 					   -- fort penalty
 	MULTIPLE_COMBATS_PENALTY = -0.5,               -- defender penalty if attacked from multiple directions
 	DIG_IN_FACTOR = 0.02,						   -- bonus factor for each dug-in level
 	ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0.06, -- XP gain per unit in combat
@@ -1231,8 +1231,8 @@ NAir = {
 	NAVAL_STRIKE_DETECTION_BALANCE_FACTOR = 0.35,		-- Value used to scale the surface_visibility stats to balance the gameplay, so 100% detection chance still won't spam the strikes.
 	NAVAL_RECON_DETECTION_BALANCE_FACTOR = 0.7,			-- Value used to scale the surface_visibility stats to balance the gameplay, so 100% detection chance still won't spam spotting.
 	LEND_LEASED_EQUIPMENT_EXPERIENCE_GAIN = 0.5,		-- Value used for equipment
-	ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.8,					-- Anti Air Gun Damage factor
-	ANTI_AIR_PLANE_DAMAGE_CHANCE = 0.15,				-- Anti Air Gun hit chance
+	ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.6,					-- Anti Air Gun Damage factor
+	ANTI_AIR_PLANE_DAMAGE_CHANCE = 0.10,				-- Anti Air Gun hit chance
 	ANTI_AIR_ATTACK_TO_DAMAGE_REDUCTION_FACTOR = 1.0,	-- Balancing value to convert equipment stat anti_air_attack to the damage reduction modifier apply to incoming air attacks against units with AA.
 	ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.65,	-- Maximum damage reduction factor applied to incoming air attacks against units with AA.
 	AIR_DEPLOYMENT_DAYS = 1,							-- Days to deploy one air wing
@@ -1305,7 +1305,7 @@ NAir = {
 	SECONDARY_DAMAGE_LOGISTICS = 1.0, -- how much damage gets translated to railway guns for logistic strike
 	
 	INTERCEPTION_DISTANCE_SCALE = 50, -- At this many pixels of path length, full interception efficiency is applied to air missions. Lerp from 0.
-	INTERCEPTION_DAMAGE_SCALE = 0.3, -- Multiply the interception damage with this value. Works as a cap when interception distance is at maximum.
+	INTERCEPTION_DAMAGE_SCALE = 0.2, -- Multiply the interception damage with this value. Works as a cap when interception distance is at maximum.
 
 	MIN_PLANE_COUNT_PARADROP = 50,
 	MIN_PLANE_COUNT_AIR_SUPPLY = 1,
@@ -1334,7 +1334,7 @@ NAir = {
 	MISSION_FUEL_COSTS = {  -- fuel cost per plane for each mission
 		1.0, -- AIR_SUPERIORITY
 		1.0, -- CAS
-		0.4, -- INTERCEPTION
+		0.8, -- INTERCEPTION
 		1.0, -- STRATEGIC_BOMBER
 		1.0, -- NAVAL_BOMBER
 		1.0, -- DROP_NUKE

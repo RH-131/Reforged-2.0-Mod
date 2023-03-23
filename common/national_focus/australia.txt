@@ -217,6 +217,7 @@ focus_tree = {
 	
  	focus = {
 	    id = AST_tanks_main
+		mutually_exclusive = { focus = AST_special_forces_main }
 		icon = GFX_AST_tank_focus_icon
 		x = -2
 		y = 3
@@ -224,6 +225,7 @@ focus_tree = {
 		cost = 7.2
 		
 		prerequisite = { focus = AST_doctrine_investigation }
+		
 		
 		ai_will_do = {
 		  factor = 1
@@ -239,7 +241,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
                 name = land_doc_bonus
                 cost_reduction = 0.5
-                uses = 3
+                uses = 2
                 category = land_doctrine
             }
 			add_tech_bonus = {
@@ -267,7 +269,6 @@ focus_tree = {
 		cost = 5
 		relative_position_id = AST_tanks_main
 		prerequisite = { focus = AST_tanks_main }
-		mutually_exclusive = { focus = AST_special_forces_main2 }
 		
 		ai_will_do = {
 		  factor = 1
@@ -325,6 +326,7 @@ focus_tree = {
 	
 	focus = {
 	    id = AST_special_forces_main
+		mutually_exclusive = { focus = AST_tanks_main } 
 		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 3
@@ -332,6 +334,7 @@ focus_tree = {
 		cost = 7.2
 		
 		prerequisite = { focus = AST_doctrine_investigation }
+		
 		
 		ai_will_do = {
 		  factor = 1
@@ -367,7 +370,6 @@ focus_tree = {
 		cost = 7.2
 		relative_position_id = AST_special_forces_main
 		prerequisite = { focus = AST_special_forces_main }
-		mutually_exclusive = { focus = AST_tanks_main2 }
 		
 		ai_will_do = {
 		  factor = 1
@@ -386,9 +388,16 @@ focus_tree = {
 				uses = 2
 				category = marine_tech 
 			}
+			add_doctrine_cost_reduction = {
+                name = land_doc_bonus
+                cost_reduction = 0.25
+                uses = 2
+                category = land_doctrine
+			
 		add_ideas = AST_mc	
 		}
 	}
+}
 	focus = {
 	    id = AST_special_forces_paratrooper
 		icon = GFX_focus_generic_paratrooper
@@ -2102,7 +2111,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = AST_standard_gauge_railway
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 5
@@ -2163,7 +2172,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = AST_standard_gauge_railway
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 5
@@ -2224,7 +2233,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = AST_standard_gauge_railway
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 5
@@ -2287,7 +2296,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = AST_standard_gauge_railway
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 5
@@ -2464,7 +2473,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = AST_standard_gauge_railway
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -2517,7 +2526,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = AST_standard_gauge_railway
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -2666,7 +2675,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = AST_establish_advisory_war_council
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 10
@@ -2700,7 +2709,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = AST_establish_advisory_war_council
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 5
@@ -2934,7 +2943,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = AST_establish_advisory_war_council
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 15
@@ -2993,7 +3002,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = AST_establish_advisory_war_council
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 5
@@ -3181,7 +3190,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = AST_establish_advisory_war_council
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3621,7 +3630,7 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 75
 			remove_ideas = AST_conscript_malus
 			add_autonomy_ratio = {
 				value = 0.25
@@ -3752,10 +3761,15 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = AST_Education	
+			add_ideas = AST_Education
+			AST = {
+  				modify_tech_sharing_bonus = {
+     				id = commonwealth_research
+     				bonus = 0.04
+			}
 		}
 	}
-	
+}	
 	focus = {
 		id = AST_Homeland_defence
 		icon = GFX_goal_generic_defence
@@ -3764,7 +3778,7 @@ focus = {
 		y = 3
 		relative_position_id = AST_Australia_First
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -4022,7 +4036,7 @@ focus = {
 		}
 
 		available = {
-			has_war_with = JAP
+			has_war_with = ITA
 
 		}
 		
