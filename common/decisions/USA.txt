@@ -239,6 +239,28 @@ USA_popular_support = {
 			add_stability = USA_democratic_support_var_stab
 		}
 	}
+	USA_pack_the_court = {
+		icon = generic_political_discourse
+		available = {
+			has_completed_focus = USA_replace_supreme_court_judges
+		}
+		
+		cost = 25
+
+		ai_will_do = {
+			factor = 1
+		}
+		days_re_enable = 180
+		days_remove = 90
+		remove_effect = {
+			add_political_power = 50
+			add_stability = .05
+			add_days_mission_timeout = {
+				mission = USA_social_security_act_mission
+				days = -50
+		}
+	}
+}
 
 	USA_convert_republicans = {
 		icon = eng_trade_unions_demand
@@ -1783,4 +1805,4 @@ USA_unique_measures = {
 			}
 		}
 	}
-}
+

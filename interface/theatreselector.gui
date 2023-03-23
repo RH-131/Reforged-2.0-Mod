@@ -251,7 +251,14 @@ guiTypes = {
 			size = { x=170 y=32 }
 			text = "NEW_THEATER_GROUP"
 		}
-
+		
+		iconType = {
+			name ="theater_supply_priority"
+			quadTextureSprite = "GFX_unitlist_priority_icon_strip"	
+			position = { x = 182 y = 9 }
+			frame = 2
+		}
+		
 		OverlappingElementsBoxType = {
 			name = "orders_group_box"
 			first_on_top = yes

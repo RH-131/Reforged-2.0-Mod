@@ -77,11 +77,10 @@ ideas = {
 
 			modifier = {
 				max_planning = 0.05
-				planning_speed = 0.05
-				army_morale_factor = 0.05
+				army_morale_factor = 0.03
 				minimum_training_level = -0.2
 				experience_gain_factor = -0.2
-				conscription_factor = 0.1
+				conscription_factor = 0.05
 			}
 			
 		}
@@ -101,11 +100,10 @@ ideas = {
 
 			modifier = {
 				max_planning = 0.05
-				planning_speed = 0.05
-				army_morale_factor = 0.08
-				army_org_Factor = 0.03
-				army_defence_factor = 0.025
-				army_attack_factor = 0.025
+				army_morale_factor = 0.06
+				army_org_Factor = 0.025
+				army_defence_factor = 0.02
+				army_attack_factor = 0.02
 				minimum_training_level = -0.25
 				experience_gain_factor = -0.2
 				conscription_factor = 0.1
@@ -168,8 +166,7 @@ ideas = {
 				political_power_cost = 0.1
 				stability_weekly = 0.001
 				conscription_factor = 0.05
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.025
+				industrial_capacity_factory = 0.025
 				consumer_goods_factor = -0.01
 			}
 		}
@@ -191,8 +188,8 @@ ideas = {
 				political_power_cost = 0.10
 				stability_weekly = 0.001
 				conscription_factor = 0.10
-				industrial_capacity_factory = 0.10
-				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.025
 				consumer_goods_factor = -0.02
 			}
 		}
@@ -316,7 +313,7 @@ ideas = {
 			
 			modifier = {
 				conscription_factor = -0.05
-				production_speed_buildings_factor = 0.05
+				production_speed_buildings_factor = 0.025
 			}
 		}
 		
@@ -336,17 +333,17 @@ ideas = {
 			
 			modifier = {
 				conscription_factor = -0.10
-				production_speed_buildings_factor = 0.075
+				production_speed_buildings_factor = 0.05
 			}
 			equipment_bonus = {
 				light_tank_chassis = {
-					build_cost_ic = -0.10 instant = yes 
+					build_cost_ic = -0.05 instant = yes 
 				}
 			}
 
 			equipment_bonus = {
 				medium_tank_chassis = {
-					build_cost_ic = -0.10 instant = yes
+					build_cost_ic = -0.05 instant = yes
 				}
 			}
 		}
@@ -366,19 +363,19 @@ ideas = {
 			picture = chi_army_corruption2
 			
 			modifier = {
-				conscription_factor = -0.12
-				production_speed_buildings_factor = 0.10
-				local_resources_factor = 0.10
+				conscription_factor = -0.15
+				production_speed_buildings_factor = 0.075
+				local_resources_factor = 0.05
 			}
 			equipment_bonus = {
 				light_tank_chassis = {
-					build_cost_ic = -0.125 instant = yes 
+					build_cost_ic = -0.10 instant = yes 
 				}
 			}
 
 			equipment_bonus = {
 				medium_tank_chassis = {
-					build_cost_ic = -0.125 instant = yes
+					build_cost_ic = -0.10 instant = yes
 				}
 			}
 		}
@@ -398,10 +395,11 @@ ideas = {
 			picture = chi_army_corruption2
 			
 			modifier = {
-				conscription_factor = 0.03
-				production_speed_infrastructure_factor = 0.15
-				production_speed_rail_way_factor = 0.1
-				production_speed_air_base_factor = 0.1
+				conscription_factor = 0.02
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.10
+				production_speed_rail_way_factor = 0.05
+				production_speed_air_base_factor = 0.05
 			}
 
 		}
@@ -421,11 +419,11 @@ ideas = {
 			picture = chi_army_corruption2
 			
 			modifier = {
-				conscription_factor = 0.06
+				conscription_factor = 0.05
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_infrastructure_factor = 0.15
-				production_speed_rail_way_factor = 0.15
-				production_speed_air_base_factor = 0.1
+				production_speed_rail_way_factor = 0.10
+				production_speed_air_base_factor = 0.10
 			}
 			equipment_bonus = {
 				horse_equipment = {
@@ -459,7 +457,7 @@ ideas = {
 			picture = chi_army_corruption2
 			
 			modifier = {
-				conscription_factor = 0.10
+				conscription_factor = 0.08
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_infrastructure_factor = 0.15
 				production_speed_rail_way_factor = 0.15
@@ -539,7 +537,7 @@ ideas = {
 			picture = ast_naval_auxiliary_patrol
 			
 			modifier = {
-				industrial_capacity_factory = 0.10
+				industrial_capacity_factory = 0.075
 			}
 		}
 		
@@ -558,8 +556,8 @@ ideas = {
 			picture = ast_naval_auxiliary_patrol
 			
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.07
-				production_factory_max_efficiency_factor = 0.07
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
 				industrial_capacity_factory = -0.05
 			}
 		}
@@ -669,10 +667,10 @@ ideas = {
 		
 			
 			modifier = {
-				army_defence_factor = 0.025
-				army_attack_factor = 0.025
-				special_forces_cap = 0.02
-				industrial_capacity_dockyard = 0.05
+				army_defence_factor = 0.02
+				army_attack_factor = 0.02
+				special_forces_cap = 0.01
+				
 			}
 		}
 		
@@ -692,11 +690,9 @@ ideas = {
 		
 			
 			modifier = {
-				army_defence_factor = 0.05
-				army_attack_factor = 0.05
-				army_org_Factor = 0.025
-				special_forces_cap = 0.04
-				industrial_capacity_dockyard = 0.1
+				army_defence_factor = 0.04
+				army_attack_factor = 0.04
+				special_forces_cap = 0.02
 			}
 		}
 		
@@ -716,11 +712,9 @@ ideas = {
 		
 			
 			modifier = {
-				army_defence_factor = 0.05
-				army_attack_factor = 0.05
-				army_org_Factor = 0.04
-				special_forces_cap = 0.06
-				industrial_capacity_dockyard = 0.1
+				army_defence_factor = 0.04
+				army_attack_factor = 0.04
+				special_forces_cap = 0.03
 			}
 		}
 

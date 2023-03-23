@@ -746,7 +746,12 @@ technologies = {
 			leads_to_tech = usa_medium_tank_1943
 			research_cost_coeff = 1
 		}
-			
+		
+		path = {
+			leads_to_tech = usa_hybrid_tank_1943
+			research_cost_coeff = 1
+		}
+		
 		dependencies = {
 			assembly_line_production = 1
 		}
@@ -952,6 +957,123 @@ technologies = {
 		}
 	}
 	
+	usa_hybrid_tank_1943 = { #JUMBO
+
+		enable_equipments = {
+			hybrid_tank_equipment_1943
+		}	
+		path = {
+			leads_to_tech = usa_hybrid_tank_1945
+			research_cost_coeff = 1
+		}
+		research_cost = 1.8
+		start_year = 1943
+		
+		folder = {
+			name = usa_armour_folder
+			position = { x = 4 y = @1943 }
+		}
+		dependencies = {
+			modern_tools = 1
+		}
+		sub_technologies = {
+			usa_hybrid_td_1943
+			usa_hybrid_art_1943
+			usa_hybrid_spaa_1943
+		}
+		
+		ai_will_do = {
+			factor = 12
+			
+		}
+		
+		categories = { all_armour
+			armor
+			cat_medium_armor
+		}
+	}
+	usa_hybrid_td_1943 = {
+
+		enable_equipments = {
+			hybrid_tank_destroyer_equipment_1943
+		}
+		
+		research_cost = 1.0
+		start_year = 1936
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		categories = { 
+			armor
+		}
+	}
+	
+	usa_hybrid_art_1943 = {
+
+		enable_equipments = {
+			hybrid_tank_artillery_equipment_1943
+		}
+	
+		research_cost = 1.0
+		start_year = 1936
+		
+		ai_will_do = {
+			factor = 0
+			
+		}
+		
+		categories = { 
+			armor
+		}
+	}
+	
+	usa_hybrid_spaa_1943 = {
+
+		enable_equipments = {
+			hybrid_tank_aa_equipment_1943
+		}
+		
+		research_cost = 1.0
+		start_year = 1936
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		categories = { 
+			armor
+		}
+	}
+	usa_hybrid_tank_1945 = { #PERSHING
+
+		enable_equipments = {
+			hybrid_tank_equipment_1945 
+		}	
+		
+		research_cost = 2
+		start_year = 1945
+		
+		folder = {
+			name = usa_armour_folder
+			position = { x = 4 y = @1945 }
+		}
+		
+		dependencies = {
+			modern_tools = 1
+		}
+		
+		ai_will_do = {
+			factor = 15
+			
+		}
+		
+		categories = { all_armour
+			armor
+			cat_medium_armor
+		}
+	}
 	
 	#engines/trucks
 	

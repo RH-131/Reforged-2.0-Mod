@@ -2106,6 +2106,16 @@ leader_traits = {
 		}
 	}
 
+	usa_military_theorist = {
+		sprite = 14
+		experience_gain_army = 0.20
+		land_doctrine_cost_factor = -0.10
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	mobile_warfare_expert = {
 		sprite = 14
 		experience_gain_army = 0.25
@@ -2936,7 +2946,7 @@ leader_traits = {
 		random = no
 		equipment_bonus = {
 			carrier = {
-				carrier_size = 4
+				carrier_size = 2
 				armor_value = -0.15
 				naval_range = 0.25
 				max_strength = 0.1

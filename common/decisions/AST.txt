@@ -57,7 +57,7 @@ operations = {
 		modifier = {
 			civilian_factory_use = 4
 		}
-		cost = 100
+		cost = 75
 		days_remove = 90
 		ai_will_do = {
 			factor = 1
@@ -65,17 +65,17 @@ operations = {
 		
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = heavy_fighter_equipment
+				type = medium_plane_fighter_airframe
 				amount = 50
 				producer = ENG
 			}
 			add_equipment_to_stockpile = {
-				type = tac_bomber_equipment
+				type = medium_plane_airframe
 				amount = 50
 				producer = ENG
 			}
 			add_equipment_to_stockpile = {
-				type = nav_bomber_equipment
+				type = small_plane_naval_bomber_airframe
 				amount = 50
 				producer = ENG
 			}
@@ -101,7 +101,7 @@ operations = {
 		modifier = {
 			civilian_factory_use = 4
 		}
-		cost = 100
+		cost = 75
 		days_remove = 90
 		ai_will_do = {
 			factor = 1
@@ -109,18 +109,18 @@ operations = {
 		
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = fighter_equipment
+				type = small_plane_airframe
 				amount = 50
 				producer = USA
 			}
 			add_equipment_to_stockpile = {
-				type = cas_equipment
+				type = small_plane_cas_airframe
 				amount = 50
 				producer = USA
 			}
 			add_equipment_to_stockpile = {
-				type = nav_bomber_equipment
-				amount = 50
+				type = large_plane_airframe
+				amount = 10
 				producer = USA
 			}
 			USA = {
@@ -144,7 +144,7 @@ operations = {
 		modifier = {
 			civilian_factory_use = 10
 		}
-		cost = 100
+		cost = 75
 		days_remove = 60
 		ai_will_do = {
 			factor = 1

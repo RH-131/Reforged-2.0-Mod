@@ -3348,9 +3348,14 @@ focus_tree = {
 		}
 		available_if_capitulated = yes		
 		
-		available = { 
-			USA = {
-				has_tech = forward_observers
+		available = {
+			OR = {
+				USA = {
+					has_tech = forward_observers
+				}
+				USA = {
+					has_tech = combined_arms
+				}
 			}
 		}
 
@@ -4168,6 +4173,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			set_country_flag = { flag = USA_congress_blocking_focus value = 1 days = 35 }	
+			add_ideas = USA_the_new_deal_1
 			unlock_decision_tooltip = { decision = USA_rally_new_dealers show_effect_tooltip = yes }
 		}
 	}		
@@ -4199,7 +4205,7 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
+		} 
 
 		bypass = {
 		}
@@ -4210,6 +4216,7 @@ focus_tree = {
 				remove_idea = USA_legislation_deadlock
 				add_idea = USA_legislation_deadlock_3
 			}
+			unlock_decision_tooltip = { decision = USA_pack_the_court show_effect_tooltip = yes }
 		}
 	}															
 
@@ -4249,10 +4256,6 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = { flag = USA_congress_blocking_focus value = 1 days = 35 }	
 
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.02 
-			}
 			custom_effect_tooltip = USA_voter_support_1_tt
 			hidden_effect = {
 				add_to_variable = {
@@ -4260,7 +4263,11 @@ focus_tree = {
 					value = 0.02
 				}
 				add_war_support = 0.02	
-			}				
+			}	
+			swap_ideas = {
+				remove_idea = USA_the_new_deal_1
+				add_idea = USA_the_new_deal_2
+			}			
 		}
 	}				
 
@@ -5576,37 +5583,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			remove_ideas = refinery_idea
-			FRA = {
-			    remove_ideas = refinery_idea
-			}
-			RAJ = {    
-				remove_ideas = refinery_idea
-			}
-			CAN = {    
-				remove_ideas = refinery_idea
-			}
-		    AST = {    
-				remove_ideas = refinery_idea
-			}
-			SAF = {    
-		    	remove_ideas = refinery_idea
-			}
-		    NZL = {    
-				remove_ideas = refinery_idea
-			}
-			IRE = {    
-				remove_ideas = refinery_idea
-			}
-			ENG = {    
-		    	remove_ideas = refinery_idea
-			}
-			PHI = {
-			    remove_ideas = refinery_idea
-			}
-			MEX = {
-			    remove_ideas = refinery_idea
-			}
+			remove_ideas = refinery_idea_usa
 			random_owned_state = {
 				limit = {
 					is_core_of = USA 
