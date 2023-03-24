@@ -1552,7 +1552,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_6_Million_Bayonets focus = ITA_Italian_tank_divisions }
 		x = 16
 		y = 9
-		cost = 7.145
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -1560,6 +1560,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
+			has_war_with = ENG
 			has_army_experience > 100
 		}
 
@@ -2984,7 +2985,7 @@ focus_tree = {
 		    FRA = {
 		        has_capitulated = yes 
 			}
-				date > 1940.5.1
+				date > 1940.1.1
 			}
 		}
 		available_if_capitulated = no

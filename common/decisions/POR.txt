@@ -64,7 +64,7 @@ POR_overseas_provinces = {
 
 		available = {
 			
-			has_completed_focus = POR_luso_tropicalism
+#			has_completed_focus = POR_luso_tropicalism
 			AND = {
 				POR = {
 					controls_state = 540
@@ -83,7 +83,7 @@ POR_overseas_provinces = {
 			political_power_gain = -0.2
 		}
 		visible = {
-			has_completed_focus = POR_luso_tropicalism
+#			has_completed_focus = POR_luso_tropicalism
 		}
 		remove_effect = {
 			country_event = lar_portugal_overseas_provinces.1
@@ -95,7 +95,7 @@ POR_overseas_provinces = {
 		icon = infiltrate_state
 
 		available = {
-			has_completed_focus = POR_luso_tropicalism
+#			has_completed_focus = POR_luso_tropicalism
 			AND = {
 				POR = {
 					controls_state = 544
@@ -115,7 +115,7 @@ POR_overseas_provinces = {
 		}
 		
 		visible = {
-			has_completed_focus = POR_luso_tropicalism
+#			has_completed_focus = POR_luso_tropicalism
 		}
 		remove_effect = {			
 			country_event = lar_portugal_overseas_provinces.2
@@ -138,7 +138,7 @@ POR_prospect_for_resources = {
 		}
 
 		available = {
-			has_completed_focus = POR_extraction_industries
+#			has_completed_focus = POR_extraction_industries
 			num_of_civilian_factories_available_for_projects > 2
 			owns_state = 540
 			controls_state = 540
@@ -193,7 +193,7 @@ POR_prospect_for_resources = {
 		}
 
 		available = {
-			has_completed_focus = POR_extraction_industries
+#			has_completed_focus = POR_extraction_industries
 			num_of_civilian_factories_available_for_projects > 2
 			owns_state = 544
 			controls_state = 544

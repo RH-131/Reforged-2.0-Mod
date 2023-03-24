@@ -40,31 +40,20 @@ SAFR_purchase_planes = {
 		
 		available = {
 			tag = SAF
-			num_of_civilian_factories > 6
-			AND = {
-				SAF = { has_tech = eng_fighter_1936 }	
-				SAF = { has_tech = eng_CAS_1937 }
-				SAF = { has_tech = eng_naval_bomber_1936 }
-			}
 		}
 				
 		modifier = {
-			civilian_factory_use = 7
+			civilian_factory_use = 15
 		}
 		
 		cost = 25
 		fire_only_once = yes
-		days_remove = 90
+		days_remove = 120
 		ai_will_do = {
 			factor = 1
 		}				
 		
-		visible = {
-			OR = {
-				NOT = { has_country_flag = SAF_purchase_planes_lotta_dec } 
-				NOT = { has_country_flag = SAF_purchase_planes_few_dec }
-				NOT = { has_country_flag = SAF_purchase_planes_some_dec }
-			}	
+		visible = {	
 		}
 		
 		complete_effect = {
@@ -73,17 +62,17 @@ SAFR_purchase_planes = {
 		
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1936
+				type = small_plane_airframe
 				amount = 200
 				producer = SAF
 			}
 			add_equipment_to_stockpile = {
-				type = CAS_equipment_1937
+				type = small_plane_cas_airframe
 				amount = 100
 				producer = SAF
 			}
 			add_equipment_to_stockpile = {
-				type = nav_bomber_equipment_1936
+				type = small_plane_naval_bomber_airframe
 				amount = 100
 				producer = SAF
 			}
@@ -96,29 +85,20 @@ SAFR_purchase_planes = {
 		
 		available = {
 			tag = SAF
-			num_of_civilian_factories > 4
-			AND = {
-				SAF = { has_tech = eng_fighter_1936 }	
-				SAF = { has_tech = eng_CAS_1937 }
-				SAF = { has_tech = eng_naval_bomber_1936 }
-			}
 		}
 				
 		modifier = {
-			civilian_factory_use = 5
+			civilian_factory_use = 12
 		}
 		
 		cost = 25
 		fire_only_once = yes
-		days_remove = 90
+		days_remove = 120
 		ai_will_do = {
 			factor = 1
 		}				
 		
 		visible = {
-			NOT = { has_country_flag = SAF_purchase_planes_some_dec }
-			NOT = { has_country_flag = SAF_purchase_planes_few_dec }
-			NOT = { has_country_flag = SAF_purchase_planes_lotta_dec }
 		}
 		
 		complete_effect = {
@@ -127,17 +107,17 @@ SAFR_purchase_planes = {
 		
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1936
+				type = small_plane_airframe
 				amount = 150
 				producer = SAF
 			}
 			add_equipment_to_stockpile = {
-				type = CAS_equipment_1937
+				type = small_plane_cas_airframe
 				amount = 75
 				producer = SAF
 			}
 			add_equipment_to_stockpile = {
-				type = nav_bomber_equipment_1936
+				type = small_plane_naval_bomber_airframe
 				amount = 75
 				producer = SAF
 			}
@@ -150,29 +130,20 @@ SAFR_purchase_planes = {
 		
 		available = {
 			tag = SAF
-			num_of_civilian_factories > 2
-			AND = {
-				SAF = { has_tech = eng_fighter_1936 }	
-				SAF = { has_tech = eng_CAS_1937 }
-				SAF = { has_tech = eng_naval_bomber_1936 }
-			}	
 		}
 				
 		modifier = {
-			civilian_factory_use = 3
+			civilian_factory_use = 10
 		}
 		
 		cost = 25
-		days_remove = 90
+		days_remove = 120
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 1
 		}				
 		
 		visible = {
-			NOT = { has_country_flag = SAF_purchase_planes_few_dec }
-			NOT = { has_country_flag = SAF_purchase_planes_lotta_dec }
-			NOT = { has_country_flag = SAF_purchase_planes_some_dec }
 		}
 		
 		complete_effect = {
@@ -181,17 +152,17 @@ SAFR_purchase_planes = {
 		
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1936
+				type = small_plane_airframe
 				amount = 100
 				producer = SAF
 			}
 			add_equipment_to_stockpile = {
-				type = CAS_equipment_1937
+				type = small_plane_cas_airframe
 				amount = 50
 				producer = SAF
 			}
 			add_equipment_to_stockpile = {
-				type = nav_bomber_equipment_1936
+				type = small_plane_naval_bomber_airframe
 				amount = 50
 				producer = SAF
 			}
@@ -203,13 +174,11 @@ SAFR_purchase_planes = {
 		icon = generic_air
 		
 		available = {
-			tag = SAF
-			num_of_civilian_factories > 1
-			SAF = { has_tech = eng_tactical_bomber_1936 }
+			tag = SAF  
 		}
 				
 		modifier = {
-			civilian_factory_use = 2
+			civilian_factory_use = 10
 		}
 		
 		cost = 25
@@ -229,9 +198,9 @@ SAFR_purchase_planes = {
 		
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = tac_bomber_equipment_1936
+				type = medium_plane_airframe
 				amount = 100
-				producer = SAF
+				producer = ENG
 			}
 		}		
 	}
