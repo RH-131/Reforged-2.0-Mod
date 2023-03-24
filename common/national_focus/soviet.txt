@@ -1102,7 +1102,11 @@ focus_tree = {
 			clr_country_flag = SOV_force_confession_flag
 			clr_country_flag = SOV_falsify_evidence_flag
 			clr_country_flag = SOV_order_arrests_flag
-
+			
+			swap_ideas = {
+				remove_idea = trotskyite_plot
+				add_idea = trotskyite_plot_2
+			}
 		}
 	}		
 
@@ -1165,7 +1169,10 @@ focus_tree = {
 			clr_country_flag = SOV_falsify_evidence_flag
 			clr_country_flag = SOV_order_arrests_flag
 
-			remove_ideas = trotskyite_plot
+			swap_ideas = {
+				remove_idea = trotskyite_plot_2
+				add_idea = trotskyite_plot_3
+			}
 		}
 	}		
 
@@ -1227,6 +1234,11 @@ focus_tree = {
 			clr_country_flag = SOV_order_arrests_flag
 			
 			stalin_paranoia_effects = yes 
+			
+			swap_ideas = {
+				remove_idea = trotskyite_plot_3
+				add_idea = trotskyite_plot_4
+			}
 		}
 	}		
 
@@ -1288,6 +1300,11 @@ focus_tree = {
 			clr_country_flag = SOV_order_arrests_flag
 
 			stalin_paranoia_effects = yes
+			
+			swap_ideas = {
+				remove_idea = trotskyite_plot_4
+				add_idea = trotskyite_plot_purged
+			}
 		}
 	}		
 
@@ -1534,6 +1551,7 @@ focus_tree = {
 
 		available = {
 			date > 1940.01.01
+			has_idea = trotskyite_plot_purged
 		}
 
 		ai_will_do = {
@@ -2441,7 +2459,7 @@ focus_tree = {
 		x = 0
 		y = 5
 		relative_position_id = SOV_finish_the_2_5_year_plan
-		cost = 7.15
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -2695,7 +2713,7 @@ focus_tree = {
 		
 		x = 0
 		y = 1
-		cost = 7.16
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4378,7 +4396,7 @@ focus_tree = {
 		icon = GFX_SOV_new_officer_academies
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		mutually_exclusive = { focus = SOV_dual_command }
-		cost = 5 
+		cost = 7.16
 		x = 1
 		y = 1
 		prerequisite = { focus = SOV_rehabilitate_the_military }
@@ -4424,7 +4442,7 @@ focus_tree = {
 		id = SOV_increase_standards_for_officer_training
 		icon = GFX_SOV_new_officer_academies
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-		cost = 5 
+		cost = 7.16
 		x = 0
 		y = 1
 		prerequisite = { focus = SOV_begin_from_nothing }
