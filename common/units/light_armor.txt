@@ -33,10 +33,11 @@ sub_units = {
 		supply_consumption = 0.3
 
 		#Tanks are awesome
-		suppression = 2.6	
+		suppression = 2.6
+		
 		forest = {
 		    attack = -0.1
-			movement = -0.2
+			movement = -0.15
 		}
 		mountain = 	{
 		    attack = -0.1
@@ -46,12 +47,12 @@ sub_units = {
 			movement = -0.2
 		}
 		marsh = {
-		    attack = -0.3 
+		    attack = -0.3
 			movement = -0.4
 		}
 		urban = {
-			attack = -0.2
-			defence = -0.1
+			attack = -0.1
+			defence = -0.05
 		}
 		river = { 
 			attack = -0.2 
@@ -61,8 +62,8 @@ sub_units = {
 			attack = -2.0
 		}	
 		plains = {
-			attack = 0.1 
-			movement = 0.1 
+			attack = 0.1
+			movement = 0.15
 		}
         	desert = {
 			attack = 0.15
