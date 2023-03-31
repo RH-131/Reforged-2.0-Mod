@@ -723,10 +723,10 @@ NMilitary = {
 
 	INFRASTRUCTURE_MOVEMENT_SPEED_IMPACT = -0.0375,	-- speed penalty per infrastucture below maximum.
 	
-	VPS_FOR_HISTORY_ENTRY = 3,					-- Minimum VPs required to receive an entry in divisional history
+	VPS_FOR_HISTORY_ENTRY = 1,					-- Minimum VPs required to receive an entry in divisional history
 	VPS_FOR_HIGH_HISTORY_ENTRY = 8,				-- VPs required for high-level history entry
 	ENTRIES_TO_CHECK_FOR_DUPLICATE = 2,			-- Max number of history entries to check back to see if we're being awarded the same entry
-	COST_INCREASE_PER_ACTIVE_MEDAL = 0.25,		-- Additional cost factor per active medal
+	COST_INCREASE_PER_ACTIVE_MEDAL = 0.50,		-- Additional cost factor per active medal
 	MAX_ENTRY_ELISION_COUNT = 4,				-- If we do the same type of thing consecutively, each entry will stack locations up to this number
 	GENERATE_AI_DIV_COMMAND_HISTORY_ENTRIES = true,	--Should we generate history entries for the AI (may cause savegame bloat)
 	FIELD_EXPERIENCE_ON_DIVISION_MULT = 0.03,	-- Multiply field experience gained by this, when applying to divisional commander
@@ -834,7 +834,7 @@ NMilitary = {
 	ENEMY_AIR_SUPERIORITY_DEFENSE_STEEPNESS = 112, -- how quickly defense approaches the max impact diminishing returns curve
 	ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.2,     -- effect on speed due to enemy air superiority
 
-	ANTI_AIR_TARGETTING_TO_CHANCE = 0.04,			-- Balancing value to determine the chance of ground AA hitting an attacking airplane, affecting both the effective average damage done by AA to airplanes, and the reduction of damage done by airplanes due to AA support
+	ANTI_AIR_TARGETTING_TO_CHANCE = 0.03,			-- Balancing value to determine the chance of ground AA hitting an attacking airplane, affecting both the effective average damage done by AA to airplanes, and the reduction of damage done by airplanes due to AA support
 	ANTI_AIR_ATTACK_TO_AMOUNT = 0.005,				-- Balancing value to convert equipment stat anti_air_attack to the random % value of airplanes being hit.
 
 	ENCIRCLED_PENALTY = -0.3,                      -- penalty when completely encircled
@@ -982,7 +982,7 @@ NMilitary = {
 	COMBAT_SUPPLY_LACK_DEFENDER_DEFEND = -0.15,     -- defend combat penalty for defender if out of supply
 	COMBAT_STACKING_START = 8,						-- at what nr of divisions stacking penalty starts
 	COMBAT_STACKING_EXTRA = 4,                      -- extra stacking from directions
-	COMBAT_STACKING_PENALTY = -0.03,                -- how much stackign penalty per division
+	COMBAT_STACKING_PENALTY = -0.015,                -- how much stackign penalty per division
 	COMBAT_OVER_WIDTH_PENALTY = -1.5,					-- over combat width penalty per %.
 	COMBAT_OVER_WIDTH_PENALTY_MAX = -0.33,			-- over combat width max (when you cant join no more).
 	RETREAT_SPEED_FACTOR = 0.30,                    -- speed bonus when retreating
@@ -997,12 +997,12 @@ NMilitary = {
 	ARMOR_VS_AVERAGE = 0.5,			                -- how to weight in highest armor & pen vs the division average
 	PEN_VS_AVERAGE = 0.5,
 
-	LAND_EQUIPMENT_BASE_COST = 15,					-- Cost in XP to upgrade a piece of equipment one level is base + ( total levels * ramp )
-	LAND_EQUIPMENT_RAMP_COST = 15,
-	NAVAL_EQUIPMENT_BASE_COST = 15,
-	NAVAL_EQUIPMENT_RAMP_COST = 15,
-	AIR_EQUIPMENT_BASE_COST = 15,
-	AIR_EQUIPMENT_RAMP_COST = 15,
+	LAND_EQUIPMENT_BASE_COST = 25,					-- Cost in XP to upgrade a piece of equipment one level is base + ( total levels * ramp )
+	LAND_EQUIPMENT_RAMP_COST = 25,
+	NAVAL_EQUIPMENT_BASE_COST = 25,
+	NAVAL_EQUIPMENT_RAMP_COST = 25,
+	AIR_EQUIPMENT_BASE_COST = 25,
+	AIR_EQUIPMENT_RAMP_COST = 25,
 
 	FASTER_ORG_REGAIN_LEVEL = 0.25,
 	FASTER_ORG_REGAIN_MULT = 1.0,
