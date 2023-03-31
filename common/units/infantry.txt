@@ -512,10 +512,10 @@ sub_units = {
 			infantry_equipment = 80
 			motorized_equipment = 45
 		}
-		defense = 0.05
-		soft_attack = 0.05
-		hard_attack = 0.05
-		breakthrough = 0.05
+		defense = 0.10
+		soft_attack = 0.10
+		hard_attack = 0.10
+		breakthrough = 0.10
 		plains = {
 			attack = 0.025 
 			defence = 0.0 
@@ -542,7 +542,9 @@ sub_units = {
 			movement = -0.3
 		}
 		urban = {
-			attack = -0.1
+			attack = -0.05
+			defense = 0.05
+			movement = 0.05
 		}
 		river = {
 			attack = -0.1
@@ -612,8 +614,9 @@ sub_units = {
 			attack = -0.1
 		}
 		urban = {
-			attack = -0.2
-			defence = -0.05
+			attack = -0.10
+			defense = 0.05
+			movement = 0.05
 		}
 		river = {
 			attack = -0.2
