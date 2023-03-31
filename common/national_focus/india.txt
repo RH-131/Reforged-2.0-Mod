@@ -6410,8 +6410,9 @@ focus_tree = {
 		}
 
 		available = {
-			RAJ = {
-					surrender_progress > 0.1
+			OR = {
+				RAJ = { surrender_progress > 0.1 }
+				date > 1942.01.01
 			}
 		}
 
@@ -6452,8 +6453,9 @@ focus_tree = {
 		}
 
 		available = {
-			RAJ = {
-					surrender_progress > 0.3
+			OR = {
+				RAJ = { surrender_progress > 0.25 }
+				date > 1942.06.01
 			}
 		}
 
@@ -6496,9 +6498,14 @@ focus_tree = {
 		}
 
 		available = {
-			controls_state = 640 #mandalay
-			controls_state = 288 #burma
-			controls_state = 336 #singapore
+			OR = {
+				AND = {
+					controls_state = 640 #mandalay
+					controls_state = 288 #burma
+					controls_state = 336 #singapore
+					}
+				date > 1944.01.01
+			}
 		}
 
 		bypass = {
