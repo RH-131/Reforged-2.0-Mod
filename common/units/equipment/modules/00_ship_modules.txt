@@ -166,7 +166,7 @@ equipment_modules = {
 			build_cost_ic = 1000
 		}
 		multiply_stats = {
-			naval_speed = -0.05
+			naval_speed = -0.07
 		}
 		add_average_stats = {
 			hg_armor_piercing = 31
@@ -595,7 +595,7 @@ equipment_modules = {
 		}
 
 		multiply_stats = {
-			naval_speed = -0.02
+			naval_speed = -0.01
 		}
 
 		add_average_stats = {
@@ -782,11 +782,11 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 60
+			naval_light_gun_hit_chance_factor = 0.025
+			naval_heavy_gun_hit_chance_factor = 0.025
 		}
 
 		multiply_stats = {
-			lg_attack = 0.05
-			hg_attack = 0.05
 			anti_air_attack = 0.05
 		}
 	}
@@ -798,11 +798,11 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 90
+			naval_light_gun_hit_chance_factor = 0.05
+			naval_heavy_gun_hit_chance_factor = 0.05
 		}
 
 		multiply_stats = {
-			lg_attack = 0.1
-			hg_attack = 0.1
 			anti_air_attack = 0.1
 			reliability = -0.025
 		}
@@ -819,11 +819,11 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 120
+			naval_light_gun_hit_chance_factor = 0.075
+			naval_heavy_gun_hit_chance_factor = 0.075
 		}
 
 		multiply_stats = {
-			lg_attack = 0.15
-			hg_attack = 0.15
 			anti_air_attack = 0.15
 			reliability = -0.05
 		}
@@ -843,11 +843,11 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 180
+			naval_light_gun_hit_chance_factor = 0.10
+			naval_heavy_gun_hit_chance_factor = 0.10
 		}
 
 		multiply_stats = {
-			lg_attack = 0.2
-			hg_attack = 0.2
 			anti_air_attack = 0.2
 			reliability = -0.075
 		}
@@ -877,11 +877,11 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 80
 			surface_detection = 6
+			naval_light_gun_hit_chance_factor = 0.025
+			naval_heavy_gun_hit_chance_factor = 0.025
 		}
 
 		multiply_stats = {
-			lg_attack = 0.02
-			hg_attack = 0.02
 			anti_air_attack = 0.04
 		}
 
@@ -894,11 +894,11 @@ equipment_modules = {
 			build_cost_ic = 110
 			surface_detection = 12
 			sub_detection = 2
+			naval_light_gun_hit_chance_factor = 0.05
+			naval_heavy_gun_hit_chance_factor = 0.05
 		}
 
 		multiply_stats = {
-			lg_attack = 0.05
-			hg_attack = 0.05
 			anti_air_attack = 0.1
 		}
 
@@ -912,15 +912,14 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_sonar
 
 		multiply_stats = {
-			lg_attack = 0.08
-			hg_attack = 0.08
 			anti_air_attack = 0.16
 		}
 		add_stats = {
-
 			surface_detection = 18
 			sub_detection = 6
 			build_cost_ic = 140
+			naval_light_gun_hit_chance_factor = 0.075
+			naval_heavy_gun_hit_chance_factor = 0.075
 		}
 		can_convert_from = {
 			module = ship_radar_2
@@ -936,15 +935,14 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_sonar
 
 		multiply_stats = {
-			lg_attack = 0.12
-			hg_attack = 0.12
 			anti_air_attack = 0.24
 		}
 		add_stats = {
-
 			build_cost_ic = 170
 			surface_detection = 18
 			sub_detection = 14
+			naval_light_gun_hit_chance_factor = 0.10
+			naval_heavy_gun_hit_chance_factor = 0.10
 		}
 		can_convert_from = {
 			module = ship_radar_3
@@ -1289,7 +1287,7 @@ equipment_modules = {
 
 
 		add_stats = {
-			naval_speed = 7
+			naval_speed = 9
 			fuel_consumption = 20
 			build_cost_ic = 1000
 		}
@@ -1817,6 +1815,7 @@ equipment_modules = {
 		gfx = ship_airplane_launcher_1
 
 		add_stats = {
+			naval_heavy_gun_hit_chance_factor = 0.025
 			surface_detection = 9
 			sub_detection = 3
 			build_cost_ic = 150
@@ -1830,6 +1829,7 @@ equipment_modules = {
 		gfx = ship_airplane_launcher_2
 
 		add_stats = {
+			naval_heavy_gun_hit_chance_factor = 0.05
 			surface_detection = 12
 			sub_detection = 6
 			build_cost_ic = 170
@@ -1929,7 +1929,7 @@ equipment_modules = {
 
 		multiply_stats = {
 			build_cost_ic = 0.15
-			naval_speed = -0.2
+			naval_speed = -0.16
 			max_strength = 0.11
 		}
 		build_cost_resources = {
@@ -1966,7 +1966,7 @@ equipment_modules = {
 
 		multiply_stats = {
 			build_cost_ic = 0.15
-			naval_speed = -0.2
+			naval_speed = -0.18
 			max_strength = 0.16
 		}
 		build_cost_resources = {
@@ -1985,7 +1985,7 @@ equipment_modules = {
 
 		multiply_stats = {
 			build_cost_ic = 0.075
-			naval_speed = -0.1
+			naval_speed = -0.11
 			max_strength = 0.08
 		}
 		build_cost_resources = {
@@ -2024,7 +2024,7 @@ equipment_modules = {
 
 		multiply_stats = {
 			build_cost_ic = 0.075
-			naval_speed = -0.1
+			naval_speed = -0.12
 			max_strength = 0.12
 		}
 		build_cost_resources = {
