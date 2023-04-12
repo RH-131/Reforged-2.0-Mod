@@ -1141,7 +1141,7 @@ NAir = {
 	AIR_WING_FLIGHT_SPEED_MULT = 0.3,					-- Global speed multiplier for airplanes (affects fe.transferring to another base)
 	AIR_WING_MAX_STATS_ATTACK = 100,					-- Max stats
 	AIR_WING_MAX_STATS_DEFENCE = 100,
-	AIR_WING_MAX_STATS_AGILITY = 150,
+	AIR_WING_MAX_STATS_AGILITY = 100,
 	AIR_WING_MAX_STATS_SPEED = 800,
 	AIR_WING_MAX_STATS_BOMBING = 100,
 	AIR_WING_MAX_SIZE = 2000, 							-- Max amount of airplanes in wing
@@ -1343,7 +1343,7 @@ NAir = {
 		1.2, -- PORT_STRIKE
 		1.5, -- ATTACK_LOGISTICS
 		1.2, -- AIR_SUPPLY
-		0.8, -- TRAINING
+		0.5, -- TRAINING
 		1.0, -- NAVAL_MINES_PLANTING
 		1.0, -- NAVAL_MINES_SWEEPING
 		1.0, -- MISSION_RECON
