@@ -1158,7 +1158,56 @@ on_actions = {
 					transfer_state = 191
 				}		
 			}
-
+			# ROOT is capitulated country, FROM is winner
+			if = {#fall of china
+				limit = {
+                    ROOT = { tag = CHI }
+                    FROM = { is_in_faction_with = JAP }
+                }
+				JAP = {
+					set_state_controller = 608
+					set_state_controller = 614
+					set_state_controller = 597
+					set_state_controller = 743
+					set_state_controller = 607
+					set_state_controller = 598
+					set_state_controller = 749
+					set_state_controller = 613
+					set_state_controller = 606
+					set_state_controller = 596
+					set_state_controller = 595
+					set_state_controller = 600
+					set_state_controller = 620
+					set_state_controller = 602
+					set_state_controller = 750
+					set_state_controller = 605
+					set_state_controller = 744
+					set_state_controller = 603
+					set_state_controller = 748
+					set_state_controller = 751
+					set_state_controller = 752
+					set_state_controller = 601
+					set_state_controller = 622
+					set_state_controller = 621
+					set_state_controller = 615
+					set_state_controller = 746
+					set_state_controller = 753
+					set_state_controller = 283
+					set_state_controller = 616
+					set_state_controller = 756
+					set_state_controller = 755
+					set_state_controller = 754
+					set_state_controller = 604
+					set_state_controller = 747
+					set_state_controller = 325
+					set_state_controller = 599
+					set_state_controller = 594
+					set_state_controller = 592
+					set_state_controller = 593
+					set_state_controller = 591
+					
+				}
+			}
 			if =  { #fall of france
                 limit = {
                     ROOT = { tag = FRA is_in_faction_with = ENG }
