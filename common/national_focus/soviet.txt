@@ -5152,7 +5152,10 @@ focus_tree = {
 			NOT = {
 				has_idea = SOV_aviation_enthusiasm
 			}
-			has_completed_focus = SOV_organize_the_defence_of_stalingrad
+			OR = {
+			#	has_completed_focus = SOV_the_great_patriotic_war
+				date > 1941.04.01
+			}
 		}
 
 		completion_reward = {
@@ -5218,17 +5221,36 @@ focus_tree = {
 
 		x = 2
 		y = 1
+		
+		complete_tooltip = {
+			custom_effect_tooltip = SOV_great_patriotic_war_category_tt	
+			if = {
+				limit = {
+					is_ai = no 
+				}
+				remove_ideas = home_of_revolution
+				add_timed_idea = { idea = home_of_revolution_2 days = 200 }
 
+			}
+			if = {
+				limit = {
+					is_ai = yes 
+					GER = {
+						is_ai = no 
+					}
+				}
+				remove_ideas = home_of_revolution			
+			}
+		}
 		completion_reward = {
 			custom_effect_tooltip = SOV_great_patriotic_war_category_tt	
 			if = {
 				limit = {
 					is_ai = no 
 				}
-				swap_ideas = { 
-					remove_idea = home_of_revolution
-					add_idea = home_of_revolution_2
-				}
+				remove_ideas = home_of_revolution
+				add_timed_idea = { idea = home_of_revolution_2 days = 250 }
+
 			}
 			if = {
 				limit = {
