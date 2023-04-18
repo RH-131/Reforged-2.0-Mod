@@ -717,11 +717,11 @@ NMilitary = {
 
 	USE_MULTIPLICATIVE_ORG_LOSS_WHEN_MOVING = true, -- whether to apply org_loss_when_moving modifiers additively or multiplicatively (hardcoded multiplicative pre-2021)
 	HOURLY_ORG_MOVEMENT_IMPACT = -0.2,		-- how much org is lost every hour while moving an army.
-	ZERO_ORG_MOVEMENT_MODIFIER = -0.65,		-- speed impact at 0 org.
+	ZERO_ORG_MOVEMENT_MODIFIER = -0.40,		-- speed impact at 0 org.
 	INFRA_ORG_IMPACT = 0.5,				-- scale factor of infra on org regain.
 	ENGAGEMENT_WIDTH_PER_WIDTH = 2.0,	-- how much enemy combat width we are allowed to engage per width of our own
 
-	INFRASTRUCTURE_MOVEMENT_SPEED_IMPACT = -0.0375,	-- speed penalty per infrastucture below maximum.
+	INFRASTRUCTURE_MOVEMENT_SPEED_IMPACT = -0.03,	-- speed penalty per infrastucture below maximum.
 	
 	VPS_FOR_HISTORY_ENTRY = 1,					-- Minimum VPs required to receive an entry in divisional history
 	VPS_FOR_HIGH_HISTORY_ENTRY = 8,				-- VPs required for high-level history entry
@@ -785,8 +785,8 @@ NMilitary = {
 	LAND_COMBAT_STR_DICE_SIZE = 2,                 -- nr of damage dice
 	LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.05,       -- global damage modifier... but some equipment is returned at end of battles see : EQUIPMENT_COMBAT_LOSS_FACTOR
 	LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.055,       -- global damage modifier
-	LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.04,    -- air global damage modifier
-	LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.038,    -- global damage modifier
+	LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.035,    -- air global damage modifier
+	LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.032,    -- global damage modifier
 	LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 2, -- how many CAS/TAC can enter a combat depending on enemy width there
 	LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 1,   -- extra damage dice if our armor outclasses enemy
 	LAND_COMBAT_ORG_ARMOR_ON_SOFT_DICE_SIZE = 2,   -- extra damage dice if our armor outclasses enemy
@@ -856,7 +856,7 @@ NMilitary = {
 	SLOWEST_SPEED = 3,
 	REINFORCEMENT_REQUEST_MAX_WAITING_DAYS = 14,   -- Every X days the equipment will be sent, regardless if still didn't produced all that has been requested.
 	REINFORCEMENT_REQUEST_DAYS_FREQUENCY = 7,	   -- How many days must pass until we may give another reinforcement request
-	EXPERIENCE_COMBAT_FACTOR = 0.06,
+	EXPERIENCE_COMBAT_FACTOR = 0.04,
 	UNIT_DIGIN_CAP = 5,                           -- how "deep" you can dig you can dig in until hitting max bonus
 	UNIT_DIGIN_SPEED = 1,						   -- how "deep" you can dig a day.
 	PARACHUTE_FAILED_EQUIPMENT_DIV = 50.0,		   -- When the transport plane was shot down, we drop unit with almost NONE equipment
