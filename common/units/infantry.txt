@@ -756,13 +756,13 @@ sub_units = {
 		}
 		hills = {
 			attack = 0.2
-			defence = 0.05
-			movement = 0.1
-		}
-		mountain = {
-			attack = 0.35
 			defence = 0.1
 			movement = 0.2
+		}
+		mountain = {
+			attack = 0.4
+			defence = 0.1
+			movement = 0.25
 		}
 		urban = {
 			defence = 0.1
@@ -831,7 +831,9 @@ sub_units = {
 			movement = 0.05
 		}
 		urban = {
-			defence = 0.1
+			attack = 0.025
+			defence = 0.05
+			movement = 0.1
 		}
 	}
 	infantry_spain = {
