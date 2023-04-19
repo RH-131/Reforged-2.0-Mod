@@ -16,7 +16,7 @@ technologies = {
 			breakthrough = 0.10
 		}
 		army_speed_factor = 0.05
-		planning_speed = 0.5
+		planning_speed = 0.4
 
 		enable_tactic = tactic_unexpected_thrust
 		org_loss_when_moving = -0.25
@@ -1644,6 +1644,7 @@ technologies = {
 	assault_concentration = {
 
 		max_planning = 0.15
+		planning_speed = 0.15
 
 		enable_tactic = tactic_overwhelming_fire
 		path = {
@@ -1795,6 +1796,8 @@ technologies = {
 
 		land_reinforce_rate = 0.02
 		dig_in_speed_factor = 0.15
+		amphibious_invasion_defence = 0.10
+		
 		category_all_infantry = {
 			max_organisation = 8
 		}
@@ -2014,6 +2017,8 @@ technologies = {
 
 
 		land_reinforce_rate = 0.04
+		amphibious_invasion_defence = 0.20
+		planning_speed = 0.10
 
 		recon = {
 			recon = 1
