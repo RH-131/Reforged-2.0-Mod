@@ -34,12 +34,21 @@ equipments = {
 			tungsten = 2
 			steel = 1
 		}
+		upgrades = {
+			art_cost_upgrade
+			art_at_upgrade
+		}
 	}
 	# 1936
 	anti_tank_equipment_1 = {
 		archetype = anti_tank_equipment
 		priority = 90
 		visual_level = 0
+		
+		upgrades = {
+			art_cost_upgrade
+			art_at_upgrade
+		}
 	}
 	# 1940
 	anti_tank_equipment_2 = {     
@@ -54,6 +63,11 @@ equipments = {
 		ap_attack = 100
 		
 		build_cost_ic = 7.5
+		
+		upgrades = {
+			art_cost_upgrade
+			art_at_upgrade
+		}
 	}
 	# 1943
 	anti_tank_equipment_3 = {
@@ -71,6 +85,11 @@ equipments = {
 			tungsten = 2
 		}
 		build_cost_ic = 9
+		
+		upgrades = {
+			art_cost_upgrade
+			art_at_upgrade
+		}
 	}
 	
 }

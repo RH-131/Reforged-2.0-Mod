@@ -34,13 +34,23 @@ equipments = {
 		resources = {
 			steel = 2
 			tungsten = 1
-		}	
+		}
+
+		upgrades = {
+			art_cost_upgrade
+			art_aa_upgrade
+		}
 	}
 
 	anti_air_equipment_1 = {     # 1936
 		archetype = anti_air_equipment
 		priority = 80
 		visual_level = 0
+		
+		upgrades = {
+			art_cost_upgrade
+			art_aa_upgrade
+		}
 	}
 	
 	anti_air_equipment_2 = {  # 1940
@@ -55,6 +65,11 @@ equipments = {
 		air_attack = 26
 
 		build_cost_ic = 9
+		
+		upgrades = {
+			art_cost_upgrade
+			art_aa_upgrade
+		}
 	}
 	
 	anti_air_equipment_3 = {   # 1943
@@ -72,6 +87,11 @@ equipments = {
 			tungsten = 1
 		}
 		build_cost_ic = 11.5
+		
+		upgrades = {
+			art_cost_upgrade
+			art_aa_upgrade
+		}
 	}
 	
 }
