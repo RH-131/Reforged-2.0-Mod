@@ -1147,8 +1147,6 @@ NAir = {
 	AIR_WING_MAX_SIZE = 2000, 							-- Max amount of airplanes in wing
 	AIR_WING_AVERAGE_SIZE = 100, 						-- Eyeballed average amount of airplanes in wing. Used when calculating air volunteer.
 	AIR_WING_BOMB_DAMAGE_FACTOR = 2.2,					-- Used to balance the damage done while bombing.
-	COMBAT_STAT_IMPORTANCE_SPEED = 1, 				-- How important is speed when comparing stats.
-	COMBAT_STAT_IMPORTANCE_AGILITY = 1, 				-- How important is agility when comparing stats.
 	BIGGEST_AGILITY_FACTOR_DIFF = 2.5,					-- biggest factor difference in agility for doing damage (caps to this)
 	BIGGEST_SPEED_FACTOR_DIFF = 2.5,					-- biggest factor difference in speed for doing damage (caps to this)
 	TOP_SPEED_DAMAGE_BONUS_FACTOR = 0.025,				-- A factor for scaling the top speed of a plane into damage buff. If an attacking wing has a speed advantage of any form their speed value will be converted into a percentage bonus with this modifier
@@ -1350,7 +1348,7 @@ NAir = {
 	},
 	MAX_FUEL_FLOW_MULT = 1.0, -- max fuel flow ratio for planes, which will be multiplied by supply
 
-	FUEL_COST_MULT = 0.35, -- fuel multiplier for all air missions
+	FUEL_COST_MULT = 0.40, -- fuel multiplier for all air missions
 
 	MISSION_EFFICIENCY_MULT_AT_LACK_OF_FUEL = 0.25, 				-- multiplier for mission efficiency when a base lacks fuel
 
