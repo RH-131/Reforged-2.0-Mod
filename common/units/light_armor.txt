@@ -43,15 +43,18 @@ sub_units = {
 			defence = -0.05
 		}
 		mountain = 	{
-		    attack = -0.1
+		    attack = -0.2
+			defence = -0.05
 			movement = -0.25
 		}
 		jungle = {
-		    attack = -0.1
+		    attack = -0.2
+			defence = -0.05
 			movement = -0.25
 		}
 		marsh = {
-		    attack = -0.3 
+		    attack = -0.3
+			defence = -0.1
 			movement = -0.4
 		}
 		urban = {
@@ -60,11 +63,12 @@ sub_units = {
 			movement = 0.1
 		}
 		river = { 
-			attack = -0.2 
+			attack = -0.2
+			defence = -0.05			
 			movement = -0.2
 		}
 		amphibious = { 
-			attack = -2.0
+			attack = -3.0
 		}	
 		plains = {
 			attack = 0.1 
@@ -114,9 +118,9 @@ sub_units = {
 		supply_consumption = 0.35
 		
 		# Support nerfs to combat abilities
-		defense = -0.5
-		breakthrough = -0.5
-		soft_attack = -0.5
+		defense = -0.2
+		breakthrough = -0.2
+		soft_attack = -0.2
 		hard_attack = -0.5
 		ap_attack = -0.15
 		armor_value = -0.9
