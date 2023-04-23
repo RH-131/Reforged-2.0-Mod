@@ -2090,11 +2090,10 @@ operations = {
 			tag = ENG
 			IRE = { is_ai = yes }
 			country_exists = IRE
-			date > 1941.1.1
 		}
 		available = {
 		    OR = {
-				date > 1941.1.1
+				date > 1942.6.1
 				AND= {
 				    has_capitulated = yes
 		 	        119 = { is_controlled_by = ENG }
@@ -2102,13 +2101,19 @@ operations = {
 				}
 			}
 		}
-
-		cost = 0
+		activation = {
+			tag = ENG
+			OR ={
+				ENG = { surrender_progress > 0.4 }
+				ENG = { has_capitulated = yes }
+			}
+		}
 
 		fire_only_once = yes
+		
+		days_mission_timeout = 7
 
-
-		complete_effect = {
+		timeout_effect = {
 			IRE = {
 				transfer_navy = {
 					target = ENG
@@ -2137,10 +2142,10 @@ operations = {
 			tag = ENG
 			NZL = { is_ai = yes }
 			country_exists = NZL
-			date > 1939.1.1
+			date > 1940.1.1
 		}
 		available = {
-			date > 1939.1.1
+			date > 1940.1.1
 		}
 
 		cost = 0
