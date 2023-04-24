@@ -32,7 +32,38 @@ sub_units = {
 
 		#Tanks are awesome
 		suppression = 2.5
-  
+		forest = {
+			attack = -0.1
+			movement = -0.2
+		}
+		hills = {
+			attack = -0.05
+			movement = -0.1
+		}
+		mountain = {
+			attack = -0.05
+			movement = -0.15
+		}
+		jungle = {
+			attack = -0.2
+			movement = -0.35
+		}
+		marsh = {
+			attack = -0.15
+			movement = -0.35
+		}
+		urban = {
+			attack = -0.05
+			defence = 0.05
+			movement = 0.05
+		}
+		river = {
+			attack = -0.1
+			movement = -0.1
+		}
+		amphibious = {
+			attack = -0.2
+		}
 		plains = {
 			attack = 0.05 
 			defence = 0.0 
@@ -43,31 +74,6 @@ sub_units = {
 			defence = 0.0 
 			movement = 0.05
 		}	
-		forest = {
-			attack = -0.1
-			movement = -0.3
-		}
-		mountain = {
-			attack = -0.05
-		}
-		jungle = {
-			attack = -0.2
-			movement = -0.5
-		}
-		marsh = {
-			attack = -0.15
-			movement = -0.35
-		}
-		urban = {
-			attack = -0.1
-		}
-		river = {
-			attack = -0.1
-			movement = -0.1
-		}
-		amphibious = {
-			attack = -0.2
-		}
 			
 	}
 	
