@@ -3541,7 +3541,10 @@ technologies = {
 	excavation2 = {
 		
 		local_resources_factor = 0.10
-		
+		enable_building = {
+			building = steel_refinery
+			level = 1
+		}
 		path = {
 			research_cost_coeff = 1
 		}
@@ -3625,7 +3628,10 @@ technologies = {
 	excavation3 = {
 		
 		local_resources_factor = 0.10
-		
+		enable_building = {
+			building = steel_refinery
+			level = 2
+		}
 		path = {
 			research_cost_coeff = 1
 		}
@@ -3703,7 +3709,28 @@ technologies = {
 	excavation4 = {
 		
 		local_resources_factor = 0.10
-		
+		enable_building = {
+			building = steel_refinery
+			level = 3
+		}
+		on_research_complete = {
+			modify_building_resources = {
+			   building = steel_refinery
+			   resource = steel
+			   amount = 5
+			}
+			modify_building_resources = {
+			   building = steel_refinery
+			   resource = aluminium
+			   amount = 4
+			}
+			modify_building_resources = {
+			   building = steel_refinery
+			   resource = tungsten
+			   amount = 2
+			}
+
+		}
 		path = {
 			research_cost_coeff = 1
 		}
@@ -3779,7 +3806,23 @@ technologies = {
 	excavation5 = {
 		
 		local_resources_factor = 0.10
-		
+		on_research_complete = {
+			modify_building_resources = {
+			   building = steel_refinery
+			   resource = steel
+			   amount = 5
+			}
+			modify_building_resources = {
+			   building = steel_refinery
+			   resource = aluminium
+			   amount = 4
+			}
+			modify_building_resources = {
+			   building = steel_refinery
+			   resource = tungsten
+			   amount = 2
+			}
+		}
 		path = {
 			research_cost_coeff = 1
 		}

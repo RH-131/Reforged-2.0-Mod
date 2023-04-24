@@ -54,7 +54,7 @@ buildings = {
 		base_cost = 7000
 		provincial = yes
 		disabled_in_dmz = yes
-		icon_frame = 15
+		icon_frame = 14
 		max_level = 1
 		centered = yes
 		supply_node = yes
@@ -162,7 +162,7 @@ buildings = {
 		base_cost = 2500
 		icon_frame = 14
 
-		#max_level = 1
+		#max_level = 2
 		shares_slots = yes
 		value = 1
 		infrastructure_construction_effect = yes
@@ -177,10 +177,25 @@ buildings = {
 		icon_frame = 17
 		local_resources_rubber = 4
 		refinery = yes
-		max_level = 2
+		max_level = 3
 		shares_slots = yes
 		value = 5
 		infrastructure_construction_effect = yes
+	}
+	steel_refinery = {
+		show_on_map = 1
+		base_cost = 12500
+		icon_frame = 18
+		local_resources_steel = 5
+		local_resources_aluminium = 2
+		local_resources_tungsten = 1
+		refinery = yes
+		max_level = 3
+		shares_slots = yes
+		value = 5
+		infrastructure_construction_effect = yes
+		
+		show_modifier = yes
 	}
 	radar_station = {
 		show_on_map = 1
