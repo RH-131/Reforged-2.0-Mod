@@ -947,7 +947,9 @@ on_actions = {
 					ROOT = { original_tag = RAJ }
 					FROM = { original_tag = JAP }
 				}
-				USA = { add_ideas = raj_capitulated }
+				USA = { 
+				add_timed_idea = { idea = raj_capitulated = 350 } 
+				}
 				USA =  { country_event = { id = usa.67 } }
 			}
 			if = {
