@@ -45,31 +45,39 @@ sub_units = {
 		}
 
 		need = {
-			amphibious_mechanized_equipment = 35
-			infantry_equipment = 140
-		}
-
+			amphibious_mechanized_equipment = 40
+			infantry_equipment = 130
+		}	
 		forest = {
 			attack = -0.25
+			movement = -0.15
+		}
+		hills = {
+			attack = -0.10
+			movement = -0.1
 		}
 		mountain = {
 			attack = -0.2
+			movement = -0.15
 		}
 		jungle = {
 			attack = -0.3
+			movement = -0.25
+		}
+		marsh = {
+			attack = 0.1
+			movement = -0.1
 		}
 		urban = {
 			attack = -0.1
 			defence = -0.05
-		}
-		marsh = {
-			attack = 0.2
+			movement = 0.05
 		}
 		river = {
-			attack = 0.25
+			attack = 0.15
 		}
 		amphibious = {
-			attack = 0.4
+			attack = 0.3
 		}
 	}
 }
