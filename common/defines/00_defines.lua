@@ -785,8 +785,8 @@ NMilitary = {
 	LAND_COMBAT_STR_DICE_SIZE = 2,                 -- nr of damage dice
 	LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.05,       -- global damage modifier... but some equipment is returned at end of battles see : EQUIPMENT_COMBAT_LOSS_FACTOR
 	LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.055,       -- global damage modifier
-	LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.035,    -- air global damage modifier
-	LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.032,    -- global damage modifier
+	LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.030,    -- air global damage modifier
+	LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.024,    -- global damage modifier
 	LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 2, -- how many CAS/TAC can enter a combat depending on enemy width there
 	LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 1,   -- extra damage dice if our armor outclasses enemy
 	LAND_COMBAT_ORG_ARMOR_ON_SOFT_DICE_SIZE = 2,   -- extra damage dice if our armor outclasses enemy
@@ -2660,17 +2660,17 @@ NAI = {
 	LAND_COMBAT_IMPORTANCE_SCALE = 1.5,					-- Lend combat total importance scale (every land combat score get's multiplied by it)
 
 	LAND_COMBAT_FIGHTERS_PER_PLANE = 1.1,				-- Amount of air superiority planes requested per enemy plane
-	LAND_COMBAT_CAS_PLANES_PER_ENEMY_ARMY_LIMIT = 200,	-- Limit of CAS planes requested by enemy armies
+	LAND_COMBAT_CAS_PLANES_PER_ENEMY_ARMY_LIMIT = 100,	-- Limit of CAS planes requested by enemy armies
 	LAND_COMBAT_CAS_PER_ENEMY_ARMY = 20,				-- Amount of CAS planes requested per enemy army
 	LAND_COMBAT_ANTI_LOGISTICS_PER_ENEMY_ARMY = 5,     -- Amount of CAS planes requested per enemy army for anti-logistics
-	LAND_COMBAT_CAS_PER_COMBAT = 150,					-- Amount of CAS requested per combat
+	LAND_COMBAT_CAS_PER_COMBAT = 100,					-- Amount of CAS requested per combat
 	LAND_COMBAT_BOMBERS_PER_LAND_FORT_LEVEL = 20,		-- Amount of bomber planes requested per enemy land fort level
 	LAND_COMBAT_BOMBERS_PER_COASTAL_FORT_LEVEL = 20,	-- Amount of bomber planes requested per enemy coastal fort level
 	LAND_COMBAT_MIN_EXCORT_PLANES = 50,					-- Min amount of planes requested to excort operations
 
 	LAND_COMBAT_INTERCEPT_PER_PLANE = 0.4,				-- Amount of interception planes requested per enemy plane
 	MIN_ALLIED_DEFENSE_FACTOR_AIRWING_REQUESTS = 0.07,	-- Airwing requests will be factored by a minimum of this when comparing own vs friendly troops in area
-	AIR_SUPERIORITY_FOR_FRIENDLY_CAS_RATIO = 0.3,		-- Demand at least this proportion of our cas planes as air superiority regardless of other needs
+	AIR_SUPERIORITY_FOR_FRIENDLY_CAS_RATIO = 0.5,		-- Demand at least this proportion of our cas planes as air superiority regardless of other needs
 	LAND_COMBAT_GUIDE_DISTANCE = 290.0,					-- Distance within whch we'll care a bit more about sending planes regardless of whether our boiz are dying
 	
 	ENEMY_PASSING_THROUGH_PLANES_PER_BOMBER = 0.1,		-- Amount of planes we assign to intercept enemies en-route to a location
