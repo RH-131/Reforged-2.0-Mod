@@ -1752,121 +1752,121 @@ operations = {
 			}
 		}		
 	}
-    GER_operation_oak = {
-        
-		fire_only_once = yes
-		icon = generic_operation
-
-		allowed = {
-			tag =  GER
-		}
-
-		available = {
-			ITA = { 
-				has_idea = SAl_italian_civil_war 
-				has_country_leader = {
-					name = "Chaos and Confusion"
-					ruling_only = yes
-				}
-			}		
-
-		}
-		
-		visible = {
-			ITA = { 
-				has_idea = SAl_italian_civil_war 
-				has_country_leader = {
-					name = "Chaos and Confusion"
-					ruling_only = yes
-				}
-			}
-		}
-		
-		cost = 10
-		ai_will_do = {
-			factor = 100
-		}
-		days_remove = 20
-
-		remove_effect = {
-			ITA = { country_event = salo.4 }
-		}
-	}
-
-	GER_rape_italia = {
-        
-		fire_only_once = yes
-		icon = generic_operation
-
-		allowed = {
-			tag =  GER
-		}
-		visible = {
-			ITA = { has_idea = SAl_italian_civil_war }
-		}
-		available = {
-			ITA = { has_idea = SAl_italian_civil_war }
-			ITA = { is_puppet_of = GER }
-			ITA = {controls_state = 159}
-			ITA = {controls_state = 158}
-		}
-		cost = 50
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		days_remove = 30
-
-		remove_effect = {
-			159 = { #Milano
-					remove_building = {
-						type = arms_factory
-						level = 10
-					}
-					remove_building = {
-						type = industrial_complex
-						level = 10
-					}
-				}
-				158 = { #Torino
-					remove_building = {
-						type = arms_factory
-						level = 5
-					}
-					remove_building = {
-						type = industrial_complex
-						level = 5
-					}
-				}
-				65 = { 
-				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-						type = arms_factory
-						level = 5
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 5
-						instant_build = yes
-					}
-				}	
-				54 = { 
-				add_extra_state_shared_building_slots = 20
-				add_building_construction = {
-						type = arms_factory
-						level = 10
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 10
-						instant_build = yes
-					}
-                }					
-		}
-	}
+    #GER_operation_oak = {
+    #    
+	#	fire_only_once = yes
+	#	icon = generic_operation
+	#
+	#	allowed = {
+	#		tag =  GER
+	#	}
+	#
+	#	available = {
+	#		ITA = { 
+	#			has_idea = SAl_italian_civil_war 
+	#			has_country_leader = {
+	#				name = "Chaos and Confusion"
+	#				ruling_only = yes
+	#			}
+	#		}		
+	#
+	#	}
+	#	
+	#	visible = {
+	#		ITA = { 
+	#			has_idea = SAl_italian_civil_war 
+	#			has_country_leader = {
+	#				name = "Chaos and Confusion"
+	#				ruling_only = yes
+	#			}
+	#		}
+	#	}
+	#	
+	#	cost = 10
+	#	ai_will_do = {
+	#		factor = 100
+	#	}
+	#	days_remove = 20
+	#
+	#	remove_effect = {
+	#		ITA = { country_event = salo.4 }
+	#	}
+	#}
+	#
+	#GER_rape_italia = {
+    #    
+	#	fire_only_once = yes
+	#	icon = generic_operation
+	#
+	#	allowed = {
+	#		tag =  GER
+	#	}
+	#	visible = {
+	#		ITA = { has_idea = SAl_italian_civil_war }
+	#	}
+	#	available = {
+	#		ITA = { has_idea = SAl_italian_civil_war }
+	#		ITA = { is_puppet_of = GER }
+	#		ITA = {controls_state = 159}
+	#		ITA = {controls_state = 158}
+	#	}
+	#	cost = 50
+	#
+	#	ai_will_do = {
+	#		factor = 100
+	#	}
+	#
+	#	days_remove = 30
+	#
+	#	remove_effect = {
+	#		159 = { #Milano
+	#				remove_building = {
+	#					type = arms_factory
+	#					level = 10
+	#				}
+	#				remove_building = {
+	#					type = industrial_complex
+	#					level = 10
+	#				}
+	#			}
+	#			158 = { #Torino
+	#				remove_building = {
+	#					type = arms_factory
+	#					level = 5
+	#				}
+	#				remove_building = {
+	#					type = industrial_complex
+	#					level = 5
+	#				}
+	#			}
+	#			65 = { 
+	#			add_extra_state_shared_building_slots = 10
+	#			add_building_construction = {
+	#					type = arms_factory
+	#					level = 5
+	#					instant_build = yes
+	#				}
+	#				add_building_construction = {
+	#					type = industrial_complex
+	#					level = 5
+	#					instant_build = yes
+	#				}
+	#			}	
+	#			54 = { 
+	#			add_extra_state_shared_building_slots = 20
+	#			add_building_construction = {
+	#					type = arms_factory
+	#					level = 10
+	#					instant_build = yes
+	#				}
+	#				add_building_construction = {
+	#					type = industrial_complex
+	#					level = 10
+	#					instant_build = yes
+	#				}
+    #            }					
+	#	}
+	#}
 	
 	GER_gustav_line = {
         
