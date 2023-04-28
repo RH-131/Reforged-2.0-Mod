@@ -16,7 +16,7 @@ technologies = {
 			breakthrough = 0.10
 		}
 		army_speed_factor = 0.05
-		planning_speed = 0.5
+		planning_speed = 0.4
 
 		enable_tactic = tactic_unexpected_thrust
 		org_loss_when_moving = -0.25
@@ -373,8 +373,8 @@ technologies = {
 		coordination_bonus = 0.05
 		category_all_armor = {
 			maximum_speed = 0.1
-			soft_attack = 0.10
-			max_organisation = 4
+			soft_attack = 0.05
+			max_organisation = 3
 			hard_attack = 0.10
 		}
 		path = {
@@ -407,7 +407,7 @@ technologies = {
 
 
 		category_all_armor = {
-			max_organisation = 4
+			max_organisation = 3
 			default_morale = 0.1
 			max_strength = 1
 		}
@@ -468,10 +468,10 @@ technologies = {
 			soft_attack = 0.05
 		}
 		category_army = {
-			max_strength = 1.0
+			max_strength = 0.8
 		}
 		category_all_armor = {
-		    soft_attack = 0.1
+		    soft_attack = 0.05
 		    hard_attack = 0.05
 		}
 
@@ -602,7 +602,7 @@ technologies = {
 		}
 
 		category_tanks = {
-			max_organisation = 4
+			max_organisation = 3
 			breakthrough = 0.125
 		}
 
@@ -659,10 +659,10 @@ technologies = {
 		}
 		out_of_supply_factor = -0.05
 		category_all_infantry = {
-			defense = 0.2
+			defense = 0.12
 		}
 		category_light_infantry = {
-			defense = 0.12
+			defense = 0.10
 		}
 
 		path = {
@@ -835,10 +835,10 @@ technologies = {
 	mobile_defence = {
 
         category_all_infantry = {
-			defense = 0.20
+			defense = 0.15
 		}
 		category_light_infantry = {
-			defense = 0.12
+			defense = 0.10
 		}
 
 		enable_tactic = tactic_elastic_defense
@@ -885,7 +885,7 @@ technologies = {
 
 		category_support_battalions = {
 			max_organisation = 5
-            soft_attack = 0.20
+            soft_attack = 0.15
 
 		}
 
@@ -922,7 +922,7 @@ technologies = {
 
 		category_support_battalions = {
 			max_organisation = 5
-            soft_attack = 0.20
+            soft_attack = 0.15
 
 		}
 		land_reinforce_rate = 0.04
@@ -966,7 +966,7 @@ technologies = {
 
 		category_line_artillery = {
 			default_morale = 0.15
-			soft_attack = 0.20
+			soft_attack = 0.15
 		}
 
 		path = {
@@ -1003,35 +1003,35 @@ technologies = {
 		}
 		pack_artillery_brigade =
 		{
-			breakthrough = 1.0
+			breakthrough = 0.4
 		}
 		pack_artillery_brigade_mot =
 		{
-			breakthrough = 1.0
+			breakthrough = 0.4
 		}
 		artillery_brigade =
 		{
-			breakthrough = 1.0
+			breakthrough = 0.4
 		}
 		artillery_brigade_mot =
 		{
-			breakthrough = 1.0
+			breakthrough = 0.4
 		}
 		artillery_heavy =
 		{
-			breakthrough = 1.0
+			breakthrough = 0.4
 		}
 		artillery_heavy_mot =
 		{
-			breakthrough = 1.0
+			breakthrough = 0.4
 		}
 		rocket_artillery_brigade =
 		{
-			breakthrough = 1.0
+			breakthrough = 0.6
 		}
 		motorized_rocket_brigade =
 		{
-			breakthrough = 1.0
+			breakthrough = 0.6
 		}
 		light_sp_artillery_brigade =
 		{
@@ -1644,6 +1644,7 @@ technologies = {
 	assault_concentration = {
 
 		max_planning = 0.15
+		planning_speed = 0.15
 
 		enable_tactic = tactic_overwhelming_fire
 		path = {
@@ -1795,6 +1796,8 @@ technologies = {
 
 		land_reinforce_rate = 0.02
 		dig_in_speed_factor = 0.15
+		amphibious_invasion_defence = 0.10
+		
 		category_all_infantry = {
 			max_organisation = 8
 		}
@@ -2014,6 +2017,8 @@ technologies = {
 
 
 		land_reinforce_rate = 0.04
+		amphibious_invasion_defence = 0.20
+		planning_speed = 0.10
 
 		recon = {
 			recon = 1
@@ -2475,6 +2480,7 @@ technologies = {
 
 	continuous_offensive = {
         org_loss_when_moving = -0.15
+		supply_consumption_factor = -0.05
 
 		category_all_armor = {
 			default_morale = 0.2
@@ -2707,6 +2713,7 @@ technologies = {
 	guerilla_warfare = {
 		pocket_penalty = -0.05
 		out_of_supply_factor = -0.30
+		supply_consumption_factor = -0.05
 		category_army = {
 			default_morale = 0.25
 		}

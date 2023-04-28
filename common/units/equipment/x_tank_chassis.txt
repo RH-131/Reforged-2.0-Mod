@@ -469,7 +469,7 @@ equipments = {
 		hardness = 0.55
 		
 		#Offensive Abilities
-		soft_attack = 32
+		soft_attack = 34
 		hard_attack = 1.7
 		ap_attack = 12
 		air_attack = 0
@@ -506,7 +506,7 @@ equipments = {
 		armor_value = 30.6
 
 		#Offensive Abilities
-		soft_attack = 34
+		soft_attack = 36
 		hard_attack = 1.9
 		ap_attack = 14
 
@@ -541,7 +541,7 @@ equipments = {
 		armor_value = 33.75
 
 		#Offensive Abilities
-		soft_attack = 37
+		soft_attack = 39
 		hard_attack = 2
 		ap_attack = 15
 
@@ -576,7 +576,7 @@ equipments = {
 		armor_value = 36.9
 
 		#Offensive Abilities
-		soft_attack = 38
+		soft_attack = 40
 		hard_attack = 2.1
 		ap_attack = 16
 
@@ -611,7 +611,7 @@ equipments = {
 		armor_value = 43.2
 
 		#Offensive Abilities
-		soft_attack = 40
+		soft_attack = 42
 		hard_attack = 2.3
 		ap_attack = 18
 
@@ -653,7 +653,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 2.6
-		hard_attack = 18
+		hard_attack = 20
 		ap_attack = 46
 		air_attack = 0
 
@@ -688,7 +688,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 3.4
-		hard_attack = 21
+		hard_attack = 23
 		ap_attack = 75
 
 		#space taken in convoy
@@ -722,7 +722,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 3.8
-		hard_attack = 24
+		hard_attack = 26
 		ap_attack = 88
 
 		#space taken in convoy
@@ -756,7 +756,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 4.2
-		hard_attack = 27
+		hard_attack = 29
 		ap_attack = 118
 
 		#space taken in convoy
@@ -792,7 +792,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 5
-		hard_attack = 30
+		hard_attack = 32
 		ap_attack = 50
 
 		#space taken in convoy
@@ -993,6 +993,10 @@ equipments = {
 		
 		build_cost_ic = 18
 	}
+	
+	####################
+	### Medium Tanks ###
+	####################
 
 	medium_tank_equipment_1936 = {
 	    year = 1936
@@ -1013,13 +1017,13 @@ equipments = {
 
 		#Defensive Abilities
 
-		defense = 6
-		breakthrough = 42
+		defense = 4
+		breakthrough = 34
 		hardness = 0.8
 		armor_value = 45
 
 		#Offensive Abilities
-		soft_attack = 23
+		soft_attack = 20
 		hard_attack = 12
 		ap_attack = 49
 		air_attack = 0
@@ -1034,7 +1038,7 @@ equipments = {
 		}
 		
 		fuel_consumption = 3.6
-		build_cost_ic = 25
+		build_cost_ic = 30
 	}
 	medium_tank_equipment_1937 = {
 		year = 1937
@@ -1050,16 +1054,16 @@ equipments = {
 
 		#Defensive Abilities
 
-		defense = 7
-		breakthrough = 42
+		defense = 5
+		breakthrough = 36
 		armor_value = 50
 
 		#Offensive Abilities
-		soft_attack = 24
+		soft_attack = 22
 		hard_attack = 14
 		ap_attack = 54
 		fuel_consumption = 3.7	
-		build_cost_ic = 26
+		build_cost_ic = 31
 		lend_lease_cost = 10
 
 		resources = {
@@ -1080,16 +1084,16 @@ equipments = {
 		reliability = 0.72
 
 		#Defensive Abilities
-		defense = 8
-		breakthrough = 50
+		defense = 6
+		breakthrough = 38
 		armor_value = 55
 
 		#Offensive Abilities
-		soft_attack = 25
+		soft_attack = 24
 		hard_attack = 16
 		ap_attack = 59
 		fuel_consumption = 3.8	
-		build_cost_ic = 27
+		build_cost_ic = 32
 		lend_lease_cost = 10
 
 		resources = {
@@ -1111,16 +1115,16 @@ equipments = {
 		reliability = 0.73
 
 		#Defensive Abilities
-		defense = 9
-		breakthrough = 54
+		defense = 7
+		breakthrough = 40
 		armor_value = 60
 
 		#Offensive Abilities
-		soft_attack = 27
+		soft_attack = 26
 		hard_attack = 18
 		ap_attack = 64
 		fuel_consumption = 3.9	
-		build_cost_ic = 28
+		build_cost_ic = 33
 		lend_lease_cost = 10
 
 		resources = {
@@ -1142,16 +1146,16 @@ equipments = {
 		reliability = 0.74
 
 		#Defensive Abilities
-		defense = 10
-		breakthrough = 58
+		defense = 8
+		breakthrough = 42
 		armor_value = 65
 
 		#Offensive Abilities
-		soft_attack = 29
+		soft_attack = 28
 		hard_attack = 20
 		ap_attack = 69
 		fuel_consumption = 4.0	
-		build_cost_ic = 29
+		build_cost_ic = 34
 		lend_lease_cost = 10
 
 		resources = {
@@ -1174,16 +1178,16 @@ equipments = {
 
 		#Defensive Abilities
 
-		defense = 11
-		breakthrough = 62
+		defense = 9
+		breakthrough = 44
 		armor_value = 70
 
 		#Offensive Abilities
-		soft_attack = 31
+		soft_attack = 30
 		hard_attack = 22
 		ap_attack = 74
 		fuel_consumption = 4.1	
-		build_cost_ic = 30
+		build_cost_ic = 35
 		lend_lease_cost = 10
 
 		resources = {
@@ -1201,14 +1205,14 @@ equipments = {
 		maximum_speed = 6.8
 		reliability = 0.76
 		
-		defense = 12
-		breakthrough = 66
+		defense = 10
+		breakthrough = 46
 		armor_value = 75
 		fuel_consumption = 4.2	
-		soft_attack = 33
+		soft_attack = 32
 		hard_attack = 24
 		ap_attack = 79
-	    build_cost_ic = 31
+	    build_cost_ic = 36
 		lend_lease_cost = 10
 
 		resources = {
@@ -1231,17 +1235,17 @@ equipments = {
 
 		#Defensive Abilities
 
-		defense = 13
-		breakthrough = 70
+		defense = 11
+		breakthrough = 48
 		armor_value = 80
 		fuel_consumption = 4.3	
 		#Offensive Abilities
 
-		soft_attack = 35
+		soft_attack = 34
 		hard_attack = 26
 		ap_attack = 84
 		
-		build_cost_ic = 32
+		build_cost_ic = 37
 		lend_lease_cost = 10
 
 		resources = {
@@ -1264,16 +1268,16 @@ equipments = {
 
 		#Defensive Abilities
 		fuel_consumption = 4.4	
-		defense = 14
-		breakthrough = 74
+		defense = 12
+		breakthrough = 50
 		armor_value = 85
 		#Offensive Abilities
 	
-		soft_attack = 37
+		soft_attack = 36
 		hard_attack = 28
 		ap_attack = 89
 		
-		build_cost_ic = 33
+		build_cost_ic = 38
 		lend_lease_cost = 10
 
 		resources = {
@@ -1296,17 +1300,17 @@ equipments = {
 		fuel_consumption = 4.5	
 		#Defensive Abilities
 
-		defense = 15
-		breakthrough = 78
+		defense = 14
+		breakthrough = 55
 		armor_value = 90
 
 		#Offensive Abilities
 
-		soft_attack = 39
+		soft_attack = 38
 		hard_attack = 30
 		ap_attack = 94
 		
-		build_cost_ic = 34
+		build_cost_ic = 39
 		lend_lease_cost = 10
 
 		resources = {
@@ -1327,14 +1331,14 @@ equipments = {
 		maximum_speed = 6.5
 		reliability = 0.73
 		fuel_consumption = 4.9		
-		defense = 16
-		breakthrough = 70
+		defense = 13
+		breakthrough = 50
 		armor_value = 95
 
-		soft_attack = 35
+		soft_attack = 34
 		hard_attack = 26
-		ap_attack = 88
-	    build_cost_ic = 40
+		ap_attack = 99
+	    build_cost_ic = 42
 		lend_lease_cost = 11
 
 		resources = {
@@ -1356,14 +1360,14 @@ equipments = {
 		maximum_speed = 6.8
 		reliability = 0.75
 		fuel_consumption = 5.3		
-		defense = 18
-		breakthrough = 78
+		defense = 15
+		breakthrough = 54
 		armor_value = 100
 
-		soft_attack = 39
+		soft_attack = 38
 		hard_attack = 30
-		ap_attack = 98
-	    build_cost_ic = 41
+		ap_attack = 104
+	    build_cost_ic = 44
 		lend_lease_cost = 11
 		
 		resources = {
@@ -1384,14 +1388,14 @@ equipments = {
 		maximum_speed = 6.8
 		reliability = 0.76
 		fuel_consumption = 4.4		
-		defense = 12
-		breakthrough = 66
+		defense = 13
+		breakthrough = 50
 		armor_value = 75
 
-		soft_attack = 39
+		soft_attack = 38
 		hard_attack = 24
 		ap_attack = 79
-	    build_cost_ic = 33
+	    build_cost_ic = 38
 		lend_lease_cost = 10
 
 		resources = {
@@ -1428,7 +1432,7 @@ equipments = {
 		armor_value = 49
 
 		#Offensive Abilities
-		soft_attack = 38
+		soft_attack = 42
 		hard_attack = 2.4
 		ap_attack = 22
 		air_attack = 0
@@ -1441,7 +1445,7 @@ equipments = {
 			chromium = 1
 		}
 
-		build_cost_ic = 25
+		build_cost_ic = 30
 	}
 	medium_tank_artillery_equipment_1939 = {
 		year = 1939
@@ -1465,7 +1469,7 @@ equipments = {
 		armor_value = 54
 
 		#Offensive Abilities
-		soft_attack = 40
+		soft_attack = 44
 		hard_attack = 2.6
 		ap_attack = 23
 		lend_lease_cost = 10
@@ -1477,7 +1481,7 @@ equipments = {
 		}
 		
 
-		build_cost_ic = 26
+		build_cost_ic = 31
 	}
     medium_tank_artillery_equipment_1940 = {
         year = 1940	
@@ -1502,7 +1506,7 @@ equipments = {
 		armor_value = 58
 
 		#Offensive Abilities
-		soft_attack = 42
+		soft_attack = 46
 		hard_attack = 2.8
 		ap_attack = 24
 		lend_lease_cost = 10
@@ -1514,7 +1518,7 @@ equipments = {
 		}
 		
 
-		build_cost_ic = 27
+		build_cost_ic = 32
 	}
 	medium_tank_artillery_equipment_1941 = {
 		year = 1941
@@ -1537,7 +1541,7 @@ equipments = {
 		armor_value = 63
 
 		#Offensive Abilities
-		soft_attack = 44
+		soft_attack = 48
 		hard_attack = 3
 		lend_lease_cost = 10
 
@@ -1547,7 +1551,7 @@ equipments = {
 			chromium = 1
 		}
 		
-		build_cost_ic = 28
+		build_cost_ic = 33
 	}
     medium_tank_artillery_equipment_1942 = {
         year = 1942	
@@ -1572,7 +1576,7 @@ equipments = {
 		armor_value = 67
 
 		#Offensive Abilities
-		soft_attack = 46
+		soft_attack = 50
 		hard_attack = 3.2
 		ap_attack = 26
 		lend_lease_cost = 10
@@ -1584,7 +1588,7 @@ equipments = {
 		}
 		
 
-		build_cost_ic = 29
+		build_cost_ic = 34
 	}
 	medium_tank_artillery_equipment_1943 = {
 		year = 1943
@@ -1606,7 +1610,7 @@ equipments = {
 		armor_value = 72
 
 		#Offensive Abilities
-		soft_attack = 48
+		soft_attack = 52
 		hard_attack = 3.4
 		lend_lease_cost = 10
 
@@ -1616,7 +1620,7 @@ equipments = {
 			chromium = 1
 		}
 		
-		build_cost_ic = 30
+		build_cost_ic = 35
 	}
 	hybrid_tank_artillery_equipment_1943 = {
 		year = 1943
@@ -1638,7 +1642,7 @@ equipments = {
 		armor_value = 72
 
 		#Offensive Abilities
-		soft_attack = 48
+		soft_attack = 52
 		hard_attack = 3.4
 		lend_lease_cost = 10
 
@@ -1648,7 +1652,7 @@ equipments = {
 			chromium = 1
 		}
 		
-		build_cost_ic = 30
+		build_cost_ic = 35
 	}
     medium_tank_artillery_equipment_1944 = { 
         year = 1944	
@@ -1672,7 +1676,7 @@ equipments = {
 		armor_value = 76
 
 		#Offensive Abilities
-		soft_attack = 50
+		soft_attack = 54
 		hard_attack = 3.6
 		ap_attack = 28
 		lend_lease_cost = 10
@@ -1684,7 +1688,7 @@ equipments = {
 		}
 		
 
-		build_cost_ic = 31
+		build_cost_ic = 36
 	}
     medium_tank_destroyer_equipment_1938= {
 		year = 1938
@@ -1707,14 +1711,14 @@ equipments = {
 		reliability = 0.72
 
 		#Defensive Abilities
-		defense = 3.6
-		breakthrough = 2.8
+		defense = 10
+		breakthrough = 5.6
 		hardness = 0.8
 		armor_value = 55
 
 		#Offensive Abilities
 		soft_attack = 4.8
-		hard_attack = 22
+		hard_attack = 30
 		ap_attack = 90
 		air_attack = 0
 
@@ -1727,7 +1731,7 @@ equipments = {
 		}
 		fuel_consumption = 2.5		
 		
-		build_cost_ic = 25
+		build_cost_ic = 30
 	}
 	medium_tank_destroyer_equipment_1939= {
 		year = 1939
@@ -1743,14 +1747,14 @@ equipments = {
 		reliability = 0.73
 
 		#Defensive Abilities
-		defense = 4
-		breakthrough = 2.95
+		defense = 10.5
+		breakthrough = 5.9
 		fuel_consumption = 2.6	
 		armor_value = 60
 
 		#Offensive Abilities
 		soft_attack = 5.2
-		hard_attack = 24.5
+		hard_attack = 33
 		ap_attack = 95
 		lend_lease_cost = 10
 
@@ -1761,7 +1765,7 @@ equipments = {
 		}
 		
 		
-		build_cost_ic = 26
+		build_cost_ic = 31
 	}
 	medium_tank_destroyer_equipment_1940 = {
 		year = 1940
@@ -1778,14 +1782,14 @@ equipments = {
 		reliability = 0.74
 		fuel_consumption = 2.7	
 		#Defensive Abilities
-		defense = 4.4
-		breakthrough = 3.1
+		defense = 11
+		breakthrough = 6.2
 		
 		armor_value = 70
 
 		#Offensive Abilities
 		soft_attack = 5.6
-		hard_attack = 27
+		hard_attack = 36
 		ap_attack = 100
 		lend_lease_cost = 10
 
@@ -1796,7 +1800,7 @@ equipments = {
 		}
 		
 		
-		build_cost_ic = 27
+		build_cost_ic = 32
 	}
 	medium_tank_destroyer_equipment_1941 = {
 		year = 1941
@@ -1813,14 +1817,14 @@ equipments = {
 		reliability = 0.75
 		fuel_consumption = 2.7	
 		#Defensive Abilities
-		defense = 4.8
-		breakthrough = 3.25
+		defense = 11.5
+		breakthrough = 6.5
 		
 		armor_value = 70
 
 		#Offensive Abilities
 		soft_attack = 6
-		hard_attack = 29.5
+		hard_attack = 39
 		ap_attack = 105
 		lend_lease_cost = 10
 
@@ -1831,7 +1835,7 @@ equipments = {
 		}
 		
 		
-		build_cost_ic = 28
+		build_cost_ic = 33
 	}
     medium_tank_destroyer_equipment_1942 = {
 		year = 1942
@@ -1848,14 +1852,14 @@ equipments = {
 		reliability = 0.76
 		fuel_consumption = 2.8	
 		#Defensive Abilities
-		defense = 5.2
-		breakthrough = 3.4
+		defense = 12
+		breakthrough = 6.8
 		
 		armor_value = 75
 
 		#Offensive Abilities
 		soft_attack = 6.4
-		hard_attack = 32
+		hard_attack = 42
 		ap_attack = 110
 		lend_lease_cost = 10
 
@@ -1866,7 +1870,7 @@ equipments = {
 		}
 		
 		
-		build_cost_ic = 29	
+		build_cost_ic = 34	
 	}
 	medium_tank_destroyer_equipment_1943 = {
 		year = 1943
@@ -1883,14 +1887,14 @@ equipments = {
 		reliability = 0.77
 		fuel_consumption = 2.8	
 		#Defensive Abilities
-		defense = 5.6
-		breakthrough = 3.55
+		defense = 12.5
+		breakthrough = 7.1
 		
 		armor_value = 80
 
 		#Offensive Abilities
 		soft_attack = 6.8
-		hard_attack = 34.5
+		hard_attack = 45
 		lend_lease_cost = 10
 
 		resources = {
@@ -1901,7 +1905,7 @@ equipments = {
 
 		ap_attack = 115
 		
-		build_cost_ic = 30	
+		build_cost_ic = 35	
 	}
 	hybrid_tank_destroyer_equipment_1943 = {
 		year = 1943
@@ -1918,14 +1922,14 @@ equipments = {
 		reliability = 0.77
 		fuel_consumption = 2.8	
 		#Defensive Abilities
-		defense = 5.6
-		breakthrough = 3.55
+		defense = 13
+		breakthrough = 7.4
 		
 		armor_value = 80
 
 		#Offensive Abilities
 		soft_attack = 6.8
-		hard_attack = 34.5
+		hard_attack = 45
 		lend_lease_cost = 10
 
 		resources = {
@@ -1936,7 +1940,7 @@ equipments = {
 
 		ap_attack = 115
 		
-		build_cost_ic = 31	
+		build_cost_ic = 35	
 	}
     medium_tank_destroyer_equipment_1944 = {
 		year = 1944
@@ -1953,14 +1957,14 @@ equipments = {
 		reliability = 0.75
 		fuel_consumption = 2.9	
 		#Defensive Abilities
-		defense = 6
-		breakthrough = 3.7
+		defense = 13.5
+		breakthrough = 7.7
 		
 		armor_value = 70
 
 		#Offensive Abilities
 		soft_attack = 7.2
-		hard_attack = 37
+		hard_attack = 48
 		ap_attack = 120
 		lend_lease_cost = 10
 
@@ -1971,7 +1975,7 @@ equipments = {
 		}
 		
 		
-		build_cost_ic = 31	
+		build_cost_ic = 36
 	}
     medium_tank_aa_equipment_1938 = {
 		year = 1938
@@ -2014,7 +2018,7 @@ equipments = {
 			chromium = 1
 		}
 
-		build_cost_ic = 25
+		build_cost_ic = 30
 	}
 	medium_tank_aa_equipment_1939 = {
 		year = 1939
@@ -2051,7 +2055,7 @@ equipments = {
 			chromium = 1
 		}
 		
-		build_cost_ic = 26
+		build_cost_ic = 31
 	}
     medium_tank_aa_equipment_1940 = {
         year = 1940
@@ -2087,7 +2091,7 @@ equipments = {
 			chromium = 1
 		}
 		
-		build_cost_ic = 27
+		build_cost_ic = 32
 	}
 	medium_tank_aa_equipment_1941 = {
 		year = 1941
@@ -2123,7 +2127,7 @@ equipments = {
 			chromium = 1
 		}
 		
-		build_cost_ic = 28
+		build_cost_ic = 33
 	}
     medium_tank_aa_equipment_1942 = {
         year = 1942
@@ -2159,7 +2163,7 @@ equipments = {
 			chromium = 1
 		}
 		
-		build_cost_ic = 29	
+		build_cost_ic = 34	
 	}
 	medium_tank_aa_equipment_1943 = {
 		year = 1943
@@ -2195,7 +2199,7 @@ equipments = {
 
 		air_attack = 31
 		
-		build_cost_ic = 30	
+		build_cost_ic = 35
 	}
 	hybrid_tank_aa_equipment_1943 = {
 		year = 1943
@@ -2231,7 +2235,7 @@ equipments = {
 
 		air_attack = 31
 		
-		build_cost_ic = 30		
+		build_cost_ic = 36		
 	}
 	medium_tank_aa_equipment_1944 = {  
         year = 1944
@@ -2267,7 +2271,7 @@ equipments = {
 			chromium = 1
 		}
 		
-		build_cost_ic = 31
+		build_cost_ic = 37
 	}
 
 	heavy_tank_equipment_1934 = {
@@ -2332,7 +2336,7 @@ equipments = {
 		hard_attack = 27
 		ap_attack = 78
 		fuel_consumption = 4.6
-        build_cost_ic = 45
+        build_cost_ic = 50
 
 		lend_lease_cost = 12
 
@@ -2366,7 +2370,7 @@ equipments = {
 		hard_attack = 34
 		ap_attack = 91
 		
-		build_cost_ic = 49
+		build_cost_ic = 54
 
 		lend_lease_cost = 12
 
@@ -2399,7 +2403,7 @@ equipments = {
 		hard_attack = 40
 		ap_attack = 101
 		
-		build_cost_ic = 53	
+		build_cost_ic = 58	
 
 		lend_lease_cost = 12
 
@@ -2432,7 +2436,7 @@ equipments = {
 		hard_attack = 42
 		ap_attack = 106
 		
-		build_cost_ic = 55
+		build_cost_ic = 60
 
 		lend_lease_cost = 12
 
@@ -2465,7 +2469,7 @@ equipments = {
 		hard_attack = 44
 		ap_attack = 111
 		
-		build_cost_ic = 57
+		build_cost_ic = 62
 
 		lend_lease_cost = 12
 
@@ -2497,7 +2501,7 @@ equipments = {
 		soft_attack = 47
 		hard_attack = 46
 		ap_attack = 116
-		build_cost_ic = 59
+		build_cost_ic = 64
 
 		lend_lease_cost = 12
 
@@ -2529,7 +2533,7 @@ equipments = {
 		hard_attack = 48
 		ap_attack = 121
 		
-		build_cost_ic = 61
+		build_cost_ic = 66
 
 		lend_lease_cost = 12
 
@@ -2561,7 +2565,7 @@ equipments = {
 		hard_attack = 50
 		ap_attack = 121
 		
-		build_cost_ic = 63
+		build_cost_ic = 68
 
 		lend_lease_cost = 12
 
@@ -2599,7 +2603,7 @@ equipments = {
 		armor_value = 78.3
 
 		#Offensive Abilities
-		soft_attack = 61
+		soft_attack = 62
 		hard_attack = 6.3
 		ap_attack = 33
 		air_attack = 0
@@ -2612,7 +2616,7 @@ equipments = {
 			chromium = 2
 		}
 		
-		build_cost_ic = 41
+		build_cost_ic = 50
 	}
 	heavy_tank_artillery_equipment_1941 = {
 		archetype = heavy_tank_artillery_chassis
@@ -2635,7 +2639,7 @@ equipments = {
 		armor_value = 87
 
 		#Offensive Abilities
-		soft_attack = 67
+		soft_attack = 68
 		hard_attack = 6.5
 		ap_attack = 35
 
@@ -2648,7 +2652,7 @@ equipments = {
 		}
 		
 		
-		build_cost_ic = 45
+		build_cost_ic = 54
 	} 
 	heavy_tank_artillery_equipment_1942 = {
 		year = 1942
@@ -2667,7 +2671,7 @@ equipments = {
 		armor_value = 91.8
 
 		#Offensive Abilities
-		soft_attack = 70
+		soft_attack = 71
 		hard_attack = 6.6
 		ap_attack = 36
 		air_attack = 0
@@ -2680,7 +2684,7 @@ equipments = {
 			chromium = 2
 		}
 		
-		build_cost_ic = 47
+		build_cost_ic = 56
 	}
 	heavy_tank_artillery_equipment_1943 = {
 		archetype = heavy_tank_artillery_chassis
@@ -2703,7 +2707,7 @@ equipments = {
 		
 
 		#Offensive Abilities
-		soft_attack = 73
+		soft_attack = 74
 		hard_attack = 6.7
 		ap_attack = 37
 
@@ -2715,7 +2719,7 @@ equipments = {
 			chromium = 2
 		}
 		
-		build_cost_ic = 49
+		build_cost_ic = 58
 	}
     heavy_tank_artillery_equipment_1944 = {
 		year = 1944
@@ -2737,7 +2741,7 @@ equipments = {
 		armor_value = 101
 
 		#Offensive Abilities
-		soft_attack = 76
+		soft_attack = 77
 		hard_attack = 6.8
 		ap_attack = 38
 
@@ -2749,7 +2753,7 @@ equipments = {
 			chromium = 2
 		}
 		
-		build_cost_ic = 51
+		build_cost_ic = 60
 	}
 	heavy_tank_artillery_equipment_1945 = {
 		archetype = heavy_tank_artillery_chassis
@@ -2773,7 +2777,7 @@ equipments = {
 		
 
 		#Offensive Abilities
-		soft_attack = 79
+		soft_attack = 80
 		hard_attack = 6.9
 		ap_attack = 39
 
@@ -2785,7 +2789,7 @@ equipments = {
 			chromium = 2
 		}
 		
-		build_cost_ic = 53
+		build_cost_ic = 62
 	}
 	heavy_tank_destroyer_equipment_1939= {
 		archetype = heavy_tank_destroyer_chassis
@@ -2816,7 +2820,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 7.9
-		hard_attack = 41
+		hard_attack = 42
 		ap_attack = 144
 		air_attack = 0
 		
@@ -2828,7 +2832,7 @@ equipments = {
 			chromium = 2
 		}
 
-		build_cost_ic = 41
+		build_cost_ic = 50
 	}
 	heavy_tank_destroyer_equipment_1941= {
 		archetype = heavy_tank_destroyer_chassis
@@ -2852,7 +2856,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 8.5
-		hard_attack = 47
+		hard_attack = 48
 		ap_attack = 154
 		air_attack = 0
 
@@ -2864,7 +2868,7 @@ equipments = {
 			chromium = 2
 		}
 		
-		build_cost_ic = 45
+		build_cost_ic = 54
 	}
     heavy_tank_destroyer_equipment_1942 = {
 		year = 1942
@@ -2884,7 +2888,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 8.5
-		hard_attack = 50
+		hard_attack = 51
 		ap_attack = 159
 		air_attack = 0
 
@@ -2896,7 +2900,7 @@ equipments = {
 			chromium = 2
 		}
 		
-		build_cost_ic = 47
+		build_cost_ic = 56
 	}
 	heavy_tank_destroyer_equipment_1943 = {
 	    year = 1943
@@ -2920,7 +2924,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 9.1
-		hard_attack = 53
+		hard_attack = 54
 		ap_attack = 164
 
 		lend_lease_cost = 12
@@ -2932,7 +2936,7 @@ equipments = {
 		}
 		
 		
-		build_cost_ic = 49
+		build_cost_ic = 58
 	}
 	heavy_tank_destroyer_equipment_1944 = {
 		year = 1944
@@ -2955,7 +2959,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 9.4
-		hard_attack = 56
+		hard_attack = 57
 		ap_attack = 169
 		air_attack = 0 #0
 
@@ -2967,7 +2971,7 @@ equipments = {
 			chromium = 2
 		}
 		
-		build_cost_ic = 51
+		build_cost_ic = 60
 	}
 	heavy_tank_destroyer_equipment_1945 = {
 	    year = 1945
@@ -2992,7 +2996,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 9.7
-		hard_attack = 59
+		hard_attack = 60
 		ap_attack = 174
 
 		lend_lease_cost = 12
@@ -3004,7 +3008,7 @@ equipments = {
 		}
 		
 		
-		build_cost_ic = 53
+		build_cost_ic = 62
 	}
 
 	amphibious_tank_equipment_1 = {
@@ -3047,7 +3051,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 10
 		
-		build_cost_ic = 44
+		build_cost_ic = 47
 		resources = {
 			steel = 4
 			tungsten = 1
@@ -3086,7 +3090,7 @@ equipments = {
 		ap_attack = 60
 		air_attack = 0	
 		
-		build_cost_ic = 48
+		build_cost_ic = 51
 		
 		resources = {
 			steel = 4

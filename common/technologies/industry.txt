@@ -2623,7 +2623,7 @@ technologies = {
 		industrial_capacity_factory = 0.1
 		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.25
-		line_change_production_efficiency_factor = 0.025
+		production_factory_start_efficiency_factor = 0.02
 		industry_air_damage_factor = 0.05
 		path = {
 			leads_to_tech = concentrated_industry2 
@@ -2691,7 +2691,7 @@ technologies = {
 		industrial_capacity_factory = 0.125
 		industrial_capacity_dockyard = 0.125
 		global_building_slots_factor = 0.25
-		line_change_production_efficiency_factor = 0.025
+		production_factory_start_efficiency_factor = 0.02
 		industry_air_damage_factor = 0.05
 		path = {
 			leads_to_tech = concentrated_industry3 
@@ -2726,7 +2726,7 @@ technologies = {
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.15
 		global_building_slots_factor = 0.25
-		line_change_production_efficiency_factor = 0.025
+		production_factory_start_efficiency_factor = 0.02
 		industry_air_damage_factor = 0.05
 		path = {
 			leads_to_tech = concentrated_industry4 
@@ -2760,7 +2760,7 @@ technologies = {
 		industrial_capacity_factory = 0.175
 		industrial_capacity_dockyard = 0.175
 		global_building_slots_factor = 0.25
-		line_change_production_efficiency_factor = 0.025
+		production_factory_start_efficiency_factor = 0.02
 		industry_air_damage_factor = 0.05
 		path = {
 			leads_to_tech = concentrated_industry5
@@ -2795,7 +2795,7 @@ technologies = {
 		industrial_capacity_factory = 0.2
 		industrial_capacity_dockyard = 0.2
 		global_building_slots_factor = 0.25
-		line_change_production_efficiency_factor = 0.025
+		production_factory_start_efficiency_factor = 0.02
 		industry_air_damage_factor = 0.05
 		research_cost = 2
 		start_year = 1943
@@ -3379,6 +3379,10 @@ technologies = {
 				amount = 1
 			}
 		}
+		enable_building = {
+			building = synthetic_rubber_refinery
+			level = 3
+		}
 		
 		research_cost = 1.5
 		start_year = 1943
@@ -3541,7 +3545,10 @@ technologies = {
 	excavation2 = {
 		
 		local_resources_factor = 0.10
-		
+		enable_building = {
+			building = steel_refinery
+			level = 1
+		}
 		path = {
 			research_cost_coeff = 1
 		}
@@ -3625,7 +3632,10 @@ technologies = {
 	excavation3 = {
 		
 		local_resources_factor = 0.10
-		
+		enable_building = {
+			building = steel_refinery
+			level = 2
+		}
 		path = {
 			research_cost_coeff = 1
 		}
@@ -3703,7 +3713,28 @@ technologies = {
 	excavation4 = {
 		
 		local_resources_factor = 0.10
-		
+		enable_building = {
+			building = steel_refinery
+			level = 3
+		}
+		on_research_complete = {
+			modify_building_resources = {
+			   building = steel_refinery
+			   resource = steel
+			   amount = 5
+			}
+			modify_building_resources = {
+			   building = steel_refinery
+			   resource = aluminium
+			   amount = 4
+			}
+			modify_building_resources = {
+			   building = steel_refinery
+			   resource = tungsten
+			   amount = 2
+			}
+
+		}
 		path = {
 			research_cost_coeff = 1
 		}
@@ -3779,7 +3810,23 @@ technologies = {
 	excavation5 = {
 		
 		local_resources_factor = 0.10
-		
+		on_research_complete = {
+			modify_building_resources = {
+			   building = steel_refinery
+			   resource = steel
+			   amount = 5
+			}
+			modify_building_resources = {
+			   building = steel_refinery
+			   resource = aluminium
+			   amount = 4
+			}
+			modify_building_resources = {
+			   building = steel_refinery
+			   resource = tungsten
+			   amount = 2
+			}
+		}
 		path = {
 			research_cost_coeff = 1
 		}

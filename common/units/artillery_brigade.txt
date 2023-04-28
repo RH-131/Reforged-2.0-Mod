@@ -27,9 +27,9 @@ sub_units = {
 		}
 		
 		manpower = 500
-		max_strength = 1
+		max_strength = 2
 		max_organisation = 0
-		default_morale = 0.1
+		default_morale = 0.05
 		training_time = 80
 		weight = 0.6
 		supply_consumption = 0.2
@@ -97,12 +97,16 @@ sub_units = {
 		manpower = 500
 		need = {
 			artillery_equipment = 24
-			motorized_equipment = 20 
+			motorized_equipment = 24 
 		}
+		
+		defense = 0.10
+		soft_attack = 0.05
+		breakthrough = 0.10
 			
-		max_strength = 1
+		max_strength = 2
 		max_organisation = 2
-		default_morale = 0.1
+		default_morale = 0.05
 		training_time = 80
 		weight = 0.7
 		supply_consumption = 0.25
@@ -172,9 +176,9 @@ sub_units = {
 		}
 		
 		manpower = 400
-		max_strength = 1
+		max_strength = 2
 		max_organisation = 0
-		default_morale = 0.15
+		default_morale = 0.05
 		training_time = 70
 		weight = 0.5
 		supply_consumption = 0.16
@@ -236,13 +240,17 @@ sub_units = {
 
 		need = {
 			pack_artillery_equipment = 24
-			motorized_equipment = 18
+			motorized_equipment = 24
 		}
 		
+		defense = 0.10
+		soft_attack = 0.05
+		breakthrough = 0.10
+		
 		manpower = 400
-		max_strength = 1
+		max_strength = 2
 		max_organisation = 2
-		default_morale = 0.15
+		default_morale = 0.05
 		training_time = 70
 		weight = 0.5
 		supply_consumption = 0.19
@@ -301,35 +309,35 @@ sub_units = {
 
 		need = {
 			heavy_artillery_equipment = 24			
-			motorized_equipment = 24 
+			motorized_equipment = 12
 		}
 	
 		manpower = 550
 		training_time = 85
+		max_strength = 2
 		max_organisation = 0
-		default_morale = 0.1
-		max_strength = 1
+		default_morale = 0.05
 		weight = 0.75
 		maximum_speed = -0.46
 		supply_consumption = 0.25
 				
 		forest = {
-			attack = -0.25
+			attack = -0.3
 			movement = -0.3
 		}
 
 		hills = {
-			attack = -0.1
+			attack = -0.15
 			movement = -0.2
 		}
 
 		mountain = {
-			attack = -0.3
+			attack = -0.35
 			movement = -0.3
 		}
 
 		jungle = {
-			attack = -0.3
+			attack = -0.4
 			movement = -0.25
 		}
 
@@ -380,14 +388,18 @@ sub_units = {
 		
 		need = {
 			heavy_artillery_equipment = 24
-			motorized_equipment = 36			
+			motorized_equipment = 24			
 		}
+		
+		defense = 0.10
+		soft_attack = 0.05
+		breakthrough = 0.10
 	
 		manpower = 550
 		training_time = 85
+		max_strength = 2
 		max_organisation = 2
-		default_morale = 0.1
-		max_strength = 1
+		default_morale = 0.05
 		weight = 0.85
 		maximum_speed = -0.33
 		supply_consumption = 0.3
@@ -464,10 +476,10 @@ sub_units = {
 		}
 		
 		manpower = 500
-
+		max_strength = 2
 		max_organisation = 0
-		default_morale = 0.1
-		max_strength = 1
+		default_morale = 0.05
+
 		training_time = 80
 		weight = 0.6
 		supply_consumption = 0.25
@@ -506,7 +518,7 @@ sub_units = {
 		}
 
 		amphibious = {
-			attack = -0.25
+			attack = -0.2
 		}
 	}
 	
@@ -533,13 +545,13 @@ sub_units = {
 
 		need = {
 			rocket_artillery_equipment = 24
-			motorized_equipment = 18 
+			motorized_equipment = 24
 		}
 		
 		manpower = 500
+		max_strength = 2
 		max_organisation = 2
-		default_morale = 0.1
-		max_strength = 1
+		default_morale = 0.05
 		training_time = 80
 		weight = 0.7
 		supply_consumption = 0.28
@@ -578,7 +590,7 @@ sub_units = {
 		}
 
 		amphibious = {
-			attack = -0.25
+			attack = -0.2
 		}
 	}
 }
