@@ -478,6 +478,11 @@ focus_tree = {
 			add_state_core = 71
 			add_state_core = 73
 			add_state_core = 664
+			add_state_core = 764
+			add_state_core = 109
+			add_state_core = 102
+			add_state_core = 853
+			add_state_core = 103
 			add_stability = 0.05
 		}
 	}
@@ -816,7 +821,8 @@ focus_tree = {
 				news_event = { id = news.299 }
 				}
 			add_political_power = 150
-			
+			add_state_core = 76
+			add_state_core = 83
 		}
 	}
 
@@ -1636,10 +1642,10 @@ focus_tree = {
 					limit = {
 						has_state_flag = HUN_domestic_arms_industry_AF1
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1647,10 +1653,10 @@ focus_tree = {
 					limit = {
 						has_state_flag = HUN_domestic_arms_industry_AF2
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1665,10 +1671,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 2
 						instant_build = yes
 				}
 				set_state_flag = HUN_domestic_arms_industry_AF1
@@ -1677,14 +1683,14 @@ focus_tree = {
 				limit = {
 					free_building_slots = {
 						building = arms_factory
-						size > 0
+						size > 1
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = HUN_domestic_arms_industry_AF2
@@ -1724,10 +1730,10 @@ focus_tree = {
 					limit = {
 						has_state_flag = HUN_support_domestic_industry_IC
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -1738,14 +1744,14 @@ focus_tree = {
 					limit = {
 						free_building_slots = {
 							building = industrial_complex
-							size > 2
+							size > 1
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 					set_state_flag = HUN_support_domestic_industry_IC
@@ -1954,10 +1960,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_civilian_industry_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1972,10 +1978,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = HUN_civilian_industry_IC
