@@ -1105,49 +1105,49 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = RAJ_princes_famine
-		icon = GFX_RAJ_solve_famine_quickly
-		relative_position_id = RAJ_must_decide
-		prerequisite = { focus = RAJ_princes_5 }
-		x = 5
-		y = 7
-
-		cost = 7.145
-
-		ai_will_do = {
-			factor = 
-		}
-
-		available = {
-			IF ={
-				has_idea = RAJ_famine
-			}
-		}
-
-		bypass = {
-
-		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-			swap_ideas = {
-				remove_idea = RAJ_famine
-				add_idea = RAJ_famine_fix
-			}
-			
-		}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = RAJ_famine
-				add_idea = RAJ_famine_fix
-			}
-		}
-	}
+#	focus = {
+#		id = RAJ_princes_famine
+#		icon = GFX_RAJ_solve_famine_quickly
+#		relative_position_id = RAJ_must_decide
+#		prerequisite = { focus = RAJ_princes_5 }
+#		x = 5
+#		y = 7
+#
+#		cost = 7.145
+#
+#		ai_will_do = {
+#			factor = 
+#		}
+#
+#		available = {
+#			IF ={
+#				has_idea = RAJ_famine
+#			}
+#		}
+#
+#		bypass = {
+#
+#		}
+#		
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = yes
+#
+#		complete_tooltip = {
+#			swap_ideas = {
+#				remove_idea = RAJ_famine
+#				add_idea = RAJ_famine_fix
+#			}
+#			
+#		}
+#
+#		completion_reward = {
+#			swap_ideas = {
+#				remove_idea = RAJ_famine
+#				add_idea = RAJ_famine_fix
+#			}
+#		}
+#	}
 	
 	focus = {
 		id = RAJ_princes_6
@@ -1297,42 +1297,42 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = RAJ_quit_india_removed
-		icon = GFX_goal_generic_imprison_people
-		prerequisite = { focus = RAJ_make_use_of_the_muslim_league }
-		relative_position_id = RAJ_cripps_mission
-		x = 0
-		y = 2
-
-		cost = 2.9
-
-		ai_will_do = {
-			factor = 100
-		}
-		
-		available = {
-			IF = {
-				has_completed_focus = RAJ_princes_4
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-			remove_ideas = RAJ_quit_india_movement_3
-		}
-
-		completion_reward = {
-			remove_ideas = RAJ_quit_india_movement_3		
-		}
-	}
+#	focus = {
+#		id = RAJ_quit_india_removed
+#		icon = GFX_goal_generic_imprison_people
+#		prerequisite = { focus = RAJ_make_use_of_the_muslim_league }
+#		relative_position_id = RAJ_cripps_mission
+#		x = 0
+#		y = 2
+#
+#		cost = 2.9
+#
+#		ai_will_do = {
+#			factor = 100
+#		}
+#		
+#		available = {
+#			IF = {
+#				has_completed_focus = RAJ_princes_4
+#			}
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = yes
+#
+#		complete_tooltip = {
+#			remove_ideas = RAJ_quit_india_movement_3
+#		}
+#
+#		completion_reward = {
+#			remove_ideas = RAJ_quit_india_movement_3		
+#		}
+#	}
 	
 	focus = {
 		id = RAJ_commit_to_africa
@@ -1681,7 +1681,7 @@ focus_tree = {
 			439 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					level = 2
+					level = 1
 					type = industrial_complex
 					instant_build = yes 
 				}
@@ -1708,7 +1708,7 @@ focus_tree = {
 			439 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					level = 2
+					level = 1
 					type = industrial_complex
 					instant_build = yes 
 				}
@@ -1754,7 +1754,7 @@ focus_tree = {
 			438 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					level = 2
+					level = 1
 					type = industrial_complex
 					instant_build = yes 
 				}
@@ -1779,7 +1779,7 @@ focus_tree = {
 			438 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					level = 2
+					level = 1
 					type = industrial_complex
 					instant_build = yes 
 				}
@@ -3941,7 +3941,7 @@ focus_tree = {
 			435 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					level = 2
+					level = 1
 					type = industrial_complex
 					instant_build = yes 
 				}
@@ -3952,7 +3952,7 @@ focus_tree = {
 			435 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					level = 2
+					level = 1
 					type = industrial_complex
 					instant_build = yes 
 				}
@@ -4041,7 +4041,7 @@ focus_tree = {
 			436 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					level = 2
+					level = 1
 					type = industrial_complex
 					instant_build = yes 
 				}
@@ -4052,7 +4052,7 @@ focus_tree = {
 			436 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					level = 2
+					level = 1
 					type = industrial_complex
 					instant_build = yes 
 				}
@@ -4320,14 +4320,6 @@ focus_tree = {
 					instant_build = yes 
 				}
 			}
-			435 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes 
-				}
-			}
 			swap_ideas = {
 				remove_idea = RAJ_the_princes_takeover
 				add_idea = RAJ_the_princes_supply_war
@@ -4354,14 +4346,6 @@ focus_tree = {
 				}
 			}
 			436 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes 
-				}
-			}
-			435 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -6632,12 +6616,48 @@ focus_tree = {
 	}	
 
 	focus = {
-		id = RAJ_press_indians_into_the_dockyards_focus
-		icon = GFX_goal_generic_occupy_states_coastal
+		id = RAJ_a_merchant_feel
+		icon = GFX_goal_generic_build_navy
 		relative_position_id = RAJ_bengal_dockyards
 		prerequisite = { focus = RAJ_dockyard_construction_efforts }
+
 		x = 0
 		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+		complete_tooltip = {
+			add_ideas = RAJ_a_merchant_feel_idea
+		}
+		
+		completion_reward = {
+			add_ideas = RAJ_a_merchant_feel_idea
+		}
+	}
+	
+	focus = {
+		id = RAJ_press_indians_into_the_dockyards_focus
+		icon = GFX_goal_generic_occupy_states_coastal
+		relative_position_id = RAJ_a_merchant_feel
+		prerequisite = { focus = RAJ_a_merchant_feel }
+		x = 1
+		y = 1
 
 		cost = 5
 
@@ -6668,8 +6688,8 @@ focus_tree = {
 	focus = {
 		id = RAJ_aid_british_rnd
 		icon = GFX_focus_research
-		relative_position_id = RAJ_press_indians_into_the_dockyards_focus
-		prerequisite = { focus = RAJ_press_indians_into_the_dockyards_focus }
+		relative_position_id = RAJ_a_merchant_feel
+		prerequisite = { focus = RAJ_a_merchant_feel }
 
 		x = -1
 		y = 1
@@ -6692,42 +6712,11 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
+			add_research_slot = 1 
 		}
 
 		completion_reward = {
 			add_research_slot = 1 
-		}
-	}
-	
-	focus = {
-		id = RAJ_a_merchant_feel
-		icon = GFX_goal_generic_build_navy
-		relative_position_id = RAJ_press_indians_into_the_dockyards_focus
-		prerequisite = { focus = RAJ_press_indians_into_the_dockyards_focus }
-
-		x = 1
-		y = 1
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		available = {
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-
-		completion_reward = {
-			add_ideas = RAJ_a_merchant_feel_idea
 		}
 	}
 	
