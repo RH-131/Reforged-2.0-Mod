@@ -2095,6 +2095,9 @@ operations = {
 		available = {
 		    OR = {
 				date > 1942.6.1
+				NOT ={
+					controls_state = 126
+				}
 				AND= {
 				    has_capitulated = yes
 		 	        119 = { is_controlled_by = ENG }
@@ -2102,17 +2105,11 @@ operations = {
 				}
 			}
 		}
-		activation = {
-			tag = ENG
-			OR ={
-				ENG = { surrender_progress > 0.4 }
-				ENG = { has_capitulated = yes }
-			}
-		}
+
+		cost = 0
 
 		fire_only_once = yes
 		
-		days_mission_timeout = 7
 
 		timeout_effect = {
 			IRE = {
