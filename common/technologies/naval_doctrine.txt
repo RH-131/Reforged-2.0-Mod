@@ -1095,7 +1095,8 @@ technologies = {
 			convoy_raiding_coordination = 0.35
 			surface_detection = 0.15
 		}
-
+		naval_retreat_speed_after_initial_combat = 0.1
+		naval_retreat_chance_after_initial_combat = 0.1
 		xp_research_type = navy
 		xp_unlock_cost = 100
 		doctrine = yes
@@ -1136,7 +1137,6 @@ technologies = {
 		# EFFECT ##############
 		light_cruiser = {
 			max_organisation = 10
-			surface_visibility = -0.075
 			max_strength = -0.075
 			convoy_raiding_coordination = 0.15
 			surface_detection = 0.10
@@ -1144,9 +1144,8 @@ technologies = {
 
 		heavy_cruiser = {
 			max_organisation = 10
-			surface_visibility = -0.075
-			max_strength = -0.075
 			convoy_raiding_coordination = 0.15
+			max_strength = -0.075
 			surface_detection = 0.10
 		}
 		custom_modifier_tooltip = raider_patrols_CLCA_tt
@@ -1191,17 +1190,6 @@ technologies = {
 		# EFFECT ##############
 		battle_cruiser = {
 			max_organisation = 20
-			surface_visibility = -0.075
-			max_strength = -0.1
-			hg_attack = -0.1
-			anti_air_attack = -0.1
-			convoy_raiding_coordination = 0.5
-			surface_detection = 0.15
-		}
-
-		battleship = {
-			max_organisation = 20
-			surface_visibility = -0.075
 			max_strength = -0.1
 			hg_attack = -0.1
 			anti_air_attack = -0.1
@@ -1209,6 +1197,15 @@ technologies = {
 			surface_detection = 0.15
 		}
 
+		battleship = {
+			max_organisation = 20
+			max_strength = -0.1
+			hg_attack = -0.1
+			anti_air_attack = -0.1
+			convoy_raiding_coordination = 0.25
+			surface_detection = 0.15
+		}
+		naval_retreat_speed = 0.1
 		naval_enemy_fleet_size_ratio_penalty_factor = 0.1
 		custom_modifier_tooltip = capital_ship_raiders_BCBB_tt
 		#######
@@ -1412,11 +1409,12 @@ technologies = {
 
 		# EFFECT #############
 		carrier = {
-			max_organisation = 20
+			max_organisation = 10
+			max_strength = -0.1
+			convoy_raiding_coordination = 0.25
+			surface_detection = 0.15
 		}
-		modifier = {
-			naval_strike_targetting_factor = 0.1
-		}
+		custom_modifier_tooltip = raider_patrols_CLCA_tt
 		########
 
 		path = {
@@ -1927,11 +1925,13 @@ technologies = {
 		# EFFECT ##############
 		carrier = {
 			max_organisation = 20
+			max_strength = 0.1
 		}
 		light_cruiser = {
 			max_organisation = 20
+			max_strength = 0.1
 		}
-
+		screening_efficiency = 0.05
 		navy_carrier_air_agility_factor = 0.10
 
 		###########
