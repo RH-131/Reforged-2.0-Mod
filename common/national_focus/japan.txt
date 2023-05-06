@@ -2344,13 +2344,13 @@ focus_tree = {
 
 		available = {
 			has_full_control_of_state = 326 #Hong-Kong
-			has_full_control_of_state = 672 #Sumatra
-			has_full_control_of_state = 335 #Java
-			has_full_control_of_state = 334 #Kalimantan
-			has_full_control_of_state = 333 #North Borneo
+			controls_state = 672 #Sumatra
+			controls_state = 335 #Java
+			controls_state = 334 #Kalimantan
+			controls_state = 333 #North Borneo
 			has_full_control_of_state = 336 #Singapore
-			has_full_control_of_state = 288 #Burma
-			has_full_control_of_state = 640 #Mandalay
+			controls_state = 288 #Burma
+			controls_state = 640 #Mandalay
 		}
 
 		bypass = {
@@ -3811,7 +3811,7 @@ focus_tree = {
 			custom_effect_tooltip = JAP_base_defence_force_tt
 
 			531 = {
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					level = 5
 					province = 1136
@@ -3819,7 +3819,7 @@ focus_tree = {
 				}
 			}
 			529 = {
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					level = 5
 					province = 529
@@ -3827,7 +3827,7 @@ focus_tree = {
 				}
 			}
 			528 = {
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					level = 5
 					province = 9950
@@ -3835,7 +3835,7 @@ focus_tree = {
 				}
 			}
 			282 = {
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					level = 5
 					province = 9998
@@ -3843,7 +3843,7 @@ focus_tree = {
 				}
 			}
 			533 = {
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					level = 5
 					province = 9859
@@ -3851,7 +3851,7 @@ focus_tree = {
 				}
 			}
 			555 = {
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					level = 5
 					province = 1399
