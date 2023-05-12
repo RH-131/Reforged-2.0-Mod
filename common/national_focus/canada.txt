@@ -2680,8 +2680,7 @@ focus_tree = {
 		}
 
 		available = {
-		    ENG = { controls_state = 331 }
-			ENG = { controls_state = 332 }
+		date > 1936.06.01
 		}
 		
 		bypass = {
@@ -2694,7 +2693,11 @@ focus_tree = {
 
 		completion_reward = {
 		    add_political_power = 50
+		    add_ideas = low_economic_mobilisation
             add_ideas = CAN_darkest
+	    add_stability = -0.1
+			add_war_support = 0.2
+
 			remove_state_core = 331 
 		    remove_state_core = 332
 			USA = {
@@ -2773,7 +2776,7 @@ focus_tree = {
 				}
 				add_resource = {
 					type = chromium
-					amount = 8
+					amount = 25
 				}
 			}
 			random_owned_controlled_state = {
@@ -2783,7 +2786,7 @@ focus_tree = {
 				}
 				add_resource = {
 					type = tungsten
-					amount = 8
+					amount = 30
 				}
 			}
 			random_owned_controlled_state = {
@@ -2862,7 +2865,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = CAN_shadow_factories_AF2
@@ -2878,7 +2881,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = CAN_shadow_factories_AF3
@@ -2958,6 +2961,7 @@ focus_tree = {
 		}
 
 		available = {
+			date > 1938.01.01
 		}
 		
 		bypass = {
@@ -2978,6 +2982,10 @@ focus_tree = {
 					}
 				}
 				add_ideas = limited_conscription
+				add_ideas = partial_economic_mobilisation
+				add_stability = -0.1
+				add_war_support = 0.1
+				
 			}
 			else = {
 				add_political_power = 150
