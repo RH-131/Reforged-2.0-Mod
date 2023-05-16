@@ -315,6 +315,26 @@ ideas = {
 				min_export = 0.05
 			}
 		}
+		
+		ENG_sanctions_against_SPR = {
+
+			picture = chi_hyper_inflation
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				has_war_with = ENG
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				min_export = -0.10
+			}
+		}
 
 		ENG_economy = {
 

@@ -470,10 +470,14 @@ country_event = {
 		tag = ITA
 		has_war = yes 
 		OR = {
-			ENG = { controls_state = 271 }
+			ENG = { 
+			controls_state = 271
+			controls_state = 450 
+			}
 			any_other_country = {
 			is_in_faction_with = ENG
 			controls_state = 271
+			controls_state = 450
 			}
 		}			
 	}
