@@ -10,5 +10,5 @@ tags={
 	"Balance"
 }
 name="Baptized Testing"
-supported_version="1.12.12"
+supported_version="1.12.13"
 remote_file_id="2726354765"
