@@ -1,859 +1,859 @@
-characters={
-	MEX_salvador_abascal={
-		name="Salvador Abascal"
-		portraits={
-			civilian={
-				large="GFX_Portrait_MEX_Salvador_Abascal"
-			}
-		}
-		country_leader={
-			desc="POLITICS_SALVADOR_ABASCAL_DESC"
-			ideology=falangism
-			traits={ fascist_militia_leader }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	MEX_adolfo_de_la_huerta={
-		name="Adolfo de la Huerta"
-		portraits={
-			civilian={
-				large="GFX_Portrait_MEX_Adolfo_de_la_Huerta"
-			}
-		}
-		country_leader={
-			desc="POLITICS_ADOLFO_DE_LA_HUERTA_DESC"
-			ideology=moderatism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	MEX_dionisio_encina={
-		name="Dionisio Encina"
-		portraits={
-			civilian={
-				large="GFX_Portrait_MEX_Dionisio_Encina"
-			}
-		}
-		country_leader={
-			desc="POLITICS_DIONISIO_ENCINA_DESC"
-			ideology=stalinism
-			traits={ staunch_stalinist }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	MEX_heliodoro_charis={
-		name="Heliodoro Charis"
-		portraits={
-			army={
-				small="GFX_Portrait_South_America_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_South_America_Generic_land_1"
-			}
-		}
-		corps_commander={
-			traits={ infantry_leader }
-			skill=3
-			attack_skill=4
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=700
-		}
-	}
-	MEX_luis_farell={
-		name="Luis Farell"
-		advisor={
-			slot = air_chief
-			idea_token = MEX_luis_farell
-			picture = generic_air_europe_3
-
-			allowed = {
-				original_tag = MEX
-			}
-			
-			traits = { air_chief_ground_support_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		portraits={
-			army={
-				small="GFX_Portrait_South_America_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_South_America_Generic_land_1"
-			}
-		}
-		corps_commander={
-			traits={ war_hero }
-			skill=3
-			attack_skill=4
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=701
-		}
-	}
-	MEX_lázaro_cárdenas={
-		name="Lázaro Cárdenas"
-		portraits={
-			civilian={
-				large="GFX_Portrait_europe_generic_7"
-			}
-		}
-		field_marshal={
-			traits={ politically_connected }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=712
-		}
-		country_leader={
-			desc="POLITICS_LAZARO_CARDENAS_DESC"
-			ideology=conservatism
-			traits={ refounder_of_mexico }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	MEX_hernán_laborde={
-		name="Hernán Laborde"
-		portraits={
-			civilian={
-				large="GFX_Portrait_europe_generic_7"
-			}
-		}
-		country_leader={
-			desc="POLITICS_HERNAN_LABORDE_DESC"
-			ideology=leninism
-			traits={ devoted_trotskyist }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	MEX_saturnino_cedillo_martínez={
-		name="Saturnino Cedillo Martínez"
-		portraits={
-			army={
-				small="GFX_Portrait_South_America_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_South_America_Generic_land_1"
-			}
-		}
-		field_marshal={
-			traits={ brilliant_strategist logistics_wizard }
-			skill=3
-			attack_skill=3
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=4
-			legacy_id=708
-		}
-	}
-	MEX_plutarco_e._calles={
-		name="Plutarco E. Calles"
-		portraits={
-			army={
-				small="GFX_Portrait_South_America_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_South_America_Generic_land_1"
-			}
-		}
-		field_marshal={
-			traits={ inflexible_strategist }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=711
-		}
-	}
-	MEX_jesús_degollado_guízar={
-		name="Jesús Degollado Guízar"
-		portraits={
-			army={
-				small="GFX_Portrait_South_America_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_South_America_Generic_land_1"
-			}
-		}
-		corps_commander={
-			traits={ desert_fox trait_mountaineer }
-			skill=3
-			attack_skill=3
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=-1
-		}
-	}
-	MEX_josé_gonzalo_escobar={
-		name="José Gonzalo Escobar"
-		portraits={
-			army={
-				small="GFX_Portrait_South_America_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_South_America_Generic_land_1"
-			}
-		}
-		corps_commander={
-			traits={ trickster panzer_leader }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=709
-		}
-	}
-	MEX_pablo_gonzález_garza={
-		name="Pablo González Garza"
-		portraits={
-			army={
-				small="GFX_Portrait_South_America_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_South_America_Generic_land_1"
-			}
-		}
-		corps_commander={
-			traits={ harsh_leader }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=5
-			logistics_skill=2
-			legacy_id=710
-		}
-	}
-	MEX_gildardo_magaña={
-		name="Gildardo Magaña"
-		portraits={
-			army={
-				small="GFX_Portrait_South_America_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_South_America_Generic_land_1"
-			}
-		}
-		corps_commander={
-			traits={ media_personality }
-			skill=2
-			attack_skill=1
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=702
-		}
-	}
-	MEX_manuel_pérez_treviño={
-		name="Manuel Pérez Treviño"
-		portraits={
-			army={
-				small="GFX_Portrait_South_America_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_South_America_Generic_land_1"
-			}
-		}
-		corps_commander={
-			traits={ career_officer }
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=703
-		}
-	}
-	MEX_abelardo_l._rodríguez={
-		name="Abelardo L. Rodríguez"
-		portraits={
-			army={
-				small="GFX_Portrait_South_America_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_South_America_Generic_land_1"
-			}
-		}
-		corps_commander={
-			traits={ politically_connected }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=704
-		}
-	}
-	MEX_manuel_Ávila_camacho={
-		name="Manuel Ávila Camacho"
-		portraits={
-			army={
-				small="GFX_Portrait_South_America_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_South_America_Generic_land_1"
-			}
-		}
-		corps_commander={
-			traits={ politically_connected }
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=705
-		}
-	}
-	MEX_othón_p._blanco_núñez_de_cáceres={
-		name="Othón P. Blanco Núñez de Cáceres"
-		portraits={
-			army={
-				small="GFX_Portrait_South_America_Generic_navy_1_small"
-			}
-			army={
-				large="GFX_Portrait_South_America_Generic_navy_1"
-			}
-		}
-		navy_leader={
-			traits={ bold fleet_protector }
-			skill=4
-			attack_skill=4
-			defense_skill=4
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=706
-		}
-	}
-	MEX_heriberto_jara_corona={
-		name="Heriberto Jara Corona"
-		portraits={
-			army={
-				small="GFX_Portrait_South_America_Generic_navy_1_small"
-			}
-			army={
-				large="GFX_Portrait_South_America_Generic_navy_1"
-			}
-		}
-		navy_leader={
-			traits={ gentlemanly blockade_runner }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=707
-		}
-	}
-	MEX_vicente_lombardo = {
-		advisor={
-			slot = political_advisor
-			idea_token = MEX_vicente_lombardo
-			picture = generic_political_advisor_south_america_1
-
-			allowed = {
-				original_tag = MEX
-			}
-			
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_agricultural_credit_bank
-				}
-			}
-			
-			traits = { ambitious_union_boss }
-		}
-	}
-	MEX_jose_vasconcelos = {
-		advisor={
-			slot = political_advisor
-			idea_token = MEX_jose_vasconcelos
-			picture = generic_political_advisor_south_america_2
-
-			allowed = {
-				original_tag = MEX
-			}
-			
-			available = {
-			}
-			
-			traits = { syncretic_revanchist }
-		}
-	}
-	MEX_bartolome_garcia_correa = {
-		advisor={
-			slot = political_advisor
-			idea_token = MEX_bartolome_garcia_correa
-			picture = generic_political_advisor_south_america_3
-
-			allowed = {
-				original_tag = MEX
-			}
-			
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_exile_calles
-				}
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-			}
-			
-			traits = {
-				social_reformer
-			}
-		}
-	}
-	MEX_aaron_saenz = {
-		advisor={
-			slot = political_advisor
-			idea_token = MEX_aaron_saenz
-			picture = generic_political_advisor_south_america_4
-
-			allowed = {
-				original_tag = MEX
-			}
-			
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_jefe_maximo
-				}
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-			}
-			
-			traits = {
-				shadow_of_calles
-			}
-		}
-	}
-	MEX_eduardo_hay = {
-		advisor={
-			slot = political_advisor
-			idea_token = MEX_eduardo_hay
-		    cost = 100
-
-			picture = generic_political_advisor_south_america_5
-
-			allowed = {
-				original_tag = MEX
-			}
-			available = {
-			}
-
-			traits = { railroad_enthusiast }
-		}
-	}
-	MEX_luis_montes_de_oca = {
-		advisor={
-			slot = political_advisor
-			idea_token = MEX_luis_montes_de_oca
-			cost = 150
-
-			picture = generic_political_advisor_south_america_3
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_liberalize_the_banking_sector
-				}
-			}
-			
-			traits = { financial_expert }
-		}
-	}
-	MEX_pablo_gonzalez = {
-		advisor={
-			slot = political_advisor
-			idea_token = MEX_pablo_gonzalez
-			cost = 150
-			
-			picture = generic_political_advisor_south_america_4
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_triumph_over_the_cristeros
-				}
-			}
-			
-			traits = { prince_of_terror }
-		}
-	}
-	MEX_saturnino_cedillo = {
-		advisor={
-			slot = army_chief
-			idea_token = MEX_saturnino_cedillo	
-			picture = generic_army_europe_1
-			
-			cost = 150
-			
-			allowed = {
-				original_tag = MEX
-				has_dlc = "Man the Guns"
-			}
-			
-			available = {
-				has_completed_focus = MEX_focus_support_general_cedillo
-				NOT = {
-					has_government = communism
-				}
-			}
-			
-			traits = { army_chief_offensive_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	MEX_matias_santos_ramos = {
-		advisor={
-			slot = army_chief
-			idea_token = MEX_matias_santos_ramos
-			picture = generic_army_europe_4
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			traits = { army_chief_defensive_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}	
-	MEX_leon_trotsky = {
-		advisor={
-			slot = army_chief
-			idea_token = MEX_leon_trotsky
-			picture = generic_army_europe_4
-			
-			cost = 150
-			
-			visible = {
-			}
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			available = {
-			}
-			
-			traits = { red_army_organizer }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	MEX_gilberto_lemon = {
-		advisor={
-			slot = army_chief
-			idea_token = MEX_gilberto_lemon	
-			picture = generic_army_europe_5
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			traits = { army_chief_drill_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	MEX_antonio_cardenas_rodriguez = {
-		advisor={
-			slot = air_chief
-			idea_token = MEX_antonio_cardenas_rodriguez	
-			picture = generic_air_europe_2
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			traits = { air_air_combat_training_3 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	MEX_othon_blanco = {
-		advisor={
-			slot = navy_chief
-			idea_token = MEX_othon_blanco	
-			picture = generic_navy_europe_2
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			traits = { navy_fleet_logistics_3 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	MEX_heriberto_corona = {
-		advisor={
-			slot = navy_chief
-			idea_token = MEX_heriberto_corona	
-			picture = generic_army_europe_1
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			traits = { navy_chief_decisive_battle_1 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	MEX_jesus_garza_siller = {
-		advisor={
-			slot = high_command
-			idea_token = MEX_jesus_garza_siller	
-			ledger = air
-			
-			picture = generic_air_europe_1
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			
-			traits = { air_strategic_bombing_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	MEX_hector_meixueiro = {
-		advisor={
-			slot = high_command
-			idea_token = MEX_hector_meixueiro	
-			ledger = navy
-			
-			picture = generic_navy_europe_1
-
-			allowed = {
-				original_tag = MEX
-			}
-			
-			traits = { navy_naval_air_defense_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	MEX_pablo_m_valenzuela = {
-		advisor={
-			slot = high_command
-			idea_token = MEX_pablo_m_valenzuela	
-			ledger = army
-			
-			picture = generic_army_europe_3
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			traits = { army_regrouping_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	MEX_jose_gonzalo_escobar = {
-		advisor={
-			slot = high_command
-			idea_token = MEX_jose_gonzalo_escobar
-			ledger = army
-			
-			picture = generic_army_europe_2
-			
-			allowed = {
-				original_tag = MEX
-				has_dlc = "Man the Guns"
-			}
-			
-			available = {
-				has_completed_focus = MEX_focus_purge_the_bureaucracy
-			}
-
-			traits = { army_armored_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	MEX_abelardo_rodriguez = {
-		advisor={
-			slot = high_command
-			idea_token = MEX_abelardo_rodriguez
-			ledger = army
-			
-			picture = generic_army_europe_2
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			traits = { army_infantry_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	MEX_manuel_perez_trevino = {
-		advisor={
-			slot = theorist
-			idea_token = MEX_manuel_perez_trevino	
-			ledger = army
-			
-			picture = generic_army_europe_1
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			available = {
-			}
-			
-			cost = 150
-			
-			
-			
-			traits = { superior_firepower_expert }
-		}
-	}
-	MEX_enrique_estrada = {
-		advisor={
-			slot = theorist
-			idea_token = MEX_enrique_estrada
-			ledger = navy
-			
-            picture = generic_political_advisor_south_america_1
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			
-			
-			
-			traits = { naval_theorist }
-		}
-	}
-	MEX_agustin_olachea = {
-		advisor={
-			slot = theorist
-			idea_token = MEX_agustin_olachea
-			ledger = air
-		
-			picture = generic_air_europe_3
-
-			allowed = {
-				original_tag = MEX
-			}
-			modifier = {
-				air_strategic_bomber_bombing_factor = 0.1
-			}
-			traits = { USAcarpet_bomber }
-		}
-	}
-	MEX_manuel_avila = {
-		advisor={
-			slot = theorist_production
-			idea_token = MEX_manuel_avila
-			cost = 150
-
-			picture = generic_political_advisor_south_america_2
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			available = {
-			}
-			
-			traits = { war_industrialist }
-
-			modifier = {
-				mobilization_laws_cost_factor = -0.25
-			}
-		}
-	}
-	MEX_alberto_pani = {
-		advisor={
-			slot = theorist_production
-			idea_token = MEX_alberto_pani
-			cost = 150
-			
-			picture = generic_political_advisor_south_america_1
-			
-			allowed = {
-				original_tag = MEX
-			}
-			
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-				}
-			}
-			
-			traits = { captain_of_industry }
-		}
-	}
-}
+#characters={
+#	MEX_salvador_abascal={
+#		name="Salvador Abascal"
+#		portraits={
+#			civilian={
+#				large="GFX_Portrait_MEX_Salvador_Abascal"
+#			}
+#		}
+#		country_leader={
+#			desc="POLITICS_SALVADOR_ABASCAL_DESC"
+#			ideology=falangism
+#			traits={ fascist_militia_leader }
+#			expire="1965.1.1.1"
+#			id=-1
+#		}
+#	}
+#	MEX_adolfo_de_la_huerta={
+#		name="Adolfo de la Huerta"
+#		portraits={
+#			civilian={
+#				large="GFX_Portrait_MEX_Adolfo_de_la_Huerta"
+#			}
+#		}
+#		country_leader={
+#			desc="POLITICS_ADOLFO_DE_LA_HUERTA_DESC"
+#			ideology=moderatism
+#			expire="1965.1.1.1"
+#			id=-1
+#		}
+#	}
+#	MEX_dionisio_encina={
+#		name="Dionisio Encina"
+#		portraits={
+#			civilian={
+#				large="GFX_Portrait_MEX_Dionisio_Encina"
+#			}
+#		}
+#		country_leader={
+#			desc="POLITICS_DIONISIO_ENCINA_DESC"
+#			ideology=stalinism
+#			traits={ staunch_stalinist }
+#			expire="1965.1.1.1"
+#			id=-1
+#		}
+#	}
+#	MEX_heliodoro_charis={
+#		name="Heliodoro Charis"
+#		portraits={
+#			army={
+#				small="GFX_Portrait_South_America_Generic_land_1_small"
+#			}
+#			army={
+#				large="GFX_Portrait_South_America_Generic_land_1"
+#			}
+#		}
+#		corps_commander={
+#			traits={ infantry_leader }
+#			skill=3
+#			attack_skill=4
+#			defense_skill=4
+#			planning_skill=3
+#			logistics_skill=2
+#			legacy_id=700
+#		}
+#	}
+#	MEX_luis_farell={
+#		name="Luis Farell"
+#		advisor={
+#			slot = air_chief
+#			idea_token = MEX_luis_farell
+#			picture = generic_air_europe_3
+#
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			traits = { air_chief_ground_support_2 }
+#			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+#		portraits={
+#			army={
+#				small="GFX_Portrait_South_America_Generic_land_1_small"
+#			}
+#			army={
+#				large="GFX_Portrait_South_America_Generic_land_1"
+#			}
+#		}
+#		corps_commander={
+#			traits={ war_hero }
+#			skill=3
+#			attack_skill=4
+#			defense_skill=1
+#			planning_skill=2
+#			logistics_skill=3
+#			legacy_id=701
+#		}
+#	}
+#	MEX_lázaro_cárdenas={
+#		name="Lázaro Cárdenas"
+#		portraits={
+#			civilian={
+#				large="GFX_Portrait_europe_generic_7"
+#			}
+#		}
+#		field_marshal={
+#			traits={ politically_connected }
+#			skill=3
+#			attack_skill=3
+#			defense_skill=3
+#			planning_skill=3
+#			logistics_skill=3
+#			legacy_id=712
+#		}
+#		country_leader={
+#			desc="POLITICS_LAZARO_CARDENAS_DESC"
+#			ideology=conservatism
+#			traits={ refounder_of_mexico }
+#			expire="1965.1.1.1"
+#			id=-1
+#		}
+#	}
+#	MEX_hernán_laborde={
+#		name="Hernán Laborde"
+#		portraits={
+#			civilian={
+#				large="GFX_Portrait_europe_generic_7"
+#			}
+#		}
+#		country_leader={
+#			desc="POLITICS_HERNAN_LABORDE_DESC"
+#			ideology=leninism
+#			traits={ devoted_trotskyist }
+#			expire="1965.1.1.1"
+#			id=-1
+#		}
+#	}
+#	MEX_saturnino_cedillo_martínez={
+#		name="Saturnino Cedillo Martínez"
+#		portraits={
+#			army={
+#				small="GFX_Portrait_South_America_Generic_land_1_small"
+#			}
+#			army={
+#				large="GFX_Portrait_South_America_Generic_land_1"
+#			}
+#		}
+#		field_marshal={
+#			traits={ brilliant_strategist logistics_wizard }
+#			skill=3
+#			attack_skill=3
+#			defense_skill=4
+#			planning_skill=3
+#			logistics_skill=4
+#			legacy_id=708
+#		}
+#	}
+#	MEX_plutarco_e._calles={
+#		name="Plutarco E. Calles"
+#		portraits={
+#			army={
+#				small="GFX_Portrait_South_America_Generic_land_1_small"
+#			}
+#			army={
+#				large="GFX_Portrait_South_America_Generic_land_1"
+#			}
+#		}
+#		field_marshal={
+#			traits={ inflexible_strategist }
+#			skill=4
+#			attack_skill=3
+#			defense_skill=4
+#			planning_skill=3
+#			logistics_skill=3
+#			legacy_id=711
+#		}
+#	}
+#	MEX_jesús_degollado_guízar={
+#		name="Jesús Degollado Guízar"
+#		portraits={
+#			army={
+#				small="GFX_Portrait_South_America_Generic_land_1_small"
+#			}
+#			army={
+#				large="GFX_Portrait_South_America_Generic_land_1"
+#			}
+#		}
+#		corps_commander={
+#			traits={ desert_fox trait_mountaineer }
+#			skill=3
+#			attack_skill=3
+#			defense_skill=4
+#			planning_skill=3
+#			logistics_skill=2
+#			legacy_id=-1
+#		}
+#	}
+#	MEX_josé_gonzalo_escobar={
+#		name="José Gonzalo Escobar"
+#		portraits={
+#			army={
+#				small="GFX_Portrait_South_America_Generic_land_1_small"
+#			}
+#			army={
+#				large="GFX_Portrait_South_America_Generic_land_1"
+#			}
+#		}
+#		corps_commander={
+#			traits={ trickster panzer_leader }
+#			skill=3
+#			attack_skill=3
+#			defense_skill=3
+#			planning_skill=3
+#			logistics_skill=3
+#			legacy_id=709
+#		}
+#	}
+#	MEX_pablo_gonzález_garza={
+#		name="Pablo González Garza"
+#		portraits={
+#			army={
+#				small="GFX_Portrait_South_America_Generic_land_1_small"
+#			}
+#			army={
+#				large="GFX_Portrait_South_America_Generic_land_1"
+#			}
+#		}
+#		corps_commander={
+#			traits={ harsh_leader }
+#			skill=3
+#			attack_skill=3
+#			defense_skill=2
+#			planning_skill=5
+#			logistics_skill=2
+#			legacy_id=710
+#		}
+#	}
+#	MEX_gildardo_magaña={
+#		name="Gildardo Magaña"
+#		portraits={
+#			army={
+#				small="GFX_Portrait_South_America_Generic_land_1_small"
+#			}
+#			army={
+#				large="GFX_Portrait_South_America_Generic_land_1"
+#			}
+#		}
+#		corps_commander={
+#			traits={ media_personality }
+#			skill=2
+#			attack_skill=1
+#			defense_skill=1
+#			planning_skill=2
+#			logistics_skill=2
+#			legacy_id=702
+#		}
+#	}
+#	MEX_manuel_pérez_treviño={
+#		name="Manuel Pérez Treviño"
+#		portraits={
+#			army={
+#				small="GFX_Portrait_South_America_Generic_land_1_small"
+#			}
+#			army={
+#				large="GFX_Portrait_South_America_Generic_land_1"
+#			}
+#		}
+#		corps_commander={
+#			traits={ career_officer }
+#			skill=3
+#			attack_skill=2
+#			defense_skill=3
+#			planning_skill=2
+#			logistics_skill=3
+#			legacy_id=703
+#		}
+#	}
+#	MEX_abelardo_l._rodríguez={
+#		name="Abelardo L. Rodríguez"
+#		portraits={
+#			army={
+#				small="GFX_Portrait_South_America_Generic_land_1_small"
+#			}
+#			army={
+#				large="GFX_Portrait_South_America_Generic_land_1"
+#			}
+#		}
+#		corps_commander={
+#			traits={ politically_connected }
+#			skill=3
+#			attack_skill=3
+#			defense_skill=2
+#			planning_skill=3
+#			logistics_skill=2
+#			legacy_id=704
+#		}
+#	}
+#	MEX_manuel_Ávila_camacho={
+#		name="Manuel Ávila Camacho"
+#		portraits={
+#			army={
+#				small="GFX_Portrait_South_America_Generic_land_1_small"
+#			}
+#			army={
+#				large="GFX_Portrait_South_America_Generic_land_1"
+#			}
+#		}
+#		corps_commander={
+#			traits={ politically_connected }
+#			skill=3
+#			attack_skill=2
+#			defense_skill=2
+#			planning_skill=3
+#			logistics_skill=3
+#			legacy_id=705
+#		}
+#	}
+#	MEX_othón_p._blanco_núñez_de_cáceres={
+#		name="Othón P. Blanco Núñez de Cáceres"
+#		portraits={
+#			army={
+#				small="GFX_Portrait_South_America_Generic_navy_1_small"
+#			}
+#			army={
+#				large="GFX_Portrait_South_America_Generic_navy_1"
+#			}
+#		}
+#		navy_leader={
+#			traits={ bold fleet_protector }
+#			skill=4
+#			attack_skill=4
+#			defense_skill=4
+#			maneuvering_skill=1
+#			coordination_skill=1
+#			legacy_id=706
+#		}
+#	}
+#	MEX_heriberto_jara_corona={
+#		name="Heriberto Jara Corona"
+#		portraits={
+#			army={
+#				small="GFX_Portrait_South_America_Generic_navy_1_small"
+#			}
+#			army={
+#				large="GFX_Portrait_South_America_Generic_navy_1"
+#			}
+#		}
+#		navy_leader={
+#			traits={ gentlemanly blockade_runner }
+#			skill=3
+#			attack_skill=3
+#			defense_skill=3
+#			maneuvering_skill=1
+#			coordination_skill=1
+#			legacy_id=707
+#		}
+#	}
+#	MEX_vicente_lombardo = {
+#		advisor={
+#			slot = political_advisor
+#			idea_token = MEX_vicente_lombardo
+#			picture = generic_political_advisor_south_america_1
+#
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			available = {
+#				if = {
+#					limit = {
+#						has_dlc = "Man the Guns"
+#					}
+#					has_completed_focus = MEX_focus_agricultural_credit_bank
+#				}
+#			}
+#			
+#			traits = { ambitious_union_boss }
+#		}
+#	}
+#	MEX_jose_vasconcelos = {
+#		advisor={
+#			slot = political_advisor
+#			idea_token = MEX_jose_vasconcelos
+#			picture = generic_political_advisor_south_america_2
+#
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			available = {
+#			}
+#			
+#			traits = { syncretic_revanchist }
+#		}
+#	}
+#	MEX_bartolome_garcia_correa = {
+#		advisor={
+#			slot = political_advisor
+#			idea_token = MEX_bartolome_garcia_correa
+#			picture = generic_political_advisor_south_america_3
+#
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			available = {
+#				if = {
+#					limit = {
+#						has_dlc = "Man the Guns"
+#					}
+#					has_completed_focus = MEX_focus_exile_calles
+#				}
+#				if = {
+#					limit = { has_dlc = "Man the Guns" }	
+#					NOT = { has_autonomy_state = autonomy_supervised_state }
+#				}
+#			}
+#			
+#			traits = {
+#				social_reformer
+#			}
+#		}
+#	}
+#	MEX_aaron_saenz = {
+#		advisor={
+#			slot = political_advisor
+#			idea_token = MEX_aaron_saenz
+#			picture = generic_political_advisor_south_america_4
+#
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			available = {
+#				if = {
+#					limit = {
+#						has_dlc = "Man the Guns"
+#					}
+#					has_completed_focus = MEX_focus_jefe_maximo
+#				}
+#				if = {
+#					limit = { has_dlc = "Man the Guns" }	
+#					NOT = { has_autonomy_state = autonomy_supervised_state }
+#				}
+#			}
+#			
+#			traits = {
+#				shadow_of_calles
+#			}
+#		}
+#	}
+#	MEX_eduardo_hay = {
+#		advisor={
+#			slot = political_advisor
+#			idea_token = MEX_eduardo_hay
+#		    cost = 100
+#
+#			picture = generic_political_advisor_south_america_5
+#
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			available = {
+#			}
+#
+#			traits = { railroad_enthusiast }
+#		}
+#	}
+#	MEX_luis_montes_de_oca = {
+#		advisor={
+#			slot = political_advisor
+#			idea_token = MEX_luis_montes_de_oca
+#			cost = 150
+#
+#			picture = generic_political_advisor_south_america_3
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			available = {
+#				if = {
+#					limit = {
+#						has_dlc = "Man the Guns"
+#					}
+#					has_completed_focus = MEX_focus_liberalize_the_banking_sector
+#				}
+#			}
+#			
+#			traits = { financial_expert }
+#		}
+#	}
+#	MEX_pablo_gonzalez = {
+#		advisor={
+#			slot = political_advisor
+#			idea_token = MEX_pablo_gonzalez
+#			cost = 150
+#			
+#			picture = generic_political_advisor_south_america_4
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			available = {
+#				if = {
+#					limit = {
+#						has_dlc = "Man the Guns"
+#					}
+#					has_completed_focus = MEX_focus_triumph_over_the_cristeros
+#				}
+#			}
+#			
+#			traits = { prince_of_terror }
+#		}
+#	}
+#	MEX_saturnino_cedillo = {
+#		advisor={
+#			slot = army_chief
+#			idea_token = MEX_saturnino_cedillo	
+#			picture = generic_army_europe_1
+#			
+#			cost = 150
+#			
+#			allowed = {
+#				original_tag = MEX
+#				has_dlc = "Man the Guns"
+#			}
+#			
+#			available = {
+#				has_completed_focus = MEX_focus_support_general_cedillo
+#				NOT = {
+#					has_government = communism
+#				}
+#			}
+#			
+#			traits = { army_chief_offensive_2 }
+#			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+#	}
+#	MEX_matias_santos_ramos = {
+#		advisor={
+#			slot = army_chief
+#			idea_token = MEX_matias_santos_ramos
+#			picture = generic_army_europe_4
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			traits = { army_chief_defensive_2 }
+#			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+#	}	
+#	MEX_leon_trotsky = {
+#		advisor={
+#			slot = army_chief
+#			idea_token = MEX_leon_trotsky
+#			picture = generic_army_europe_4
+#			
+#			cost = 150
+#			
+#			visible = {
+#			}
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			available = {
+#			}
+#			
+#			traits = { red_army_organizer }
+#			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+#	}
+#	MEX_gilberto_lemon = {
+#		advisor={
+#			slot = army_chief
+#			idea_token = MEX_gilberto_lemon	
+#			picture = generic_army_europe_5
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			traits = { army_chief_drill_2 }
+#			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+#	}
+#	MEX_antonio_cardenas_rodriguez = {
+#		advisor={
+#			slot = air_chief
+#			idea_token = MEX_antonio_cardenas_rodriguez	
+#			picture = generic_air_europe_2
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			traits = { air_air_combat_training_3 }
+#			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+#	}
+#	MEX_othon_blanco = {
+#		advisor={
+#			slot = navy_chief
+#			idea_token = MEX_othon_blanco	
+#			picture = generic_navy_europe_2
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			traits = { navy_fleet_logistics_3 }
+#			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+#	}
+#	MEX_heriberto_corona = {
+#		advisor={
+#			slot = navy_chief
+#			idea_token = MEX_heriberto_corona	
+#			picture = generic_army_europe_1
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			traits = { navy_chief_decisive_battle_1 }
+#			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+#	}
+#	MEX_jesus_garza_siller = {
+#		advisor={
+#			slot = high_command
+#			idea_token = MEX_jesus_garza_siller	
+#			ledger = air
+#			
+#			picture = generic_air_europe_1
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			
+#			traits = { air_strategic_bombing_2 }
+#			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+#	}
+#	MEX_hector_meixueiro = {
+#		advisor={
+#			slot = high_command
+#			idea_token = MEX_hector_meixueiro	
+#			ledger = navy
+#			
+#			picture = generic_navy_europe_1
+#
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			traits = { navy_naval_air_defense_2 }
+#			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+#	}
+#	MEX_pablo_m_valenzuela = {
+#		advisor={
+#			slot = high_command
+#			idea_token = MEX_pablo_m_valenzuela	
+#			ledger = army
+#			
+#			picture = generic_army_europe_3
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			traits = { army_regrouping_2 }
+#			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+#	}
+#	MEX_jose_gonzalo_escobar = {
+#		advisor={
+#			slot = high_command
+#			idea_token = MEX_jose_gonzalo_escobar
+#			ledger = army
+#			
+#			picture = generic_army_europe_2
+#			
+#			allowed = {
+#				original_tag = MEX
+#				has_dlc = "Man the Guns"
+#			}
+#			
+#			available = {
+#				has_completed_focus = MEX_focus_purge_the_bureaucracy
+#			}
+#
+#			traits = { army_armored_2 }
+#			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+#	}
+#	MEX_abelardo_rodriguez = {
+#		advisor={
+#			slot = high_command
+#			idea_token = MEX_abelardo_rodriguez
+#			ledger = army
+#			
+#			picture = generic_army_europe_2
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			traits = { army_infantry_2 }
+#			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+#	}
+#	MEX_manuel_perez_trevino = {
+#		advisor={
+#			slot = theorist
+#			idea_token = MEX_manuel_perez_trevino	
+#			ledger = army
+#			
+#			picture = generic_army_europe_1
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			available = {
+#			}
+#			
+#			cost = 150
+#			
+#			
+#			
+#			traits = { superior_firepower_expert }
+#		}
+#	}
+#	MEX_enrique_estrada = {
+#		advisor={
+#			slot = theorist
+#			idea_token = MEX_enrique_estrada
+#			ledger = navy
+#			
+#            picture = generic_political_advisor_south_america_1
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			
+#			
+#			
+#			traits = { naval_theorist }
+#		}
+#	}
+#	MEX_agustin_olachea = {
+#		advisor={
+#			slot = theorist
+#			idea_token = MEX_agustin_olachea
+#			ledger = air
+#		
+#			picture = generic_air_europe_3
+#
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			modifier = {
+#				air_strategic_bomber_bombing_factor = 0.1
+#			}
+#			traits = { USAcarpet_bomber }
+#		}
+#	}
+#	MEX_manuel_avila = {
+#		advisor={
+#			slot = theorist_production
+#			idea_token = MEX_manuel_avila
+#			cost = 150
+#
+#			picture = generic_political_advisor_south_america_2
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			available = {
+#			}
+#			
+#			traits = { war_industrialist }
+#
+#			modifier = {
+#				mobilization_laws_cost_factor = -0.25
+#			}
+#		}
+#	}
+#	MEX_alberto_pani = {
+#		advisor={
+#			slot = theorist_production
+#			idea_token = MEX_alberto_pani
+#			cost = 150
+#			
+#			picture = generic_political_advisor_south_america_1
+#			
+#			allowed = {
+#				original_tag = MEX
+#			}
+#			
+#			available = {
+#				if = {
+#					limit = {
+#						has_dlc = "Man the Guns"
+#					}
+#				}
+#			}
+#			
+#			traits = { captain_of_industry }
+#		}
+#	}
+#}
