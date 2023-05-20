@@ -2039,227 +2039,227 @@ technology = construction4
 	##### Navy SECTION #####
 	########################
 	
-#	focus = {
-#		id = SPR_navy_funds
-#		icon = GFX_goal_generic_construct_naval_dockyard
-#		x = 8
-#		y = 0
-#		cost = 5
-#
-#		available_if_capitulated = yes
-#
-#		available = {
-#		    has_completed_focus = SPA_unify_the_nationalist_front
-#			any_state = {
-#				is_coastal = yes
-#				is_controlled_by = SPR
-#			}
-#		}
-#
-#		complete_tooltip = {
-#			add_extra_state_shared_building_slots = 2
-#			add_building_construction = {
-#				type = dockyard
-#				level = 2
-#				instant_build = yes
-#			}
-#			navy_experience = 25
-#			
-#		}
-#		
-#		completion_reward = {
-#		        navy_experience = 25
-#				792 = {
-#					add_extra_state_shared_building_slots = 2
-#					add_building_construction = {
-#						type = dockyard
-#						level = 2
-#						instant_build = yes
-#					}
-#				}
-#				
-#			}
-#			
-#	}
-#	
-#	focus = {
-#		id = SPR_navy_doc_1
-#		icon = GFX_goal_generic_navy_battleship
-#		prerequisite = { focus = SPR_navy_funds }
-#		mutually_exclusive = { focus = SPR_navy_doc_2 }
-#		x = 7
-#		y = 1
-#		cost = 5
-#
-#		available_if_capitulated = yes
-#
-#		completion_reward = {
-#			add_doctrine_cost_reduction = {
-#				cost_reduction = 0.50
-#				uses = 2
-#				category = fleet_in_being_tree
-#			}
-#		}
-#	}
-#	
-#	focus = {
-#		id = SPR_navy_doc_2
-#		icon = GFX_goal_generic_wolf_pack
-#		prerequisite = { focus = SPR_navy_funds }
-#		mutually_exclusive = { focus = SPR_navy_doc_1 }
-#		x = 9
-#		y = 1
-#		cost = 5
-#
-#		available_if_capitulated = yes
-#
-#		completion_reward = {
-#			add_doctrine_cost_reduction = {
-#				cost_reduction = 0.50
-#				uses = 2
-#				category = trade_interdiction_tree
-#			}
-#		}
-#	}
-#		
-#	focus = {
-#		id = SPR_submarine_effort
-#		icon = GFX_goal_generic_navy_submarine
-#		prerequisite = { focus = SPR_navy_doc_1 focus = SPR_navy_doc_2}
-#		x = 9
-#		y = 2
-#		cost = 5
-#
-#		available_if_capitulated = yes
-#
-#
-#		ai_will_do = {
-#			factor = 1
-#			modifier = {
-#				factor = 0
-#				all_owned_state = {
-#					OR = {
-#						is_coastal = no
-#						dockyard < 1
-#					}
-#				}
-#			}
-#		}
-#
-#		completion_reward = {
-#			add_tech_bonus = {
-#				name = naval_doctrine_bonus
-#				bonus = 1
-#				uses = 1
-#				category = ss_tech
-#			}
-#		}
-#	}
-#	
-#	
-#	focus = {
-#		id = SPR_destroyer_effort
-#		icon = GFX_goal_generic_navy_doctrines_tactics
-#		prerequisite = { focus = SPR_navy_doc_1 focus = SPR_navy_doc_2}
-#		x = 7
-#		y = 2
-#		cost = 5
-#
-#		available_if_capitulated = yes
-#
-#
-#		ai_will_do = {
-#			factor = 1
-#			modifier = {
-#				factor = 0
-#				all_owned_state = {
-#					OR = {
-#						is_coastal = no
-#						dockyard < 1
-#					}
-#				}
-#			}
-#		}
-#
-#		completion_reward = {
-#			add_tech_bonus = {
-#				name = naval_doctrine_bonus
-#				bonus = 1
-#				uses = 1
-#				category = dd_tech
-#			}
-#		}
-#	}
-#	
-#	focus = {
-#		id = SPR_big_ship_effort
-#		icon = GFX_goal_generic_navy_battleship
-#		prerequisite = { focus = SPR_destroyer_effort focus = SPR_submarine_effort }
-#		x = 7
-#		y = 3
-#		cost = 5
-#
-#		available_if_capitulated = yes
-#
-#
-#		ai_will_do = {
-#			factor = 1
-#			modifier = {
-#				factor = 0
-#				all_owned_state = {
-#					OR = {
-#						is_coastal = no
-#						dockyard < 1
-#					}
-#				}
-#			}
-#		}
-#
-#		completion_reward = {
-#			add_tech_bonus = {
-#				name = naval_doctrine_bonus
-#				bonus = 1
-#				uses = 1
-#				category = bc_tech
-#				category = bb_tech
-#				category = ca_tech
-#				category = cl_tech
-#			}
-#		}
-#	}
-#	
-#	focus = {
-#		id = SPR_naval_doctrine_1
-#		icon = GFX_goal_generic_navy_cruiser
-#		prerequisite = { focus = SPR_destroyer_effort focus = SPR_submarine_effort }
-#		x = 9
-#		y = 3
-#		cost = 5
-#
-#		available_if_capitulated = yes
-#
-#
-#		ai_will_do = {
-#			factor = 1
-#			modifier = {
-#				factor = 0
-#				all_owned_state = {
-#					OR = {
-#						is_coastal = no
-#						dockyard < 1
-#					}
-#				}
-#			}
-#		}
-#
-#		completion_reward = {
-#			add_doctrine_cost_reduction = {
-#				cost_reduction = 0.50
-#				uses = 1
-#				category = naval_doctrine
-#			}
-#		}
-#	}
+	focus = {
+		id = SPR_navy_funds
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 8
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+
+		available = {
+		    has_completed_focus = SPA_unify_the_nationalist_front
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = SPR
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+			navy_experience = 25
+			
+		}
+		
+		completion_reward = {
+		        navy_experience = 25
+				792 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				
+			}
+			
+	}
+	
+	focus = {
+		id = SPR_navy_doc_1
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SPR_navy_funds }
+		mutually_exclusive = { focus = SPR_navy_doc_2 }
+		x = 7
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.50
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+	
+	focus = {
+		id = SPR_navy_doc_2
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = SPR_navy_funds }
+		mutually_exclusive = { focus = SPR_navy_doc_1 }
+		x = 9
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.50
+				uses = 2
+				category = trade_interdiction_tree
+			}
+		}
+	}
+		
+	focus = {
+		id = SPR_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SPR_navy_doc_1 focus = SPR_navy_doc_2}
+		x = 9
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = SPR_destroyer_effort
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = SPR_navy_doc_1 focus = SPR_navy_doc_2}
+		x = 7
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = SPR_big_ship_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SPR_destroyer_effort focus = SPR_submarine_effort }
+		x = 7
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = ca_tech
+				category = cl_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = SPR_naval_doctrine_1
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SPR_destroyer_effort focus = SPR_submarine_effort }
+		x = 9
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.50
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
 	
 	############################
 	##### AIRFORCE SECTION #####
@@ -2504,6 +2504,69 @@ technology = construction4
 				category = rocketry
 			}
 			#1x50% research to Rockets and Jet Engine Research
+		}
+	}
+	
+	#######################
+	### War Preparation ###
+	#######################
+	
+	focus = {
+		id = SPR_join_the_axis
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		x = 18
+		y = 0
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+        
+		available  = {
+			controls_state = 112
+			GER  = { has_war_with = ENG }
+			NOT = { has_war_with = GER }
+			date > 1940.8.1
+		}
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			remove_ideas = SPR_prepare_for_war
+			custom_effect_tooltip = salo_warning
+			add_war_support = 0.05
+			GER = {
+				country_event = generic.2
+				}	
+			SPR = {
+				declare_war_on = {
+					target = ENG
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = CAN
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = SAF
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = FRA
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = AST
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = RAJ
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = NZL
+					type = annex_everything
+				}
+		    }		
 		}
 	}
 }
