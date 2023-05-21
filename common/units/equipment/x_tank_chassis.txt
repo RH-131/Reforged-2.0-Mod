@@ -124,6 +124,7 @@ duplicate_archetypes = {
 		type = { armor anti_tank }
 		for_each = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
+			hardness = { set = 0.8 }
 		}
 	}
 
@@ -2293,8 +2294,9 @@ equipments = {
 		reliability = 0.58
 
 		#Defensive Abilities
+		hardness = 0.85
 		defense = 12
-		breakthrough = 49
+		breakthrough = 44
 		armor_value = 70
 		hardness = 0.9
 
@@ -2327,8 +2329,9 @@ equipments = {
 		reliability = 0.61
 
 		#Defensive Abilities
+		hardness = 0.85
 		defense = 15
-		breakthrough = 61
+		breakthrough = 56
 		armor_value = 85
 
 		#Offensive Abilities
@@ -2360,8 +2363,9 @@ equipments = {
 		reliability = 0.63
 
 		#Defensive Abilities
+		hardness = 0.85
 		defense = 17
-		breakthrough = 69
+		breakthrough = 64
 		armor_value = 95
 		
 		fuel_consumption = 4.8
@@ -2393,8 +2397,9 @@ equipments = {
 		reliability = 0.65
 
 		#Defensive Abilities
+		hardness = 0.85
 		defense = 19
-		breakthrough = 77
+		breakthrough = 72
 		armor_value = 105
 		
 		fuel_consumption = 5.0
@@ -2426,8 +2431,9 @@ equipments = {
 		reliability = 0.66
 
 		#Defensive Abilities
+		hardness = 0.85
 		defense = 20
-		breakthrough = 81
+		breakthrough = 76
 		armor_value = 110
 		
 		fuel_consumption = 5.2
@@ -2459,8 +2465,9 @@ equipments = {
 		reliability = 0.67
 
 		#Defensive Abilities
+		hardness = 0.85
 		defense = 21
-		breakthrough = 85
+		breakthrough = 80
 		armor_value = 115
 		
 		fuel_consumption = 5.4
@@ -2492,8 +2499,9 @@ equipments = {
 		reliability = 0.68
 
 		#Defensive Abilities
+		hardness = 0.85
 		defense = 22
-		breakthrough = 89
+		breakthrough = 84
 		armor_value = 120
 		
 		fuel_consumption = 5.6
@@ -2523,8 +2531,9 @@ equipments = {
 		reliability = 0.69
 
 		#Defensive Abilities
+		hardness = 0.85
 		defense = 23
-		breakthrough = 93
+		breakthrough = 88
 		armor_value = 125
 		fuel_consumption = 5.8
 
@@ -2554,9 +2563,11 @@ equipments = {
 		maximum_speed = 6.8
 		reliability = 0.7
 		fuel_consumption = 6.0
+		
 		#Defensive Abilities
+		hardness = 0.85
 		defense = 24
-		breakthrough = 97
+		breakthrough = 92
 		armor_value = 130
 		
 
@@ -3039,7 +3050,7 @@ equipments = {
 		#Defensive Abilities
 		defense = 11
 		breakthrough = 50
-		hardness = 0.7
+		hardness = 0.75
 		armor_value = 50
 
 		#Offensive Abilities
@@ -3081,7 +3092,7 @@ equipments = {
 		#Defensive Abilities
 		defense = 14
 		breakthrough = 58
-		hardness = 0.7
+		hardness = 0.75
 		armor_value = 60
 
 		#Offensive Abilities
@@ -4045,7 +4056,7 @@ equipments = {
 		#Defensive Abilities
 		defense = 6
 		breakthrough = 36
-		hardness = 0.95
+		hardness = 0.85
 		armor_value = 70
 
 		#Offensive Abilities
@@ -4089,6 +4100,7 @@ equipments = {
 		maximum_speed = 6
 
 		#Defensive Abilities
+		hardness = 0.85
 		defense = 8
 		breakthrough = 52
 		armor_value = 110
@@ -4121,6 +4133,7 @@ equipments = {
 		maximum_speed = 6
 
 		#Defensive Abilities
+		hardness = 0.85
 		defense = 9
 		breakthrough = 67
 		armor_value = 130
@@ -4271,7 +4284,7 @@ equipments = {
 		#Defensive Abilities
 		defense = 4
 		breakthrough = 1
-		hardness = 0.95
+		hardness = 0.80
 		armor_value = 70
 
 		#Offensive Abilities
