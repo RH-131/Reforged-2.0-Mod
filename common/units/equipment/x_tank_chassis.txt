@@ -61,7 +61,7 @@ duplicate_archetypes = {
 		type = { armor anti_air }
 		for_each = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
-			hardness = { set = 0.65 }
+			hardness = { set = 0.70 }
 		}
 	}
 
@@ -70,7 +70,7 @@ duplicate_archetypes = {
 		type = { armor artillery }
 		for_each = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
-			hardness = { set = 0.65 }
+			hardness = { set = 0.70 }
 		}
 	}
 
@@ -79,6 +79,7 @@ duplicate_archetypes = {
 		type = { armor anti_tank }
 		for_each = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
+			hardness = { set = 0.75 }
 		}
 	}
 
@@ -87,7 +88,7 @@ duplicate_archetypes = {
 		type = { armor amphibious }
 		for_each = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
-			hardness = { set = 0.7 }
+			hardness = { set = 0.75 }
 		}
 	}
 
@@ -2831,7 +2832,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 7.9
-		hard_attack = 42
+		hard_attack = 50
 		ap_attack = 144
 		air_attack = 0
 		
@@ -2867,7 +2868,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 8.5
-		hard_attack = 48
+		hard_attack = 56
 		ap_attack = 154
 		air_attack = 0
 
@@ -2899,7 +2900,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 8.5
-		hard_attack = 51
+		hard_attack = 59
 		ap_attack = 159
 		air_attack = 0
 
@@ -2935,7 +2936,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 9.1
-		hard_attack = 54
+		hard_attack = 62
 		ap_attack = 164
 
 		lend_lease_cost = 12
@@ -2970,7 +2971,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 9.4
-		hard_attack = 57
+		hard_attack = 65
 		ap_attack = 169
 		air_attack = 0 #0
 
@@ -3007,7 +3008,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 9.7
-		hard_attack = 60
+		hard_attack = 68
 		ap_attack = 174
 
 		lend_lease_cost = 12
@@ -3054,7 +3055,7 @@ equipments = {
 		armor_value = 50
 
 		#Offensive Abilities
-		soft_attack = 35
+		soft_attack = 37
 		hard_attack = 20
 		ap_attack = 50
 		air_attack = 0
@@ -3096,7 +3097,7 @@ equipments = {
 		armor_value = 60
 
 		#Offensive Abilities
-		soft_attack = 40
+		soft_attack = 42
 		hard_attack = 25
 		ap_attack = 60
 		air_attack = 0	
