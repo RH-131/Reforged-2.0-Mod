@@ -2777,36 +2777,45 @@ focus_tree = {
 					level = 1
 					instant_build = yes 
 				}
-			} 
-			add_ideas = TUR_rare_metal_trade_ger
-			TUR = { 
-				add_ideas = TUR_rare_metal_trade
-			}	
-			diplomatic_relation = { country = TUR relation = non_aggression_pact }	
-			if = {
-				limit = {
-					GER = { is_in_faction_with = HUN }
-				}
-				HUN = {
-					diplomatic_relation = { country = TUR relation = non_aggression_pact }		
-			    }	
 			}
-			if = {
+			every_state = {
 				limit = {
-					GER = { is_in_faction_with = ROM }
+					OR = {
+						is_core_of = YUG 
+						is_core_of = GRE
+					}
 				}
-				ROM = {
-					diplomatic_relation = { country = TUR relation = non_aggression_pact }		
-			    }	
+				add_dynamic_modifier = { modifier = GER_balkan_resource_modifier }
 			}
-			if = {
-				limit = {
-					GER = { is_in_faction_with = ITA }
-				}
-				ITA = {
-					diplomatic_relation = { country = TUR relation = non_aggression_pact }		
-			    }	
-			}
+#			add_ideas = TUR_rare_metal_trade_ger
+#			TUR = { 
+#				add_ideas = TUR_rare_metal_trade
+#			}	
+#			diplomatic_relation = { country = TUR relation = non_aggression_pact }	
+#			if = {
+#				limit = {
+#					GER = { is_in_faction_with = HUN }
+#				}
+#				HUN = {
+#					diplomatic_relation = { country = TUR relation = non_aggression_pact }		
+#			    }	
+#			}
+#			if = {
+#				limit = {
+#					GER = { is_in_faction_with = ROM }
+#				}
+#				ROM = {
+#					diplomatic_relation = { country = TUR relation = non_aggression_pact }		
+#			    }	
+#			}
+#			if = {
+#				limit = {
+#					GER = { is_in_faction_with = ITA }
+#				}
+#				ITA = {
+#					diplomatic_relation = { country = TUR relation = non_aggression_pact }		
+#			    }	
+#			}
 			add_political_power = -100			
 		}
 	}		
