@@ -472,3 +472,42 @@ adjacency_rule =
 	icon = 10904
 	offset = { 2 0 12 }
 }
+
+#Strait of the Red Sea
+adjacency_rule = {
+	name = "RED_SEA"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 5074 8124 }
+		
+	icon = 5074
+	offset = { -20 0 -20 }
+}
