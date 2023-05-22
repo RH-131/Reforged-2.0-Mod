@@ -469,15 +469,17 @@ country_event = {
 	trigger = {
 		tag = ITA
 		has_war = yes 
-		OR = {
-			ENG = { 
+		AND = {
+			ENG = {
 			controls_state = 271
-			controls_state = 450 
+			controls_state = 450
 			}
+			OR = {
 			any_other_country = {
 			is_in_faction_with = ENG
 			controls_state = 271
 			controls_state = 450
+			}
 			}
 		}			
 	}
