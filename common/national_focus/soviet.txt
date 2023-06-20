@@ -64,7 +64,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_expand_the_fleet_commands
-		icon = GFX_goal_generic_wolf_pack
+		icon = GFX_Nora_ExpandNavalCommand
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = 43
 		y = 0
@@ -161,7 +161,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_marine_divisions
-		icon = GFX_goal_generic_amphibious_assault
+		icon = GFX_Nora_NavalInfantry
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = 0
 		y = 1
@@ -295,7 +295,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_capital_ship_focus
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_Nora_SovetskySoyuz
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	 	mutually_exclusive = { focus = SOV_carrier_focus }
 	 	prerequisite = { focus = SOV_the_old_school }
@@ -387,7 +387,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_carrier_focus
-		icon = GFX_goal_generic_navy_carrier
+		icon = GFX_Nora_Project72
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	 	mutually_exclusive = { focus = SOV_capital_ship_focus }
 	 	prerequisite = { focus = SOV_the_old_school }
