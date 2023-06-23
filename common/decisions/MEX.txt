@@ -1,574 +1,574 @@
 # Category for Mexican military issues 
-#MEX_category_military_issues = {
-#
-#	# Decision to send support to the communists in the Spanish Civil War
-#	
-#	develop_mexico_rubber_plantations = { #277
-#		
-#		icon = rubber
-#
-#		allowed = {
-#
-#		}
-#
-#		available = {
-#			owns_state = 277
-#			controls_state = 277
-#			num_of_civilian_factories_available_for_projects > 1
-#		}
-#
-#		highlight_states = {
-#			highlight_state_targets = {
-#				state = 277 
-#			} 
-#		}
-#
-#		visible = {
-#			owns_state = 277
-#			controls_state = 277
-#			277 = {
-#				NOT = {
-#					has_state_flag = mexico_rubber_developed
-#				}
-#			}
-#		}
-#
-#		fire_only_once = yes
-#
-#		cost = 25
-#		days_remove = 60
-#
-#		modifier = {
-#			civilian_factory_use = 2
-#		}
-#
-#		remove_effect = {
-#			277 = {
-#				set_state_flag = mexico_rubber_developed
-#			}
-#			277 = {
-#				add_resource = {
-#					type = rubber
-#					amount = 3
-#				}
-#			}
-#		}
-#
-#		ai_will_do = {
-#			factor = 1
-#		}
-#	}
-#	develop_mexico_rubber_plantations_2 = { #277
-#		
-#		icon = rubber
-#
-#		allowed = {
-#
-#		}
-#
-#		available = {
-#			owns_state = 277
-#			controls_state = 277
-#			num_of_civilian_factories_available_for_projects > 3
-#		}
-#
-#		highlight_states = {
-#			highlight_state_targets = {
-#				state = 277 
-#			} 
-#		}
-#
-#		visible = {
-#			owns_state = 277
-#			controls_state = 277
-#			277 = {
-#				has_state_flag = mexico_rubber_developed
-#			}
-#			277 = {
-#				NOT = {
-#					has_state_flag = mexico_rubber_developed_2
-#				}
-#			}
-#		}
-#
-#		fire_only_once = yes
-#
-#		cost = 25
-#		days_remove = 60
-#
-#		modifier = {
-#			civilian_factory_use = 4
-#		}
-#
-#		ai_will_do = {
-#			factor = 1
-#		}
-#
-#		remove_effect = {
-#			277 = {
-#				set_state_flag = mexico_rubber_developed_2
-#			}
-#			277 = {
-#				add_resource = {
-#					type = rubber
-#					amount = 5
-#				}
-#			}
-#		}
-#	}
-#	MEX_decision_support_spanish_loyalists = {
-#	
-#		icon = generic_nationalism
-#		
-#		fire_only_once = yes
-#
-#		fixed_random_seed = no
-#		
-#		days_remove = 7
-#
-#		visible = {
-#		    has_completed_focus = MEX_focus_support_spains_loyalists
-#		}
-#		
-#		available = {
-#			has_completed_focus = MEX_focus_support_spains_loyalists
-#			has_global_flag = spanish_civil_war
-#
-#			has_equipment = {
-#				convoy > 2
-#			}
-#			
-#			has_equipment = {
-#				infantry_equipment > 249
-#			}
-#		}
-#
-#		modifier = {
-#			
-#		}
-#		
-#		complete_effect = {
-#			add_equipment_to_stockpile = {
-#				type = convoy_1
-#				amount = -3
-#			}
-#			add_equipment_to_stockpile = {
-#				type = infantry_equipment_0
-#				amount = -250
-#			}			
-#		}
-#
-#		remove_effect = {
-#			random_list = {
-#				60 = { # Shipment gets through
-#					army_experience = 20
-#					add_equipment_to_stockpile = {
-#						type = convoy_1
-#						amount = 3
-#					}
-#					every_country = {
-#						limit = {
-#							original_tag = SPR
-#							has_government = communism
-#						}
-#						country_event = { id = mexico.50 }
-#					}
-#				}
-#				40 = { # Sunk by Italians
-#					navy_experience = 25
-#					country_event = { id = mexico.51 }
-#				}
-#			}
-#		}
-#		
-#		ai_will_do = {
-#			factor = 1
-#		}
-#	}
-#
-#	# Decision to send support to the fascists in the Spanish Civil War
-#
-#	MEX_decision_support_spanish_fascists = {
-#	
-#		icon = generic_nationalism
-#		
-#		fire_only_once = yes
-#		
-#		fixed_random_seed = no
-#
-#		days_remove = 7
-#
-#		visible = {
-#		    has_completed_focus = MEX_focus_falangist_veterans
-#		}
-#		
-#		available = {
-#			has_completed_focus = MEX_focus_falangist_veterans
-#			has_global_flag = spanish_civil_war
-#			has_equipment = {
-#				convoy > 2
-#			}
-#			
-#			has_equipment = {
-#				infantry_equipment > 249
-#			}
-#		}
-#
-#		modifier = {
-#			
-#		}
-#		
-#		complete_effect = {
-#			add_equipment_to_stockpile = {
-#				type = convoy_1
-#				amount = -3
-#			}
-#			add_equipment_to_stockpile = {
-#				type = infantry_equipment_0
-#				amount = -250
-#			}			
-#		}
-#
-#		remove_effect = {
-#			random_list = {
-#				95 = { # Shipment gets through
-#					army_experience = 20
-#					add_equipment_to_stockpile = {
-#						type = convoy_1
-#						amount = 3
-#					}
-#					every_country = {
-#						limit = {
-#							original_tag = SPR
-#							has_government = fascism
-#						}
-#						country_event = { id = mexico.50 }
-#					}
-#				}
-#				5 = { # Sunk by loyalists
-#					navy_experience = 25
-#					country_event = { id = mexico.51 }
-#				}
-#			}
-#		}
-#		
-#		ai_will_do = {
-#			factor = 1
-#		}
-#	}
-#
-#	MEX_decision_coastal_defence_plan = {
-#	
-#		icon = generic_operation
-#		
-#		available = {
-#			has_defensive_war = yes
-#		}
-#		
-#		visible = {
-#		}
-#		
-#		ai_will_do = {
-#			factor = 1
-#		}
-#		
-#		fire_only_once = yes
-#		
-#		days_remove = 180
-#		
-#		modifier = {
-#			army_core_attack_factor = 0.15
-#			army_core_defence_factor = 0.15
-#		}
-#	}
-#
-#}
-#
-## Category related to the Catholic Church in Mexico
-#
-#MEX_category_church_power = {
-#
-#	MEX_decision_transfer_lands_to_church = {
-#	
-#		icon = generic_operation
-#		
-#		fire_only_once = no
-#		
-#		days_remove = 90
-#		
-#		visible = {
-#			original_tag = MEX
-#		}
-#		
-#		available = {
-#			has_completed_focus = MEX_focus_antidisestablishmentarianism
-#			NOT = { has_idea = MEX_church_power_5 }
-#
-#		}
-#
-#		cost = 75
-#		
-#		complete_effect = {
-#			MEX_increase_church_power = yes		
-#		}
-#		
-#		ai_will_do = {
-#			factor = 5
-#		}
-#	}
-#	
-#	MEX_decision_nationalize_church_lands = {
-#	
-#		icon = generic_scorched_earth
-#		
-#		fire_only_once = no
-#		
-#		days_remove = 90
-#		
-#		visible = {
-#			original_tag = MEX
-#		}
-#		
-#		available = {
-#			NOT = { has_idea = MEX_church_power_1 }
-#		}
-#
-#		cost = 75
-#		
-#		complete_effect = {
-#			MEX_decrease_church_power = yes
-#		}
-#
-#		ai_will_do = {
-#			factor = 5
-#		}
-#	}
-#	
-#	MEX_decision_pardon_cristero_fighter = {
-#	
-#		icon = generic_army_support
-#		
-#		fire_only_once = no
-#		
-#		days_remove = 45
-#		
-#		visible = {
-#			original_tag = MEX
-#		}
-#		
-#		available = {
-#			has_war_support < 0.95
-#			has_completed_focus = MEX_focus_rewrite_the_constitution
-#			OR = {
-#				has_idea = MEX_church_power_4
-#				has_idea = MEX_church_power_5
-#			}
-#		}
-#
-#		cost = 75
-#		
-#		remove_effect = {
-#			add_war_support = 0.02
-#			army_experience = 10
-#		}
-#
-#		ai_will_do = {
-#			factor = 0
-#			modifier = {
-#				add = 1
-#				has_war_support < 0.6
-#				date > 1940.1.1
-#			}
-#		}
-#	}
-#	
-#	MEX_decision_assassinate_cristero_traitor = {
-#	
-#		icon = generic_prepare_civil_war
-#		
-#		fire_only_once = no
-#		
-#		days_remove = 45
-#		
-#		visible = {
-#			original_tag = MEX
-#		}
-#		
-#		available = {
-#			has_war_support < 0.95
-#			OR = {
-#				has_idea = MEX_church_power_1
-#				has_idea = MEX_church_power_2
-#			}
-#		}
-#
-#		cost = 75
-#		
-#		remove_effect = {
-#			add_war_support = 0.02
-#			army_experience = 10
-#		}
-#
-#		ai_will_do = {
-#			factor = 0
-#			modifier = {
-#				add = 1
-#				has_war_support < 0.6
-#				date > 1940.1.1
-#			}
-#		}
-#	}
-#	
-#	MEX_decision_attend_public_mass = {
-#	
-#		icon = generic_nationalism
-#		
-#		fire_only_once = no
-#		
-#		days_remove = 45
-#		
-#		visible = {
-#			original_tag = MEX
-#		}
-#		
-#		available = {
-#			has_stability < 0.95
-#			has_completed_focus = MEX_focus_rewrite_the_constitution
-#			OR = {
-#				has_idea = MEX_church_power_4
-#				has_idea = MEX_church_power_5
-#			}
-#		}
-#
-#		cost = 75
-#		
-#		remove_effect = {
-#			add_stability = 0.03
-#		}
-#
-#		ai_will_do = {
-#			factor = 0
-#			modifier = {
-#				add = 1
-#				has_stability < 0.6
-#				date > 1940.1.1
-#			}
-#		}
-#	}
-#
-#	MEX_decision_prosecute_clergyman = {
-#	
-#		icon = oppression
-#		
-#		fire_only_once = no
-#		
-#		days_remove = 45
-#		
-#		visible = {
-#			original_tag = MEX
-#		}
-#		
-#		available = {
-#			has_stability < 0.95
-#			OR = {
-#				has_idea = MEX_church_power_1
-#				has_idea = MEX_church_power_2
-#			}
-#		}
-#
-#		cost = 75
-#		
-#		remove_effect = {
-#			add_stability = 0.03
-#		}
-#
-#		ai_will_do = {
-#			factor = 0
-#			modifier = {
-#				add = 1
-#				has_stability < 0.6
-#				date > 1940.1.1
-#			}
-#		}
-#	}
-#	
-#	MEX_decision_reconciliation_committee = {
-#	
-#		icon = generic_political_discourse
-#		
-#		fire_only_once = no
-#		
-#		days_remove = 90
-#		
-#		visible = {
-#			original_tag = MEX
-#		}
-#		
-#		available = {
-#			has_war_support > 0.1
-#			has_stability < 0.95
-#			NOT = {
-#				OR = {
-#					has_idea = MEX_church_power_5
-#					has_idea = MEX_church_power_1 
-#				} 
-#			}
-#		}
-#
-#		cost = 40
-#		
-#		remove_effect = {
-#			add_stability = 0.05
-#			add_war_support = -0.1
-#		}
-#
-#		ai_will_do = {
-#			factor = 0
-#			modifier = {
-#				add = 1
-#				has_stability < 0.6
-#			}
-#		}
-#	}
-#
-#	MEX_decision_incite_tensions = {
-#	
-#		icon = generic_break_treaty
-#		
-#		fire_only_once = no
-#		
-#		days_remove = 90
-#		
-#		visible = {
-#			original_tag = MEX
-#		}
-#		
-#		available = {
-#			has_stability > 0.1
-#			has_war_support < 0.95
-#			NOT = {
-#				OR = {
-#					has_idea = MEX_church_power_5
-#					has_idea = MEX_church_power_1 
-#				} 
-#			}
-#		}
-#
-#		cost = 40
-#		
-#		remove_effect = {
-#			add_stability = -0.05
-#			add_war_support = 0.05
-#		}
-#
-#		ai_will_do = {
-#			factor = 0
-#			modifier = {
-#				add = 1
-#				has_stability > 0.66
-#				has_war_support < 0.5
-#				date > 1940.1.1
-#			}
-#		}
-#	}
-#}
+MEX_category_military_issues = {
+
+	# Decision to send support to the communists in the Spanish Civil War
+	
+	develop_mexico_rubber_plantations = { #277
+		
+		icon = rubber
+
+		allowed = {
+
+		}
+
+		available = {
+			owns_state = 277
+			controls_state = 277
+			num_of_civilian_factories_available_for_projects > 1
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 277 
+			} 
+		}
+
+		visible = {
+			owns_state = 277
+			controls_state = 277
+			277 = {
+				NOT = {
+					has_state_flag = mexico_rubber_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			277 = {
+				set_state_flag = mexico_rubber_developed
+			}
+			277 = {
+				add_resource = {
+					type = rubber
+					amount = 3
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	develop_mexico_rubber_plantations_2 = { #277
+		
+		icon = rubber
+
+		allowed = {
+
+		}
+
+		available = {
+			owns_state = 277
+			controls_state = 277
+			num_of_civilian_factories_available_for_projects > 3
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 277 
+			} 
+		}
+
+		visible = {
+			owns_state = 277
+			controls_state = 277
+			277 = {
+				has_state_flag = mexico_rubber_developed
+			}
+			277 = {
+				NOT = {
+					has_state_flag = mexico_rubber_developed_2
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		remove_effect = {
+			277 = {
+				set_state_flag = mexico_rubber_developed_2
+			}
+			277 = {
+				add_resource = {
+					type = rubber
+					amount = 5
+				}
+			}
+		}
+	}
+	MEX_decision_support_spanish_loyalists = {
+	
+		icon = generic_nationalism
+		
+		fire_only_once = yes
+
+		fixed_random_seed = no
+		
+		days_remove = 7
+
+		visible = {
+		    has_completed_focus = MEX_focus_support_spains_loyalists
+		}
+		
+		available = {
+			has_completed_focus = MEX_focus_support_spains_loyalists
+			has_global_flag = spanish_civil_war
+
+			has_equipment = {
+				convoy > 2
+			}
+			
+			has_equipment = {
+				infantry_equipment > 249
+			}
+		}
+
+		modifier = {
+			
+		}
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = -3
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = -250
+			}			
+		}
+
+		remove_effect = {
+			random_list = {
+				60 = { # Shipment gets through
+					army_experience = 20
+					add_equipment_to_stockpile = {
+						type = convoy_1
+						amount = 3
+					}
+					every_country = {
+						limit = {
+							original_tag = SPR
+							has_government = communism
+						}
+						country_event = { id = mexico.50 }
+					}
+				}
+				40 = { # Sunk by Italians
+					navy_experience = 25
+					country_event = { id = mexico.51 }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Decision to send support to the fascists in the Spanish Civil War
+
+	MEX_decision_support_spanish_fascists = {
+	
+		icon = generic_nationalism
+		
+		fire_only_once = yes
+		
+		fixed_random_seed = no
+
+		days_remove = 7
+
+		visible = {
+		    has_completed_focus = MEX_focus_falangist_veterans
+		}
+		
+		available = {
+			has_completed_focus = MEX_focus_falangist_veterans
+			has_global_flag = spanish_civil_war
+			has_equipment = {
+				convoy > 2
+			}
+			
+			has_equipment = {
+				infantry_equipment > 249
+			}
+		}
+
+		modifier = {
+			
+		}
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = -3
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = -250
+			}			
+		}
+
+		remove_effect = {
+			random_list = {
+				95 = { # Shipment gets through
+					army_experience = 20
+					add_equipment_to_stockpile = {
+						type = convoy_1
+						amount = 3
+					}
+					every_country = {
+						limit = {
+							original_tag = SPR
+							has_government = fascism
+						}
+						country_event = { id = mexico.50 }
+					}
+				}
+				5 = { # Sunk by loyalists
+					navy_experience = 25
+					country_event = { id = mexico.51 }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MEX_decision_coastal_defence_plan = {
+	
+		icon = generic_operation
+		
+		available = {
+			has_defensive_war = yes
+		}
+		
+		visible = {
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 180
+		
+		modifier = {
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+		}
+	}
+
+}
+
+# Category related to the Catholic Church in Mexico
+
+MEX_category_church_power = {
+
+	MEX_decision_transfer_lands_to_church = {
+	
+		icon = generic_operation
+		
+		fire_only_once = no
+		
+		days_remove = 90
+		
+		visible = {
+			original_tag = MEX
+		}
+		
+		available = {
+			has_completed_focus = MEX_focus_antidisestablishmentarianism
+			NOT = { has_idea = MEX_church_power_5 }
+
+		}
+
+		cost = 75
+		
+		complete_effect = {
+			MEX_increase_church_power = yes		
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	MEX_decision_nationalize_church_lands = {
+	
+		icon = generic_scorched_earth
+		
+		fire_only_once = no
+		
+		days_remove = 90
+		
+		visible = {
+			original_tag = MEX
+		}
+		
+		available = {
+			NOT = { has_idea = MEX_church_power_1 }
+		}
+
+		cost = 75
+		
+		complete_effect = {
+			MEX_decrease_church_power = yes
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	MEX_decision_pardon_cristero_fighter = {
+	
+		icon = generic_army_support
+		
+		fire_only_once = no
+		
+		days_remove = 45
+		
+		visible = {
+			original_tag = MEX
+		}
+		
+		available = {
+			has_war_support < 0.95
+			has_completed_focus = MEX_focus_rewrite_the_constitution
+			OR = {
+				has_idea = MEX_church_power_4
+				has_idea = MEX_church_power_5
+			}
+		}
+
+		cost = 75
+		
+		remove_effect = {
+			add_war_support = 0.02
+			army_experience = 10
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				has_war_support < 0.6
+				date > 1940.1.1
+			}
+		}
+	}
+	
+	MEX_decision_assassinate_cristero_traitor = {
+	
+		icon = generic_prepare_civil_war
+		
+		fire_only_once = no
+		
+		days_remove = 45
+		
+		visible = {
+			original_tag = MEX
+		}
+		
+		available = {
+			has_war_support < 0.95
+			OR = {
+				has_idea = MEX_church_power_1
+				has_idea = MEX_church_power_2
+			}
+		}
+
+		cost = 75
+		
+		remove_effect = {
+			add_war_support = 0.02
+			army_experience = 10
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				has_war_support < 0.6
+				date > 1940.1.1
+			}
+		}
+	}
+	
+	MEX_decision_attend_public_mass = {
+	
+		icon = generic_nationalism
+		
+		fire_only_once = no
+		
+		days_remove = 45
+		
+		visible = {
+			original_tag = MEX
+		}
+		
+		available = {
+			has_stability < 0.95
+			has_completed_focus = MEX_focus_rewrite_the_constitution
+			OR = {
+				has_idea = MEX_church_power_4
+				has_idea = MEX_church_power_5
+			}
+		}
+
+		cost = 75
+		
+		remove_effect = {
+			add_stability = 0.03
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+				date > 1940.1.1
+			}
+		}
+	}
+
+	MEX_decision_prosecute_clergyman = {
+	
+		icon = oppression
+		
+		fire_only_once = no
+		
+		days_remove = 45
+		
+		visible = {
+			original_tag = MEX
+		}
+		
+		available = {
+			has_stability < 0.95
+			OR = {
+				has_idea = MEX_church_power_1
+				has_idea = MEX_church_power_2
+			}
+		}
+
+		cost = 75
+		
+		remove_effect = {
+			add_stability = 0.03
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+				date > 1940.1.1
+			}
+		}
+	}
+	
+	MEX_decision_reconciliation_committee = {
+	
+		icon = generic_political_discourse
+		
+		fire_only_once = no
+		
+		days_remove = 90
+		
+		visible = {
+			original_tag = MEX
+		}
+		
+		available = {
+			has_war_support > 0.1
+			has_stability < 0.95
+			NOT = {
+				OR = {
+					has_idea = MEX_church_power_5
+					has_idea = MEX_church_power_1 
+				} 
+			}
+		}
+
+		cost = 40
+		
+		remove_effect = {
+			add_stability = 0.05
+			add_war_support = -0.1
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+
+	MEX_decision_incite_tensions = {
+	
+		icon = generic_break_treaty
+		
+		fire_only_once = no
+		
+		days_remove = 90
+		
+		visible = {
+			original_tag = MEX
+		}
+		
+		available = {
+			has_stability > 0.1
+			has_war_support < 0.95
+			NOT = {
+				OR = {
+					has_idea = MEX_church_power_5
+					has_idea = MEX_church_power_1 
+				} 
+			}
+		}
+
+		cost = 40
+		
+		remove_effect = {
+			add_stability = -0.05
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				has_stability > 0.66
+				has_war_support < 0.5
+				date > 1940.1.1
+			}
+		}
+	}
+}
