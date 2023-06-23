@@ -610,7 +610,7 @@ focus = {
 		x = -3
 		y = 1
 		relative_position_id = SPA_fuse_the_parties
-		cost = 10
+		cost = 7.145
 
 		available_if_capitulated = yes
 
@@ -634,7 +634,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = SPA_axis
-		cost = 10
+		cost = 7.145
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -993,7 +993,7 @@ technology = construction4
 		x = 0
 		y = 1
 		relative_position_id = SPA_fuse_the_parties
-		cost = 10
+		cost = 7.145
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1048,7 +1048,7 @@ technology = construction4
 		x = 3
 		y = 1
 		relative_position_id = SPA_axis
-		cost = 10
+		cost = 7.145
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -1566,7 +1566,7 @@ technology = construction4
 		x = 0
 		y = 1
 		relative_position_id = SPA_allies
-		cost = 10
+		cost = 7.145
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -2589,7 +2589,7 @@ technology = construction4
 	
 	focus = {
 		id = SPR_fortify_our_west
-		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		icon = GFX_goal_generic_defence
 		relative_position_id = SPR_revitalize_the_army
 		prerequisite = { focus = SPR_revitalize_the_army }
 		x = -3
@@ -2691,7 +2691,7 @@ technology = construction4
 	
 	focus = {
 		id = SPR_fortify_our_south
-		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		icon = GFX_goal_generic_fortify_city
 		relative_position_id = SPR_revitalize_the_army
 		prerequisite = { focus = SPR_revitalize_the_army }
 		x = -1
@@ -2764,7 +2764,7 @@ technology = construction4
 	
 	focus = {
 		id = SPR_fortify_our_east
-		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		icon = GFX_idea_generic_wall_line
 		relative_position_id = SPR_revitalize_the_army
 		prerequisite = { focus = SPR_revitalize_the_army }
 		x = 1
@@ -2889,7 +2889,7 @@ technology = construction4
 	
 	focus = {
 		id = SPR_fortify_our_north
-		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		icon = GFX_idea_generic_fortify_the_borders
 		relative_position_id = SPR_revitalize_the_army
 		prerequisite = { focus = SPR_revitalize_the_army }
 		x = 3
@@ -2971,7 +2971,7 @@ technology = construction4
 	
 	focus = {
 		id = SPR_recruit_effort_southwest
-		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		icon = GFX_goal_generic_army_artillery
 		relative_position_id = SPR_revitalize_the_army
 		prerequisite = { focus = SPR_fortify_our_west focus = SPR_fortify_our_south  }
 		x = -2
@@ -3009,7 +3009,7 @@ technology = construction4
 	
 	focus = {
 		id = SPR_recruit_effort_southeast
-		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		icon = GFX_goal_generic_small_arms
 		relative_position_id = SPR_revitalize_the_army
 		prerequisite = { focus = SPR_fortify_our_east focus = SPR_fortify_our_south  }
 		x = 0
@@ -3047,7 +3047,7 @@ technology = construction4
 	
 	focus = {
 		id = SPR_recruit_effort_northeast
-		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		icon = GFX_USA_reorganize_the_army_departments
 		relative_position_id = SPR_revitalize_the_army
 		prerequisite = { focus = SPR_fortify_our_east focus = SPR_fortify_our_north  }
 		x = 2
@@ -3085,13 +3085,13 @@ technology = construction4
 	
 	focus = {
 		id = SPR_med_focus
-		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		icon = GFX_ITA_Generic_Ultranat_Eagle
 		relative_position_id = SPR_revitalize_the_army
 		prerequisite = { focus = SPR_recruit_effort_southwest focus = SPR_recruit_effort_southeast focus = SPR_recruit_effort_northeast }
 		mutually_exclusive = { focus = SPR_focus_atlantic }
 		x = -1
 		y = 3
-		cost = 7.145
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -3104,19 +3104,57 @@ technology = construction4
 
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = mountaineers_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = artillery
+			}
+			165 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			794 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			167 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
 	focus = {
 		id = SPR_focus_atlantic
-		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		icon = GFX_goal_ger_raeder_plan
 		relative_position_id = SPR_revitalize_the_army
 		prerequisite = { focus = SPR_recruit_effort_southwest focus = SPR_recruit_effort_southeast focus = SPR_recruit_effort_northeast }
 		mutually_exclusive = { focus = SPR_med_focus }
 		x = 1
 		y = 3
-		cost = 7.145
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -3129,7 +3167,45 @@ technology = construction4
 
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = naval_equipment
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+			792 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+			}
+			174 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			170 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -3155,6 +3231,15 @@ technology = construction4
 
 
 		completion_reward = {
+			if = { limit = { has_idea = SPA_recovering_from_civil_war}
+			remove_ideas = SPA_recovering_from_civil_war 
+			}
+			if = { limit = { has_idea = SPA_recovering_from_civil_war_2}
+			remove_ideas = SPA_recovering_from_civil_war_2 
+			}
+			if = { limit = { has_idea = SPA_recovering_from_civil_war_3}
+			remove_ideas = SPA_recovering_from_civil_war_3 
+			}
 			remove_ideas = SPR_prepare_for_war
 			custom_effect_tooltip = salo_warning
 			add_war_support = 0.05
