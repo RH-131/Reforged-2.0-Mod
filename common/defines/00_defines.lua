@@ -3172,7 +3172,7 @@ NOperatives = {
 	INTEL_NETWORK_SUB_NETWORK_NATIONAL_COVERAGE_TO_DETECTION_CHANCE_FACTOR = 3.0,	-- multiplied to the contribution to the national coverage of the sub network (a value in range [0, 1])
 	INTEL_NETWORK_DETECTION_GLOBAL_FACTOR = 0.01,				-- global factor multiplied to the detection chance before it is multiplied a dice roll in the range [0,1000)
 	BUILD_INTEL_NETWORK_DAILY_XP_GAIN = 1,
-	QUIET_INTEL_NETWORK_DAILY_XP_GAIN = 0.1,
+	QUIET_INTEL_NETWORK_DAILY_XP_GAIN = 0,
 	OPERATIVE_MISSION_DETECTION_CHANCE_FACTOR = {
 		-- Factor multiplied to the detection chance of an agent on mission before the offsets
 		0.0, -- NoMission
