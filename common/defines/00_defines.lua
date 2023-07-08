@@ -785,9 +785,9 @@ NMilitary = {
 	LAND_COMBAT_STR_DICE_SIZE = 2,                 -- nr of damage dice
 	LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.05,       -- global damage modifier... but some equipment is returned at end of battles see : EQUIPMENT_COMBAT_LOSS_FACTOR
 	LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.055,       -- global damage modifier
-	LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.030,    -- air global damage modifier
-	LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.024,    -- global damage modifier
-	LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 2, -- how many CAS/TAC can enter a combat depending on enemy width there
+	LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.035,    -- air global damage modifier
+	LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.028,    -- global damage modifier
+	LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 3, -- how many CAS/TAC can enter a combat depending on enemy width there
 	LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 1,   -- extra damage dice if our armor outclasses enemy
 	LAND_COMBAT_ORG_ARMOR_ON_SOFT_DICE_SIZE = 2,   -- extra damage dice if our armor outclasses enemy
 	LAND_COMBAT_STR_ARMOR_DEFLECTION_FACTOR = 0.70, -- damage reduction if armor outclassing enemy
@@ -1283,7 +1283,7 @@ NAir = {
 
 	CARRIER_PLANES_AMOUNT_FOR_POSITIONING = 10,         -- below this amount of planes on a carrier we no longer get max benefit on enemy positioning
 
-	CAS_NIGHT_ATTACK_FACTOR = 0.1,                      -- CAS damaged get multiplied by this in land combats at night
+	CAS_NIGHT_ATTACK_FACTOR = 0.3,                      -- CAS damaged get multiplied by this in land combats at night
 
 	AIR_WING_ATTACK_LOGISTICS_NO_TRUCK_DISRUPTION_FACTOR = 0.02, -- If a unit isn't motorized, still disrupt its supply by damage * this
 	AIR_WING_ATTACK_LOGISTICS_TRUCK_DAMAGE_FACTOR = 0.15,
@@ -2663,7 +2663,7 @@ NAI = {
 	LAND_COMBAT_CAS_PLANES_PER_ENEMY_ARMY_LIMIT = 100,	-- Limit of CAS planes requested by enemy armies
 	LAND_COMBAT_CAS_PER_ENEMY_ARMY = 20,				-- Amount of CAS planes requested per enemy army
 	LAND_COMBAT_ANTI_LOGISTICS_PER_ENEMY_ARMY = 5,     -- Amount of CAS planes requested per enemy army for anti-logistics
-	LAND_COMBAT_CAS_PER_COMBAT = 100,					-- Amount of CAS requested per combat
+	LAND_COMBAT_CAS_PER_COMBAT = 120,					-- Amount of CAS requested per combat
 	LAND_COMBAT_BOMBERS_PER_LAND_FORT_LEVEL = 20,		-- Amount of bomber planes requested per enemy land fort level
 	LAND_COMBAT_BOMBERS_PER_COASTAL_FORT_LEVEL = 20,	-- Amount of bomber planes requested per enemy coastal fort level
 	LAND_COMBAT_MIN_EXCORT_PLANES = 50,					-- Min amount of planes requested to excort operations
