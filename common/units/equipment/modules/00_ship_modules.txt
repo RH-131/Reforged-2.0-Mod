@@ -460,7 +460,7 @@ equipment_modules = {
 			max_strength = 4
 		}
 		multiply_stats = {
-			naval_speed = -0.03
+			naval_speed = -0.02
 			
 		}
 		add_average_stats = {
@@ -485,7 +485,7 @@ equipment_modules = {
 			max_strength = 4
 		}
 		multiply_stats = {
-			naval_speed = -0.04
+			naval_speed = -0.03
 			
 		}
 		add_average_stats = {
@@ -787,7 +787,7 @@ equipment_modules = {
 		multiply_stats = {
 			lg_attack = 0.05
 			hg_attack = 0.05
-			torpedo_attack = 0.05
+			torpedo_attack = 0.025
 			anti_air_attack = 0.05
 		}
 	}
@@ -804,7 +804,7 @@ equipment_modules = {
 		multiply_stats = {
 			lg_attack = 0.1
 			hg_attack = 0.1
-			torpedo_attack = 0.1
+			torpedo_attack = 0.05
 			anti_air_attack = 0.1
 			reliability = -0.025
 		}
@@ -826,7 +826,7 @@ equipment_modules = {
 		multiply_stats = {
 			lg_attack = 0.15
 			hg_attack = 0.15
-			torpedo_attack = 0.15
+			torpedo_attack = 0.075
 			anti_air_attack = 0.15
 			reliability = -0.05
 		}
@@ -851,7 +851,7 @@ equipment_modules = {
 		multiply_stats = {
 			lg_attack = 0.2
 			hg_attack = 0.2
-			torpedo_attack = 0.2
+			torpedo_attack = 0.1
 			anti_air_attack = 0.2
 			reliability = -0.075
 		}
@@ -920,7 +920,7 @@ equipment_modules = {
 		multiply_stats = {
 			lg_attack = 0.1
 			hg_attack = 0.1
-			torpedo_attack = 0.1
+			torpedo_attack = 0.075
 			anti_air_attack = 0.2
 		}
 		add_stats = {
@@ -945,7 +945,7 @@ equipment_modules = {
 		multiply_stats = {
 			lg_attack = 0.15
 			hg_attack = 0.15
-			torpedo_attack = 0.15
+			torpedo_attack = 0.1
 			anti_air_attack = 0.25
 		}
 		add_stats = {
@@ -1539,12 +1539,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			torpedo_attack = 30
+			torpedo_attack = 25
 			naval_torpedo_hit_chance_factor = 0.05
 			build_cost_ic = 120
 		}
 		multiply_stats = {
-			naval_speed = -0.01
+			naval_speed = -0.02
 		}
 		build_cost_resources = {
 			steel = 1
@@ -1572,12 +1572,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			torpedo_attack = 35
+			torpedo_attack = 30
 			naval_torpedo_hit_chance_factor = 0.075
 			build_cost_ic = 150
 		}
 		multiply_stats = {
-			naval_speed = -0.01
+			naval_speed = -0.03
 		}
 		dismantle_cost_ic = 60
 
@@ -1595,12 +1595,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			torpedo_attack = 40
+			torpedo_attack = 35
 			naval_torpedo_hit_chance_factor = 0.1
 			build_cost_ic = 180
 		}
 		multiply_stats = {
-			naval_speed = -0.01
+			naval_speed = -0.04
 		}
 		dismantle_cost_ic = 60
 
