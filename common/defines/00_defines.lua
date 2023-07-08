@@ -723,12 +723,12 @@ NMilitary = {
 
 	INFRASTRUCTURE_MOVEMENT_SPEED_IMPACT = -0.03,	-- speed penalty per infrastucture below maximum.
 	
-	VPS_FOR_HISTORY_ENTRY = 1,					-- Minimum VPs required to receive an entry in divisional history
-	VPS_FOR_HIGH_HISTORY_ENTRY = 8,				-- VPs required for high-level history entry
+	VPS_FOR_HISTORY_ENTRY = 5,					-- Minimum VPs required to receive an entry in divisional history
+	VPS_FOR_HIGH_HISTORY_ENTRY = 15,				-- VPs required for high-level history entry
 	ENTRIES_TO_CHECK_FOR_DUPLICATE = 2,			-- Max number of history entries to check back to see if we're being awarded the same entry
-	COST_INCREASE_PER_ACTIVE_MEDAL = 0.50,		-- Additional cost factor per active medal
+	COST_INCREASE_PER_ACTIVE_MEDAL = 0.75,		-- Additional cost factor per active medal
 	MAX_ENTRY_ELISION_COUNT = 4,				-- If we do the same type of thing consecutively, each entry will stack locations up to this number
-	GENERATE_AI_DIV_COMMAND_HISTORY_ENTRIES = true,	--Should we generate history entries for the AI (may cause savegame bloat)
+	GENERATE_AI_DIV_COMMAND_HISTORY_ENTRIES = false,	--Should we generate history entries for the AI (may cause savegame bloat)
 	FIELD_EXPERIENCE_ON_DIVISION_MULT = 0.03,	-- Multiply field experience gained by this, when applying to divisional commander
 	MAX_FIELD_EXPERIENCE_ON_DIVISION = 8000,	-- Max experience that can be gained on divisional commanders
 	FIELD_EXPERIENCE_ON_DIVISION_PER_MEDAL_MULT = 0.1,	--Multiply officer field experience gain by this * number of division medals on application
