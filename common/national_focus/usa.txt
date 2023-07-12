@@ -5574,8 +5574,15 @@ focus_tree = {
 		available_if_capitulated = yes		
 		
 		available = { 
-			JAP = {
-				has_full_control_of_state = 672
+			672 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
 			}
 		}
 
