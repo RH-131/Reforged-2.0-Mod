@@ -2094,6 +2094,9 @@ operations = {
 		available = {
 		    OR = {
 				date > 1942.6.1
+				NOT ={
+					controls_state = 126
+				}
 			}
 		}
 
