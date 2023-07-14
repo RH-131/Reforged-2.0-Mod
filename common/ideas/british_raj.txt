@@ -684,6 +684,11 @@ ideas = {
 				}
 			}
 			equipment_bonus = {
+				amphibious_tank_chassis = {
+					build_cost_ic = 0.25 instant = yes
+				}
+			}
+			equipment_bonus = {
 				heavy_tank_chassis = {
 					build_cost_ic = 0.50 instant = yes 
 				}
@@ -716,6 +721,11 @@ ideas = {
 			}
 			equipment_bonus = {
 				medium_tank_chassis = {
+					build_cost_ic = 0.15 instant = yes
+				}
+			}
+			equipment_bonus = {
+				amphibious_tank_chassis = {
 					build_cost_ic = 0.15 instant = yes
 				}
 			}
@@ -989,11 +999,13 @@ ideas = {
 			}
 
 			modifier = {
-				army_core_attack_factor = 0.025
-			}
-
-			modifier = {
-				army_core_defence_factor = 0.025
+				army_leader_cost_factor = -0.5
+				army_leader_start_level = 1
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_planning_level = 1
+				army_leader_start_logistics_level = 1
+	
 			}
 
 			removal_cost = -1
@@ -2002,17 +2014,17 @@ ideas = {
 
 			equipment_bonus = {
 				anti_air_equipment = {
-					air_attack = 0.10 instant = yes
+					air_attack = 0.05 instant = yes
 				}
 			}
 			equipment_bonus = {
 				artillery_equipment = {
-					soft_attack = 0.10 instant = yes
+					soft_attack = 0.05 instant = yes
 				}
 			}
 			equipment_bonus = {
 				pack_artillery_equipment = {
-					soft_attack = 0.10 instant = yes
+					soft_attack = 0.05 instant = yes
 				}
 			}
 		}
@@ -2050,7 +2062,7 @@ ideas = {
 			}
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.15 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 			}
 		}
@@ -2066,7 +2078,7 @@ ideas = {
 			picture = generic_exploit_mines
 
 			modifier = {
-				industrial_capacity_factory = 0.08
+				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
                 production_factory_efficiency_gain_factor = 0.025
 				consumer_goods_factor = -0.01
@@ -2085,8 +2097,8 @@ ideas = {
 			picture = generic_exploit_mines
 
 			modifier = {
-				industrial_capacity_factory = 0.12
-				industrial_capacity_dockyard = 0.075
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
                 production_factory_efficiency_gain_factor = 0.05
 				consumer_goods_factor = -0.02
 				conscription_factor = -0.08
@@ -2705,4 +2717,6 @@ ideas = {
 				}
 			}
 		}
+	}
+}
 
