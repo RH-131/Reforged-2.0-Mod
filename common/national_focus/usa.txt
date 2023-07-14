@@ -5376,6 +5376,14 @@ focus_tree = {
 				bonus = 1 
 				name = USA_manhattan_project
 			}
+			SOV = {
+				add_tech_bonus = {
+					category = nuclear 
+					uses = 2
+					bonus = 0.8 
+					name = USA_manhattan_project
+				}
+			}
 		}
 	}
 
@@ -5574,8 +5582,15 @@ focus_tree = {
 		available_if_capitulated = yes		
 		
 		available = { 
-			JAP = {
-				has_full_control_of_state = 672
+			672 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
 			}
 		}
 
