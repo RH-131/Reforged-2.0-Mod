@@ -315,6 +315,26 @@ ideas = {
 				min_export = 0.05
 			}
 		}
+		
+		ENG_sanctions_against_SPR = {
+
+			picture = chi_hyper_inflation
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				has_war_with = ENG
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				min_export = -0.10
+			}
+		}
 
 		ENG_economy = {
 
@@ -1437,8 +1457,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.02
-				stability_factor = -0.05
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = 0.05
 			}
 		}
 
@@ -2575,6 +2595,12 @@ ideas = {
 
 			equipment_bonus = {
 			   	 medium_tank_chassis = {
+					soft_attack = 0.10
+					breakthrough = 0.10
+			        maximum_speed = 0.05
+					build_cost_ic = 0.10
+				}
+				amphibious_tank_chassis = {
 					soft_attack = 0.10
 					breakthrough = 0.10
 			        maximum_speed = 0.05

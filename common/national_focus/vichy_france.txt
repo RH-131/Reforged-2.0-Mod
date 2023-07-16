@@ -45,6 +45,9 @@
 					}
 					add_compliance = 100
 				}
+				290 = { set_demilitarized_zone = yes }
+				783 = { set_demilitarized_zone = yes }
+				699 = { set_demilitarized_zone = yes }
 				461 = { set_demilitarized_zone = yes }
 				462 = { set_demilitarized_zone = yes }
 				459 = { set_demilitarized_zone = yes }
@@ -1413,7 +1416,7 @@
 		y = 1
 		prerequisite = { focus = EFR_lost1 }
 		relative_position_id = EFR_lost1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 100 
 		}
@@ -1441,7 +1444,7 @@
 		y = 2
 		prerequisite = { focus = EFR_german_assist }
 		relative_position_id = EFR_lost1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 100 
 		}
@@ -1469,7 +1472,7 @@
 		y = 3
 		prerequisite = { focus = EFR_german_assist_more }
 		relative_position_id = EFR_lost1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 100 
 		}
@@ -1497,7 +1500,7 @@
 		y = 4
 		prerequisite = { focus = EFR_german_assist_most }
 		relative_position_id = EFR_lost1
-		cost = 15
+		cost = 10
 		ai_will_do = {
 			factor = 100 
 		}
@@ -1526,7 +1529,7 @@
 		relative_position_id = EFR_lost1
 		x = 2
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 100 
 		}
@@ -1553,7 +1556,7 @@
 		relative_position_id = EFR_lost1
 		x = 2
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 100 
 		}
@@ -1580,7 +1583,7 @@
 		relative_position_id = EFR_lost1
 		x = 2
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 100 
 		}
@@ -1607,7 +1610,7 @@
 		relative_position_id = EFR_lost1
 		x = 2
 		y = 4
-		cost = 15
+		cost = 10
 		ai_will_do = {
 			factor = 100 
 		}

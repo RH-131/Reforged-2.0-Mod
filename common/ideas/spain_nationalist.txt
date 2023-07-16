@@ -26,6 +26,67 @@ ideas = {
 			}
 		}
 		
+		SPR_prepare_for_war = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.025
+				production_factory_max_efficiency_factor = 0.025
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		
+#		SPR_med_focus = {
+#
+#			allowed = {
+#				always = no
+#			}
+#
+#			allowed_civil_war = {
+#				always = yes
+#			}
+#
+#			removal_cost = -1
+#
+#			picture = generic_intel_bonus
+#
+#			modifier = {
+#
+#			}
+#		}
+#		
+#		SPR_atlantik_focus = {
+#
+#			allowed = {
+#				always = no
+#			}
+#
+#			allowed_civil_war = {
+#				always = yes
+#			}
+#
+#			removal_cost = -1
+#
+#			picture = generic_intel_bonus
+#
+#			modifier = {
+#
+#			}
+#		}
+		
 	    SPA_spanish_civil_war_industry = {
 
 			picture = generic_goods_red_bonus
@@ -215,25 +276,6 @@ ideas = {
 				army_defence_factor = 0.25
 				dig_in_speed_factor = 1.0
 				max_surrender_limit_offset = 0.10
-			}
-		}
-
-		SPR_no_navy = {
-			picture = generic_sea_focused_navy
-
-			allowed = {
-				original_tag = SPR
-				NOT = { has_government = fascism }
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				industrial_capacity_dockyard = -100
 			}
 		}
 

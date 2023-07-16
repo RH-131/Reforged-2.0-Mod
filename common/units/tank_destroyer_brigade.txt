@@ -5,7 +5,7 @@ sub_units = {
 		map_icon_category = armored
 		priority = 1795
 		active = yes
-		affects_speed = no
+		affects_speed = yes
 		type = {
 			armor
 			anti_tank
@@ -45,17 +45,17 @@ sub_units = {
 			movement = -0.25
 		}
 		jungle = {
-		    attack = -0.2
+		    attack = -0.1
 			defence = -0.05
 			movement = -0.25
 		}
 		marsh = {
-		    attack = -0.3
+		    attack = -0.25
 			defence = -0.1
 			movement = -0.4
 		}
 		urban = {
-			attack = -0.1
+			attack = -0.05
 			defence = -0.2
 			movement = 0.1
 		}
@@ -68,7 +68,7 @@ sub_units = {
 			attack = -3.0
 		}
 		fort = {
-			attack = 0.05
+			attack = 0.1
 		}
 		plains = {
 			attack = 0.1 
@@ -85,7 +85,7 @@ sub_units = {
 		map_icon_category = armored
 		priority = 1796
 		active = yes
-		affects_speed = no
+		affects_speed = yes
 		type = {
 			armor
 			anti_tank
@@ -115,12 +115,12 @@ sub_units = {
 		suppression = 1.5
 		
 		forest = {
-		    attack = -0.12
+		    attack = -0.1
 			defence = -0.2
 			movement = -0.2
 		}
 		hills = 	{
-		    attack = -0.12
+		    attack = -0.1
 			defence = -0.15
 			movement = -0.1
 		}
@@ -135,12 +135,12 @@ sub_units = {
 			movement = -0.4
 		}
 		marsh = {
-		    attack = -0.4
+		    attack = -0.3
 			defence = -0.3
 			movement = -0.5
 		}
 		urban = {
-			attack = -0.10
+			attack = -0.05
 			defence = -0.2
 			movement = 0.05
 		}
@@ -163,7 +163,7 @@ sub_units = {
 			movement = 0.05
 		}
 		fort = {
-			attack = 0.1
+			attack = 0.15
 		}
 	}
 	
@@ -173,7 +173,7 @@ sub_units = {
 		priority = 1797
 		active = yes
 		training_time = 180
-		affects_speed = no
+		affects_speed = yes
 		type = {
 			armor
 			anti_tank
@@ -240,17 +240,17 @@ sub_units = {
 			attack = -7.0
 		}
 		fort = {
-			attack = 0.2
+			attack = 0.25
 		}
 		plains = {
 			attack = 0.05
 			defence = 0.0 
-			movement = 0.05
+			movement = 0.0
 		}
         desert = {
 			attack = 0.05
 			defence = 0.0 
-			movement = 0.05
+			movement = 0.0
 		}
 	}	
 }

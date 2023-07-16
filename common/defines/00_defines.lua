@@ -284,7 +284,7 @@ NCountry = {
 	NUCLEAR_BOMB_DROP_WAR_SUPPORT_EFFECT_MAX_VP = 3,-- War support will be scaled down if there's less VP than this in the province
 	WEEKLY_STABILITY_GAIN = 0.0,
 	WEEKLY_WAR_SUPPORT_GAIN = 0.0,
-	SUPPLY_CONVOY_FACTOR = 0.25,					-- How many convoys each supply needs
+	SUPPLY_CONVOY_FACTOR = 0.20,					-- How many convoys each supply needs
 	CONVOY_RANGE_FACTOR = 1,                        -- how much range affects convoy need
 	LOCAL_MANPOWER_ACCESSIBLE_NON_CORE_FACTOR = 0.02,  -- accessible recruitable factor base
 	MAX_NON_CORE_MANPOWER_FACTOR = 1.0,				-- max clamp for recruitable local non core manpower factor for states
@@ -296,7 +296,7 @@ NCountry = {
 	MAX_COUP_STABILITY_FACTOR = 2.0,				-- Max value of coup factor in stability
 	MIN_COUP_SUCCESS_STABILITY = 0.8,				-- Max stability when coup will happen
 	WAR_SUPPORT_OFFNSIVE_WAR = -0.1,				-- Impact of being in offensive war
-	WAR_SUPPORT_DEFENSIVE_WAR = 0.2,				-- Impact of being in defensive war
+	WAR_SUPPORT_DEFENSIVE_WAR = 0.1,				-- Impact of being in defensive war
 	WAR_SUPPORT_TENSION_IMPACT = 0.1,				-- Total impact of world tension
 	MIN_STABILITY = 0.0,
 	MAX_STABILITY = 1.0,
@@ -354,12 +354,12 @@ NCountry = {
 	BOMBING_WAR_SUPPORT_PENALTY_SCALE = -0.00015, 			-- Scaling of bomber damage to war support impact, will be added weekly as a war support penalty
 	MAX_BOMBING_WEEKLY_WAR_SUPPORT_PENALTY = -0.02,			-- Max penalty that will gained per week from bomber's damage
 	BOMBING_WEEKLY_WAR_SUPPORT_PENALTY_DECAY = 0.001,		-- Weekly decay of bomber damage war support penalty
-	MAX_BOMBING_WAR_SUPPORT_IMPACT = -0.3,					-- Max total penalty from bomber's damage
+	MAX_BOMBING_WAR_SUPPORT_IMPACT = -0.5,					-- Max total penalty from bomber's damage
 
 	HEROES_BEING_KILLED_WAR_SUPPORT_PENALTY_SCALE = -0.05,			-- Scaling of war heroes manpower lost to war support impact, will be added weekly as a war support penalty
 	MAX_HEROES_BEING_KILLED_WEEKLY_WAR_SUPPORT_PENALTY = -0.04,		-- Max penalty that will gained per week from war heroes manpower lost
 	HEROES_BEING_KILLED_WEEKLY_WAR_SUPPORT_PENALTY_DECAY = 0.0001,	-- Weekly decay of war heroes manpower lost war support penalty
-	MAX_HEROES_BEING_KILLED_WAR_SUPPORT_IMPACT = -0.3,				-- Max total penalty from war heroes manpower lost
+	MAX_HEROES_BEING_KILLED_WAR_SUPPORT_IMPACT = -0.5,				-- Max total penalty from war heroes manpower lost
 	WAR_SUPPORT_FROM_CASUALTIES = 0.025,							-- Base value (inverted) for calculating heroes being killed
 
 	CONVOYS_BEING_RAIDED_WAR_SUPPORT_PENALTY_SCALE = -0.05,			-- Scaling of trade convoy raided to war support impact, will be added weekly as a war support penalty
@@ -382,8 +382,8 @@ NCountry = {
 	CONVOYS_SUNK_MULTIPLIER_FOR_WAR_SUPPORT_FROM_OVERSEA_STATES = 0.2,			-- once a resource transfer convoys from our states ship sunk, you will get a larger negative impact on your war support
 	CONVOYS_BEING_RAIDED_DAILY_WAR_SUPPORT_IMPACT = 0.2,	-- trade convoys being raided will give a daily war support penalty depending on how important that resource is and how inefficent convoys are
 
-	MAX_PROPAGANDA_STABILITY_IMPACT = -0.2,			-- Max total penalty from operative performing the propaganda mission in a country
-	MAX_PROPAGANDA_WAR_SUPPORT_IMPACT = -0.2,		-- Max total penalty from operative performing the propaganda mission in a country
+	MAX_PROPAGANDA_STABILITY_IMPACT = -0.15,			-- Max total penalty from operative performing the propaganda mission in a country
+	MAX_PROPAGANDA_WAR_SUPPORT_IMPACT = -0.15,		-- Max total penalty from operative performing the propaganda mission in a country
 	PROPAGANDA_STABILITY_DAILY_DECAY = 0.001,		-- Amount of stability recovered daily from propaganda effort
 	PROPAGANDA_WAR_SUPPORT_DAILY_DECAY = 0.001,		-- Amount of war support recovered daily from war support effort
 
@@ -539,7 +539,7 @@ NResistance = {
 	GARRISON_STR_POW_MANPOWER = 2,	--Scales impact of manpower deficiency by raising that deficiency to the number here. Formula: efficiency = 1.0 - manpower_deficiency^GARRISON_STR_POW_MANPOWER
 	GARRISON_STR_POW_EQUIPMENT = 3,	--Scales impact of euqipment deficiency by raising that deficiency to the number here. Formula: efficiency = 1.0 - equipment_deficiency^GARRISON_STR_POW_EQUIPMENT
 
-	SUPPRESSION_NEEDED_BY_RESISTANCE_POINT = 0.75, -- Number of suppression point we need for each 1% of resistance
+	SUPPRESSION_NEEDED_BY_RESISTANCE_POINT = 0.6, -- Number of suppression point we need for each 1% of resistance
 	SUPPRESSION_NEEDED_LOWER_CAP = 10.0,	-- if resistance is lower than this value then we always act as though it is at the define for the purpose of suppresion requirements
 	SUPPRESSION_NEEDED_UPPER_CAP = 50.0, -- if resistance is greater than this value then we always act as though it is at the define for the purpose of suppresion requirements
 
@@ -661,7 +661,7 @@ NBuildings = {
 	RADAR_RANGE_MIN = 15,				-- Radar range (from state center to province center) in measure of map pixels. Exluding techs.
 	RADAR_RANGE_MAX = 150,				-- Range is interpolated between building levels 1-15.
 	RADAR_INTEL_EFFECT = 30,			-- Province covered by radar increases intel by 10 (where 255 is max). Province may be covered by multiple radars, then the value sums up.
-	SABOTAGE_FACTORY_DAMAGE = 75.0,		-- How much damage takes a factory building in sabotage when state is occupied. Damage is mult by (1 + resistance strength), i.e. up to 2 x base value.
+	SABOTAGE_FACTORY_DAMAGE = 65.0,		-- How much damage takes a factory building in sabotage when state is occupied. Damage is mult by (1 + resistance strength), i.e. up to 2 x base value.
 	BASE_FACTORY_REPAIR = 0.3,			-- Default repair rate before factories are taken into account
 	BASE_FACTORY_REPAIR_FACTOR = 2.0,	-- Factory speed modifier when repairing.
 	SUPPLY_PORT_LEVEL_THROUGHPUT = 3,   -- supply throughput per level of naval base
@@ -723,12 +723,12 @@ NMilitary = {
 
 	INFRASTRUCTURE_MOVEMENT_SPEED_IMPACT = -0.03,	-- speed penalty per infrastucture below maximum.
 	
-	VPS_FOR_HISTORY_ENTRY = 1,					-- Minimum VPs required to receive an entry in divisional history
-	VPS_FOR_HIGH_HISTORY_ENTRY = 8,				-- VPs required for high-level history entry
+	VPS_FOR_HISTORY_ENTRY = 5,					-- Minimum VPs required to receive an entry in divisional history
+	VPS_FOR_HIGH_HISTORY_ENTRY = 15,				-- VPs required for high-level history entry
 	ENTRIES_TO_CHECK_FOR_DUPLICATE = 2,			-- Max number of history entries to check back to see if we're being awarded the same entry
-	COST_INCREASE_PER_ACTIVE_MEDAL = 0.50,		-- Additional cost factor per active medal
+	COST_INCREASE_PER_ACTIVE_MEDAL = 0.75,		-- Additional cost factor per active medal
 	MAX_ENTRY_ELISION_COUNT = 4,				-- If we do the same type of thing consecutively, each entry will stack locations up to this number
-	GENERATE_AI_DIV_COMMAND_HISTORY_ENTRIES = true,	--Should we generate history entries for the AI (may cause savegame bloat)
+	GENERATE_AI_DIV_COMMAND_HISTORY_ENTRIES = false,	--Should we generate history entries for the AI (may cause savegame bloat)
 	FIELD_EXPERIENCE_ON_DIVISION_MULT = 0.03,	-- Multiply field experience gained by this, when applying to divisional commander
 	MAX_FIELD_EXPERIENCE_ON_DIVISION = 8000,	-- Max experience that can be gained on divisional commanders
 	FIELD_EXPERIENCE_ON_DIVISION_PER_MEDAL_MULT = 0.1,	--Multiply officer field experience gain by this * number of division medals on application
@@ -785,9 +785,9 @@ NMilitary = {
 	LAND_COMBAT_STR_DICE_SIZE = 2,                 -- nr of damage dice
 	LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.05,       -- global damage modifier... but some equipment is returned at end of battles see : EQUIPMENT_COMBAT_LOSS_FACTOR
 	LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.055,       -- global damage modifier
-	LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.030,    -- air global damage modifier
-	LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.024,    -- global damage modifier
-	LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 2, -- how many CAS/TAC can enter a combat depending on enemy width there
+	LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.035,    -- air global damage modifier
+	LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.028,    -- global damage modifier
+	LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 3, -- how many CAS/TAC can enter a combat depending on enemy width there
 	LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 1,   -- extra damage dice if our armor outclasses enemy
 	LAND_COMBAT_ORG_ARMOR_ON_SOFT_DICE_SIZE = 2,   -- extra damage dice if our armor outclasses enemy
 	LAND_COMBAT_STR_ARMOR_DEFLECTION_FACTOR = 0.70, -- damage reduction if armor outclassing enemy
@@ -1160,8 +1160,8 @@ NAir = {
 	COMBAT_MAX_WINGS_AT_GROUND_ATTACK = 10000,	        	-- we can really pounce a land strike and escalate
 	COMBAT_MAX_WINGS_AT_ONCE_PORT_STRIKE = 10000,        -- we can really pounce a naval strike and escalate
 	AIR_REGION_SUPERIORITY_PIXEL_SCALE = 0.04,           -- air superiority scale = superiority/(pixels*this)
-	COMBAT_MULTIPLANE_CAP = 2.0,						-- How many planes can shoot at each plane on other side ( if there are 100 planes we are atttacking COMBAT_MULTIPLANE_CAP * 100 of our planes can shoot )
-	COMBAT_DAMAGE_SCALE = 0.20,							-- Higher value = more shot down planes
+	COMBAT_MULTIPLANE_CAP = 1.2,						-- How many planes can shoot at each plane on other side ( if there are 100 planes we are atttacking COMBAT_MULTIPLANE_CAP * 100 of our planes can shoot )
+	COMBAT_DAMAGE_SCALE = 0.25,							-- Higher value = more shot down planes
 	COMBAT_DAMAGE_SCALE_CARRIER = 8,                    -- same as above but used inside naval combat for carrier battles
 	DETECT_CHANCE_FROM_OCCUPATION = 0.15, 				-- How much the controlled provinces in area affects the air detection base value.
 	DETECT_CHANCE_FROM_RADARS = 0.6, 					-- How much the radars in area affects detection chance.
@@ -1283,7 +1283,7 @@ NAir = {
 
 	CARRIER_PLANES_AMOUNT_FOR_POSITIONING = 10,         -- below this amount of planes on a carrier we no longer get max benefit on enemy positioning
 
-	CAS_NIGHT_ATTACK_FACTOR = 0.1,                      -- CAS damaged get multiplied by this in land combats at night
+	CAS_NIGHT_ATTACK_FACTOR = 0.3,                      -- CAS damaged get multiplied by this in land combats at night
 
 	AIR_WING_ATTACK_LOGISTICS_NO_TRUCK_DISRUPTION_FACTOR = 0.02, -- If a unit isn't motorized, still disrupt its supply by damage * this
 	AIR_WING_ATTACK_LOGISTICS_TRUCK_DAMAGE_FACTOR = 0.15,
@@ -1577,7 +1577,7 @@ NNavy = {
 		15,   -- low
 		3.0,   -- medium
 		1.0,   -- high
-		0.5,   -- I am death incarnate!
+		1.0,   -- I am death incarnate!
 	},
 
 	MIN_REPAIR_FOR_JOINING_COMBATS = { -- strikeforces/patrol forces will not join combats if they are not repaired enough
@@ -1798,9 +1798,9 @@ NNavy = {
 	CHANCE_TO_DAMAGE_PART_ON_CRITICAL_HIT_FROM_AIR					= 0.1,	-- the game will roll between 0-1 and will damage a random part if below this val on air critical hits
 
 	SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS 					= 3.0,	-- this screen ratio to num capital/carriers is needed for full screening beyond screen line
-	SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CONVOYS 					= 0.5,	-- this screen ratio to num convoys is needed for full screening beyond screen line
+	SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CONVOYS 					= 0.1,	-- this screen ratio to num convoys is needed for full screening beyond screen line
 	CAPITAL_RATIO_FOR_FULL_SCREENING_FOR_CARRIERS 					= 1.0,  -- this capital ratio to num carriers is needed for full screening beyond screen line
-	CAPITAL_RATIO_FOR_FULL_SCREENING_FOR_CONVOYS 					= 0.25,  -- this capital ratio to num convoys is needed for full screening beyond screen line
+	CAPITAL_RATIO_FOR_FULL_SCREENING_FOR_CONVOYS 					= 0.1,  -- this capital ratio to num convoys is needed for full screening beyond screen line
 
 	TASK_FORCE_ROLE_TO_INSIGNIA = {								-- define the index of the insignia to use for a task force designed for a specific role
 		6,	-- Role undefined
@@ -1838,7 +1838,7 @@ NNavy = {
 	HIT_PROFILE_SPEED_BASE											= 20,		-- Base value added to hitprofile speed calulation
 
 	CONVOY_RAID_MAX_REGION_TO_TASKFORCE_RATIO						= 1.5,		-- each taskforce in convoy raid mission can at most cover this many regions without losing efficiency
-	CONVOY_DEFENSE_MAX_CONVOY_TO_SHIP_RATIO							= 12.0,		-- each ship in convoy defense mission can at most cover this many convoys without losing efficiency
+	CONVOY_DEFENSE_MAX_CONVOY_TO_SHIP_RATIO							= 10.0,		-- each ship in convoy defense mission can at most cover this many convoys without losing efficiency
 	CONVOY_DEFENSE_MAX_REGION_TO_TASKFORCE_RATIO					= 8.0,		-- each taskforce in convoy defense mission can at most cover this many regions without losing efficiency
 
 	MINE_SWEEPING_SUPREMACY_EFFICIENCY_MAX_REGION_TO_TASKFORCE_RATIO = 1.0,		-- mine missions will get lower supremacies if they are assigned more regions than this
@@ -2663,7 +2663,7 @@ NAI = {
 	LAND_COMBAT_CAS_PLANES_PER_ENEMY_ARMY_LIMIT = 100,	-- Limit of CAS planes requested by enemy armies
 	LAND_COMBAT_CAS_PER_ENEMY_ARMY = 20,				-- Amount of CAS planes requested per enemy army
 	LAND_COMBAT_ANTI_LOGISTICS_PER_ENEMY_ARMY = 5,     -- Amount of CAS planes requested per enemy army for anti-logistics
-	LAND_COMBAT_CAS_PER_COMBAT = 100,					-- Amount of CAS requested per combat
+	LAND_COMBAT_CAS_PER_COMBAT = 120,					-- Amount of CAS requested per combat
 	LAND_COMBAT_BOMBERS_PER_LAND_FORT_LEVEL = 20,		-- Amount of bomber planes requested per enemy land fort level
 	LAND_COMBAT_BOMBERS_PER_COASTAL_FORT_LEVEL = 20,	-- Amount of bomber planes requested per enemy coastal fort level
 	LAND_COMBAT_MIN_EXCORT_PLANES = 50,					-- Min amount of planes requested to excort operations
@@ -3172,7 +3172,7 @@ NOperatives = {
 	INTEL_NETWORK_SUB_NETWORK_NATIONAL_COVERAGE_TO_DETECTION_CHANCE_FACTOR = 3.0,	-- multiplied to the contribution to the national coverage of the sub network (a value in range [0, 1])
 	INTEL_NETWORK_DETECTION_GLOBAL_FACTOR = 0.01,				-- global factor multiplied to the detection chance before it is multiplied a dice roll in the range [0,1000)
 	BUILD_INTEL_NETWORK_DAILY_XP_GAIN = 1,
-	QUIET_INTEL_NETWORK_DAILY_XP_GAIN = 0.1,
+	QUIET_INTEL_NETWORK_DAILY_XP_GAIN = 0,
 	OPERATIVE_MISSION_DETECTION_CHANCE_FACTOR = {
 		-- Factor multiplied to the detection chance of an agent on mission before the offsets
 		0.0, -- NoMission

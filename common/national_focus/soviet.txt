@@ -64,13 +64,13 @@ focus_tree = {
 
 	focus = {
 		id = SOV_expand_the_fleet_commands
-		icon = GFX_goal_generic_wolf_pack
+		icon = GFX_Nora_ExpandNavalCommand
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = 43
 		y = 0
 		relative_position_id = SOV_finish_the_2_5_year_plan
 
-		cost = 5 
+		cost = 3 
 
 		ai_will_do = {
 			factor = 1
@@ -161,7 +161,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_marine_divisions
-		icon = GFX_goal_generic_amphibious_assault
+		icon = GFX_Nora_NavalInfantry
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = 0
 		y = 1
@@ -267,7 +267,7 @@ focus_tree = {
 		relative_position_id = SOV_expand_the_fleet_commands
 		x = -2
 		y = 1
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -295,14 +295,17 @@ focus_tree = {
 
 	focus = {
 		id = SOV_capital_ship_focus
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_Nora_SovetskySoyuz
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	 	mutually_exclusive = { focus = SOV_carrier_focus }
 	 	prerequisite = { focus = SOV_the_old_school }
 		x = -1
 		y = 1
 		relative_position_id = SOV_the_old_school
-		cost = 5
+		cost = 3
+		available = {
+			has_tech = basic_ship_hull_heavy
+	}
 
 		available_if_capitulated = yes
 
@@ -314,20 +317,87 @@ focus_tree = {
 				category = bb_tech
 				category = bc_tech
 			}
+						
+			
+			set_technology = {
+				radio_detection= 1
+				improved_fire_control_system = 1
+				dp_secondary_battery = 1
+				improved_airplane_launcher = 1
+				ship_hull_super_heavy = 1
+			}
+			create_equipment_variant = {
+				name = "Sovetsky Soyuz Class"
+				type = ship_hull_super_heavy_1
+				name_group = SOV_BB_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_super_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_1
+					fixed_ship_engine_slot = heavy_ship_engine_3
+					fixed_ship_secondaries_slot = dp_ship_secondaries
+					fixed_ship_armor_slot = ship_armor_shbb
+					front_1_custom_slot = ship_super_heavy_battery_1
+					front_2_custom_slot = ship_super_heavy_battery_1
+					mid_1_custom_slot = dp_ship_secondaries
+					mid_2_custom_slot = ship_anti_air_2
+					mid_3_custom_slot = ship_anti_air_2
+					rear_1_custom_slot = ship_super_heavy_battery_1
+					rear_2_custom_slot = ship_airplane_launcher_2
+				}
+			}
+				add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "SOV" 
+					version_name = "Sovetsky Soyuz Class"
+				}
+				name = "Sovetsky Soyuz" 
+				requested_factories = 5
+				progress = 0.70
+				amount = 1
+			}
+				add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "SOV" 
+					version_name = "Sovetsky Soyuz Class"
+				}
+				name = "Sovetskaya Ukraina" 
+				requested_factories = 5
+				progress = 0.50
+				amount = 1
+			}
+				add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "SOV" 
+					version_name = "Sovetsky Soyuz Class"
+				}
+				name = "Sovetskaya Rossiya" 
+				requested_factories = 5
+				progress = 0.20
+				amount = 1
+			}
+
 		}
 	}
 
 	focus = {
 		id = SOV_carrier_focus
-		icon = GFX_goal_generic_navy_carrier
+		icon = GFX_Nora_Project72
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	 	mutually_exclusive = { focus = SOV_capital_ship_focus }
 	 	prerequisite = { focus = SOV_the_old_school }
 		x = 1
 		y = 1
 		relative_position_id = SOV_the_old_school
-		cost = 5
-
+		cost = 3
+		available = {
+			has_tech = early_ship_hull_carrier
+	}
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -337,6 +407,69 @@ focus_tree = {
 				uses = 2
 				category = cv_tech
 			}
+			set_technology = {
+				basic_ship_hull_carrier= 1
+				radio_detection= 1
+			}
+			create_equipment_variant = {
+				name = "Kiev Class"
+				type = ship_hull_carrier_1
+				name_group = SOV_CV_HISTORICAL
+				parent_version = 0
+				modules= {
+				fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_anti_air_slot= ship_anti_air_2
+				fixed_ship_radar_slot = ship_radar_1
+				fixed_ship_engine_slot = carrier_ship_engine_2
+				fixed_ship_secondaries_slot = ship_secondaries_2
+				front_1_custom_slot = ship_deck_space
+				}
+			}
+				add_equipment_production = {
+				equipment = {
+					type = ship_hull_carrier_1
+					creator = "SOV" 
+					version_name = "Kiev Class"
+				}
+				name = "Kiev" 
+				requested_factories = 5
+				progress = 0.70
+				amount = 1
+			}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_1
+						creator = "SOV" 	
+						version_name = "Kiev Class"
+					}
+					name = "Minsk" 
+					requested_factories = 5
+					progress = 0.50
+					amount = 1
+			}
+				add_equipment_production = {
+				equipment = {
+					type = ship_hull_carrier_1
+					creator = "SOV" 	
+					version_name = "Kiev Class"
+				}
+				name = "Novorossiysk" 
+				requested_factories = 5
+				progress = 0.40
+				amount = 1
+		}
+				add_equipment_production = {
+			equipment = {
+				type = ship_hull_carrier_1
+				creator = "SOV" 	
+				version_name = "Kiev Class"
+			}
+			name = "Baku" 
+			requested_factories = 5
+			progress = 0.25
+			amount = 1
+	}
 		}
 	}
 
@@ -349,7 +482,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_carrier_focus
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -370,7 +503,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_expand_the_fleet_commands
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -387,7 +520,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_the_young_school
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -410,7 +543,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_the_young_school
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -433,7 +566,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_surface_combat
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 

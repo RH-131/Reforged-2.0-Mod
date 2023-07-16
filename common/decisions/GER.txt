@@ -3604,7 +3604,6 @@ foreign_politics = {
 		available = {
 			FRA = { has_capitulated = yes }
 			GER = { is_in_faction_with = ITA }
-			GER = { is_in_faction_with = BUL }
 			GER = { is_in_faction_with = HUN }			
 		}
 
@@ -3765,7 +3764,7 @@ foreign_politics = {
 		    }
 			add_timed_idea = {
 			    idea = Barbarossa_I
-			    days = 110
+			    days = 150
             }
 			every_army_leader = {
 				add_unit_leader_trait = barbarossa_river
@@ -3773,7 +3772,7 @@ foreign_politics = {
 			
 		    add_timed_idea = {
 		     	idea = Barbarossa_II
-		     	days = 180
+		     	days = 210
 		  	}
 			SOV = {
 				add_timed_idea = { idea = SOV_surprise_strike days = 120 }
@@ -3790,6 +3789,10 @@ foreign_politics = {
 					}
 					add_ideas = extensive_conscription
 				}
+			}
+			MON = {
+				add_timed_idea = { idea = SOV_surprise_strike days = 120 }
+				add_timed_idea = { idea = SOV_vvs_crippled days = 365 }
 			}
 			if = {
 				limit = {

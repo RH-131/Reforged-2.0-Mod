@@ -1951,6 +1951,7 @@ leader_traits = {
 		production_speed_arms_factory_factor = 0.1
 		production_speed_industrial_complex_factor = -0.05
 		production_speed_dockyard_factor = 0.1
+		production_speed_steel_refinery_factor = 0.05
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 
@@ -3340,7 +3341,17 @@ leader_traits = {
 
 	GER_mechanized_equipment_manufacturer = {
 		random = no
-
+		equipment_bonus = {
+			mechanized_equipment = {
+				breakthrough = 0.15 hardness = 0.05 armor_value = 0.2 build_cost_ic = 0.05 
+			}
+			armored_cars_equipment = {
+				breakthrough = 0.1 soft_attack = 0.05 hardness = 0.05 build_cost_ic = 0.05 
+			}
+			amphibious_mechanized_equipment = {
+				breakthrough = 0.1 soft_attack = 0.05 hardness = 0.05 build_cost_ic = 0.05 
+			}
+		}
 		ai_will_do = {
 			factor = 1
 		}

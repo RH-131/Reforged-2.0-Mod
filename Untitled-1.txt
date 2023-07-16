@@ -1,0 +1,64 @@
+			
+			
+			set_technology = {
+				basic_ship_hull_heavy= 1
+				radio_detection= 1
+				improved_fire_control_system = 1
+				dp_secondary_battery = 1
+				improved_airplane_launcher = 1
+			}
+create_equipment_variant = {
+				name = "Sovetsky Soyuz Class"
+				type = ship_hull_super_heavy_1
+				name_group = SOV_BB_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_super_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_1
+					fixed_ship_engine_slot = heavy_ship_engine_3
+					fixed_ship_secondaries_slot = dp_ship_secondaries
+					fixed_ship_armor_slot = ship_armor_shbb
+					front_1_custom_slot = ship_super_heavy_battery_1
+					front_2_custom_slot = ship_super_heavy_battery_1
+					mid_1_custom_slot = dp_ship_secondaries
+					mid_2_custom_slot = dp_ship_secondaries
+					mid_3_custom_slot = ship_secondaries_2
+					rear_1_custom_slot = ship_super_heavy_battery_1
+					rear_2_custom_slot = ship_airplane_launcher_2
+				}
+			}
+				add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "SOV" 
+					version_name = "Sovetsky Soyuz Class"
+				}
+				name = "Sovetsky Soyuz" 
+				requested_factories = 5
+				progress = 0.70
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "SOV" 
+					version_name = "Sovetsky Soyuz Class"
+				}
+				name = "Sovetskaya Ukraina" 
+				requested_factories = 5
+				progress = 0.50
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "SOV" 
+					version_name = "Sovetsky Soyuz Class"
+				}
+				name = "Sovetskaya Rossiya" 
+				requested_factories = 5
+				progress = 0.20
+				amount = 1
+			}

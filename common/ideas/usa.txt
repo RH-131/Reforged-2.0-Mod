@@ -112,7 +112,6 @@ ideas = {
 				experience_gain_navy_factor = -0.5
 				training_time_army_factor = 0.5
 				max_command_power = -75
-				fuel_gain_factor = -0.4
 				supply_consumption_factor = 0.2
 				land_doctrine_cost_factor = 0.4
 				air_doctrine_cost_factor = 0.4
@@ -136,7 +135,6 @@ ideas = {
 				experience_gain_navy_factor = -0.25
 				training_time_army_factor = 0.25
 				max_command_power = -50
-				fuel_gain_factor = -0.2
 				supply_consumption_factor = 0.1
 				land_doctrine_cost_factor = 0.2
 				air_doctrine_cost_factor = 0.2
@@ -2008,6 +2006,13 @@ ideas = {
 					armor_value = 0.05
 					build_cost_ic = 0.05
 				}
+				amphibious_tank_chassis = {
+					reliability = 0.05
+					soft_attack = 0.1
+					hard_attack = 0.1
+					armor_value = 0.05
+					build_cost_ic = 0.05
+				}
 			    light_tank_chassis = {
 					reliability = 0.05
 					soft_attack = 0.1
@@ -2051,6 +2056,12 @@ ideas = {
 
 			equipment_bonus = {
 				medium_tank_chassis = {
+					reliability = 0.1
+					maximum_speed = 0.15
+					hard_attack = 0.1
+					defense = 0.1
+				}
+				amphibious_tank_chassis = {
 					reliability = 0.1
 					maximum_speed = 0.15
 					hard_attack = 0.1
@@ -2563,11 +2574,7 @@ ideas = {
 				motorized_equipment = -0.05
 			}
 			modifier = { materiel_manufacturer_cost_factor = -0.33 }
-			equipment_bonus = {
-				motorized_equipment = {
-					build_cost_ic = -0.15 instant = yes
-				}
-			}
+			traits = { motorized_equipment_manufacturer }
 		}
 
 		rock_island_arsenal = {

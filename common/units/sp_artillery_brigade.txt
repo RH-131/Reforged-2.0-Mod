@@ -4,7 +4,7 @@ sub_units = {
 		sprite = light_armor
 		map_icon_category = armored
 		priority = 1795
-		affects_speed = no		   
+		affects_speed = yes		   
 		active = yes
 		
 		type = {
@@ -36,11 +36,11 @@ sub_units = {
         suppression = 2
  
 		forest = {
-		    attack = -0.05
+		    attack = 0.0
 			movement = -0.2
 		}
 		hills = 	{
-		    attack = -0.05
+		    attack = 0.0
 			defence = -0.05
 		}
 		mountain = 	{
@@ -49,17 +49,17 @@ sub_units = {
 			movement = -0.25
 		}
 		jungle = {
-		    attack = -0.15
+		    attack = -0.1
 			defence = -0.05
 			movement = -0.25
 		}
 		marsh = {
-		    attack = -0.3
+		    attack = -0.25
 			defence = -0.1
 			movement = -0.4
 		}
 		urban = {
-			attack = -0.1
+			attack = -0.05
 			defence = -0.2
 			movement = 0.1
 		}
@@ -72,14 +72,14 @@ sub_units = {
 			attack = -3.0
 		}
 		fort = {
-			attack = 0.1
+			attack = 0.15
 		}
 		plains = {
 			attack = 0.05
 			movement = 0.1
 		}
         	desert = {
-			attack = 0.05
+			attack = 0.1
 			movement = 0.1
 		}
 	}
@@ -88,7 +88,7 @@ sub_units = {
 		sprite = medium_armor
 		map_icon_category = armored
 		priority = 1796
-		affects_speed = no		   
+		affects_speed = yes			   
 		active = yes
 		
 		type = {
@@ -119,12 +119,12 @@ sub_units = {
 		suppression = 2
 
 		forest = {
-		    attack = -0.12
+		    attack = -0.1
 			defence = -0.2
 			movement = -0.2
 		}
 		hills = 	{
-		    attack = -0.12
+		    attack = -0.1
 			defence = -0.15
 			movement = -0.1
 		}
@@ -139,12 +139,12 @@ sub_units = {
 			movement = -0.4
 		}
 		marsh = {
-		    attack = -0.4
+		    attack = -0.3
 			defence = -0.3
 			movement = -0.5
 		}
 		urban = {
-			attack = -0.10
+			attack = -0.05
 			defence = -0.2
 			movement = 0.05
 		}
@@ -167,7 +167,7 @@ sub_units = {
 			movement = 0.05
 		}
 		fort = {
-			attack = 0.2
+			attack = 0.25
 		}
 	}
 	
@@ -175,7 +175,7 @@ sub_units = {
 		sprite = heavy_armor
 		map_icon_category = armored
 		priority = 1797
-		affects_speed = no		   
+		affects_speed = yes			   
 		active = yes
 		training_time = 140
 		
@@ -246,17 +246,17 @@ sub_units = {
 			attack = -7.0
 		}
 		fort = {
-			attack = 0.3
+			attack = 0.35
 		}
 		plains = {
 			attack = 0.05
 			defence = 0.0 
-			movement = 0.05
+			movement = 0.0
 		}
         desert = {
 			attack = 0.05
 			defence = 0.0 
-			movement = 0.05
+			movement = 0.0
 		}
 	}
 	medium_assault_gun_company = {

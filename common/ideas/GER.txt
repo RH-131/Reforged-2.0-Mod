@@ -2126,6 +2126,14 @@ ideas = {
 					build_cost_ic = 0.10
 				}
 
+				amphibious_tank_chassis = {
+					reliability = -0.05
+					soft_attack = 0.1
+					hard_attack = 0.1
+					armor_value = 0.05
+					build_cost_ic = 0.10
+				}
+
 			    light_tank_chassis = {
 					reliability = -0.05
 					soft_attack = 0.1
@@ -2183,6 +2191,13 @@ ideas = {
 					maximum_speed = 0.1
 					build_cost_ic = 0.1
 				}
+				amphibious_tank_chassis = {
+					reliability = -0.05
+					breakthrough = 0.1
+					hard_attack = 0.1
+					maximum_speed = 0.1
+					build_cost_ic = 0.1
+				}
 				medium_tank_artillery_chassis = {
 					reliability = -0.10
 					soft_attack = 0.1
@@ -2192,7 +2207,7 @@ ideas = {
 				}
 				medium_assault_gun_equipment = {
 					reliability = -0.05
-					soft_attack = 0.15
+					soft_attack = 0.10
 					breakthrough = 0.1 
 					maximum_speed = 0.1
 					build_cost_ic = 0.05
@@ -2421,6 +2436,15 @@ ideas = {
 					build_cost_ic = 0.1
 				}
 
+				amphibious_tank_chassis = {
+					reliability = -0.1
+					maximum_speed = 0.10 
+					armor_value = 0.05 
+					hard_attack = 0.15 
+					soft_attack = 0.15 
+					build_cost_ic = 0.1
+				}
+
 				medium_tank_aa_chassis = {
 					reliability = -0.1
 					air_attack = 0.1
@@ -2487,6 +2511,15 @@ ideas = {
 		
 			equipment_bonus = {
 				medium_tank_chassis = {
+					reliability = -0.1
+					maximum_speed = 0.10 
+					armor_value = 0.05 
+					hard_attack = 0.15 
+					soft_attack = 0.15 
+					build_cost_ic = 0.1
+				}
+
+				amphibious_tank_chassis = {
 					reliability = -0.1
 					maximum_speed = 0.10 
 					armor_value = 0.05 
@@ -2612,6 +2645,10 @@ ideas = {
 					build_cost_ic = -0.1 
 				}
 
+				amphibious_tank_chassis = {
+					build_cost_ic = -0.1 
+				}
+
 				medium_assault_gun_equipment = {
 					build_cost_ic = -0.1 
 				}
@@ -2664,6 +2701,9 @@ ideas = {
 					build_cost_ic = -0.05 armor_value = 0.1 reliability = -0.05
 				} 
 				medium_tank_chassis = {
+					build_cost_ic = -0.05 armor_value = 0.05 reliability = -0.05
+				}
+				amphibious_tank_chassis = {
 					build_cost_ic = -0.05 armor_value = 0.05 reliability = -0.05
 				}
 				medium_assault_gun_equipment = {
@@ -3442,15 +3482,6 @@ ideas = {
 				motorized_equipment = -0.05
 			}
 			modifier = { materiel_manufacturer_cost_factor = -0.33 }
-			equipment_bonus = {
-				mechanized_equipment = {
-					breakthrough = 0.15 hardness = 0.05 armor_value = 0.2 build_cost_ic = 0.05 
-				}
-				armored_cars_equipment = {
-					breakthrough = 0.1 soft_attack = 0.05 hardness = 0.05 build_cost_ic = 0.05 
-				}
-			}
-			
 			traits = { GER_mechanized_equipment_manufacturer }
 		}
 
