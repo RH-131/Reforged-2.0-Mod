@@ -179,6 +179,7 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
 				production_speed_infrastructure_factor = 0.05
+				production_speed_dockyard_factor = 0.05
 			}
 
 		}
@@ -689,6 +690,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.1
 				production_speed_dockyard_factor = 0.1
 				fuel_gain_factor = 0.5
+				fuel_gain_factor_from_states = 1.5
 			}
 
 		}
@@ -2307,7 +2309,6 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = SAF_joint_air_training_scheme
 			}
 
 			research_bonus = {
