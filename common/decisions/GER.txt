@@ -3283,7 +3283,8 @@ foreign_politics = {
 			hidden_effect = {
 				complete_national_focus = GER_weserubung
 				DEN = { remove_ideas = neutrality_idea }
-				NOR = { remove_ideas = neutrality_idea }
+				NOR = { remove_ideas = neutrality_idea
+						add_timed_idea = { idea = nor_gigachad_idea days = 40 } }
 				ENG = {
 					add_to_faction = DEN
 					add_to_faction = NOR
