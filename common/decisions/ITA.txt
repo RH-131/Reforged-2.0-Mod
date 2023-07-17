@@ -1,86 +1,4 @@
 operations = {
-    ITA_annex_eth = {
-
-		icon = generic_political_discourse
-
-		allowed = {
-			tag = ITA			
-		}
-		
-		visible = {
-			tag = ITA
-			ETH = { is_ai = yes }
-			country_exists = ETH
-		}
-		available = {
-			date > 1936.1.1
-		}
-
-		cost = 0
-
-		fire_only_once = yes
-
-		complete_effect = {
-			ETH = {
-				transfer_navy = {
-					target = ITA
-				}
-			}
-			annex_country = {
-              target = ETH
-              transfer_troops = yes
-			}
-			every_state = {
-				limit = {
-					is_core_of = ETH
-				}
-				set_resistance = 0
-				set_compliance = 100
-			}	
-		}		
-	}
-	ITA_invade_syria = {
-        icon = generic_civil_support
- 		fire_only_once = yes
-		
-		allowed = {
-			tag = ITA
-		}
-		available = {
-		    OR = {
-		        291 = { is_controlled_by = GER } 
-                291 = { is_controlled_by = ITA } 
-            }	
-            553 = { is_controlled_by = EFR }	
-            ENG = {
-                NOT = { has_war_with = EFR }
-            }				
-		}
-
-		visible = {
-		}		
-		cost = 0
-		
-		modifier = {		
-		}
-
-		days_remove = 15
-		
-		
-		ai_will_do = {
-			factor = 50
-		}
-		remove_effect = {
-			ITA = {
-				transfer_state = 553
-				transfer_state = 554
-				transfer_state = 677
-				transfer_state = 680
-			}		
-		}	
-	}
-}
-political_actions = {
 	ITA_Littorio = {
 
 		icon = generic_naval
@@ -171,6 +89,160 @@ political_actions = {
 			}
 		}
 	}
+	ITA_refit_bbs = {
+
+		icon = generic_naval
+
+		available = {
+			has_tech = improved_fire_control_system
+		}
+
+		visible = {
+			has_completed_focus = ITA_modernisation_attempt
+		}
+		cost = 0
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+
+			create_equipment_variant = {
+				name = "Andrea Doria Class Refit"
+				type = ship_hull_heavy_1
+				name_group = ITA_BB_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_bb_1
+					front_1_custom_slot = ship_heavy_battery_2
+					mid_1_custom_slot = ship_heavy_battery_2
+					mid_2_custom_slot = ship_secondaries_1
+					rear_1_custom_slot = ship_heavy_battery_2
+				}
+			}
+			hidden_effect = {
+				ITA = {
+				    destroy_ships = {
+				    	type = ship_hull_heavy_1
+				    	 count = 2
+			    	}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_1
+						creator = "ITA" 
+						version_name = "Andrea Doria Class Refit"
+					}
+					name = "RN Andrea Doria" 
+					requested_factories = 5
+					progress = 0.80
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_1
+						creator = "ITA" 
+						version_name = "Andrea Doria Class Refit"
+					}
+					name = "RN Duilio" 
+					requested_factories = 5
+					progress = 0.75
+					amount = 1
+				}
+			}
+		}
+	}
+    ITA_annex_eth = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ITA			
+		}
+		
+		visible = {
+			tag = ITA
+			ETH = { is_ai = yes }
+			country_exists = ETH
+		}
+		available = {
+			date > 1936.1.1
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		complete_effect = {
+			ETH = {
+				transfer_navy = {
+					target = ITA
+				}
+			}
+			annex_country = {
+              target = ETH
+              transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = ETH
+				}
+				set_resistance = 0
+				set_compliance = 100
+			}	
+		}		
+	}
+	ITA_invade_syria = {
+        icon = generic_civil_support
+ 		fire_only_once = yes
+		
+		allowed = {
+			tag = ITA
+		}
+		available = {
+		    OR = {
+		        291 = { is_controlled_by = GER } 
+                291 = { is_controlled_by = ITA } 
+            }	
+            553 = { is_controlled_by = EFR }	
+            ENG = {
+                NOT = { has_war_with = EFR }
+            }				
+		}
+
+		visible = {
+		}		
+		cost = 0
+		
+		modifier = {		
+		}
+
+		days_remove = 15
+		
+		
+		ai_will_do = {
+			factor = 50
+		}
+		remove_effect = {
+			ITA = {
+				transfer_state = 553
+				transfer_state = 554
+				transfer_state = 677
+				transfer_state = 680
+			}		
+		}	
+	}
+}
+political_actions = {
     ITA_reconquista = {
 	    icon = generic_operation
 		allowed = {
