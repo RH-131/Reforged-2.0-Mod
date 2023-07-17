@@ -685,8 +685,10 @@ ideas = {
 			picture = man_five_year_plan_tank
 
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.075
+				production_speed_arms_factory_factor = 0.1
 				production_speed_dockyard_factor = 0.1
+				fuel_gain_factor = 0.5
 			}
 
 		}
@@ -833,6 +835,9 @@ ideas = {
 			modifier = {
 				production_speed_industrial_complex_factor = 0.15
 				production_speed_infrastructure_factor = 0.15
+				production_speed_steel_refinery_factor = 0.15
+				production_speed_synthetic_rubber_refinery_factor = 0.15
+				production_speed_synthetic_refinery_factor = 0.15
 			}
 		}
 
@@ -2142,7 +2147,6 @@ ideas = {
 			picture = generic_naval_manufacturer_2
 
 			available = {
-				has_decision = SAF_procure_us_shipbuilding_expertise
 			}
 
 			research_bonus = {
@@ -2163,7 +2167,6 @@ ideas = {
 			picture = generic_naval_manufacturer_2
 
 			available = {
-				has_decision = SAF_procure_us_shipbuilding_expertise
 			}
 
 			research_bonus = {
@@ -2184,7 +2187,6 @@ ideas = {
 			picture = generic_naval_manufacturer_2
 
 			available = {
-				has_decision = SAF_procure_uk_shipbuilding_expertise
 			}
 
 			research_bonus = {

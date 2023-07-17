@@ -22,7 +22,7 @@ HOL_obtain_foreign_colonial_investments = {
 				ENG = { has_war = no }
 				JAP = { has_war = no }
 			}
-			800 = {
+			695 = {
 				controller = {
 					OR = {
 						tag = ROOT
@@ -31,7 +31,7 @@ HOL_obtain_foreign_colonial_investments = {
 					has_full_control_of_state = PREV
 				}
 			}
-			669 = {
+			309 = {
 				controller = {
 					OR = {
 						tag = ROOT
@@ -40,8 +40,8 @@ HOL_obtain_foreign_colonial_investments = {
 					has_full_control_of_state = PREV
 				}
 			}
-			has_full_control_of_state = 800
-			has_full_control_of_state = 669
+			has_full_control_of_state = 309
+			has_full_control_of_state = 695
 		}
 
 		cost = 50
@@ -89,7 +89,7 @@ HOL_obtain_foreign_colonial_investments = {
 				ENG = { has_war = no }
 				JAP = { has_war = no }
 			}
-			800 = {
+			309 = {
 				controller = {
 					OR = {
 						tag = ROOT
@@ -98,7 +98,7 @@ HOL_obtain_foreign_colonial_investments = {
 					has_full_control_of_state = PREV
 				}
 			}
-			669 = {
+			695 = {
 				controller = {
 					OR = {
 						tag = ROOT
@@ -107,8 +107,8 @@ HOL_obtain_foreign_colonial_investments = {
 					has_full_control_of_state = PREV
 				}
 			}
-			has_full_control_of_state = 800
-			has_full_control_of_state = 669
+			has_full_control_of_state = 309
+			has_full_control_of_state = 695
 		}
 
 		cost = 50
@@ -223,15 +223,6 @@ HOL_obtain_foreign_colonial_investments = {
 			}
 			NOT = { has_war_with = USA }
 			NOT = { has_war_with = ENG }
-			669 = {
-				controller = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-					has_full_control_of_state = PREV
-				}
-			}
 		}
 
 		cost = 10
@@ -246,7 +237,7 @@ HOL_obtain_foreign_colonial_investments = {
 		}
 
 		remove_effect = {
-			669 = {
+			309 = {
 				add_resource = {
 					type = oil
 					amount = 1
