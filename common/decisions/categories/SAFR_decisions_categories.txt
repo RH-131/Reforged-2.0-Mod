@@ -24,7 +24,10 @@ SAFR_purchase_planes = {
 	#picture = GFX_decision_cat_picture_organize_the_blackshirts
 	
 	allowed = {
+	    OR = {
 		tag = SAF
+		tag = RAJ
+		}
 	}
 
 	priority = {
@@ -36,7 +39,10 @@ SAFR_purchase_planes = {
 	}
 
 	visible = {
+	    OR = {
 		has_completed_focus = SAF_commit_to_the_five_year_plan
+		has_completed_focus = RAJ_aid_british_hardware_stockpiles_focus
+		}
 	}
 }
 

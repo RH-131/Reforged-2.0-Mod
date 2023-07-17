@@ -5245,11 +5245,11 @@ focus_tree = {
 	focus = {
 		id = RAJ_aid_british_hardware_stockpiles_focus
 		icon = GFX_focus_eng_imperial_federation
-		relative_position_id = RAJ_expand_strategic_air_bases
-		prerequisite = { focus = RAJ_learn_from_new_british_fighter_models }
+		relative_position_id = RAJ_british_pilot
+		prerequisite = { focus = RAJ_british_pilot }
 
-		x = 0
-		y = 3
+		x = 2
+		y = 1
 
 		cost = 5
 
@@ -5272,10 +5272,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
+		    unlock_decision_category_tooltip = SAFR_purchase_planes 
 			add_ideas = RAJ_aid_british_hardware_stockpiles_idea
 		}
 
 		completion_reward = {
+            unlock_decision_category_tooltip = SAFR_purchase_planes 
 			add_ideas = RAJ_aid_british_hardware_stockpiles_idea
 		}
 	}
