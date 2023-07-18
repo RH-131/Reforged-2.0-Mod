@@ -259,8 +259,6 @@ units = {
 			location = 9998  # Hiroshima
 			ship = { name = "Ise" definition = battleship start_experience_factor = 0.3 equipment = { ship_hull_heavy_1 = {amount = 1 owner = JAP version_name = "Fuso/Ise Class"} } }		
 			ship = { name = "Hyuga" definition = battleship start_experience_factor = 0.3 equipment = { ship_hull_heavy_1 = {amount = 1 owner = JAP version_name = "Fuso/Ise Class"} } }
-			ship = { name = "Mogami" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "Mogami Class"} } }
-			ship = { name = "Mikuma" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "Mogami Class"} } }
 			ship = { name = "Furutaka" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = {amount = 1 owner = JAP version_name = "Aoba Class"} } }
 			ship = { name = "Kako" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = {amount = 1 owner = JAP version_name = "Aoba Class"} } }
 			ship = { name = "Oi" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = {amount = 1 owner = JAP version_name = "Kuma/Nagara Class"} } }
@@ -397,17 +395,6 @@ instant_effect =
 
 			amount = 2
 		}
-		# CA (x1): "Suzuya"
-		add_equipment_production = {				
-			equipment = {
-				type = ship_hull_cruiser_2
-				creator = "JAP" 
-				version_name = "Mogami Class"
-			}
-			requested_factories = 1
-			progress = 0.2
-			amount = 2
-		}		
 		# CL(CM) (x1): "Okinoshima"
 		add_equipment_production = {				
 			equipment = {

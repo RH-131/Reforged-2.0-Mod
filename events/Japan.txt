@@ -3,7 +3,7 @@
 ###########################
 
 add_namespace = japan
-
+	
 # Chinese Refuse Concessions
 country_event = {
 	id = japan.1
@@ -2964,5 +2964,94 @@ country_event = {
 			country_event = { id = china.205 }
 		}
         hidden_effect = { news_event = news.453 }	
+	}
+}
+
+#Mogami Class Cruiser
+
+country_event = {
+	id = japan.33
+	title = japan.33.t
+	desc = japan.33.d
+	picture = GFX_report_event_mogami_class
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.33.a
+		ai_chance = { factor = 0 }
+	
+		hidden_effect = {
+			if = {
+				limit = {
+					not = { has_dlc = "Man the Guns" }
+				}
+				load_oob = JAP_Mogami_CL
+			}
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				create_equipment_variant = {
+					name = "Mogami Class"
+					type = ship_hull_cruiser_2
+					name_group = JAP_CL_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_light_medium_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = cruiser_ship_engine_2
+						fixed_ship_armor_slot = ship_armor_cruiser_1
+						fixed_ship_secondaries_slot = empty
+						front_1_custom_slot = ship_light_medium_battery_2
+						mid_1_custom_slot = ship_light_medium_battery_2
+						mid_2_custom_slot = ship_torpedo_2
+						rear_1_custom_slot = ship_light_medium_battery_2
+					}
+				}
+				load_oob = JAP_Mogami_CL_MTG
+			}
+		}
+	}
+	option = {
+		name = japan.33.b
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					not = { has_dlc = "Man the Guns" }
+				}
+				load_oob = JAP_Mogami_CA
+			}
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				create_equipment_variant = {
+					name = "Mogami Class"
+					type = ship_hull_cruiser_2
+					name_group = JAP_CA_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_medium_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = cruiser_ship_engine_2
+						fixed_ship_armor_slot = ship_armor_cruiser_1
+						fixed_ship_secondaries_slot = empty
+						front_1_custom_slot = ship_medium_battery_2
+						mid_1_custom_slot = ship_medium_battery_2
+						mid_2_custom_slot = ship_torpedo_2
+						rear_1_custom_slot = ship_medium_battery_2
+					}
+				}
+				load_oob = JAP_Mogami_CA_MTG
+			}
+		}
 	}
 }
