@@ -9429,6 +9429,7 @@ focus_tree = {
 					limit = { NOT = { has_completed_focus = ENG_fight_on_the_beaches } }
 					division_template = {
 						name = "Home Guard"
+						is_locked = yes
 						priority = 2
 
 						regiments = {
@@ -9904,7 +9905,7 @@ focus_tree = {
 			SPR = {
 				add_opinion_modifier = { target = ENG modifier = embargo }
 				add_opinion_modifier = { target = ENG modifier = sanctions_relations } 
-				add_ideas = ENG_sanctions_against_JAP 
+				add_ideas = ENG_sanctions_against_SPR
 			}
 
 			every_other_country = {
@@ -10427,12 +10428,12 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-				add_political_power = 75
+			add_political_power = 75
 			add_war_support = .10 
 			SPR = {
 				add_opinion_modifier = { target = ENG modifier = embargo }
 				add_opinion_modifier = { target = ENG modifier = sanctions_relations } 
-				add_ideas = ENG_sanctions_against_JAP
+				add_ideas = ENG_sanctions_against_SPR
 			}
 
 			every_other_country = {
@@ -10468,6 +10469,10 @@ focus_tree = {
 			every_state = {
 				limit = {has_state_flag = ENG_expand_military_production_4AF}
 				add_extra_state_shared_building_slots = 4
+				remove_building = {
+					type = industrial_complex
+					level = 3
+				}
 				add_building_construction = {
 					type = arms_factory
 					level = 4
@@ -10488,6 +10493,10 @@ focus_tree = {
 					}
 				}
 				add_extra_state_shared_building_slots = 4
+				remove_building = {
+					type = industrial_complex
+					level = 3
+				}
 				add_building_construction = {
 					type = arms_factory
 					level = 4
@@ -10506,6 +10515,10 @@ focus_tree = {
 					}
 				}
 				add_extra_state_shared_building_slots = 4
+				remove_building = {
+					type = industrial_complex
+					level = 3
+				}
 				add_building_construction = {
 					type = arms_factory
 					level = 4
@@ -10523,7 +10536,11 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
+				remove_building = {
+					type = industrial_complex
+					level = 3
+				}
 				add_building_construction = {
 					type = arms_factory
 					level = 4
@@ -10874,6 +10891,7 @@ focus_tree = {
 					limit = { NOT = { has_completed_focus = ENG_home_defence } }
 					division_template = {
 						name = "Home Guard"
+						is_locked = yes
 						priority = 2
 
 						regiments = {
