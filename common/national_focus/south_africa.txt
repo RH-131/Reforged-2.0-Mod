@@ -99,7 +99,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = SAF_war_measures_act
 
-		cost = 3
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -159,7 +159,6 @@ focus_tree = {
 		}
 		
 		bypass = {
-			has_completed_focus = SAF_free_elections
 		}
 
 		cancel_if_invalid = yes
@@ -193,7 +192,6 @@ focus_tree = {
 		}
 		
 		bypass = {
-			has_completed_focus = SAF_free_elections
 		}
 
 		cancel_if_invalid = yes
@@ -216,7 +214,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = SAF_war_measures_act
  
-		cost = 7.16
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -249,7 +247,7 @@ focus_tree = {
 	focus = {
 		id = SAF_support_the_policy_of_appeasement
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		x = 15
+		x = 17
 		y = 0
 
 		cost = 5
@@ -288,7 +286,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SAF_support_the_policy_of_appeasement 
 
-		cost = 5
+		cost = 7.16
 
 		ai_will_do = {
 			factor = 2
@@ -305,14 +303,15 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		completion_reward = {			
+		completion_reward = {
 			ENG = {
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = AST_support_the_policy_of_appeasement
 				}
 			}
-			add_stability = 0.1
+			add_political_power = 50		
+            add_ideas = SAF_civil_industrial_infrastructure		
 		}
 	}
 	
@@ -340,8 +339,8 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		completion_reward = {			
-			add_timed_idea = { idea = SAF_civil_industrial_infrastructure days = 550 }
+		completion_reward = {
+			add_stability = 0.1		
 			add_tech_bonus = {
 				name = SAF_civil_investment
 				bonus = 1.0
@@ -350,10 +349,10 @@ focus_tree = {
 				category = electronics
 			}
 			275 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}	
@@ -400,9 +399,11 @@ focus_tree = {
 				ideology = conservatism
 				traits = {
 					indomitable_perseverance 
+					finance_graduate
 				}
 			}
 			remove_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }
+			add_political_power = 50
 		}
 	}
 	
@@ -415,7 +416,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 5
+		cost = 7.16
 
 		ai_will_do = {
 			factor = 2
@@ -426,7 +427,6 @@ focus_tree = {
 		}
 
 		available = {
-			date > 1938.01.01
 			NOT = { has_completed_focus = SAF_open_engineering_schools }
 		}
 		
@@ -446,12 +446,11 @@ focus_tree = {
 			ideology = conservatism
 			traits = {
 				indomitable_perseverance
+				finance_graduate
 			}
 		}
-			add_stability = -0.2
-			add_war_support = 0.3
-			add_ideas = partial_economic_mobilisation 
-			add_ideas = limited_conscription
+			add_stability = -0.05
+			add_ideas = SAF_kickstarting_rearmament
 			remove_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }
 		}
 	}
@@ -464,14 +463,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = SAF_force_parliament_debate 
 
-		cost =  7.16
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
 		}
 
 		available = {
-				
+			 date > 1937.11.01
 		}
 		
 		bypass = {
@@ -482,7 +481,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_timed_idea = { idea = SAF_kickstarting_rearmament days = 400 }
+			add_ideas = partial_economic_mobilisation 
+			add_ideas = limited_conscription
+			add_stability = -0.1
+			add_war_support = 0.3
 			add_tech_bonus = {
 				name = SAF_kickstart_rearmament
 				bonus = 1.0
@@ -537,6 +539,152 @@ focus_tree = {
 		} 
 	}
 	
+	focus = {
+		id = SAF_yield
+		icon = GFX_focus_phasetwo
+		prerequisite = { focus = SAF_yield_to_smuts focus = SAF_propose_joint_exercises }
+		x = -1
+		y = 1
+		relative_position_id = SAF_yield_to_smuts
+
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		} 
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+            add_offsite_building = { type = steel_refinery level = 2 }		
+		}
+	}
+	
+	focus = {
+		id = SAF_yield1
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = SAF_yield }
+		x = -1
+		y = 1
+		relative_position_id = SAF_yield
+
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		} 
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+			719 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}		
+			541 = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+			}	
+		}
+	}
+	
+	focus = {
+		id = SAF_yield2
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = SAF_yield }
+		x = 1
+		y = 1
+		relative_position_id = SAF_yield
+
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		} 
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+			modify_building_resources = {
+        	   building = synthetic_rubber_refinery
+        	   resource = rubber
+        	   amount = 1
+        	}
+			modify_building_resources = {
+        	   building = steel_refinery
+        	   resource = steel
+        	   amount = 3
+        	}
+			modify_building_resources = {
+        	   building = steel_refinery
+        	   resource = tungsten
+        	   amount = 2
+        	}
+			modify_building_resources = {
+        	   building = steel_refinery
+        	   resource = aluminium
+        	   amount = 2
+        	}					
+		}
+	}
+	
+	focus = {
+		id = SAF_yield3
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SAF_yield1 }
+		prerequisite = { focus = SAF_yield2 }
+		x = 0
+		y = 2
+		relative_position_id = SAF_yield
+
+		cost = 7.16
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		} 
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+            add_offsite_building = { type = arms_factory level = 3 }	
+            add_offsite_building = { type = dockyard level = 2 }				
+		}
+	}
+	
 	###################
 	### ANC SECTION ###
 	###################
@@ -550,7 +698,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 5
+		cost = 7.16
 
 		ai_will_do = {
 			factor = 1
@@ -619,7 +767,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SAF_hofmeyrs_reforms 
 
-		cost =  7.16
+		cost =  5
 
 		ai_will_do = {
 			factor = 1
@@ -637,7 +785,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_stability = -0.05
+			add_stability = -0.1
 			add_timed_idea = { idea = SAF_freedom_from_oppression days = 365 } 
 		}
 	}
@@ -671,7 +819,6 @@ focus_tree = {
 
 		completion_reward = {
 		    add_ideas = SAF_black_volunteers
-			remove_ideas = SAF_ossewabrandwag_2
 			create_country_leader = {
 				name = "Alfred Xuma"
 				desc = ""
@@ -680,8 +827,7 @@ focus_tree = {
 				ideology = socialism  
 				traits = {
 				}
-			} 
-			remove_ideas = SAF_history_of_segregation		
+			} 	
 			set_cosmetic_tag = SAF_ANC
 			custom_effect_tooltip = SAF_african_commanders_tt 
 			hidden_effect = {
@@ -690,20 +836,20 @@ focus_tree = {
 					portrait_path = "gfx/leaders/SAF/Portrait_SAF_Lucas_Majozi.tga"
 					traits = { desert_fox trait_mountaineer infantry_leader }
 					skill = 4
-					attack_skill = 5
+					attack_skill = 4
 					defense_skill = 4
 					planning_skill = 4
-					logistics_skill = 5
+					logistics_skill = 4
 				}
 				create_corps_commander = {
 					name = "Job Maseko"
 					portrait_path = "gfx/leaders/SAF/Portrait_SAF_Job_Maseko.tga"
 					traits = { naval_invader commando infantry_leader }
-					skill = 5
-					attack_skill = 5
-					defense_skill = 5
-					planning_skill = 3
-					logistics_skill = 6
+					skill = 4
+					attack_skill = 4
+					defense_skill = 4
+					planning_skill = 4
+					logistics_skill = 4
 				}
 			}
 			remove_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }
@@ -775,7 +921,7 @@ focus_tree = {
 		icon = GFX_goal_DAH_Topke
 		prerequisite = { focus = SAF_equal_worker_pay } 
 		prerequisite = { focus = SAF_reconciliation }
-		x = -1
+		x = 0
 		y = 2
 		relative_position_id = SAF_free_elections
 
@@ -786,10 +932,6 @@ focus_tree = {
 		}
 
 		available = {
-			AND = {
-				NOT = { has_idea = SAF_expanding_workforce }
-				NOT = { has_idea = SAF_idea_reconciliation }
-			}
 		}
 		
 		bypass = {
@@ -815,7 +957,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SAF_economic_boom 
 
-		cost =  7.16
+		cost =  5
 
 		ai_will_do = {
 			factor = 1
@@ -845,7 +987,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SAF_economic_boom
 
-		cost =  7.16
+		cost =  5
 
 		ai_will_do = {
 			factor = 1
@@ -884,7 +1026,7 @@ focus_tree = {
 		icon = GFX_goal_tfv_generic_tech_sharing
 		prerequisite = { focus = SAF_war_measures_act }
 		prerequisite = { focus = SAF_support_the_policy_of_appeasement }
-		x = 1
+		x = 2 	
 		y = 1
 		relative_position_id = SAF_war_measures_act
 
@@ -924,7 +1066,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SAF_csir
 
-		cost = 3
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -963,7 +1105,6 @@ focus_tree = {
 		}
 		
 		bypass = {
-			has_completed_focus = SAF_free_elections
 		}
 
 		available = {
@@ -984,10 +1125,10 @@ focus_tree = {
 		id = SAF_joint_air_training_scheme
 		icon = GFX_goal_generic_air_fighter2
 		prerequisite = { focus = SAF_suppress_the_stormjaers }
-		prerequisite = { focus = SAF_propose_joint_exercises focus = SAF_free_elections focus = SAF_yield_to_smuts  }
 		x = 0
 		y = 1
-		relative_position_id = SAF_propose_joint_exercises
+		relative_position_id = SAF_suppress_the_stormjaers
+		
 
 		cost = 7.16
 
@@ -1009,8 +1150,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = SAF_joint_air_training_scheme
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = SAFR_supermarine
 		}
 	}
 	
@@ -1114,10 +1253,10 @@ focus_tree = {
 	focus = { #unlocks decision for build slots maybe resources
 		id = SAF_secure_interests_in_africa
 		icon = GFX_goal_tfv_saf_secure_interests_in_africa
-		prerequisite = { focus = SAF_yield_to_smuts focus = SAF_propose_joint_exercises focus = SAF_free_elections }
+		prerequisite = { focus = SAF_remove_segregation_shared }
 		x = 0
 		y = 1
-		relative_position_id = SAF_yield_to_smuts
+		relative_position_id = SAF_remove_segregation_shared
 
 		cost = 7.16
 
@@ -1150,8 +1289,8 @@ focus_tree = {
 		id = SAF_focus_europe
 		icon = GFX_RAJ_swaraj  
 		mutually_exclusive = { focus = SAF_focus_asia }
-		x = 17
-		y = 6
+		x = 20
+		y = 4
 
 
 		cost = 5
@@ -1189,8 +1328,8 @@ focus_tree = {
 		id = SAF_focus_asia
 		icon = GFX_focus_attack_australia  
 		mutually_exclusive = { focus = SAF_focus_europe }
-		x = 19
-		y = 6
+		x = 22
+		y = 4
 
 		cost = 5
 
@@ -1368,7 +1507,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 5
+		cost = 7.16
 
 		ai_will_do = {
 			factor = 2
@@ -1388,7 +1527,12 @@ focus_tree = {
 
 		completion_reward = {	
             541 = {		
-			    add_extra_state_shared_building_slots = 1	
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
             }				
 		}
 	}
@@ -1627,7 +1771,7 @@ focus_tree = {
 	focus = {
 		id = SAF_special_service_battalion
 		icon = GFX_goal_generic_army_doctrines
-		x = 28
+		x = 30
 		y = 0
 
 		cost = 5
@@ -2001,7 +2145,7 @@ focus_tree = {
 	focus = {
 		id = SAF_commit_to_the_five_year_plan
 		icon = GFX_goal_generic_air_doctrine
-		x = 32
+		x = 34
 		y = 0	
 
 		cost = 5
@@ -2282,7 +2426,7 @@ focus_tree = {
 	focus = {
 		id = SAF_seaward_defence_force
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		x = 38
+		x = 40
 		y = 0		
 
 		cost = 5
@@ -2305,6 +2449,7 @@ focus_tree = {
 
 		complete_tooltip = {
 			navy_experience = 25
+			unlock_decision_category_tooltip = SAFR_building_surface_fleet
 			random_state = {
 				limit = {
 					has_state_flag = SAF_seaward_defence_force_DY
@@ -2319,6 +2464,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+		    unlock_decision_category_tooltip = SAFR_building_surface_fleet
 			navy_experience = 25
 			random_owned_controlled_state = {
 				prioritize = { 681 719 }
@@ -2791,7 +2937,6 @@ focus_tree = {
 				uses = 1
 				category = naval_doctrine
 			}
-			unlock_decision_category_tooltip = SAFR_building_surface_fleet
 		}
 	}
 	
@@ -2883,10 +3028,10 @@ focus_tree = {
 
 		completion_reward = {
 			275 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 4
 					instant_build = yes
 				}
 			}
