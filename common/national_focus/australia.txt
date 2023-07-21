@@ -3467,10 +3467,13 @@ focus_tree = {
 
 		available = {
 			is_subject_of = ENG
-			336 = {
+			523 = {
 				controller = { is_in_faction_with = ROOT }
 			}
-			333 = {
+			634 = {
+				controller = { is_in_faction_with = ROOT }
+			}
+			737 = {
 				controller = { is_in_faction_with = ROOT }
 			}
 		}
@@ -3488,43 +3491,52 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			336 = {
+			523 = {
 				add_building_construction = {
 					type = air_base
 					level = 2
 					instant_build = yes
 				}
 
-				#Fortify entire coastline
-				add_building_construction = {
-					type = bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
 					level = 2
+					province = 12240
 					instant_build = yes
 				}
-
-				#border inland bunker
-				add_building_construction = {
-					type = bunker
-					province = 4310
+				set_building_level = {
+					type = coastal_bunker
 					level = 2
+					province = 4393
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 2
+					province = 4418
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 2
+					province = 10251
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 2
+					province = 4289
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 2
+					province = 7349
 					instant_build = yes
 				}
 
 				#Extra fort on naval bases
-				add_building_construction = {
+				set_building_level = {
 					type = bunker
 					province = {
 						all_provinces = yes
@@ -3533,7 +3545,7 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					province = {
 						all_provinces = yes
@@ -3545,29 +3557,9 @@ focus_tree = {
 
 			}
 
-			333 = {
-				#Fortify entire coastline
-				add_building_construction = {
-					type = bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
-					level = 2
-					instant_build = yes
-				}
-
+			634 = {
 				#Extra fort on naval bases
-				add_building_construction = {
+				set_building_level = {
 					type = bunker
 					province = {
 						all_provinces = yes
@@ -3576,7 +3568,29 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			737 = {
+				#Extra fort on naval bases
+				set_building_level = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+				set_building_level = {
 					type = coastal_bunker
 					province = {
 						all_provinces = yes
@@ -3807,7 +3821,7 @@ focus = {
 				}
 
 				#Fortify entire coastline
-				add_building_construction = {
+				set_building_level = {
 					type = bunker
 					province = {
 						all_provinces = yes
@@ -3816,7 +3830,7 @@ focus = {
 					level = 2
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					province = {
 						all_provinces = yes
@@ -3827,7 +3841,7 @@ focus = {
 				}
 
 				#Extra fort on naval bases
-				add_building_construction = {
+				set_building_level = {
 					type = bunker
 					province = {
 						all_provinces = yes
@@ -3836,7 +3850,7 @@ focus = {
 					level = 2
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					province = {
 						all_provinces = yes
@@ -3856,7 +3870,7 @@ focus = {
 				}
 
 				#Fortify entire coastline
-				add_building_construction = {
+				set_building_level = {
 					type = bunker
 					province = {
 						all_provinces = yes
@@ -3865,7 +3879,7 @@ focus = {
 					level = 2
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					province = {
 						all_provinces = yes
@@ -3876,7 +3890,7 @@ focus = {
 				}
 
 				#Extra fort on naval bases
-				add_building_construction = {
+				set_building_level = {
 					type = bunker
 					province = {
 						all_provinces = yes
@@ -3885,7 +3899,7 @@ focus = {
 					level = 2
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					province = {
 						all_provinces = yes
@@ -3905,7 +3919,7 @@ focus = {
 				}
 
 				#Fortify entire coastline
-				add_building_construction = {
+				set_building_level = {
 					type = bunker
 					province = {
 						all_provinces = yes
@@ -3914,7 +3928,7 @@ focus = {
 					level = 2
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					province = {
 						all_provinces = yes
@@ -3925,7 +3939,7 @@ focus = {
 				}
 
 				#Extra fort on naval bases
-				add_building_construction = {
+				set_building_level = {
 					type = bunker
 					province = {
 						all_provinces = yes
@@ -3934,7 +3948,7 @@ focus = {
 					level = 2
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					province = {
 						all_provinces = yes
@@ -3948,7 +3962,7 @@ focus = {
 
 			521 = {
 				#Fortify entire coastline
-				add_building_construction = {
+				set_building_level = {
 					type = bunker
 					province = {
 						all_provinces = yes
@@ -3957,7 +3971,7 @@ focus = {
 					level = 2
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					province = {
 						all_provinces = yes
@@ -3968,7 +3982,7 @@ focus = {
 				}
 
 				#Extra fort on naval bases
-				add_building_construction = {
+				set_building_level = {
 					type = bunker
 					province = {
 						all_provinces = yes
@@ -3977,7 +3991,7 @@ focus = {
 					level = 2
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
 					province = {
 						all_provinces = yes
