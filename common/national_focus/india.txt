@@ -106,6 +106,11 @@ focus_tree = {
 			add_ideas = RAJ_england_influence
 			ENG = { add_ideas = ENG_foreign_indian_labour_force }
 			add_political_power = 75 
+		    RAJ = { complete_national_focus = RAJ_coastal_defence_fleet }
+		    RAJ = { complete_national_focus = RAJ_import_british_design }
+		    RAJ = { complete_national_focus = RAJ_naval_doctrine }
+		    RAJ = { complete_national_focus = RAJ_the_illustrious_class }
+		    RAJ = { complete_national_focus = RAJ_the_princess_royal_class }
 		}
 	}
 	
@@ -4826,9 +4831,6 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				has_war = yes 
-			}
 			IF = {
 				has_completed_focus = RAJ_submits_to_england	
 			}
@@ -4858,6 +4860,47 @@ focus_tree = {
 				remove_idea = RAJ_army_corruption_2
 				add_idea = RAJ_army_corruption_british
 			}
+		}
+	}
+	
+	focus = {
+		id = RAJ_british_armor
+		icon = GFX_GOAL_eng_tank
+		relative_position_id = RAJ_british_army_reforms
+		prerequisite = { focus = RAJ_british_army_reforms }
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			date > 1940.06.01
+		}
+
+
+
+		cancel_if_invalid = yes 
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_technology = {
+                 eng_medium_tank_1938 = 1 
+			}
+			hidden_effect = {
+				load_oob = RAJ_tank
+			}
+			custom_effect_tooltip = RAJ_create_unit_tank_tt
 		}
 	}
 	
@@ -7148,7 +7191,7 @@ focus_tree = {
 					fixed_ship_deck_slot_1 = ship_deck_space
 					fixed_ship_deck_slot_2 = ship_armor_carrier_deck
 					fixed_ship_anti_air_slot = ship_anti_air_1
-					fixed_ship_radar_slot = empty 
+					fixed_ship_radar_slot = ship_radar_2
 					fixed_ship_engine_slot = carrier_ship_engine_2
 					fixed_ship_secondaries_slot = ship_secondaries_2
 					front_1_custom_slot = ship_deck_space
@@ -7167,7 +7210,7 @@ focus_tree = {
 					fixed_ship_deck_slot_1 = ship_deck_space
 					fixed_ship_deck_slot_2 = ship_armor_carrier_deck
 					fixed_ship_anti_air_slot = ship_anti_air_1
-					fixed_ship_radar_slot = ship_radar_2 
+					fixed_ship_radar_slot = ship_radar_2
 					fixed_ship_engine_slot = carrier_ship_engine_2
 					fixed_ship_secondaries_slot = ship_secondaries_2
 					front_1_custom_slot = ship_deck_space
