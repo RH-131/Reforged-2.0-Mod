@@ -2089,21 +2089,19 @@ operations = {
 		}
 		visible = {
 			tag = ENG
-			IRE = { is_ai = yes }
+			SAF = { is_ai = yes }
 			country_exists = IRE
+			date > 1942.1.1
 		}
 		available = {
-		    OR = {
-				date > 1942.6.1
-			}
+			date > 1942.1.1
 		}
 
 		cost = 0
 
 		fire_only_once = yes
 		
-
-		timeout_effect = {
+		complete_effect = {
 			IRE = {
 				transfer_navy = {
 					target = ENG
@@ -2114,12 +2112,11 @@ operations = {
               transfer_troops = yes
 			}
 			every_state = {
-				limit = {
-					is_core_of = IRE
-				}
-				add_core_of = ENG
-			}	
-		}		
+				limit = { is_core_of = IRE }
+				set_resistance = 0
+				set_compliance = 100
+			}
+		}	
 	}
    ENG_annex_nzl = {
 
