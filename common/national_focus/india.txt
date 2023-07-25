@@ -1439,32 +1439,32 @@ focus_tree = {
 			
    			439 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
    			438 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
    			435 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
    			431 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
@@ -1481,32 +1481,32 @@ focus_tree = {
 			
    			439 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
    			438 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
    			435 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
    			431 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
@@ -1686,14 +1686,6 @@ focus_tree = {
 					instant_build = yes 
 				}
 			}
-			439 = {
-			
-				add_building_construction = {
-					level = 1
-					type = infrastructure
-					instant_build = yes
-				}
-			}
 			 
 		}
 
@@ -1711,14 +1703,6 @@ focus_tree = {
 					level = 1
 					type = industrial_complex
 					instant_build = yes 
-				}
-			}
-			439 = {
-			
-				add_building_construction = {
-					level = 1
-					type = infrastructure
-					instant_build = yes
 				}
 			}
 			 
@@ -1758,14 +1742,6 @@ focus_tree = {
 					type = industrial_complex
 					instant_build = yes 
 				}
-			}
-			438 = {
-			
-				add_building_construction = {
-					level = 1
-					type = infrastructure
-					instant_build = yes
-				}
 			}			
 		}
 
@@ -1782,14 +1758,6 @@ focus_tree = {
 					level = 1
 					type = industrial_complex
 					instant_build = yes 
-				}
-			}
-			438 = {
-			
-				add_building_construction = {
-					level = 1
-					type = infrastructure
-					instant_build = yes
 				}
 			}
 		}
@@ -1857,7 +1825,7 @@ focus_tree = {
 		x = 1
 		y = 2
 
-		cost = 2.9
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -1874,6 +1842,10 @@ focus_tree = {
 		complete_tooltip = {
 			custom_effect_tooltip = RAJ_attempt_industrialization_tt_3
 			
+			set_technology = {
+				railway_gun = 1
+			}
+			
 			build_railway = { # Delhi to Calcutta #
 				level = 2
 				path = { 2086 10794 5086 12137 5055 5040 7938 10332 10471 1637 12452 7593 4204 4245
@@ -1884,6 +1856,10 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = RAJ_attempt_industrialization_tt_3
+			
+			set_technology = {
+				railway_gun = 1
+			}
 
    			build_railway = { # Delhi to Calcutta #
 				level = 2
@@ -1994,36 +1970,36 @@ focus_tree = {
 
 		complete_tooltip = {
 			294 = {
-				add_building_construction = {
-					level = 2
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
 			658 = {
-				add_building_construction = {
-					level = 2
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
 			659 = {
-				add_building_construction = {
-					level = 2
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
 			293 = {
-				add_building_construction = {
-					level = 2
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
 			765 = {
-				add_building_construction = {
-					level = 2
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
@@ -2032,36 +2008,36 @@ focus_tree = {
 
 		completion_reward = {
    			294 = {
-				add_building_construction = {
-					level = 2
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
 			658 = {
-				add_building_construction = {
-					level = 2
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
 			659 = {
-				add_building_construction = {
-					level = 2
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
 			293 = {
-				add_building_construction = {
-					level = 2
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
 			}
 			765 = {
-				add_building_construction = {
-					level = 2
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
@@ -2102,8 +2078,8 @@ focus_tree = {
 					level = 2
 					instant_build = yes 
 				}
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 8
 					type = infrastructure
 					instant_build = yes
 				}
@@ -2129,8 +2105,8 @@ focus_tree = {
 					level = 2
 					instant_build = yes 
 				}
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 8
 					type = infrastructure
 					instant_build = yes
 				}
@@ -2234,9 +2210,9 @@ focus_tree = {
 		complete_tooltip = {
 
    			336 = {
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
-					level = 4 
+					level = 6
 					instant_build = yes
 				}	
 			}
@@ -2245,9 +2221,9 @@ focus_tree = {
 		completion_reward = {
 
    			336 = {
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
-					level = 4 
+					level = 6
 					instant_build = yes
 				}
 			}
@@ -2283,9 +2259,9 @@ focus_tree = {
 
 		complete_tooltip = {
    			336 = {
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
-					level = 3
+					level = 8
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -2316,9 +2292,9 @@ focus_tree = {
 
 		completion_reward = {
    			336 = {
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
-					level = 3
+					level = 8
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -2586,18 +2562,18 @@ focus_tree = {
 					instant_build = yes 
 					level = 2
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
 					instant_build = yes
-					level = 1 
+					level = 7
 				}				
 			}
 			433 = {
 				add_extra_state_shared_building_slots = 4 
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
 					instant_build = yes
-					level = 1
+					level = 6
 				}
 			}
 		}
@@ -2617,18 +2593,18 @@ focus_tree = {
 					instant_build = yes 
 					level = 2
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
 					instant_build = yes
-					level = 1 
+					level = 7
 				}				
 			}
 			433 = {
 				add_extra_state_shared_building_slots = 4 
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
 					instant_build = yes
-					level = 1
+					level = 6
 				}
 			}				
 
@@ -2675,19 +2651,19 @@ focus_tree = {
 					instant_build = yes 
 					level = 2
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
 					instant_build = yes
-					level = 1 
+					level = 7
 				}
 						
 			}
 			437 = {
 				add_extra_state_shared_building_slots = 4 
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
 					instant_build = yes
-					level = 1 
+					level = 6
 				}
 			} 
 		}
@@ -2707,18 +2683,19 @@ focus_tree = {
 					instant_build = yes 
 					level = 2
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
 					instant_build = yes
-					level = 1
-				}			
+					level = 7
+				}
+						
 			}
 			437 = {
 				add_extra_state_shared_building_slots = 4 
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
 					instant_build = yes
-					level = 1 
+					level = 6
 				}
 			}				
  
@@ -2770,19 +2747,19 @@ focus_tree = {
 					instant_build = yes 
 					level = 2
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
 					instant_build = yes
-					level = 1 
+					level = 10
 				}
 						
 			}
 			427 = {
 				add_extra_state_shared_building_slots = 4 
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
 					instant_build = yes
-					level = 1 
+					level = 6
 				}
 			} 
 		}
@@ -2807,21 +2784,22 @@ focus_tree = {
 					instant_build = yes 
 					level = 2
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
 					instant_build = yes
-					level = 1 
+					level = 10
 				}
 						
 			}
 			427 = {
 				add_extra_state_shared_building_slots = 4 
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
 					instant_build = yes
-					level = 1 
+					level = 6
 				}
-			}				
+			} 
+			
 			add_to_variable = {
 				var = rapid_industrialization
 				value = 5
@@ -3012,8 +2990,8 @@ focus_tree = {
 			
 			433 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
@@ -3027,8 +3005,8 @@ focus_tree = {
 			
 			437 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
@@ -3042,8 +3020,8 @@ focus_tree = {
 			
 			436 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
@@ -3061,8 +3039,8 @@ focus_tree = {
 			
 			433 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
@@ -3076,8 +3054,8 @@ focus_tree = {
 			
 			437 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
@@ -3091,8 +3069,8 @@ focus_tree = {
 			
 			436 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
+				set_building_level = {
+					level = 6
 					type = infrastructure
 					instant_build = yes
 				}
@@ -3590,8 +3568,8 @@ focus_tree = {
 
 			426 = {
 			
-				add_building_construction = {
-					level = 2
+				set_building_level = {
+					level = 7
 					type = infrastructure
 					instant_build = yes
 				}
@@ -3609,8 +3587,8 @@ focus_tree = {
 			}
 			426 = {
 			
-				add_building_construction = {
-					level = 2
+				set_building_level = {
+					level = 7
 					type = infrastructure
 					instant_build = yes
 				}
