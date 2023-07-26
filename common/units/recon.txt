@@ -275,12 +275,13 @@ sub_units = {
 		default_morale = 0.2
 		training_time = 140
 		max_strength = 1
+		recon = 3
 		weight = 1
 		supply_consumption = 0.15
 
 		soft_attack = -0.2 
 		hard_attack = -0.2 
-		breakthrough = -0.2
+		breakthrough = -0.3
 		
 		forest = {
 			movement = 0.025
@@ -309,7 +310,6 @@ sub_units = {
 		river = {
 			movement = 0.025
 		}
-		recon = 3
 		same_support_type = recon # blocks adding other recon types to template
 	}
 }
