@@ -59,8 +59,9 @@ ideas = {
 
 			modifier = {
 				autonomy_gain = -0.2
-			    production_speed_infrastructure_factor = 0.1
+			    production_speed_infrastructure_factor = 0.2
 				production_speed_rail_way_factor = 0.1
+				industrial_capacity_factory = 0.05
 				conscription_factor = -0.02
 			}
 		}
@@ -88,7 +89,8 @@ ideas = {
 				autonomy_gain = -0.20
 				conscription_factor = -0.03
 				local_resources_factor = 0.1
-				production_speed_infrastructure_factor = 0.1
+				industrial_capacity_factory = 0.05
+				production_speed_infrastructure_factor = 0.2
 				production_speed_rail_way_factor = 0.1
 			}
 		}
@@ -116,10 +118,10 @@ ideas = {
 				autonomy_gain = -0.2
 				conscription_factor = -0.04
 				local_resources_factor = 0.15
-				production_speed_infrastructure_factor = 0.1
+				production_speed_infrastructure_factor = 0.2
 				production_speed_rail_way_factor = 0.1
 				production_speed_air_base_factor = 0.1
-				industrial_capacity_factory = 0.05
+				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.025
 			}
 		}
@@ -857,7 +859,7 @@ ideas = {
 
 			modifier = {
 				autonomy_gain = -0.2
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.01
 				conscription_factor = 0.10
 			}
 		}
@@ -1101,8 +1103,8 @@ ideas = {
 			}
 
 			modifier = {
-				army_core_attack_factor = 0.05
-				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.07
+				army_core_defence_factor = 0.07
 				land_doctrine_cost_factor = -0.10
 			}
 
@@ -1581,10 +1583,8 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.01
 				autonomy_gain = 0.4
-				stability_factor = 0.00
-
 			}
 		}
 
@@ -1675,6 +1675,7 @@ ideas = {
 			modifier = {
 				stability_weekly = 0.001
 				conscription_factor = -0.25
+				consumer_goods_factor = -0.01
 				autonomy_gain = 0.2
 			}
 		}
@@ -1697,6 +1698,7 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 				conscription_factor = -0.15
 				stability_weekly = 0.001
+				consumer_goods_factor = -0.01
 				autonomy_gain = 0.3
 			}
 		}
@@ -1719,8 +1721,7 @@ ideas = {
 				stability_factor = 0.1
 				industrial_capacity_dockyard = 0.12
 				research_speed_factor = 0.10
-				consumer_goods_factor = -0.01
-				conscription_factor = 0.00
+				consumer_goods_factor = -0.03
 				stability_weekly = 0.001
 				autonomy_gain = 0.4
 			}
