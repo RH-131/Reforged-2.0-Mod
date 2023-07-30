@@ -2058,7 +2058,68 @@ technologies = {
 	mass_assault = {
 		doctrine_name = "MASS_ASSAULT_DOCTRINE"
 		xor = { mobile_warfare superior_firepower trench_warfare }
-
+		
+		cavalry = {
+			combat_width = -0.5
+			#need = {
+			#   	infantry_equipment = -5
+			#	}
+		}
+		garrison = {
+			combat_width = -0.5
+			#need = {
+			#   	infantry_equipment = -5
+			#	}
+		}
+		truck_garrison = {
+			combat_width = -0.5
+			#need = {
+			#   	infantry_equipment = -5
+			#	}
+		}
+		bicycle_battalion = {
+			combat_width = -0.5
+			#need = {
+			#   	infantry_equipment = -5
+			#	}
+		}
+		light_infantry = {
+			combat_width = -0.5
+			#need = {
+			#   	infantry_equipment = -5
+			#	}
+		}
+		truck_light_infantry = {
+			combat_width = -0.5
+			#need = {
+			#   	infantry_equipment = -5
+			#	}
+		}
+		infantry = {
+			combat_width = -0.5
+			#need = {
+			#   	infantry_equipment = -5
+			#	}
+		}
+		truck_infantry = {
+			combat_width = -0.5
+			#need = {
+			#   	infantry_equipment = -5
+			#	}
+		}
+		motorized = {
+			combat_width = -0.5
+			#need = {
+			#   	infantry_equipment = -5
+			#	}
+		}
+		mechanized = {
+			combat_width = -0.5
+			#need = {
+			#   	infantry_equipment = -5
+			#	}3
+		}
+		
 		path = {
 			leads_to_tech = pocket_defence
 			research_cost_coeff = 1
@@ -2294,66 +2355,7 @@ technologies = {
 
 		supply_consumption_factor = -0.05
 		army_speed_factor = 0.05
-		cavalry = {
-			combat_width = -0.5
-			#need = {
-			#   	infantry_equipment = -5
-			#	}
-		}
-		garrison = {
-			combat_width = -0.5
-			#need = {
-			#   	infantry_equipment = -5
-			#	}
-		}
-		truck_garrison = {
-			combat_width = -0.5
-			#need = {
-			#   	infantry_equipment = -5
-			#	}
-		}
-		bicycle_battalion = {
-			combat_width = -0.5
-			#need = {
-			#   	infantry_equipment = -5
-			#	}
-		}
-		light_infantry = {
-			combat_width = -0.5
-			#need = {
-			#   	infantry_equipment = -5
-			#	}
-		}
-		truck_light_infantry = {
-			combat_width = -0.5
-			#need = {
-			#   	infantry_equipment = -5
-			#	}
-		}
-		infantry = {
-			combat_width = -0.5
-			#need = {
-			#   	infantry_equipment = -5
-			#	}
-		}
-		truck_infantry = {
-			combat_width = -0.5
-			#need = {
-			#   	infantry_equipment = -5
-			#	}
-		}
-		motorized = {
-			combat_width = -0.5
-			#need = {
-			#   	infantry_equipment = -5
-			#	}
-		}
-		mechanized = {
-			combat_width = -0.5
-			#need = {
-			#   	infantry_equipment = -5
-			#	}3
-		}
+		
 		enable_tactic = tactic_overwhelming_fire
 		path = {
 			leads_to_tech = breakthrough_priority
@@ -2648,36 +2650,6 @@ technologies = {
 	human_wave_offensive = {
 
 		conscription = 0.05
-		cavalry = {
-			combat_width = -0.5
-		}
-		garrison = {
-			combat_width = -0.5
-		}
-		truck_garrison = {
-			combat_width = -0.5
-		}
-		bicycle_battalion = {
-			combat_width = -0.5
-		}
-		light_infantry = {
-			combat_width = -0.5
-		}
-		truck_light_infantry = {
-			combat_width = -0.5
-		}
-		infantry = {
-			combat_width = -0.5
-		}
-		truck_infantry = {
-			combat_width = -0.5
-		}
-		motorized = {
-			combat_width = -0.5
-		}
-		mechanized = {
-			combat_width = -0.5
-		}
 
 
 		path = {
