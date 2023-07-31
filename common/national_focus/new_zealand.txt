@@ -254,11 +254,7 @@ focus_tree = {
 		completion_reward = {
 		random_owned_controlled_state = {
 				prioritize = { 723 }
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 				set_state_flag = NZL_national_roads_board_Inf2
 			}
 		}
@@ -288,11 +284,7 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 284 }
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 				set_state_flag = NZL_national_roads_board_Inf1
 			}
 

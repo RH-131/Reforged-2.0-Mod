@@ -231,11 +231,7 @@ focus_tree = {
 
 		completion_reward = {
 			277 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
+				build_3_infrastructure = yes
 			}
 			every_state = {
 				limit = {
@@ -250,11 +246,7 @@ focus_tree = {
 						state = 481
 					}
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 		}
 	}
@@ -299,11 +291,7 @@ focus_tree = {
 						state = 483
 					}
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 		}
 	}
@@ -442,39 +430,19 @@ focus_tree = {
 
 		completion_reward = {
 			277 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
+				build_3_infrastructure = yes
 			}
 			476 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			479 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			477 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			480 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 		}
 	}
@@ -966,11 +934,7 @@ focus_tree = {
 
 		completion_reward = {
 		    311 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory

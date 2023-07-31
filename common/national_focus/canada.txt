@@ -254,11 +254,7 @@ focus_tree = {
 		completion_reward = {
 			470 = {
 				add_extra_state_shared_building_slots = 1	
-				set_building_level = {
-					type = infrastructure
-					level = 8
-					instant_build = yes
-				}
+				build_3_infrastructure = yes
 				set_state_flag = CAN_canada_pacific_railway_Inf
 			}
 			#Vancouver - Northwest Canada
@@ -315,20 +311,12 @@ focus_tree = {
 		completion_reward = {
 			276 = {
 				add_extra_state_shared_building_slots = 1	
-				set_building_level = {
-					type = infrastructure
-					level = 9
-					instant_build = yes
-				}
+				build_3_infrastructure = yes
 				set_state_flag = CAN_maritime_colonial_railway_Inf
 			}
 			682 = {
 				add_extra_state_shared_building_slots = 1	
-				set_building_level = {
-					type = infrastructure
-					level = 8
-					instant_build = yes
-				}
+				build_3_infrastructure = yes
 				set_state_flag = CAN_maritime_colonial_railway_Inf
 			}
 			#Montreal - Halifax

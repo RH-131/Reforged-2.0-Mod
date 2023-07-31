@@ -33,34 +33,13 @@ focus_tree = {
         ai_will_do = {
 			factor = 10
 		}
-		complete_tooltip = {
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
 
 		completion_reward = {
-        
-        111 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
+			111 = {
+				build_3_infrastructure = yes
 			}
-		150 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
+			150 = {
+				build_3_infrastructure = yes
 			}
 		}
 	}
