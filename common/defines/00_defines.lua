@@ -2670,7 +2670,7 @@ NAI = {
 
 	LAND_COMBAT_INTERCEPT_PER_PLANE = 0.4,				-- Amount of interception planes requested per enemy plane
 	MIN_ALLIED_DEFENSE_FACTOR_AIRWING_REQUESTS = 0.07,	-- Airwing requests will be factored by a minimum of this when comparing own vs friendly troops in area
-	AIR_SUPERIORITY_FOR_FRIENDLY_CAS_RATIO = 0.5,		-- Demand at least this proportion of our cas planes as air superiority regardless of other needs
+	AIR_SUPERIORITY_FOR_FRIENDLY_CAS_RATIO = 0.1,		-- Demand at least this proportion of our cas planes as air superiority regardless of other needs
 	LAND_COMBAT_GUIDE_DISTANCE = 290.0,					-- Distance within whch we'll care a bit more about sending planes regardless of whether our boiz are dying
 	
 	ENEMY_PASSING_THROUGH_PLANES_PER_BOMBER = 0.1,		-- Amount of planes we assign to intercept enemies en-route to a location
