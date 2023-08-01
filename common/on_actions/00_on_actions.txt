@@ -1,39 +1,6 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			GER = {
-				if = {
-					limit = { 
-						GER = { 
-							is_ai = yes 
-						}
-					} 
-					add_offsite_building = { type = industrial_complex level = 30 }
-					add_offsite_building = { type = arms_factory level = 40 }
-				}
-			}
-			FRA = {
-				if = {
-					limit = { 
-						FRA = { 
-							is_ai = yes 
-						}
-						GER = {
-							is_ai = no 
-						}
-					}
-					delete_unit_template_and_units = {
-						division_template = "Division de Cavalerie"
-					}
-					delete_unit_template_and_units = {
-						division_template = "Brigade Coloniale"
-					}
-					add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 15000 producer = FRA }
-					add_equipment_to_stockpile = { type = support_equipment_1 amount = 4000 producer = FRA }
-					add_equipment_to_stockpile = { type = horse_equipment_0 amount = 4000 producer = FRA } 
-				}
-			}
-			
 			JAP = {
 				country_event = { id = japan.33 days = 1 }
 			}
@@ -88,6 +55,11 @@ on_actions = {
 			}
 			USA = {
 				country_event = { id = usa.31 days = 20 }
+				country_event = { id = usa.6 days = 305 } #1936.11.01, election
+				country_event = { id = usa.30 days = 516 } #1937.6.01, recession 1937
+				country_event = { id = usa.7 days = 1762 } #1940.11.01, election
+				country_event = { id = usa.9 days = 3225 } #1944.11.01, election
+				country_event = { id = usa.14 days = 3372 } #1945.03.29, death of Roosevelt
 			}
 			ENG = {
 				if = {
