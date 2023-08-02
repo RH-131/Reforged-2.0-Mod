@@ -2970,25 +2970,13 @@ focus_tree = {
 
 		completion_reward = {
 			275 = {
-				set_building_level = {
-					type = infrastructure
-					level = 7
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 			719 = {
-				set_building_level = {
-					type = infrastructure
-					level = 6
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 			681 = {
-				set_building_level = {
-					type = infrastructure
-					level = 6
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 			#Pretoria - Gaborone
 			build_railway = {
@@ -3243,11 +3231,7 @@ focus_tree = {
 
 		completion_reward = {
 			275 = {
-				set_building_level = {
-					type = infrastructure
-					level = 9
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 				set_state_flag = SAF_infrastructure_effort_Inf
 			}
 		}

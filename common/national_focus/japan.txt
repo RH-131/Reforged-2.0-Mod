@@ -110,14 +110,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = JAP_expand_manchurian_railways_2RR
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			build_railway = {
-				level = 3
+				level = 2
 				build_only_on_allied = yes
 				controller_priority = {
 					base = 1
@@ -133,11 +129,7 @@ focus_tree = {
 					is_core_of = MAN
 					NOT = {is_owned_by = CHI}
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 				set_state_flag = JAP_expand_manchurian_railways_2RR
 			}
 			build_railway = {
@@ -1570,11 +1562,7 @@ focus_tree = {
 
 		completion_reward = {
 			610 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 				add_building_construction = {
 					type = air_base
 					level = 2
@@ -1582,11 +1570,7 @@ focus_tree = {
 				}
 			}
 			611 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 				add_building_construction = {
 					type = air_base
 					level = 2
@@ -1594,11 +1578,7 @@ focus_tree = {
 				}
 			}
 			609 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 				add_building_construction = {
 					type = air_base
 					level = 2
@@ -2013,11 +1993,7 @@ focus_tree = {
 			#45,800 IC if infra 7 to 10
 			#Siam
 			289 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
+				build_3_infrastructure = yes
 				add_building_construction = {
 					type = air_base
 					level = 3
@@ -2032,11 +2008,7 @@ focus_tree = {
 			}
 			#Northern Malay
 			724 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
+				build_3_infrastructure = yes
 				add_building_construction = {
 					type = air_base
 					level = 3
@@ -3903,11 +3875,7 @@ focus_tree = {
 				}
 			}
 			532 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			532 = {
 				add_building_construction = {
@@ -3949,11 +3917,7 @@ focus_tree = {
 				}
 			}
 			532 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			532 = {
 				add_building_construction = {
@@ -4015,11 +3979,7 @@ focus_tree = {
 				}
 			}
 			529 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			529 = {
 				add_building_construction = {
@@ -4061,11 +4021,7 @@ focus_tree = {
 				}
 			}
 			529 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			529 = {
 				add_building_construction = {

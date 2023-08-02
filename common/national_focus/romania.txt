@@ -347,32 +347,16 @@
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			76 = {
-				set_building_level = {
-					type = infrastructure
-					level = 7
-					instant_build = yes 
-				}
+				build_2_infrastructure = yes
 			}
 			84 = {
-				set_building_level = {
-					type = infrastructure
-					level = 7
-					instant_build = yes 
-				}
+				build_2_infrastructure = yes
 			}
 			83 = {
-				set_building_level = {
-					type = infrastructure
-					level = 7
-					instant_build = yes 
-				}
+				build_2_infrastructure = yes
 			}
 			82 = {
-				set_building_level = {
-					type = infrastructure
-					level = 7
-					instant_build = yes 
-				}
+				build_2_infrastructure = yes
 			}
 			add_stability = 0.1 
 			#Ploiesti - Debrecen
@@ -446,11 +430,7 @@
 					is_controlled_by = ROOT
 					is_core_of = ROOT
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 			#Constanta - Bessarabia
 			build_railway = {
