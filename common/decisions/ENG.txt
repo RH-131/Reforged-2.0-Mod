@@ -474,8 +474,8 @@ ENG_budget_decisions = {
 
 		available = {
 			has_completed_focus = shadow_scheme_focus
-			any_state = {
-				is_in_home_area = yes 
+			any_owned_state = {
+				is_in_home_area = yes
 				NOT = {has_state_flag = shadow_scheme_2AF}
 			}
 		}
@@ -497,7 +497,7 @@ ENG_budget_decisions = {
 
 		custom_cost_text = ENG_200_british_money 
 
-		days_re_enable = 90 
+		days_re_enable = 90
 
 		fire_only_once = no
 
