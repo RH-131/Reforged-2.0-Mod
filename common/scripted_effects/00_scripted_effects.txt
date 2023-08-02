@@ -80,15 +80,10 @@ build_1_infrastructure = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					infrastructure < 5
-				}
-				add_building_construction = {
-					type = infrastructure
-					instant_build = yes
-					level = 1
-				}
+			add_building_construction = {
+				type = infrastructure
+				instant_build = yes
+				level = 1
 			}
 		}
 	}
