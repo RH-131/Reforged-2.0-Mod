@@ -80,19 +80,11 @@ focus_tree = {
 					NOT = { state = 48 }
 				}
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 			48 = {
 				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -394,25 +386,13 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			48 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 			212 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 			211 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}	
 			#Plovdiv - Varna
 			build_railway = {
@@ -452,11 +432,7 @@ focus_tree = {
 					type = steel
 					amount = 30
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -1119,11 +1095,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			48 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 				add_building_construction = {
 					type = bunker
 					level = 3
@@ -1157,11 +1129,7 @@ focus_tree = {
 						}
 					}
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 				add_building_construction = {
 					type = anti_air_building
 					level = 1
@@ -1902,7 +1870,7 @@ focus_tree = {
 				name = BUL_modern_tactics
 			    bonus = 0.75
 			    uses = 1
-			    category = naval_air
+			    category = naval_bomber
 			}
 		}
 	}
@@ -3080,26 +3048,7 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-				if = {
-					limit = {
-						infrastructure < 9
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				else_if = {
-					limit = {
-						infrastructure < 10
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
+				build_2_infrastructure = yes
 			}
 
 			if = {
@@ -3126,16 +3075,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					if = {
-						limit = {
-							infrastructure < 10
-						}
-						add_building_construction = {
-							type = infrastructure
-							level = 1
-							instant_build = yes
-						}
-					}
+					build_1_infrastructure = yes
 				}
 				random_owned_state = {
 					limit = {
@@ -3155,16 +3095,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					if = {
-						limit = {
-							infrastructure < 10
-						}
-						add_building_construction = {
-							type = infrastructure
-							level = 1
-							instant_build = yes
-						}
-					}
+					build_1_infrastructure = yes
 				}
 				random_owned_state = {
 					limit = {
@@ -3183,16 +3114,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					if = {
-						limit = {
-							infrastructure < 10
-						}
-						add_building_construction = {
-							type = infrastructure
-							level = 1
-							instant_build = yes
-						}
-					}
+					build_1_infrastructure = yes
 				}
 				every_owned_state = {
 					limit = {

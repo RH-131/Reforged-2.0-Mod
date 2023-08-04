@@ -1932,22 +1932,12 @@ focus_tree = {
 			}
 			
 			285 = {
-
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 		
 
 			517 = {
-
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 		}
 
@@ -1960,22 +1950,12 @@ focus_tree = {
 			}
 			
 			285 = {
-				
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 				set_state_flag = AST_standard_gauge_railway_Inf1
 			}
 
 			517 = {
-				
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 				set_state_flag = AST_standard_gauge_railway_Inf2
 			}
 		}
@@ -2060,11 +2040,7 @@ focus_tree = {
 				limit = {
 					has_state_flag = AST_expand_the_northern_railway_Inf
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 		}
 
@@ -2083,21 +2059,11 @@ focus_tree = {
 			}
 			
 			520 = {
-				
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 				set_state_flag = AST_expand_the_northern_railway_Inf
 			}
 			521 = {
-				
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 				set_state_flag = AST_expand_the_northern_railway_Inf
 			}
 		}
@@ -2416,22 +2382,14 @@ focus_tree = {
 				limit = {
 					has_state_flag = AST_western_australian_government_railways_Inf1
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 
 			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = AST_western_australian_government_railways_Inf2
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 		}
 
@@ -2444,22 +2402,12 @@ focus_tree = {
 			}
 			
 			522 = {
-				
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 				set_state_flag = AST_western_australian_government_railways_Inf1
 			}
 
 			519 = {
-				
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 				set_state_flag = AST_western_australian_government_railways_Inf2
 			}
 		}
@@ -3752,7 +3700,7 @@ focus_tree = {
 		}	
 	}
 
-focus = {
+	focus = {
 		id = AST_Education_program
 		icon = GFX_goal_tfv_generic_tech_sharing
 		prerequisite = { focus = AST_abandon_wesminster }
@@ -3780,10 +3728,10 @@ focus = {
   				modify_tech_sharing_bonus = {
      				id = commonwealth_research
      				bonus = 0.04
+				}
 			}
 		}
 	}
-}	
 	focus = {
 		id = AST_Homeland_defence
 		icon = GFX_goal_generic_defence
@@ -3999,10 +3947,10 @@ focus = {
 					}
 					level = 2
 					instant_build = yes
-					}
 				}
 			}
 		}
+	}
 		
 	focus = {
 		id = AST_Natives

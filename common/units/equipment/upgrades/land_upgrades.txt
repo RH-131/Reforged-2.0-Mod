@@ -115,6 +115,55 @@ upgrades = {
 		reliability = -0.02
 	}
 	
+	### Motor, Mech, and Amtracs###
+	
+	mot_iccost_upgrade = {
+		max_level = 2
+
+		cost = land
+		hardness = -0.05
+		build_cost_ic = -0.05
+	}
+	mec_armor_upgrade = {
+		max_level = 2
+
+		cost = land
+		armor_value = 0.05
+		hardness = 0.05
+		maximum_speed = -0.04
+		reliability = -0.04
+	}
+	mec_hard_upgrade = {
+		max_level = 2
+		
+		cost = land
+		breakthrough = 0.025
+		ap_attack = 0.1
+		soft_attack = -0.025
+		hard_attack = 0.1
+		reliability = -0.04
+		build_cost_ic = 0.05
+	}
+	mec_soft_upgrade = {
+		max_level = 2
+
+		cost = land	
+		
+		soft_attack = 0.05
+		hard_attack = -0.05
+		defense = 0.025
+		reliability = -0.04
+		build_cost_ic = 0.05
+	}
+	
+	i_forgot_a_designer = {
+		max_level = 1
+
+		cost = land
+		
+		build_cost_ic = 0.01
+	}
+	
 	tank_nsb_engine_upgrade = {
 		abbreviation = "eng"
 		max_level = 20 #each level represents ~50HP

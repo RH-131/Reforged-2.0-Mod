@@ -32,40 +32,40 @@ focus_tree = {
 				64 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = infrastructure
-						level = 4
-						instant_build = yes
+						add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
 						}
 					}
 				}
 				59 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = infrastructure
-						level = 4
-						instant_build = yes
+						add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
 						}
 					}
 				}
 				60 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = infrastructure
-						level =4
-						instant_build = yes
+						add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
 						}
 					}
 				}
 				54 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = infrastructure
-						level = 4
-						instant_build = yes
+						add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
 						}
 					}
 				}
@@ -104,11 +104,7 @@ focus_tree = {
 					    amount > 5
 					}
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1 
-					instant_build = yes 
-				}
+				build_1_infrastructure = yes
 				add_resource = {
 				    type = steel
 				    amount = 10
@@ -360,11 +356,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1 
-					instant_build = yes 
-				}
+				build_1_infrastructure = yes
             } 
         }
 		
@@ -390,11 +382,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1 
-					instant_build = yes 
-				}
+				build_1_infrastructure = yes
 				set_state_flag = GER_new_subsidiaries
 			}
 			random_owned_state = {
@@ -412,11 +400,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1 
-					instant_build = yes 
-				}
+				build_1_infrastructure = yes
 				set_state_flag = GER_new_subsidiaries
 			}	
 			random_owned_state = {
@@ -434,11 +418,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1 
-					instant_build = yes 
-				}
+				build_1_infrastructure = yes
 				set_state_flag = GER_new_subsidiaries
 			}		
 		}
@@ -525,11 +505,7 @@ focus_tree = {
                 limit = {
                     has_state_flag = GER_resource_rationing
                 }
-                add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 				add_building_construction = {
 					type = fuel_silo
 					level = 2
@@ -565,11 +541,7 @@ focus_tree = {
 
 			random_owned_state = {
 				prioritize = { 53 56 58 61 62 63 66 67 68 }
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 				add_building_construction = {
 					type = fuel_silo
 					level = 2
@@ -590,11 +562,7 @@ focus_tree = {
 			}									
 			random_owned_state = {
 				prioritize = { 53 56 58 61 62 63 66 67 68 }
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 				add_building_construction = {
 					type = fuel_silo
 					level = 2
@@ -614,11 +582,7 @@ focus_tree = {
 			}			
 			random_owned_state = {
 				prioritize = { 53 56 58 61 62 63 66 67 68 }
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 				add_building_construction = {
 					type = fuel_silo
 					level = 2
@@ -1173,11 +1137,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 				add_building_construction = {
 					type = anti_air_building
 					level = 5
@@ -1196,11 +1156,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 				add_building_construction = {
 					type = anti_air_building
 					level = 5
@@ -2772,11 +2728,7 @@ focus_tree = {
 						is_core_of = BUL 
 					}
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes 
-				}
+				build_1_infrastructure = yes
 			} 
 			add_ideas = TUR_rare_metal_trade_ger
 			TUR = { 
