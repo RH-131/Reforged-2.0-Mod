@@ -16,6 +16,565 @@
 #	}
 #
 
+#Infra to Construction Tech
+build_1_infrastructure = {
+	custom_effect_tooltip = build_1_infrastructure_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						tag = USA
+						has_tech = construction5
+					}
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				instant_build = yes
+				level = 1
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction4 }
+				infrastructure < 9
+			}
+			add_building_construction = {
+				type = infrastructure
+				instant_build = yes
+				level = 1
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction3 }
+				infrastructure < 8
+			}
+			add_building_construction = {
+				type = infrastructure
+				instant_build = yes
+				level = 1
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction2 }
+				infrastructure < 7
+			}
+			add_building_construction = {
+				type = infrastructure
+				instant_build = yes
+				level = 1
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction1 }
+				infrastructure < 6
+			}
+			add_building_construction = {
+				type = infrastructure
+				instant_build = yes
+				level = 1
+			}
+		}
+		else = {
+			add_building_construction = {
+				type = infrastructure
+				instant_build = yes
+				level = 1
+			}
+		}
+	}
+}
+build_2_infrastructure = {
+	custom_effect_tooltip = build_2_infrastructure_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						tag = USA
+						has_tech = construction5
+					}
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				instant_build = yes
+				level = 2
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction4 }
+			}
+			if = {
+				limit = { infrastructure < 8 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 9 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction3 }
+			}
+			if = {
+				limit = { infrastructure < 7 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 8 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction2 }
+			}
+			if = {
+				limit = { infrastructure < 6 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 7 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction1 }
+			}
+			if = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 6 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { infrastructure < 4 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+	}
+}
+build_3_infrastructure = {
+	custom_effect_tooltip = build_3_infrastructure_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						tag = USA
+						has_tech = construction5
+					}
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				instant_build = yes
+				level = 3
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction4 }
+			}
+			if = {
+				limit = { infrastructure < 7 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 3
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 8 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 9 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction3 }
+			}
+			if = {
+				limit = { infrastructure < 6 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 3
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 7 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 8 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction2 }
+			}
+			if = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 3
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 6 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 7 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction1 }
+			}
+			if = {
+				limit = { infrastructure < 4 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 3
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 6 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { infrastructure < 3 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 3
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 4 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+	}
+}
+build_4_infrastructure = {
+	custom_effect_tooltip = build_4_infrastructure_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						tag = USA
+						has_tech = construction5
+					}
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				instant_build = yes
+				level = 4
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction4 }
+			}
+			if = {
+				limit = { infrastructure < 6 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 4
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 7 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 3
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 8 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 9 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction3 }
+			}
+			if = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 4
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 6 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 3
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 7 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 8 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction2 }
+			}
+			if = {
+				limit = { infrastructure < 4 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 4
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 3
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 6 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 7 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_tech = construction1 }
+			}
+			if = {
+				limit = { infrastructure < 3 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 4
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 4 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 3
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 6 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { infrastructure < 2 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 4
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 3 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 3
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 4 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			else_if = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+	}
+}
+
 #####################################
 ### emergency_factory_conversion ####
 #####################################
@@ -200,11 +759,7 @@ infrastructure_effort_1_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 	
 	random_owned_controlled_state = {
@@ -215,11 +770,7 @@ infrastructure_effort_1_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 
 	random_owned_controlled_state = {
@@ -230,11 +781,7 @@ infrastructure_effort_1_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 	
 }
@@ -249,11 +796,7 @@ infrastructure_effort_2_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 	
 	random_owned_controlled_state = {
@@ -264,11 +807,7 @@ infrastructure_effort_2_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 
 	random_owned_controlled_state = {
@@ -279,11 +818,7 @@ infrastructure_effort_2_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 
 	random_owned_controlled_state = {
@@ -294,11 +829,7 @@ infrastructure_effort_2_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 
 	random_owned_controlled_state = {
@@ -309,11 +840,7 @@ infrastructure_effort_2_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 }
 
@@ -328,11 +855,7 @@ infrastructure_effort_3_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 	
 	random_owned_controlled_state = {
@@ -343,11 +866,7 @@ infrastructure_effort_3_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 
 	random_owned_controlled_state = {
@@ -358,11 +877,7 @@ infrastructure_effort_3_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 
 	random_owned_controlled_state = {
@@ -373,11 +888,7 @@ infrastructure_effort_3_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 
 	random_owned_controlled_state = {
@@ -388,11 +899,7 @@ infrastructure_effort_3_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 
 	random_owned_controlled_state = {
@@ -403,11 +910,7 @@ infrastructure_effort_3_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 
 	random_owned_controlled_state = {
@@ -418,11 +921,7 @@ infrastructure_effort_3_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 
 	random_owned_controlled_state = {
@@ -433,11 +932,7 @@ infrastructure_effort_3_effect = {
 		    infrastructure < 10
 		    }
 		}
-		add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-		}
+		build_1_infrastructure = yes
 	}
 }
 

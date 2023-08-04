@@ -2758,11 +2758,7 @@ focus_tree = {
 						level = 3
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 				}
 			}
 			else = {
@@ -2774,11 +2770,7 @@ focus_tree = {
 						level = 2
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 				}
 			}
 		}
@@ -2805,11 +2797,7 @@ focus_tree = {
 						level = 2
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 					set_state_flag = ENG_royal_ordinance_factories_2AF
 				}
 				random_owned_controlled_state = {
@@ -2827,11 +2815,7 @@ focus_tree = {
 						level = 2
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 					set_state_flag = ENG_royal_ordinance_factories_2AF
 				}
 				custom_effect_tooltip = ENG_focus_boost_tt
@@ -2851,12 +2835,7 @@ focus_tree = {
 							level = 3
 							instant_build = yes
 						}
-						add_building_construction = {
-							type = infrastructure
-							level = 1
-							instant_build = yes
-						}
-
+						build_1_infrastructure = yes
 					}
 					random_owned_controlled_state = {
 						limit = {
@@ -2873,12 +2852,7 @@ focus_tree = {
 							level = 3
 							instant_build = yes
 						}
-						add_building_construction = {
-							type = infrastructure
-							level = 1
-							instant_build = yes
-						}
-
+						build_1_infrastructure = yes
 					}
 				}
 			}
@@ -2902,11 +2876,7 @@ focus_tree = {
 						level = 3
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 					set_state_flag = ENG_royal_ordinance_factories_2AF
 				}
 				random_owned_controlled_state = {
@@ -2924,11 +2894,7 @@ focus_tree = {
 						level = 3
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 					set_state_flag = ENG_royal_ordinance_factories_2AF
 				}
 				set_country_flag = ENG_royal_ordinance_factories_boosted
@@ -2969,11 +2935,7 @@ focus_tree = {
 						level = 3
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 				}
 			}
 			else = {
@@ -2985,11 +2947,7 @@ focus_tree = {
 						level = 2
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 				}
 			}
 		}
@@ -3016,11 +2974,7 @@ focus_tree = {
 						level = 2
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 					set_state_flag = royal_ordinance_focus_2AF
 				}
 				random_owned_controlled_state = {
@@ -3038,11 +2992,7 @@ focus_tree = {
 						level = 2
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 					set_state_flag = royal_ordinance_focus_2AF
 				}
 				custom_effect_tooltip = ENG_focus_boost_tt
@@ -3062,11 +3012,7 @@ focus_tree = {
 							level = 3
 							instant_build = yes
 						}
-						add_building_construction = {
-							type = infrastructure
-							level = 1
-							instant_build = yes
-						}
+						build_1_infrastructure = yes
 						set_state_flag = royal_ordinance_focus_2AF
 					}
 					random_owned_controlled_state = {
@@ -3084,11 +3030,7 @@ focus_tree = {
 							level = 3
 							instant_build = yes
 						}
-						add_building_construction = {
-							type = infrastructure
-							level = 1
-							instant_build = yes
-						}
+						build_1_infrastructure = yes
 						set_state_flag = royal_ordinance_focus_2AF
 					}
 				}
@@ -3113,11 +3055,7 @@ focus_tree = {
 						level = 3
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 					set_state_flag = royal_ordinance_focus_2AF
 				}
 				random_owned_controlled_state = {
@@ -3135,11 +3073,7 @@ focus_tree = {
 						level = 3
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 					set_state_flag = royal_ordinance_focus_2AF
 				}
 				set_country_flag = ENG_military_rearmament_boosted
@@ -5120,7 +5054,7 @@ focus_tree = {
 					name = JAP_strengthen_the_fleet_air_arm
 					bonus = 2
 					uses = 2
-					category = naval_air
+					category = naval_bomber
 				}
 				add_doctrine_cost_reduction = {
 					name = JAP_strengthen_the_fleet_air_arm
@@ -5147,7 +5081,7 @@ focus_tree = {
 					name = JAP_strengthen_the_fleet_air_arm
 					bonus = 1
 					uses = 2
-					category = naval_air
+					category = naval_bomber
 				}
 				add_doctrine_cost_reduction = {
 					name = JAP_strengthen_the_fleet_air_arm
@@ -5183,7 +5117,7 @@ focus_tree = {
 					name = JAP_strengthen_the_fleet_air_arm
 					bonus = 1
 					uses = 2
-					category = naval_air
+					category = naval_bomber
 				}
 				add_doctrine_cost_reduction = {
 					name = JAP_strengthen_the_fleet_air_arm
@@ -5210,7 +5144,7 @@ focus_tree = {
 						name = JAP_strengthen_the_fleet_air_arm
 						bonus = 2
 						uses = 2
-						category = naval_air
+						category = naval_bomber
 					}
 					add_doctrine_cost_reduction = {
 						name = JAP_strengthen_the_fleet_air_arm
@@ -5242,7 +5176,7 @@ focus_tree = {
 					name = JAP_strengthen_the_fleet_air_arm
 					bonus = 2
 					uses = 2
-					category = naval_air
+					category = naval_bomber
 				}
 				add_doctrine_cost_reduction = {
 					name = JAP_strengthen_the_fleet_air_arm
@@ -6297,11 +6231,7 @@ focus_tree = {
 								} 
 							}
 						}
-						set_building_level = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
+						build_3_infrastructure = yes
 						add_building_construction = {
 							type = air_base
 							level = 3
@@ -6330,11 +6260,7 @@ focus_tree = {
 								} 
 							}
 						}
-						set_building_level = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
+						build_3_infrastructure = yes
 						add_building_construction = {
 							type = air_base
 							level = 3
@@ -6361,12 +6287,9 @@ focus_tree = {
 									is_in_faction_with = ENG
 									controls_state = 640
 								} 
-							} }
-						set_building_level = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
+							} 
 						}
+						build_2_infrastructure = yes
 						add_building_construction = {
 							type = air_base
 							level = 2
@@ -6397,11 +6320,7 @@ focus_tree = {
 								} 
 							}
 						}
-						set_building_level = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
+						build_2_infrastructure = yes
 						add_building_construction = {
 							type = air_base
 							level = 2
@@ -6420,11 +6339,7 @@ focus_tree = {
 								} 
 							}
 						}
-						set_building_level = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
+						build_2_infrastructure = yes
 						add_building_construction = {
 							type = air_base
 							level = 2
@@ -6441,12 +6356,9 @@ focus_tree = {
 									is_in_faction_with = ENG
 									controls_state = 640
 								} 
-							} }
-						set_building_level = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
+							} 
 						}
+						build_2_infrastructure = yes
 						add_building_construction = {
 							type = air_base
 							level = 1
@@ -6516,11 +6428,7 @@ focus_tree = {
 								} 
 							}
 						}
-						set_building_level = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
+						build_2_infrastructure = yes
 						add_building_construction = {
 							type = air_base
 							level = 2
@@ -6539,11 +6447,7 @@ focus_tree = {
 								} 
 							}
 						}
-						set_building_level = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
+						build_2_infrastructure = yes
 						add_building_construction = {
 							type = air_base
 							level = 2
@@ -6560,12 +6464,9 @@ focus_tree = {
 									is_in_faction_with = ENG
 									controls_state = 640
 								} 
-							} }
-						set_building_level = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
+							} 
 						}
+						build_2_infrastructure = yes
 						add_building_construction = {
 							type = air_base
 							level = 1
@@ -6596,11 +6497,7 @@ focus_tree = {
 									} 
 								}
 							}
-							set_building_level = {
-								type = infrastructure
-								level = 5
-								instant_build = yes
-							}
+							build_3_infrastructure = yes
 							add_building_construction = {
 								type = air_base
 								level = 3
@@ -6629,11 +6526,7 @@ focus_tree = {
 									} 
 								}
 							}
-							set_building_level = {
-								type = infrastructure
-								level = 5
-								instant_build = yes
-							}
+							build_3_infrastructure = yes
 							add_building_construction = {
 								type = air_base
 								level = 3
@@ -6660,12 +6553,9 @@ focus_tree = {
 										is_in_faction_with = ENG
 										controls_state = 601
 									} 
-								} }
-							set_building_level = {
-								type = infrastructure
-								level = 5
-								instant_build = yes
+								} 
 							}
+							build_2_infrastructure = yes
 							add_building_construction = {
 								type = air_base
 								level = 2
@@ -6702,11 +6592,7 @@ focus_tree = {
 								} 
 							}
 						}
-						set_building_level = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
+						build_3_infrastructure = yes
 						add_building_construction = {
 							type = air_base
 							level = 3
@@ -6735,11 +6621,7 @@ focus_tree = {
 								} 
 							}
 						}
-						set_building_level = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
+						build_3_infrastructure = yes
 						add_building_construction = {
 							type = air_base
 							level = 3
@@ -6766,12 +6648,9 @@ focus_tree = {
 									is_in_faction_with = ENG
 									controls_state = 640
 								} 
-							} }
-						set_building_level = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
+							} 
 						}
+						build_2_infrastructure = yes
 						add_building_construction = {
 							type = air_base
 							level = 2
@@ -9221,11 +9100,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			551  = {
-				set_building_level = {
-					type = infrastructure
-					level = 6
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 				add_building_construction = {
 					type = naval_base
 					level = 3
@@ -9234,18 +9109,10 @@ focus_tree = {
 				}
 			}
 			457  = {
-				set_building_level = {
-					type = infrastructure
-					level = 6
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			456  = {
-				set_building_level = {
-					type = infrastructure
-					level = 6
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 		}
 	}	
@@ -9994,11 +9861,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				set_building_level = {
-					type = infrastructure
-					level = 9 
-					instant_build = yes 
-				}
+				build_1_infrastructure = yes
 			}
 		}
 
@@ -10019,11 +9882,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				set_building_level = {
-					type = infrastructure
-					level = 9
-					instant_build = yes 
-				}
+				build_1_infrastructure = yes
 				set_state_flag = ENG_growth_of_advanced_industries_1IC
 			}			
 		}

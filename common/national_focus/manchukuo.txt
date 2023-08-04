@@ -86,32 +86,16 @@ focus_tree = {
     			}
 			}
 			610 = {
-				add_building_construction = {
-					level = 1
-					type = infrastructure
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 			715 = {
-				add_building_construction = {
-					level = 1
-					type = infrastructure
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 			716 = {
-				add_building_construction = {
-					level = 1
-					type = infrastructure
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 			328 = {
-				add_building_construction = {
-					level = 1
-					type = infrastructure
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 		}
 
@@ -124,32 +108,16 @@ focus_tree = {
     			}
 			}
 			610 = {
-				add_building_construction = {
-					level = 1
-					type = infrastructure
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 			715 = {
-				add_building_construction = {
-					level = 1
-					type = infrastructure
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 			716 = {
-				add_building_construction = {
-					level = 1
-					type = infrastructure
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 			328 = {
-				add_building_construction = {
-					level = 1
-					type = infrastructure
-					instant_build = yes
-				}
+				build_1_infrastructure = yes
 			}
 		}
 	}
@@ -601,51 +569,31 @@ focus_tree = {
 			if = {
 				limit = { 716 = { is_fully_controlled_by = ROOT } }
 				716 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 				}
 			}
 			if = {
 				limit = { 328 = { is_fully_controlled_by = ROOT } }
 				328 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 				} 
 			}
 			if = {
 				limit = { 714 = { is_fully_controlled_by = ROOT } }
 				714 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 				} 
 			}
 			if = {
 				limit = { 610 = { is_fully_controlled_by = ROOT } }
 				610 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 				} 
 			}
 			if = {
 				limit = { 717 = { is_fully_controlled_by = ROOT } }
 				717 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					build_1_infrastructure = yes
 				}
 			}
 			#Hsinking - Dalian
@@ -1989,69 +1937,27 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {
-			add_ideas = MAN_wasteland_overlord
-			756 = {
-			set_resistance = 0
-			set_compliance = 55
-			}
-			755 = {
-			set_resistance = 0
-			set_compliance = 55
-			}
-			604 = {
-			set_resistance = 0
-			set_compliance = 55
-			}
-			616 = {
-			set_resistance = 0
-			set_compliance = 55
-			}
-			754 = {
-			set_resistance = 0
-			set_compliance = 55
-			}
-			283 = {
-			set_resistance = 0
-			set_compliance = 55
-			}
-			753 = {
-			set_resistance = 0
-			set_compliance = 55
-			}
+			add_state_core = 756 
+			add_state_core = 755
+			add_state_core = 604 
+			add_state_core = 616 
+			add_state_core = 754 
+			add_state_core = 283 
+			add_state_core = 753 
 		}
 			
 		completion_reward = {
-			add_ideas = MAN_wasteland_overlord
-			756 = {
-			set_resistance = 0
-			set_compliance = 55
-			}
-			755 = {
-			set_resistance = 0
-			set_compliance = 55
-			}
-			604 = {
-			set_resistance = 0
-			set_compliance = 55
-			}
-			616 = {
-			set_resistance = 0
-			set_compliance = 55
-			}
-			754 = {
-			set_resistance = 0
-			set_compliance = 55
-			}
-			283 = {
-			set_resistance = 0
-			set_compliance = 55
-			}
-			753 = {
-			set_resistance = 0
-			set_compliance = 55
+
+			add_state_core = 756 
+			add_state_core = 755
+			add_state_core = 604 
+			add_state_core = 616 
+			add_state_core = 754 
+			add_state_core = 283 
+			add_state_core = 753 
 			}
 		}
-	}
+	
 	
 	focus = {
 		id = MAN_wastes_resources
@@ -2131,32 +2037,16 @@ focus_tree = {
 				target_province = 7940
 			}
 			604 = {
-				add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			754 = {
-				add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			283 = {
-				add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			753 = {
-				add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 		}
 		completion_reward = {
@@ -2167,32 +2057,16 @@ focus_tree = {
 				target_province = 7940
 			}
 			604 = {
-				add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			754 = {
-				add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			283 = {
-				add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			753 = {
-				add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 		}
 	}

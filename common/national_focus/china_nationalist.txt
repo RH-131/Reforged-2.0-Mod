@@ -188,25 +188,13 @@ focus_tree = {
 
 		completion_reward = {
 			607 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			602 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			605 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 
 		}
@@ -1917,33 +1905,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
-		complete_tooltip = {
-			add_building_construction = {
-				type = infrastructure
-				level = 2
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 2
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 2
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 2
-				instant_build = yes
-			}
-		}
-
 		completion_reward = {
 			CHI_hyper_inflation_level_up = yes
 			random_owned_controlled_state = {
@@ -1967,11 +1928,7 @@ focus_tree = {
 						}
 					}
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -1994,11 +1951,7 @@ focus_tree = {
 						}
 					}
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				build_2_infrastructure = yes
 			}
 		
 			random_owned_controlled_state = {
@@ -2022,11 +1975,7 @@ focus_tree = {
 							}
 						}
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
+					build_2_infrastructure = yes
 				}
 				random_owned_controlled_state = {
 					limit = {
@@ -2049,11 +1998,7 @@ focus_tree = {
 							}
 						}
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
+					build_2_infrastructure = yes
 				}
 			}
 		}
