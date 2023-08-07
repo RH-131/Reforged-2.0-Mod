@@ -4694,10 +4694,10 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			set_technology = {
-                 eng_medium_tank_1938 = 1 
-			}
 			hidden_effect = {
+				set_technology = {
+					eng_medium_tank_1938 = 1 
+				}
 				load_oob = RAJ_tank
 			}
 			custom_effect_tooltip = RAJ_create_unit_tank_tt
