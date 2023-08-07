@@ -1677,11 +1677,7 @@ USA_unique_measures = {
 			news_event = { hours = 24 id = news.492 }
 			hidden_effect = {
 				ROOT = {
-					send_equipment = {
-						target = PAR
-						type = tac_bomber_equipment_1939
-						amount = 16
-					}
+					add_equipment_to_stockpile = { type = tac_bomber_equipment_1939 amount = -16 }
 				}
 				282 = { #Kanto
 					damage_building = { type = arms_factory damage = 0.2 }

@@ -16,7 +16,7 @@ country_event = {
 	option = {
 		name = japan.1.a
 		add_war_support = 0.05
-		custom_effect_tooltip = JAP_declare_on_china_tt`
+		custom_effect_tooltip = JAP_declare_on_china_tt
 		hidden_effect = {
 			country_event = { days = 30 id = japan.27 }
 		}
@@ -2310,7 +2310,8 @@ country_event = {
 		trigger = {
 			JAP = { is_ai = yes }
 		}
-		ai_chance = 5000
+		name = japan.27.a
+		ai_chance = { factor = 5000 }
 		JAP_china_war_50_days = yes
 		transfer_state = 608
 		hidden_effect = {
@@ -2462,7 +2463,8 @@ country_event = {
 		trigger = {
 			JAP = { is_ai = yes }
 		}
-		ai_chance = 5000
+		name = japan.27.a
+		ai_chance = { factor = 5000 }
 		JAP_china_war_50_days = yes
 		transfer_state = 614 #Hebei
 		transfer_state = 597 #Shandong
@@ -2630,7 +2632,8 @@ country_event = {
 		trigger = {
 			JAP = { is_ai = yes }
 		}
-		ai_chance = 5000
+		name = japan.27.a
+		ai_chance = { factor = 5000 }
 		JAP_china_war_50_days = yes
 		transfer_state = 613 #Shanghai
 		transfer_state = 596 #Zhejiang
@@ -2806,7 +2809,8 @@ country_event = {
 		trigger = {
 			JAP = { is_ai = yes }
 		}
-		ai_chance = 5000
+		ai_chance = { factor = 5000 }
+		name = japan.27.a
 		JAP_china_war_50_days = yes
 		transfer_state = 598 #Jiangsu
 		transfer_state = 593 #Guangdong
