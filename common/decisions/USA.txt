@@ -1725,39 +1725,10 @@ USA_unique_measures = {
 				set_autonomy = { target = EFR autonomy_state = autonomy_reichsprotectorate }
 			}
 		    EFR = {
-				declare_war_on = {
-           	    			target = USA
-					type = annex_everything
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = USA
 				}
-		   		 declare_war_on = {
-					target = ENG
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = CAN
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = SAF
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = FRA
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = AST
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = RAJ
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = NZL
-					type = annex_everything
-				}
-              
 			}
 			news_event = { hours = 6 id = news.457 }
 			hidden_effect = {
@@ -1773,6 +1744,9 @@ USA_unique_measures = {
 				limit = {
 					USA = {	is_ai = yes }
 				}
+				set_province_controller = 7069
+				set_province_controller = 10070
+				set_province_controller = 11943
 				load_oob = USA_torch_oob
 			}
 		}

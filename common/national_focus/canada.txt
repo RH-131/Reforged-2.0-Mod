@@ -2040,16 +2040,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					#is_ai = no
-					has_tech = motorised_infantry
-				}
-		
-			hidden_effect = {
-				load_oob = "CAN_motorised_Division"		# template
-			}
-			}
 			add_tech_bonus = {
 				name = CAN_a_motorized_army
 				bonus = 1.0

@@ -686,10 +686,9 @@ focus_tree = {
 					}
 				}
 
-				every_state = {
-					limit = { state = 605 }
+				605 = {
 					create_unit = {
-						division = "name = \"1st. US Trained Division division_template = \"US Trained Division\" start_experience_factor = 1 start_equipment_factor = 0.8" 
+						division = "name = \"1st. US Trained Division\" division_template = \"US Trained Division\" start_experience_factor = 1 start_equipment_factor = 0.8" 
 						owner = CHI
 					}	
 					create_unit = {
@@ -1293,8 +1292,7 @@ focus_tree = {
 					}
 				}
 
-				every_state = {
-					limit = { state = 378 }
+				378 = {
 					create_unit = {
 						division = "name = \"1st Marine Division\" division_template = \"USMC Division\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
 						owner = USA
@@ -1367,8 +1365,7 @@ focus_tree = {
 					}
 				}
 
-				every_state = {
-					limit = { state = 378 }
+				378 = {
 					create_unit = {
 						division = "name = \"1st USMC Garrison Division\" division_template = \"USMC Garrison Division\" start_experience_factor = 1 start_equipment_factor = 1" 
 						owner = USA
@@ -4795,9 +4792,6 @@ focus_tree = {
 				days = -75
 			}
 			#add_political_power = 50
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = USA_henry_morgenthau_jr_1
 			add_ideas = USA_henry_morgenthau_jr_1
 		}
 	}		

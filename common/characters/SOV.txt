@@ -354,29 +354,29 @@ characters={
 			slot = high_command
 			idea_token = gordey_levchenko
 			ledger  = navy 
-				allowed  = {
-					original_tag  = SOV
+			allowed  = {
+				original_tag  = SOV
+			}
+			available  = {
+				not  = {
+					has_country_flag  = purge_2_group_a 
 				}
-				available  = {
+				hidden_trigger  = {
 					not  = {
-						has_country_flag  = purge_2_group_a 
-					}
-					hidden_trigger  = {
-						not  = {
-							any_other_country  = {
-								has_war_with  = SOV
-								original_tag  = SOV
-								has_unit_leader  = 406.000
-							}
+						any_other_country  = {
+							has_war_with  = SOV
+							original_tag  = SOV
+							has_unit_leader  = 406.000
 						}
 					}
 				}
-				traits  = {
-					navy_capital_ship_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
+			}
+			traits  = {
+				navy_capital_ship_1 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
 		}
 		name="gordey_levchenko"
 		portraits={
@@ -766,20 +766,20 @@ characters={
 		advisor={
 			slot = navy_chief
 			idea_token = mikhail_frinovsky
-			allowed  = {
-					original_tag  = SOV
+			allowed = {
+				original_tag  = SOV
+			}
+			available  = {
+				not  = {
+					has_country_flag  = purge_1_group_a 
 				}
-				available  = {
-					not  = {
-						has_country_flag  = purge_1_group_a 
-					}
-				}
-				traits  = {
-					navy_chief_commerce_raiding_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
+			}
+			traits  = {
+				navy_chief_commerce_raiding_1 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
 		}
 		name="mikhail_frinovsky"
 		portraits={
@@ -843,7 +843,7 @@ characters={
 	SOV_lavrentiy_beria={
 		advisor={
 			slot = political_advisor
-			idea_token = SOV_lavrentiy_beria
+			idea_token = lavrentiy_beria
 			allowed  = {
 					original_tag  = SOV
 				}
@@ -867,7 +867,7 @@ characters={
 					weekly_manpower  = -300.000
 				}
 		}
-		name="SOV_lavrentiy_beria"
+		name="lavrentiy_beria"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_4"
@@ -926,7 +926,7 @@ characters={
 	SOV_nikolai_yezhov={
 		advisor={
 			slot = political_advisor
-			idea_token = SOV_nikolai_yezhov
+			idea_token = nikolai_yezhov
 			allowed  = {
 					original_tag  = SOV
 				}
@@ -951,7 +951,7 @@ characters={
 					weekly_manpower  = -200.000
 				}
 		}
-		name="SOV_nikolai_yezhov"
+		name="nikolai_yezhov"
 		portraits={
 			army={
 				small="GFX_idea_advisor_generic_10"

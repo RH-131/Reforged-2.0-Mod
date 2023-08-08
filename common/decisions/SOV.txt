@@ -875,9 +875,7 @@ SOV_gulag_economy = {
 			
 			custom_effect_tooltip = SOV_deploy_gulag_prisoners_tt
 
-			every_state = {
-				limit = { state = 219 }
-
+			219 = {
 				create_unit = {
 					division = "name = \"NKVD Division\" division_template = \"Shtrafbat Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
 					owner = SOV
@@ -3757,8 +3755,7 @@ SOV_great_patriotic_war = {
 					limit = {
 						229 = { check_variable = { var = SOV_garrison_strength value = 2 compare = equals } }
 					}
-					every_state = {
-						limit = { state = 219 }
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -3782,8 +3779,7 @@ SOV_great_patriotic_war = {
 						229 = { check_variable = { var = SOV_garrison_strength value = 3 compare = equals } }
 					}
 
-					every_state = {
-						limit = { state = 219 }
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -3823,8 +3819,7 @@ SOV_great_patriotic_war = {
 						229 = { check_variable = { var = SOV_garrison_strength value = 4 compare = equals } }
 					}
 
-					every_state = {
-						limit = { state = 219 }
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -3917,9 +3912,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						582 = { check_variable = { var = SOV_garrison_strength value = 2 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.7 start_equipment_factor = 1" 
 							owner = SOV
@@ -3942,9 +3936,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						582 = { check_variable = { var = SOV_garrison_strength value = 3 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.7 start_equipment_factor = 1" 
 							owner = SOV
@@ -3983,9 +3976,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						582 = { check_variable = { var = SOV_garrison_strength value = 4 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4104,9 +4096,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						571 = { check_variable = { var = SOV_garrison_strength value = 2 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4129,9 +4120,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						571 = { check_variable = { var = SOV_garrison_strength value = 3 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4170,9 +4160,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						571 = { check_variable = { var = SOV_garrison_strength value = 4 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4245,9 +4234,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						405 = { check_variable = { var = SOV_garrison_strength value = 2 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4270,9 +4258,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						405 = { check_variable = { var = SOV_garrison_strength value = 3 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4311,9 +4298,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						405 = { check_variable = { var = SOV_garrison_strength value = 4 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4386,9 +4372,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						408 = { check_variable = { var = SOV_garrison_strength value = 2 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 1.0 start_equipment_factor = 1" 
 							owner = SOV
@@ -4411,9 +4396,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						408 = { check_variable = { var = SOV_garrison_strength value = 3 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 1.0 start_equipment_factor = 1" 
 							owner = SOV
@@ -4452,9 +4436,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						408 = { check_variable = { var = SOV_garrison_strength value = 4 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 1.0 start_equipment_factor = 1" 
 							owner = SOV

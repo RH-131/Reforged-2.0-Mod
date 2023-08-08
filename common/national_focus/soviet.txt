@@ -6020,7 +6020,14 @@ focus_tree = {
 		relative_position_id = SOV_military_research
 		completion_reward = {
 			custom_effect_tooltip = SOV_create_unit_tank_corps_reformed_tt
-			hidden_effect = {	
+			hidden_effect = {
+				set_technology = {
+					sov_mechanised_infantry = 1
+					sov_medium_tank_1937 = 1
+					sov_medium_td_1939 = 1
+					sov_medium_art_1939 = 1
+					sov_heavy_assault_gun_1939 = 1
+				}
 				division_template = {
 					name = "Tankoviy Korpus Reformed"
 					priority = 2

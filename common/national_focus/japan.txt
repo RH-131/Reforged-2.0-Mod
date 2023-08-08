@@ -1952,7 +1952,6 @@ focus_tree = {
 			hidden_effect = {
 				sound_effect = jap_banzai
 			}
-
 		}
 	}
 ### SRIKE THE WEST TREE ###
@@ -2245,49 +2244,36 @@ focus_tree = {
 			    SIA = {add_ideas = JAP_comintern_reduced_trade}
 			    SOV = {add_ideas = SOV_copro_reduced_trade}
 			    MON = {add_ideas = SOV_copro_reduced_trade}
-				declare_war_on = {
-					target = USA
-					type = annex_everything
+				USA = {
+					add_to_war = {
+						targeted_alliance = ENG
+						enemy = GER
+					}
 				}
-				declare_war_on = {
-					target = ENG
-					type = annex_everything
+				MEX = {
+					add_to_war = {
+						targeted_alliance = ENG
+						enemy = GER
+					}
 				}
-				declare_war_on = {
-					target = FRA
-					type = annex_everything
+				ENG = {
+					add_to_faction = USA
 				}
-				declare_war_on = {
-					target = RAJ
-					type = annex_everything
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = USA
 				}
-				declare_war_on = {
-					target = CAN
-					type = annex_everything
+				MAN = {
+					add_to_war = {
+						targeted_alliance = GER
+						enemy = USA
+					}
 				}
-				declare_war_on = {
-					target = AST
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = SAF
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = IRE
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = NZL
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = HOL
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = INS
-					type = annex_everything
+				SIA = {
+					add_to_war = {
+						targeted_alliance = GER
+						enemy = USA
+					}
 				}
 				play_song = "Shussei Heishi o Okuru Uta"
 		    }

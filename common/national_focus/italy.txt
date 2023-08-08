@@ -2932,63 +2932,15 @@ focus_tree = {
 				add_idea = parola_di_ordine_vincere
 			}	
 			ITA = {
-				declare_war_on = {
-					target = ENG
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = CAN
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = SAF
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = FRA
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = AST
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = RAJ
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = NZL
-					type = annex_everything
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = ENG
 				}
 		    }
 			ETH = {
-				declare_war_on = {
-					target = ENG
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = CAN
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = SAF
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = FRA
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = AST
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = RAJ
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = NZL
-					type = annex_everything
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = ENG
 				}
 		    } 			
         	hidden_effect = {
@@ -3066,12 +3018,15 @@ focus_tree = {
 				limit = {
 					is_ai = no
 				}
-				ITA = {
-					declare_war_on = {
-						target = GRE
-						type = annex_everything
+				GRE = {
+					add_to_war = {
+						targeted_alliance = ENG
+						enemy = GER
 					}
-				} 
+				}
+				ENG = {
+					add_to_faction = GRE
+				}
 			}
 
 			hidden_effect = {
@@ -3106,12 +3061,15 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			ITA = {
-				declare_war_on = {
-					target = YUG
-					type = annex_everything
+			YUG = {
+				add_to_war = {
+					targeted_alliance = ENG
+					enemy = GER
 				}
-		    } 
+			}
+			ENG = {
+				add_to_faction = YUG
+			}
 
 			hidden_effect = {
 				news_event = { hours = 6 id = news.192 }

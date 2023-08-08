@@ -555,9 +555,7 @@ country_event = {
 		custom_effect_tooltip = remove_political_advisor
 		show_ideas_tooltip = mikhail_kalinin
 		set_country_flag = purged_kalinin
-		hidden_effect = {
-			remove_ideas = mikhail_kalinin
-		}
+		retire_character = SOV_mikhail_kalinin
 	}
 
 	option = {
@@ -568,9 +566,7 @@ country_event = {
 		custom_effect_tooltip = remove_political_advisor
 		show_ideas_tooltip = nikita_khrushchev
 		set_country_flag = purged_khrushchev
-		hidden_effect = {
-			remove_ideas = nikita_khrushchev
-		}
+		retire_character = SOV_nikita_khruschev
 	}
 
 	option = {
@@ -609,10 +605,9 @@ country_event = {
 		show_ideas_tooltip = pyotr_smirnov
 		show_ideas_tooltip = mikhail_frinovsky
 		retire_character = SOV_mikhail_tukhachevsky
-		hidden_effect = {
-			remove_ideas = mikhail_tukhachevsky
-			remove_ideas = alexander_yegorov
-		}
+		retire_character = SOV_alexander_yegorov
+		retire_character = SOV_pyotr_smirnov
+		retire_character = SOV_mikhail_frinovsky
 	}		
 
 	option = {
@@ -629,18 +624,12 @@ country_event = {
 		custom_effect_tooltip = remove_military_high_command
 		show_ideas_tooltip = konstantin_rokossovsky
 		show_ideas_tooltip = vladimir_kasatonov
-		retire_character = SOV_kliment_voroshilov
-		retire_character = SOV_konstantin_rokossovsky
 		retire_character = SOV_semyon_timoshenko
+		retire_character = SOV_kliment_voroshilov
+		retire_character = SOV_ivan_yumashev
+		retire_character = SOV_konstantin_rokossovsky
 		retire_character = SOV_vladimir_kasatonov
 		custom_effect_tooltip = soviet.27_tt
-		hidden_effect = {
-			remove_ideas = semyon_timoshenko
-			remove_ideas = kliment_voroshilov
-			remove_ideas = ivan_yumashev
-			remove_ideas = konstantin_rokossovsky
-			remove_ideas = vladimir_kasatonov
-		}
 	}			
 }
 
@@ -664,23 +653,20 @@ country_event = {
 		name = soviet.27.a
 		set_country_flag = purge_2_group_a
 		custom_effect_tooltip = remove_political_advisor
-		show_ideas_tooltip = SOV_nikolai_yezhov
+		show_ideas_tooltip = nikolai_yezhov
 		custom_effect_tooltip = remove_chief_of_airforce
 		show_ideas_tooltip = yakov_smushkevich
 		show_ideas_tooltip = pavel_rychagov
 		show_ideas_tooltip = alexander_novikov
 		custom_effect_tooltip = remove_military_high_command
 		show_ideas_tooltip = gordey_levchenko
+		retire_character = SOV_nikolai_yezhov
+		retire_character = SOV_yakov_smushkevich
+		retire_character = SOV_pavel_rychagov
+		retire_character = SOV_alexander_novikov
 		retire_character = SOV_gordey_levchenko
 		custom_effect_tooltip = soviet.27_tt
-		hidden_effect = {
-			add_ideas = SOV_lavrentiy_beria
-			remove_ideas = SOV_nikolai_yezhov
-			remove_ideas = yakov_smushkevich
-			remove_ideas = pavel_rychagov
-			remove_ideas = alexander_novikov
-			remove_ideas = gordey_levchenko
-		}
+		add_ideas = lavrentiy_beria
 	}
 	option = {
 		ai_chance = {
@@ -695,14 +681,11 @@ country_event = {
 		custom_effect_tooltip = remove_military_high_command
 		show_ideas_tooltip = sergei_khudyakov
 		show_ideas_tooltip = aleksandr_vasilevsky
+		retire_character = SOV_nikolay_kuznetsov
+		retire_character = SOV_konstantin_vershinin
+		retire_character = SOV_sergei_khudyakov
 		retire_character = SOV_aleksandr_vasilevsky
 		custom_effect_tooltip = soviet.27_tt
-		hidden_effect = {
-			remove_ideas = nikolay_kuznetsov
-			remove_ideas = konstantin_vershinin
-			remove_ideas = sergei_khudyakov
-			remove_ideas = aleksandr_vasilevsky
-		}
 	}
 }
 
