@@ -2384,8 +2384,43 @@ equipments = {
 	###  #  # #    ##  ##   #       #  # ##  #  ##  ###  #    ##  ###   #  #  # ###   #  
 	#  # #  # #  # # # #    #       #  #  #  #  #   #  # #  # #   #     #  #  # #  #   # 
 	#  #  ##   ##  # # ###  #      ### #  #  #  ### #  #  ##  ### #     #   ##  #  # ##  Rocket Interceptors
+	
+	rocket_interceptor_equipment = {
+		year = 1936
 
-# Basic Rocket Interceptor
+		is_archetype = yes
+		is_convertable = yes
+		can_license = no
+		picture = archetype_fighter_equipment
+		is_buildable = no
+		type = interceptor
+		group_by = archetype
+		sprite = light_plane
+		air_map_icon_frame = 5
+
+		interface_category = interface_category_air
+
+		upgrades = {
+			plane_gun_upgrade
+			plane_range_upgrade
+			plane_engine_upgrade
+			plane_reliability_upgrade
+		}
+
+		build_cost_ic = 60
+		resources = {
+			aluminium = 3
+			tungsten = 1
+		}
+
+		supply_consumption = 0.08
+
+		air_superiority = 1
+
+		manpower = 5
+	}
+
+	# Basic Rocket Interceptor
 	rocket_interceptor_equipment_1 = {
 		year = 1944
 

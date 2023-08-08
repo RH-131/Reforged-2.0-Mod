@@ -12585,6 +12585,77 @@ news_event = { #
 		name = news.469.a	
 	}
 }
+news_event = { #debug
+	id = news.997
+	title = news.999.t
+	desc = news.999.d
+	picture = GFX_news_event_usa_japan_at_war
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+   
+	option = {
+		name = news.999.a	
+	}
+}
+
+news_event = { #debug
+	id = news.998
+	title = news.999.t
+	desc = news.999.d
+	picture = GFX_news_event_usa_japan_at_war
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+   
+	option = {
+		trigger = {
+			always = no
+		}
+		name = news.999.a	
+	}
+   
+	option = {
+		name = news.999.a	
+	}
+}
+
+news_event = { #debug
+	id = news.999
+	title = news.999.t
+	desc = news.999.d
+	picture = GFX_news_event_usa_japan_at_war
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+   
+	option = {
+		trigger = {
+			always = no
+		}
+		name = news.999.a	
+	}
+   
+	option = {
+		trigger = {
+			always = no
+		}
+		name = news.999.a	
+	}
+   
+	option = {
+		name = news.999.a	
+	}
+}
 
 news_event = { #Feb 26 incident
 	id = news.470
