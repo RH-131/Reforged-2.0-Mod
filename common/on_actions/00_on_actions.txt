@@ -877,13 +877,62 @@ on_actions = {
 					transfer_state = 213
 				}
 
-				PER = {
-					transfer_state = 419
-					transfer_state = 420 
-					transfer_state = 226
-					transfer_state = 418
-					transfer_state = 416 
+				if = {
+					limit = {
+						266 = {
+							is_owned_by = SOV
+						}
+						NOT = {
+							291 = {
+								is_controlled_by = ITA
+							}
+							419 = {
+								is_controlled_by = ENG
+							}
+						}
+					}
+					GER = {
+						transfer_state = 420
+						transfer_state = 419
+						transfer_state = 418
+						transfer_state = 266
+	 					transfer_state = 416
+					}
 				}
+				else_if = {
+					limit = {
+						266 = {
+							is_owned_by = SOV
+						}
+						291 = {
+							is_controlled_by = ITA
+						}
+					}
+					ITA = {
+						transfer_state = 420
+						transfer_state = 419
+						transfer_state = 418
+						transfer_state = 266
+	 					transfer_state = 416
+					}	
+				}
+				else_if = {
+					limit = {
+						266 = {
+							is_owned_by = SOV
+						}
+						419 = {
+							is_controlled_by = ENG
+						}
+					}
+					PER = {
+						transfer_state = 420
+						transfer_state = 419
+						transfer_state = 418
+						transfer_state = 266
+	 					transfer_state = 416
+					}	
+				}					
 
 				if = {
 					limit = {
@@ -1001,6 +1050,25 @@ on_actions = {
 					transfer_state = 190
 					transfer_state = 13
 					transfer_state = 191
+
+					transfer_state = 808
+					transfer_state = 809
+					transfer_state = 810
+					transfer_state = 811
+					transfer_state = 812
+					transfer_state = 813
+					transfer_state = 814
+					transfer_state = 815
+					transfer_state = 834
+					transfer_state = 879
+					transfer_state = 880
+					transfer_state = 825
+					transfer_state = 826
+					transfer_state = 827
+					transfer_state = 828
+					transfer_state = 829
+					transfer_state = 821
+					transfer_state = 833
 				}		
 			}
 			# ROOT is capitulated country, FROM is winner
