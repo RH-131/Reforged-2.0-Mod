@@ -174,6 +174,8 @@ ideas = {
 			modifier = {
 				stability_weekly = 0.001
 				political_power_factor = 0.10
+				army_core_attack_factor = 0.025
+				army_core_defence_factor = 0.025
 			}
 		}
 		
@@ -199,6 +201,8 @@ ideas = {
 			modifier = {
 				stability_weekly = 0.001
 				political_power_factor = 0.10
+				army_core_attack_factor = 0.06
+				army_core_defence_factor = 0.06
 			}
 		}
 
@@ -327,9 +331,9 @@ ideas = {
 
 			targeted_modifier = {
 				tag = JAP
-				attack_bonus_against = 0.025
-				defense_bonus_against = 0.025
-		}
+				attack_bonus_against = 0.03
+				defense_bonus_against = 0.03
+			}
 		}
 
 		RAJ_prince_war_demands_siam = {
@@ -355,6 +359,7 @@ ideas = {
 				tag = JAP
 				attack_bonus_against = 0.05
 				defense_bonus_against = 0.05
+			}
 		}
 
 		RAJ_prince_war_demands_singapore = {
@@ -375,14 +380,16 @@ ideas = {
 			}
 
 			removal_cost = -1
+
 			modifier = {
 				army_morale_factor = 0.05
 				army_org_factor = 0.03
 			}
 			targeted_modifier = {
 				tag = JAP
-				attack_bonus_against = 0.075
-				defense_bonus_against = 0.075
+				attack_bonus_against = 0.08
+				defense_bonus_against = 0.08
+			}
 		}
 
 		RAJ_prince_war_demands_indochina = {
@@ -403,13 +410,15 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.075
+				army_org_factor = 0.05
+			}
 			targeted_modifier = {
 				tag = JAP
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			modifier = {
-				army_morale_factor = 0.1
-				army_org_factor = 0.05
+				attack_bonus_against = 0.12
+				defense_bonus_against = 0.12
 			}
 		}
 
@@ -1005,6 +1014,34 @@ ideas = {
 
 		}
 
+		RAJ_indian_officers_2 = {
+
+			picture = chi_army_corruption
+
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_core_attack_factor = 0.05
+			}
+
+			modifier = {
+				army_core_defence_factor = 0.05
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+
 		RAJ_army_corruption_1 = {
 
 			picture = chi_army_corruption
@@ -1043,6 +1080,8 @@ ideas = {
 
 			modifier = {
 				land_doctrine_cost_factor = 0.10
+				army_core_attack_factor = 0.025
+				army_core_defence_factor = 0.025
 			}
 
 			removal_cost = -1
@@ -1064,6 +1103,8 @@ ideas = {
 			}
 
 			modifier = {
+				army_core_attack_factor = 0.07
+				army_core_defence_factor = 0.07
 				land_doctrine_cost_factor = -0.10
 			}
 
@@ -1071,6 +1112,28 @@ ideas = {
 
 		}
 
+		RAJ_army_corruption_3 = {
+
+			picture = chi_army_corruption2
+
+			name = CHI_army_corruption
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+
+			removal_cost = -1
+
+		}
 
 		RAJ_agrarian_society = {
 
