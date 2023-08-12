@@ -154,9 +154,15 @@ on_actions = {
 	}
 	# our ace died in accident
 	# country, FROM = ace
+	# on_ace_killed_on_accident = {
+	#
+	# }
 	
 	# enemy ace is killed by our non name
 	# country, FROM = enemy ace
+	# on_non_ace_killed_other_ace = {
+	#
+	# }
 	
 	on_nuke_drop = {
 
@@ -238,6 +244,10 @@ on_actions = {
 			100 = nuke_dropped.0
 		}
 	}
+
+	# on_monthly = {
+	#	
+	# }
 
 	# country random events
 	#on_bi_yearly_pulse = {

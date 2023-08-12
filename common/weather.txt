@@ -2,11 +2,20 @@
 # In all elements "value" is treated as chance increase.
 # Only in Temperature, the "value" is treated as degrees Celsius increase.
 terrain_modifiers = {
+  no_phenomenon = {
+    #None added
+  }
   mud = {
     terrain = { type = "mountain" value = -0.1 }
     terrain = { type = "plains" value = 0.5 }
     terrain = { type = "marsh" value = 0.8 }
     terrain = { type = "desert" value = 0.5 }
+  }
+  rain_light = {
+    #None added
+  }
+  rain_heavy = {
+    #None added
   }
   snow = {
   	terrain = { type = "mountain" value = 0.8 }
