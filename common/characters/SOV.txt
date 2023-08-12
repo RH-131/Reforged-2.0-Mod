@@ -9,7 +9,6 @@ characters={
 		country_leader ={
 			desc = "POLITICS_JOSEPH_STALIN_DESC"
 			ideology=stalinism
-			traits={}
 			expire = "1953.3.1"
 			id=-1
 		}
@@ -24,7 +23,6 @@ characters={
 		country_leader ={
 			desc = "POLITICS_KONSTANTIN_RODZAEVSKY_DESC"
 			ideology=fascism_ideology
-			traits={}
 			expire = "1953.3.1"
 			id=-1
 		}
@@ -39,7 +37,6 @@ characters={
 		country_leader ={
 			desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
 			ideology=socialism
-			traits={}
 			expire = "1953.3.1"
 			id=-1
 		}
@@ -667,8 +664,6 @@ characters={
 					trade_opinion_factor  = 0.050
 					min_export  = 0.100
 				}
-				research_bonus  = {
-				}
 		}
 		name="SOV_mikoyan_anastas_ivanovich"
 		portraits={
@@ -710,8 +705,6 @@ characters={
 			ledger  = army 
 				allowed  = {
 					original_tag  = SOV
-				}
-				available  = {
 				}
 				traits  = {
 					army_chief_maneuver_1 
@@ -795,8 +788,6 @@ characters={
 			allowed  = {
 					original_tag  = SOV
 				}
-				available  = {
-				}
 				traits  = {
 					SOV_military_intelligence_officer 
 				}
@@ -806,8 +797,6 @@ characters={
 				}
 				research_bonus  = {
 					electronics  = 0.150
-				}
-				modifier  = {
 				}
 		}
 		name="SOV_ivan_proskurov"
@@ -907,8 +896,6 @@ characters={
 			allowed  = {
 				original_tag  = SOV
 			}
-			available  = {
-			}
 			traits  = {
 				army_chief_organizational_3 
 			}
@@ -929,8 +916,6 @@ characters={
 			idea_token = nikolai_yezhov
 			allowed  = {
 					original_tag  = SOV
-				}
-				available  = {
 				}
 				available  = {
 					not  = {

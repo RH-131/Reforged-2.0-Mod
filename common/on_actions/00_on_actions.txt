@@ -154,14 +154,9 @@ on_actions = {
 	}
 	# our ace died in accident
 	# country, FROM = ace
-	on_ace_killed_on_accident = {
-	
-	}
 	
 	# enemy ace is killed by our non name
 	# country, FROM = enemy ace
-	on_non_ace_killed_other_ace = {
-	}
 	
 	on_nuke_drop = {
 
@@ -241,11 +236,6 @@ on_actions = {
 		}
 		random_events = {
 			100 = nuke_dropped.0
-		}
-	}
-
-	on_monthly = {
-		effect = {
 		}
 	}
 
@@ -1567,17 +1557,6 @@ on_actions = {
 				}
 				add_country_leader_trait = stalins_puppet
 			}
-		}
-	}
-	
-	on_unit_leader_created = {
-		effect = {
-		}
-	}
-	
-	on_unit_leader_level_up = {
-		effect = {
-			
 		}
 	}
 	

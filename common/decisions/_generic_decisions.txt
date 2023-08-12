@@ -205,10 +205,6 @@ political_actions = {
 
 		cost = 25
 
-		complete_effect = {
-
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -238,10 +234,6 @@ political_actions = {
 		days_re_enable = 360
 
 		cost = 25
-
-		complete_effect = {
-
-		}
 
 		ai_will_do = {
 			base = 25
@@ -282,10 +274,6 @@ political_actions = {
 		days_re_enable = 360
 
 		cost = 25
-
-		complete_effect = {
-
-		}
 
 		ai_will_do = {
 			base = 0
@@ -328,10 +316,6 @@ economy_decisions = {
 
 		cost = 25
 
-		complete_effect = {
-
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -366,10 +350,6 @@ economy_decisions = {
 		days_re_enable = 120
 
 		cost = 25
-
-		complete_effect = {
-
-		}
 
 		ai_will_do = {
 			base = 0
@@ -409,10 +389,6 @@ economy_decisions = {
 
 		cost = 50
 
-		complete_effect = {
-
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -449,10 +425,6 @@ economy_decisions = {
 
 		cost = 50
 
-		complete_effect = {
-
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -488,10 +460,6 @@ economy_decisions = {
 
 		cost = 50
 
-		complete_effect = {
-
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -526,10 +494,6 @@ economy_decisions = {
 		days_re_enable = 100
 
 		cost = 50
-
-		complete_effect = {
-
-		}
 
 		ai_will_do = {
 			base = 0
@@ -567,10 +531,6 @@ economy_decisions = {
 
 		cost = 50
 
-		complete_effect = {
-
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -606,10 +566,6 @@ economy_decisions = {
 		days_re_enable = 120
 
 		cost = 50
-
-		complete_effect = {
-
-		}
 
 		ai_will_do = {
 			base = 0
@@ -1373,10 +1329,6 @@ operations = {
 
 		cost = 50
 
-		complete_effect = {
-
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -1813,10 +1765,6 @@ war_measures = {
 			factor = 10
 		}
 
-		modifier = {
-			
-		}
-
 		complete_effect = {
 			custom_effect_tooltip = we_need_more_men
 			hidden_effect = { set_technology = { Desperate_for_men_tech = 1 } }
@@ -1874,10 +1822,6 @@ war_measures = {
 		modifier = {
 			defence = 0.2
 			dig_in_speed_factor = 0.5
-		}
-
-		complete_effect = {
-
 		}
 	}
 
@@ -2040,10 +1984,6 @@ war_measures = {
 			}
 		}
 
-		remove_effect = {
-
-		}
-
 		complete_effect = {
 		#	if = {
 		#		limit = {
@@ -2143,10 +2083,6 @@ war_measures = {
 			 check_variable = { node_goal < num_of_supply_nodes } #if the number of supply nodes exceeds the old number by +3, immediately cancel
 		}
 	}
-}
-
-foreign_politics = {
-	
 }
 
 economy_decisions = {
@@ -2256,10 +2192,6 @@ foreign_support = {
 
 		cost = 0
 
-		modifier = {
-
-		}
-
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -2361,10 +2293,6 @@ foreign_support = {
 		fire_only_once = no
 
 		cost = 0
-
-		modifier = {
-
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -2482,10 +2410,6 @@ foreign_support = {
 
 		cost = 0
 
-		modifier = {
-
-		}
-
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -2587,10 +2511,6 @@ foreign_support = {
 		fire_only_once = no
 
 		cost = 0
-
-		modifier = {
-
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -2708,10 +2628,6 @@ foreign_support = {
 
  		cost = 0
 
- 		modifier = {
-
- 		}
-
  		ai_will_do = {
  			factor = 1
 			modifier = {
@@ -2813,10 +2729,6 @@ foreign_support = {
  		fire_only_once = no
 
  		cost = 0
-
- 		modifier = {
-
- 		}
 
  		ai_will_do = {
  			factor = 1
@@ -2933,10 +2845,6 @@ foreign_support = {
 		fire_only_once = no
 
 		cost = 0
-
-		modifier = {
-
-		}
 
 		ai_will_do = {
 			factor = 1

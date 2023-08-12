@@ -46,12 +46,6 @@ USA_popular_support = {
 
 		days_remove = 180
 		days_re_enable = 90
-	
-		complete_effect = {
-		}
-
-		remove_effect = {
-		}
 		modifier = {
 			stability_weekly = 0.005
 			consumer_goods_factor = 0.02
@@ -199,10 +193,7 @@ USA_popular_support = {
 			consumer_goods_factor = 0.05
 		}
 
-		cost = 25 
-
-		complete_effect = {
-		}
+		cost = 25
 
 		remove_effect = {
 			add_political_power = 150
@@ -310,9 +301,6 @@ USA_popular_support = {
 		days_mission_timeout = 950
 
 		fire_only_once = yes
-
-		activation = {
-		}
 
 		cancel_if_not_visible = yes
 
@@ -439,9 +427,6 @@ USA_popular_support = {
 
 		fire_only_once = yes
 
-		activation = {
-		}
-
 		cancel_if_not_visible = yes
 
 		is_good = yes
@@ -566,9 +551,6 @@ USA_popular_support = {
 		days_mission_timeout = 1750
 
 		fire_only_once = yes
-
-		activation = {
-		}
 
 		cancel_if_not_visible = yes
 
@@ -736,9 +718,6 @@ USA_war_preparation = {
 			factor = 100
 		}
 
-		modifier = {
-		}
-
 		days_remove = 30
 
 		visible = {
@@ -829,9 +808,6 @@ USA_war_preparation = {
 			set_country_flag = USA_currently_improving_an_industry_flag
 		}
 
-		modifier = {
-		}
-
 		remove_effect = { 
 			USA_armor_industry_level_up = yes
 			clr_country_flag = USA_currently_improving_an_industry_flag
@@ -913,9 +889,6 @@ USA_war_preparation = {
 			}
 		}
 
-		modifier = {
-		}
-
 		remove_effect = { 
 			USA_naval_industry_level_up = yes
 			clr_country_flag = USA_currently_improving_an_industry_flag
@@ -994,9 +967,6 @@ USA_war_preparation = {
 			NOT = {
 				has_country_flag = USA_currently_improving_an_industry_flag
 			}
-		}
-
-		modifier = {
 		}
 
 		remove_effect = { 
@@ -1085,9 +1055,6 @@ USA_war_preparation = {
 			}
 		}
 
-		modifier = {
-		}
-
 		remove_effect = { 
 			USA_infantry_industry_level_up = yes
 			clr_country_flag = USA_currently_improving_an_industry_flag
@@ -1113,9 +1080,6 @@ USA_war_preparation = {
 
 		activation = {
 			has_completed_focus = USA_selective_service_act
-		}
-
-		modifier = {
 		}
 
 
@@ -1291,9 +1255,6 @@ foreign_support = {
 	}
 }
 
-operations = {
-}
-
 USA_unique_measures = {
 	
 	USA_women_in_the_workforce_1 = {
@@ -1323,8 +1284,6 @@ USA_unique_measures = {
         ai_will_do = {
 			factor = 100
 		}
-		complete_effect = {
-        }
     }
 
     USA_war_bonds_1 = {
@@ -1360,13 +1319,6 @@ USA_unique_measures = {
 				has_political_power < 150
 				factor = 0 #use as pp dump
 			}
-		}
-
-		remove_effect = {
-
-		}
-
-		complete_effect = {
 		}
     }
 

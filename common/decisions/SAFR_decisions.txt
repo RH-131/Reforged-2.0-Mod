@@ -12,9 +12,6 @@ SAF_a_king_for_our_people = {
 				tooltip = SAF_a_king_for_our_people_trigger_tt					
 			}	
 		}
-				
-		modifier = {
-		}
 		
 		cost = 100
 		fire_only_once = yes
@@ -977,10 +974,6 @@ SAFR_building_surface_fleet = {
 			factor = 1
 		}
 		
-		complete_effect = {
-            
-        }
-		
 		visible = {
 			NOT = {
 				has_country_flag = SAFR_expand_shipbuilding_dec
@@ -1024,10 +1017,6 @@ SAFR_building_surface_fleet = {
 			tag = SAF
 			has_decision = SAF_study_us_ship_designs
 		}
-				
-		modifier = {
-			
-		}
 		
 		cost = 25
 		
@@ -1050,11 +1039,7 @@ SAFR_building_surface_fleet = {
 					amount = 1
 				}
 			}
-        }
-		
-		remove_effect = {
-			
-		}		
+        }		
 	}
 	
 	SAF_procure_uk_shipbuilding_expertise = {
@@ -1064,10 +1049,6 @@ SAFR_building_surface_fleet = {
 		available = {
 			tag = SAF
 			has_decision = SAF_study_uk_ship_designs
-		}
-				
-		modifier = {
-			
 		}
 		
 		cost = 25
@@ -1169,11 +1150,7 @@ SAFR_building_surface_fleet = {
 					amount = 1
 				}
 			}
-        }
-		
-		remove_effect = {
-			
-		}		
+        }		
 	}
 	
 	SAF_study_us_ship_designs = {
@@ -1182,10 +1159,6 @@ SAFR_building_surface_fleet = {
 		
 		available = {
 			tag = SAF
-		}
-				
-		modifier = {
-			
 		}
 		
 		cost = 25
@@ -1235,11 +1208,7 @@ SAFR_building_surface_fleet = {
 				category = cl_tech
 			}
 			set_country_flag = SAFR_study_us_ship_designs_dec
-        }
-		
-		remove_effect = {
-			
-		}		
+        }		
 	}
 	
 	SAF_study_uk_ship_designs = {
@@ -1248,10 +1217,6 @@ SAFR_building_surface_fleet = {
 		
 		available = {
 			tag = SAF
-		}
-				
-		modifier = {
-			
 		}
 		
 		cost = 25
@@ -1319,10 +1284,6 @@ SAFR_building_surface_fleet = {
 				has_country_flag = SAFR_study_uk_ship_designs_dec
 				has_country_flag = SAFR_procure_us_shipbuilding_expertise_dec
 			}
-		}
-		
-		remove_effect = {
-			
 		}		
 	}
 }	

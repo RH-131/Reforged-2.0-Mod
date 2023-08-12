@@ -55,8 +55,6 @@ focus_tree = {
 	focus = {
 		id = USA_department_of_war
 		icon = GFX_USA_department_of_war
-		prerequisite = {  }
-		mutually_exclusive = {  }
 		x = 9
 		y = 0
 		cost = 5
@@ -354,7 +352,6 @@ focus_tree = {
 		id = USA_support_china
 		icon = GFX_USA_support_china
 		prerequisite = { focus = USA_department_of_war }
-		mutually_exclusive = {  }
 		relative_position_id = USA_department_of_war
 		x = -15
 		y = 1
