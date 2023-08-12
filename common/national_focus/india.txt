@@ -4245,10 +4245,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-			custom_effect_tooltip = RAJ_create_unit_gurkas_tt		
-		}
 		
 		completion_reward = {
 			custom_effect_tooltip = RAJ_create_unit_gurkas_tt
@@ -4429,10 +4425,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-			custom_effect_tooltip = RAJ_create_unit_gurkas_tt
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = RAJ_create_unit_gurkas_tt
 			hidden_effect = {	
@@ -4460,12 +4452,12 @@ focus_tree = {
 						paratrooper = { x = 3 y = 1 }
 						paratrooper = { x = 3 y = 2 }
 					}
-	support = {
-		DIV_HQ = { x = 0 y = 0 }
-       	recon = { x = 0 y = 1 }
-       	engineer = { x = 0 y = 2 }
-		military_police = { x = 1 y = 0 }
-	}					
+					support = {
+						DIV_HQ = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						military_police = { x = 1 y = 0 }
+					}					
 				}
 	
 				random_owned_controlled_state = {

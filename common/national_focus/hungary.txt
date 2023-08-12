@@ -931,6 +931,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
+		
 		complete_tooltip = {
 			random_state = {
 				limit = {
@@ -952,7 +953,7 @@ focus_tree = {
 					ROOT = { has_full_control_of_state = PREV } 
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size > 2
 						include_locked = yes
 					}
 				}
@@ -1099,7 +1100,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			add_ideas = HUN_ger_fueled_economy
+			random_state = {
+				limit = { has_state_flag = HUN_german_dependency_target }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 
 		completion_reward = {
@@ -1109,7 +1119,7 @@ focus_tree = {
 					ROOT = { has_full_control_of_state = PREV } 
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size > 2
 						include_locked = yes
 					}
 				}
@@ -1119,6 +1129,7 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
+				set_state_flag = HUN_german_dependency_target
 			}
 			hidden_effect = {
 				add_ideas = HUN_axis_bills_1
@@ -1245,23 +1256,23 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
-					prioritize = { 43 }
-					limit = {
-						ROOT = { has_full_control_of_state = PREV } 
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
+				prioritize = { 43 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = industrial_complex
+						size > 12
+						include_locked = yes
 					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = arms_factory
-						level = 3
-						instant_build = yes
-					}
-					set_state_flag = HUN_expand_the_manfred_weiss_steel_works_IC
 				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = HUN_expand_the_manfred_weiss_steel_works_IC
+			}
 		}
 	}
 	
@@ -1380,7 +1391,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			add_ideas = HUN_italian_fueled_economy
+			random_state = {
+				limit = { has_state_flag = HUN_italian_dependency_target }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 
 		completion_reward = {
@@ -1390,7 +1410,7 @@ focus_tree = {
 					ROOT = { has_full_control_of_state = PREV } 
 					free_building_slots = {
 						building = industrial_complex
-						size > 1
+						size > 2
 						include_locked = yes
 					}
 				}
@@ -1591,72 +1611,72 @@ focus_tree = {
 	}
 	
 	focus = {
-			id = HUN_domestic_arms_industry
-			icon = GFX_goal_generic_construct_mil_factory
-			prerequisite = { focus = HUN_announce_the_gyor_program }
-			x = 2
-			y = 1
-			relative_position_id = HUN_announce_the_gyor_program
+		id = HUN_domestic_arms_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = HUN_announce_the_gyor_program }
+		x = 2
+		y = 1
+		relative_position_id = HUN_announce_the_gyor_program
 
-			cost = 7.15
+		cost = 7.15
 
-			ai_will_do = {
-				factor = 80
-			}
+		ai_will_do = {
+			factor = 80
+		}
 
-			available = {
+		available = {
 
-			}
+		}
 
-			bypass = {
+		bypass = {
 
-			}
+		}
 
-			cancel_if_invalid = yes
-			continue_if_invalid = no
-			available_if_capitulated = no
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
 
-			complete_tooltip = {
-				random_state = {
-					limit = {
-						has_state_flag = HUN_domestic_arms_industry_AF1
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = HUN_domestic_arms_industry_AF1
 				}
-				random_state = {
-					limit = {
-						has_state_flag = HUN_domestic_arms_industry_AF2
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
 			}
-
-			completion_reward = {
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
+			random_state = {
+				limit = {
+					has_state_flag = HUN_domestic_arms_industry_AF2
 				}
-				set_state_flag = HUN_domestic_arms_industry_AF1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			set_state_flag = HUN_domestic_arms_industry_AF1
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -1678,65 +1698,73 @@ focus_tree = {
 	}
 
 	focus = {
-			id = HUN_support_domestic_industry
-			icon = GFX_goal_generic_construct_civ_factory
-			prerequisite = { focus = HUN_announce_the_gyor_program }
-			x = -2
-			y = 1
-			relative_position_id = HUN_announce_the_gyor_program
+		id = HUN_support_domestic_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = HUN_announce_the_gyor_program }
+		x = -2
+		y = 1
+		relative_position_id = HUN_announce_the_gyor_program
 
-			cost = 7.15
+		cost = 7.15
 
-			ai_will_do = {
-				factor = 60
-			}
+		ai_will_do = {
+			factor = 60
+		}
 
-			available = {
+		available = {
 
-			}
+		}
 
-			bypass = {
-
-			}
-
-			cancel_if_invalid = yes
-			continue_if_invalid = no
-			available_if_capitulated = no
-			
-
-			complete_tooltip = {
-				random_state = {
-					limit = {
-						has_state_flag = HUN_support_domestic_industry_IC
+		bypass = {
+			NOT = {
+				any_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+						include_locked = yes
 					}
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = industrial_complex
-						level = 4
-						instant_build = yes
-					}
-				}
-			}
-
-			completion_reward = {
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = industrial_complex
-						level = 4
-						instant_build = yes
-					}
-					set_state_flag = HUN_support_domestic_industry_IC
 				}
 			}
 		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = HUN_support_domestic_industry_IC
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = HUN_support_domestic_industry_IC
+			}
+		}
+	}
 		
 	focus = {
 		id = HUN_institute_for_industrial_techniques
@@ -1801,7 +1829,6 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {
-
 			random_state = {
 				limit = {
 					has_state_flag = HUN_synthetic_industry_oil
@@ -1817,24 +1844,43 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { NOT = { has_tech = synth_oil_experiments } }
-				custom_effect_tooltip = HUN_synthetic_oil_tt
-			}
-			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = synthetic_refinery
-						size > 0
-						include_locked = yes
+					has_tech = synth_oil_experiments
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = synthetic_refinery
+							size > 0
+							include_locked = yes
+						}
 					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = HUN_synthetic_industry_oil
 				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 1
-					instant_build = yes
+			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = HUN_synthetic_industry_oil
 				}
-				set_state_flag = HUN_synthetic_industry_oil
 			}
 		}
 	}
@@ -1866,7 +1912,6 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {
-
 			random_state = {
 				limit = {
 					has_state_flag = HUN_synthetic_industry_rubber
@@ -1882,24 +1927,43 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { NOT = { has_tech = synth_oil_experiments } }
-				custom_effect_tooltip = HUN_synthetic_rubber_tt
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = synthetic_rubber_refinery
-						size > 0
-						include_locked = yes
+				limit = { 
+					has_tech = rubber_processing
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = synthetic_rubber_refinery
+							size > 0
+							include_locked = yes
+						}
 					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_rubber_refinery
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = HUN_synthetic_industry_rubber
 				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = synthetic_rubber_refinery
-					level = 1
-					instant_build = yes
+			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_rubber_refinery
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = HUN_synthetic_industry_rubber
 				}
-				set_state_flag = HUN_synthetic_industry_rubber
 			}
 		}
 	}
@@ -1927,7 +1991,15 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			NOT = {
+				any_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+						include_locked = yes
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -1953,7 +2025,7 @@ focus_tree = {
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
-						size > 1
+						size > 3
 						include_locked = yes
 					}
 				}
@@ -3564,14 +3636,18 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
+			swap_ideas = {
+				remove_idea = HUN_indigenous_designs
+				add_idea = HUN_indigenous_designs_2
+			}
 			random_state = {
 				limit = {
 					has_state_flag = HUN_boost_hungarian_aviation_industry_AF1
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -4360,38 +4436,38 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_unit_tt
 			hidden_effect = {
-					division_template = {
-						name = "Light Division"
-						division_names_group = HUN_INF_01
-		
-						regiments = {
-							light_infantry = { x = 0 y = 0 }
-							light_infantry = { x = 0 y = 1 }
-							light_infantry = { x = 0 y = 2 }
-							light_infantry = { x = 0 y = 3 }
-				
-		    	   		 	light_infantry = { x = 1 y = 0 }
-							light_infantry = { x = 1 y = 1 }
-							light_infantry = { x = 1 y = 2 }
-							anti_air = { x = 1 y = 3 }
-							
-		    	   		 	light_infantry = { x = 2 y = 0 }
-							light_infantry = { x = 2 y = 1 }
-							light_infantry = { x = 2 y = 2 }
-							anti_tank_brigade = { x = 2 y = 3 }
-							
-							pack_artillery_brigade = { x = 3 y = 0 }
-							pack_artillery_brigade = { x = 3 y = 1 }
-							pack_artillery_brigade = { x = 3 y = 2 }
-						}
-						support = {
-		DIV_HQ = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 } 
-		recon = { x = 1 y = 1 }
-		pack_artillery = { x = 1 y = 0 }
-		anti_air_company = { x = 0 y = 2 }	
-						}
-					}	
+				division_template = {
+					name = "Light Division"
+					division_names_group = HUN_INF_01
+	
+					regiments = {
+						light_infantry = { x = 0 y = 0 }
+						light_infantry = { x = 0 y = 1 }
+						light_infantry = { x = 0 y = 2 }
+						light_infantry = { x = 0 y = 3 }
+			
+						light_infantry = { x = 1 y = 0 }
+						light_infantry = { x = 1 y = 1 }
+						light_infantry = { x = 1 y = 2 }
+						anti_air = { x = 1 y = 3 }
+						
+						light_infantry = { x = 2 y = 0 }
+						light_infantry = { x = 2 y = 1 }
+						light_infantry = { x = 2 y = 2 }
+						anti_tank_brigade = { x = 2 y = 3 }
+						
+						pack_artillery_brigade = { x = 3 y = 0 }
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+					}
+					support = {
+						DIV_HQ = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 } 
+						recon = { x = 1 y = 1 }
+						pack_artillery = { x = 1 y = 0 }
+						anti_air_company = { x = 0 y = 2 }	
+					}
+				}	
 				random_owned_controlled_state = {
 					prioritize = { 43 }
 					limit = { ROOT = { has_full_control_of_state = PREV } }

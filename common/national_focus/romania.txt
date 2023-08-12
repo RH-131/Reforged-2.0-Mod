@@ -213,7 +213,21 @@
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			46 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = ROM_german_romanian_oil_exploitation_company_ref}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 
 		completion_reward = {
@@ -235,6 +249,7 @@
 						level = 1
 						instant_build = yes
 					}
+					set_state_flag = ROM_german_romanian_oil_exploitation_company_ref
 				}
 			}
 		}
@@ -2555,30 +2570,6 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-			air_experience = 25
-			random_state = {
-				limit = {
-					has_state_flag = ROM_expand_the_air_force_AB
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = ROM_expand_the_air_force_AB_2
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-
 		completion_reward = {
 			air_experience = 25
 			79 = {
@@ -2587,7 +2578,6 @@
 					level = 3
 					instant_build = yes
 				}
-				set_state_flag = ROM_expand_the_air_force_AB
 			}
 			46 = {
 				add_building_construction = {
@@ -2595,7 +2585,6 @@
 					level = 3
 					instant_build = yes
 				}
-				set_state_flag = ROM_expand_the_air_force_AB_2
 			}
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.50
@@ -4081,21 +4070,7 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-			navy_experience = 25
-			random_state = {
-				limit = {
-					has_state_flag = ROM_expand_the_galati_shipyards_AB
-				}
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-
+		
 		completion_reward = {
 			custom_effect_tooltip = ROM_naval_plan_tt
 			custom_effect_tooltip = ROM_naval_plan_tt_2
@@ -4107,7 +4082,6 @@
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = ROM_expand_the_galati_shipyards_AB
 			}
 		}
 	}

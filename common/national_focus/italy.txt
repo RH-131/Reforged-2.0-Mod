@@ -162,70 +162,68 @@ focus_tree = {
 			factor = 5
 		}	
 		available_if_capitulated = yes
+
+		complete_tooltip = {
+			navy_experience = 50
+			random_state = {
+				limit = { has_state_flag = ITA_regia_marina_2DY }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = ITA_regia_marina_1DY }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = naval_doctrine_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
 		completion_reward = {
 			navy_experience = 50
 			random_owned_controlled_state = {
 				limit = {
-					dockyard > 0
 					free_building_slots = {
 						building = dockyard
 						size > 1
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 2
 					instant_build = yes
 				}
+				set_state_flag = ITA_regia_marina_2DY
 			}
-
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					NOT = {
-						any_owned_state = {
-							dockyard > 0
-							free_building_slots = {
-								building = dockyard
-								size > 0
-								include_locked = yes
-							}
-						}
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
 					}
 				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
-				}				
+				set_state_flag = ITA_regia_marina_1DY
 			}
-
 			add_doctrine_cost_reduction = {
 				name = naval_doctrine_bonus
 				cost_reduction = 0.5
@@ -676,17 +674,37 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
+
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_air_armaments_3AF }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
 			
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 159 }
-					add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = arms_factory
-							level = 3
-							instant_build = yes
-						}
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
 					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ITA_air_armaments_3AF
+			}
 		}
 	}
 	focus = {
@@ -754,16 +772,42 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_Regio_Esercito_4AF }
+				add_extra_state_shared_building_slots = 4 
+				add_building_construction = {
+					type = arms_factory
+					level = 4 
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			set_technology = { bicycle_infantry = 1 }
+		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 161 }
-					add_extra_state_shared_building_slots = 4 
-						add_building_construction = {
-							type = arms_factory
-							level = 4 
-							instant_build = yes
-						}
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4 
+				add_building_construction = {
+					type = arms_factory
+					level = 4 
+					instant_build = yes
+				}
+				set_state_flag = ITA_Regio_Esercito_4AF
 			}
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -790,13 +834,12 @@ focus_tree = {
 
 
 		completion_reward = {
-		add_tech_bonus = {
+			add_tech_bonus = {
 				name = arty_bonus
 				bonus = 1.0
 				uses = 2
 				category = artillery
 			}
-			
 		}
 	}
 	focus = {
@@ -835,6 +878,28 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+			random_state = {
+				limit = { has_state_flag = ITA_Expand_Northern_Italy_weapons_manifactures_target }
+				add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -845,17 +910,30 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				prioritize = { 161 }
-					add_extra_state_shared_building_slots = 5
-						add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
 					}
-						add_building_construction = {
-							type = arms_factory
-							level = 3
-							instant_build = yes
-						}
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ITA_Expand_Northern_Italy_weapons_manifactures_target
 			}
 		}
 	}
@@ -873,7 +951,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		
 			add_tech_bonus = {
 				name = special_bonus
 				Bonus = 1.0
@@ -886,7 +963,6 @@ focus_tree = {
 				uses = 2
 				category = support_tech
 			}
-			
 		}
 	}
 	focus = {
@@ -1305,30 +1381,6 @@ focus_tree = {
 						owner = ITA
 					}
 			}
-			if = {
-				limit = {
-						is_ai = yes 
-					}
-				random_owned_controlled_state = {
-						prioritize = { 2 }
-						create_unit = {
-						division = "name = \"Divisione di Fanteria Pesante\" division_template = \"Divisione di Fanteria Pesante\" start_experience_factor = 1.5 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione di Fanteria Pesante\" division_template = \"Divisione di Fanteria Pesante\" start_experience_factor = 1.5 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione di Fanteria Pesante\" division_template = \"Divisione di Fanteria Pesante\" start_experience_factor = 1.5 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione di Fanteria Pesante\" division_template = \"Divisione di Fanteria Pesante\" start_experience_factor = 1.5 start_equipment_factor = 1.0" 
-						owner = ITA
-					}		
-				}
-			}
 		}
 	}
 	focus = {
@@ -1496,47 +1548,23 @@ focus_tree = {
 					}
 				}
 			}
-		random_owned_controlled_state = {
-					prioritize = { 2 }
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}
-			}
-			if = {
-				limit = {
-						is_ai = yes 
-					}
-				random_owned_controlled_state = {
-						prioritize = { 2 }
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}		
+			random_owned_controlled_state = {
+				prioritize = { 2 }
+				create_unit = {
+					division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+					owner = ITA
+				}	
+				create_unit = {
+					division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+					owner = ITA
+				}	
+				create_unit = {
+					division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+					owner = ITA
+				}	
+				create_unit = {
+					division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+					owner = ITA
 				}
 			}
 		}
@@ -1679,30 +1707,68 @@ focus_tree = {
 			
 		}
 
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_The_industrial_triangle_3IC}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = ITA_The_industrial_triangle_2IC}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = construction_tech_bonus
+				bonus = 0.5
+				uses = 2
+				category = construction_tech
+			}
+		}
+
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 159 }
-					limit = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
 					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = industrial_complex
-						level = 3
-						instant_build = yes
-					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ITA_The_industrial_triangle_3IC
 			}
 			random_owned_controlled_state = {
 				prioritize = { 158 }
-					limit = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
 					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = ITA_The_industrial_triangle_2IC
 			}
-			
 			add_tech_bonus = {
 				name = construction_tech_bonus
 				bonus = 0.5
@@ -1743,19 +1809,50 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_Expand_ILVA_and_IRI_4IC }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 40
+				state = 156
+			}
+			add_tech_bonus = {
+				name = construction_tech_bonus
+				bonus = 1
+				uses = 5
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 156 }
-					limit = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+						include_locked = yes
 					}
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = industrial_complex
-						level = 4
-						instant_build = yes
-					}
-					
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = ITA_Expand_ILVA_and_IRI_4IC
 			}
 			add_resource = {
 				type = steel
@@ -1791,15 +1888,35 @@ focus_tree = {
 			
 		}
 
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_Dockyards_effort_4DY }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+
 		completion_reward = {						
 			random_owned_controlled_state = {
 				prioritize = { 2 }
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = dockyard
-						level = 4
-						instant_build = yes
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 3
+						include_locked = yes
 					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = ITA_Dockyards_effort_4DY
 			}
 			
 		}
@@ -1822,19 +1939,42 @@ focus_tree = {
 			
 		}
 
+		complete_tooltip = {
+		    custom_effect_tooltip = available_naval_designer
+			show_ideas_tooltip = ansaldo_navy
+			random_state = {
+				limit = { has_state_flag = ITA_Prioritise_naval_industry_3DY }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_ideas = navy_prioritised
+		}
+
 		completion_reward = {
 		    custom_effect_tooltip = available_naval_designer
-                show_ideas_tooltip = ansaldo_navy
-			add_ideas = navy_prioritised
+			show_ideas_tooltip = ansaldo_navy
 			random_owned_controlled_state = {
 				prioritize = { 2 }
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
 					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ITA_Prioritise_naval_industry_3DY
 			}
+			add_ideas = navy_prioritised
 		}
 	}
 	focus = {
@@ -1856,7 +1996,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_tank_designer
-                show_ideas_tooltip = ansaldo_tank
+			show_ideas_tooltip = ansaldo_tank
 			add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1.0
@@ -1921,34 +2061,16 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-					prioritize = { 2 }
-					create_unit = {
-						division = "name = \"Divisione corazzata\" division_template = \"Divisione corazzata\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione corazzata\" division_template = \"Divisione corazzata\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
+				prioritize = { 2 }
+				create_unit = {
+					division = "name = \"Divisione corazzata\" division_template = \"Divisione corazzata\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
+					owner = ITA
+				}	
+				create_unit = {
+					division = "name = \"Divisione corazzata\" division_template = \"Divisione corazzata\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
+					owner = ITA
+				}	
 			}
-			if = {
-				limit = {
-						is_ai = yes 
-					}
-				random_owned_controlled_state = {
-						prioritize = { 2 }
-					create_unit = {
-						division = "name = \"Divisione corazzata\" division_template = \"Divisione corazzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione corazzata\" division_template = \"Divisione corazzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-	
-				}
-			}
-			
 		}
 	}
 	
@@ -1969,15 +2091,35 @@ focus_tree = {
 			
 		}
 
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_Increase_factory_output_4AF }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+
 		completion_reward = {			
 			random_owned_controlled_state = {
 				prioritize = { 157 }
-					add_extra_state_shared_building_slots = 4
-						add_building_construction = {
-							type = arms_factory
-							level = 4
-							instant_build = yes
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
 					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = ITA_Increase_factory_output_4AF
 			}
 		}
 	}
@@ -1990,17 +2132,53 @@ focus_tree = {
 		y = 8 
 		cost = 7.145
 		available = { has_war = yes }
-	
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = ITA_industrial_war_effort_3AF}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
 		
 		completion_reward = { 
 			random_owned_controlled_state = {
-				prioritize = { 161 }
-					add_extra_state_shared_building_slots = 6
-					add_building_construction = {
-						type = arms_factory
-						level = 6
-						instant_build = yes
+				prioritize = { 159 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
 					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ITA_industrial_war_effort_3AF
+			}
+			random_owned_controlled_state = {
+				prioritize = { 161 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ITA_industrial_war_effort_3AF
 			}
 		}
 	}
@@ -2814,15 +2992,42 @@ focus_tree = {
 			
 		}
 
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_Hitler_visits_Rome_4IC }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			ITA = {
+				add_ideas = ITA_iron_alliance
+			}
+			GER = {
+				add_ideas = GER_iron_alliance
+			}
+		}
+
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 2 }
-					add_extra_state_shared_building_slots = 4
-						add_building_construction = {
-							type = industrial_complex
-							level = 4
-							instant_build = yes
-						}
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = ITA_Hitler_visits_Rome_4IC
 			}
 			ITA = {
 				add_ideas = ITA_iron_alliance
