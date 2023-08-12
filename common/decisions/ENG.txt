@@ -4,12 +4,6 @@ ENG_budget_decisions = {
 
 		icon = eng_install_government
 
-		available = {
-		}
-
-		visible = {
-		}
-
 		ai_will_do = {
 			factor = 0
 		}
@@ -23,9 +17,6 @@ ENG_budget_decisions = {
 
 		activation = {
 			date > 1936.01.01
-		}
-
-		available = {
 		}
 
 		timeout_effect = {
@@ -255,12 +246,6 @@ ENG_budget_decisions = {
 
 		icon = eng_trade_unions_support
 
-		available = {
-		}
-
-		visible = {
-		}
-
 		days_re_enable = 15 
 
 		cost = 0 
@@ -336,9 +321,6 @@ ENG_budget_decisions = {
    				value = 1
     			compare = greater_than_or_equals
 			}
-		}
-
-		visible = {
 		}
 
 		custom_cost_trigger = {
@@ -432,12 +414,6 @@ ENG_budget_decisions = {
 	ENG_increase_focus_funding = {
 
 		icon = hol_attract_foreign_investors
-
-		available = {
-		}
-
-		visible = {
-		}
 
 		custom_cost_trigger = {
 			check_variable = {
@@ -1023,12 +999,6 @@ ENG_budget_decisions = {
 
 		icon = oppression
 
-		available = {
-		}
-
-		visible = {
-		}
-
 		fire_only_once = no
 
 		modifier = {
@@ -1066,9 +1036,6 @@ ENG_budget_decisions = {
 
 	ENG_expand_home_industry = {
 		icon = generic_construction
-
-		available = {
-		}
 
 		visible = {
 			NOT = {

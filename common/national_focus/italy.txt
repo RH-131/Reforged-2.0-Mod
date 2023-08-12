@@ -65,9 +65,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		available = {
-		}
 		continue_if_invalid = yes
 		completion_reward = {
 		army_experience = 250
@@ -102,8 +99,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
         continue_if_invalid = yes
-		available = {
-		}
 		completion_reward = {
 		army_experience = 200
 		air_experience = 100
@@ -126,8 +121,6 @@ focus_tree = {
 		id = ITA_victoryinETH
 		icon = GFX_ITA_Empire
 		prerequisite = { focus = ITA_victory_by_any_means focus = ITA_learn_from_the_ethiopian_war }
-		available = {
-		}
 		available_if_capitulated = yes
 		x = 14
 		y = 2
@@ -983,17 +976,9 @@ focus_tree = {
 			GER = { has_full_control_of_state = 4 }
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_to_tech_sharing_group = axis_research
@@ -1014,9 +999,6 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 		available = { is_in_faction_with = GER }
-		bypass = {
-			
-		}
 
 		completion_reward = {
 			GER = {
@@ -1235,10 +1217,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 30
 		}
-  
-		bypass = {
-
-		}
 		available_if_capitulated = no
 
 		available = {
@@ -1267,10 +1245,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = rodolfo_graziani
@@ -1295,10 +1269,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = alfredo_guzzoni
@@ -1319,10 +1289,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_Divisione_di_fanteria_pesante_unit_tt
@@ -1396,10 +1362,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -1444,10 +1406,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = giovanni_messe
@@ -1479,10 +1437,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = available_military_high_command
@@ -1605,10 +1559,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
         	modify_building_resources = {
         	   building = synthetic_rubber_refinery
@@ -1702,10 +1652,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		complete_tooltip = {
 			random_state = {
@@ -1884,10 +1830,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		complete_tooltip = {
 			random_state = {
 				limit = { has_state_flag = ITA_Dockyards_effort_4DY }
@@ -1934,10 +1876,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		complete_tooltip = {
 		    custom_effect_tooltip = available_naval_designer
@@ -1989,10 +1927,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = available_tank_designer
@@ -2086,10 +2020,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		complete_tooltip = {
 			random_state = {
@@ -2315,10 +2245,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			448 = {
 				add_extra_state_shared_building_slots = 2
@@ -2368,10 +2294,6 @@ focus_tree = {
 					}
 				}
 			}
-		}
-
-		bypass = {
-			
 		}
 
 		completion_reward = {
@@ -2499,10 +2421,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = italo_balbo_pol
@@ -2520,10 +2438,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2618,10 +2532,6 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			add_resource = {
 				type = oil
@@ -2666,10 +2576,6 @@ focus_tree = {
 			}
 		}
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		completion_reward = {
 
@@ -2859,10 +2765,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			add_political_power = 100
 			add_tech_bonus = {
@@ -2884,10 +2786,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		completion_reward = {
 		add_popularity = { ideology = fascism popularity = 0.05 }
@@ -2987,10 +2885,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		complete_tooltip = {
 			random_state = {

@@ -188,10 +188,6 @@ political_actions = {
 
 		icon = generic_megaphone
 
-		available = {
-			
-		}
-
 		visible = {
 			always = yes
 		}
@@ -225,10 +221,6 @@ political_actions = {
 	Demilitarization = {
 
 		icon = generic_bureaucracy
-
-		available = {
-			
-		}
 
 		visible = {
 			always = yes
@@ -852,10 +844,6 @@ propaganda_efforts = {
 			has_war_support < 0.9
 		}
 
-		visible = {
-			
-		}
-
 		fire_only_once = no
 
 		days_remove = 90
@@ -891,10 +879,6 @@ propaganda_efforts = {
 		available = {
 			#NOT = { has_country_flag = war_propaganda_campaign_running }
 			has_casualties_war_support < 0
-		}
-
-		visible = {
-
 		}
 
 		fire_only_once = no
@@ -962,10 +946,6 @@ propaganda_efforts = {
 			has_convoys_war_support < 0
 		}
 
-		visible = {
-
-		}
-
 		fire_only_once = no
 
 		days_remove = 180
@@ -1014,10 +994,6 @@ propaganda_efforts = {
 		available = {
 		#	NOT = { has_country_flag = war_propaganda_campaign_running }
 			has_bombing_war_support < 0
-		}
-
-		visible = {
-
 		}
 
 		fire_only_once = no

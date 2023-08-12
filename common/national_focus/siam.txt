@@ -46,9 +46,6 @@ focus_tree = {
 			factor = 10
 		}
 
-		bypass = {
-		}
-
 		complete_tooltip = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
@@ -83,9 +80,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2			
-		}
-
-		bypass = {
 		}
 
 		complete_tooltip = {
@@ -218,9 +212,6 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 
-		bypass = {
-		}
-
 		complete_tooltip = {
 			289 = {
 				build_1_infrastructure = yes
@@ -270,9 +261,6 @@ focus_tree = {
 		factor = 5
 		}
 		available_if_capitulated = yes
-
-		bypass = {
-		}
 
 		complete_tooltip = {
 			724 = {
@@ -412,17 +400,9 @@ focus_tree = {
 			controls_state = 724
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			289 = {
@@ -662,8 +642,6 @@ focus_tree = {
 		id = SIA_tech_slot
 		icon = GFX_focus_research
 		prerequisite = { focus = SIA_heal_the_divide_2 focus = SIA_production_effort_1 }
-		available = {
-		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		x = 5

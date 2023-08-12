@@ -16,8 +16,6 @@
 
 	focus = {
 		id = ROM_national_recovery
-		bypass = {
-		}
 		
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
@@ -26,8 +24,6 @@
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
-		complete_tooltip = {
-		}
 
 		completion_reward = {
 			add_ideas = free_trade
@@ -37,10 +33,6 @@
 
 	focus = {
 		id = ROM_encourage_trade_with_germany
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = ROM_national_recovery }
 		
 		icon = GFX_goal_generic_construction
@@ -81,17 +73,9 @@
 			NOT = { has_government = democratic }
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_opinion_modifier = { target = GER modifier = ROM_trade_treaty_with_germany }
@@ -114,20 +98,9 @@
 			factor = 100
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_to_tech_sharing_group = axis_research
@@ -149,20 +122,9 @@
 			factor = 100
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -202,10 +164,6 @@
 				exists = yes
 				is_puppet = no
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -271,20 +229,9 @@
 			factor = 1
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -324,20 +271,9 @@
 			factor = 1
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			show_ideas_tooltip = ROM_reichswerke_hermann_goring 
@@ -346,10 +282,6 @@
 
 	focus = {
 		id = ROM_carpathian_network
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = ROM_encourage_trade_with_germany }
 		
 		icon = GFX_goal_generic_construct_infrastructure
@@ -403,11 +335,6 @@
 
 	focus = {
 		id = ROM_improve_cross_country_railways
-		available = {
-		}
-
-		bypass = {
-		}
 
 		prerequisite = { focus = ROM_carpathian_network }
 		prerequisite = { focus = ROM_bucharest_technical_institute }
@@ -464,11 +391,6 @@
 
 	focus = {
 		id = ROM_autarky
-		available = {
-
-		}
-		bypass = {
-		}
 		prerequisite = { focus = ROM_national_recovery }
 		mutually_exclusive = { focus = ROM_the_stabilization_plan }
 		
@@ -498,10 +420,6 @@
 
 	focus = {
 		id = ROM_bucharest_technical_institute
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = ROM_autarky }
 
 		ai_will_do = {
@@ -532,10 +450,6 @@
 
 	focus = {
 		id = ROM_reduce_reliance_on_foreign_imports
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = ROM_bucharest_technical_institute }
 		
 		icon = GFX_goal_generic_construction2
@@ -558,10 +472,6 @@
 
 	focus = {
 		id = ROM_more_efficient_agricultural_procurement
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = ROM_reduce_reliance_on_foreign_imports }
 		
 		icon = GFX_goal_generic_construction2
@@ -586,8 +496,6 @@
 		available = {
 			NOT = { has_government = democratic }
  		}
-		bypass = {
-		}
 		prerequisite = { focus = ROM_improve_cross_country_railways }
 		prerequisite = { focus = ROM_more_efficient_agricultural_procurement }
 		
@@ -609,8 +517,6 @@
 		available = {
 			has_government = fascism 
 		}
-		bypass = {
-		}
 
 		prerequisite = { focus = ROM_expand_the_axis_oil_trade }
 		
@@ -621,9 +527,6 @@
 		cost = 7.16
 
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = war_economy
@@ -639,8 +542,6 @@
 				is_major = yes
 			}
 		}
-		bypass = {
-		}
 		prerequisite = { focus = ROM_support_the_war_industry }
 		
 		icon = GFX_goal_generic_construct_civ_factory
@@ -650,9 +551,6 @@
 		cost = 7.16
 
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			if = {
@@ -712,8 +610,6 @@
 			has_tech = excavation4
 			has_tech = expanded_workforce
 		}
-		bypass = {
-		}
 		prerequisite = { focus = ROM_support_the_war_industry }
 		
 		icon = GFX_goal_generic_construct_military
@@ -740,8 +636,6 @@
 				has_government = fascism
 				is_major = yes
 			}
-		}
-		bypass = {
 		}
 		prerequisite = { focus = ROM_support_the_war_industry  }
 		
@@ -789,10 +683,6 @@
 
 	focus = {
 		id = ROM_ensure_agricultural_self_sufficiency
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = ROM_more_efficient_agricultural_procurement }
 		
 		icon = GFX_goal_generic_construct_civ_factory
@@ -852,12 +742,6 @@
 	focus = {
 		id = ROM_the_stabilization_plan
 
-		available = {
-		}
-
-		bypass = {
-		}
-
 		mutually_exclusive = { focus = ROM_autarky }
 		prerequisite = { focus = ROM_national_recovery }
 		
@@ -879,8 +763,6 @@
 		id = ROM_malaxa_focus
 		available = {
 			has_government = democratic
-		}
-		bypass = {
 		}
 		prerequisite = { focus = ROM_the_stabilization_plan }
 		
@@ -921,8 +803,6 @@
 		available = {
 			has_government = democratic
 		}
-		bypass = {
-		}
 		prerequisite = { focus = ROM_malaxa_focus }
 		icon = GFX_focus_generic_the_giant_wakes
 		x = 0
@@ -931,8 +811,6 @@
 		cost = 7.16
 
 		available_if_capitulated = yes
-		complete_tooltip = {
-		}
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 		    add_ideas = ROM_noil
@@ -954,8 +832,6 @@
 		available = {
 			has_government = democratic
 		}
-		bypass = {
-		}
 		prerequisite = { focus = ROM_reduce_reliance_on_oil }
 		
 		icon = GFX_goal_generic_consumer_goods
@@ -976,8 +852,6 @@
 		id = ROM_domestic_industrial_developments
 		available = {
 			has_government = democratic
-		}
-		bypass = {
 		}
 		prerequisite = { focus = ROM_reduce_reliance_on_oil }
 		
@@ -1009,8 +883,6 @@
 		available = {
 			has_government = democratic
 		}
-		bypass = {
-		}
 		prerequisite = { focus = ROM_improve_living_standards }
 		prerequisite = { focus = ROM_domestic_industrial_developments }
 		
@@ -1021,9 +893,6 @@
 		cost = 15
 
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			46 = {
@@ -1082,21 +951,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_research_slot = 1 
@@ -1117,21 +974,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = ROM_preserve_greater_romania
@@ -1203,21 +1048,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			
@@ -1258,17 +1091,9 @@
 			date > 1937.10.1
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -1294,21 +1119,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			retire_country_leader = yes
@@ -1336,21 +1149,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = ROM_this_will_stop_terrorist_attacks_tt
@@ -1379,21 +1180,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			remove_ideas = ROM_king_carol_ii_hedonist
@@ -1414,21 +1203,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_stability = 0.05
@@ -1453,14 +1230,6 @@
 
 		ai_will_do = {
 			factor = 9
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1501,28 +1270,13 @@
 
 		cost = 2
 
-		available = {
-		}
-
 		ai_will_do = {
 			factor = 9
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = ROM_secure_balkan_interests
@@ -1649,11 +1403,8 @@
 
 		cost = 2.9
 
-		available = {
-		}
-
 		ai_will_do = {
-
+			factor = 1
 		}
 
 		available = {
@@ -1661,10 +1412,6 @@
 			controls_state = 212
 			controls_state = 211
 			controls_state = 801
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1792,14 +1539,6 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1857,21 +1596,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			46 = {
@@ -1904,21 +1631,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = ROM_this_will_stop_terrorist_attacks_tt
@@ -1953,21 +1668,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -1991,21 +1694,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_war_support = 0.1 
@@ -2027,21 +1718,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			46 = {
@@ -2075,14 +1754,6 @@
 
 		ai_will_do = {
 			factor = 9
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2126,20 +1797,9 @@
 			factor = 9
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = ROM_rightful_balkan_empire
@@ -2238,19 +1898,8 @@
 
 		cost = 2.9
 
-		available = {
-		}
-
 		ai_will_do = {
-
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
+			factor = 1
 		}
 
 		cancel_if_invalid = yes
@@ -2326,21 +1975,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -2367,21 +2004,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			GER = {
@@ -2404,21 +2029,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_popularity = {
@@ -2443,14 +2056,6 @@
 
 		ai_will_do = {
 			factor = 10
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2486,17 +2091,9 @@
 			date > 1939.1.1
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = ROM_repair_organization
@@ -2521,17 +2118,9 @@
 			date > 1939.1.1
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = ROM_repair_organization
@@ -2556,14 +2145,6 @@
 
 		ai_will_do = {
 			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2609,21 +2190,9 @@
 			factor = 5
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_political_power = 100 
@@ -2644,21 +2213,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			46 = {
@@ -2690,21 +2247,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -2732,21 +2277,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			show_ideas_tooltip = ROM_junkers
@@ -2770,21 +2303,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			46 = {
@@ -2824,17 +2345,9 @@
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 
@@ -2898,21 +2411,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = ROM_local_development
@@ -2933,21 +2434,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -2973,21 +2462,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			46 = {
@@ -3024,21 +2501,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			46 = {
@@ -3074,20 +2539,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-		}
 
 		completion_reward = {
 			add_ideas = ROM_order_of_the_dragon
@@ -3108,21 +2562,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3158,21 +2600,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			army_experience = 50
@@ -3213,21 +2643,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 		swap_ideas = {
@@ -3251,21 +2669,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			79 = {
@@ -3299,21 +2705,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -3405,17 +2799,9 @@
 			factor = 1
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		available = { 	
 			has_tech = improved_equipment_conversion 
@@ -3449,21 +2835,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = ROM }
@@ -3491,21 +2865,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -3540,17 +2902,9 @@
 			has_tech = tech_mountaineers
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = ROM_vanatori_de_munte_unit_tt
@@ -3627,10 +2981,6 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 1
@@ -3666,10 +3016,6 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = ROM_modernize_the_army_tt 
 		}
@@ -3694,10 +3040,6 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			show_ideas_tooltip = ROM_lancia 
 			show_ideas_tooltip = ROM_opel 
@@ -3714,9 +3056,6 @@
 		relative_position_id = ROM_invite_axis_motor_companies
 
 		cost = 7.2
-
-		available = {
-		}
 		
 		ai_will_do = {
 			factor = 1
@@ -3725,10 +3064,6 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = ROM_ger_tank_success
@@ -3752,10 +3087,6 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -3782,10 +3113,6 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3824,21 +3151,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = ROM_acquire_modern_tanks
@@ -3867,21 +3182,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = available_designer
@@ -3916,21 +3219,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = ROM_scavenge_everything
@@ -3952,22 +3243,11 @@
 			factor = 1
 		}
 
-		available = {
-		}
-
-		cancel_if_invalid = yes 
-
-		bypass = {
-
-		}
+		cancel_if_invalid = yes
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4005,21 +3285,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4059,18 +3327,10 @@
 			factor = 3
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		
+
 		completion_reward = {
 			custom_effect_tooltip = ROM_naval_plan_tt
 			custom_effect_tooltip = ROM_naval_plan_tt_2
@@ -4101,21 +3361,9 @@
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = available_designer
@@ -4147,21 +3395,9 @@
 			factor = 4
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = ROM_coastal_defense_ships
@@ -4194,21 +3430,9 @@
 			factor = 5
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4234,21 +3458,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -4272,21 +3484,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4313,21 +3513,9 @@
 			factor = 5
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {			
 			custom_effect_tooltip = available_designer
@@ -4349,21 +3537,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4391,21 +3567,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4432,21 +3596,9 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {

@@ -20,13 +20,6 @@
 		x = 12
 		y = 0
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-			
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		#prerequisite = { focus = AST_workers_paradise }
@@ -40,6 +33,7 @@
 			add_political_power = 200
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 	}
 	
@@ -53,9 +47,6 @@
 		available = {
 			date > 1937.1.24
 		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = constitution_of_ireland }
@@ -68,6 +59,7 @@
 			set_cosmetic_tag = IRL
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 	}
 	
@@ -77,13 +69,6 @@
 		x = 0
 		y = 2
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-			
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = the_1937_elections }
@@ -96,6 +81,7 @@
             add_country_leader_trait = propaganda_expert	
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 	}
 	
@@ -107,12 +93,6 @@
 		x = 1
 		y = 3
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = invite_british_investors }
@@ -130,6 +110,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {
@@ -138,12 +119,6 @@
 		x = 2
 		y = 2
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = the_1937_elections }
@@ -163,6 +138,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 	}
 	
@@ -175,9 +151,6 @@
 	
 		available = {
 		    date > 1938.9.1
-		}
-	
-		bypass = {
 		}
 		
 		cost = 7.16
@@ -193,6 +166,7 @@
 			remove_ideas = IRE_unstable_republic
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 	}
 		
@@ -202,12 +176,6 @@
 		x = 0
 		y = 5
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = prepare_for_war }
@@ -220,6 +188,7 @@
 			add_ideas = plan_w_idea
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 	}
 	
@@ -249,12 +218,6 @@
 		x = 1
 		y = 6
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = IRE_defs }
@@ -269,6 +232,7 @@
 			add_research_slot = 1
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 	}
 	
@@ -278,13 +242,6 @@
 		x = 7
 		y = 1
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-			
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = constitution_of_ireland }
@@ -298,6 +255,7 @@
 			add_ideas = IRE_public_works_idea
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -309,12 +267,6 @@
 		x = 5
 		y = 2
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = expand_public_works }
@@ -340,13 +292,6 @@
 		x = 4
 		y = 3
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-			
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = railways }
@@ -360,6 +305,7 @@
 			134 = { add_extra_state_shared_building_slots = 2 }
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -371,12 +317,6 @@
 		x = 4
 		y = 4
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 10
 		prerequisite = { focus = invest_in_connaught }
@@ -401,6 +341,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -412,13 +353,6 @@
 		x = 6
 		y = 3
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-			
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = railways }
@@ -432,6 +366,7 @@
 			135 = { add_extra_state_shared_building_slots = 2 }
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -443,12 +378,6 @@
 		x = 6
 		y = 4
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 10
 		prerequisite = { focus = invest_in_munster }
@@ -474,6 +403,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -484,12 +414,6 @@
 		x = 5
 		y = 5
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = clare_aluminium_plants }
@@ -516,12 +440,6 @@
 		x = 9
 		y = 2
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = expand_public_works }
@@ -544,12 +462,6 @@
 		x = 10
 		y = 3
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = national_roads }
@@ -563,6 +475,7 @@
 			113 = { add_extra_state_shared_building_slots = 2 }
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -574,12 +487,6 @@
 		x = 8
 		y = 4
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 10
 		prerequisite = { focus = military_research_institute }
@@ -600,6 +507,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -611,12 +519,6 @@
 		x = 8
 		y = 3
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = national_roads }
@@ -636,6 +538,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -647,12 +550,6 @@
 		x = 10
 		y = 4
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 10
 		prerequisite = { focus = invest_in_leinster }
@@ -678,6 +575,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -689,12 +587,6 @@
 		x = 9
 		y = 5
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		cost = 5
 		prerequisite = { focus = dublin_military_factories }
 		prerequisite = { focus = dublin_steel_works }
@@ -711,6 +603,7 @@
 				category = electronics }
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -722,12 +615,6 @@
 		x = 7
 		y = 6
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = modernise_esb focus = industrial_modernisation }	
@@ -749,6 +636,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -760,12 +648,6 @@
 		x = 7
 		y = 7
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = coal_cattle_pact }
@@ -779,6 +661,7 @@
 			remove_ideas = IRE_less_trade_war
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -790,12 +673,6 @@
 		x = 7
 		y = 8
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = negotiate_trade_deals }
@@ -809,6 +686,7 @@
 			add_ideas = IRE_emergency_powers_act
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -820,12 +698,6 @@
 		x = 5
 		y = 9
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = emergency_powers_act }
@@ -849,6 +721,7 @@
 			add_ideas = IRE_fuel_rations_idea
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -860,12 +733,6 @@
 		x = 9
 		y = 9
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = emergency_powers_act }
@@ -898,9 +765,6 @@
 		available = {
 			has_war = yes
 		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = emergency_powers_act }
@@ -921,6 +785,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -931,12 +796,6 @@
 		x = 22
 		y = 3
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = dublin_shipbuilding }
@@ -951,6 +810,7 @@
 			custom_effect_tooltip = IRE_shipbuilding_grants_tt
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -962,12 +822,6 @@
 		x = 15
 		y = 1
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = constitution_of_ireland }
@@ -981,6 +835,7 @@
 			army_experience = 50
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -992,12 +847,6 @@
 		x = 12
 		y = 2
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = modernise_irish_army }
@@ -1015,6 +864,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1026,12 +876,6 @@
 		x = 12
 		y = 3
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = modernise_infantry_weapons }
@@ -1049,6 +893,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1060,12 +905,6 @@
 		x = 12
 		y = 4
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = irish_artillery }
@@ -1083,6 +922,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1094,12 +934,6 @@
 		x = 14
 		y = 2
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = modernise_irish_army }
@@ -1113,6 +947,7 @@
 			add_ideas = IRE_lessons_of_great_war_idea
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1124,12 +959,6 @@
 		x = 14
 		y = 3
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = lessons_of_great_war }
@@ -1149,6 +978,7 @@
 			remove_ideas = IRE_incompetent_army
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1160,12 +990,6 @@
 		x = 16
 		y = 2
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = modernise_irish_army }
@@ -1183,6 +1007,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1194,12 +1019,6 @@
 		x = 16
 		y = 3
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = support_equipment }
@@ -1217,6 +1036,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1228,12 +1048,6 @@
 		x = 18
 		y = 2
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = modernise_irish_army }
@@ -1251,6 +1065,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1262,12 +1077,6 @@
 		x = 18
 		y = 3
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = IRE_motorised_infantry }
@@ -1285,6 +1094,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1296,12 +1106,6 @@
 		x = 18
 		y = 4
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = irish_tank_corps }
@@ -1319,6 +1123,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1330,12 +1135,6 @@
 		x = 22
 		y = 1
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = constitution_of_ireland }
@@ -1356,6 +1155,7 @@
 		}	
 		}
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1367,12 +1167,6 @@
 		x = 22
 		y = 2
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = reclaim_treaty_ports }
@@ -1398,6 +1192,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1409,12 +1204,6 @@
 		x = 20
 		y = 3
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = dublin_shipbuilding }
@@ -1436,6 +1225,7 @@
 			add_ideas = IRE_destroyer_production_idea
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1447,12 +1237,6 @@
 		x = 24
 		y = 3
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = dublin_shipbuilding }
@@ -1470,6 +1254,7 @@
 			add_ideas = IRE_submarine_production_idea
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1481,12 +1266,6 @@
 		x = 24
 		y = 4
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = irish_submarines }
@@ -1503,6 +1282,7 @@
 				category = radar_tech }
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1514,12 +1294,6 @@
 		x = 20
 		y = 4
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = irish_destroyers }
@@ -1539,6 +1313,7 @@
 			add_ideas = IRE_cruiser_production_idea
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1550,12 +1325,6 @@
 		x = 22
 		y = 4
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 5
 		prerequisite = { focus = shipbuilding_grants }
@@ -1572,6 +1341,7 @@
 				category = naval_bomber }
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1583,12 +1353,6 @@
 		x = 15
 		y = 5
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = modernise_irish_army }
@@ -1603,6 +1367,7 @@
 				add_ideas = RAJ_aid_british_hardware_stockpiles_idea
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1614,12 +1379,6 @@
 		x = 13
 		y = 6
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = irish_air_corps }
@@ -1638,6 +1397,7 @@
 					}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1649,12 +1409,6 @@
 		x = 15
 		y = 6
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = irish_air_corps }
@@ -1671,6 +1425,7 @@
 					category = tactical_bomber }
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1682,12 +1437,6 @@
 		x = 14
 		y = 7
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = fighters OR = light_bombers }
@@ -1704,6 +1453,7 @@
 					category = cas_bomber }
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1715,12 +1465,6 @@
 		x = 14
 		y = 8
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = close_air_support }
@@ -1737,6 +1481,7 @@
 					category = cat_strategic_bomber }
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1748,12 +1493,6 @@
 		x = 17
 		y = 6
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = irish_air_corps }
@@ -1779,6 +1518,7 @@
 			}
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 		
@@ -1790,12 +1530,6 @@
 		x = 17
 		y = 7
 		#relative_position_id = AST_empower_the_workers
-	
-		available = {
-		}
-	
-		bypass = {
-		}
 		
 		cost = 7.16
 		prerequisite = { focus = air_base_expansion }
@@ -1814,6 +1548,7 @@
 			add_ideas = SAF_joint_air_training_scheme
 		}	
 		ai_will_do = {
+			factor = 1
 		}
 		
 	}

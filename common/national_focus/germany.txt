@@ -123,9 +123,6 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 5
-		available = {
-		
-		}
 		ai_will_do = {
 			factor = 12
 		}
@@ -152,9 +149,6 @@ focus_tree = {
 		relative_position_id = GER_continue_the_new_plan
 		prerequisite = { focus = GER_continue_the_new_plan }
 
-		available = {
-		}
-
 		x = 0
 		y = 1
 		cost = 5
@@ -179,9 +173,6 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 5
-
-		available = {
-		}
 
 		ai_will_do = {
 			factor = 12
@@ -268,9 +259,6 @@ focus_tree = {
 		x = 1
 		y = 3
 		cost = 5
-
-		available = {
-		}
 
 		ai_will_do = {
 			factor = 12
@@ -619,9 +607,6 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 5
-		available = {
-		
-		}
 		ai_will_do = {
 			factor = 12
 		}
@@ -2567,9 +2552,6 @@ focus_tree = {
 			factor = 9
 		}
 
-		available = {
-		}
-
 		complete_tooltip = {
 			custom_effect_tooltip = autarky_4_tt
 			every_state = {
@@ -2852,8 +2834,6 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 5
-		available = {
-		}
 
 		ai_will_do = {
 			factor = 12
@@ -5415,9 +5395,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 8
 		}
-		available = {
-			
-		}
 		available_if_capitulated = yes	
 		
 		completion_reward = {
@@ -6004,10 +5981,6 @@ focus_tree = {
 			has_global_flag = scw_over
 		}
 
-		available = {
-
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = spain_focus_limit_tt	
 			if = {
@@ -6110,10 +6083,6 @@ focus_tree = {
 			has_global_flag = scw_over
 		}
 
-		available = {
-			
-		}
-
 		completion_reward = {
 		air_experience = 75	
 			custom_effect_tooltip = available_theorist
@@ -6139,15 +6108,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-
-		}
-
-		bypass = {
-		
-		}
+		available_if_capitulated = yes
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -6213,14 +6174,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -6325,12 +6278,6 @@ focus_tree = {
 			factor = 0
 		}
 
-		bypass = {
-		}
-
-		available = {
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = SS_recruitment_tt_2
 			custom_effect_tooltip = available_military_high_command
@@ -6350,12 +6297,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
-		}
-
-		bypass = {
-		}
-
-		available = {
 		}
 
 		completion_reward = {
@@ -6906,13 +6847,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -6937,13 +6872,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -7490,9 +7419,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		available = { 
-		}
 
 		ai_will_do = {
 			factor = 12

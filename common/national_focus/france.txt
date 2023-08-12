@@ -93,12 +93,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-		}
-
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -273,10 +267,6 @@ focus_tree = {
 		available = {
 			NOT = { has_government = communism }
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -299,8 +289,6 @@ focus_tree = {
 		id = FRA_join_the_right
 		bypass = {
 			has_capitulated = yes
-		}
-		available = {
 		}
 		prerequisite = { focus = FRA_ban_communism }
 
@@ -336,14 +324,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-           
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -473,10 +453,6 @@ focus_tree = {
 				ruling_only = yes
 			}			
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -555,8 +531,6 @@ focus_tree = {
 
 	focus = {
 		id = FRA_devaluate_the_franc
-		bypass = {
-		}
 		prerequisite = { focus = FRA_matignon_agreements }
 		icon = GFX_focus_fra_devalue_the_franc
 		x = -2
@@ -616,8 +590,6 @@ focus_tree = {
 	focus = {
 		id = FRA_domestic_innovation
 		prerequisite = { focus = FRA_nationalize_the_banking_sector focus = FRA_regulate_the_banking_sector }
-		available = {
-		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		icon = GFX_focus_research
@@ -674,7 +646,6 @@ focus_tree = {
 
 	focus = {
 		id = FRA_develop_the_metropoles
-		available = {}
 		prerequisite = { focus = FRA_metropolitan_france }
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
@@ -758,9 +729,6 @@ focus_tree = {
 	focus = {
 		id = FRA_expand_the_steel_mills
 
-		available = {
-		}
-
 		prerequisite = { focus = FRA_develop_the_metropoles }
 		icon = GFX_focus_generic_steel
 		x = 0
@@ -814,8 +782,6 @@ focus_tree = {
 
 	focus = {
 		id = FRA_public_works
-		available = {
-		}
 		prerequisite = { focus = FRA_regulate_the_banking_sector focus = FRA_nationalize_the_banking_sector }
 		mutually_exclusive = { focus = FRA_metropolitan_france }
 		icon = GFX_goal_generic_construct_infrastructure
@@ -887,8 +853,6 @@ focus_tree = {
 
 	focus = {
 		id = FRA_develop_the_countryside
-		available = {
-		}
 		prerequisite = { focus = FRA_public_works }
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
@@ -1005,8 +969,6 @@ focus_tree = {
 
 	focus = {
 		id = FRA_agricultural_board
-		available = {
-		}
 		prerequisite = { focus = FRA_develop_the_countryside }
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
@@ -1024,8 +986,6 @@ focus_tree = {
 	focus = {
 		id = FRA_rural_schooling 
 		prerequisite = { focus = FRA_agricultural_board focus = FRA_expand_the_steel_mills}
-		available = {
-		}
 		icon = GFX_focus_research
 		x = 1
 		y = 1
@@ -1043,11 +1003,6 @@ focus_tree = {
 
 	focus = {
 		id = FRA_obtain_foreign_colonial_investments
-		available = {
-		}
-
-		bypass = {
-		}
 		
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = FRA_matignon_agreements }
@@ -1094,8 +1049,6 @@ focus_tree = {
 
 	focus = {
 		id = FRA_middle_eastern_possessions
-		available = {
-		}
 		prerequisite = { focus = FRA_obtain_foreign_colonial_investments }
 		icon = GFX_goal_generic_construct_infrastructure
 		x = -1
@@ -1170,12 +1123,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-		}
-		
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1207,13 +1154,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1242,13 +1182,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-		}	
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1284,13 +1217,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1306,9 +1232,6 @@ focus_tree = {
 			JAP = {
 				has_completed_focus = JAP_intervene_in_china
 			}
-		}
-
-		bypass = {
 		}
 		
 		icon = GFX_focus_prc_remove_chiang_kai_shek
@@ -1338,8 +1261,6 @@ focus_tree = {
 
 	focus = {
 		id = FRA_the_only_black_man_in_the_french_colonial_government
-		available = {
-		}
 		prerequisite = { focus = FRA_obtain_foreign_colonial_investments }
 		icon = GFX_focus_generic_industry_3
 		x = 0
@@ -1415,9 +1336,6 @@ focus_tree = {
 			country_exists = D04
 		}
 
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1429,8 +1347,6 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_army_reform
-		available = {
-		}
 		bypass = {
 			has_capitulated = yes
 		}
@@ -1528,14 +1444,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1566,14 +1474,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1718,10 +1618,6 @@ focus_tree = {
 
 	focus = {
 		id = FRA_protect_against_italy
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = FRA_responsibility_for_defense }
 		icon= GFX_focus_attack_italy
 		x = 2
@@ -1871,10 +1767,6 @@ focus_tree = {
 
 	focus = {
 		id = FRA_germany_is_the_greater_threat
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = FRA_responsibility_for_defense }
 		icon = GFX_focus_attack_germany
 		x = -2
@@ -1942,13 +1834,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-			
-		}
-		
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1994,14 +1879,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2125,14 +2002,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2220,13 +2089,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-			
-		}
-		
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2272,14 +2134,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2410,14 +2264,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2449,12 +2295,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-		}
-		available = {
-		}
-		
-		bypass = {
-
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2494,12 +2334,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available = {
-		}
-		
-		bypass = {
-
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2537,14 +2371,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2577,12 +2403,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available = {
-		}
-		
-		bypass = {
-
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2600,9 +2420,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = FRA_morane_saulnier_goal	
-		available = {
-		}
+		id = FRA_morane_saulnier_goal
 		prerequisite = { focus = FRA_air4 focus = FRA_air6 }
 		icon = GFX_idea_morane_saulnier
 		x = 1
@@ -2706,8 +2524,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-		}
 
 		completion_reward = {
 			navy_experience = 100
@@ -3089,9 +2905,6 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = FRA_free_france }
 		relative_position_id = FRA_free_france
-
-		available = {
-		}
 		available_if_capitulated = yes
 		cost = 5
 
@@ -3107,9 +2920,6 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = FRA_resistance_in_the_metropolitan }
 		relative_position_id = FRA_resistance_in_the_metropolitan
-
-		available = {
-		}
 		available_if_capitulated = yes
 		cost = 5
 
@@ -3123,11 +2933,6 @@ focus_tree = {
 
 	focus = {
 		id = FRA_the_casablanca_conference
-
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = FRA_national_council_of_resistance }
 		icon = GFX_goal_generic_amphibious_assault
 		x = 0
@@ -3249,12 +3054,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available = {
-		}
-		
-		bypass = {
-
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3299,13 +3098,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-		}
-		available = {
-			
-		}
-		
-		bypass = {
-
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3403,12 +3195,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available = {
-		}
-		
-		bypass = {
-
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3439,12 +3225,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-		}
-		available = {
-		}
-		
-		bypass = {
-
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3477,12 +3257,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available = {
-		}
-		
-		bypass = {
-
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3513,12 +3287,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-		}
-		available = {
-		}
-		
-		bypass = {
-
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3591,10 +3359,6 @@ focus_tree = {
 		available = {
 		    SOV = { has_war_with = GER }
 		}
-		
-		bypass = {
-
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3623,12 +3387,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-		}
-		available = {
-		}
-		
-		bypass = {
-
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4050,10 +3808,6 @@ focus_tree = {
 			country_exists = USA
 			USA_can_sell_weapons_trigger = yes
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = yes
@@ -4081,12 +3835,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-		}
-		available = {
-		}
-		
-		bypass = {
-
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
