@@ -516,20 +516,6 @@ focus_tree = {
 				ruling_only = yes
 			}			
 		}
-		
-		bypass = {
-			not = {
-				any_owned_state = {
-					is_core_of = ROOT
-					is_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-			}
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -541,7 +527,7 @@ focus_tree = {
 				limit = {
 					has_idea = FRA_inefficient_economy_1
 				}
-				remove_ideas = { FRA_inefficient_economy_1 }
+				remove_ideas = FRA_inefficient_economy_1
 			}
 			if = {
 				limit = {
@@ -698,6 +684,33 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = FRA_develop_the_metropoles
+				bonus = 1.25
+				uses = 1
+				category = industry
+			}
+			random_state = {
+				limit = { has_state_flag = FRA_develop_the_metropoles_IC1 }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = FRA_develop_the_metropoles_IC2 }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+
 		completion_reward = {
 			add_tech_bonus = {
 				name = FRA_develop_the_metropoles
@@ -708,6 +721,11 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+						include_locked = yes
+					}
 				}
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -715,17 +733,24 @@ focus_tree = {
 					level = 4
 					instant_build = yes
 				}
+				set_state_flag = FRA_develop_the_metropoles_IC1
 			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+						include_locked = yes
+					}
 				}
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 4
 					instant_build = yes
-				}					
+				}
+				set_state_flag = FRA_develop_the_metropoles_IC2	
 			}
 		}
 	}
@@ -745,9 +770,9 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		completion_reward = {
-			random_owned_controlled_state = {
-			prioritize = { 17 }
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = FRA_expand_the_steel_mills_target }
 			    add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
@@ -758,6 +783,31 @@ focus_tree = {
 					type = steel
 					amount = 36
 				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 17 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+			    add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}	
+				add_resource = {
+					type = steel
+					amount = 36
+				}
+				set_state_flag = FRA_expand_the_steel_mills_target
 			}
 		}
 	}
@@ -775,6 +825,17 @@ focus_tree = {
 		cost = 5
 
 		available_if_capitulated = yes
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = FRA_public_works_01 }
+				build_2_infrastructure = yes
+			}
+			random_state = {
+				limit = { has_state_flag = FRA_public_works_02 }
+				build_3_infrastructure = yes
+			}
+		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -819,7 +880,7 @@ focus_tree = {
 					}
 				}
 				build_3_infrastructure = yes				
-				set_state_flag = FRA_public_works_01
+				set_state_flag = FRA_public_works_02
 			}
 		}
 	}
@@ -837,6 +898,33 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = FRA_develop_the_metropoles
+				bonus = 1.25
+				uses = 1
+				category = industry
+			}
+			every_state = {
+				limit = { has_state_flag = FRA_develop_the_countryside_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = { has_state_flag = FRA_develop_the_countryside_2AF }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
 		completion_reward = {
 			add_tech_bonus = {
 				name = FRA_develop_the_metropoles
@@ -847,6 +935,11 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -854,21 +947,33 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				set_state_flag = FRA_develop_the_countryside_2IC
 			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
-				}					
+				}
+				set_state_flag = FRA_develop_the_countryside_2IC
 			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -876,17 +981,24 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				set_state_flag = FRA_develop_the_countryside_2AF
 			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
-				}					
+				}
+				set_state_flag = FRA_develop_the_countryside_2AF	
 			}			
 		}
 	}
@@ -993,9 +1105,9 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 543 }
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = FRA_middle_eastern_possessions_target }
 				add_extra_state_shared_building_slots = 4
 				build_2_infrastructure = yes
 				add_building_construction = {
@@ -1008,6 +1120,37 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 543 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				build_2_infrastructure = yes
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = FRA_middle_eastern_possessions_target
 			}
 		}
 	}
@@ -1588,15 +1731,35 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 539 }
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = FRA_protect_against_italy }
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
 					level = 3
 					instant_build = yes 
 				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 539 }
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes 
+				}
+				set_state_flag = FRA_protect_against_italy
 			}
 		}
 	}
@@ -1721,9 +1884,31 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = FRA_germany_is_the_greater_threat }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes 
+				}
+			}
+			GER = {
+				add_opinion_modifier = { target = FRA modifier = HOL_germany_is_the_greater_threat }
+			}
+		}
+
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 539 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
@@ -1823,6 +2008,28 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = FRA_national_champions_2AF }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = { has_state_flag = FRA_national_champions_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
 		completion_reward = {
 			random_owned_state = {
 				limit = {
@@ -1840,6 +2047,7 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				set_state_flag = FRA_national_champions_2AF
 			}
 			random_owned_state = {
 				limit = {
@@ -1857,13 +2065,14 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				set_state_flag = FRA_national_champions_2AF
 			}
 			random_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
 					is_core_of = ROOT
 					free_building_slots = {
-						building = arms_factory
+						building = industrial_complex
 						size > 1
 						include_locked = yes
 					}
@@ -1874,13 +2083,14 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				set_state_flag = FRA_national_champions_2IC
 			}
 			random_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
 					is_core_of = ROOT
 					free_building_slots = {
-						building = arms_factory
+						building = industrial_complex
 						size > 1
 						include_locked = yes
 					}
@@ -1891,6 +2101,7 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				set_state_flag = FRA_national_champions_2IC
 			}
 		}
 	}
@@ -1926,6 +2137,27 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = FRA_nationalize_key_industry_2AF }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = FRA_nationalize_key_industry_2AF }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 		completion_reward = {
 			random_owned_state = {
 				limit = {
@@ -1943,6 +2175,7 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				set_state_flag = FRA_nationalize_key_industry_2AF
 			}
 			random_owned_state = {
 				limit = {
@@ -1960,6 +2193,7 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				set_state_flag = FRA_nationalize_key_industry_2AF
 			}
 		}
 	}

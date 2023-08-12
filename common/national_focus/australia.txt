@@ -2022,28 +2022,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-			#Sydney - Townsville
-			build_railway = {
-				#level = 1
-				start_province = 12406
-				target_province = 7564
-			}
-			#Townsville - Darwin
-			build_railway = {
-				#level = 1
-				start_province = 7566
-				target_province = 7669
-			}
-			
-			random_state = {
-				limit = {
-					has_state_flag = AST_expand_the_northern_railway_Inf
-				}
-				build_1_infrastructure = yes
-			}
-		}
-
 		completion_reward = {
 			#Sydney - Townsville
 			build_railway = {
@@ -2060,11 +2038,9 @@ focus_tree = {
 			
 			520 = {
 				build_1_infrastructure = yes
-				set_state_flag = AST_expand_the_northern_railway_Inf
 			}
 			521 = {
 				build_1_infrastructure = yes
-				set_state_flag = AST_expand_the_northern_railway_Inf
 			}
 		}
 	}
@@ -2100,10 +2076,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = AST_south_australian_housing_trust_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2164,7 +2140,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2226,7 +2202,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2286,10 +2262,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = AST_allied_works_council_IC1
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2370,29 +2346,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-			#Adelaide - Perth
-			build_railway = {
-				#level = 1
-				start_province = 12910
-				target_province = 1652
-			}
-			
-			random_state = {
-				limit = {
-					has_state_flag = AST_western_australian_government_railways_Inf1
-				}
-				build_1_infrastructure = yes
-			}
-
-			random_owned_controlled_state = {
-				limit = {
-					has_state_flag = AST_western_australian_government_railways_Inf2
-				}
-				build_2_infrastructure = yes
-			}
-		}
-
 		completion_reward = {
 			#Adelaide - Perth
 			build_railway = {
@@ -2403,12 +2356,10 @@ focus_tree = {
 			
 			522 = {
 				build_1_infrastructure = yes
-				set_state_flag = AST_western_australian_government_railways_Inf1
 			}
 
 			519 = {
 				build_2_infrastructure = yes
-				set_state_flag = AST_western_australian_government_railways_Inf2
 			}
 		}
 	}
@@ -2440,7 +2391,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			add_ideas = AST_australian_arms_production
+			random_state = {
+				limit = { has_state_flag = AST_department_of_supply_and_development_AF}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 
 		completion_reward = {
@@ -2751,7 +2711,15 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+			if = {
+				limit = {
+					has_country_flag = AST_rats_of_tobruk_did_1
+				}
+				custom_effect_tooltip = AST_rats_of_tobruk_effect_1
+			}
+			else = {
+				custom_effect_tooltip = AST_rats_of_tobruk_effect_2
+			}
 		}
 
 		completion_reward = {
@@ -2870,6 +2838,7 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = AST_rats_of_tobruk_effect_1
+				set_country_flag = AST_rats_of_tobruk_did_1
 				else = {
 					if = {
 						limit = {

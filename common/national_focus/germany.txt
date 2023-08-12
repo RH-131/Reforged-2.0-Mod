@@ -196,7 +196,10 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-			}			
+			}
+			effect_tooltip = {
+				GER_mefo_bills_level_up = yes
+			}		
 		}
 
 		completion_reward = {
@@ -248,11 +251,9 @@ focus_tree = {
 				}
 				set_state_flag = GER_industrial_effort_2IC
 			}
-
 			effect_tooltip = {
 				GER_mefo_bills_level_up = yes
 			}
-		
 			hidden_effect = {
 				GER_mefo_bills_level_up = yes
 			}
@@ -346,7 +347,11 @@ focus_tree = {
 		}
 		
 		complete_tooltip = {
-            random_state = {
+			swap_ideas = {
+				remove_idea = GER_guide_the_steel_barons
+				add_idea = GER_steel_barons_empowered
+			}
+            every_state = {
                 limit = {
                     has_state_flag = GER_new_subsidiaries
                 }
@@ -361,12 +366,10 @@ focus_tree = {
         }
 		
 		completion_reward = {
-
 			swap_ideas = {
 				remove_idea = GER_guide_the_steel_barons
 				add_idea = GER_steel_barons_empowered
 			}
-
 			random_owned_state = {
 				prioritize = { 53 56 58 61 62 63 66 67 68 }
 				limit = {
@@ -501,7 +504,14 @@ focus_tree = {
 		}
 		
 		complete_tooltip = {
-            random_state = {
+			swap_ideas = {
+				remove_idea = GER_schacht_autarky
+				add_idea = GER_schacht_autarky_2
+			}
+			effect_tooltip = {
+				GER_mefo_bills_level_up = yes
+			}
+            every_state = {
                 limit = {
                     has_state_flag = GER_resource_rationing
                 }
@@ -525,20 +535,16 @@ focus_tree = {
         }
 		
 		completion_reward = {
-			
 			swap_ideas = {
 				remove_idea = GER_schacht_autarky
 				add_idea = GER_schacht_autarky_2
 			}
-
 			effect_tooltip = {
 				GER_mefo_bills_level_up = yes
 			}
-		
 			hidden_effect = {
 				GER_mefo_bills_level_up = yes
 			}
-
 			random_owned_state = {
 				prioritize = { 53 56 58 61 62 63 66 67 68 }
 				build_2_infrastructure = yes
@@ -708,60 +714,194 @@ focus_tree = {
 		ai_will_do = { 
 			factor = 5 
 		}
-		
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 52 }
-					limit = {
-					}
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = synthetic_refinery
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = fuel_silo
-						level = 2 
-						instant_build = yes 
-					}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 53 }
-					limit = {
-					}
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = synthetic_refinery
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = fuel_silo
-						level = 2 
-						instant_build = yes 
-					}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 64 }
-					limit = {
-					}
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = synthetic_refinery
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = fuel_silo
-						level = 2 
-						instant_build = yes 
-					}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = GER_synthetic_oil_refinery_target }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 2 
+					instant_build = yes 
+				}
 			}
 			effect_tooltip = {
 				GER_mefo_bills_level_up = yes
 			}
+		}
+		
+		completion_reward = {
+			effect_tooltip = {
+				random_owned_controlled_state = {
+					prioritize = { 52 }
+					limit = {
+						free_building_slots = {
+							building = arms_factory #use factory since may not have tech for synthetic slots
+							size > 1
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
+					set_state_flag = GER_synthetic_oil_refinery_target
+				}
+				random_owned_controlled_state = {
+					prioritize = { 53 }
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
+					set_state_flag = GER_synthetic_oil_refinery_target
+				}
+				random_owned_controlled_state = {
+					prioritize = { 64 }
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
+					set_state_flag = GER_synthetic_oil_refinery_target
+				}
+				GER_mefo_bills_level_up = yes
+			}
 			hidden_effect = {
+				random_owned_controlled_state = {
+					prioritize = { 52 }
+					limit = {
+						free_building_slots = {
+							building = synthetic_refinery
+							size > 1
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
+					set_state_flag = GER_synthetic_oil_refinery_target
+				}
+				random_owned_controlled_state = {
+					prioritize = { 53 }
+					limit = {
+						free_building_slots = {
+							building = synthetic_refinery
+							size > 1
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
+					set_state_flag = GER_synthetic_oil_refinery_target
+				}
+				random_owned_controlled_state = {
+					prioritize = { 64 }
+					limit = {
+						free_building_slots = {
+							building = synthetic_refinery
+							size > 1
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
+					set_state_flag = GER_synthetic_oil_refinery_target
+				}
 				GER_mefo_bills_level_up = yes
 			}
 		}
@@ -781,61 +921,194 @@ focus_tree = {
 		ai_will_do = { 
 			factor = 5 
 		}
-		
-		completion_reward = {
 
-			random_owned_controlled_state = {
-				prioritize = { 54 }
-					limit = {
-					}
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = synthetic_rubber_refinery
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = fuel_silo
-						level = 2 
-						instant_build = yes 
-					}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 55 }
-					limit = {
-					}
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = synthetic_rubber_refinery
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = fuel_silo
-						level = 2 
-						instant_build = yes 
-					}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 64 }
-					limit = {
-					}
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = synthetic_rubber_refinery
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = fuel_silo
-						level = 2 
-						instant_build = yes 
-					}
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = GER_synthetic_rubber_refinery_target }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = synthetic_rubber_refinery
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 2 
+					instant_build = yes 
+				}
 			}
 			effect_tooltip = {
 				GER_mefo_bills_level_up = yes
 			}
+		}
+		
+		completion_reward = {
+			effect_tooltip = {
+				random_owned_controlled_state = {
+					prioritize = { 54 }
+					limit = {
+						free_building_slots = {
+							building = arms_factory #use factory since may not have tech for synthetic slots
+							size > 1
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = synthetic_rubber_refinery
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
+					set_state_flag = GER_synthetic_rubber_refinery_target
+				}
+				random_owned_controlled_state = {
+					prioritize = { 55 }
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = synthetic_rubber_refinery
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
+					set_state_flag = GER_synthetic_rubber_refinery_target
+				}
+				random_owned_controlled_state = {
+					prioritize = { 64 }
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = synthetic_rubber_refinery
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
+					set_state_flag = GER_synthetic_rubber_refinery_target
+				}
+				GER_mefo_bills_level_up = yes
+			}
 			hidden_effect = {
+				random_owned_controlled_state = {
+					prioritize = { 54 }
+					limit = {
+						free_building_slots = {
+							building = synthetic_rubber_refinery
+							size > 0
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = synthetic_rubber_refinery
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
+					set_state_flag = GER_synthetic_rubber_refinery_target
+				}
+				random_owned_controlled_state = {
+					prioritize = { 55 }
+					limit = {
+						free_building_slots = {
+							building = synthetic_rubber_refinery
+							size > 0
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = synthetic_rubber_refinery
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
+					set_state_flag = GER_synthetic_rubber_refinery_target
+				}
+				random_owned_controlled_state = {
+					prioritize = { 64 }
+					limit = {
+						free_building_slots = {
+							building = synthetic_rubber_refinery
+							size > 0
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = synthetic_rubber_refinery
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
+					set_state_flag = GER_synthetic_rubber_refinery_target
+				}
 				GER_mefo_bills_level_up = yes
 			}
 		}
@@ -858,19 +1131,29 @@ focus_tree = {
 		available = {
 			has_tech = improved_oil_processing
 		}
-		
-		completion_reward = {
+
+		complete_tooltip = {
 			custom_effect_tooltip = autarky_3_tt
 			if = {
 				limit = {
-						AND = {
-							NOT = { has_idea = reichswerke_hermann_goring }
-							NOT = { has_idea = krupp_industrial_concern }
-						}
+					has_idea = GER_autarky_idea2
+				}
+				swap_ideas = { 
+					remove_idea = GER_autarky_idea2
+					add_idea = GER_autarky_idea3
+				}
+			} 
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_idea = reichswerke_hermann_goring }
+						NOT = { has_idea = krupp_industrial_concern }
 					}
-					add_ideas = ig_faben_oil
+				}
+				add_ideas = ig_faben_oil
 			}
-			random_owned_controlled_state = {
+			random_state = {
+				limit = { has_state_flag = ig_faben_oil_target }
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = synthetic_refinery
@@ -883,16 +1166,61 @@ focus_tree = {
 					instant_build = yes 
 				}
 			}
-
+			add_tech_bonus = {
+				name = oil
+				bonus = 1.5
+				ahead_reduction = 1 
+				uses = 1
+				technology = modern_oil_processing
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = autarky_3_tt
 			if = {
 				limit = {
 					has_idea = GER_autarky_idea2
-					}
-					swap_ideas = { 
+				}
+				swap_ideas = { 
 					remove_idea = GER_autarky_idea2
 					add_idea = GER_autarky_idea3
-					}
+				}
 			} 
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_idea = reichswerke_hermann_goring }
+						NOT = { has_idea = krupp_industrial_concern }
+					}
+				}
+				add_ideas = ig_faben_oil
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = fuel_silo
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 2 
+					instant_build = yes 
+				}
+				set_state_flag = ig_faben_oil_target
+			}
 			add_tech_bonus = {
 				name = oil
 				bonus = 1.5
@@ -920,40 +1248,113 @@ focus_tree = {
 		available = {
 			has_tech = improved_rubber_processing
 		}
+
+		complete_tooltip = {
+			custom_effect_tooltip = autarky_3_tt
+			if = {
+				limit = {
+					has_idea = GER_autarky_idea2
+				}
+				swap_ideas = { 
+					remove_idea = GER_autarky_idea2
+					add_idea = GER_autarky_idea3
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_idea = reichswerke_hermann_goring }
+						NOT = { has_idea = krupp_industrial_concern }
+					}
+				}
+				add_ideas = ig_faben_rubber
+			}
+			random_state = {
+				limit = { has_state_flag = ig_faben_rubber_target}
+			}
+			add_tech_bonus = {
+				name = oil
+				bonus = 1.5
+				ahead_reduction = 1 
+				uses = 1
+				technology = modern_rubber_processing
+			}
+		}
 		
 		completion_reward = {
 			custom_effect_tooltip = autarky_3_tt
 			if = {
 				limit = {
-						AND = {
-							NOT = { has_idea = reichswerke_hermann_goring }
-							NOT = { has_idea = krupp_industrial_concern }
-						}
-					}
-					add_ideas = ig_faben_rubber
-			}
-		
-			if = {
-				limit = {
 					has_idea = GER_autarky_idea2
-					}
-					swap_ideas = { 
+				}
+				swap_ideas = { 
 					remove_idea = GER_autarky_idea2
 					add_idea = GER_autarky_idea3
-					}
+				}
 			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = synthetic_rubber_refinery
-					level = 1
-					instant_build = yes
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_idea = reichswerke_hermann_goring }
+						NOT = { has_idea = krupp_industrial_concern }
+					}
 				}
-				add_building_construction = {
-					type = fuel_silo
-					level = 2 
-					instant_build = yes 
+				add_ideas = ig_faben_rubber
+			}
+			effect_tooltip = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = synthetic_rubber_refinery
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
 				}
+			}
+			hidden_effect = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = synthetic_rubber_refinery
+							size > 0
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = fuel_silo
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = synthetic_rubber_refinery
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = fuel_silo
+						level = 2 
+						instant_build = yes 
+					}
+				}
+				set_state_flag = ig_faben_rubber_target
 			}
 			add_tech_bonus = {
 				name = oil
@@ -1015,7 +1416,10 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-			}			
+			}
+			effect_tooltip = {
+				GER_mefo_bills_level_up = yes
+			}	
 		}
 
 		completion_reward = {
@@ -1091,18 +1495,33 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5 
 		}
+
+		complete_tooltip = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = idea_alkett
+			random_state = {
+				limit = { has_state_flag = GER_absorb_rheinmetall_target }
+			}
+		}
 		
 		completion_reward = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = idea_alkett
-
 			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+				}
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
 					level = 4
 					instant_build = yes
 				}
+				set_state_flag = GER_absorb_rheinmetall_target
 			}
 		}
 	}
@@ -1127,6 +1546,31 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5 
 		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = GER_seize_private_iron_ore_target }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				build_1_infrastructure = yes
+				add_building_construction = {
+					type = anti_air_building
+					level = 5
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 20 
+				}
+			}
+			effect_tooltip = {
+				GER_mefo_bills_level_up = yes
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -1147,6 +1591,7 @@ focus_tree = {
 					type = steel
 					amount = 20 
 				}
+				set_state_flag = GER_seize_private_iron_ore_target
 			}
 			random_owned_controlled_state = {
 				prioritize = { 51 }
@@ -1166,6 +1611,7 @@ focus_tree = {
 					type = steel
 					amount = 20 
 				}
+				set_state_flag = GER_seize_private_iron_ore_target
 			}
 			effect_tooltip = {
 				GER_mefo_bills_level_up = yes
@@ -1223,13 +1669,24 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = GER_industrial_effort_2_2IC }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
+			add_tech_bonus = {
+				name = mefo_tech_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+			effect_tooltip = {
+				GER_mefo_bills_level_up = yes
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = opel
 		}
 
 		completion_reward = {
@@ -1271,14 +1728,12 @@ focus_tree = {
 				uses = 2
 				category = industry
 			}
-			
 			effect_tooltip = {
 				GER_mefo_bills_level_up = yes
 			}
 			hidden_effect = {
 				GER_mefo_bills_level_up = yes
 			}
-
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = opel
 			hidden_effect = {
@@ -1308,16 +1763,57 @@ focus_tree = {
 		bypass = {
 			has_war = yes
 		}
+
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = GER_siemens_4IC}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = lasers
+				bonus = 1
+				uses = 2
+				category = electronics		
+			}
+			set_technology = { 
+				decimetric_radar = 1 
+			}
+			every_state = {
+				limit = { has_state_flag = GER_siemens_RDR}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			effect_tooltip = {
+				GER_mefo_bills_level_up = yes
+			}
+		}
 	
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 59 }
-					add_extra_state_shared_building_slots = 4
-						add_building_construction = {
-							type = industrial_complex
-							level = 4
-							instant_build = yes
-						}
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = GER_siemens_4IC
 			}
 			add_tech_bonus = {
 				name = lasers
@@ -1330,33 +1826,34 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				prioritize = { 51 }
-					add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = radar_station
-							level = 1
-							instant_build = yes
-						}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = GER_siemens_RDR
 			}
 			random_owned_controlled_state = {
 				prioritize = { 42 }
-					add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = radar_station
-							level = 1
-							instant_build = yes
-						}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = GER_siemens_RDR
 			}
 			random_owned_controlled_state = {
 				prioritize = { 59 }
-					add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = radar_station
-							level = 1
-							instant_build = yes
-						}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = GER_siemens_RDR
 			}
-
-			
 			effect_tooltip = {
 				GER_mefo_bills_level_up = yes
 			}
@@ -1434,55 +1931,111 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5 
 		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = GER_expand_the_reichswerke_target }
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 10 
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 5 
+					instant_build = yes 
+				}
+			}
+			effect_tooltip = {
+				GER_mefo_bills_level_up = yes
+			}
+		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 152 }
-					add_extra_state_shared_building_slots = 6
-					add_building_construction = {
-						type = industrial_complex
-						level = 3
-						instant_build = yes
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
 					}
-					add_building_construction = {
-						type = arms_factory
-						level = 3
-						instant_build = yes
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 10 
-						instant_build = yes 
-					}
-					add_building_construction = {
-						type = anti_air_building
-						level = 5 
-						instant_build = yes 
-					}
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 10 
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 5 
+					instant_build = yes 
+				}
+				set_state_flag = GER_expand_the_reichswerke_target
 			}
 			random_owned_controlled_state = {
 				prioritize = { 4 }
-					add_extra_state_shared_building_slots = 6
-					add_building_construction = {
-						type = industrial_complex
-						level = 3
-						instant_build = yes
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
 					}
-					add_building_construction = {
-						type = arms_factory
-						level = 3
-						instant_build = yes
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 10 
-						instant_build = yes 
-					}
-					add_building_construction = {
-						type = anti_air_building
-						level = 5 
-						instant_build = yes 
-					}
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 10 
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 5 
+					instant_build = yes 
+				}
+				set_state_flag = GER_expand_the_reichswerke_target
 			}
 			effect_tooltip = {
 				GER_mefo_bills_level_up = yes
@@ -1971,100 +2524,98 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
 			custom_effect_tooltip = autarky_4_tt
-
 			random_owned_controlled_state = {
 				prioritize = { 16 7 6 37 10 }
-					limit = {
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = synthetic_rubber_refinery
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = fuel_silo
-						level = 2 
-						instant_build = yes 
-					}
+				limit = {
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_rubber_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 2 
+					instant_build = yes 
+				}
 			}
 			random_owned_controlled_state = {
 				prioritize = { 16 7 6 37 10 }
-					limit = {
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = synthetic_rubber_refinery
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = fuel_silo
-						level = 2 
-						instant_build = yes 
-					}
+				limit = {
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_rubber_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 2 
+					instant_build = yes 
+				}
 			}
 			random_owned_controlled_state = {
 				prioritize = { 16 7 6 37 10 }
-					limit = {
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = synthetic_rubber_refinery
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = fuel_silo
-						level = 2 
-						instant_build = yes 
-					}
+				limit = {
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_rubber_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 2 
+					instant_build = yes 
+				}
 			}
 			random_owned_controlled_state = {
 				prioritize = { 16 7 6 37 10 }
-					limit = {
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = synthetic_rubber_refinery
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = fuel_silo
-						level = 2 
-						instant_build = yes 
-					}
+				limit = {
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_rubber_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 2 
+					instant_build = yes 
+				}
 			}
-			hiddeN_effect = {
+			hidden_effect = {
 				if = {
 					limit = {
 						has_idea = GER_autarky_idea3
-						}
-						swap_ideas = { 
+					}
+					swap_ideas = { 
 						remove_idea = GER_autarky_idea3
 						add_idea = GER_autarky_idea4
-						}
+					}
 				}
 				if = {
 					limit = {
 						has_idea = ig_faben_oil
-						}
-						swap_ideas = { 
+					}
+					swap_ideas = { 
 						remove_idea = ig_faben_oil
 						add_idea = ig_faben_oil2
-						}
+					}
 				}  
 				if = {
 					limit = {
 						has_idea = ig_faben_rubber
-						}
-						swap_ideas = { 
+					}
+					swap_ideas = { 
 						remove_idea = ig_faben_rubber
 						add_idea = ig_faben_rubber2
-						}
+					}
 				}  
 			}
 		}
@@ -5604,7 +6155,22 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
+
 		complete_tooltip = {
+			add_doctrine_cost_reduction = {
+				name = air_sup_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+			every_state = {
+				limit = { has_state_flag = GER_air_innovation_2AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 		
 		completion_reward = {
@@ -5625,6 +6191,7 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				set_state_flag = GER_air_innovation_2AB
 			}
 			random_owned_controlled_state = {
 				prioritize = { 42 }
@@ -5637,6 +6204,7 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				set_state_flag = GER_air_innovation_2AB
 			}
 			random_owned_controlled_state = {
 				prioritize = { 51 }
@@ -5649,6 +6217,7 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				set_state_flag = GER_air_innovation_2AB
 			}	
 			add_ideas = GER_air_innovations_1_idea			
 			custom_effect_tooltip = available_chief_of_airforce

@@ -136,10 +136,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = CAN_national_housing_act_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -811,40 +811,22 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 470 }
-				limit = {
-					is_in_home_area = yes
-				}
+			470 = {
 				add_resource = {
 					type = steel
 					amount = 50
 				}
 			}
-			random_owned_controlled_state = {
-				prioritize = { 682 }
-				limit = {
-					is_in_home_area = yes
-				}
+			682 = {
 				add_resource = {
 					type = steel
 					amount = 50
 				}
 			}
-			random_owned_controlled_state = {
-				prioritize = { 276 }
-				limit = {
-					is_in_home_area = yes
-				}
+			276 = {
 				add_resource = {
 					type = chromium
 					amount = 30
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 276 }
-				limit = {
-					is_in_home_area = yes
 				}
 				add_resource = {
 					type = tungsten
@@ -940,10 +922,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = CAN_victory_aircraft_limited_AF1
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -951,10 +933,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = CAN_victory_aircraft_limited_AF2
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1147,10 +1129,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = CAN_john_inglis_and_company_AF1
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1158,10 +1140,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = CAN_john_inglis_and_company_AF2
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1874,10 +1856,9 @@ focus_tree = {
 				limit = {
 					is_ai = no
 				}
-		
-			hidden_effect = {
-				load_oob = "CAN_1_infantry_Division"		# template
-			}
+				hidden_effect = {
+					load_oob = "CAN_1_infantry_Division"		# template
+				}
 			}
 			add_tech_bonus = {
 				name = CAN_canadian_infantry_corps
@@ -2747,31 +2728,19 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 682 }
-				limit = {
-					is_in_home_area = yes
-				}
+			682 = {
 				add_resource = {
 					type = chromium
 					amount = 20
 				}
 			}
-			random_owned_controlled_state = {
-				prioritize = { 470 }
-				limit = {
-					is_in_home_area = yes
-				}
+			470 = {
 				add_resource = {
 					type = tungsten
 					amount = 25
 				}
 			}
-			random_owned_controlled_state = {
-				prioritize = { 276 }
-				limit = {
-					is_in_home_area = yes
-				}
+			276 = {
 				add_resource = {
 					type = aluminium
 					amount = 40
@@ -2815,6 +2784,36 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = CAN_shadow_factories_AF1 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = CAN_shadow_factories_AF2 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = CAN_shadow_factories_AF3 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -2840,7 +2839,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -2856,7 +2855,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
