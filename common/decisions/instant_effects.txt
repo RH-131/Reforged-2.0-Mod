@@ -225,7 +225,7 @@ TUR_instant_effect_decisions = {
 		}
 	}			
 	
-	PAR_CAN = {
+	TUR_CAN = {
 
 		icon = generic_megaphone
    
@@ -250,7 +250,7 @@ TUR_instant_effect_decisions = {
 			
 		}
 	}
-	PAR_CAN_2 = {
+	TUR_CAN_2 = {
 
 		icon = generic_megaphone
    
@@ -275,7 +275,7 @@ TUR_instant_effect_decisions = {
 			
 		}
 	}
-	PAR_SAF = {
+	TUR_SAF = {
 
 		icon = generic_megaphone
    
@@ -300,7 +300,7 @@ TUR_instant_effect_decisions = {
 			
 		}
 	}
-	PAR_SAF_2 = {
+	TUR_SAF_2 = {
 
 		icon = generic_megaphone
    
@@ -325,7 +325,7 @@ TUR_instant_effect_decisions = {
 			
 		}
 	}
-	PAR_RAJ_ENG = {
+	TUR_RAJ_ENG = {
 
 		icon = generic_megaphone
    
@@ -351,7 +351,7 @@ TUR_instant_effect_decisions = {
 			
 		}
 	}
-	PAR_RAJ_ENG_2 = {
+	TUR_RAJ_ENG_2 = {
 
 		icon = generic_megaphone
    
@@ -377,7 +377,7 @@ TUR_instant_effect_decisions = {
 			
 		}
 	}
-	PAR_AST_ENG = {
+	TUR_AST_ENG = {
 
 		icon = generic_megaphone
    
@@ -403,7 +403,7 @@ TUR_instant_effect_decisions = {
 			
 		}
 	}
-	PAR_AST_ENG_2 = {
+	TUR_AST_ENG_2 = {
 
 		icon = generic_megaphone
    
@@ -430,7 +430,7 @@ TUR_instant_effect_decisions = {
 		}
 	}
 
-	PAR_RAJ_1 = {
+	TUR_RAJ_1 = {
 		fire_only_once = yes
 		
 		icon = generic_megaphone
@@ -458,10 +458,9 @@ TUR_instant_effect_decisions = {
 			base = 5000
 			
 		}
-	}	
+	}
 
-
-	PAR_RAJ_2 = {
+	TUR_RAJ_2 = {
 		fire_only_once = yes
 		
 		icon = generic_megaphone
@@ -485,5 +484,1608 @@ TUR_instant_effect_decisions = {
 			base = 5000
 			
 		}
-	}	
+	}
+
+	TUR_STATE_100 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			10 = {
+				controller = {
+					OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.100 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_101 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			16 = {
+				controller = {
+					NOT = { tag = ITA }
+					OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.101 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_102 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			126 = {
+				controller = {
+					NOT = { tag = ITA }
+					OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			set_global_flag = fall_of_london_ger
+        	news_event = { id = news.102 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_103 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			195 = {
+				controller = {
+					OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.103 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_104 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			202 = {
+				controller = {
+					OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.104 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_105 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			217 = {
+				controller = {
+					OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.105 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_106 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			219 = {
+				controller = {
+					OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.106 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_107 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			137 = {
+				controller = {
+					OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.107 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_108 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			229 = {
+				controller = {
+					OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			set_global_flag = fall_of_london_ge
+        	news_event = { id = news.108 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_109 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			446 = {
+				controller = {
+					NOT = { tag = ITA }
+					OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.109 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_110 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			361 = {
+				controller = {
+					OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.110 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_111 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			358 = {
+				controller = {
+					OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.111 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_112 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			118 = {
+				controller = {
+					NOT = { tag = ITA }
+					OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.112 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_113 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			446 = {
+				controller = {
+					tag = ITA
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.113 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_114 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			16 = {
+				controller = {
+					tag = ITA
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.114 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_115 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			126 = {
+				controller = {
+					tag = ITA
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.115 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_116 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			118 = {
+				controller = {
+					tag = ITA
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.116 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_117 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			336 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.117 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_118 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			629 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.118 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_119 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			285 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.119 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_120 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			378 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.120 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_121 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			613 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.121 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_122 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			408 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.122 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_123 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			326 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.123 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_124A = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			327 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.124}
+			JAP = {
+				country_event = { id = japan.32 }
+			}
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_124B = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			USA = { has_idea = phi_capitulated }
+			327 = { is_controlled_by = USA }
+		}
+
+		cost = 0
+
+		complete_effect = {
+			USA =  {
+				remove_ideas = phi_capitulated
+				country_event = { id = usa.74 }
+			}
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_125 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			431 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.125 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_126 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			439 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.126 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_127 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			685 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.127 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_128 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			64 = {
+				controller = {
+					tag = USA
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.128 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_129 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			64 = {
+				controller = {
+					NOT = { tag = USA }
+					NOT = { tag = FRA }
+					OR = {
+						tag = ENG
+						is_in_faction_with = ENG
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.129 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_130 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			64 = {
+				controller = {
+					tag = FRA
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.130 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_131 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			64 = {
+				controller = {
+					tag = POL
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.131 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_132 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			OR = {
+				2 = { is_controlled_by = ENG }
+				2 = { is_controlled_by = USA }
+				2 = { is_controlled_by = AST }
+				2 = { is_controlled_by = CAN }
+				2 = { is_controlled_by = NZL }
+				2 = { is_controlled_by = SAF }
+			}
+			ENG = { has_war_with = ITA }
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.132 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_133 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			2 = {
+				controller = {
+					tag = FRA
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.133 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_134 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			OR = {
+				16 = { is_controlled_by = ENG }
+				16 = { is_controlled_by = USA }
+				16 = { is_controlled_by = AST }
+				16 = { is_controlled_by = CAN }
+				16 = { is_controlled_by = NZL }
+				16 = { is_controlled_by = SAF }
+				16 = { is_controlled_by = FRA }
+			}
+			has_global_flag = fall_of_france
+			ENG = { has_war_with = GER }
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.134 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_135 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			282 = {
+				controller = {
+					OR = {
+						tag = USA
+						is_in_faction_with = USA
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.135 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_136 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			OR = {
+				219 = { is_controlled_by = ENG }
+				219 = { is_controlled_by = USA }
+				219 = { is_controlled_by = AST }
+				219 = { is_controlled_by = CAN }
+				219 = { is_controlled_by = NZL }
+				219 = { is_controlled_by = SAF }
+				219 = { is_controlled_by = FRA }
+			}
+			SOV = { has_war_with = ENG }
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.136 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_137 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			126 = {
+				controller = {
+					tag = USA
+				}
+			}
+			has_global_flag = fall_of_london_ger
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.137 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_138 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			10 = {
+				controller = {
+					OR = {
+						tag = SOV
+						is_in_faction_with = SOV
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.138 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_139 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			10 = {
+				controller = {
+					OR = {
+						tag = SOV
+						is_in_faction_with = SOV
+					}
+				}
+			}
+			POL = { has_war_with = GER }
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.139 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_140 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			64 = {
+				controller = {
+					OR = {
+						tag = SOV
+						is_in_faction_with = SOV
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.140 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_141 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			2 = {
+				controller = {
+					OR = {
+						tag = SOV
+						is_in_faction_with = SOV
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.141 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_146 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			282 = {
+				controller = {
+					OR = {
+						tag = SOV
+						is_in_faction_with = SOV
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.146 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_147 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			195 = {
+				controller = {
+					tag = FIN
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.147 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_149 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			118 = {
+				controller = {
+					tag = SPR
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.149 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_462 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			638 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.462 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_463 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			632 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.463 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_464 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			631 = {
+				controller = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.464 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_465 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			647 = {
+				controller = {
+					OR = {
+						tag = USA
+						is_in_faction_with = USA
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.465 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_466 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			645 = {
+				controller = {
+					OR = {
+						tag = USA
+						is_in_faction_with = USA
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.466 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_467 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			646 = {
+				controller = {
+					OR = {
+						tag = USA
+						is_in_faction_with = USA
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.467 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_468 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			526 = {
+				controller = {
+					OR = {
+						tag = USA
+						is_in_faction_with = USA
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.468 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
+
+	TUR_STATE_469 = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = TUR
+		}
+		available = {
+			524 = {
+				controller = {
+					OR = {
+						tag = USA
+						is_in_faction_with = USA
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+        	news_event = { id = news.469 }
+		}
+
+		ai_will_do = {
+			base = 5000
+		}
+	}
 }
