@@ -3044,7 +3044,7 @@
 	}	
 
 	focus = {
-		id = ROM_german_heavy_tank_success
+		id = ROM_german_mechanized_success
 		icon = GFX_GER_consolidate_production_lines
 		prerequisite = { focus = ROM_invite_axis_motor_companies }
 		x = 1
@@ -3067,10 +3067,10 @@
 	}
 	
 	focus = {
-		id = ROM_german_heavy_tank
+		id = ROM_german_philosophy
 		icon = GFX_GER_mobile_fortresses
-		prerequisite = { focus = ROM_german_heavy_tank_success }
-		x = 1
+		prerequisite = { focus = ROM_german_mechanized_success }
+		x = 0
 		y = 2
 		relative_position_id = ROM_invite_axis_motor_companies
 
@@ -3087,7 +3087,7 @@
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = ROM_ger_tank_success
-				add_idea = ROM_ger_tank_success_2
+				add_idea = ROM_ger_philosophy
 			}
 		}
 	}
@@ -3185,7 +3185,6 @@
 		completion_reward = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = ROM_leonidas_works
-			remove_ideas = ROM_acquire_modern_tanks 
 			add_tech_bonus = {
 				category = cat_light_armor 
 				uses = 2
@@ -3193,10 +3192,17 @@
 				name = ROM_focus_on_support_tanks
 			}
 			add_tech_bonus = {
-				category = armor 
-				uses = 1
+				name = armor_bonus	
 				bonus = 0.5
-				name = ROM_focus_on_support_tanks
+				uses = 2
+				technology = axis_medium_td_1939
+				technology = axis_medium_art_1939
+				technology = axis_medium_spaa_1939
+				technology = axis_medium_td_1941
+				technology = axis_medium_art_1941
+				technology = axis_medium_spaa_1941
+				technology = axis_medium_assault_gun_1941
+				technology = axis_medium_assault_gun_1939
 			}
 		}
 	}
@@ -3259,18 +3265,13 @@
 				uses = 1
 				category = tank_upgrade
 			}
-
-			swap_ideas = {
-				remove_idea = ROM_acquire_modern_tanks
-				add_idea = ROM_acquire_modern_tanks2
-			}
 		}
 	}
 
 	focus = {
 		id = ROM_haide_haide_haide
 		icon = GFX_GER_kampfgruppes
-		prerequisite = { focus = ROM_mechanized_soldiers focus = ROM_german_heavy_tank_success focus = ROM_the_R_series focus = ROM_focus_on_support_tanks }
+		prerequisite = { focus = ROM_mechanized_soldiers focus = ROM_german_mechanized_success focus = ROM_the_R_series focus = ROM_focus_on_support_tanks }
 		x = 0
 		y = 4
 		relative_position_id = ROM_modernize_the_army

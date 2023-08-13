@@ -859,20 +859,15 @@ ideas = {
 			removal_cost = -1
 
 			equipment_bonus = {
-				light_tank_chassis = {
+				mechanized_equipment = {
 					build_cost_ic = -0.10 instant = yes 
 				}
 			}
 
-			equipment_bonus = {
-				medium_tank_chassis = {
-					build_cost_ic = -0.10 instant = yes
-				}
-			}
 			
 		}
 		
-		ROM_ger_tank_success_2	= {
+		ROM_ger_philosophy	= {
 		
 			picture = eng_imperial_conscription
 			
@@ -883,22 +878,14 @@ ideas = {
 			removal_cost = -1
 			
 			equipment_bonus = {
-				light_tank_chassis = {
-					soft_attack = 0.10 instant = yes
-					build_cost_ic = -0.10 instant = yes
-				}
-			}
-
-			equipment_bonus = {
-				medium_tank_chassis = {
-					soft_attack = 0.05 instant = yes 
-					hard_attack = 0.05 instant = yes
-					build_cost_ic = -0.10 instant = yes
+				mechanized_equipment = {
+					build_cost_ic = -0.10 instant = yes 
 				}
 			}
 			
 			modifier = {
-				license_armor_purchase_cost = -0.75	
+				coordination_bonus = 0.03
+				experience_loss_factor = -0.10
 			}
 		}
 
@@ -1065,27 +1052,18 @@ ideas = {
 				original_tag = ROM
 			}
 			
-			modifier = {
-				consumer_goods_factor = 0.02
-				industrial_capacity_factory = 0.10
+			equipment_bonus = {
+				light_tank_chassis = {
+					build_cost_ic = -0.10 instant = yes 
+				}
+			}
+	
+			equipment_bonus = {
+				medium_tank_chassis = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
 				
-			}
-		}
-
-		ROM_acquire_modern_tanks2 = {
-
-			picture = generic_acquire_tanks
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-			
-			modifier = {
-				consumer_goods_factor = 0.03
-				industrial_capacity_factory = 0.15				
-			}
 		}
 
 		ROM_rearm_men = {

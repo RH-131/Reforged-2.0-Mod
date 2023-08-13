@@ -1580,64 +1580,99 @@ focus_tree = {
 			factor = 1
 		}	
 			
-			completion_reward = {
+		completion_reward = {
 			
 			
 			2 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
-					build_3_infrastructure = yes
+					add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+					}
 				}
 			}
 			117 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
-					build_3_infrastructure = yes
+					add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+					}
 				}
 			}
 			156 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
-					build_3_infrastructure = yes
+					add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+					}
 				}
 			}
 			157 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
-					build_3_infrastructure = yes
+					add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+					}
 				}
 			}
 			158 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
-					build_3_infrastructure = yes
+					add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+					}
 				}
 			}
 			159 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
-					build_3_infrastructure = yes
+					add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+					}
 				}
 			}
 			160 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
-					build_3_infrastructure = yes
+					add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+					}
 				}
 			}
 			161 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
-					build_3_infrastructure = yes
+					add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+					}
 				}
 			}
 			162 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
-					build_3_infrastructure = yes
-				}
-			}									
-			
+					add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+					}
+				}									
+			}
 		}
 	}
 	focus = {
