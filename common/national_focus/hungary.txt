@@ -1719,7 +1719,7 @@ focus_tree = {
 	############################
 
 	focus = {
-		id = HUN_secret_rearmament
+		id = HUN_secret_rearmament_focus
 		icon = GFX_focus_secret_rearmament
 		x = 12
 		y = 7
@@ -1750,7 +1750,7 @@ focus_tree = {
 		id = HUN_invests_finland
 		icon = GFX_FIN_the_white_guard
 		mutually_exclusive = { focus = HUN_invests_romania }
-		relative_position_id = HUN_secret_rearmament
+		relative_position_id = HUN_secret_rearmament_focus
 		x = 4
 		y = 0
 		cost = 2.9
@@ -1784,7 +1784,7 @@ focus_tree = {
 		id = HUN_invests_romania
 		icon = GFX_ROM_for_the_preservation_of_greater_romania
 		mutually_exclusive = { focus = HUN_invests_finland }
-		relative_position_id = HUN_secret_rearmament
+		relative_position_id = HUN_secret_rearmament_focus
 
 		x = 6
 		y = 0
@@ -1818,10 +1818,10 @@ focus_tree = {
 	focus = {
 		id = HUN_foreign_air_models
 		icon = GFX_GER_invest_aircraft
-		prerequisite = { focus = HUN_secret_rearmament }
+		prerequisite = { focus = HUN_secret_rearmament_focus }
 		x = -8
 		y = 1
-		relative_position_id = HUN_secret_rearmament
+		relative_position_id = HUN_secret_rearmament_focus
 
 		cost = 7.15
 
@@ -2139,11 +2139,11 @@ focus_tree = {
 	focus = {
 		id = HUN_german_doctrines
 		icon = GFX_goal_ger_heer
-		prerequisite = { focus = HUN_secret_rearmament }
+		prerequisite = { focus = HUN_secret_rearmament_focus }
 		mutually_exclusive = { focus = HUN_italian_doctrines }
 		x = -1
 		y = 1
-		relative_position_id = HUN_secret_rearmament
+		relative_position_id = HUN_secret_rearmament_focus
 
 		cost = 7.15
 
@@ -2405,11 +2405,11 @@ focus_tree = {
 	focus = {
 		id = HUN_italian_doctrines
 		icon = GFX_goal_generic_cavalry
-		prerequisite = { focus = HUN_secret_rearmament }
+		prerequisite = { focus = HUN_secret_rearmament_focus }
 		mutually_exclusive = { focus = HUN_german_doctrines }
 		x = 3
 		y = 1
-		relative_position_id = HUN_secret_rearmament
+		relative_position_id = HUN_secret_rearmament_focus
 
 		cost = 8
 
@@ -2627,7 +2627,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		x = 10
 		y = 0
-		relative_position_id = HUN_secret_rearmament
+		relative_position_id = HUN_secret_rearmament_focus
 
 		cost = 7.16
 

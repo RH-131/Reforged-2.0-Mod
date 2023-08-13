@@ -549,7 +549,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = RAJ_duragraha
+		id = RAJ_duragraha_focus
 		icon = GFX_goal_government_centralised_icon 
 		relative_position_id = RAJ_must_decide
 		prerequisite = { focus = RAJ_side_with_princes focus = RAJ_organize_the_indian_congress }
@@ -721,7 +721,7 @@ focus_tree = {
 		icon = GFX_focus_rom_abdicate
 		relative_position_id = RAJ_must_decide
 		prerequisite = { focus = RAJ_democracy_3 }
-		prerequisite = { focus = RAJ_duragraha }
+		prerequisite = { focus = RAJ_duragraha_focus }
 		x = 0
 		y = 5
 
@@ -890,7 +890,7 @@ focus_tree = {
 		icon = GFX_goal_generic_annexation
 		relative_position_id = RAJ_must_decide
 		prerequisite = { focus = RAJ_princes_3 }
-		prerequisite = { focus = RAJ_duragraha }
+		prerequisite = { focus = RAJ_duragraha_focus }
 		
 		x = 3
 		y = 5
