@@ -139,7 +139,7 @@ HOL_obtain_foreign_colonial_investments = {
 			}
 			NOT = { has_war_with = USA }
 			NOT = { has_war_with = ENG }
-			HOL = { has_full_control_of_state = 800 }
+			HOL = { has_full_control_of_state = 695 }
 		}
 
 		cost = 20
@@ -600,12 +600,12 @@ HOL_secret_staff_talks = {
 			FROM = { country_event = { id = mtg_netherlands.41 hours = 6 } }
 			FROM = { army_experience = -15 }
 			effect_tooltip = {
-				add_tech_bonus = {
-					name = HOL_secret_staff_talks
-					bonus = 1.00
-					uses = 2
-					category = land_doctrine
-				}
+			add_doctrine_cost_reduction = {
+				name = HOL_appoint_new_supreme_commander
+				cost_reduction = 0.50
+				uses = 2
+				category = land_doctrine
+			}
 			}
 			custom_effect_tooltip = HOL_request_equipment_tt_2
 		}	
@@ -715,9 +715,9 @@ HOL_request_allied_favors = {
 
 		remove_effect = {
 			add_equipment_to_stockpile = {
-			    type = fighter_equipment
-			    amount = 50
-			    producer = FRA
+				type = small_plane_airframe
+				producer = USA
+				amount = 50
 			}
 		}
 
@@ -752,17 +752,17 @@ HOL_request_allied_favors = {
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment
 			    amount = 1000
-			    producer = FRA
+			    producer = USA
 			}
 			add_equipment_to_stockpile = {
 			    type = support_equipment
 			    amount = 100
-			    producer = FRA
+			    producer = USA
 			}
 			add_equipment_to_stockpile = {
 			    type = artillery_equipment
 			    amount = 100
-			    producer = FRA
+			    producer = USA
 			}
 		}
 
