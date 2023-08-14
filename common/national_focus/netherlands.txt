@@ -32,10 +32,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_obtain_foreign_colonial_investments
-		available = {
-		}
-		bypass = {
-		}
 		
 		icon = GFX_goal_generic_consumer_goods
 		x = 3
@@ -83,8 +79,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_the_western_possessions
-		available = {
-		}
 		prerequisite = { focus = HOL_obtain_foreign_colonial_investments }
 		icon = GFX_goal_generic_construct_infrastructure
 		x = -3
@@ -106,8 +100,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_expand_curacao_oil_refineries
-		available = {
-		}
 		prerequisite = { focus = HOL_the_western_possessions }
 		icon = GFX_goal_generic_oil_refinery
 		x = 0
@@ -135,8 +127,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_open_second_paranam_bauxite_mine
-		available = {
-		}
 		prerequisite = { focus = HOL_expand_curacao_oil_refineries }
 		icon = GFX_focus_generic_aluminum
 		x = 0
@@ -164,8 +154,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_antilles_defenses
-		available = {
-		}
 		prerequisite = { focus = HOL_expand_curacao_oil_refineries }
 		icon = GFX_goal_generic_construct_military
 		x = 2
@@ -235,8 +223,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_the_crown_jewel_colony
-		available = {
-		}
 		prerequisite = { focus = HOL_curtail_colonial_autonomy }
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 2
@@ -271,8 +257,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_jav
-		available = {
-		}
 		prerequisite = { focus = HOL_curtail_colonial_autonomy }
 		icon = GFX_focus_generic_industry_2
 		x = 0
@@ -308,9 +292,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_reinforce_jav
-		available = {
-
-		}
 		prerequisite = { focus = HOL_jav }
 		icon = GFX_goal_generic_construct_military
 		x = -2
@@ -390,11 +371,11 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = HOL_the_foundations_of_defense
-			309 = {
+			695 = {
 				add_building_construction = {
 					type = naval_base
 					level = 3
-					province = 13804
+					province = 153
 					instant_build = yes
 				}
 			}
@@ -402,7 +383,7 @@ focus_tree = {
 				add_building_construction = {
 					type = naval_base
 					level = 3
-					province = 12477
+					province = 12304
 					instant_build = yes
 				}
 			}
@@ -411,8 +392,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_sumatr
-		available = {
-		}
 		prerequisite = { focus = HOL_jav }
 		icon = GFX_focus_generic_industry_2
 		x = -1
@@ -448,8 +427,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_borneo_and_the_grote_oos
-		available = {
-		}
 		prerequisite = { focus = HOL_jav }
 		icon = GFX_focus_generic_industry_1
 		x = 1
@@ -532,8 +509,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_a_western_capital
-		available = {
-		}
 		prerequisite = { focus = HOL_continue_the_war_in_batavi }
 		icon = GFX_focus_generic_industry_3
 		x = -1
@@ -581,8 +556,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_colonial_shipbuilding
-		available = {
-		}
 		prerequisite = { focus = HOL_a_western_capital }
 		prerequisite = { focus = HOL_the_foundations_of_defense }
 		icon = GFX_goal_generic_construct_naval_dockyard
@@ -607,8 +580,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_the_east_indies_war_machine
-		available = {
-		}
 		prerequisite = { focus = HOL_a_western_capital }
 		prerequisite = { focus = HOL_expand_the_colonial_army }
 		icon = GFX_goal_generic_construct_mil_factory
@@ -641,10 +612,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_prepare_for_our_return
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = HOL_colonial_shipbuilding }
 		prerequisite = { focus = HOL_the_east_indies_war_machine }
 		icon = GFX_goal_generic_amphibious_assault
@@ -738,10 +705,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_continue_the_public_works
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = HOL_abandon_the_gold_standard }
 		icon = GFX_goal_generic_construction
 		x = -5
@@ -778,10 +741,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_finish_the_noordoostpolder
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = HOL_continue_the_public_works }
 		icon = GFX_goal_generic_construction2
 		x = -1
@@ -801,10 +760,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_the_maastunnel
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = HOL_continue_the_public_works }
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 1
@@ -826,10 +781,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_expand_the_artillerieinrichtingen
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = HOL_finish_the_noordoostpolder }
 		prerequisite = { focus = HOL_the_maastunnel }
 		icon = GFX_goal_generic_construct_mil_factory
@@ -915,8 +866,6 @@ focus_tree = {
 
  	focus = {
 		id = HOL_the_zuiderzee_works
-		available = {
-		}
 		prerequisite = { focus = HOL_expand_the_artillerieinrichtingen }
 		icon = GFX_focus_hol_the_zuiderzee_works
 		x = -1
@@ -941,8 +890,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_develop_the_randstad
-		available = {
-		}
 		prerequisite = { focus = HOL_the_zuiderzee_works }
 		mutually_exclusive = { focus = HOL_develop_the_zandstad }
 		icon = GFX_goal_generic_construct_civ_factory
@@ -978,8 +925,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_expand_the_ijmuiden_steel_mill
-		available = {
-		}
 		prerequisite = { focus = HOL_develop_the_randstad }
 		icon = GFX_focus_generic_steel
 		x = 0
@@ -1018,8 +963,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_fokker
-		available = {
-		}
 		prerequisite = { focus = HOL_expand_the_ijmuiden_steel_mill }
 		icon = GFX_focus_hol_fokker
 		x = 0
@@ -1083,8 +1026,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_develop_the_zandstad
-		available = {
-		}
 		prerequisite = { focus = HOL_the_zuiderzee_works }
 		mutually_exclusive = { focus = HOL_develop_the_randstad }
 		icon = GFX_goal_generic_construct_civ_factory
@@ -1120,8 +1061,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_friesland_agricultural_impetus
-		available = {
-		}
 		prerequisite = { focus = HOL_develop_the_zandstad }
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
@@ -1175,8 +1114,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_daf
-		available = {
-		}
 		prerequisite = { focus = HOL_friesland_agricultural_impetus }
 		icon = GFX_focus_hol_daf
 		x = 0
@@ -1240,8 +1177,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_continental_shipbuilding
-		available = {
-		}
 		prerequisite = { focus = HOL_fokker focus = HOL_daf }
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 1
@@ -1314,8 +1249,6 @@ focus_tree = {
 	focus = {
 		id = HOL_domestic_innovation
 		prerequisite = { focus = HOL_the_east_indies_war_machine focus = HOL_fokker focus = HOL_daf }
-		available = {
-		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		icon = GFX_focus_research
@@ -1539,9 +1472,6 @@ focus_tree = {
 		allow_branch = {
 			has_dlc = "Death or Dishonor"
 		}
-
-		available = {
-		}
 		icon = GFX_goal_generic_production
 		x = 1
 		y = 1
@@ -1741,10 +1671,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_expand_the_mld
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = HOL_overturn_military_budget_cuts }
 		icon = GFX_goal_generic_air_doctrine
 		x = 3
@@ -1968,8 +1894,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_unsinkable_aircraft_carriers
-		available = {
-		}
 		prerequisite = { focus = HOL_strategic_bombing_defense }
 		mutually_exclusive = { focus = HOL_air_cover_for_the_new_fleet }
 		icon = GFX_goal_generic_construct_military
@@ -2037,8 +1961,6 @@ focus_tree = {
 	focus = {
 		id = HOL_prepare_naval_expansion
 		prerequisite = { focus = HOL_overturn_military_budget_cuts }
-		available = {
-		}
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 7
 		y = 2
@@ -2229,10 +2151,6 @@ focus_tree = {
 	focus = {
 		id = HOL_naval_heritage
 		prerequisite = { focus = HOL_rely_on_submarines focus = HOL_modernize_the_cruiser_fleet }
-		available = {
-		}
-		bypass = {
-		}
 		icon = GFX_goal_generic_navy_battleship
 		x = 1
 		y = 1
@@ -2303,8 +2221,6 @@ focus_tree = {
 	focus = {
 		id = HOL_expand_the_papua_petroleum_harbor
 		prerequisite = { focus = HOL_air_cover_for_the_new_fleet focus = HOL_escorts_for_the_new_fleet }
-		available = {
-		}
 		icon = GFX_goal_generic_oil_refinery
 		x = 1
 		y = 1
@@ -2391,10 +2307,6 @@ focus_tree = {
 	focus = {
 		id = HOL_cave_to_the_british
 		prerequisite = { focus = HOL_gateway_to_europe }
-		available = {
-		}
-		bypass = {
-		}
 		icon = GFX_goal_generic_trade
 		cancel_if_invalid = no
 		x = 0
@@ -2534,8 +2446,6 @@ focus_tree = {
 		id = HOL_go_with_britain
 		available = {
 			ENG = { has_government = democratic }
-		}
-		bypass = {
 		}
 		prerequisite = { focus = HOL_unity_through_democracy }
 		icon = GFX_focus_chi_british_cooperation

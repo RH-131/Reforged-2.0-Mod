@@ -27,14 +27,6 @@ operation_rescue_operative = { ### 0 1/35
 			has_captured_operative = ROOT
 		}
 	}
-
-	available = {
-		
-	}
-
-	equipment = {
-		
-	}
 	risk_chance = 0.1
 	experience = 2
 	cost_multiplier = 0 # we dont scale in cost for rescues
@@ -138,10 +130,6 @@ operation_infiltrate_civilian = { ### 1 1/35
 				token = token_civilian
 			}
 		}
-	}
-
-	equipment = {
-		
 	}
 
 	available = {
@@ -307,14 +295,6 @@ operation_fake_intel = { ### 2 1/40
 			}
 		}
 	}
-	
-	equipment = {
-
-	}
-
-	required_tokens = {
-		
-	}
 	risk_chance = 0 #there shouldn't be any risk
 	experience = 0.5
 	outcome_execute = { # SCOPE_OPERATION
@@ -419,10 +399,6 @@ operation_capture_cipher = { ### 3 1/55
 		NOT = {
 			ROOT = { is_fully_decrypted = FROM }
 		}
-	}
-
-	equipment = {
-		
 	}
 	risk_chance = 0.2
 	outcome_extra_chance = 0.25
@@ -569,10 +545,6 @@ operation_infiltrate_armed_forces_army = { ### 4 1/55
 				token = token_army
 			}
 		}
-	}
-
-	equipment = {
-		
 	}
 
 	available = {
@@ -725,10 +697,6 @@ operation_infiltrate_armed_forces_navy = { ### 5 1/55
 		}		
 	}
 
-	equipment = {
-		
-	}
-
 	available = {
 		#NOT = {
 		#	has_operation_token = {
@@ -876,10 +844,6 @@ operation_infiltrate_armed_forces_airforce = { ### 6 1/55
 				token = token_airforce
 			}
 		}		
-	}
-
-	equipment = {
-		
 	}
 
 	available = {
@@ -1296,10 +1260,6 @@ operation_boost_resistance = { ### 8 2/40
 		has_resistance = yes
 	}
 
-	equipment = {
-
-	}
-
 	required_tokens = {
 		token_resistance_contacts
 	}
@@ -1425,10 +1385,6 @@ operation_make_resistance_contacts = { ### 9 2/40
 				has_resistance = yes
 			}
 		}		
-	}
-
-	equipment = {
-		
 	}
 	
 	selection_target = {
@@ -1705,10 +1661,6 @@ operation_steal_tech_civilian = { ### 12 3/35
 		}
 	}
 
-	equipment = {
-	
-	}
-
 	required_tokens = {
 		token_civilian
 	}
@@ -1859,10 +1811,6 @@ operation_steal_tech_electronics = { ### 12 3/35
 			tag = FROM
 			token = token_civilian
 		}
-	}
-
-	equipment = {
-	
 	}
 
 	required_tokens = {
@@ -2034,9 +1982,6 @@ operation_targeted_sabotage_industry = { ### 13 3/35
 		has_resistance = yes
 	}
 	required_tokens = { token_resistance_contacts }
-	equipment = {
-		
-	}
 
 	risk_chance = 0.2
 	experience = 2
@@ -2179,9 +2124,6 @@ operation_targeted_sabotage_infrastructure = { ### 14 3/35
 		targets = { FROM }
 	}
 	required_tokens = { token_resistance_contacts }
-	equipment = {
-		
-	}
 	risk_chance = 0.2
 	experience = 2
 	outcome_extra_chance = 0.25
@@ -2325,9 +2267,6 @@ operation_targeted_sabotage_resources = { ### 15 3/35
 		targets = { FROM }
 	}
 	required_tokens = { token_resistance_contacts }
-	equipment = {
-		
-	}
 	risk_chance = 0.2
 	experience = 2
 	outcome_extra_chance = 0.25
@@ -2450,10 +2389,6 @@ operation_steal_tech_army = { ### 16 3/55
 			tag = FROM
 			token = token_army
 		}
-	}
-
-	equipment = {
-		
 	}
 
 	required_tokens = {
@@ -2614,10 +2549,6 @@ operation_steal_tech_armour = { ### 17 3/55
 		}
 	}
 
-	equipment = {
-		
-	}
-
 	required_tokens = {
 		token_army
 	}
@@ -2752,10 +2683,6 @@ operation_steal_tech_navy = { ### 18 3/55
 			tag = FROM
 			token = token_navy
 		}
-	}
-
-	equipment = {
-		
 	}
 
 	required_tokens = {
@@ -2973,10 +2900,6 @@ operation_steal_tech_airforce = { ### 19 3/55
 			tag = FROM
 			token = token_airforce
 		}
-	}
-
-	equipment = {
-		
 	}
 
 	required_tokens = {

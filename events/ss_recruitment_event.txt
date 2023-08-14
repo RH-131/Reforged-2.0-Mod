@@ -1742,8 +1742,6 @@ country_event = {
 					picture = "Portrait_Germany_Heinrich_Himmler.dds"
 					expire = "1965.1.1"
 					ideology = nazism
-					traits = {
-					}
 				}
 				country_event = ss_recruitment_event.26 #internal power struggle
 				hidden_effect = {
@@ -1806,9 +1804,6 @@ country_event = {
 	# 
 	option = { #Government backs Himmler
 		name = ss_recruitment_event.26.a
-		
-		hidden_effect = {
-		}
 		if = {
 			limit = {
 				check_variable = {
@@ -1839,10 +1834,6 @@ country_event = {
 			picture = "Portrait_Germany_Hermann_Göring.dds"
 			expire = "1965.1.1"
 			ideology = nazism
-			traits = {
-			}
-		}
-		hidden_effect = {
 		}
 		if = {
 			limit = {
@@ -1868,16 +1859,12 @@ country_event = {
 			picture = "Portrait_Germany_Gunther_von_Kluge.dds"
 			expire = "1965.1.1"
 			ideology = despotism
-			traits = {
-			}
 		}
 		set_party_name = { ideology = neutrality long_name = GER_neutrality_party_civil_war name = GER_neutrality_party_civil_war }
 		start_civil_war = {
 			ruling_party = neutrality
 			ideology = fascism
 			size = 0.4
-		}
-		hidden_effect = {
 		}
 		set_variable = { var = wehrmacht_anger value = 0 }
 		set_variable = { var = SS_anger value = 0 }

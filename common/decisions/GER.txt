@@ -2012,10 +2012,6 @@ operations = {
 
 		fire_only_once = yes
 
-		activation = {
-
-		}
-
 		is_good = no
 
 		complete_effect = {
@@ -3059,13 +3055,15 @@ foreign_politics = {
 		cost = 0
 
 		complete_effect = {
-			every_country = {
-				limit = {
-					is_in_faction_with = GER 
+			hidden_effect = {
+				ENG = {
+					add_to_faction = YUG
 				}
-				declare_war_on = {
-					target = YUG
-					type = annex_everything
+			}
+			YUG = {
+				add_to_war = {
+					targeted_alliance = ENG
+					enemy = GER
 				}
 			}
 		}
@@ -3249,19 +3247,18 @@ foreign_politics = {
 				}
 				
 			}
-				every_country = {
-					limit = {
-						is_in_faction_with = GER 
-					}	
-					declare_war_on = {
-						target = DEN
-						type = annex_everything
-					}
-					declare_war_on = {
-						target = NOR
-						type = annex_everything
-					}
-				}	
+			DEN = {
+				add_to_war = {
+					targeted_alliance = ENG
+					enemy = GER
+				}
+			}
+			NOR = {
+				add_to_war = {
+					targeted_alliance = ENG
+					enemy = GER
+				}
+			}	
 		}
 	}
 	
@@ -3366,6 +3363,12 @@ foreign_politics = {
 				BEL = { remove_ideas = neutrality_idea }
 				HOL = { remove_ideas = HOL_aloof_neutrality }
 				LUX = { remove_ideas = neutrality_idea }
+				ENG = {
+					add_to_faction = BEL
+					add_to_faction = HOL
+					add_to_faction = LUX
+					add_to_faction = FRA
+				}
 				news_event = { hours = 6 id = news.234 }
 				play_song = "Oh du schöner Westerwald (Westerwaldlied)"
 				if = {
@@ -3375,26 +3378,29 @@ foreign_politics = {
 					remove_ideas = GER_phoney_war
 				}
 			}
-			every_country = {
-				limit = {
-					is_in_faction_with = GER 
+			BEL = {
+				add_to_war = {
+					targeted_alliance = ENG
+					enemy = GER
 				}
-				declare_war_on = {
-					target = BEL
-					type = annex_everything
-				}			
-				declare_war_on = {
-					target = HOL
-					type = annex_everything
+			}
+			HOL = {
+				add_to_war = {
+					targeted_alliance = ENG
+					enemy = GER
 				}
-				declare_war_on = {
-					target = LUX
-					type = annex_everything
+			}
+			LUX = {
+				add_to_war = {
+					targeted_alliance = ENG
+					enemy = GER
 				}
-				declare_war_on = {
-					target = FRA
-					type = annex_everything
-				}	
+			}
+			FRA = {
+				add_to_war = {
+					targeted_alliance = ENG
+					enemy = GER
+				}
 			}
 		}
 	}
@@ -3564,24 +3570,36 @@ foreign_politics = {
 
 		complete_effect = {
 			custom_effect_tooltip = GER_operation_25_and_marita_tt
-			every_country = {
+			hidden_effect = {
+				ENG = {
+					add_to_faction = GRE
+				}
+				if = {
 					limit = {
-						is_in_faction_with = GER 
-					}	
-					declare_war_on = {
-						target = GRE
-						type = annex_everything
+						NOT = { is_in_faction_with = YUG  }
 					}
-					if = {
-						limit = {
-							NOT = { is_in_faction_with = YUG  }
-						}
-						declare_war_on = {
-							target = YUG
-							type = annex_everything
-						}	
-					}				
-				}	
+					ENG = {
+						add_to_faction = YUG
+					}
+				}
+			}
+			GRE = {
+				add_to_war = {
+					targeted_alliance = ENG
+					enemy = GER
+				}
+			}
+			if = {
+				limit = {
+					NOT = { is_in_faction_with = YUG  }
+				}
+				YUG = {
+					add_to_war = {
+						targeted_alliance = ENG
+						enemy = GER
+					}
+				}
+			}
 		}
 	}
 
@@ -5021,8 +5039,6 @@ GER_reichskommissariats = {
 						picture = "gfx/leaders/NOR/josef_terboven.dds"
 						expire = "1965.1.1"
 						ideology = nazism
-						traits = {
-						}
 					}
 				}
 				GNO = {
@@ -5108,7 +5124,6 @@ GER_reichskommissariats = {
 						picture = "gfx/leaders/HOL/arthur_seyss_inquart.dds"
 						expire = "1965.1.1"
 						ideology = nazism
-						traits = {}
 					}
 				}
 				set_autonomy = { target = GHO autonomy_state = autonomy_integrated_puppet }
@@ -5195,8 +5210,6 @@ GER_reichskommissariats = {
 						picture = "gfx/leaders/BEL/josef_grohe.dds"
 						expire = "1965.1.1"
 						ideology = nazism
-						traits = {
-						}
 					}
 				}
 				GBE = {
@@ -5297,7 +5310,6 @@ GER_reichskommissariats = {
 						picture = "gfx/leaders/POL/hans_frank.dds"
 						expire = "1965.1.1"
 						ideology = nazism
-						traits = {}
 					}
 				}
 				set_autonomy = { target = GPO autonomy_state = autonomy_integrated_puppet }
@@ -5420,8 +5432,6 @@ GER_reichskommissariats = {
 						picture = "gfx/leaders/GER/hinrich_lohse.dds"
 						expire = "1965.1.1"
 						ideology = nazism
-						traits = {
-						}
 					}
 				}
 				GOS = {
@@ -5540,8 +5550,6 @@ GER_reichskommissariats = {
 						picture = "gfx/leaders/GER/erich_koch.dds"
 						expire = "1965.1.1"
 						ideology = nazism
-						traits = {
-						}
 					}
 				}
 				GUK = {
@@ -5634,8 +5642,6 @@ GER_reichskommissariats = {
 						picture = "gfx/leaders/GER/alfred_rosenberg.dds"
 						expire = "1965.1.1"
 						ideology = nazism
-						traits = {
-						}
 					}
 				}
 				GCA = {
@@ -5829,8 +5835,6 @@ GER_reichskommissariats = {
 						picture = "gfx/leaders/GER/hinrich_lohse.dds"
 						expire = "1965.1.1"
 						ideology = nazism
-						traits = {
-						}
 					}
 				}
 				GMO = {

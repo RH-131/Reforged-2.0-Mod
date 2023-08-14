@@ -39,21 +39,9 @@ focus_tree = {
 			}
 		}
 
-		available = {
-		
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_political_power = 120
@@ -75,14 +63,6 @@ focus_tree = {
 				factor = 3
 				has_completed_focus = CAN_rowell_sirois_commission
 			}
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -110,9 +90,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 75
 		}
-
-		available = {
-		}
 		
 		bypass = {
 			custom_trigger_tooltip = {
@@ -136,10 +113,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = CAN_national_housing_act_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -180,21 +157,9 @@ focus_tree = {
 			factor = 75
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -229,10 +194,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 75
-		}
-
-		available = {
-
 		}
 		
 		bypass = {
@@ -286,10 +247,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 75
-		}
-
-		available = {
-
 		}
 		
 		bypass = {
@@ -349,10 +306,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 75
-		}
-
-		available = {
-
 		}
 		
 		bypass = {
@@ -424,18 +377,10 @@ focus_tree = {
 		available = {
 			controls_state = 470
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			470 = {
@@ -471,18 +416,10 @@ focus_tree = {
 				JAP = { has_completed_focus = JAP_intervene_in_china }
 			}
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -516,18 +453,10 @@ focus_tree = {
 		available = {
 			has_war = yes
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = CAN_war_bonds_1
@@ -548,10 +477,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50
-		}
-
-		available = {
-
 		}
 		
 		bypass = {
@@ -646,21 +571,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = CAN_national_resources_mobilization_act
@@ -681,21 +594,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = CAN_wartime_prices_and_trade_board
@@ -716,21 +617,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = CAN_bits_and_pieces_program
@@ -754,18 +643,10 @@ focus_tree = {
 		available = {
             has_war = yes
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_research_slot = 1
@@ -789,10 +670,6 @@ focus_tree = {
 				has_completed_focus = CAN_canada_wheat_board
 			}
 		}
-
-		available = {
-
-		}
 		
 		bypass = {
 			NOT = {
@@ -806,45 +683,23 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 470 }
-				limit = {
-					is_in_home_area = yes
-				}
+			470 = {
 				add_resource = {
 					type = steel
 					amount = 50
 				}
 			}
-			random_owned_controlled_state = {
-				prioritize = { 682 }
-				limit = {
-					is_in_home_area = yes
-				}
+			682 = {
 				add_resource = {
 					type = steel
 					amount = 50
 				}
 			}
-			random_owned_controlled_state = {
-				prioritize = { 276 }
-				limit = {
-					is_in_home_area = yes
-				}
+			276 = {
 				add_resource = {
 					type = chromium
 					amount = 30
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 276 }
-				limit = {
-					is_in_home_area = yes
 				}
 				add_resource = {
 					type = tungsten
@@ -872,21 +727,9 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -913,10 +756,6 @@ focus_tree = {
 				has_completed_focus = CAN_john_inglis_and_company
 			}
 		}
-
-		available = {
-
-		}
 		
 		bypass = {
 			custom_trigger_tooltip = {
@@ -940,10 +779,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = CAN_victory_aircraft_limited_AF1
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -951,10 +790,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = CAN_victory_aircraft_limited_AF2
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1011,10 +850,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50
-		}
-
-		available = {
-
 		}
 		
 		bypass = {
@@ -1085,18 +920,10 @@ focus_tree = {
 		available = {
 			has_war = yes
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = CAN_commit_to_the_war
@@ -1119,10 +946,6 @@ focus_tree = {
 				factor = 2
 				has_completed_focus = CAN_victory_aircraft_limited
 			}
-		}
-
-		available = {
-
 		}
 		
 		bypass = {
@@ -1147,10 +970,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = CAN_john_inglis_and_company_AF1
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1158,10 +981,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = CAN_john_inglis_and_company_AF2
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1217,10 +1040,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50
-		}
-
-		available = {
-
 		}
 		
 		bypass = {
@@ -1312,10 +1131,6 @@ focus_tree = {
 				factor = 2
 				has_completed_focus = CAN_if_day
 			}
-		}
-
-		available = {
-
 		}
 		
 		bypass = {
@@ -1410,21 +1225,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = CAN_send_in_the_zombies
@@ -1450,21 +1253,9 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -1491,18 +1282,10 @@ focus_tree = {
 		available = {
             has_war = yes
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1528,21 +1311,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1569,21 +1340,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			army_experience = 30
@@ -1614,18 +1373,10 @@ focus_tree = {
 		available = {
             has_idea = CAN_conscription_crisis
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			remove_ideas = CAN_conscription_crisis
@@ -1653,18 +1404,10 @@ focus_tree = {
 		available = {
             has_idea = CAN_conscription_crisis
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -1687,14 +1430,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1812,21 +1547,9 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			army_experience = 20
@@ -1853,31 +1576,18 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
 				limit = {
 					is_ai = no
 				}
-		
-			hidden_effect = {
-				load_oob = "CAN_1_infantry_Division"		# template
-			}
+				hidden_effect = {
+					load_oob = "CAN_1_infantry_Division"		# template
+				}
 			}
 			add_tech_bonus = {
 				name = CAN_canadian_infantry_corps
@@ -1907,10 +1617,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 1
@@ -1934,21 +1640,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1983,21 +1677,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2023,33 +1705,11 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
-			if = {
-				limit = {
-					#is_ai = no
-					has_tech = motorised_infantry
-				}
-		
-			hidden_effect = {
-				load_oob = "CAN_motorised_Division"		# template
-			}
-			}
 			add_tech_bonus = {
 				name = CAN_a_motorized_army
 				bonus = 1.0
@@ -2085,21 +1745,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			army_experience = 15
@@ -2126,21 +1774,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2166,21 +1802,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2207,21 +1831,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2247,21 +1859,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2300,18 +1900,10 @@ focus_tree = {
 			ENG = { has_government = ROOT }
 			is_in_tech_sharing_group = commonwealth_research
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
             add_country_leader_trait = the_silver_president
@@ -2348,18 +1940,10 @@ focus_tree = {
 			is_in_faction_with = ENG
 			is_in_tech_sharing_group = commonwealth_research
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 		    add_research_slot = 1
@@ -2390,21 +1974,9 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = CAN_the_plan
@@ -2427,10 +1999,6 @@ focus_tree = {
 
 		available = {
 			has_idea = CAN_conscription_crisis
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -2462,14 +2030,6 @@ focus_tree = {
 				factor = 2
 				has_completed_focus = CAN_the_plan
 			}
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2520,21 +2080,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 		    add_ideas = CAN_hour
@@ -2570,18 +2118,10 @@ focus_tree = {
 			controls_state = 276
 			controls_state = 470
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			470 = {
@@ -2622,18 +2162,10 @@ focus_tree = {
 		available = {
 			controls_state = 470
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			470 = {
@@ -2669,10 +2201,6 @@ focus_tree = {
 
 		available = {
 		date > 1936.06.01
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2744,44 +2272,24 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 682 }
-				limit = {
-					is_in_home_area = yes
-				}
+			682 = {
 				add_resource = {
 					type = chromium
 					amount = 20
 				}
 			}
-			random_owned_controlled_state = {
-				prioritize = { 470 }
-				limit = {
-					is_in_home_area = yes
-				}
+			470 = {
 				add_resource = {
 					type = tungsten
 					amount = 25
 				}
 			}
-			random_owned_controlled_state = {
-				prioritize = { 276 }
-				limit = {
-					is_in_home_area = yes
-				}
+			276 = {
 				add_resource = {
 					type = aluminium
 					amount = 40
@@ -2804,9 +2312,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 35
 		}
-
-		available = {
-		}
 		
 		bypass = {
 			custom_trigger_tooltip = {
@@ -2824,6 +2329,36 @@ focus_tree = {
 		
 		continue_if_invalid = yes
 		available_if_capitulated = yes
+
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = CAN_shadow_factories_AF1 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = CAN_shadow_factories_AF2 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = CAN_shadow_factories_AF3 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -2850,7 +2385,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -2866,7 +2401,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -2896,21 +2431,9 @@ focus_tree = {
 			}
 		}
 
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -2950,10 +2473,6 @@ focus_tree = {
 
 		available = {
 			date > 1938.01.01
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3029,10 +2548,6 @@ focus_tree = {
 				FRA = { has_capitulated = yes } 
 			}	
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3061,14 +2576,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 3
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3135,21 +2642,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3178,10 +2673,6 @@ focus_tree = {
 
 		available = {
 			has_tech = radio
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3370,14 +2861,6 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3447,21 +2930,9 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3494,21 +2965,9 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3537,21 +2996,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3579,14 +3026,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 9
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3645,21 +3084,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3686,21 +3113,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3730,18 +3145,10 @@ focus_tree = {
 		available = {
 				has_tech = radio_detection
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3823,21 +3230,9 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			navy_experience = 25
@@ -3864,21 +3259,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			navy_experience = 25
@@ -3905,21 +3288,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = CAN_degauss_ship_hulls
@@ -3940,21 +3311,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = CAN_trade_fleet			
@@ -3973,14 +3332,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 25
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes

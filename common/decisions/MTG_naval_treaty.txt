@@ -237,11 +237,6 @@ MTG_naval_treaties = {
 	MTG_invite_FROM_to_treaty = {
 
 		icon = generic_naval
-			
-	
-		available = {
-			
-		}
 
 		target_root_trigger = {
 			has_naval_treaty_trigger = yes
@@ -314,11 +309,6 @@ MTG_naval_treaties = {
 	MTG_send_treaty_warning_to_FROM_previous_signatory = {
 
 		icon = generic_naval
-			
-	
-		available = {
-			
-		}
 
 		target_root_trigger = {
 			has_naval_treaty_trigger = yes
@@ -400,11 +390,6 @@ MTG_naval_treaties = {
 	MTG_send_treaty_warning_to_FROM = {
 
 		icon = generic_naval
-			
-	
-		available = {
-			
-		}
 
 		target_root_trigger = {
 			has_naval_treaty_trigger = yes
@@ -555,10 +540,6 @@ MTG_naval_treaties = {
 			}
 		}
 		days_mission_timeout = 30
-	
-		visible = {
-			
-		}
 		timeout_effect = {
 			every_other_country = {
 				limit = {
@@ -569,9 +550,6 @@ MTG_naval_treaties = {
 					target = ROOT
 				}
 			}
-		}
-		complete_effect = {
-			
 		}
 	}
 	MTG_treaty_reduction_signatory_mission = {
@@ -651,16 +629,9 @@ MTG_naval_treaties = {
 		#	has_naval_treaty_trigger = yes
 		#}
 		days_mission_timeout = 30
-	
-		visible = {
-			
-		}
 		timeout_effect = {
 			add_stability = -0.1
 			add_political_power = -35
-		}
-		complete_effect = {
-			
 		}
 	}
 	MTG_treaty_renew_mission = {
@@ -684,9 +655,6 @@ MTG_naval_treaties = {
 		}
 		timeout_effect = {
 			clr_global_flag = MTG_second_london_conference 
-		}
-		complete_effect = {
-			
 		}
 	}
 	MTG_escalator_clause_invocation_mission = {
@@ -724,9 +692,6 @@ MTG_naval_treaties = {
 					add_idea = MTG_naval_treaty_cheating_reduced
 				}
 			}
-		}
-		complete_effect = {
-			
 		}
 	}
 }

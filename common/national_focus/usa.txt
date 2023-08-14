@@ -55,21 +55,13 @@ focus_tree = {
 	focus = {
 		id = USA_department_of_war
 		icon = GFX_USA_department_of_war
-		prerequisite = {  }
-		mutually_exclusive = {  }
 		x = 9
 		y = 0
 		cost = 5
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			custom_effect_tooltip = USA_voter_support_1_tt
@@ -95,13 +87,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -131,10 +116,6 @@ focus_tree = {
 				}
 				has_army_experience > 49.99
 			}
-		}
-
-		bypass = {
-			
 		}
 
 		available_if_capitulated = yes
@@ -176,9 +157,6 @@ focus_tree = {
 		available = {
 			has_government = democratic
 		}
-		
-		bypass = {
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -207,14 +185,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -233,9 +203,6 @@ focus_tree = {
 		id = USA_office_of_strategic_services
 		icon = GFX_focus_generic_strike_at_democracy1
 		prerequisite = { focus = USA_war_powers_act }
-		available = {
-			
-		}
 		x = -1
 		y = 3
 		relative_position_id = USA_appoint_a_new_chief_of_staff
@@ -264,7 +231,6 @@ focus_tree = {
 		id = USA_black_chamber
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = USA_office_of_strategic_services }
-		available = { }
 		x = 0
 		y = 1
 		relative_position_id = USA_office_of_strategic_services
@@ -316,9 +282,6 @@ focus_tree = {
 				has_war_with = JAP
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			remove_ideas = USA_the_poor_command_post_2 
@@ -337,13 +300,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -379,13 +336,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			every_army_leader = {
@@ -401,7 +352,6 @@ focus_tree = {
 		id = USA_support_china
 		icon = GFX_USA_support_china
 		prerequisite = { focus = USA_department_of_war }
-		mutually_exclusive = {  }
 		relative_position_id = USA_department_of_war
 		x = -15
 		y = 1
@@ -445,13 +395,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			CHI = {
@@ -477,13 +421,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			CHI = {
@@ -508,13 +446,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_stability = 0.1
@@ -534,13 +466,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			CHI = {
@@ -596,13 +522,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			CHI = {
@@ -627,13 +547,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			CHI = {
@@ -686,10 +600,9 @@ focus_tree = {
 					}
 				}
 
-				every_state = {
-					limit = { state = 605 }
+				605 = {
 					create_unit = {
-						division = "name = \"1st. US Trained Division division_template = \"US Trained Division\" start_experience_factor = 1 start_equipment_factor = 0.8" 
+						division = "name = \"1st. US Trained Division\" division_template = \"US Trained Division\" start_experience_factor = 1 start_equipment_factor = 0.8" 
 						owner = CHI
 					}	
 					create_unit = {
@@ -746,9 +659,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			CHI = {
@@ -775,9 +685,6 @@ focus_tree = {
 				target = JAP
 				value > 25
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -816,9 +723,6 @@ focus_tree = {
 				value > 45
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			every_state = {
@@ -848,13 +752,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -888,9 +786,6 @@ focus_tree = {
 		
 		available = { 
 			threat > 0.2 
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -1245,13 +1140,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 
@@ -1293,8 +1182,7 @@ focus_tree = {
 					}
 				}
 
-				every_state = {
-					limit = { state = 378 }
+				378 = {
 					create_unit = {
 						division = "name = \"1st Marine Division\" division_template = \"USMC Division\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
 						owner = USA
@@ -1328,13 +1216,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			custom_effect_tooltip = USA_marine_garrison_divisions_tt
@@ -1367,8 +1249,7 @@ focus_tree = {
 					}
 				}
 
-				every_state = {
-					limit = { state = 378 }
+				378 = {
 					create_unit = {
 						division = "name = \"1st USMC Garrison Division\" division_template = \"USMC Garrison Division\" start_experience_factor = 1 start_equipment_factor = 1" 
 						owner = USA
@@ -1426,13 +1307,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			create_field_marshal = {
@@ -1475,9 +1350,6 @@ focus_tree = {
 				has_war_with = JAP 
 				is_in_faction_with = AST
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -1550,9 +1422,6 @@ focus_tree = {
 		available = { 
 			has_war_with = JAP 
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			USA = {
@@ -1575,13 +1444,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_ideas = USMC
@@ -1614,9 +1477,6 @@ focus_tree = {
 				has_full_control_of_state = 646
 				has_full_control_of_state = 684
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -1662,9 +1522,6 @@ focus_tree = {
 				has_idea = RAJ_famine
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			custom_effect_tooltip = USA_UK_has_to_accept_tt
@@ -1691,9 +1548,6 @@ focus_tree = {
 		
 		available = { 
 			has_war_with = JAP 
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -1724,9 +1578,6 @@ focus_tree = {
 		
 		available = { 
 			has_war_with = JAP 
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -1759,9 +1610,6 @@ focus_tree = {
 		available = { 
 			has_war_with = JAP
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			every_state = {
@@ -1792,13 +1640,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_timed_idea = {
@@ -1820,13 +1662,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -1856,13 +1692,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -1887,13 +1717,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -1936,9 +1760,6 @@ focus_tree = {
 				has_war_with = ITA 
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			add_ideas = USA_aircraft_carrier_tactics_1 
@@ -1958,10 +1779,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
+		available_if_capitulated = yes
 
 		bypass = {
 			custom_trigger_tooltip =  {
@@ -2098,13 +1916,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			if = { 
@@ -2133,13 +1945,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -2183,10 +1989,7 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes 
-
-		bypass = {
-		}
+		cancel_if_invalid = yes
 		
 		completion_reward = {
 			navy_experience = -50 
@@ -2213,9 +2016,6 @@ focus_tree = {
 		
 		available = { 
 			has_war_with = JAP 
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -2283,13 +2083,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			navy_experience = 25
@@ -2330,13 +2124,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -2365,13 +2153,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_ideas = USA_ONI 
@@ -2391,13 +2173,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -2831,9 +2607,6 @@ focus_tree = {
 				has_idea = USA_labour_management_relations_act
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			if = {
@@ -2884,9 +2657,6 @@ focus_tree = {
 				has_war_support > 0.4 
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			add_ideas = limited_conscription
@@ -2923,9 +2693,6 @@ focus_tree = {
 				has_war_with = JAP
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			custom_effect_tooltip = available_designer
@@ -2959,13 +2726,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -2988,13 +2749,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -3018,13 +2773,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			custom_effect_tooltip = USA_rangers_tt
@@ -3054,14 +2803,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3104,9 +2845,6 @@ focus_tree = {
 				has_war_with = JAP
 			}			
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -3137,13 +2875,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			USA_armor_industry_level_up = yes 
@@ -3174,13 +2906,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			custom_effect_tooltip = available_designer
@@ -3200,13 +2926,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			custom_effect_tooltip = available_designer
@@ -3234,9 +2954,6 @@ focus_tree = {
 				has_war_with = GER 
 				has_war_with = JAP
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -3277,13 +2994,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -3322,9 +3033,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			set_technology = { USA_artillery_radio_2 = 1 }
@@ -3343,13 +3051,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -3375,13 +3077,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			random_owned_state = {
@@ -3417,13 +3113,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -3449,13 +3139,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -3479,13 +3163,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -3510,13 +3188,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			custom_effect_tooltip = USA_level_up_aircraft_twice_tt
@@ -3550,9 +3222,6 @@ focus_tree = {
 		
 		available = { 
 			has_war_with = GER 
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -3588,9 +3257,6 @@ focus_tree = {
 		available = { 
 			has_war_with = GER 
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			add_ideas = combined_bomber_offensive 
@@ -3615,14 +3281,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -3644,14 +3303,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_ideas = USA_neutrality_act
@@ -3691,9 +3343,6 @@ focus_tree = {
 				}
 			}
 			has_idea = USA_factory_strikes
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -3735,9 +3384,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -3785,9 +3431,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			set_country_flag = { flag = USA_congress_blocking_focus value = 1 days = 35 }		
@@ -3833,9 +3476,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			set_country_flag = { flag = USA_congress_blocking_focus value = 1 days = 35 }		
@@ -3879,9 +3519,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -3928,9 +3565,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -3983,9 +3617,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -4041,9 +3672,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			set_country_flag = { flag = USA_congress_blocking_focus value = 1 days = 35 }
@@ -4091,9 +3719,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			set_country_flag = { flag = USA_congress_blocking_focus value = 1 days = 35 }	
@@ -4131,9 +3756,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			add_political_power = 100
@@ -4170,9 +3792,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		} 
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -4213,9 +3832,6 @@ focus_tree = {
 				}
 			}
 
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -4266,9 +3882,6 @@ focus_tree = {
 			}
 
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			set_country_flag = { flag = USA_congress_blocking_focus value = 1 days = 35 }	
@@ -4306,9 +3919,6 @@ focus_tree = {
 				}
 			}
 
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -4348,9 +3958,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -4397,9 +4004,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			set_country_flag = { flag = USA_congress_blocking_focus value = 1 days = 35 }		
@@ -4445,9 +4049,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			set_country_flag = { flag = USA_congress_blocking_focus value = 1 days = 35 }		
@@ -4491,9 +4092,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			set_country_flag = { flag = USA_congress_blocking_focus value = 1 days = 35 }	
@@ -4536,9 +4134,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -4584,9 +4179,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			set_country_flag = { flag = USA_congress_blocking_focus value = 1 days = 35 }		
@@ -4624,9 +4216,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -4674,9 +4263,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -4726,9 +4312,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -4785,9 +4368,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			add_days_mission_timeout = {
@@ -4795,9 +4375,6 @@ focus_tree = {
 				days = -75
 			}
 			#add_political_power = 50
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = USA_henry_morgenthau_jr_1
 			add_ideas = USA_henry_morgenthau_jr_1
 		}
 	}		
@@ -4833,9 +4410,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -4878,9 +4452,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -4925,9 +4496,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 
@@ -4970,9 +4538,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -5043,9 +4608,6 @@ focus_tree = {
 					has_country_flag = USA_congress_blocking_focus 
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -5133,9 +4695,6 @@ focus_tree = {
 				has_stability > 0.6 
 			}
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			custom_effect_tooltip = USA_will_upgrade_all_one_step_tt
@@ -5200,9 +4759,6 @@ focus_tree = {
 			 }
 			NOT = { is_in_faction_with = ENG }
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			add_stability = 0.25
@@ -5262,14 +4818,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -5290,14 +4838,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -5324,10 +4864,6 @@ focus_tree = {
 
 		available = {
 			has_idea = robert_oppenheimer
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -5365,13 +4901,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			custom_effect_tooltip = USA_will_upgrade_all_one_step_tt
@@ -5403,13 +4933,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_ideas = USA_rationing_and_war_bonds
@@ -5428,13 +4952,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			if = {
@@ -5514,13 +5032,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100 
 		}
-		available_if_capitulated = yes		
-		
-		available = { 
-		}
-
-		bypass = {
-		}
+		available_if_capitulated = yes
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -5557,9 +5069,6 @@ focus_tree = {
 					}
 				}
 			}
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -5621,9 +5130,6 @@ focus_tree = {
 		available = { 
 			is_in_faction_with = ENG
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			unlock_decision_category_tooltip = prospect_for_resources
@@ -5646,9 +5152,6 @@ focus_tree = {
 		
 		available = { 
 			is_in_faction_with = ENG
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -5678,9 +5181,6 @@ focus_tree = {
 		available = { 
 			is_in_faction_with = ENG
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			show_ideas_tooltip = general_motors 
@@ -5705,9 +5205,6 @@ focus_tree = {
 		
 		available = { 
 			is_in_faction_with = ENG
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
@@ -5751,9 +5248,6 @@ focus_tree = {
 		available = { 
 			is_in_faction_with = ENG
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			unlock_decision_tooltip = { decision = USA_victory_program_1 show_effect_tooltip = yes }
@@ -5782,9 +5276,6 @@ focus_tree = {
 		available = { 
 			is_in_faction_with = ENG
 		}
-
-		bypass = {
-		}
 		
 		completion_reward = {
 			unlock_decision_tooltip = { decision = women_in_the_workforce show_effect_tooltip = yes }
@@ -5810,9 +5301,6 @@ focus_tree = {
 		
 		available = { 
 			is_in_faction_with = ENG
-		}
-
-		bypass = {
 		}
 		
 		completion_reward = {
