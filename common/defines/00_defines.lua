@@ -3149,7 +3149,7 @@ NOperatives = {
 	INTEL_NETWORK_STRENGTH_DECAY_WHEN_ABOVE_TARGET = -2.5,			-- The amount of strength removed each tick from a state that has more strength than the target
 	INTEL_NETWORK_BASE_STRENGTH_TARGET_COUNTERINTELLIGENCE_FACTOR = -10.0,	-- BaseStrengthTarget = Factor * CounterIntelligenceRating + Offset
 	INTEL_NETWORK_BASE_STRENGTH_TARGET_COUNTERINTELLIGENCE_OFFSET = 90,	-- Offset mentioned above
-	INTEL_NETWORK_MIN_VP_TO_TARGET = 15,					-- The minimum value of the highest VP in a state to consider the state as a valid target to start building an intel network
+	INTEL_NETWORK_MIN_VP_TO_TARGET = 5,					-- The minimum value of the highest VP in a state to consider the state as a valid target to start building an intel network
 	INTEL_NETWORK_MIN_STRENGTH_TO_TARGET = 101.0,				-- The minimum value of the intel network in a state to consider it a valid target to deploy an operative in
 	INTEL_NETWORK_MIN_STRENGTH_TO_LINK_SUBNETWORKS = 0.0,			-- Where the influence of two operative meet, the two nodes on each side have to have strictly more than the given strength before the two operatives have a chance of being considered in the same network
 	INTEL_NETWORK_OPERATIVE_GAIN_STACKING_FACTOR = 0.5,			-- When multiple operative are present in the same location, this factor is applied for each operative with a lower gain than the max. So if operatives have the gain [ 3, 1, 2 ] in the same location, it is sorted to [ 1, 2, 3 ] then converted to [ 1*D^2, 2*D^1, 3 ], with D being this define, so if D=0.5 we have [ 0.25, 1, 3 ] and the final gain from operative at this location will be 4.25. Putting this define to 0 is equivalent to considering the maximum value only.
