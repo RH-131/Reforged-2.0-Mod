@@ -1581,16 +1581,34 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_tech_bonus = {
-				technology = submarine_operations
-				technology = undersea_blockade
-				technology = convoy_interdiction
-				technology = submarine_offensive
-				bonus = 1
-				uses = 4
-				name = USA_destroy_their_supply_chains
+			effect_tooltip = {
+				add_doctrine_cost_reduction = {
+					technology = submarine_operations
+					technology = undersea_blockade
+					technology = convoy_interdiction
+					technology = submarine_offensive
+					cost_reduction = 0.5
+					uses = 4
+					name = USA_destroy_their_supply_chains
+				}
+				navy_experience = 25
 			}
-			navy_experience = 25
+			hidden_effect = {
+				add_doctrine_cost_reduction = {
+					technology = submarine_operations
+					technology = undersea_blockade
+					technology = convoy_interdiction
+					technology = submarine_offensive
+					technology = submarine_operations_bs
+					technology = undersea_blockade_bs
+					technology = convoy_interdiction_bs
+					technology = submarine_offensive_bs
+					cost_reduction = 0.5
+					uses = 4
+					name = USA_destroy_their_supply_chains
+				}
+				navy_experience = 25
+			}
 		}
 	}				
 
@@ -1827,6 +1845,10 @@ focus_tree = {
 				idea = USA_massive_funding_project
 				days = 120 
 			}
+			add_timed_idea = {
+				idea = JAP_modernize_the_fleet
+				days = 365 
+			}
 		}
 		
 		completion_reward = {
@@ -1901,6 +1923,10 @@ focus_tree = {
 			add_timed_idea = {
 				idea = USA_massive_funding_project
 				days = 120 
+			}
+			add_timed_idea = {
+				idea = JAP_modernize_the_fleet
+				days = 365 
 			}
 		}
 	}					
