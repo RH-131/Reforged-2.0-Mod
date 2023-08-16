@@ -747,7 +747,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = HOL_abandon_the_gold_standard
-		cost = 7.16
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
@@ -836,7 +836,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = HOL_finish_the_noordoostpolder
-		cost = 7.16
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -2418,6 +2418,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = free_trade
 			HOL_de_crisisjaren_level_down = yes
+			add_to_tech_sharing_group = commonwealth_research
 			add_timed_idea = { idea = HOL_caved_to_the_british days = 1095 }
 			GER = {
 				add_opinion_modifier = { target = HOL modifier = HOL_caved_to_the_british_ger }
@@ -2535,6 +2536,8 @@ focus_tree = {
 		id = HOL_go_with_britain
 		available = {
 			ENG = { has_government = democratic }
+			has_government = democratic
+			is_in_faction_with = ENG
 		}
 		bypass = {
 		}
@@ -2548,7 +2551,10 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_to_tech_sharing_group = commonwealth_research	    
+			modify_tech_sharing_bonus = {
+			  	id = commonwealth_research
+			   	bonus = 0.1
+			}	    
 		}
 	}
 
@@ -2595,11 +2601,8 @@ focus_tree = {
 		id = HOL_the_singapore_conferences
 		prerequisite = { focus = HOL_go_with_britain }
 		available = {
-			has_government = democratic
-			is_in_faction_with = ENG
 		}
 		bypass = {
-			has_war_with = JAP
 		}
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		x = 1
