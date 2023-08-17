@@ -45,7 +45,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		    add_political_power = 120
+		    add_political_power = 150
 			HOL_de_crisisjaren_level_down = yes
 			unlock_decision_category_tooltip = HOL_obtain_foreign_colonial_investments
 			custom_effect_tooltip = HOL_obtain_foreign_colonial_investments_tt
@@ -726,6 +726,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			HOL_de_crisisjaren_level_down = yes
+			add_political_power = 150
 		}
 	}
 
@@ -2356,7 +2357,6 @@ focus_tree = {
 					ideology = conservatism
 					traits = {
 						defeatist
-						economic_reformer
 					}
 				}
 				remove_ideas = HOL_weak_government
@@ -2382,7 +2382,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_political_power = 120
+		    add_stability = 0.05
+			add_ideas = free_trade
 		}
 	}
 
@@ -2416,7 +2417,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			add_ideas = free_trade
 			add_to_tech_sharing_group = commonwealth_research
 			add_timed_idea = { idea = HOL_caved_to_the_british days = 1095 }
 			GER = {
@@ -2590,7 +2590,6 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_political_power = 60
 			unlock_decision_category_tooltip = HOL_request_allied_favors
 			custom_effect_tooltip = HOL_request_allied_favors_tt
 		}
