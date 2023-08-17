@@ -65,7 +65,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = HOL_obtain_foreign_colonial_investments		 
-		cost = 3
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -118,7 +118,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			689 = {
+			695 = {
 				add_resource = {
 					type = oil
 					amount = 10
@@ -526,7 +526,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
-		    add_political_power = 50
+		    HOL_de_crisisjaren_level_down = yes
 		}
 	}
 
@@ -2417,7 +2417,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = free_trade
-			HOL_de_crisisjaren_level_down = yes
 			add_to_tech_sharing_group = commonwealth_research
 			add_timed_idea = { idea = HOL_caved_to_the_british days = 1095 }
 			GER = {
@@ -2492,7 +2491,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = HOL_unity_through_democracy
-		cost = 5
+		cost = 7.16
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
@@ -2546,7 +2545,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = HOL_unity_through_democracy
-		cost = 5
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -2566,7 +2565,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = HOL_replace_the_defeatist_government
-		cost = 5
+		cost = 7.16
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_MANPOWER}
@@ -2586,7 +2585,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = HOL_de_vaarplicht
-		cost = 5
+		cost = 7.16
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -2687,7 +2686,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = HOL_ship_a_day_sinking_quotas
-		cost = 5
+		cost = 7.16
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
@@ -2722,7 +2721,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = HOL_request_allied_favors
-		cost = 5
+		cost = 7.16
 
 		available_if_capitulated = yes
 
