@@ -311,9 +311,10 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.03
-				industrial_capacity_factory = 0.225
-				industrial_capacity_dockyard = 0.225
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
 				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 				stability_factor = 0.1
 			}
 		}
@@ -363,7 +364,7 @@ ideas = {
 			picture = generic_war_preparation
 			
 			modifier = {
-				production_speed_arms_factory_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
 			}
 		}
 		AST_volunteer_defence_corps = {
@@ -752,6 +753,9 @@ ideas = {
 			}
 			
 			traits = { industrial_concern }
+			
+			modifier = {
+			}
 		}
 
 	}
@@ -768,7 +772,9 @@ ideas = {
 			research_bonus = {
 				industry = 0.15
 			}
-            traits = { industrial_research_trait }
+            traits = { industrial_research_trait }		
+			modifier = {
+			}
 		}
 
 		AST_jack_piddington = {
@@ -836,7 +842,10 @@ ideas = {
 				original_TAG = AST
 			}
 						
-			research_bonus = { armor = 0.15 }  traits = { tank_research_trait }
+			research_bonus = { armor = 0.15 }  traits = { tank_research_trait }		
+
+			modifier = {
+			}
 		}
 	}
 	naval_research = {
@@ -977,6 +986,9 @@ ideas = {
 			allowed = {
 				original_tag = AST
 			}
+
+			available = {
+			}
 			
 			research_bonus = {
 				air_equipment = -0.10
@@ -1010,6 +1022,9 @@ ideas = {
 
 			allowed = {
 				original_tag = AST
+			}
+
+			available = {
 			}
 			
 			research_bonus = { air_equipment = 0.15 } traits = { aircraft_research_trait }			
