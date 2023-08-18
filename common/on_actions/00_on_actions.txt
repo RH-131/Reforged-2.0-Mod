@@ -1225,7 +1225,6 @@ on_actions = {
 					add_state_core = 31
 					add_state_core = 32
 					add_state_core = 33
-					add_state_core = 1
 					add_state_core = 735
 					add_state_core = 851
 					add_state_core = 799
@@ -1236,7 +1235,6 @@ on_actions = {
 					transfer_state = 25
 					transfer_state = 20
 					transfer_state = 33
-					transfer_state = 1
 					transfer_state = 21
 					transfer_state = 735
 					transfer_state = 851
@@ -1262,9 +1260,7 @@ on_actions = {
 					transfer_state = 553
 					set_capital = { state = 26 }
 					remove_ideas = EFR_war
-					diplomatic_relation = { country = ENG relation = non_aggression_pact }	
-					diplomatic_relation = { country = ENG relation = military_access }
-                    diplomatic_relation = { country = FRA relation = military_access }					
+					diplomatic_relation = { country = ENG relation = non_aggression_pact }				
 					diplomatic_relation = { country = FRA relation = non_aggression_pact }
 					diplomatic_relation = { country = SAF relation = non_aggression_pact }
 					diplomatic_relation = { country = CAN relation = non_aggression_pact }
@@ -1280,9 +1276,6 @@ on_actions = {
 							is_controlled_by = EFR
 						}
 						add_claim_by  = FRA
-					}
-					28 = {
-						remove_core_of = EFR
 					}
 				}
 			}
