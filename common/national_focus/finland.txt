@@ -18,7 +18,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 1
 		y = 0
-		cost = 5
+		cost = 7.16
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = infrastructure_effort_tt
@@ -50,7 +50,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_promote_sisu }
 		x = 5
 		y = 3
-		cost = 10
+		cost = 7.16
 		ai_will_do = {
 			factor = 10
 		}	
@@ -66,7 +66,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_stockpile_rations }
 		x = 0
 		y = 1
-		cost = 5
+		cost = 7.16
 		ai_will_do = {
 			factor = 10
 		}	
@@ -111,7 +111,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_prepare_for_winter }
 		x = 0
 		y = 2
-		cost = 5
+		cost = 7.16
 		ai_will_do = {
 			factor = 2
 		}
@@ -156,7 +156,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 2
 		y = 1
-		cost = 5
+		cost = 7.16
 
 		ai_will_do = {
 			factor = 10
@@ -202,7 +202,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 2
 		y = 2
-		cost = 5
+		cost = 7.16
 
 		ai_will_do = {
 			factor = 10
@@ -250,7 +250,7 @@ focus_tree = {
         prerequisite = { focus = FIN_invest_in_the_private_sector}
 		x = 1
 		y = 4
-		cost = 10
+		cost = 7.16
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -262,7 +262,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_nokia }
 		x = 2
 		y = 5
-		cost = 10
+		cost = 7.16
 
 		ai_will_do = {
 			factor = 1
@@ -292,12 +292,12 @@ focus_tree = {
 		prerequisite = { focus = FIN_nokia }
         prerequisite = { focus = FIN_promote_sisu }
 		available = {
-			num_of_factories > 50
+			has_war_with = SOV
 		}
 		cancel_if_invalid = no
 		x = 4
 		y = 5
-		cost = 10
+		cost = 7.16
 		completion_reward = {
 		add_research_slot = 1
 		}
@@ -315,14 +315,14 @@ focus_tree = {
 		
 		x = 0
 		y = 3
-		cost = 5
+		cost = 7.16
 		ai_will_do = {
 			factor = 1
 		}	
 		completion_reward = {
 			add_resource = {
 				type = steel
-				amount = 10
+				amount = 15
 				state = 148
 			}
             	add_resource = {
@@ -332,14 +332,14 @@ focus_tree = {
 			}
             	add_resource = {
 				type = tungsten
-				amount = 7
-				state = 722
+				amount = 8
+				state = 148
 			}
             
                 add_resource = {
-				type = steel
-				amount = 5
-				state = 722
+				type = aluminium
+				amount = 8
+				state = 148
 			}
             
 		}
@@ -406,7 +406,7 @@ focus_tree = {
 		icon = GFX_FIN_eastern_defence
 		x = 4
 		y = 0
-		cost = 10
+		cost = 7.16
 		completion_reward = {
 			add_ideas = FIN_mannerheim_legacy_idea
 			add_doctrine_cost_reduction = {
@@ -424,7 +424,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_eastern_defense }
 		x = 4
 		y = 1
-		cost = 10
+		cost = 7.16
 
 		ai_will_do = {
 			factor = 10
@@ -448,7 +448,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_ski_infantry }
 		x = 6
 		y = 1
-		cost = 5
+		cost = 7.16
 		completion_reward = {
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
@@ -473,7 +473,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_frantic_planning focus = FIN_molotov_cocktails }
 		x = 5
 		y = 2
-		cost = 5
+		cost = 7.16
 		completion_reward = {
         
             add_ideas = FIN_white_guard_idea
@@ -493,7 +493,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 6
 		y = 0
-		cost = 5
+		cost = 7.16
 		completion_reward = {
 			add_tech_bonus = {
 				name = POL_standardisation_of_equipment
@@ -525,7 +525,7 @@ focus_tree = {
 		}
 		x = 3
 		y = 3
-		cost = 10	
+		cost = 7.16
 		ai_will_do = {
 			factor = 100
 		}	
@@ -556,7 +556,7 @@ focus_tree = {
 		}
 		x = 3
 		y = 4
-		cost = 10
+		cost = 7.16
 		ai_will_do = {
 			factor = 100
 		}
@@ -640,7 +640,7 @@ focus_tree = {
         prerequisite = { focus = FIN_civilian_kitchens }
 		x = 5
 		y = 4
-		cost = 10
+		cost = 7.16
 		ai_will_do = {
 			factor = 1
 		}	
@@ -665,7 +665,7 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		x = 11
 		y = 0
-		cost = 10
+		cost = 7.16
 		ai_will_do = {
 			factor = 10
 		}	
@@ -680,7 +680,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_defend_finland }
 		x = 8
 		y = 1
-		cost = 10
+		cost = 7.16
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 1
@@ -697,7 +697,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_tuli_isku }
 		x = 8
 		y = 2
-		cost = 10
+		cost = 7.16
 		completion_reward = {
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
@@ -715,7 +715,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_defend_finland }
 		x = 14
 		y = 1
-		cost = 10
+		cost = 7.16
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.50
@@ -732,7 +732,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_foreign_planes }
 		x = 14
 		y = 2
-		cost = 10
+		cost = 7.16
 		completion_reward = {
 			add_tech_bonus = {
 				name = air_upgrade
@@ -754,7 +754,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_defend_finland }
 		x = 12
 		y = 1
-		cost = 10
+		cost = 7.16
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 1
@@ -771,7 +771,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_foreign_tanks }
 		x = 12
 		y = 2
-		cost = 10
+		cost = 7.16
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 1
@@ -787,7 +787,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_defend_finland }
 		x = 10
 		y = 1
-		cost = 10
+		cost = 7.16
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.50
@@ -804,7 +804,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_baltic_security }
 		x = 10
 		y = 2
-		cost = 10
+		cost = 7.16
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 1.0
@@ -816,7 +816,6 @@ focus_tree = {
 	focus = {
 		id = FIN_foreign_aid
 		icon = GFX_focus_generic_diplomatic_treaty
-		prerequisite = { focus = FIN_defend_finland }
 		x = 11
 		y = 3
 		cost = 0.8
@@ -862,7 +861,6 @@ focus_tree = {
 		id = FIN_pander_italy
 		icon = GFX_focus_generic_italy_first
 		prerequisite = { focus = FIN_pander_axis }
-		mutually_exclusive = { focus = FIN_pander_germany }
 		x = 9
 		y = 5
 		cost = 5
@@ -891,13 +889,15 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = { type = infantry_equipment_1  amount = 2000 producer = ITA }
 			add_equipment_to_stockpile = { type = special_equipment_1  amount = 500 producer = ITA }
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100 producer = ITA }
+		    add_equipment_to_stockpile = { type = radio_equipment amount = 100 producer = ITA }
+			add_equipment_to_stockpile = { type = support_equipment_1 amount = 100 producer = ITA }
 		}
 	}
 	focus = {
 		id = FIN_pander_germany
 		icon = GFX_focus_chi_mission_to_germany
 		prerequisite = { focus = FIN_pander_axis }
-		mutually_exclusive = { focus = FIN_pander_italy }
 		x = 7
 		y = 5
 		cost = 5
@@ -924,6 +924,11 @@ focus_tree = {
 		}	
 		completion_reward = {
 			add_equipment_to_stockpile = { type = mechanized_equipment  amount = 300 producer = GER }
+			add_equipment_to_stockpile = {
+				type = light_tank_chassis
+				amount = 200
+				producer = GER
+			}	
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.50
 				uses = 1
@@ -956,7 +961,6 @@ focus_tree = {
 		id = FIN_pander_france
 		icon = GFX_focus_chi_reach_out_to_france
 		prerequisite = { focus = FIN_pander_allies }
-		mutually_exclusive = { focus = FIN_pander_uk }
 		x = 15
 		y = 5
 		cost = 5
@@ -984,13 +988,15 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = { type = infantry_equipment_1  amount = 2000 producer = FRA }
 			add_equipment_to_stockpile = { type = special_equipment_1  amount = 500 producer = FRA }
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100 producer = FRA }
+		    add_equipment_to_stockpile = { type = radio_equipment amount = 100 producer = FRA }
+			add_equipment_to_stockpile = { type = support_equipment_1 amount = 100 producer = ITA }
 		}
 	}
 	focus = {
 		id = FIN_pander_uk
 		icon = GFX_focus_chi_british_cooperation
 		prerequisite = { focus = FIN_pander_allies }
-		mutually_exclusive = { focus = FIN_pander_france }
 		x = 13
 		y = 5
 		cost = 5
@@ -1012,8 +1018,8 @@ focus_tree = {
 			factor = 0
 		}	
 		completion_reward = {
-			add_equipment_to_stockpile = { type = fighter_equipment_1934  amount = 100 producer = ENG }
-			add_equipment_to_stockpile = { type = tac_bomber_equipment_1934  amount = 60 producer = ENG }
+			add_equipment_to_stockpile = { type = fighter_equipment_1936  amount = 100 producer = ENG }
+			add_equipment_to_stockpile = { type = tac_bomber_equipment_1936  amount = 60 producer = ENG }
 			add_tech_bonus = {
 				category = air_equipment
 				uses = 1
@@ -1077,7 +1083,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_abandoned }
 		x = 10
 		y = 7
-		cost = 10
+		cost = 7.16
 		ai_will_do = {
 			factor = 10
 		}	
@@ -1092,7 +1098,7 @@ focus_tree = {
 		 prerequisite = { focus = FIN_prepare_for_revenge }
 		x = 10
 		y = 8
-		cost = 10
+		cost = 7.16
 		ai_will_do = {
 			factor = 10
 		}	
@@ -1358,7 +1364,7 @@ focus_tree = {
 		mutually_exclusive = { focus = FIN_reclaim_land }
 		x = 10
 		y = 11
-		cost = 10
+		cost = 7.16
 		ai_will_do = {
 			factor = 0
 		}	
@@ -1380,7 +1386,7 @@ focus_tree = {
 		mutually_exclusive = { focus = FIN_push_forwards }
 		x = 12
 		y = 11
-		cost = 10
+		cost = 7.16
 		ai_will_do = {
 			factor = 10
 		}	
