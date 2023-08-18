@@ -818,13 +818,12 @@ focus_tree = {
 		icon = GFX_focus_generic_diplomatic_treaty
 		x = 11
 		y = 3
-		cost = 0.8
+		cost = 5
 		bypass = {
 			146 = {	is_owned_by = SOV }	
 		}	
 		
 		available = {
-			has_war_with = SOV
 		}	
 		
 		ai_will_do = {
@@ -841,7 +840,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_foreign_aid }
 		x = 8
 		y = 4
-		cost = 0.8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}	
@@ -942,11 +941,12 @@ focus_tree = {
 		prerequisite = { focus = FIN_foreign_aid }
 		x = 14
 		y = 4
-		cost = 0.8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}	
 		completion_reward = {
+		    add_offsite_building = { type = steel_refinery level = 1 }
 			add_opinion_modifier = {
 				target = ENG
 				modifier = pandered
@@ -1222,8 +1222,9 @@ focus_tree = {
 				limit = {
 					has_idea = extensive_conscription 
 				}
-				add_political_power = 200 
+				add_political_power = 150 
 			}
+			add_ideas = POR_corpo_do_estado_maior
 		}
 	}
 	focus = {
