@@ -280,7 +280,16 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_research_slot = 1
+			modify_building_resources = {
+        	   building = synthetic_rubber_refinery
+        	   resource = rubber
+        	   amount = 1
+        	}
+			modify_building_resources = {
+        	   building = steel_refinery
+        	   resource = tungsten
+        	   amount = 3
+        	}
 		}
 	}
 
@@ -483,7 +492,7 @@
 		}
 	}
 	focus = {
-		id = EFR_negotiate_the_release_of_officers
+		id = EFR_negotiate_the_release_of_officer
 		icon = GFX_focus_generic_concessions
 		prerequisite = { focus = EFR_chantiers_de_la_jeunesse focus = EFR_hide_military_equipment}
 		relative_position_id = EFR_chantiers_de_la_jeunesse
@@ -500,8 +509,8 @@
 	focus = {
 		id = EFR_phalange_africaine
 		icon = GFX_goal_generic_defence
-		prerequisite = { focus = EFR_negotiate_the_release_of_officers }
-		relative_position_id = EFR_negotiate_the_release_of_officers
+		prerequisite = { focus = EFR_negotiate_the_release_of_officer }
+		relative_position_id = EFR_negotiate_the_release_of_officer
 		x = 3
 		y = 1
 		cost = 5
@@ -525,8 +534,8 @@
 	focus = {
 		id = EFR_milice_francaise
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		prerequisite = { focus = EFR_negotiate_the_release_of_officers }
-		relative_position_id = EFR_negotiate_the_release_of_officers
+		prerequisite = { focus = EFR_negotiate_the_release_of_officer }
+		relative_position_id = EFR_negotiate_the_release_of_officer
 		x = 1
 		y = 1
 		cost = 5
@@ -597,8 +606,8 @@
 	focus = {
 		id = EFR_secret_military_researches
 		icon = GFX_focus_research
-		prerequisite = { focus = EFR_negotiate_the_release_of_officers }
-		relative_position_id = EFR_negotiate_the_release_of_officers
+		prerequisite = { focus = EFR_negotiate_the_release_of_officer }
+		relative_position_id = EFR_negotiate_the_release_of_officer
 		x = -2
 		y = 1
 		cost = 5
@@ -715,7 +724,7 @@
 		relative_position_id = EFR_patrie_focus
 		x = 4
 		y = -1
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -747,7 +756,7 @@
 		relative_position_id = EFR_aviation_effort
 		x = -1
 		y = 1
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -769,7 +778,7 @@
 		relative_position_id = EFR_aviation_effort
 		x = 1
 		y = 1
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -790,7 +799,7 @@
 		relative_position_id = EFR_aviation_effort
 		x = 0
 		y = 2
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -822,7 +831,7 @@
 		relative_position_id = EFR_aviation_effort
 		x = -1
 		y = 3
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -844,7 +853,7 @@
 		relative_position_id = EFR_aviation_effort
 		x = 0
 		y = 4
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -874,7 +883,7 @@
 		relative_position_id = EFR_aviation_effort
 		x = 1
 		y = 3
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -894,7 +903,7 @@
 		relative_position_id = EFR_aviation_effort
 		x = 4
 		y = 0
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -916,11 +925,10 @@
 		id = EFR_flexible_navy
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = EFR_naval_effort }
-		mutually_exclusive = { focus = EFR_large_navy }
 		relative_position_id = EFR_aviation_effort
 		x = 3
 		y = 1
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -951,11 +959,10 @@
 		id = EFR_large_navy
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = EFR_naval_effort }
-		mutually_exclusive = { focus = EFR_flexible_navy }
 		relative_position_id = EFR_aviation_effort
 		x = 5
 		y = 1
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -989,7 +996,7 @@
 		relative_position_id = EFR_aviation_effort
 		x = 3
 		y = 2
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -1024,7 +1031,7 @@
 		relative_position_id = EFR_aviation_effort
 		x = 5
 		y = 2
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -1060,7 +1067,7 @@
 		relative_position_id = EFR_aviation_effort
 		x = 3
 		y = 3
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -1096,7 +1103,7 @@
 		relative_position_id = EFR_aviation_effort
 		x = 5
 		y = 3
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -1136,7 +1143,7 @@
 		icon = GFX_goal_generic_allies_build_infantry
 		 x = 19
          y = 0
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -1157,7 +1164,7 @@
 		prerequisite = { focus = EFR_army_effort }
 		x = 17
 		y = 1
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -1183,7 +1190,7 @@
 		prerequisite = { focus = EFR_equipment_effort }
 		x = 17
 		y = 2
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -1203,7 +1210,7 @@
 		prerequisite = { focus = EFR_army_effort }
 		x = 21
 		y = 1
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -1223,7 +1230,7 @@
 		prerequisite = { focus = EFR_motorized }
 		x = 21
 		y = 2
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -1243,7 +1250,7 @@
 		prerequisite = { focus = EFR_army_effort }
 		x = 19
 		y = 1
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -1264,7 +1271,7 @@
 		prerequisite = { focus = EFR_equipment_effort_2 focus = EFR_tanks }
 		x = 19
 		y = 3
-		cost = 10
+		cost = 7.16
 
 		available_if_capitulated = yes
 
@@ -1299,7 +1306,7 @@
 		    }
 			add_offsite_building = {
 		    	type = industrial_complex
-				level = 5
+				level = 6
 		    }
 		}
 	}
@@ -1576,6 +1583,7 @@
 				add_idea = EFR_irredentism
 			}
 			remove_ideas = EFR_air
+			add_research_slot = 1
 		}
 	}
 }
