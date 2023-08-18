@@ -770,11 +770,11 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 60
-			naval_light_gun_hit_chance_factor = 0.025
-			naval_heavy_gun_hit_chance_factor = 0.025
 		}
 
 		multiply_stats = {
+			lg_attack = 0.05
+			hg_attack = 0.05
 			anti_air_attack = 0.05
 			torpedo_attack = 0.05
 		}
@@ -787,11 +787,11 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 90
-			naval_light_gun_hit_chance_factor = 0.05
-			naval_heavy_gun_hit_chance_factor = 0.05
 		}
 
 		multiply_stats = {
+			lg_attack = 0.1
+			hg_attack = 0.1
 			torpedo_attack = 0.1
 			anti_air_attack = 0.1
 			reliability = -0.025
@@ -809,11 +809,11 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 120
-			naval_light_gun_hit_chance_factor = 0.075
-			naval_heavy_gun_hit_chance_factor = 0.075
 		}
 
 		multiply_stats = {
+			lg_attack = 0.15
+			hg_attack = 0.15
 			torpedo_attack = 0.15
 			anti_air_attack = 0.15
 			reliability = -0.05
@@ -834,11 +834,11 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 180
-			naval_light_gun_hit_chance_factor = 0.10
-			naval_heavy_gun_hit_chance_factor = 0.10
 		}
 
 		multiply_stats = {
+			lg_attack = 0.2
+			hg_attack = 0.2
 			torpedo_attack = 0.2
 			anti_air_attack = 0.2
 			reliability = -0.075
@@ -869,12 +869,11 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 80
 			surface_detection = 6
-			naval_light_gun_hit_chance_factor = 0.025
-			naval_heavy_gun_hit_chance_factor = 0.025
+			naval_light_gun_hit_chance_factor = 0.015
+			naval_heavy_gun_hit_chance_factor = 0.015
 		}
 
 		multiply_stats = {
-			torpedo_attack = 0.025
 			anti_air_attack = 0.1
 		}
 
@@ -887,12 +886,11 @@ equipment_modules = {
 			build_cost_ic = 110
 			surface_detection = 12
 			sub_detection = 2
-			naval_light_gun_hit_chance_factor = 0.05
-			naval_heavy_gun_hit_chance_factor = 0.05
+			naval_light_gun_hit_chance_factor = 0.03
+			naval_heavy_gun_hit_chance_factor = 0.03
 		}
 
 		multiply_stats = {
-			torpedo_attack = 0.05
 			anti_air_attack = 0.15
 		}
 
@@ -905,16 +903,15 @@ equipment_modules = {
 		category = ship_radar
 		sfx = sfx_ui_sd_module_sonar
 
-		multiply_stats = {
-			torpedo_attack = 0.1
-			anti_air_attack = 0.2
-		}
 		add_stats = {
+			build_cost_ic = 140
 			surface_detection = 18
 			sub_detection = 6
-			build_cost_ic = 140
-			naval_light_gun_hit_chance_factor = 0.075
-			naval_heavy_gun_hit_chance_factor = 0.075
+			naval_light_gun_hit_chance_factor = 0.045
+			naval_heavy_gun_hit_chance_factor = 0.045
+		}
+		multiply_stats = {
+			anti_air_attack = 0.2
 		}
 		can_convert_from = {
 			module = ship_radar_2
@@ -929,16 +926,15 @@ equipment_modules = {
 		category = ship_radar
 		sfx = sfx_ui_sd_module_sonar
 
-		multiply_stats = {
-			torpedo_attack = 0.15
-			anti_air_attack = 0.25
-		}
 		add_stats = {
 			build_cost_ic = 170
 			surface_detection = 18
 			sub_detection = 14
-			naval_light_gun_hit_chance_factor = 0.10
-			naval_heavy_gun_hit_chance_factor = 0.10
+			naval_light_gun_hit_chance_factor = 0.06
+			naval_heavy_gun_hit_chance_factor = 0.06
+		}
+		multiply_stats = {
+			anti_air_attack = 0.25
 		}
 		can_convert_from = {
 			module = ship_radar_3
@@ -1815,7 +1811,7 @@ equipment_modules = {
 		gfx = ship_airplane_launcher_1
 
 		add_stats = {
-			naval_heavy_gun_hit_chance_factor = 0.025
+			naval_heavy_gun_hit_chance_factor = 0.01
 			surface_detection = 9
 			sub_detection = 3
 			build_cost_ic = 150
@@ -1829,7 +1825,7 @@ equipment_modules = {
 		gfx = ship_airplane_launcher_2
 
 		add_stats = {
-			naval_heavy_gun_hit_chance_factor = 0.05
+			naval_heavy_gun_hit_chance_factor = 0.02
 			surface_detection = 12
 			sub_detection = 6
 			build_cost_ic = 170
