@@ -1667,5 +1667,26 @@ ideas = {
 			traits = { refinery_concern }
 		}
 
+		SPA_special_forces_expansion = {
+
+			name = SPA_special_forces_expansion
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				special_forces_cap = 0.025
+				special_forces_training_time_factor = -0.05
+			}
+
+			picture = eng_special_air_service
+
+			removal_cost = -1
+		}
 	}
 }
