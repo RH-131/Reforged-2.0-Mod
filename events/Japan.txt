@@ -16,23 +16,9 @@ country_event = {
 	option = {
 		name = japan.1.a
 		add_war_support = 0.05
-		if = {
-			limit = { is_ai = yes }
-		    declare_war_on = {
-            target = CHI
-            type = annex_everything
-            }
-		} 
-		if = {
-			limit = { is_ai = no }
-		    #create_wargoal = {
-  				#type = annex_everything
-  				#target = CHI
-  		    #}
-  		    custom_effect_tooltip = JAP_declare_on_china_tt`
-  		    hidden_effect = {
-  		    	country_event = { days = 30 id = japan.27 }
-  		    }
+		custom_effect_tooltip = JAP_declare_on_china_tt
+		hidden_effect = {
+			country_event = { days = 30 id = japan.27 }
 		}
 		hidden_effect = {
 			news_event = { days = 5 id = news.1 }
@@ -2320,7 +2306,19 @@ country_event = {
 
 	is_triggered_only = yes
 
-	
+	option = {
+		trigger = {
+			JAP = { is_ai = yes }
+		}
+		name = japan.27.a
+		ai_chance = { factor = 5000 }
+		JAP_china_war_50_days = yes
+		transfer_state = 608
+		hidden_effect = {
+			country_event = { days = 50 id = japan.28 }
+			news_event = {id = news.490}
+		}
+	}
 	option = {
 		name = japan.27.a
 		JAP_china_war_200_days = yes
@@ -2461,7 +2459,21 @@ country_event = {
 
 	is_triggered_only = yes
 
-	
+	option = {
+		trigger = {
+			JAP = { is_ai = yes }
+		}
+		name = japan.27.a
+		ai_chance = { factor = 5000 }
+		JAP_china_war_50_days = yes
+		transfer_state = 614 #Hebei
+		transfer_state = 597 #Shandong
+		transfer_state = 743 #Qingdao
+		hidden_effect = {
+			country_event = { days = 50 id = japan.29 }
+			news_event = {id = news.490}
+		}
+	}
 	option = {
 		name = japan.27.a
 		JAP_china_war_200_days = yes
@@ -2616,7 +2628,22 @@ country_event = {
 
 	is_triggered_only = yes
 
-	
+	option = {
+		trigger = {
+			JAP = { is_ai = yes }
+		}
+		name = japan.27.a
+		ai_chance = { factor = 5000 }
+		JAP_china_war_50_days = yes
+		transfer_state = 613 #Shanghai
+		transfer_state = 596 #Zhejiang
+		transfer_state = 592 #Guangzhou
+		transfer_state = 591 #Hainan
+		hidden_effect = {
+			country_event = { days = 50 id = japan.30 }
+			news_event = {id = news.490}
+		}
+	}
 	option = {
 		name = japan.27.a
 		JAP_china_war_200_days = yes
@@ -2778,7 +2805,21 @@ country_event = {
 
 	is_triggered_only = yes
 
-	
+	option = {
+		trigger = {
+			JAP = { is_ai = yes }
+		}
+		ai_chance = { factor = 5000 }
+		name = japan.27.a
+		JAP_china_war_50_days = yes
+		transfer_state = 598 #Jiangsu
+		transfer_state = 593 #Guangdong
+		transfer_state = 594 #Nanning
+		hidden_effect = {
+			country_event = { days = 50 id = japan.31 }
+			news_event = {id = news.490}
+		}
+	}
 	option = {
 		name = japan.27.a
 		JAP_china_war_200_days = yes

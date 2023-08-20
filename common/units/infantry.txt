@@ -687,7 +687,6 @@ sub_units = {
 		weight = 0.5
 		supply_consumption = 0.15
 
-		defense = -0.15
 	
 		need = {
 			infantry_equipment = 120
@@ -702,21 +701,25 @@ sub_units = {
 			defence = 0.1
 		}
 		jungle = {
-			attack = 0.075
-			defence = 0.075
-			movement = 0.075
+			attack = 0.15
+			defence = 0.1
+			movement = 0.1
 		}
 		marsh = {
-			attack = 0.075
-			defence = 0.075
-			movement = 0.075
+			attack = 0.2
+			defence = 0.1
+			movement = 0.1
+		}
+		urban = {
+			attack = 0.05
+			movement = 0.05
 		}
 		amphibious = {
-			attack = 0.50
+			attack = 0.60
 			movement = 0.2
 		}
 		river = {
-			attack = 0.25
+			attack = 0.35
 			movement = 0.15
 		}
 	}
@@ -836,7 +839,7 @@ sub_units = {
 	
 		need = {
 			infantry_equipment = 120
-			special_equipment = 120
+			special_equipment = 100
 		}
 
         forest = {
@@ -855,7 +858,7 @@ sub_units = {
 			movement = 0.05
 		}
 		urban = {
-			attack = 0.025
+			attack = 0.05
 			defence = 0.05
 			movement = 0.1
 		}

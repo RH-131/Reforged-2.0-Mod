@@ -4,12 +4,6 @@ ENG_budget_decisions = {
 
 		icon = eng_install_government
 
-		available = {
-		}
-
-		visible = {
-		}
-
 		ai_will_do = {
 			factor = 0
 		}
@@ -23,9 +17,6 @@ ENG_budget_decisions = {
 
 		activation = {
 			date > 1936.01.01
-		}
-
-		available = {
 		}
 
 		timeout_effect = {
@@ -255,12 +246,6 @@ ENG_budget_decisions = {
 
 		icon = eng_trade_unions_support
 
-		available = {
-		}
-
-		visible = {
-		}
-
 		days_re_enable = 15 
 
 		cost = 0 
@@ -336,9 +321,6 @@ ENG_budget_decisions = {
    				value = 1
     			compare = greater_than_or_equals
 			}
-		}
-
-		visible = {
 		}
 
 		custom_cost_trigger = {
@@ -432,12 +414,6 @@ ENG_budget_decisions = {
 	ENG_increase_focus_funding = {
 
 		icon = hol_attract_foreign_investors
-
-		available = {
-		}
-
-		visible = {
-		}
 
 		custom_cost_trigger = {
 			check_variable = {
@@ -628,9 +604,6 @@ ENG_budget_decisions = {
 			factor = 0
 		}
 
-		modifier = {
-		}
-
 		remove_effect = {
 			add_offsite_building = { type = arms_factory level = -5 }
 		}
@@ -705,9 +678,6 @@ ENG_budget_decisions = {
 				var = british_money
 				value = 200
 			}
-		}
-		
-		complete_effect = {
 		}
 	}
 
@@ -1023,12 +993,6 @@ ENG_budget_decisions = {
 
 		icon = oppression
 
-		available = {
-		}
-
-		visible = {
-		}
-
 		fire_only_once = no
 
 		modifier = {
@@ -1066,9 +1030,6 @@ ENG_budget_decisions = {
 
 	ENG_expand_home_industry = {
 		icon = generic_construction
-
-		available = {
-		}
 
 		visible = {
 			NOT = {
@@ -1542,9 +1503,6 @@ ENG_budget_decisions = {
 			}
 		}
 
-		modifier = {
-		}
-
 		custom_cost_text = ENG_200_british_money 
 
 		custom_cost_trigger = {
@@ -1618,8 +1576,6 @@ ENG_budget_decisions = {
 				factor = 0 #need to up conscription laws
 			}
 		}
-		modifier = {
-		}
 		custom_cost_text = ENG_200_british_money 
 
 		custom_cost_trigger = {
@@ -1690,8 +1646,6 @@ ENG_budget_decisions = {
 				factor = 0 #need to up conscription laws
 			}
 		}
-		modifier = {
-		}
 		custom_cost_text = ENG_200_british_money 
 
 		custom_cost_trigger = {
@@ -1759,9 +1713,6 @@ ENG_budget_decisions = {
 				factor = 0 #need to up conscription laws
 			}
 		}
-		modifier = {
-			
-		}
 		custom_cost_text = ENG_200_british_money 
 
 		custom_cost_trigger = {
@@ -1828,9 +1779,6 @@ ENG_budget_decisions = {
 				has_manpower < 10000 
 				factor = 0 #need to up conscription laws
 			}
-		}
-		modifier = {
-			
 		}
 		custom_cost_text = ENG_200_british_money 
 
@@ -2378,7 +2326,6 @@ operations = {
 				news_event = { id = news.348 days = 1 } 
 				if  = { limit = { PER = { is_ai = yes } }
 					PER = {
-						load_oob = PER_ai
 						delete_unit_template_and_units = {
 							division_template = "Infantry Brigade"
 						}						

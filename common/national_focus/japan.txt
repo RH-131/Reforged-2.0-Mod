@@ -27,14 +27,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -91,14 +83,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -164,10 +148,6 @@ focus_tree = {
 					is_fully_controlled_by = JAP
 				}
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -237,14 +217,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -298,14 +270,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -379,10 +343,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -405,14 +365,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -439,10 +391,6 @@ focus_tree = {
 
 		available = {
 			MAN = { is_subject_of = ROOT }
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -493,14 +441,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -664,14 +604,6 @@ focus_tree = {
 			factor = 3
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -779,14 +711,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -925,14 +849,6 @@ focus_tree = {
 			factor = 3
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1044,14 +960,6 @@ focus_tree = {
 			factor = 10
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1116,14 +1024,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1150,10 +1050,6 @@ focus_tree = {
 
 		available = {
 			has_country_flag = JAP_iwc_steel_army
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1245,10 +1141,6 @@ focus_tree = {
 			has_country_flag = JAP_iwc_steel_navy
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1338,10 +1230,6 @@ focus_tree = {
 			has_country_flag = JAP_iwc_air_army
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1368,10 +1256,6 @@ focus_tree = {
 
 		available = {
 			has_country_flag = JAP_iwc_air_navy
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1402,10 +1286,6 @@ focus_tree = {
 			has_country_flag = JAP_iwc_conscription_army
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1432,10 +1312,6 @@ focus_tree = {
 
 		available = {
 			has_country_flag = JAP_iwc_conscription_navy
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1465,10 +1341,6 @@ focus_tree = {
 
 		available = {
 			has_country_flag = jap_first_truce
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1545,14 +1417,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-
-		}
-
-		available = {
-
-		}
-
-		bypass = {
 
 		}
 
@@ -1814,14 +1678,7 @@ focus_tree = {
 					country_event = china.1
 				}
 			}
-			if = {
-				limit = {
-					JAP = {
-						is_ai = no
-					}
-				}
-				add_ideas = JAP_intervene_in_china_2
-			}
+			add_ideas = JAP_intervene_in_china_2
 			unlock_decision_tooltip = JAP_china_step_up_war_effort
 			hidden_effect = {
 				play_song = "Battoutai"
@@ -1871,9 +1728,6 @@ focus_tree = {
 			factor = 10
 		}
 
-		available = {
-		}
-
 		completion_reward = {
 			remove_ideas = jap_kwantung_army
 			custom_effect_tooltip = lost_trait_jap_tt
@@ -1903,10 +1757,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50
-		}
-
-		available = {
-
 		}
 
 		bypass = {
@@ -1959,7 +1809,6 @@ focus_tree = {
 			hidden_effect = {
 				sound_effect = jap_banzai
 			}
-
 		}
 	}
 ### SRIKE THE WEST TREE ###
@@ -1973,16 +1822,8 @@ focus_tree = {
 
 		cost = 5
 
-		available = {
-
-		}
-
         ai_will_do = {
 			factor = 100
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2027,16 +1868,8 @@ focus_tree = {
 
 		cost = 5
 
-		available = {
-
-		}
-
         ai_will_do = {
 			factor = 100
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2102,11 +1935,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
-
-		available = {
-		}
-        bypass = {
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2149,9 +1977,6 @@ focus_tree = {
 		    	has_full_control_of_state = 741
 		    	has_full_control_of_state = 286
 		    }
-		}
-
-        bypass = {
 		}
 
 		cancel_if_invalid = yes
@@ -2252,49 +2077,36 @@ focus_tree = {
 			    SIA = {add_ideas = JAP_comintern_reduced_trade}
 			    SOV = {add_ideas = SOV_copro_reduced_trade}
 			    MON = {add_ideas = SOV_copro_reduced_trade}
-				declare_war_on = {
-					target = USA
-					type = annex_everything
+				USA = {
+					add_to_war = {
+						targeted_alliance = ENG
+						enemy = GER
+					}
 				}
-				declare_war_on = {
-					target = ENG
-					type = annex_everything
+				MEX = {
+					add_to_war = {
+						targeted_alliance = ENG
+						enemy = GER
+					}
 				}
-				declare_war_on = {
-					target = FRA
-					type = annex_everything
+				ENG = {
+					add_to_faction = USA
 				}
-				declare_war_on = {
-					target = RAJ
-					type = annex_everything
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = USA
 				}
-				declare_war_on = {
-					target = CAN
-					type = annex_everything
+				MAN = {
+					add_to_war = {
+						targeted_alliance = GER
+						enemy = USA
+					}
 				}
-				declare_war_on = {
-					target = AST
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = SAF
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = IRE
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = NZL
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = HOL
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = INS
-					type = annex_everything
+				SIA = {
+					add_to_war = {
+						targeted_alliance = GER
+						enemy = USA
+					}
 				}
 				play_song = "Shussei Heishi o Okuru Uta"
 		    }
@@ -2325,10 +2137,6 @@ focus_tree = {
 			controls_state = 640 #Mandalay
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2355,10 +2163,6 @@ focus_tree = {
 			has_full_control_of_state = 638 #Guam
 			has_full_control_of_state = 327 #Manila
 			has_full_control_of_state = 632 #Wake 
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2435,14 +2239,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2535,10 +2331,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = available_theorist
@@ -2652,10 +2444,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = toyosaku_shimada
@@ -2748,10 +2536,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-
-		}
-
 		completion_reward = {
 			every_army_leader = {
 				add_logistics = 1
@@ -2778,14 +2562,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2807,14 +2583,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2846,14 +2614,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2874,14 +2634,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2914,10 +2666,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2942,13 +2690,6 @@ focus_tree = {
 
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2970,14 +2711,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3005,10 +2738,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3044,13 +2773,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		available = {
-
-		}
-
-		bypass = {
-		}
 
 		completion_reward = {
 
@@ -3173,14 +2895,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3221,13 +2935,6 @@ focus_tree = {
 			factor = 30
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3262,14 +2969,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 30
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3322,14 +3021,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3356,9 +3047,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_warrior_spirit
 		cost = 5
-		available = {
-
-		}
 
 		completion_reward = {
 			army_experience = 100
@@ -3391,14 +3079,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3510,10 +3190,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3541,14 +3217,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3569,14 +3237,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3602,14 +3262,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3632,14 +3284,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3660,14 +3304,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3695,14 +3331,6 @@ focus_tree = {
 				factor = 2
 				has_completed_focus = JAP_purge_the_kodoha_faction
 			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3758,14 +3386,6 @@ focus_tree = {
 				factor = 2
 				has_completed_focus = JAP_purge_the_kodoha_faction
 			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3845,14 +3465,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3949,14 +3561,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -4060,14 +3664,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4113,9 +3709,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4158,14 +3751,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4199,14 +3784,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4229,9 +3806,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_naval_breakthroughs
 		cost = 5
-		available = {
-
-		}
 
 		completion_reward = {
 			navy_experience = 150
@@ -4259,14 +3833,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -4304,29 +3870,39 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				technology = submarine_operations
-				technology = undersea_blockade
-				technology = convoy_interdiction
-				technology = submarine_offensive
-				cost_reduction = 0.5
-				uses = 4
-				name = USA_destroy_their_supply_chains
+			effect_tooltip = {
+				add_doctrine_cost_reduction = {
+					technology = submarine_operations
+					technology = undersea_blockade
+					technology = convoy_interdiction
+					technology = submarine_offensive
+					cost_reduction = 0.5
+					uses = 4
+					name = USA_destroy_their_supply_chains
+				}
+				navy_experience = 25
 			}
-			navy_experience = 25
+			hidden_effect = {
+				add_doctrine_cost_reduction = {
+					technology = submarine_operations
+					technology = undersea_blockade
+					technology = convoy_interdiction
+					technology = submarine_offensive
+					technology = submarine_operations_bs
+					technology = undersea_blockade_bs
+					technology = convoy_interdiction_bs
+					technology = submarine_offensive_bs
+					cost_reduction = 0.5
+					uses = 4
+					name = USA_destroy_their_supply_chains
+				}
+				navy_experience = 25
+			}
 		}
 	}
 	focus = {
@@ -4341,14 +3917,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -4452,14 +4020,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4491,14 +4051,6 @@ focus_tree = {
 
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4526,14 +4078,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -4587,14 +4131,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4643,14 +4179,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -4704,14 +4232,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4762,14 +4282,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4790,14 +4302,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -4830,10 +4334,6 @@ focus_tree = {
 				factor = 2
 				has_completed_focus = JAP_purge_the_kodoha_faction
 			}
-		}
-
-		available = {
-
 		}
 
 		bypass = {
@@ -4901,14 +4401,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4934,14 +4426,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes

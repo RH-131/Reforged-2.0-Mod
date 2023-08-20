@@ -74,7 +74,7 @@ sub_units = {
 			attack = 0.1 
 			movement = 0.1 
 		}
-        	desert = {
+        desert = {
 			attack = 0.15
 			movement = 0.1
 		}		
@@ -106,11 +106,11 @@ sub_units = {
 		combat_width = 0
 
 		need = {
-			special_equipment = 15	
-			light_tank_chassis = 15
+			special_equipment = 20
+			light_tank_chassis = 20
 		}
 		manpower = 450
-		max_organisation = 5
+		max_organisation = 2
 		default_morale = 0.15
 		training_time = 200
 		max_strength = 1
@@ -119,8 +119,8 @@ sub_units = {
 		
 		# Support nerfs to combat abilities
 		defense = -0.2
-		breakthrough = -0.2
-		soft_attack = -0.2
+		breakthrough = -0.5
+		soft_attack = -0.25
 		hard_attack = -0.5
 		ap_attack = -0.15
 		armor_value = -0.9

@@ -46,10 +46,6 @@ focus_tree = {
 				has_completed_focus = SAF_force_parliament_debate
 			}
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -74,14 +70,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -103,14 +91,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -154,13 +134,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-			
-		}
-		
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -185,13 +158,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
 		}
 
 		cancel_if_invalid = yes
@@ -219,10 +185,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-			 
-		}
 		
 		bypass = {
 			has_completed_focus = SAF_free_elections
@@ -236,7 +198,6 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = SAF_history_of_segregation_3
 			add_ideas = SAF_rural_volunteers
-			add_stability = -0.05
 		}
 	}
 	
@@ -258,13 +219,6 @@ focus_tree = {
 				factor = 10
 				is_historical_focus_on = yes
 			}
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -290,13 +244,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
 		}
 
 		cancel_if_invalid = yes
@@ -327,12 +274,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-		}
-		
-		bypass = {
 		}
 
 		cancel_if_invalid = yes
@@ -371,9 +312,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
 		} 
 		
 		bypass = {
@@ -429,9 +367,6 @@ focus_tree = {
 		available = {
 			NOT = { has_completed_focus = SAF_open_engineering_schools }
 		}
-		
-		bypass = {
-		}
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -449,7 +384,8 @@ focus_tree = {
 				finance_graduate
 			}
 		}
-			add_stability = -0.05
+			add_stability = -0.1
+			add_ideas = low_economic_mobilisation
 			add_ideas = SAF_kickstarting_rearmament
 			remove_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }
 		}
@@ -471,9 +407,6 @@ focus_tree = {
 
 		available = {
 			 date > 1937.11.01
-		}
-		
-		bypass = {
 		}
 
 		cancel_if_invalid = yes
@@ -518,12 +451,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-		}
-		
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -551,9 +478,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
 		} 
 		
 
@@ -578,12 +502,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-		} 
-		
-		bypass = {
 		}
 
 		cancel_if_invalid = yes
@@ -618,12 +536,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-		} 
-		
-		bypass = {
 		}
 
 		cancel_if_invalid = yes
@@ -669,12 +581,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-		} 
-		
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -715,9 +621,6 @@ focus_tree = {
                 NOT = { has_idea = SAF_king_edward }				
 			}	  
 		}
-		
-		bypass = {
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -741,9 +644,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
 		}
 		
 		bypass = {
@@ -773,13 +673,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -805,14 +698,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -824,9 +709,7 @@ focus_tree = {
 				desc = ""
 				picture = "gfx/leaders/SAF/Portrait_Africa_Generic_new_1.tga"
 				expire = "1965.1.1"
-				ideology = socialism  
-				traits = {
-				}
+				ideology = socialism
 			} 	
 			set_cosmetic_tag = SAF_ANC
 			custom_effect_tooltip = SAF_african_commanders_tt 
@@ -870,14 +753,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -899,12 +774,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-		}
-		
-		bypass = {
 		}
 
 		cancel_if_invalid = yes
@@ -929,12 +798,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-		}
-		
-		bypass = {
 		}
 
 		cancel_if_invalid = yes
@@ -963,13 +826,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -991,14 +847,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1039,10 +887,6 @@ focus_tree = {
 		available = {
 			is_in_tech_sharing_group = commonwealth_research
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1072,14 +916,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1102,9 +938,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-		
-		bypass = {
 		}
 
 		available = {
@@ -1136,14 +969,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1167,14 +992,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1196,14 +1013,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1237,9 +1046,6 @@ focus_tree = {
 				FRA = { has_capitulated = yes } 
 			}	
 		}
-		
-		bypass = {
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1267,10 +1073,6 @@ focus_tree = {
 		available = {
 			NOT = { has_war_with = ENG }
 			ENG = { is_puppet = no }
-
-		}
-		
-		bypass = {
 
 		}
 
@@ -1301,10 +1103,6 @@ focus_tree = {
 
 		available = {
 			has_war = yes
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1339,10 +1137,6 @@ focus_tree = {
 
 		available = {
 			has_war = yes
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1391,9 +1185,6 @@ focus_tree = {
 			NOT = { has_completed_focus = SAF_hofmeyrs_reforms }
 		}
 		
-		bypass = {
-		}
-		
 		completion_reward = {
 			add_ideas = SAF_native_representation 
 		}
@@ -1411,14 +1202,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1442,14 +1225,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1481,10 +1256,6 @@ focus_tree = {
 		available = {
 			has_completed_focus = SAF_war_measures_act
 		}
-		
-		bypass = {
-			
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1511,14 +1282,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1551,13 +1314,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1581,13 +1337,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1609,13 +1358,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1648,9 +1390,6 @@ focus_tree = {
 		available = {
 		    NOT = { has_completed_focus = SAF_force_parliament_debate }
 		}
-		
-		bypass = {
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1678,9 +1417,6 @@ focus_tree = {
 		available = {
 			has_completed_focus = SAF_expand_the_rand_mines
 		}
-		
-		bypass = {
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1706,12 +1442,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		} 
-
-		available = {
-		}
-		
-		bypass = {
 		}
 
 		cancel_if_invalid = yes
@@ -1749,9 +1479,6 @@ focus_tree = {
 				has_government = neutrality
 			}	
 		}
-
-		available = {
-		}
 		
 		bypass = {
 			has_completed_focus = SAF_repeal_job_reservation_act
@@ -1778,14 +1505,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1815,14 +1534,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1864,14 +1575,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1911,14 +1614,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1945,14 +1640,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1985,14 +1672,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2028,13 +1707,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2080,13 +1752,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2113,14 +1778,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2152,14 +1809,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2204,14 +1853,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2242,14 +1883,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2277,14 +1910,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2323,14 +1948,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2363,14 +1980,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2400,14 +2009,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2433,14 +2034,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2502,14 +2095,6 @@ focus_tree = {
 			factor = 0.8
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2545,14 +2130,6 @@ focus_tree = {
 			factor = 0.8
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2584,14 +2161,6 @@ focus_tree = {
 				has_war_with = ENG
 				factor = 10
 			}
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2633,14 +2202,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2669,14 +2230,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2757,14 +2310,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2805,14 +2350,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2841,14 +2378,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2916,14 +2445,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2954,14 +2475,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3005,10 +2518,6 @@ focus_tree = {
 		available = {
 			controls_state = 275
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3050,14 +2559,6 @@ focus_tree = {
 			factor = 20
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3088,10 +2589,6 @@ focus_tree = {
 
 		available = {
 			controls_state = 275
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3185,14 +2682,6 @@ focus_tree = {
 			factor = 15
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3215,14 +2704,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 20
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3291,14 +2772,6 @@ focus_tree = {
 			factor = 45
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3331,10 +2804,6 @@ focus_tree = {
 				has_completed_focus = SAF_force_parliament_debate
 			}
 		}
-		
-		bypass = {
-
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3361,9 +2830,6 @@ focus_tree = {
 
 		available = {
 			has_tech = synth_oil_experiments 
-		}
-		
-		bypass = {
 		}
 
 		cancel_if_invalid = yes
@@ -3426,14 +2892,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3460,12 +2918,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
 		}
 
 		cancel_if_invalid = yes

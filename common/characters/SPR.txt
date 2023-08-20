@@ -253,9 +253,9 @@ characters={
 			traits={ logistics_wizard organisational_leader expert_delegator }
 			skill=3
 			attack_skill=3
-			defense_skill=2
+			defense_skill=3
 			planning_skill=3
-			logistics_skill=2
+			logistics_skill=3
 			legacy_id=1108
 		}
 	}
@@ -310,12 +310,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ infantry_officer trait_SPA_nationalist_sympathies }
+			traits={ panzer_leader trait_SPA_nationalist_sympathies }
 			skill=3
-			attack_skill=2
+			attack_skill=3
 			defense_skill=3
-			planning_skill=3
-			logistics_skill=2
+			planning_skill=4
+			logistics_skill=3
 			legacy_id=1113
 		}
 	}
@@ -333,9 +333,9 @@ characters={
 			traits={ trait_SPA_nationalist_sympathies organizer infantry_leader }
 			skill=3
 			attack_skill=3
-			defense_skill=2
+			defense_skill=4
 			planning_skill=3
-			logistics_skill=2
+			logistics_skill=3
 			legacy_id=1114
 		}
 	}
@@ -468,9 +468,6 @@ characters={
 				original_tag = SPR
 			}
 
-			visible = {
-			}
-
 			available = {
 			    has_completed_focus = SPA_axis
 			}
@@ -488,12 +485,6 @@ characters={
 				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
-
-			visible = {
-			}
-
-			available = {
-			}
 			
 			traits = { fascist_demagogue }
 		}
@@ -507,12 +498,6 @@ characters={
 			allowed = {
 				has_dlc = "La Resistance"
 				original_tag = SPR
-			}
-
-			visible = {
-			}
-
-			available = {
 			}
 			
 			traits = { falangist_figurehead }
@@ -528,12 +513,6 @@ characters={
 				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
-
-			visible = {
-			}
-
-			available = {
-			}
 			
 			traits = { regional_traditionalist_leader }
 		}
@@ -546,12 +525,6 @@ characters={
 
 			allowed = {
 				original_tag = SPR
-			}
-
-			visible = {
-			}
-
-			available = {
 			}
 			
 			traits = { silent_workhorse }
@@ -566,12 +539,6 @@ characters={
 			allowed = {
 				original_tag = SPR
 			}
-
-			visible = {
-			}
-
-			available = {
-			}
 			
 			traits = { corrupt_kleptocrat }
 		}
@@ -584,12 +551,6 @@ characters={
 
 			allowed = {
 				original_tag = SPR
-			}
-
-			visible = {
-			}
-
-			available = {
 			}
 			
 			traits = { snuggler }
@@ -1483,9 +1444,6 @@ characters={
 					tag = SPD
 					tag = SPC
 				}
-			}
-
-			available = {
 			}
 			
 			traits = { war_industrialist }

@@ -1631,52 +1631,51 @@ news_event = {
 		trigger = { TAG = ENG }
 	}
 }
-# Anglo-Polish Alliance
-news_event = {
-	id = news.55
-	title = news.55.t
-	desc = news.55.d
-	picture = GFX_news_event_021
+# # Anglo-Polish Alliance
+# news_event = {
+# 	id = news.55
+# 	title = news.55.t
+# 	desc = news.55.d
+# 	picture = GFX_news_event_021
 
-	major = yes
-	fire_only_once = yes
+# 	major = yes
 	
-	trigger = {
-		POL = {
-			is_in_faction_with = ENG
-			is_in_faction_with = FRA 
-			NOT = { is_in_faction_with = GER }
-		}
-	}
+# 	trigger = {
+# 		POL = {
+# 			is_in_faction_with = ENG
+# 			is_in_faction_with = FRA 
+# 			NOT = { is_in_faction_with = GER }
+# 		}
+# 	}
 	
-	option = {
-		name = news.55.a
-		trigger = {
-			NOT = {
-				TAG = GER
-				TAG = ENG
-				TAG = POL
-				TAG = FRA
-			}
-		}
-	}
-	option = {
-		name = news.55.b
-		trigger = { TAG = GER }
-	}
-	option = {
-		name = news.55.c
-		trigger = { TAG = ENG }
-	}
-	option = {
-		name = news.55.e
-		trigger = { TAG = POL }
-	}
-	option = {
-		name = news.55.f
-		trigger = { TAG = FRA }
-	}
-}
+# 	option = {
+# 		name = news.55.a
+# 		trigger = {
+# 			NOT = {
+# 				TAG = GER
+# 				TAG = ENG
+# 				TAG = POL
+# 				TAG = FRA
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = news.55.b
+# 		trigger = { TAG = GER }
+# 	}
+# 	option = {
+# 		name = news.55.c
+# 		trigger = { TAG = ENG }
+# 	}
+# 	option = {
+# 		name = news.55.e
+# 		trigger = { TAG = POL }
+# 	}
+# 	option = {
+# 		name = news.55.f
+# 		trigger = { TAG = FRA }
+# 	}
+# }
 
 # Munich Agreement
 news_event = {
@@ -2395,8 +2394,6 @@ news_event = {
 	
 	major = yes
 	
-	fire_only_once = yes
-	
 	is_triggered_only = yes
 	
 	option = {
@@ -2429,8 +2426,6 @@ news_event = {
 	
 	is_triggered_only = yes
 	
-	fire_only_once = yes
-	
 	option = {
 		name = news.101.a
 		trigger = {
@@ -2460,8 +2455,6 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	
-	fire_only_once = yes
 	
 	option = {
 		name = news.145.a
@@ -2493,8 +2486,6 @@ news_event = {
 	
 	is_triggered_only = yes
 	
-	fire_only_once = yes
-	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -2524,8 +2515,6 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	
-	fire_only_once = yes
 	
 	option = {
 		name = news.145.a
@@ -2557,8 +2546,6 @@ news_event = {
 	
 	is_triggered_only = yes
 	
-	fire_only_once = yes
-	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -2589,8 +2576,6 @@ news_event = {
 	
 	is_triggered_only = yes
 	
-	fire_only_once = yes
-	
 	option = {
 		name = news.106.a
 		trigger = {
@@ -2619,8 +2604,6 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	
-	fire_only_once = yes
 	
 	option = {
 		name = news.145.a
@@ -2651,7 +2634,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -2682,8 +2665,6 @@ news_event = {
 	
 	is_triggered_only = yes
 	
-	fire_only_once = yes
-	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -2713,7 +2694,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -2742,7 +2723,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -2772,7 +2753,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -2802,7 +2783,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -2832,7 +2813,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -2862,7 +2843,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -2892,7 +2873,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -2922,7 +2903,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -2952,7 +2933,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -2982,7 +2963,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3015,7 +2996,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3045,7 +3026,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3075,7 +3056,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3105,7 +3086,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3135,7 +3116,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3171,7 +3152,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3201,7 +3182,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3231,7 +3212,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3261,7 +3242,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.139.a
 		trigger = {
@@ -3291,7 +3272,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.139.a
 		trigger = {
@@ -3321,7 +3302,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3351,7 +3332,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3381,7 +3362,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3431,7 +3412,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3461,7 +3442,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3504,7 +3485,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3534,7 +3515,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3578,7 +3559,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3607,7 +3588,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.100.a
 		trigger = {
@@ -3637,7 +3618,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.139.a
 		trigger = {
@@ -3667,7 +3648,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.140.a
 		trigger = {
@@ -3697,7 +3678,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.140.a
 		trigger = {
@@ -3726,7 +3707,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3756,7 +3737,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -3786,7 +3767,7 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	option = {
 		name = news.145.a
 		trigger = {
@@ -4048,8 +4029,6 @@ news_event = {
 	picture = GFX_news_event_komet
 	
 	major = yes
-
-	fire_only_once = yes
 
 	trigger = {
 		tag = GER
@@ -8180,8 +8159,8 @@ news_event = {
 				is_in_faction_with = BEL
 				is_in_faction_with = LUX
 				is_in_faction_with = HOL
+				has_war_with = GER
 			}
-			has_war_with = GER
 		}
 	}
 
@@ -8196,6 +8175,7 @@ news_event = {
 					is_in_faction_with = HOL
 					is_in_faction_with = LUX
 					is_in_faction_with = BEL
+					has_war_with = GER
 				}
 			}
 		}
@@ -9199,66 +9179,62 @@ news_event = {
 
 }
 #NZL finishes Bob Semple tank
-news_event = {
-	id = news.270
-	title = news.270.t
-	desc = news.270.desc
-	picture = GFX_news_event_glorious_vehicle
+# news_event = {
+# 	id = news.270
+# 	title = news.270.t
+# 	desc = news.270.desc
+# 	picture = GFX_news_event_glorious_vehicle
 	
-	major = yes
+# 	major = yes
+	
+# 	trigger = {
+# 	NZL = { has_tech = light_tank_1934 }
+# 	}
+	
+# 	option = {
+# 		name = news.270.a
+# 		trigger = {
+# 			TAG = NZL
+# 		}
+# 	}
+# 	option = {
+# 		name = news.270.b
+# 		trigger = { 
+# 			NOT = {
+# 				TAG = NZL	
+# 			}
+# 		}
+# 	}
 
-	fire_only_once = yes
-	
-	trigger = {
-	NZL = { has_tech = light_tank_1934 }
-	}
-	
-	option = {
-		name = news.270.a
-		trigger = {
-			TAG = NZL
-		}
-	}
-	option = {
-		name = news.270.b
-		trigger = { 
-			NOT = {
-				TAG = NZL	
-			}
-		}
-	}
-
-}
+# }
 #NZL finishes Big Bob tank
-news_event = {
-	id = news.271
-	title = news.271.t
-	desc = news.271.desc
-	picture = GFX_news_event_glorious_vehicle
+# news_event = {
+# 	id = news.271
+# 	title = news.271.t
+# 	desc = news.271.desc
+# 	picture = GFX_news_event_glorious_vehicle
 	
-	major = yes
-
-	fire_only_once = yes
+# 	major = yes
 	
-	trigger = {
-	NZL = { has_tech = eng_heavy_tank_1937 }
-	}
+# 	trigger = {
+# 	NZL = { has_tech = eng_heavy_tank_1937 }
+# 	}
 	
-	option = {
-		name = news.271.a
-		trigger = {
-			TAG = NZL
-		}
-	}
-	option = {
-		name = news.271.b
-		trigger = { 
-			NOT = {
-				TAG = NZL	
-			}
-		}
-	}
-}
+# 	option = {
+# 		name = news.271.a
+# 		trigger = {
+# 			TAG = NZL
+# 		}
+# 	}
+# 	option = {
+# 		name = news.271.b
+# 		trigger = { 
+# 			NOT = {
+# 				TAG = NZL	
+# 			}
+# 		}
+# 	}
+# }
 #RAJ gets famine
 news_event = {
 	id = news.272
@@ -9267,8 +9243,6 @@ news_event = {
 	picture = GFX_news_event_indian_famine
 	
 	major = yes
-
-	fire_only_once = yes
 	
 	is_triggered_only = yes
 	
@@ -9300,8 +9274,6 @@ news_event = {
 	picture = GFX_news_event_indian_famine
 	
 	major = yes
-
-	fire_only_once = yes
 	
 	is_triggered_only = yes
 	
@@ -12478,8 +12450,6 @@ news_event = { #
 	
 	major = yes
 	
-	fire_only_once = yes
-	
 	is_triggered_only = yes
    
 	option = {
@@ -12493,8 +12463,6 @@ news_event = { #
 	picture = GFX_news_event_050
 	
 	major = yes
-	
-	fire_only_once = yes
 	
 	is_triggered_only = yes
    
@@ -12511,8 +12479,6 @@ news_event = { #
 	
 	major = yes
 	
-	fire_only_once = yes
-	
 	is_triggered_only = yes
    
 	option = {
@@ -12527,8 +12493,6 @@ news_event = { #
 	picture = GFX_news_event_usa_japan_at_war
 	
 	major = yes
-	
-	fire_only_once = yes
 	
 	is_triggered_only = yes
    
@@ -12545,8 +12509,6 @@ news_event = { #
 	
 	major = yes
 	
-	fire_only_once = yes
-	
 	is_triggered_only = yes
    
 	option = {
@@ -12560,8 +12522,6 @@ news_event = { #
 	picture = GFX_news_event_usa_japan_at_war
 	
 	major = yes
-	
-	fire_only_once = yes
 	
 	is_triggered_only = yes
    
@@ -12577,12 +12537,75 @@ news_event = { #
 	
 	major = yes
 	
-	fire_only_once = yes
-	
 	is_triggered_only = yes
    
 	option = {
 		name = news.469.a	
+	}
+}
+news_event = { #debug
+	id = news.997
+	title = news.999.t
+	desc = news.999.d
+	picture = GFX_news_event_usa_japan_at_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+   
+	option = {
+		name = news.999.a	
+	}
+}
+
+news_event = { #debug
+	id = news.998
+	title = news.999.t
+	desc = news.999.d
+	picture = GFX_news_event_usa_japan_at_war
+	
+	major = yes
+
+	is_triggered_only = yes
+   
+	option = {
+		trigger = {
+			always = no
+		}
+		name = news.999.a	
+	}
+   
+	option = {
+		name = news.999.a	
+	}
+}
+
+news_event = { #debug
+	id = news.999
+	title = news.999.t
+	desc = news.999.d
+	picture = GFX_news_event_usa_japan_at_war
+	
+	major = yes
+
+	is_triggered_only = yes
+   
+	option = {
+		trigger = {
+			always = no
+		}
+		name = news.999.a	
+	}
+   
+	option = {
+		trigger = {
+			always = no
+		}
+		name = news.999.a	
+	}
+   
+	option = {
+		name = news.999.a	
 	}
 }
 
@@ -12760,8 +12783,10 @@ news_event = { #Progress Cult
 	option = {
 		name = news.481.b
 		trigger = {
-			TAG = SOV
-			is_in_faction_with = SOV
+			OR = {
+				TAG = SOV
+				is_in_faction_with = SOV
+			}
 		}
 	}
 }

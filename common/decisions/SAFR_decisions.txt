@@ -12,9 +12,6 @@ SAF_a_king_for_our_people = {
 				tooltip = SAF_a_king_for_our_people_trigger_tt					
 			}	
 		}
-				
-		modifier = {
-		}
 		
 		cost = 100
 		fire_only_once = yes
@@ -54,9 +51,6 @@ SAFR_purchase_planes = {
 		days_remove = 120
 		ai_will_do = {
 			factor = 1
-		}				
-		
-		visible = {	
 		}
 		
 		complete_effect = {
@@ -102,9 +96,6 @@ SAFR_purchase_planes = {
 		days_remove = 120
 		ai_will_do = {
 			factor = 1
-		}				
-		
-		visible = {
 		}
 		
 		complete_effect = {
@@ -150,9 +141,6 @@ SAFR_purchase_planes = {
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 1
-		}				
-		
-		visible = {
 		}
 		
 		complete_effect = {
@@ -988,10 +976,6 @@ SAFR_building_surface_fleet = {
 			factor = 1
 		}
 		
-		complete_effect = {
-            
-        }
-		
 		visible = {
 		}
 		
@@ -1032,10 +1016,6 @@ SAFR_building_surface_fleet = {
 			tag = SAF
 			has_decision = SAF_study_us_ship_designs
 		}
-				
-		modifier = {
-			
-		}
 		
 		cost = 25
 		
@@ -1060,14 +1040,7 @@ SAFR_building_surface_fleet = {
 					amount = 1
 				}
 			}
-        }
-		
-		visible = {
-		}
-		
-		remove_effect = {
-			
-		}		
+        }		
 	}
 	
 	SAF_procure_uk_shipbuilding_expertise = {
@@ -1077,10 +1050,6 @@ SAFR_building_surface_fleet = {
 		available = {
 			tag = SAF
 			has_decision = SAF_study_uk_ship_designs
-		}
-				
-		modifier = {
-			
 		}
 		
 		cost = 25
@@ -1184,14 +1153,7 @@ SAFR_building_surface_fleet = {
 					amount = 1
 				}
 			}
-        }
-		
-		visible = {
-		}
-		
-		remove_effect = {
-			
-		}		
+        }		
 	}
 	
 	SAF_study_us_ship_designs = {
@@ -1200,10 +1162,6 @@ SAFR_building_surface_fleet = {
 		
 		available = {
 			tag = SAF
-		}
-				
-		modifier = {
-			
 		}
 		
 		fire_only_once = yes
@@ -1256,14 +1214,7 @@ SAFR_building_surface_fleet = {
 				category = cl_tech
 			}
 			set_country_flag = SAFR_study_us_ship_designs_dec
-        }
-		
-		visible = {
-		}
-		
-		remove_effect = {
-			
-		}		
+        }		
 	}
 	
 	SAF_study_uk_ship_designs = {
@@ -1272,10 +1223,6 @@ SAFR_building_surface_fleet = {
 		
 		available = {
 			tag = SAF
-		}
-				
-		modifier = {
-			
 		}
 		
 		fire_only_once = yes
@@ -1344,7 +1291,6 @@ SAFR_building_surface_fleet = {
 		}
 		
 		remove_effect = {
-			
 		}		
 	}
 }	

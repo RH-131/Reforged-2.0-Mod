@@ -36,13 +36,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -87,10 +80,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-
-		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -127,14 +116,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
-
-		available = {
-		
-		}
-
-		bypass = {
-
-		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -167,14 +148,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
-		}
-
-		available = {
-		
-		}
-
-		bypass = {
-
 		}
 		
 		cancel_if_invalid = yes
@@ -218,10 +191,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -263,10 +232,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-
-		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -295,14 +260,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
-		}
-
-		available = {
-		
-		}
-
-		bypass = {
-
 		}
 		
 		cancel_if_invalid = yes
@@ -336,14 +293,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
-		}
-
-		available = {
-		
-		}
-
-		bypass = {
-
 		}
 		
 		cancel_if_invalid = yes
@@ -385,10 +334,6 @@ focus_tree = {
 					has_idea = RAJ_corruption_1
 				}
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -438,10 +383,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-
-		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -471,14 +412,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
-		}
-
-		available = {
-		
-		}
-
-		bypass = {
-
 		}
 		
 		cancel_if_invalid = yes
@@ -512,14 +445,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
-		}
-
-		available = {
-		
-		}
-
-		bypass = {
-
 		}
 		
 		cancel_if_invalid = yes
@@ -570,10 +495,6 @@ focus_tree = {
 		available = {
 			date > 1938.01.01
 		}
-
-		bypass = {
-
-		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -611,14 +532,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
-
-		available = {
-		
-		}
-
-		bypass = {
-
-		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -636,7 +549,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = RAJ_duragraha
+		id = RAJ_duragraha_focus
 		icon = GFX_goal_government_centralised_icon 
 		relative_position_id = RAJ_must_decide
 		prerequisite = { focus = RAJ_side_with_princes focus = RAJ_organize_the_indian_congress }
@@ -647,14 +560,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
-		}
-
-		available = {
-		
-		}
-
-		bypass = {
-
 		}
 		
 		cancel_if_invalid = yes
@@ -698,10 +603,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -743,10 +644,6 @@ focus_tree = {
 			IF = {
 				has_completed_focus = RAJ_attract_the_british
 			}
-		}
-
-		bypass = {
-
 		}
 		
 		cancel_if_invalid = yes
@@ -800,14 +697,6 @@ focus_tree = {
 			factor = 0
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -832,7 +721,7 @@ focus_tree = {
 		icon = GFX_focus_rom_abdicate
 		relative_position_id = RAJ_must_decide
 		prerequisite = { focus = RAJ_democracy_3 }
-		prerequisite = { focus = RAJ_duragraha }
+		prerequisite = { focus = RAJ_duragraha_focus }
 		x = 0
 		y = 5
 
@@ -851,10 +740,6 @@ focus_tree = {
 					has_idea = RAJ_corruption_countdown
 				}
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -917,10 +802,6 @@ focus_tree = {
 		available = {
 			has_war = yes
 		}
-
-		bypass = {
-
-		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -956,11 +837,7 @@ focus_tree = {
 		}
 
 		available = {
-			date > 1942.01.01
-		}
-
-		bypass = {
-
+			date > 1942.06.01
 		}
 
 		cancel_if_invalid = yes
@@ -1013,7 +890,7 @@ focus_tree = {
 		icon = GFX_goal_generic_annexation
 		relative_position_id = RAJ_must_decide
 		prerequisite = { focus = RAJ_princes_3 }
-		prerequisite = { focus = RAJ_duragraha }
+		prerequisite = { focus = RAJ_duragraha_focus }
 		
 		x = 3
 		y = 5
@@ -1030,10 +907,6 @@ focus_tree = {
 					has_idea = RAJ_corruption_countdown
 				}
 			}
-		}
-
-		bypass = {
-
 		}
 		
 		cancel_if_invalid = yes
@@ -1079,14 +952,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
-		}
-
-		available = {
-		
-		}
-
-		bypass = {
-
 		}
 		
 		cancel_if_invalid = yes
@@ -1167,14 +1032,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
-
-		available = {
-		
-		}
-
-		bypass = {
-
-		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1248,17 +1105,9 @@ focus_tree = {
 			
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-		
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -1282,17 +1131,9 @@ focus_tree = {
 			factor = 100
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -1355,10 +1196,6 @@ focus_tree = {
 		available = {
 			has_war = yes
 		}
-
-		bypass = {
-		
-		}
 		
 		cancel_if_invalid = yes
         continue_if_invalid = no
@@ -1391,9 +1228,6 @@ focus_tree = {
 		available = {
 			has_war = yes
 		}
-
-		bypass = {
-		}
 		
 		cancel_if_invalid = yes
         continue_if_invalid = no
@@ -1425,10 +1259,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1507,10 +1337,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1574,10 +1400,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1638,10 +1460,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1697,10 +1515,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1752,10 +1566,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1802,10 +1612,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1871,10 +1677,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1930,13 +1732,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1990,13 +1785,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2064,13 +1852,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2121,13 +1902,6 @@ focus_tree = {
 			factor = 15
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2164,10 +1938,6 @@ focus_tree = {
 
 		available = {
 			has_war = yes
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2249,10 +2019,6 @@ focus_tree = {
 
 		available = {
 			has_war = yes
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2356,13 +2122,6 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2445,13 +2204,6 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2516,13 +2268,6 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 25
-		}
-		
-		available = {
-		}
-		
-		bypass = {
-		
 		}
 		
 		cancel_if_invalid = yes
@@ -2591,13 +2336,6 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 25
-		}
-		
-		available = {
-		}
-		
-		bypass = {
-		
 		}
 		
 		cancel_if_invalid = yes
@@ -2682,14 +2420,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-		
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2746,14 +2476,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-		
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2780,14 +2502,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2830,10 +2544,6 @@ focus_tree = {
 			IF = {
 				has_completed_focus = RAJ_organize_the_indian_congress	
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2934,13 +2644,6 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2978,13 +2681,6 @@ focus_tree = {
 			factor = 20
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3011,14 +2707,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3072,14 +2760,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3136,14 +2816,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3195,14 +2867,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3257,9 +2921,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 30
-		}
-
-		available = {
 		}
 
 		bypass = {
@@ -3325,14 +2986,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3387,14 +3040,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3445,10 +3090,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3479,13 +3120,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3554,13 +3188,6 @@ focus_tree = {
 			factor = 20
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3597,10 +3224,6 @@ focus_tree = {
 			IF = {
 				has_completed_focus = RAJ_side_with_princes
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3642,14 +3265,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 20
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3694,14 +3309,6 @@ focus_tree = {
 			factor = 20
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3742,14 +3349,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 20
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3794,14 +3393,6 @@ focus_tree = {
 			factor = 20
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3842,14 +3433,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 20
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3894,14 +3477,6 @@ focus_tree = {
 			factor = 20
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3944,14 +3519,6 @@ focus_tree = {
 			factor = 20
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3992,14 +3559,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 20
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -4052,10 +3611,6 @@ focus_tree = {
 				has_completed_focus = RAJ_princes_6
 			}
 			has_war = yes
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -4155,10 +3710,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -4235,9 +3786,6 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-		}
-
 		bypass = {
 			has_capitulated = yes
 		}
@@ -4245,10 +3793,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-			custom_effect_tooltip = RAJ_create_unit_gurkas_tt		
-		}
 		
 		completion_reward = {
 			custom_effect_tooltip = RAJ_create_unit_gurkas_tt
@@ -4313,13 +3857,6 @@ focus_tree = {
 			factor = 45
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -4374,13 +3911,6 @@ focus_tree = {
 			factor = 40
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -4418,9 +3948,6 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-		}
-
 		bypass = {
 			has_capitulated = yes
 		}
@@ -4428,10 +3955,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-			custom_effect_tooltip = RAJ_create_unit_gurkas_tt
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = RAJ_create_unit_gurkas_tt
@@ -4460,12 +3983,12 @@ focus_tree = {
 						paratrooper = { x = 3 y = 1 }
 						paratrooper = { x = 3 y = 2 }
 					}
-	support = {
-		DIV_HQ = { x = 0 y = 0 }
-       	recon = { x = 0 y = 1 }
-       	engineer = { x = 0 y = 2 }
-		military_police = { x = 1 y = 0 }
-	}					
+					support = {
+						DIV_HQ = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						military_police = { x = 1 y = 0 }
+					}					
 				}
 	
 				random_owned_controlled_state = {
@@ -4491,13 +4014,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -4544,11 +4060,7 @@ focus_tree = {
 
 
 
-		cancel_if_invalid = yes 
-
-		bypass = {
-
-		}
+		cancel_if_invalid = yes
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4589,11 +4101,7 @@ focus_tree = {
 
 
 
-		cancel_if_invalid = yes 
-
-		bypass = {
-
-		}
+		cancel_if_invalid = yes
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4638,11 +4146,7 @@ focus_tree = {
 
 
 
-		cancel_if_invalid = yes 
-
-		bypass = {
-
-		}
+		cancel_if_invalid = yes
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4683,21 +4187,17 @@ focus_tree = {
 
 
 
-		cancel_if_invalid = yes 
-
-		bypass = {
-
-		}
+		cancel_if_invalid = yes
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 
 		completion_reward = {
-			set_technology = {
-                 eng_medium_tank_1938 = 1 
-			}
 			hidden_effect = {
+				set_technology = {
+					eng_medium_tank_1938 = 1 
+				}
 				load_oob = RAJ_tank
 			}
 			custom_effect_tooltip = RAJ_create_unit_tank_tt
@@ -4720,13 +4220,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -4766,9 +4259,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
 		}
 
 		bypass = {
@@ -4843,13 +4333,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -4893,13 +4376,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -4939,13 +4415,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -4988,14 +4457,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-		     
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -5070,10 +4531,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -5107,13 +4564,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 		
 		cancel_if_invalid = yes
@@ -5160,12 +4610,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-		}
-
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -5203,13 +4647,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -5245,13 +4682,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -5309,13 +4739,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -5353,13 +4776,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -5386,13 +4802,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -5429,13 +4838,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -5487,10 +4889,6 @@ focus_tree = {
 			has_war = yes 
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -5525,10 +4923,6 @@ focus_tree = {
 					has_idea = war_economy
 				}
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -5577,10 +4971,6 @@ focus_tree = {
 			has_war = yes 
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -5611,10 +5001,6 @@ focus_tree = {
 
 		available = {
 			has_war = yes 
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -5705,10 +5091,6 @@ focus_tree = {
 
 		available = {
 			has_war = yes 
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -5808,10 +5190,6 @@ focus_tree = {
 			has_war_with = JAP 
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -5847,13 +5225,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -5903,13 +5274,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -5964,13 +5328,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -6035,10 +5392,6 @@ focus_tree = {
 			has_war = yes 
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -6080,10 +5433,6 @@ focus_tree = {
 			} 
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -6119,10 +5468,6 @@ focus_tree = {
 
 		available = {
 			has_war_with = JAP 
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -6172,9 +5517,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -6207,9 +5549,6 @@ focus_tree = {
 				RAJ = { surrender_progress > 0.1 }
 				date > 1942.01.01
 			}
-		}
-
-		bypass = {
 		}
 
 		cancel_if_invalid = yes
@@ -6250,9 +5589,6 @@ focus_tree = {
 				RAJ = { surrender_progress > 0.25 }
 				date > 1942.06.01
 			}
-		}
-
-		bypass = {
 		}
 
 		cancel_if_invalid = yes
@@ -6301,9 +5637,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -6340,9 +5673,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
 		}
 
 		bypass = {
@@ -6390,13 +5720,6 @@ focus_tree = {
 			factor = 10
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -6439,13 +5762,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -6472,13 +5788,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -6509,13 +5818,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -6541,13 +5843,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -6582,13 +5877,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -6747,13 +6035,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -6780,13 +6061,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -6830,13 +6104,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -6863,13 +6130,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -6909,13 +6169,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -6970,10 +6223,6 @@ focus_tree = {
 
 		available = {
 			has_completed_focus = RAJ_import_british_design
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -7034,10 +6283,6 @@ focus_tree = {
 
 		available = {
 			has_completed_focus = RAJ_import_british_design
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes

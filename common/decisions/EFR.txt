@@ -23,15 +23,13 @@ operations = {
 				add_to_faction = EFR
 			}
 			EFR = {
-			declare_war_on = {
-					target = ENG
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = FRA
-					type = annex_everything
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = ENG
 				}
 		    } 
 		}
 	}
+
+}
 	

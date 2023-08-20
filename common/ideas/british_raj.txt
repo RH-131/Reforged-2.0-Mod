@@ -148,7 +148,7 @@ ideas = {
 
 			modifier = {
 				stability_weekly = 0.001
-				political_power_factor = 0.075
+				political_power_factor = 0.05
 			}
 		}
 
@@ -174,8 +174,8 @@ ideas = {
 			modifier = {
 				stability_weekly = 0.001
 				political_power_factor = 0.10
-				army_core_attack_factor = 0.025
-				army_core_defence_factor = 0.025
+				army_core_attack_factor = 0.01
+				army_core_defence_factor = 0.01
 			}
 		}
 		
@@ -201,8 +201,8 @@ ideas = {
 			modifier = {
 				stability_weekly = 0.001
 				political_power_factor = 0.10
-				army_core_attack_factor = 0.06
-				army_core_defence_factor = 0.06
+				army_core_attack_factor = 0.025
+				army_core_defence_factor = 0.025
 			}
 		}
 
@@ -331,8 +331,7 @@ ideas = {
 
 			targeted_modifier = {
 				tag = JAP
-				attack_bonus_against = 0.03
-				defense_bonus_against = 0.03
+				attack_bonus_against = 0.025
 			}
 		}
 
@@ -358,7 +357,7 @@ ideas = {
 			targeted_modifier = {
 				tag = JAP
 				attack_bonus_against = 0.05
-				defense_bonus_against = 0.05
+				defense_bonus_against = 0.02
 			}
 		}
 
@@ -387,8 +386,8 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = JAP
-				attack_bonus_against = 0.08
-				defense_bonus_against = 0.08
+				attack_bonus_against = 0.075
+				defense_bonus_against = 0.04
 			}
 		}
 
@@ -417,8 +416,8 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = JAP
-				attack_bonus_against = 0.12
-				defense_bonus_against = 0.12
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.05
 			}
 		}
 
@@ -441,10 +440,6 @@ ideas = {
 			}
 
 			removal_cost = -1
-
-			modifier = {
-
-			}
 		}
 
 		RAJ_famine = {
@@ -713,9 +708,6 @@ ideas = {
 			}
 
 			removal_cost = -1
-
-			modifier = {
-			}
 			equipment_bonus = {
 				railway_gun_equipment = {
 					build_cost_ic = 0.35 instant = yes
@@ -1079,9 +1071,7 @@ ideas = {
 			}
 
 			modifier = {
-				land_doctrine_cost_factor = 0.10
-				army_core_attack_factor = 0.025
-				army_core_defence_factor = 0.025
+				land_doctrine_cost_factor = 0.075
 			}
 
 			removal_cost = -1
@@ -1103,9 +1093,7 @@ ideas = {
 			}
 
 			modifier = {
-				army_core_attack_factor = 0.07
-				army_core_defence_factor = 0.07
-				land_doctrine_cost_factor = -0.10
+				land_doctrine_cost_factor = -0.15
 			}
 
 			removal_cost = -1
@@ -1127,8 +1115,7 @@ ideas = {
 			}
 
 			modifier = {
-				army_core_attack_factor = 0.05
-				army_core_defence_factor = 0.05
+				land_doctrine_cost_factor = -0.05
 			}
 
 			removal_cost = -1
@@ -1548,10 +1535,6 @@ ideas = {
 
 			removal_cost = -1
 
-			targeted_modifier = {
-
-			}
-
 			modifier = {
 				conscription_factor = -0.04
 				consumer_goods_factor = 0.04
@@ -1578,10 +1561,6 @@ ideas = {
 
 			removal_cost = -1
 
-			targeted_modifier = {
-
-			}
-
 			modifier = {
 				consumer_goods_factor = 0.01
 				autonomy_gain = 0.4
@@ -1605,10 +1584,6 @@ ideas = {
 			}
 
 			removal_cost = -1
-
-			targeted_modifier = {
-
-			}
 
 			modifier = {
 				consumer_goods_factor = 0.0
@@ -1981,13 +1956,7 @@ ideas = {
 				original_tag = RAJ
 			}
 
-			allowed_civil_war = {
-			}
-
 			removal_cost = -1
-
-			modifier = {
-			}
 
 			equipment_bonus = {
 				anti_air_equipment = {
@@ -2004,13 +1973,7 @@ ideas = {
 				original_tag = RAJ
 			}
 
-			allowed_civil_war = {
-			}
-
 			removal_cost = -1
-
-			modifier = {
-			}
 
 			equipment_bonus = {
 				anti_air_equipment = {
@@ -2036,9 +1999,6 @@ ideas = {
 				original_tag = RAJ
 			}
 
-			allowed_civil_war = {
-			}
-
 			removal_cost = -1
 
 			equipment_bonus = {
@@ -2057,9 +2017,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_production_bonus
-
-			modifier = {
-			}
 			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.1 instant = yes
@@ -2307,9 +2264,6 @@ ideas = {
 
 			cost = 100
 
-			research_bonus = {
-			}
-
 			modifier = {
 				production_speed_buildings_factor = 0.05
 				research_speed_factor = -0.01
@@ -2324,9 +2278,6 @@ ideas = {
 
 			available = {
 				has_completed_focus = RAJ_core_industry_6
-			}
-
-			visible = {
 			}
 
 			picture = generic_political_advisor_europe_2
@@ -2444,7 +2395,6 @@ ideas = {
 				air_equipment = -0.05
 			}
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
-			traits = {  }
 
 			equipment_bonus = {
 				small_plane_airframe = {
@@ -2480,9 +2430,6 @@ ideas = {
 			traits = { CAS_manufacturer }
 
 			cost = 50
-
-			modifier = {
-			}
 		}
 
 		RAJ_mahindra_aerospace = {
@@ -2499,7 +2446,6 @@ ideas = {
 
 			research_bonus = { air_equipment = -0.05 }
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
-			traits = {  }
 
 			cost = 50
 
@@ -2529,9 +2475,6 @@ ideas = {
 			picture = generic_air_manufacturer_1
 
 			research_bonus = { air_equipment = 0.15 } traits = { aircraft_research_trait }
-
-			modifier = {
-			}
 		}
 
 	}
@@ -2553,9 +2496,6 @@ ideas = {
 			}
 			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			traits = { infantry_equipment_manufacturer }
-
-			modifier = {
-			}
 		}
 
 		jabalpur_gun_carriage_factory = {
@@ -2575,8 +2515,6 @@ ideas = {
 			}
 			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			picture = generic_infantry_equipment_manufacturer_2
-
-			traits = {  }
 
 			equipment_bonus = {
 				infantry_equipment = {
@@ -2603,8 +2541,6 @@ ideas = {
 			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			picture = generic_infantry_equipment_manufacturer_2
 
-			traits = {  }
-
 			equipment_bonus = {
 				pack_artillery_equipment = {
 					build_cost_ic = -0.10
@@ -2629,9 +2565,6 @@ ideas = {
 			}
 			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			traits = { artillery_manufacturer }
-
-			modifier = {
-			}
 		}
 	}
 	materiel_research = {
@@ -2650,8 +2583,6 @@ ideas = {
 				infantry_weapons = 0.15
 			}
 			 traits = { materiel_research_trait }
-			modifier = {
-			}
 		}
 
 		ordnance_factories_board_research = {
@@ -2667,8 +2598,6 @@ ideas = {
 				artillery = 0.15
 			}
             traits = { artillery_research_trait }
-			modifier = {
-			}
 		}
 	}
 
@@ -2694,7 +2623,6 @@ ideas = {
 				armor = -0.05
 			}
 			modifier = { tank_manufacturer_cost_factor = -0.33 }
-			traits = {  }
 
 			equipment_bonus = {
 			    light_tank_chassis = {

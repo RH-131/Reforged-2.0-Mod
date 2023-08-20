@@ -33,8 +33,6 @@ USA_popular_support = {
 
 	USA_small_lobby_effort = {
 		icon = generic_political_discourse
-		available = {
-		}
 		cost = 0
 		ai_will_do = {
 			factor = 10
@@ -48,12 +46,6 @@ USA_popular_support = {
 
 		days_remove = 180
 		days_re_enable = 90
-	
-		complete_effect = {
-		}
-
-		remove_effect = {
-		}
 		modifier = {
 			stability_weekly = 0.005
 			consumer_goods_factor = 0.02
@@ -108,6 +100,7 @@ USA_popular_support = {
 		}
 		cost = 25
 		ai_will_do = {
+			factor = 1
 		}
 		days_remove = 45
 
@@ -200,10 +193,7 @@ USA_popular_support = {
 			consumer_goods_factor = 0.05
 		}
 
-		cost = 25 
-
-		complete_effect = {
-		}
+		cost = 25
 
 		remove_effect = {
 			add_political_power = 150
@@ -311,13 +301,6 @@ USA_popular_support = {
 		days_mission_timeout = 950
 
 		fire_only_once = yes
-
-		activation = {
-		}
-
-		visible = {
-			
-		}
 
 		cancel_if_not_visible = yes
 
@@ -444,12 +427,6 @@ USA_popular_support = {
 
 		fire_only_once = yes
 
-		activation = {
-		}
-
-		visible = {
-		}
-
 		cancel_if_not_visible = yes
 
 		is_good = yes
@@ -574,12 +551,6 @@ USA_popular_support = {
 		days_mission_timeout = 1750
 
 		fire_only_once = yes
-
-		activation = {
-		}
-
-		visible = {
-		}
 
 		cancel_if_not_visible = yes
 
@@ -718,9 +689,6 @@ USA_war_preparation = {
 
 		days_remove = 30
 
-		visible = {
-		}
-
 		complete_effect = {
 			ROOT = {
 				send_equipment = {
@@ -748,9 +716,6 @@ USA_war_preparation = {
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 100
-		}
-
-		modifier = {
 		}
 
 		days_remove = 30
@@ -843,9 +808,6 @@ USA_war_preparation = {
 			set_country_flag = USA_currently_improving_an_industry_flag
 		}
 
-		modifier = {
-		}
-
 		remove_effect = { 
 			USA_armor_industry_level_up = yes
 			clr_country_flag = USA_currently_improving_an_industry_flag
@@ -927,9 +889,6 @@ USA_war_preparation = {
 			}
 		}
 
-		modifier = {
-		}
-
 		remove_effect = { 
 			USA_naval_industry_level_up = yes
 			clr_country_flag = USA_currently_improving_an_industry_flag
@@ -1008,9 +967,6 @@ USA_war_preparation = {
 			NOT = {
 				has_country_flag = USA_currently_improving_an_industry_flag
 			}
-		}
-
-		modifier = {
 		}
 
 		remove_effect = { 
@@ -1099,9 +1055,6 @@ USA_war_preparation = {
 			}
 		}
 
-		modifier = {
-		}
-
 		remove_effect = { 
 			USA_infantry_industry_level_up = yes
 			clr_country_flag = USA_currently_improving_an_industry_flag
@@ -1127,9 +1080,6 @@ USA_war_preparation = {
 
 		activation = {
 			has_completed_focus = USA_selective_service_act
-		}
-
-		modifier = {
 		}
 
 
@@ -1305,9 +1255,6 @@ foreign_support = {
 	}
 }
 
-operations = {
-}
-
 USA_unique_measures = {
 	
 	USA_women_in_the_workforce_1 = {
@@ -1319,9 +1266,6 @@ USA_unique_measures = {
         }
         available = {
 			has_completed_focus = USA_everyone_not_on_the_front_in_the_factories
-        }
-
-        visible = {
         }
 
         cost = 100
@@ -1340,8 +1284,6 @@ USA_unique_measures = {
         ai_will_do = {
 			factor = 100
 		}
-		complete_effect = {
-        }
     }
 
     USA_war_bonds_1 = {
@@ -1358,8 +1300,6 @@ USA_unique_measures = {
 			NOT = {
 				tag = USA 
 			}
-        }
-        visible = {
         }
 
         fire_only_once = no
@@ -1379,13 +1319,6 @@ USA_unique_measures = {
 				has_political_power < 150
 				factor = 0 #use as pp dump
 			}
-		}
-
-		remove_effect = {
-
-		}
-
-		complete_effect = {
 		}
     }
 
@@ -1677,11 +1610,7 @@ USA_unique_measures = {
 			news_event = { hours = 24 id = news.492 }
 			hidden_effect = {
 				ROOT = {
-					send_equipment = {
-						target = PAR
-						type = tac_bomber_equipment_1939
-						amount = 16
-					}
+					add_equipment_to_stockpile = { type = tac_bomber_equipment_1939 amount = -16 }
 				}
 				282 = { #Kanto
 					damage_building = { type = arms_factory damage = 0.2 }
@@ -1729,39 +1658,10 @@ USA_unique_measures = {
 				set_autonomy = { target = EFR autonomy_state = autonomy_reichsprotectorate }
 			}
 		    EFR = {
-				declare_war_on = {
-           	    			target = USA
-					type = annex_everything
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = USA
 				}
-		   		 declare_war_on = {
-					target = ENG
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = CAN
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = SAF
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = FRA
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = AST
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = RAJ
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = NZL
-					type = annex_everything
-				}
-              
 			}
 			news_event = { hours = 6 id = news.457 }
 			hidden_effect = {
@@ -1777,6 +1677,9 @@ USA_unique_measures = {
 				limit = {
 					USA = {	is_ai = yes }
 				}
+				set_province_controller = 7069
+				set_province_controller = 10070
+				set_province_controller = 11943
 				load_oob = USA_torch_oob
 			}
 		}
@@ -1808,4 +1711,4 @@ USA_unique_measures = {
 			}
 		}
 	}
-
+}

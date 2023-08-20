@@ -349,12 +349,6 @@ SOV_gulag_economy = {
 
 		fire_only_once = no
 
-		visible = {
-		}
-
-		complete_effect = {
-		}
-
 		days_remove = 70
 
 		days_re_enable = 120 
@@ -388,18 +382,12 @@ SOV_gulag_economy = {
 			has_completed_focus = SOV_kulak_operation
 		}
 
-		complete_effect = {
-		}
-
 		days_remove = 70
 
 		days_re_enable = 185 
 
 		modifier = {
 			consumer_goods_factor = -0.03
-		}
-
-		remove_effect = {
 		}
 
 		ai_will_do = {
@@ -422,9 +410,6 @@ SOV_gulag_economy = {
 		cost = 0
 
 		fire_only_once = no
-
-		visible = {
-		}
 
 		days_remove = 70
 
@@ -465,9 +450,6 @@ SOV_gulag_economy = {
 		cost = 0
 
 		fire_only_once = no
-
-		visible = {
-		}
 
 		complete_effect = {
 			custom_effect_tooltip = SOV_gulag_inmates_10k_tt
@@ -681,9 +663,6 @@ SOV_gulag_economy = {
 
 		fire_only_once = no
 
-		visible = {
-		}
-
 		complete_effect = {
 			custom_effect_tooltip = SOV_gulag_inmates_10k_tt
 			subtract_from_variable = {
@@ -786,9 +765,6 @@ SOV_gulag_economy = {
 			research_speed_factor = 0.1 
 		}
 
-		remove_effect = {
-		}
-
 		ai_will_do = {
 			factor = 100
 		}
@@ -831,9 +807,6 @@ SOV_gulag_economy = {
 			stability_factor = 0.2
 		}
 
-		remove_effect = {
-		}
-
 		ai_will_do = {
 			factor = 100
 		}
@@ -855,9 +828,6 @@ SOV_gulag_economy = {
 
 		fire_only_once = no
 
-		visible = {
-		}
-
 		complete_effect = {
 			custom_effect_tooltip = SOV_gulag_inmates_10k_tt
 			subtract_from_variable = {
@@ -866,18 +836,13 @@ SOV_gulag_economy = {
 			}
 		}
 
-		days_re_enable = 120 
-
-		modifier = {
-		}
+		days_re_enable = 120
 
 		complete_effect = {
 			
 			custom_effect_tooltip = SOV_deploy_gulag_prisoners_tt
 
-			every_state = {
-				limit = { state = 219 }
-
+			219 = {
 				create_unit = {
 					division = "name = \"NKVD Division\" division_template = \"Shtrafbat Division\" start_experience_factor = 0.0 start_equipment_factor = 1" 
 					owner = SOV
@@ -949,9 +914,6 @@ SOV_socialism_in_one_country = {
 		visible = {
 			POL = { has_war = yes }
 		}
-		
-		modifier = {
-		}
 
 		remove_effect = {
 			complete_national_focus = SOV_baltic_security
@@ -1010,9 +972,6 @@ SOV_socialism_in_one_country = {
 		visible = {
 			has_completed_focus = SOV_baltic_security
 		}
-		
-		modifier = {
-		}
 
 		remove_effect = {
 			complete_national_focus = SOV_finnish_wargoal
@@ -1051,9 +1010,6 @@ SOV_socialism_in_one_country = {
 			SOV = {
 				has_full_control_of_state = 146 
 			}
-		}
-		
-		modifier = {
 		}
 
 		remove_effect = {
@@ -1112,9 +1068,6 @@ SOV_socialism_in_one_country = {
 				has_idea = SOV_molotov_ribbentrop_pact_2
 			} 
 		}
-		
-		modifier = {
-		}
 
 		remove_effect = {
 			complete_national_focus = SOV_soviet_german_trade_agreement
@@ -1165,9 +1118,6 @@ SOV_socialism_in_one_country = {
 				has_idea = SOV_molotov_ribbentrop_pact
 				has_idea = SOV_molotov_ribbentrop_pact_2
 			} 
-		}
-
-		modifier = {
 		}
 
 		remove_effect = {
@@ -1727,44 +1677,16 @@ SOV_military_district_garrisons = {
 
 		days_remove = 10
 
-		visible = {
-		}
-
 		cancel_if_not_visible = yes
 
 		complete_effect = {
 			hidden_effect = {
 				SOV = {
-					send_equipment = {
-						target = PAR 
-						type = infantry_equipment
-						amount = 2400
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = artillery_equipment
-						amount = 150
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = anti_tank_equipment
-						amount = 75
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = support_equipment
-						amount = 200
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = motorized_equipment 
-						amount = 50
-						old_prioritised = yes
-					}
+					add_equipment_to_stockpile = { type = infantry_equipment amount = -2400 }
+					add_equipment_to_stockpile = { type = artillery_equipment amount = -150 }
+					add_equipment_to_stockpile = { type = anti_tank_equipment amount = -75 }
+					add_equipment_to_stockpile = { type = support_equipment amount = -200 }
+					add_equipment_to_stockpile = { type = motorized_equipment amount = -50 }
 				}
 			}
 		}
@@ -1846,44 +1768,16 @@ SOV_military_district_garrisons = {
 
 		days_remove = 10
 
-		visible = {
-		}
-
 		cancel_if_not_visible = yes
 
 		complete_effect = {
 			hidden_effect = {
 				SOV = {
-					send_equipment = {
-						target = PAR 
-						type = infantry_equipment
-						amount = 2400
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = artillery_equipment
-						amount = 150
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = anti_tank_equipment
-						amount = 75
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = support_equipment
-						amount = 200
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = motorized_equipment 
-						amount = 50
-						old_prioritised = yes
-					}
+					add_equipment_to_stockpile = { type = infantry_equipment amount = -2400 }
+					add_equipment_to_stockpile = { type = artillery_equipment amount = -150 }
+					add_equipment_to_stockpile = { type = anti_tank_equipment amount = -75 }
+					add_equipment_to_stockpile = { type = support_equipment amount = -200 }
+					add_equipment_to_stockpile = { type = motorized_equipment amount = -50 }
 				}
 			}
 		}
@@ -1964,44 +1858,16 @@ SOV_military_district_garrisons = {
 
 		days_remove = 10
 
-		visible = {
-		}
-
 		cancel_if_not_visible = yes
 
 		complete_effect = {
 			hidden_effect = {
 				SOV = {
-					send_equipment = {
-						target = PAR 
-						type = infantry_equipment
-						amount = 2100
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = artillery_equipment
-						amount = 130
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = anti_tank_equipment
-						amount = 65
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = support_equipment
-						amount = 180
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = motorized_equipment 
-						amount = 45
-						old_prioritised = yes
-					}
+					add_equipment_to_stockpile = { type = infantry_equipment amount = -2100 }
+					add_equipment_to_stockpile = { type = artillery_equipment amount = -130 }
+					add_equipment_to_stockpile = { type = anti_tank_equipment amount = -65 }
+					add_equipment_to_stockpile = { type = support_equipment amount = -180 }
+					add_equipment_to_stockpile = { type = motorized_equipment amount = -45 }
 				}
 			}
 		}
@@ -2083,44 +1949,16 @@ SOV_military_district_garrisons = {
 
 		days_remove = 10
 
-		visible = {
-		}
-
 		cancel_if_not_visible = yes
 
 		complete_effect = {
 			hidden_effect = {
 				SOV = {
-					send_equipment = {
-						target = PAR 
-						type = infantry_equipment
-						amount = 2100
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = artillery_equipment
-						amount = 130
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = anti_tank_equipment
-						amount = 65
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = support_equipment
-						amount = 180
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = motorized_equipment 
-						amount = 45
-						old_prioritised = yes
-					}
+					add_equipment_to_stockpile = { type = infantry_equipment amount = -2100 }
+					add_equipment_to_stockpile = { type = artillery_equipment amount = -130 }
+					add_equipment_to_stockpile = { type = anti_tank_equipment amount = -65 }
+					add_equipment_to_stockpile = { type = support_equipment amount = -180 }
+					add_equipment_to_stockpile = { type = motorized_equipment amount = -45 }
 				}
 			}
 		}
@@ -2203,44 +2041,16 @@ SOV_military_district_garrisons = {
 
 		days_remove = 10
 
-		visible = {
-		}
-
 		cancel_if_not_visible = yes
 
 		complete_effect = {
 			hidden_effect = {
 				SOV = {
-					send_equipment = {
-						target = PAR 
-						type = infantry_equipment
-						amount = 2100
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = artillery_equipment
-						amount = 130
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = anti_tank_equipment
-						amount = 65
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = support_equipment
-						amount = 180
-						old_prioritised = yes
-					}
-					send_equipment = {
-						target = PAR
-						type = motorized_equipment 
-						amount = 45
-						old_prioritised = yes
-					}
+					add_equipment_to_stockpile = { type = infantry_equipment amount = -2100 }
+					add_equipment_to_stockpile = { type = artillery_equipment amount = -130 }
+					add_equipment_to_stockpile = { type = anti_tank_equipment amount = -65 }
+					add_equipment_to_stockpile = { type = support_equipment amount = -180 }
+					add_equipment_to_stockpile = { type = motorized_equipment amount = -45 }
 				}
 			}
 		}
@@ -3673,9 +3483,6 @@ SOV_great_patriotic_war = {
 					amount = 200
 					producer = USA
 			}			
-		}			
-	
-		complete_effect = {
 		}
 
 		timeout_effect = {
@@ -3755,9 +3562,6 @@ SOV_great_patriotic_war = {
 					amount = 200
 					producer = USA
 			}			
-		}			
-	
-		complete_effect = {
 		}
 
 		timeout_effect = {
@@ -3835,9 +3639,6 @@ SOV_great_patriotic_war = {
 					amount = 200
 					producer = USA
 			}			
-		}			
-	
-		complete_effect = {
 		}
 
 		timeout_effect = {
@@ -3882,8 +3683,7 @@ SOV_great_patriotic_war = {
 					limit = {
 						229 = { check_variable = { var = SOV_garrison_strength value = 2 compare = equals } }
 					}
-					every_state = {
-						limit = { state = 219 }
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -3907,8 +3707,7 @@ SOV_great_patriotic_war = {
 						229 = { check_variable = { var = SOV_garrison_strength value = 3 compare = equals } }
 					}
 
-					every_state = {
-						limit = { state = 219 }
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -3948,8 +3747,7 @@ SOV_great_patriotic_war = {
 						229 = { check_variable = { var = SOV_garrison_strength value = 4 compare = equals } }
 					}
 
-					every_state = {
-						limit = { state = 219 }
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4042,9 +3840,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						582 = { check_variable = { var = SOV_garrison_strength value = 2 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.7 start_equipment_factor = 1" 
 							owner = SOV
@@ -4067,9 +3864,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						582 = { check_variable = { var = SOV_garrison_strength value = 3 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.7 start_equipment_factor = 1" 
 							owner = SOV
@@ -4108,9 +3904,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						582 = { check_variable = { var = SOV_garrison_strength value = 4 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4229,9 +4024,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						571 = { check_variable = { var = SOV_garrison_strength value = 2 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4254,9 +4048,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						571 = { check_variable = { var = SOV_garrison_strength value = 3 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4295,9 +4088,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						571 = { check_variable = { var = SOV_garrison_strength value = 4 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4370,9 +4162,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						405 = { check_variable = { var = SOV_garrison_strength value = 2 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4395,9 +4186,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						405 = { check_variable = { var = SOV_garrison_strength value = 3 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4436,9 +4226,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						405 = { check_variable = { var = SOV_garrison_strength value = 4 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 0.6 start_equipment_factor = 1" 
 							owner = SOV
@@ -4511,9 +4300,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						408 = { check_variable = { var = SOV_garrison_strength value = 2 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 1.0 start_equipment_factor = 1" 
 							owner = SOV
@@ -4536,9 +4324,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						408 = { check_variable = { var = SOV_garrison_strength value = 3 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 1.0 start_equipment_factor = 1" 
 							owner = SOV
@@ -4577,9 +4364,8 @@ SOV_great_patriotic_war = {
 					limit = {
 						408 = { check_variable = { var = SOV_garrison_strength value = 4 compare = equals } }
 					}
-
-					every_state = {
-						limit = { state = 219 }
+					
+					219 = {
 						create_unit = {
 							division = "name = \"Strelkovaya Diviziya\" division_template = \"NKVD Division\" start_experience_factor = 1.0 start_equipment_factor = 1" 
 							owner = SOV
@@ -5194,9 +4980,6 @@ SOV_great_patriotic_war = {
 			has_completed_focus = SOV_organize_the_defence_of_stalingrad
 		}
 
-		modifier = {
-		}
-
 		#Success
 		timeout_effect = {
 			add_stability = 0.2
@@ -5709,9 +5492,6 @@ operations = {
 			date > 1936.7.1		
 		}
 
-		visible = {
-		}
-
 		cost = 20
 
 		ai_will_do = {
@@ -5808,9 +5588,6 @@ operations = {
 			}
 		}
 	}
-}
-
-political_actions = {
 }
 
 SOV_global_revolution = {
@@ -6480,9 +6257,6 @@ SOV_5_year_plan_decisions = {
 		
 		icon = construction
 
-		allowed = {
-		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 582
@@ -6558,9 +6332,6 @@ SOV_5_year_plan_decisions = {
 		allowed = {
 		   tag = SOV
 		}
-
-		available = {	
-		}
 		
 		selectable_mission = no
 		days_mission_timeout = 59
@@ -6626,9 +6397,6 @@ SOV_5_year_plan_decisions = {
 
 		visible = {
 			has_completed_focus = SOV_ilyushin_CAS
-		}
-
-		modifier = {
 		}
 
 		timeout_effect = {

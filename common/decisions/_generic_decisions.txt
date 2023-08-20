@@ -188,10 +188,6 @@ political_actions = {
 
 		icon = generic_megaphone
 
-		available = {
-			
-		}
-
 		visible = {
 			always = yes
 		}
@@ -209,10 +205,6 @@ political_actions = {
 
 		cost = 25
 
-		complete_effect = {
-
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -225,10 +217,6 @@ political_actions = {
 	Demilitarization = {
 
 		icon = generic_bureaucracy
-
-		available = {
-			
-		}
 
 		visible = {
 			always = yes
@@ -246,10 +234,6 @@ political_actions = {
 		days_re_enable = 360
 
 		cost = 25
-
-		complete_effect = {
-
-		}
 
 		ai_will_do = {
 			base = 25
@@ -290,10 +274,6 @@ political_actions = {
 		days_re_enable = 360
 
 		cost = 25
-
-		complete_effect = {
-
-		}
 
 		ai_will_do = {
 			base = 0
@@ -336,10 +316,6 @@ economy_decisions = {
 
 		cost = 25
 
-		complete_effect = {
-
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -374,10 +350,6 @@ economy_decisions = {
 		days_re_enable = 120
 
 		cost = 25
-
-		complete_effect = {
-
-		}
 
 		ai_will_do = {
 			base = 0
@@ -417,10 +389,6 @@ economy_decisions = {
 
 		cost = 50
 
-		complete_effect = {
-
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -457,10 +425,6 @@ economy_decisions = {
 
 		cost = 50
 
-		complete_effect = {
-
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -496,10 +460,6 @@ economy_decisions = {
 
 		cost = 50
 
-		complete_effect = {
-
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -534,10 +494,6 @@ economy_decisions = {
 		days_re_enable = 100
 
 		cost = 50
-
-		complete_effect = {
-
-		}
 
 		ai_will_do = {
 			base = 0
@@ -575,10 +531,6 @@ economy_decisions = {
 
 		cost = 50
 
-		complete_effect = {
-
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -614,10 +566,6 @@ economy_decisions = {
 		days_re_enable = 120
 
 		cost = 50
-
-		complete_effect = {
-
-		}
 
 		ai_will_do = {
 			base = 0
@@ -852,10 +800,6 @@ propaganda_efforts = {
 			has_war_support < 0.9
 		}
 
-		visible = {
-			
-		}
-
 		fire_only_once = no
 
 		days_remove = 90
@@ -893,10 +837,6 @@ propaganda_efforts = {
 			has_casualties_war_support < 0
 		}
 
-		visible = {
-
-		}
-
 		fire_only_once = no
 
 		days_remove = 180
@@ -908,7 +848,7 @@ propaganda_efforts = {
 		cost = 25
 
 		modifier = {
-			weekly_casualties_war_support = 0.012
+			weekly_casualties_war_support = 0.015
 		}
 
 		#complete_effect = {
@@ -962,10 +902,6 @@ propaganda_efforts = {
 			has_convoys_war_support < 0
 		}
 
-		visible = {
-
-		}
-
 		fire_only_once = no
 
 		days_remove = 180
@@ -977,7 +913,7 @@ propaganda_efforts = {
 		cost = 25
 
 		modifier = {
-			weekly_convoys_war_support = 0.012
+			weekly_convoys_war_support = 0.015
 		}
 
 		#complete_effect = {
@@ -1016,10 +952,6 @@ propaganda_efforts = {
 			has_bombing_war_support < 0
 		}
 
-		visible = {
-
-		}
-
 		fire_only_once = no
 
 		days_remove = 180
@@ -1031,7 +963,7 @@ propaganda_efforts = {
 		cost = 25
 
 		modifier = {
-			weekly_bombing_war_support = 0.012
+			weekly_bombing_war_support = 0.015
 		}
 
 		#complete_effect = {
@@ -1400,10 +1332,6 @@ operations = {
 		days_remove = 120
 
 		cost = 50
-
-		complete_effect = {
-
-		}
 
 		ai_will_do = {
 			base = 0
@@ -1841,10 +1769,6 @@ war_measures = {
 			factor = 10
 		}
 
-		modifier = {
-			
-		}
-
 		complete_effect = {
 			custom_effect_tooltip = we_need_more_men
 			hidden_effect = { set_technology = { Desperate_for_men_tech = 1 } }
@@ -1902,10 +1826,6 @@ war_measures = {
 		modifier = {
 			defence = 0.2
 			dig_in_speed_factor = 0.5
-		}
-
-		complete_effect = {
-
 		}
 	}
 
@@ -2068,10 +1988,6 @@ war_measures = {
 			}
 		}
 
-		remove_effect = {
-
-		}
-
 		complete_effect = {
 		#	if = {
 		#		limit = {
@@ -2171,10 +2087,6 @@ war_measures = {
 			 check_variable = { node_goal < num_of_supply_nodes } #if the number of supply nodes exceeds the old number by +3, immediately cancel
 		}
 	}
-}
-
-foreign_politics = {
-	
 }
 
 economy_decisions = {
@@ -2284,10 +2196,6 @@ foreign_support = {
 
 		cost = 0
 
-		modifier = {
-
-		}
-
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -2389,10 +2297,6 @@ foreign_support = {
 		fire_only_once = no
 
 		cost = 0
-
-		modifier = {
-
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -2510,10 +2414,6 @@ foreign_support = {
 
 		cost = 0
 
-		modifier = {
-
-		}
-
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -2615,10 +2515,6 @@ foreign_support = {
 		fire_only_once = no
 
 		cost = 0
-
-		modifier = {
-
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -2736,10 +2632,6 @@ foreign_support = {
 
  		cost = 0
 
- 		modifier = {
-
- 		}
-
  		ai_will_do = {
  			factor = 1
 			modifier = {
@@ -2841,10 +2733,6 @@ foreign_support = {
  		fire_only_once = no
 
  		cost = 0
-
- 		modifier = {
-
- 		}
 
  		ai_will_do = {
  			factor = 1
@@ -2961,10 +2849,6 @@ foreign_support = {
 		fire_only_once = no
 
 		cost = 0
-
-		modifier = {
-
-		}
 
 		ai_will_do = {
 			factor = 1
