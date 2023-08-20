@@ -70,6 +70,8 @@ set_technology = { #player
 	tech_engineers = 1
 	tech_recon = 1
 	tech_military_police = 1
+	tech_maintenance_company = 1
+	tech_logistics_company = 1
 	############## artillery ##############
 	artillery1 = 1 
 	gw_pack_artillery = 1
@@ -191,6 +193,7 @@ if = {
 	create_operative_leader = {
 		name = "Noor Inayat Khan"
 		GFX = GFX_portrait_noor_inayat_khan
+		traits = { }
 		bypass_recruitment = no
 		available_to_spy_master = yes
 		female = yes
