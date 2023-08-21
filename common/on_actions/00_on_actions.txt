@@ -775,18 +775,6 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					ROOT = { original_tag = INS }
-					FROM = {
-						OR = {
-							original_tag = JAP
-							is_in_faction_with = JAP
-						}
-					}
-				}
-				country_event = { hours = 6 id = news.471 }
-			}
-			if = {
-				limit = {
 					ROOT = { original_tag = RAJ }
 					FROM = {
 						OR = {
