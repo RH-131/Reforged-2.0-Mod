@@ -1180,68 +1180,6 @@ focus_tree = {
 #		}
 #	}
 	
-	focus = {
-		id = RAJ_commit_to_africa
-		icon = GFX_focus_usa_reestablish_the_gold_standard
-		mutually_exclusive = { focus = RAJ_commit_to_asia }
-		x = 18
-		y = 0
-		
-		cost = 5
-		
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_war = yes
-		}
-		
-		cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = yes
-		
-		completion_reward = {
-			
-			add_offsite_building = {
-				type = arms_factory
-				level = 2
-			}
-			SAF = { add_ideas = RAJ_commits_africa_idea }
-			SAF = { add_manpower = 40000 }
-		}
-	}
-	
-	focus = {
-		id = RAJ_commit_to_asia
-		icon = GFX_focus_attack_australia
-		mutually_exclusive = { focus = RAJ_commit_to_africa }
-		x = 20
-		y = 0
-	
-		cost = 5
-		
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_war = yes
-		}
-		
-		cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = yes
-		
-		completion_reward = {
-			add_offsite_building = {
-				type = arms_factory
-				level = 2
-			}
-			AST = { add_ideas = RAJ_commits_asia_idea }
-			AST = { add_manpower = 40000 }
-		}
-	}
 	
 	
 	###################
