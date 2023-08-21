@@ -1773,7 +1773,7 @@ NNavy = {
 	MAX_POSITIONING_BONUS_FROM_SURFACE_DETECTION					= 0.1,  -- will clamp the bonus that you get from detection
 
 	HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR					= 0.5, -- if one side has more ships than the other, that side will get this penalty for each +100% ship ratio it has
-	MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO					= 0.9,  -- maximum penalty to get from larger fleets
+	MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO					= 1.5,  -- maximum penalty to get from larger fleets
 
 	HIGHER_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR					= 0.2;  -- penalty if other side has stronger carrier air force
 	MAX_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR 					= 0.2;  -- max penalty from stronger carrier air force
@@ -1823,7 +1823,7 @@ NNavy = {
 	LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.05, -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier
 
 	GUN_HIT_PROFILES = { -- hit profiles for guns, if target ih profile is lower the gun will have lower accuracy
-		80.0,	-- big guns
+		90.0,	-- big guns
 		145.0,	-- torpedoes
 		45.0,	-- small guns
 	},
