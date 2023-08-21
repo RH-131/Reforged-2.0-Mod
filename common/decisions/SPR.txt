@@ -474,7 +474,10 @@ operations = {
 			country_exists = POR
 		}
 		available = {
-			
+			OR = {
+			FRA = { has_capitulated = yes }
+			date > 1940.5.1
+			}
 		}
 
 		cost = 0
