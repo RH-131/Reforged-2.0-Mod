@@ -474,56 +474,25 @@ operations = {
 			country_exists = POR
 		}
 		available = {
-			OR = {
-			FRA = { has_capitulated = yes }
-			date > 1940.5.1
-			}
+			
 		}
 
 		cost = 0
+		
 
 		fire_only_once = yes
-
-		complete_effect = {
 		
-			add_ideas = { SPR_prepare_for_war }
-			load_oob = SPR_fleet
-			transfer_state = 179
-			transfer_state = 795
-			transfer_state = 112
-			transfer_state = 181
-			transfer_state = 180
-			179 = { add_core_of = SPR }
-			795 = { add_core_of = SPR }
-			112 = { add_core_of = SPR }
-			181 = { add_core_of = SPR }
-			180 = { add_core_of = SPR }
-			
-			POR = {
-				transfer_navy = {
-					target = SPR
-				}
+		days_remove = 10
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			GER = { custom_effect_tooltip = needs_approval 
+				country_event = spainwar.1
 			}
-			ENG = {
-				transfer_state = 698
-				transfer_state = 697
-				transfer_state = 702
-			}
-			FRA = {
-				transfer_state = 296
-				transfer_state = 297
-				transfer_state = 796
-				transfer_state = 540
-				transfer_state = 892
-				transfer_state = 891
-			}
-			EFR = {
-				transfer_state = 290
-				transfer_state = 783
-				transfer_state = 699
-			}
-	
-		}		
+		}
 	}
 	SPR_declarewar = {
 	    icon = generic_operation
