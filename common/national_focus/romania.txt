@@ -2069,61 +2069,6 @@
 			add_ideas = ROM_rearm_men
 		}
 	}
-	
-	focus = {
-		id = ROM_investments_finland
-		icon = GFX_FIN_the_white_guard
-		relative_position_id = ROM_romanian_rearmament
-		mutually_exclusive = { focus = ROM_investments_hungary }
-		x = -4
-		y = 0
-		cost = 2.9
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1939.1.1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = ROM_repair_organization
-			FIN = { add_ideas = ROM_investors }
-		}
-	}
-	
-	focus = {
-		id = ROM_investments_hungary
-		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
-		relative_position_id = ROM_romanian_rearmament
-		mutually_exclusive = { focus = ROM_investments_finland }
-		x = -2
-		y = 0
-		cost = 2.9
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1939.1.1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = ROM_repair_organization
-			
-			HUN = { add_ideas = ROM_investors }
-		}
-	}
 
 	############################
 	######## AIR BRANCH ########

@@ -344,61 +344,6 @@ focus_tree = {
             
 		}
 	}
-    
-	focus = {
-		id = FIN_winter_hungary
-		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
-		relative_position_id = FIN_nokia
-		mutually_exclusive = { focus = FIN_winter_romania }
-		x = 0
-		y = 2
-		
-		cost = 2.9
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1939.1.1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_manpower = 50000
-			HUN = { add_ideas = FIN_advisors }
-		}
-	}
-	
-	focus = {
-		id = FIN_winter_romania
-		icon = GFX_ROM_for_the_preservation_of_greater_romania
-		relative_position_id = FIN_nokia
-		mutually_exclusive = { focus = FIN_winter_hungary }
-		x = 2
-		y = 2
-		cost = 2.9
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1939.1.1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_manpower = 50000
-			ROM = { add_ideas = FIN_advisors }
-		}
-	}
 	
     
     focus = {
