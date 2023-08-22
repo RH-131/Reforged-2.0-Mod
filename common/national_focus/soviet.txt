@@ -25,9 +25,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {			
-		}
 		
 		bypass = {
 			has_war = yes 	
@@ -74,12 +71,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {			
-		}
-		
-		bypass = {
 		}
 
 		cancel_if_invalid = no
@@ -172,12 +163,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {			
-		}
-		
-		bypass = {
 		}
 
 		cancel_if_invalid = no
@@ -587,9 +572,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = SOV_finish_the_2_5_year_plan
-		cost = 5 
-		available = {
-		}
+		cost = 5
 		ai_will_do = {
 			factor = 8
 		}
@@ -771,13 +754,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		available_if_capitulated = no
 
@@ -811,10 +787,6 @@ focus_tree = {
 			has_tech = dispersed_industry2
 			}
 			has_tech = construction2
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -1100,9 +1072,6 @@ focus_tree = {
 		select_effect = {
 			set_country_flag = SOV_purge_started
 		}
-		
-		bypass = {
-		}
 
 		select_effect = {
 			set_country_flag = SOV_purge_started
@@ -1136,9 +1105,6 @@ focus_tree = {
 		relative_position_id = SOV_great_purge
 		cost = 2.90
 
-		bypass = {
-		}
-
 		available = {
 			if = {
 				limit = {
@@ -1159,9 +1125,6 @@ focus_tree = {
 					}
 				}
 			}
-		}
-
-		bypass = {
 		}		
 
 		ai_will_do = {
@@ -1203,9 +1166,6 @@ focus_tree = {
 		relative_position_id = SOV_first_moscow_trial
 		cost = 2.90
 
-		bypass = {
-		}
-
 		available = {
 			if = {
 				limit = {
@@ -1226,9 +1186,6 @@ focus_tree = {
 					}
 				}
 			}
-		}
-
-		bypass = {
 		}		
 
 		ai_will_do = {
@@ -1269,9 +1226,6 @@ focus_tree = {
 		relative_position_id = SOV_the_case_of_the_sinoviev_trotskist_centre
 		cost = 2.90
 
-		bypass = {
-		}
-
 		available = {
 			if = {
 				limit = {
@@ -1292,9 +1246,6 @@ focus_tree = {
 					}
 				}
 			}
-		}
-
-		bypass = {
 		}		
 
 		ai_will_do = {
@@ -1335,9 +1286,6 @@ focus_tree = {
 		relative_position_id = SOV_trial_of_the_generals_and_the_tukachevksy_case
 		cost = 2.90
 
-		bypass = {
-		}
-
 		available = {
 			if = {
 				limit = {
@@ -1358,9 +1306,6 @@ focus_tree = {
 					}
 				}
 			}
-		}
-
-		bypass = {
 		}		
 
 		ai_will_do = {
@@ -1399,16 +1344,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_great_purge
-		cost = 2.90
-
-		bypass = {
-		}
-
-		available = {
-		}
-
-		bypass = {
-		}		
+		cost = 2.90		
 
 		ai_will_do = {
 			factor = 100
@@ -1437,16 +1373,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_nkvd_order_no_00447
-		cost = 2.90
-
-		bypass = {
-		}
-
-		available = {
-		}
-
-		bypass = {
-		}		
+		cost = 2.90		
 
 		ai_will_do = {
 			factor = 100
@@ -1468,16 +1395,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = SOV_great_purge
-		cost = 2.90
-
-		bypass = {
-		}
-
-		available = {
-		}
-
-		bypass = {
-		}		
+		cost = 2.90		
 
 		ai_will_do = {
 			factor = 100
@@ -1504,16 +1422,7 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = SOV_great_purge
-		cost = 2.90
-
-		bypass = {
-		}
-
-		available = {
-		}
-
-		bypass = {
-		}		
+		cost = 2.90		
 
 		ai_will_do = {
 			factor = 100
@@ -1541,16 +1450,7 @@ focus_tree = {
 		x = -5
 		y = 2
 		relative_position_id = SOV_great_purge
-		cost = 2.90
-
-		bypass = {
-		}
-
-		available = {
-		}
-
-		bypass = {
-		}		
+		cost = 2.90		
 
 		ai_will_do = {
 			factor = 100
@@ -1661,10 +1561,7 @@ focus_tree = {
 		relative_position_id = SOV_kulak_operation
 		x = -1
 		y = 1
-		cost = 5 
-		available = {
-		
-		}
+		cost = 5
 		ai_will_do = {
 			factor = 12
 		}
@@ -1684,10 +1581,7 @@ focus_tree = {
 		relative_position_id = SOV_Colonization_of_Siberia
 		x = 1
 		y = 1
-		cost = 5 
-		available = {
-		
-		}
+		cost = 5
 		ai_will_do = {
 			factor = 12
 		}
@@ -1730,10 +1624,7 @@ focus_tree = {
 		relative_position_id = SOV_Colonization_of_Siberia
 		x = 1
 		y = 2
-		cost = 5 
-		available = {
-		
-		}
+		cost = 5
 		ai_will_do = {
 			factor = 12
 		}
@@ -1781,16 +1672,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_great_purge
-		cost = 2.90
-
-		bypass = {
-		}
-
-		available = {
-		}
-
-		bypass = {
-		}		
+		cost = 2.90		
 
 		ai_will_do = {
 			factor = 100
@@ -1821,16 +1703,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = SOV_great_purge
-		cost = 2.90
-
-		bypass = {
-		}
-
-		available = {
-		}
-
-		bypass = {
-		}		
+		cost = 2.90		
 
 		ai_will_do = {
 			factor = 100
@@ -2028,16 +1901,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_assassinate_trotsky
-		cost = 5
-
-		bypass = {
-		}
-
-		available = {
-		}
-
-		bypass = {
-		}		
+		cost = 5		
 
 		ai_will_do = {
 			factor = 100
@@ -2059,15 +1923,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_trial_of_the_twenty_one
 		cost = 5
-
-		bypass = {
-		}
 		
 		available = {
 			always = no 
-		}
-
-		bypass = {
 		}		
 
 		ai_will_do = {
@@ -2227,9 +2085,7 @@ focus_tree = {
 		id = SOV_hero_of_the_union
 		icon = GFX_georgy_zhukov_hero
 		search_filters = { FOCUS_FILTER_POLITICAL }	
-		relative_position_id = SOV_eastern_security 
-		available = {
-		}
+		relative_position_id = SOV_eastern_security
 		prerequisite = {
 			focus = SOV_eastern_security
 		}
@@ -2273,17 +2129,8 @@ focus_tree = {
 		relative_position_id = SOV_molotov_ribbentrop_pact
 		cost = 5
 
-		bypass = {
-		}
-
-		available = {
-		}
-
 		available = {
 			always = no 
-		}
-
-		bypass = {
 		}		
 
 		ai_will_do = {
@@ -2299,10 +2146,7 @@ focus_tree = {
 		id = SOV_baltic_security
 		icon = GFX_SOV_claims_on_the_baltic
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-		relative_position_id = SOV_molotov_ribbentrop_pact 
-
-		available = {
-		}
+		relative_position_id = SOV_molotov_ribbentrop_pact
 
 		prerequisite = {
 			focus = SOV_molotov_ribbentrop_pact
@@ -2360,10 +2204,7 @@ focus_tree = {
 		id = SOV_good_quality_equipment 
 		icon = GFX_SOV_good_quality_equipment
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-		relative_position_id = SOV_lessons_of_the_winter_war 
-
-		available = {
-		}
+		relative_position_id = SOV_lessons_of_the_winter_war
 
 		prerequisite = {
 			focus = SOV_lessons_of_the_winter_war
@@ -2388,10 +2229,7 @@ focus_tree = {
 		id = SOV_claim_bessarabia 
 		icon = GFX_SOV_moldavia
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-		relative_position_id = SOV_lessons_of_the_winter_war 
-
-		available = {
-		}
+		relative_position_id = SOV_lessons_of_the_winter_war
 
 		prerequisite = {
 			focus = SOV_finnish_wargoal
@@ -2421,10 +2259,7 @@ focus_tree = {
 		id = SOV_soviet_german_trade_agreement 
 		icon = GFX_SOV_molotov_ribbentrop_research_pact
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-		relative_position_id = SOV_molotov_ribbentrop_pact 
-
-		available = {
-		}
+		relative_position_id = SOV_molotov_ribbentrop_pact
 
 		prerequisite = {
 			focus = SOV_molotov_ribbentrop_pact
@@ -2453,10 +2288,7 @@ focus_tree = {
 		id = SOV_soviet_german_technological_agreement 
 		icon = GFX_SOV_molotov_ribbentrop_trade_pact
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-		relative_position_id = SOV_molotov_ribbentrop_pact 
-
-		available = {
-		}
+		relative_position_id = SOV_molotov_ribbentrop_pact
 
 		prerequisite = {
 			focus = SOV_soviet_german_trade_agreement
@@ -2530,15 +2362,8 @@ focus_tree = {
 
 		cost = 5 
 		
-		available = { 
-		} 
-		
 		ai_will_do = {
 			factor = 10
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -2693,9 +2518,7 @@ focus_tree = {
 		icon = GFX_SOV_magnitogorsk_the_closed_city
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = SOV_kommissariat_for_heavy_industry focus = SOV_arms_kommissariats }
-		relative_position_id = SOV_finish_the_2_5_year_plan 
-		available = {
-		}
+		relative_position_id = SOV_finish_the_2_5_year_plan
 
 		continue_if_invalid = no
 		
@@ -2704,9 +2527,6 @@ focus_tree = {
 		cost = 5 
 		ai_will_do = {
 			factor = 1
-		}
-
-		bypass = {
 		}
 
 		available_if_capitulated = yes
@@ -2936,9 +2756,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		bypass = {
-		}
-
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3158,12 +2975,6 @@ focus_tree = {
 
 		prerequisite = {
 			focus = SOV_intervene_in_the_spanish_civil_war
-		}
-
-		available = {
-		}
-
-		mutually_exclusive = {
 		}
 
 		x = -6
@@ -3594,9 +3405,6 @@ focus_tree = {
 			focus = SOV_intervene_in_the_spanish_civil_war
 		}
 
-		available = {
-		}
-
 		x = 6
 		y = 1
 		ai_will_do = {
@@ -3903,8 +3711,6 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_intervene_in_the_spanish_civil_war
 		}
-		available = {
-		}
 
 		x = -2
 		y = 1
@@ -3958,8 +3764,6 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_military_industrial_complex
 		}
-		available = {
-		}
 
 		x = -1
 		y = 1
@@ -3991,8 +3795,6 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_work_harder_not_smarter
 		}
-		available = {
-		}
 
 		x = 0
 		y = 1
@@ -4018,8 +3820,6 @@ focus_tree = {
 		cost = 5 
 		prerequisite = {
 			focus = SOV_steal_engineers_from_civilian_projects
-		}
-		available = {
 		}
 
 		x = 0
@@ -4054,8 +3854,6 @@ focus_tree = {
 		cost = 5 
 		prerequisite = {
 			focus = SOV_military_industrial_complex
-		}
-		available = {
 		}
 
 		x = 1
@@ -4092,8 +3890,6 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_work_smarter_not_harder
 		}
-		available = {
-		}
 
 		x = 0
 		y = 1
@@ -4125,8 +3921,6 @@ focus_tree = {
 		cost = 5 
 		prerequisite = {
 			focus = SOV_employ_factory_floor_chiefs
-		}
-		available = {
 		}
 
 		x = 0
@@ -4198,9 +3992,6 @@ focus_tree = {
 		cost = 5 
 		prerequisite = {
 			focus = SOV_ministry_of_armaments
-		}
-
-		available = {
 		}
 
 		x = 1
@@ -4583,8 +4374,6 @@ focus_tree = {
 		icon = GFX_SOV_red_army_airforce
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		cost = 4
-		prerequisite = {
-		}
 		relative_position_id = SOV_NKVD_focus
 		available = {
 			JAP = {has_completed_focus = JAP_intervene_in_china}
@@ -4827,8 +4616,6 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = SOV_ilyushin_CAS
-		}
-		available = {
 		}
 		x = 3
 		y = 1
@@ -5077,9 +4864,6 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_expand_air_corps_tactical_school
-
-		available = {
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -6020,7 +5804,14 @@ focus_tree = {
 		relative_position_id = SOV_military_research
 		completion_reward = {
 			custom_effect_tooltip = SOV_create_unit_tank_corps_reformed_tt
-			hidden_effect = {	
+			hidden_effect = {
+				set_technology = {
+					sov_mechanised_infantry = 1
+					sov_medium_tank_1937 = 1
+					sov_medium_td_1939 = 1
+					sov_medium_art_1939 = 1
+					sov_heavy_assault_gun_1939 = 1
+				}
 				division_template = {
 					name = "Tankoviy Korpus Reformed"
 					priority = 2
@@ -6292,10 +6083,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_finish_the_2_5_year_plan
-		cost = 5 
-
-		bypass = {
-		}		
+		cost = 5		
 
 		ai_will_do = {
 			factor = 8
@@ -6324,9 +6112,6 @@ focus_tree = {
 
 		available = {	
 			has_tech = construction2		
-		}
-
-		bypass = {
 		}		
 
 		ai_will_do = {
@@ -6388,15 +6173,8 @@ focus_tree = {
 		relative_position_id = SOV_stakhonovite
 		cost = 7.16
 
-		bypass = {
-		}
-
 		available = {	
 			has_tech = construction3		
-		}
-
-
-		bypass = {
 		}		
 
 		ai_will_do = {

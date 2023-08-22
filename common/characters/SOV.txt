@@ -9,7 +9,6 @@ characters={
 		country_leader ={
 			desc = "POLITICS_JOSEPH_STALIN_DESC"
 			ideology=stalinism
-			traits={}
 			expire = "1953.3.1"
 			id=-1
 		}
@@ -24,7 +23,6 @@ characters={
 		country_leader ={
 			desc = "POLITICS_KONSTANTIN_RODZAEVSKY_DESC"
 			ideology=fascism_ideology
-			traits={}
 			expire = "1953.3.1"
 			id=-1
 		}
@@ -39,7 +37,6 @@ characters={
 		country_leader ={
 			desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
 			ideology=socialism
-			traits={}
 			expire = "1953.3.1"
 			id=-1
 		}
@@ -354,29 +351,29 @@ characters={
 			slot = high_command
 			idea_token = gordey_levchenko
 			ledger  = navy 
-				allowed  = {
-					original_tag  = SOV
+			allowed  = {
+				original_tag  = SOV
+			}
+			available  = {
+				not  = {
+					has_country_flag  = purge_2_group_a 
 				}
-				available  = {
+				hidden_trigger  = {
 					not  = {
-						has_country_flag  = purge_2_group_a 
-					}
-					hidden_trigger  = {
-						not  = {
-							any_other_country  = {
-								has_war_with  = SOV
-								original_tag  = SOV
-								has_unit_leader  = 406.000
-							}
+						any_other_country  = {
+							has_war_with  = SOV
+							original_tag  = SOV
+							has_unit_leader  = 406.000
 						}
 					}
 				}
-				traits  = {
-					navy_capital_ship_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
+			}
+			traits  = {
+				navy_capital_ship_1 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
 		}
 		name="gordey_levchenko"
 		portraits={
@@ -667,8 +664,6 @@ characters={
 					trade_opinion_factor  = 0.050
 					min_export  = 0.100
 				}
-				research_bonus  = {
-				}
 		}
 		name="SOV_mikoyan_anastas_ivanovich"
 		portraits={
@@ -710,8 +705,6 @@ characters={
 			ledger  = army 
 				allowed  = {
 					original_tag  = SOV
-				}
-				available  = {
 				}
 				traits  = {
 					army_chief_maneuver_1 
@@ -766,20 +759,20 @@ characters={
 		advisor={
 			slot = navy_chief
 			idea_token = mikhail_frinovsky
-			allowed  = {
-					original_tag  = SOV
+			allowed = {
+				original_tag  = SOV
+			}
+			available  = {
+				not  = {
+					has_country_flag  = purge_1_group_a 
 				}
-				available  = {
-					not  = {
-						has_country_flag  = purge_1_group_a 
-					}
-				}
-				traits  = {
-					navy_chief_commerce_raiding_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
+			}
+			traits  = {
+				navy_chief_commerce_raiding_1 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
 		}
 		name="mikhail_frinovsky"
 		portraits={
@@ -795,8 +788,6 @@ characters={
 			allowed  = {
 					original_tag  = SOV
 				}
-				available  = {
-				}
 				traits  = {
 					SOV_military_intelligence_officer 
 				}
@@ -806,8 +797,6 @@ characters={
 				}
 				research_bonus  = {
 					electronics  = 0.150
-				}
-				modifier  = {
 				}
 		}
 		name="SOV_ivan_proskurov"
@@ -843,7 +832,7 @@ characters={
 	SOV_lavrentiy_beria={
 		advisor={
 			slot = political_advisor
-			idea_token = SOV_lavrentiy_beria
+			idea_token = lavrentiy_beria
 			allowed  = {
 					original_tag  = SOV
 				}
@@ -867,7 +856,7 @@ characters={
 					weekly_manpower  = -300.000
 				}
 		}
-		name="SOV_lavrentiy_beria"
+		name="lavrentiy_beria"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_4"
@@ -907,8 +896,6 @@ characters={
 			allowed  = {
 				original_tag  = SOV
 			}
-			available  = {
-			}
 			traits  = {
 				army_chief_organizational_3 
 			}
@@ -926,11 +913,9 @@ characters={
 	SOV_nikolai_yezhov={
 		advisor={
 			slot = political_advisor
-			idea_token = SOV_nikolai_yezhov
+			idea_token = nikolai_yezhov
 			allowed  = {
 					original_tag  = SOV
-				}
-				available  = {
 				}
 				available  = {
 					not  = {
@@ -951,7 +936,7 @@ characters={
 					weekly_manpower  = -200.000
 				}
 		}
-		name="SOV_nikolai_yezhov"
+		name="nikolai_yezhov"
 		portraits={
 			army={
 				small="GFX_idea_advisor_generic_10"

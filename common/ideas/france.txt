@@ -29,10 +29,6 @@ ideas = {
 				always = no
 			}
 
-			allowed_civil_war = {
-				
-			}
-
 			removal_cost = -1
 
 			equipment_bonus = {
@@ -67,10 +63,6 @@ ideas = {
 			name = FRA_air
 			allowed = {
 				always = no
-			}
-
-			allowed_civil_war = {
-				
 			}
 
 			removal_cost = -1
@@ -109,10 +101,6 @@ ideas = {
 				always = no
 			}
 
-			allowed_civil_war = {
-				
-			}
-
 			removal_cost = -1
 
 			equipment_bonus = {
@@ -147,10 +135,6 @@ ideas = {
 			name = FRA_air
 			allowed = {
 				always = no
-			}
-
-			allowed_civil_war = {
-				
 			}
 
 			removal_cost = -1
@@ -189,10 +173,6 @@ ideas = {
 				always = no
 			}
 
-			allowed_civil_war = {
-				
-			}
-
 			removal_cost = -1
 
 			equipment_bonus = {
@@ -227,9 +207,6 @@ ideas = {
 		
 			allowed = {
 				always = no
-			}
-
-			available = {
 			}
 
 			allowed_civil_war = {
@@ -276,10 +253,6 @@ ideas = {
 			picture = generic_goods_red_bonus
 			allowed = {
 				always = no
-			}
-
-			allowed_civil_war = {
-				
 			}
 
 			removal_cost = -1
@@ -455,10 +428,6 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
-			modifier = {
-				
-			}
 		}
 		FRA_devalue_the_franc = {
 			picture = generic_foreign_capital
@@ -805,10 +774,6 @@ ideas = {
 					instant = yes
 				}
 			}
-
-			modifier = {
-				
-			}
 		}
 		FRA_air_dominance = {
 			picture = generic_air_bonus
@@ -836,6 +801,22 @@ ideas = {
 					instant = yes
 					build_cost_ic = -0.05
 				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
 				medium_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
@@ -845,10 +826,6 @@ ideas = {
 					build_cost_ic = -0.05 
 				}
 
-			}
-
-			modifier = {
-				
 			}
 		}
 		FRA_flying_artillery = {
@@ -865,18 +842,14 @@ ideas = {
 			removal_cost = -1
 			
 			equipment_bonus = {
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					air_ground_attack = 0.1
 					instant = yes
 				}
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					air_ground_attack = 0.1
 					instant = yes
 				}
-			}
-
-			modifier = {
-				
 			}
 		}
 		FRA_down_with_marianne = {
@@ -1510,9 +1483,6 @@ ideas = {
 
         	picture = generic_agrarian_reform
 
-        	research_bonus = {
-        	}
-
         	modifier = {
         		consumer_goods_factor = -0.02 
         		min_export = -0.1 
@@ -1529,9 +1499,6 @@ ideas = {
         	removal_cost = -1
 
         	picture = chi_wargaming_division
-
-        	research_bonus = {
-        	}
 
         	modifier = {
 				production_speed_arms_factory_factor = 0.05
@@ -2078,9 +2045,6 @@ ideas = {
 				}
 			}
 
-			research_bonus = {
-			}
-
 			modifier = {
 				consumer_goods_factor = 0.05
 				production_factory_max_efficiency_factor = -0.05
@@ -2185,9 +2149,6 @@ ideas = {
 		FRA_AMX = {
 		
 			picture = generic_tank_manufacturer_2
-
-			available = {
-			}
 						
 			allowed = {
 			    OR = {
@@ -2234,9 +2195,6 @@ ideas = {
 		FRA_hotchkiss = {
 		
 			picture = generic_tank_manufacturer_3
-
-			available = {
-			}
 						
 			allowed = {
 			    OR = {
@@ -2266,11 +2224,6 @@ ideas = {
 
 		FRA_APX = {
 			picture = FRA_atelier_puteaux
-			
-
-			available = {
-				
-			}
 						
 			allowed = {
 			    OR = {
@@ -2345,11 +2298,6 @@ ideas = {
 		}
 		
 		FRA_panhard = {
-			
-
-			available = {
-				
-			}
 
 						
 			allowed = {
@@ -2407,16 +2355,10 @@ ideas = {
 					original_tag = EFR
 				}
 			}
-
-			available = {
-			}
 			
 			research_bonus = { air_equipment = -0.05 }
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
 			traits = { light_aircraft_manufacturer }
-
-			modifier = {
-			}
 		}
 		
 		bloch = {
@@ -2553,9 +2495,6 @@ ideas = {
 			
 			traits = { aircraft_research_trait }
 
-			modifier = {
-			}
-
 			equipment_bonus = {
 				small_plane_airframe = {
 					instant = yes
@@ -2566,6 +2505,22 @@ ideas = {
 					build_cost_ic = -0.05
 				}
 				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				small_plane_naval_bomber_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
 				}
@@ -2645,10 +2600,6 @@ ideas = {
 			modifier = { naval_manufacturer_cost_factor = -0.33 }
 			traits = { raiding_fleet_naval_manufacturer }
 		}
-	}
-	naval_research = {
-		
-		
 	}	
 	
     tank_research = { 
@@ -2662,9 +2613,6 @@ ideas = {
 
 			available = {
 				has_completed_focus = FRA_renault_goal
-			}
-
-			modifier = {
 			}
 			
 			equipment_bonus = {

@@ -74,10 +74,7 @@ ideas = {
 				always = no
 			}
 
-			removal_cost = -1
-			
-			modifier = {
-			}		
+			removal_cost = -1		
 			
 			equipment_bonus = {
 				horse_equipment = {
@@ -120,10 +117,6 @@ ideas = {
 			allowed = {
 				original_tag = MON
 			}
-
-			allowed_civil_war = {
-
-			}
 			
 			modifier = {
 				consumer_goods_factor = -0.01
@@ -141,10 +134,6 @@ ideas = {
 			
 			allowed = {
 				original_tag = MON
-			}
-
-			allowed_civil_war = {
-
 			}
 			
 			modifier = {
@@ -164,10 +153,6 @@ ideas = {
 			
 			allowed = {
 				original_tag = MON
-			}
-
-			allowed_civil_war = {
-
 			}
 			
 			modifier = {
@@ -409,9 +394,6 @@ ideas = {
 
 			picture = generic_goods_red_bonus
 			
-			available = {
-			}
-			
 			allowed = {
 				always = no
 			}
@@ -537,9 +519,6 @@ ideas = {
 		
 			picture = stalingrad_tractor_factory
 
-			available = {
-			}
-
 			allowed = {
 				has_DLC = "Waking the Tiger"
 			    original_tag = MON
@@ -567,9 +546,6 @@ ideas = {
 
 			allowed = {
 				original_tag = MON
-			}
-
-			available = {
 			}
 
 			research_bonus = {
@@ -628,17 +604,11 @@ ideas = {
 			}
 
 			traits = { SOV_medium_tank_designer }
-
-			modifier = {
-			}
 		}
 
 		MON_uralvagonzavod = { #tankograd
 			allowed = {
 				original_tag = MON
-			}
-
-			available = {
 			}
 
 			research_bonus = {
@@ -674,18 +644,12 @@ ideas = {
 			}
 
 			traits = { SOV_mass_production_facility }
-
-			modifier = {
-			}
 		}
 
 		MON_factory_no_174_k_e_voroshilov = { #Cavalry Tank Designer
 			allowed = {
 				original_tag = MON
 
-			}
-
-			available = {
 			}
 
 			research_bonus = {
@@ -745,9 +709,6 @@ ideas = {
 			}
 
 			traits = { SOV_cavalry_tank_designer }
-
-			modifier = {
-			}
 		}
 
 	}
@@ -767,9 +728,12 @@ ideas = {
 			}
 
 			equipment_bonus = {		
-				fighter_equipment = {
-					air_agility = 0.1 reliability = 0.05 
-				} 					
+				small_plane_airframe = {
+					air_agility = 0.1 reliability = 0.05
+				}
+				medium_plane_fighter_airframe = {
+					air_agility = 0.1 reliability = 0.05
+				}					
 			}
 			
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
@@ -786,12 +750,12 @@ ideas = {
 			}
 
 			equipment_bonus = {		
-				CAS_equipment = {
-					air_ground_attack = 0.15 reliability = 0.15 air_defence = 0.15 build_cost_ic = -0.1 
-				}				
-				fighter_equipment = {
+				small_plane_cas_airframe = {
+					air_ground_attack = 0.15 reliability = 0.15 air_defence = 0.15 build_cost_ic = -0.1
+				}
+				small_plane_airframe = {
 					air_attack = 0.075 air_agility = 0.075
-				}					
+				}				
 			}
 			
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
@@ -808,12 +772,12 @@ ideas = {
 			}
 
 			equipment_bonus = {		
-				tac_bomber_equipment = {
-					air_ground_attack = 0.1 reliability = 0.1  
+				medium_plane_airframe = {
+					air_ground_attack = 0.1 reliability = 0.1
 				}
-				heavy_fighter_equipment = {
+				medium_plane_fighter_airframe = {
 					air_attack = 0.1 air_range = 0.05
-				}						
+				}					
 			}
 			
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
@@ -830,9 +794,9 @@ ideas = {
 			}
 
 			equipment_bonus = {		
-				fighter_equipment = {
+				small_plane_airframe = {
 					air_attack = 0.1 air_range = 0.05
-				}						
+				}					
 			}
 			
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }

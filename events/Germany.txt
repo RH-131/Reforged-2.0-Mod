@@ -2144,8 +2144,6 @@ country_event = {
 			picture = "Portrait_Germany_Heinrich_Himmler.dds"
 			expire = "1965.1.1"
 			ideology = nazism
-			traits = {
-			}
 		}
 		hidden_effect = {
 			news_event = { hours = 6 id = news.28 }
@@ -2162,8 +2160,6 @@ country_event = {
 			picture = "Portrait_Germany_Hermann_Goring.dds"
 			expire = "1965.1.1"
 			ideology = nazism
-			traits = {
-			}
 		}
 		hidden_effect = {
 			news_event = { hours = 6 id = news.29 }
@@ -2209,8 +2205,6 @@ country_event = {
 			picture = "Portrait_Germany_Heinrich_Himmler.dds"
 			expire = "1965.1.1"
 			ideology = nazism
-			traits = {
-			}
 		}
 		if = {
 			limit =  {
@@ -2252,8 +2246,6 @@ country_event = {
 			picture = "Portrait_Germany_Heinrich_Himmler.dds"
 			expire = "1965.1.1"
 			ideology = nazism
-			traits = {
-			}
 		}
 		if = {
 			limit =  {
@@ -2293,8 +2285,6 @@ country_event = {
 			picture = "Portrait_Germany_Hermann_Goring.dds"
 			expire = "1965.1.1"
 			ideology = nazism
-			traits = {
-			}
 		}
 		if = {
 			limit =  {
@@ -4529,10 +4519,6 @@ country_event = {
 
 		ai_chance = {
 			base = 0
-		}
-
-		hidden_effect = {
-			
 		}	
 		GER = {
 			set_state_controller = 102
@@ -4800,7 +4786,6 @@ country_event = {
 		ai_chance = { factor = 100 }
 		
 		hidden_effect = {
-			set_technology = {  }
 			
 			
 			  load_oob = "GER_afrikakorps" 
@@ -4946,8 +4931,6 @@ country_event = {
 	picture = GFX_report_event_soldiers_marching
 	fire_only_once = yes
 	is_triggered_only = yes
-	
-	immediate = {}
 	option = { #no
 		name = germany.312.a 
 		

@@ -45,9 +45,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			modifier = {
-
-			}
 		}
 		ENG_atlantikwall_4 = {
 			picture = hol_caved_to_the_british
@@ -55,9 +52,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			modifier = {
-
-			}
 		}
 		ENG_atlantikwall_5 = {
 			picture = hol_caved_to_the_british
@@ -65,9 +59,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			modifier = {
-
-			}
 		}
 		ENG_atlantikwall_6 = {
 			picture = hol_caved_to_the_british
@@ -75,9 +66,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			modifier = {
-
-			}
 		}
 		ENG_atlantikwall_7 = {
 			picture = hol_caved_to_the_british
@@ -85,9 +73,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			modifier = {
-
-			}
 		}
 		ENG_atlantikwall_8 = {
 			picture = hol_caved_to_the_british
@@ -95,9 +80,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			modifier = {
-
-			}
 		}
 		ENG_atlantikwall_9 = {
 			picture = hol_caved_to_the_british
@@ -105,9 +87,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			modifier = {
-
-			}
 		}
 		ENG_atlantikwall_10 = {
 			picture = hol_caved_to_the_british
@@ -115,9 +94,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			modifier = {
-
-			}
 		}
 		ENG_operation_battleaxe = {
 
@@ -244,10 +220,6 @@ ideas = {
 				radio_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
-			}
-
-			modifier = {
-
 			}
 
 			picture = usa_magic
@@ -925,8 +897,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_navy_bonus
-
-			modifier ={	}
 		}
         ENG_wartime_industry_focus = {
 			allowed = {
@@ -1963,9 +1933,6 @@ ideas = {
 				always = no
 			}
 
-			available = {
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
@@ -2221,9 +2188,6 @@ ideas = {
 			}
 			modifier = { naval_manufacturer_cost_factor = -0.33 }
 			traits = { atlantic_fleet_naval_manufacturer }
-
-			modifier = {
-			}
 		}
 
 		john_brown_company = {
@@ -2318,9 +2282,6 @@ ideas = {
 
 			research_bonus = { air_equipment = 0.15 }
 			traits = { aircraft_research_trait }
-
-			modifier = {
-			}
 		}
 	}
 	materiel_manufacturer = {
@@ -2338,9 +2299,6 @@ ideas = {
 			}
 			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			traits = { infantry_equipment_manufacturer }
-
-			modifier = {
-			}
 		}
 
 		RollsRoyce = {
@@ -2354,9 +2312,6 @@ ideas = {
 			}
 			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			traits = { motorized_equipment_manufacturer }
-
-			modifier = {
-			}
 		}
 
 		royal_arsenal = {
@@ -2372,9 +2327,6 @@ ideas = {
 			}
 			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			traits = { artillery_manufacturer }
-
-			modifier = {
-			}
 		}
 	}
 	materiel_research = {
@@ -2386,9 +2338,6 @@ ideas = {
 			}
 
 			research_bonus = { infantry_weapons = 0.15 } traits = { materiel_research_trait }
-
-			modifier = {
-			}
 		}
 
 		vauxhall_research = {
@@ -2401,8 +2350,6 @@ ideas = {
 				motorized_equipment = 0.15
 			}
             traits = { motorized_research_trait }
-			modifier = {
-			}
 		}
 
 		royal_arsenal_research = {
@@ -2413,8 +2360,6 @@ ideas = {
 
 			research_bonus = { artillery = 0.15 rocketry = 0.15}
             traits = { artillery_research_trait }
-			modifier = {
-			}
 		}
 
 	}
@@ -2433,9 +2378,6 @@ ideas = {
 			}
 
 			traits = { industrial_concern }
-
-			modifier = {
-			}
 		}
 
 
@@ -2453,9 +2395,6 @@ ideas = {
 			research_bonus = {
 				industry = 0.15
 			}
-
-			modifier = {
-			}
 			traits = { industrial_research_trait }
 		}
 
@@ -2467,9 +2406,6 @@ ideas = {
 
 			research_bonus = {
 				electronics = 0.15
-			}
-
-			modifier = {
 			}
 			traits = { electronics_concern }
 		}
@@ -2638,9 +2574,6 @@ ideas = {
 
 			research_bonus = { armor = 0.15 }
 			traits = { tank_research_trait }
-
-			modifier = {
-			}
 		}
     }
 }

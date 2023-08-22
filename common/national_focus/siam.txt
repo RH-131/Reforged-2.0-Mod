@@ -46,9 +46,6 @@ focus_tree = {
 			factor = 10
 		}
 
-		bypass = {
-		}
-
 		complete_tooltip = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
@@ -83,9 +80,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2			
-		}
-
-		bypass = {
 		}
 
 		complete_tooltip = {
@@ -130,7 +124,7 @@ focus_tree = {
 				all_owned_state = {
 					free_building_slots = {
 						building = arms_factory
-						size < 1
+						size < 2
 						include_locked = yes
 					}
 				}
@@ -138,20 +132,20 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = arms_factory
-				level = 1
+				level = 2
 				instant_build = yes
 			}
 		}
 
 		completion_reward = {
 			724 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -178,7 +172,7 @@ focus_tree = {
 				all_owned_state = {
 					free_building_slots = {
 						building = industrial_complex
-						size < 1
+						size < 2
 						include_locked = yes
 					}					
 				}
@@ -186,20 +180,20 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
-				level = 1
+				level = 2
 				instant_build = yes
 			}			
 		}
 
 		completion_reward = {
 			724 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -218,12 +212,12 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 
-		bypass = {
-		}
-
 		complete_tooltip = {
 			289 = {
 				build_1_infrastructure = yes
+			}
+			868 = {
+				build_2_infrastructure = yes
 			}
 		   #Bangkok - Chiang Mai
 			build_railway = {
@@ -243,6 +237,9 @@ focus_tree = {
 		completion_reward = {
 			289 = {
 				build_1_infrastructure = yes
+			}
+			868 = {
+				build_2_infrastructure = yes
 			}
 			#Bangkok - Chiang Mai
 			build_railway = {
@@ -271,12 +268,12 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 
-		bypass = {
-		}
-
 		complete_tooltip = {
 			724 = {
 				build_1_infrastructure = yes
+			}
+			869 = {
+				build_2_infrastructure = yes
 			}
 		   #Bangkok - Hat Yai
 			build_railway = {
@@ -289,6 +286,9 @@ focus_tree = {
 		completion_reward = {
 			724 = {
 				build_1_infrastructure = yes
+			}
+			869 = {
+				build_2_infrastructure = yes
 			}
 			#Bangkok - Hat Yai
 			build_railway = {
@@ -412,17 +412,9 @@ focus_tree = {
 			controls_state = 724
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			289 = {
@@ -430,12 +422,6 @@ focus_tree = {
 					type = oil
 					amount = 10
 				}
-			}
-			724 = {
-			 add_resource = {
-			  type = oil
-			  amount = 10
-			 }
 			}
 		}
 	}
@@ -503,7 +489,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = elite_schools_focus
+			add_research_slot = 1
 		}
 	}
    
@@ -661,9 +647,8 @@ focus_tree = {
 	focus = {
 		id = SIA_tech_slot
 		icon = GFX_focus_research
-		prerequisite = { focus = SIA_heal_the_divide_2 focus = SIA_production_effort_1 }
-		available = {
-		}
+		prerequisite = { focus = SIA_production_effort_1 }
+		prerequisite = { focus = SIA_heal_the_divide_2 }
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		x = 5
@@ -709,8 +694,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = fascist_influence
-			#Increase in fascism Support
+		    add_ideas = free_trade
+			add_ideas = fascist_leanings
 		}
 	}
 	
@@ -726,6 +711,7 @@ focus_tree = {
 		}
     available_if_capitulated = yes
 	completion_reward = {
+	 add_offsite_building = { type = steel_refinery level = 1 }		
 	 add_opinion_modifier = { target = JAP modifier = offered_support } 
 				add_popularity = {
 					ideology = fascism
@@ -746,6 +732,7 @@ focus_tree = {
 		}
     available_if_capitulated = yes
 	completion_reward = {
+	 add_offsite_building = { type = steel_refinery level = 1 }		
 	 add_opinion_modifier = { target = GER modifier = offered_support } 
 				add_popularity = {
 					ideology = fascism
@@ -765,8 +752,7 @@ focus_tree = {
 	  prerequisite = { focus = SIA_strenghten_rel_ger }
 		available_if_capitulated = yes
 		completion_reward = {
-			
-			add_ideas = fascist_leanings
+			add_ideas = imperial_austerity_idea
 		}
 
     }
@@ -858,7 +844,7 @@ focus_tree = {
 		prerequisite = { focus = SIA_paramilitarism }
 		x = 12
 		y = 6
-		cost = 10
+		cost = 7.16
 		ai_will_do = {
 			factor = 5
 		}
@@ -866,7 +852,26 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = imperial_austerity_idea
+			modify_building_resources = {
+        	   building = synthetic_rubber_refinery
+        	   resource = rubber
+        	   amount = 2
+        	}
+			modify_building_resources = {
+        	   building = steel_refinery
+        	   resource = steel
+        	   amount = 2
+        	}
+			modify_building_resources = {
+        	   building = steel_refinery
+        	   resource = tungsten
+        	   amount = 1
+        	}
+			modify_building_resources = {
+        	   building = steel_refinery
+        	   resource = aluminium
+        	   amount = 1
+        	}	
 		}
 	}
 

@@ -1902,8 +1902,9 @@ focus_tree = {
 	focus = {
 		id = AST_standard_gauge_railway
 		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = AST_support_the_policy_of_appeasement }
 		x = 14
-		y = 0
+		y = 1
 
 		cost = 5
 
@@ -1964,6 +1965,7 @@ focus_tree = {
 	focus = {
 		id = AST_industries_assistance_corporation
 		icon = GFX_goal_generic_production
+		prerequisite = { focus = AST_support_the_policy_of_appeasement }
 		x = 2
 		y = 0
 		relative_position_id = AST_standard_gauge_railway
@@ -2514,8 +2516,9 @@ focus_tree = {
 	focus = {
 		id = AST_establish_advisory_war_council
 		icon = GFX_goal_generic_demand_territory
-		x = 22
-		y = 0
+		prerequisite = { focus = AST_support_the_policy_of_appeasement }
+		x = 23
+		y = 1
 
 		cost = 10
 
@@ -2530,8 +2533,7 @@ focus_tree = {
 				}
 				OR = {
 					threat > 0.20
-					ENG = { has_completed_focus = ENG_no_further_appeasement }
-					has_completed_focus = AST_Indo_pacific
+					ENG = { has_completed_focus = ENG_every_man_will_do_his_duty }
 				}
 			}
 			
@@ -3056,8 +3058,8 @@ focus_tree = {
 		id = AST_factory_reinvention_india
 		icon = GFX_RAJ_swaraj
 		mutually_exclusive = { focus = AST_factory_reinvention_south_africa }
-		x = 22
-		y = 5
+		x = 28
+		y = 6
 		
 		cost = 5
 
@@ -3173,7 +3175,7 @@ focus_tree = {
 		id = AST_support_the_policy_of_appeasement
 		mutually_exclusive = { focus = AST_Australia_First }
 		icon = GFX_goal_generic_improve_relations
-		x = 28
+		x = 30
 		y = 0
 
 		cost = 5
@@ -3586,7 +3588,7 @@ focus_tree = {
 		id = AST_Australia_First
 		icon = GFX_focus_AST_never_gallipoli
 		mutually_exclusive = { focus = AST_support_the_policy_of_appeasement }
-		x = 32
+		x = 34
 		y = 0
 
 		cost = 5
@@ -4013,6 +4015,1039 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = AST_AFTR
 			
+		}
+	}
+
+########################################################
+#Australia first eco side ###############################
+########################################################
+
+focus = {
+		id = AST_establish_advisory_war_council2
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = AST_Australia_First }
+		x = 39
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+		if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				OR = {
+					threat > 0.20
+					ENG = { has_completed_focus = ENG_no_further_appeasement }
+					has_completed_focus = AST_Indo_pacific
+				}
+			}
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = AST_national_security_act2
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = AST_establish_advisory_war_council2 }
+		x = 2
+		y = 1
+		relative_position_id = AST_establish_advisory_war_council2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AST_great_depression_1
+				add_idea = AST_great_depression_2
+			}
+		}
+	}
+
+	focus = {
+		id = AST_volunteer_defence_corps2
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = AST_establish_advisory_war_council2 }
+		x = -2
+		y = 1
+		relative_position_id = AST_establish_advisory_war_council2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = AST_convoy_idea
+		}
+	}
+
+	focus = {
+		id = AST_civil_construction_corps2
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = AST_national_security_act2 }
+		x = 4
+		y = 2
+		relative_position_id = AST_establish_advisory_war_council2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AST_great_depression_2
+				add_idea = AST_great_depression_3
+			}
+		}
+	}
+
+	focus = {
+		id = AST_invest_in_victory2
+		icon = GFX_AST_focus_icon
+		prerequisite = { focus = AST_national_security_act2 }
+		x = 0
+		y = 2
+		relative_position_id = AST_establish_advisory_war_council2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			has_war = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = AST_invest_in_victory
+		}
+	}
+
+	focus = {
+		id = AST_citizen_military_forces2
+		icon = GFX_focus_attack_australia
+		prerequisite = { focus = AST_volunteer_defence_corps2 }
+		x = -2
+		y = 2
+		relative_position_id = AST_establish_advisory_war_council2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = AST_aif_organisation_idea
+		}
+	}
+
+	focus = {
+		id = AST_fight_work_or_perish2
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = AST_civil_construction_corps2 }
+		prerequisite = { focus = AST_squash_the_squanderbugs2 }
+		x = 2
+		y = 4
+		relative_position_id = AST_establish_advisory_war_council2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#if effect is there for the tooltips sake
+			if = {
+				limit = { has_idea = AST_great_depression_1 }
+				remove_ideas = AST_great_depression_1
+				swap_ideas = {
+					remove_idea = AST_invest_in_victory_2
+					add_idea = AST_invest_in_victory_3
+				}
+			}
+			if = {
+				limit = { has_idea = AST_great_depression_2 }
+				remove_ideas = AST_great_depression_2
+				swap_ideas = {
+					remove_idea = AST_invest_in_victory_2
+					add_idea = AST_invest_in_victory_3
+				}	
+			}
+			if = {
+				limit = { has_idea = AST_great_depression_3 }
+				swap_ideas = {
+					remove_idea = AST_great_depression_3
+					add_idea = AST_invest_in_victory_3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AST_squash_the_squanderbugs2
+		icon = GFX_focus_AST_squander_bug
+		prerequisite = { focus = AST_invest_in_victory2 }
+		x = 0
+		y = 3
+		relative_position_id = AST_establish_advisory_war_council2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AST_invest_in_victory
+				add_idea = AST_invest_in_victory_2
+			}
+		}
+	}
+
+
+	focus = {
+		id = AST_classify_aliens2
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = AST_citizen_military_forces2 }
+		x = -2
+		y = 3
+		relative_position_id = AST_establish_advisory_war_council2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.2 
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.1
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = -0.1
+				}
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.1
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = -0.1
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.1
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.1
+				}
+			}
+		}
+	}
+	
+		focus = {
+		id = AST_standard_gauge_railway2
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = AST_Australia_First }
+		x = 46
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			#Melbourne - Sydney
+			build_railway = {
+				#level = 1
+				start_province = 7798
+				target_province = 7564
+			}
+			
+			521 = {
+				build_1_infrastructure = yes
+			}
+		
+
+			517 = {
+				build_1_infrastructure = yes
+			}
+		}
+
+		completion_reward = {
+			#Melbourne - Sydney
+			build_railway = {
+				#level = 1
+				start_province = 7798
+				target_province = 7564
+			}
+			
+			521 = {
+				build_1_infrastructure = yes
+				set_state_flag = AST_standard_gauge_railway_Inf1
+			}
+
+			517 = {
+				build_1_infrastructure = yes
+				set_state_flag = AST_standard_gauge_railway_Inf2
+			}
+		}
+	}
+
+	focus = {
+		id = AST_industries_assistance_corporation2
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = AST_Australia_First }
+		x = 2
+		y = 0
+		relative_position_id = AST_standard_gauge_railway2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}			
+		}
+	}
+
+	focus = {
+		id = AST_expand_the_northern_railway2
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = AST_standard_gauge_railway2 focus = AST_industries_assistance_corporation2 }
+		x = 1
+		y = 1
+		relative_position_id = AST_standard_gauge_railway2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			#Sydney - Townsville
+			build_railway = {
+				#level = 1
+				start_province = 12406
+				target_province = 7564
+			}
+			#Townsville - Darwin
+			build_railway = {
+				#level = 1
+				start_province = 7566
+				target_province = 7669
+			}
+			
+			random_state = {
+				limit = {
+					has_state_flag = AST_expand_the_northern_railway_Inf
+				}
+				build_1_infrastructure = yes
+			}
+		}
+
+		completion_reward = {
+			#Sydney - Townsville
+			build_railway = {
+				#level = 1
+				start_province = 12406
+				target_province = 7564
+			}
+			#Townsville - Darwin
+			build_railway = {
+				#level = 1
+				start_province = 7566
+				target_province = 7669
+			}
+			
+			520 = {
+				build_1_infrastructure = yes
+				set_state_flag = AST_expand_the_northern_railway_Inf
+			}
+			521 = {
+				build_1_infrastructure = yes
+				set_state_flag = AST_expand_the_northern_railway_Inf
+			}
+		}
+	}
+
+	focus = {
+		id = AST_south_australian_housing_trust2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = AST_expand_the_northern_railway2 }
+		x = 2
+		y = 2
+		relative_position_id = AST_standard_gauge_railway2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = AST_south_australian_housing_trust_IC
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 519 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = AST_south_australian_housing_trust_IC
+			}
+		}
+	}
+
+	focus = {
+		id = AST_department_of_supply_and_development2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = AST_expand_the_northern_railway2 }
+		x = 0
+		y = 2
+		relative_position_id = AST_standard_gauge_railway2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = AST_department_of_supply_and_development_AF
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 285 517 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = AST_department_of_supply_and_development_AF
+			}
+		}
+	}
+
+	focus = {
+		id = AST_expand_lithgow_small_arms_factory2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = AST_south_australian_housing_trust2 }
+		x = 2
+		y = 3
+		relative_position_id = AST_standard_gauge_railway2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = AST_expand_lithgow_small_arms_factory_AF
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 285 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = AST_expand_lithgow_small_arms_factory_AF
+			}
+		}
+	}
+
+	focus = {
+		id = AST_allied_works_council2
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = AST_department_of_supply_and_development2 }
+		prerequisite = { focus = AST_civil_construction_corps2 }
+		x = 0
+		y = 3
+		relative_position_id = AST_standard_gauge_railway2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = AST_allied_works_council_IC1
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = {
+					has_state_flag = AST_allied_works_council_IC2
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {					
+					is_in_home_area = yes					
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = AST_allied_works_council_IC1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes					
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = AST_allied_works_council_IC2
+			}
+		}
+	}
+
+	focus = {
+		id = AST_western_australian_government_railways2
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = AST_expand_lithgow_small_arms_factory2 }
+		x = 2
+		y = 4
+		relative_position_id = AST_standard_gauge_railway2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			#Adelaide - Perth
+			build_railway = {
+				#level = 1
+				start_province = 12910
+				target_province = 1652
+			}
+			
+			random_state = {
+				limit = {
+					has_state_flag = AST_western_australian_government_railways_Inf1
+				}
+				build_1_infrastructure = yes
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					has_state_flag = AST_western_australian_government_railways_Inf2
+				}
+				build_2_infrastructure = yes
+			}
+		}
+
+		completion_reward = {
+			#Adelaide - Perth
+			build_railway = {
+				#level = 1
+				start_province = 12910
+				target_province = 1652
+			}
+			
+			522 = {
+				build_1_infrastructure = yes
+				set_state_flag = AST_western_australian_government_railways_Inf1
+			}
+
+			519 = {
+				build_2_infrastructure = yes
+				set_state_flag = AST_western_australian_government_railways_Inf2
+			}
+		}
+	}
+
+	focus = {
+		id = AST_australian_arms_production2
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = AST_allied_works_council2 }
+		x = 0
+		y = 4
+		relative_position_id = AST_standard_gauge_railway2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_offsite_building = { type = steel_refinery level = 3 }
+			}
+		}
+	
+	focus = {
+		id = AST_mining
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = AST_western_australian_government_railways2 }
+		prerequisite = { focus = AST_australian_arms_production2 }
+		x = 0
+		y = 5
+		relative_position_id = AST_standard_gauge_railway2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {	
+			modify_building_resources = {
+        	   building = steel_refinery
+        	   resource = steel
+        	   amount = 5
+			}
+		}
+	}
+	
+	focus = {
+		id = AST_army_inventions_directorate2
+		icon = GFX_focus_research
+		prerequisite = { focus = AST_establish_advisory_war_council2 }
+		x = 0
+		y = 1
+		relative_position_id = AST_establish_advisory_war_council2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = AST_mobilie
+		icon = GFX_Focus_Military_Mobilisation
+		prerequisite = { focus = AST_national_security_act2 }
+		x = 0
+		y = 1
+		relative_position_id = AST_national_security_act2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			date > 1938.8.1
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = partial_economic_mobilisation 
+			add_ideas = limited_conscription
+			add_stability = -0.1
+			add_war_support = 0.2
 		}
 	}
 }

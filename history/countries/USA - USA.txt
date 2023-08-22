@@ -196,9 +196,6 @@ if = {
 	add_ideas = MTG_naval_treaty_adherent
 }
 
-#Monroe Doctrine
-give_guarantee = PAR
-
 add_to_tech_sharing_group = MEX_USA_tech_group
 
 
@@ -355,14 +352,8 @@ if = {
 		autonomous_state = autonomy_colony
 		freedom_level = 0.1
 	}
-	set_autonomy = {
-		target = MEX
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.4
-	}
 	else = {
 		puppet = PHI
-		puppet = MEX
 
 	}
 }

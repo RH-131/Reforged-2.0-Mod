@@ -203,7 +203,6 @@ on_actions = {
 						}
 						random_list = {
 							15 = { add_unit_leader_trait = operative_escape_artist }
-							85 = {}
 						}
 					}
 				}
@@ -218,7 +217,6 @@ on_actions = {
 					}
 					random_list = {
 						20 = { add_nationality = FROM }
-						80 = {}
 					}
 				}
 			}
@@ -282,24 +280,23 @@ on_actions = {
 	}
 
 	# ROOT is capitulated country, FROM is winner
-	on_capitulation = {
-		effect = {
-		}
-	}
+	# on_capitulation = {
+	#
+	# }
 
 	# called a country fully decrypts cipher of a target country
 	# scope is the target country that its cipher is decrypted
 	# from scope is the decrypter country
-	on_fully_decrypted_cipher = {
-
-	}
+	#on_fully_decrypted_cipher = {
+	#
+	#}
 
 	# called when a country activates its active cipher bonuses against a target
 	# scope is the target country
 	# from scope is the country that activates its bonuses
-	on_activated_active_decryption_bonuses = {
-
-	}
+	#on_activated_active_decryption_bonuses = {
+	#
+	#}
 
 	#ROOT is winner #FROM gets annexed - This fires just before FROM gets annexed, meaning the country and everything it owns still exists. It will also fire on_annex and on_civil_war_end
 	on_civil_war_end_before_annexation = {

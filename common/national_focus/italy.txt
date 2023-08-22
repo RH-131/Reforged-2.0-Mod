@@ -23,29 +23,26 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-		bypass = {
-			
-		}
 
 		completion_reward = {
-				550 = {
-					build_2_infrastructure = yes
-					add_building_construction = {
-						type = naval_base
-						level = 3
-						province = 12766
-						instant_build = yes
-					}
+			550 = {
+				build_2_infrastructure = yes
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					province = 12766
+					instant_build = yes
 				}
-				559 = {
-					build_2_infrastructure = yes
-					add_building_construction = {
-						type = naval_base
-						level = 4
-						province = 12941
-						instant_build = yes
-					}
+			}
+			559 = {
+				build_2_infrastructure = yes
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					province = 12941
+					instant_build = yes
 				}
+			}
 			#Mogadishu - Addis Ababa
 			build_railway = {
 				level = 1
@@ -68,9 +65,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		available = {
-		}
 		continue_if_invalid = yes
 		completion_reward = {
 		army_experience = 250
@@ -105,8 +99,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
         continue_if_invalid = yes
-		available = {
-		}
 		completion_reward = {
 		army_experience = 200
 		air_experience = 100
@@ -129,8 +121,6 @@ focus_tree = {
 		id = ITA_victoryinETH
 		icon = GFX_ITA_Empire
 		prerequisite = { focus = ITA_victory_by_any_means focus = ITA_learn_from_the_ethiopian_war }
-		available = {
-		}
 		available_if_capitulated = yes
 		x = 14
 		y = 2
@@ -165,70 +155,68 @@ focus_tree = {
 			factor = 5
 		}	
 		available_if_capitulated = yes
+
+		complete_tooltip = {
+			navy_experience = 50
+			random_state = {
+				limit = { has_state_flag = ITA_regia_marina_2DY }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = ITA_regia_marina_1DY }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = naval_doctrine_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
 		completion_reward = {
 			navy_experience = 50
 			random_owned_controlled_state = {
 				limit = {
-					dockyard > 0
 					free_building_slots = {
 						building = dockyard
 						size > 1
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 2
 					instant_build = yes
 				}
+				set_state_flag = ITA_regia_marina_2DY
 			}
-
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					NOT = {
-						any_owned_state = {
-							dockyard > 0
-							free_building_slots = {
-								building = dockyard
-								size > 0
-								include_locked = yes
-							}
-						}
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
 					}
 				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
-				}				
+				set_state_flag = ITA_regia_marina_1DY
 			}
-
 			add_doctrine_cost_reduction = {
 				name = naval_doctrine_bonus
 				cost_reduction = 0.5
@@ -679,17 +667,37 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
+
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_air_armaments_3AF }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
 			
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 159 }
-					add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = arms_factory
-							level = 3
-							instant_build = yes
-						}
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
 					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ITA_air_armaments_3AF
+			}
 		}
 	}
 	focus = {
@@ -757,16 +765,42 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_Regio_Esercito_4AF }
+				add_extra_state_shared_building_slots = 4 
+				add_building_construction = {
+					type = arms_factory
+					level = 4 
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			set_technology = { bicycle_infantry = 1 }
+		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 161 }
-					add_extra_state_shared_building_slots = 4 
-						add_building_construction = {
-							type = arms_factory
-							level = 4 
-							instant_build = yes
-						}
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4 
+				add_building_construction = {
+					type = arms_factory
+					level = 4 
+					instant_build = yes
+				}
+				set_state_flag = ITA_Regio_Esercito_4AF
 			}
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -793,13 +827,12 @@ focus_tree = {
 
 
 		completion_reward = {
-		add_tech_bonus = {
+			add_tech_bonus = {
 				name = arty_bonus
 				bonus = 1.0
 				uses = 2
 				category = artillery
 			}
-			
 		}
 	}
 	focus = {
@@ -838,6 +871,28 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+			random_state = {
+				limit = { has_state_flag = ITA_Expand_Northern_Italy_weapons_manifactures_target }
+				add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -848,17 +903,30 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				prioritize = { 161 }
-					add_extra_state_shared_building_slots = 5
-						add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
 					}
-						add_building_construction = {
-							type = arms_factory
-							level = 3
-							instant_build = yes
-						}
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ITA_Expand_Northern_Italy_weapons_manifactures_target
 			}
 		}
 	}
@@ -876,7 +944,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		
 			add_tech_bonus = {
 				name = special_bonus
 				Bonus = 1.0
@@ -889,7 +956,6 @@ focus_tree = {
 				uses = 2
 				category = support_tech
 			}
-			
 		}
 	}
 	focus = {
@@ -910,17 +976,9 @@ focus_tree = {
 			GER = { has_full_control_of_state = 4 }
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_to_tech_sharing_group = axis_research
@@ -941,9 +999,6 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 		available = { is_in_faction_with = GER }
-		bypass = {
-			
-		}
 
 		completion_reward = {
 			GER = {
@@ -1162,10 +1217,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 30
 		}
-  
-		bypass = {
-
-		}
 		available_if_capitulated = no
 
 		available = {
@@ -1194,10 +1245,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = rodolfo_graziani
@@ -1222,10 +1269,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = alfredo_guzzoni
@@ -1246,10 +1289,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_Divisione_di_fanteria_pesante_unit_tt
@@ -1308,30 +1347,6 @@ focus_tree = {
 						owner = ITA
 					}
 			}
-			if = {
-				limit = {
-						is_ai = yes 
-					}
-				random_owned_controlled_state = {
-						prioritize = { 2 }
-						create_unit = {
-						division = "name = \"Divisione di Fanteria Pesante\" division_template = \"Divisione di Fanteria Pesante\" start_experience_factor = 1.5 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione di Fanteria Pesante\" division_template = \"Divisione di Fanteria Pesante\" start_experience_factor = 1.5 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione di Fanteria Pesante\" division_template = \"Divisione di Fanteria Pesante\" start_experience_factor = 1.5 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione di Fanteria Pesante\" division_template = \"Divisione di Fanteria Pesante\" start_experience_factor = 1.5 start_equipment_factor = 1.0" 
-						owner = ITA
-					}		
-				}
-			}
 		}
 	}
 	focus = {
@@ -1346,10 +1361,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -1395,10 +1406,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = giovanni_messe
@@ -1430,10 +1437,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = available_military_high_command
@@ -1499,47 +1502,23 @@ focus_tree = {
 					}
 				}
 			}
-		random_owned_controlled_state = {
-					prioritize = { 2 }
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}
-			}
-			if = {
-				limit = {
-						is_ai = yes 
-					}
-				random_owned_controlled_state = {
-						prioritize = { 2 }
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}		
+			random_owned_controlled_state = {
+				prioritize = { 2 }
+				create_unit = {
+					division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+					owner = ITA
+				}	
+				create_unit = {
+					division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+					owner = ITA
+				}	
+				create_unit = {
+					division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+					owner = ITA
+				}	
+				create_unit = {
+					division = "name = \"Divisione motorizzata\" division_template = \"Divisione motorizzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+					owner = ITA
 				}
 			}
 		}
@@ -1579,10 +1558,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		completion_reward = {
         	modify_building_resources = {
@@ -1713,34 +1688,68 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_The_industrial_triangle_3IC}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { has_state_flag = ITA_The_industrial_triangle_2IC}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = construction_tech_bonus
+				bonus = 0.5
+				uses = 2
+				category = construction_tech
+			}
 		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 159 }
-					limit = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
 					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = industrial_complex
-						level = 3
-						instant_build = yes
-					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ITA_The_industrial_triangle_3IC
 			}
 			random_owned_controlled_state = {
 				prioritize = { 158 }
-					limit = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
 					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = ITA_The_industrial_triangle_2IC
 			}
-			
 			add_tech_bonus = {
 				name = construction_tech_bonus
 				bonus = 0.5
@@ -1781,19 +1790,50 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_Expand_ILVA_and_IRI_4IC }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 40
+				state = 156
+			}
+			add_tech_bonus = {
+				name = construction_tech_bonus
+				bonus = 1
+				uses = 5
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 156 }
-					limit = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+						include_locked = yes
 					}
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = industrial_complex
-						level = 4
-						instant_build = yes
-					}
-					
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = ITA_Expand_ILVA_and_IRI_4IC
 			}
 			add_resource = {
 				type = steel
@@ -1825,19 +1865,35 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_Dockyards_effort_4DY }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
 		}
 
 		completion_reward = {						
 			random_owned_controlled_state = {
 				prioritize = { 2 }
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = dockyard
-						level = 4
-						instant_build = yes
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 3
+						include_locked = yes
 					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = ITA_Dockyards_effort_4DY
 			}
 			
 		}
@@ -1856,23 +1912,42 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
+		complete_tooltip = {
+		    custom_effect_tooltip = available_naval_designer
+			show_ideas_tooltip = ansaldo_navy
+			random_state = {
+				limit = { has_state_flag = ITA_Prioritise_naval_industry_3DY }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_ideas = navy_prioritised
 		}
 
 		completion_reward = {
 		    custom_effect_tooltip = available_naval_designer
-                show_ideas_tooltip = ansaldo_navy
-			add_ideas = navy_prioritised
+			show_ideas_tooltip = ansaldo_navy
 			random_owned_controlled_state = {
 				prioritize = { 2 }
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
 					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ITA_Prioritise_naval_industry_3DY
 			}
+			add_ideas = navy_prioritised
 		}
 	}
 	focus = {
@@ -1888,13 +1963,9 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = available_tank_designer
-                show_ideas_tooltip = ansaldo_tank
+			show_ideas_tooltip = ansaldo_tank
 			add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1.0
@@ -1959,34 +2030,16 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-					prioritize = { 2 }
-					create_unit = {
-						division = "name = \"Divisione corazzata\" division_template = \"Divisione corazzata\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione corazzata\" division_template = \"Divisione corazzata\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
+				prioritize = { 2 }
+				create_unit = {
+					division = "name = \"Divisione corazzata\" division_template = \"Divisione corazzata\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
+					owner = ITA
+				}	
+				create_unit = {
+					division = "name = \"Divisione corazzata\" division_template = \"Divisione corazzata\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
+					owner = ITA
+				}	
 			}
-			if = {
-				limit = {
-						is_ai = yes 
-					}
-				random_owned_controlled_state = {
-						prioritize = { 2 }
-					create_unit = {
-						division = "name = \"Divisione corazzata\" division_template = \"Divisione corazzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-					create_unit = {
-						division = "name = \"Divisione corazzata\" division_template = \"Divisione corazzata\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
-						owner = ITA
-					}	
-	
-				}
-			}
-			
 		}
 	}
 	
@@ -2003,19 +2056,35 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_Increase_factory_output_4AF }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
 		}
 
 		completion_reward = {			
 			random_owned_controlled_state = {
 				prioritize = { 157 }
-					add_extra_state_shared_building_slots = 4
-						add_building_construction = {
-							type = arms_factory
-							level = 4
-							instant_build = yes
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
 					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = ITA_Increase_factory_output_4AF
 			}
 		}
 	}
@@ -2028,17 +2097,53 @@ focus_tree = {
 		y = 8 
 		cost = 7.145
 		available = { has_war = yes }
-	
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = ITA_industrial_war_effort_3AF}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
 		
 		completion_reward = { 
 			random_owned_controlled_state = {
-				prioritize = { 161 }
-					add_extra_state_shared_building_slots = 6
-					add_building_construction = {
-						type = arms_factory
-						level = 6
-						instant_build = yes
+				prioritize = { 159 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
 					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ITA_industrial_war_effort_3AF
+			}
+			random_owned_controlled_state = {
+				prioritize = { 161 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ITA_industrial_war_effort_3AF
 			}
 		}
 	}
@@ -2175,10 +2280,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			448 = {
 				add_extra_state_shared_building_slots = 2
@@ -2228,10 +2329,6 @@ focus_tree = {
 					}
 				}
 			}
-		}
-
-		bypass = {
-			
 		}
 
 		completion_reward = {
@@ -2359,10 +2456,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = italo_balbo_pol
@@ -2380,10 +2473,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2478,10 +2567,6 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			add_resource = {
 				type = oil
@@ -2526,10 +2611,6 @@ focus_tree = {
 			}
 		}
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		completion_reward = {
 
@@ -2719,10 +2800,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
-		}
-
 		completion_reward = {
 			add_political_power = 100
 			add_tech_bonus = {
@@ -2744,10 +2821,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			
-		}
 
 		completion_reward = {
 		add_popularity = { ideology = fascism popularity = 0.05 }
@@ -2848,19 +2921,42 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ITA_Hitler_visits_Rome_4IC }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			ITA = {
+				add_ideas = ITA_iron_alliance
+			}
+			GER = {
+				add_ideas = GER_iron_alliance
+			}
 		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 2 }
-					add_extra_state_shared_building_slots = 4
-						add_building_construction = {
-							type = industrial_complex
-							level = 4
-							instant_build = yes
-						}
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = ITA_Hitler_visits_Rome_4IC
 			}
 			ITA = {
 				add_ideas = ITA_iron_alliance
@@ -2967,63 +3063,15 @@ focus_tree = {
 				add_idea = parola_di_ordine_vincere
 			}	
 			ITA = {
-				declare_war_on = {
-					target = ENG
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = CAN
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = SAF
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = FRA
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = AST
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = RAJ
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = NZL
-					type = annex_everything
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = ENG
 				}
 		    }
 			ETH = {
-				declare_war_on = {
-					target = ENG
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = CAN
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = SAF
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = FRA
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = AST
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = RAJ
-					type = annex_everything
-				}
-				declare_war_on = {
-					target = NZL
-					type = annex_everything
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = ENG
 				}
 		    } 			
         	hidden_effect = {
@@ -3101,12 +3149,15 @@ focus_tree = {
 				limit = {
 					is_ai = no
 				}
-				ITA = {
-					declare_war_on = {
-						target = GRE
-						type = annex_everything
+				GRE = {
+					add_to_war = {
+						targeted_alliance = ENG
+						enemy = GER
 					}
-				} 
+				}
+				ENG = {
+					add_to_faction = GRE
+				}
 			}
 
 			hidden_effect = {
@@ -3141,12 +3192,15 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			ITA = {
-				declare_war_on = {
-					target = YUG
-					type = annex_everything
+			YUG = {
+				add_to_war = {
+					targeted_alliance = ENG
+					enemy = GER
 				}
-		    } 
+			}
+			ENG = {
+				add_to_faction = YUG
+			}
 
 			hidden_effect = {
 				news_event = { hours = 6 id = news.192 }

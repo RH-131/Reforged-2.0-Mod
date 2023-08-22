@@ -12,36 +12,7 @@ HOL_obtain_foreign_colonial_investments = {
 			OR = {
 				has_idea = export_focus
 				has_idea = free_trade
-				is_in_faction_with = USA
-				is_in_faction_with = ENG
-				is_in_faction_with = JAP
 			}
-			has_war = no
-			OR = {
-				USA = { has_war = no }
-				ENG = { has_war = no }
-				JAP = { has_war = no }
-			}
-			695 = {
-				controller = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-					has_full_control_of_state = PREV
-				}
-			}
-			309 = {
-				controller = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-					has_full_control_of_state = PREV
-				}
-			}
-			has_full_control_of_state = 309
-			has_full_control_of_state = 695
 		}
 
 		cost = 50
@@ -59,12 +30,6 @@ HOL_obtain_foreign_colonial_investments = {
 			has_completed_focus = HOL_obtain_foreign_colonial_investments
 		}
 
-		remove_effect = {
-		}
-
-		complete_effect = {
-		}
-
 	}
 
 	HOL_attract_foreign_industry = {
@@ -79,36 +44,7 @@ HOL_obtain_foreign_colonial_investments = {
 			OR = {
 				has_idea = export_focus
 				has_idea = free_trade
-				is_in_faction_with = USA
-				is_in_faction_with = ENG
-				is_in_faction_with = JAP
 			}
-			has_war = no
-			OR = {
-				USA = { has_war = no }
-				ENG = { has_war = no }
-				JAP = { has_war = no }
-			}
-			309 = {
-				controller = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-					has_full_control_of_state = PREV
-				}
-			}
-			695 = {
-				controller = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-					has_full_control_of_state = PREV
-				}
-			}
-			has_full_control_of_state = 309
-			has_full_control_of_state = 695
 		}
 
 		cost = 50
@@ -126,12 +62,6 @@ HOL_obtain_foreign_colonial_investments = {
 			has_completed_focus = HOL_obtain_foreign_colonial_investments
 		}
 
-		remove_effect = {
-		}
-
-		complete_effect = {
-		}
-
 	}
 
 	HOL_attract_west_indies_oil_companies = {
@@ -146,12 +76,7 @@ HOL_obtain_foreign_colonial_investments = {
 			OR = {
 				has_idea = export_focus
 				has_idea = free_trade
-				is_in_faction_with = USA
-				is_in_faction_with = ENG
 			}
-			NOT = { has_war_with = USA }
-			NOT = { has_war_with = ENG }
-			HOL = { has_full_control_of_state = 800 }
 		}
 
 		cost = 20
@@ -201,9 +126,6 @@ HOL_obtain_foreign_colonial_investments = {
 			add_to_variable = { var = west_indies_oil value = 1 }
 		}
 
-		complete_effect = {
-		}
-
 	}
 
 	HOL_attract_east_indies_oil_companies = {
@@ -218,11 +140,7 @@ HOL_obtain_foreign_colonial_investments = {
 			OR = {
 				has_idea = export_focus
 				has_idea = free_trade
-				is_in_faction_with = USA
-				is_in_faction_with = ENG
 			}
-			NOT = { has_war_with = USA }
-			NOT = { has_war_with = ENG }
 		}
 
 		cost = 10
@@ -237,7 +155,7 @@ HOL_obtain_foreign_colonial_investments = {
 		}
 
 		remove_effect = {
-			309 = {
+			689 = {
 				add_resource = {
 					type = oil
 					amount = 1
@@ -255,7 +173,7 @@ HOL_obtain_foreign_colonial_investments = {
 				limit = {
 					check_variable = { var = east_indies_oil value = 2 compare = equals }
 				}
-				669 = {
+				689 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -268,7 +186,7 @@ HOL_obtain_foreign_colonial_investments = {
 				limit = {
 					check_variable = { var = east_indies_oil value = 5 compare = equals }
 				}
-				669 = {
+				689 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -281,7 +199,7 @@ HOL_obtain_foreign_colonial_investments = {
 				limit = {
 					check_variable = { var = east_indies_oil value = 9 compare = equals }
 				}
-				669 = {
+				689 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -297,9 +215,6 @@ HOL_obtain_foreign_colonial_investments = {
 				set_variable = { var = east_indies_oil value = 0 }
 			}
 			add_to_variable = { var = east_indies_oil value = 1 }
-		}
-
-		complete_effect = {
 		}
 
 	}
@@ -483,10 +398,6 @@ HOL_secret_staff_talks = {
 			tag = HOL
 		}
 
-		available = {
-
-		}
-
 		targets = { FRA }
 
 		target_trigger = {
@@ -590,10 +501,6 @@ HOL_secret_staff_talks = {
 			tag = HOL
 		}
 
-		available = {
-
-		}
-
 		targets = { FRA }
 
 		target_trigger = {
@@ -626,12 +533,12 @@ HOL_secret_staff_talks = {
 			FROM = { country_event = { id = mtg_netherlands.41 hours = 6 } }
 			FROM = { army_experience = -15 }
 			effect_tooltip = {
-				add_tech_bonus = {
-					name = HOL_secret_staff_talks
-					bonus = 1.00
-					uses = 2
-					category = land_doctrine
-				}
+			add_doctrine_cost_reduction = {
+				name = HOL_secret_staff_talks
+				cost_reduction = 0.50
+				uses = 2
+				category = land_doctrine
+			}
 			}
 			custom_effect_tooltip = HOL_request_equipment_tt_2
 		}	
@@ -675,12 +582,6 @@ HOL_request_allied_favors = {
 			resistance_growth_on_our_occupied_states = 0.5 
 		}
 
-		complete_effect = {
-		}
-
-		remove_effect = {
-		}
-
 	}
 
 	HOL_obtain_dockyard_access = {
@@ -705,12 +606,6 @@ HOL_request_allied_favors = {
 			tag = HOL
 			has_completed_focus = HOL_request_allied_favors
 			check_variable = { var = obtain_dockyard_counter value = 2 compare = less_than }
-		}
-
-		modifier = {
-		}
-
-		complete_effect = {
 		}
 
 		remove_effect = {
@@ -751,17 +646,11 @@ HOL_request_allied_favors = {
 			has_completed_focus = HOL_request_allied_favors
 		}
 
-		modifier = {
-		}
-
-		complete_effect = {
-		}
-
 		remove_effect = {
 			add_equipment_to_stockpile = {
-			    type = fighter_equipment
-			    amount = 50
-			    producer = FRA
+				type = small_plane_airframe
+				producer = USA
+				amount = 50
 			}
 		}
 
@@ -792,27 +681,21 @@ HOL_request_allied_favors = {
 			has_completed_focus = HOL_request_allied_favors
 		}
 
-		modifier = {
-		}
-
-		complete_effect = {
-		}
-
 		remove_effect = {
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment
 			    amount = 1000
-			    producer = FRA
+			    producer = USA
 			}
 			add_equipment_to_stockpile = {
 			    type = support_equipment
 			    amount = 100
-			    producer = FRA
+			    producer = USA
 			}
 			add_equipment_to_stockpile = {
 			    type = artillery_equipment
 			    amount = 100
-			    producer = FRA
+			    producer = USA
 			}
 		}
 
@@ -840,12 +723,6 @@ HOL_request_allied_favors = {
 			tag = HOL
 			has_completed_focus = HOL_request_allied_favors
 			check_variable = { var = british_industrialists_counter value = 3 compare = less_than }
-		}
-
-		modifier = {
-		}
-
-		complete_effect = {
 		}
 
 		remove_effect = {
@@ -891,12 +768,6 @@ HOL_request_allied_favors = {
 			weekly_manpower = 1000
 		}
 
-		complete_effect = {
-		}
-
-		remove_effect = {
-		}
-
 	}
 
 }
@@ -923,7 +794,7 @@ operations = {
 		}
 
 		complete_effect = {
-			set_capital = { state = 800 }
+			set_capital = { state = 309 }
 			add_equipment_to_stockpile = {
 				type = convoy
 				amount = 150

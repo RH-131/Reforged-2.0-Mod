@@ -767,7 +767,7 @@ technologies = {
 			leads_to_tech = sup_delay
 			research_cost_coeff = 1
 		}
-		max_planning = -0.15
+		max_planning = -0.10
         category_army = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -1031,11 +1031,11 @@ technologies = {
 		}
 		light_sp_artillery_brigade =
 		{
-			breakthrough = 1.0
+			breakthrough = 0.4
 		}
 		medium_sp_artillery_brigade =
 		{
-			breakthrough = 0.5
+			breakthrough = 0.4
 		}
 		heavy_sp_artillery_brigade =
 		{
@@ -1241,7 +1241,7 @@ technologies = {
 
 		#combat advantage when air superior
 		army_bonus_air_superiority_factor = 0.15
-		air_cas_present_factor = 0.15
+		air_cas_present_factor = 0.50
 
 		xp_research_type = army
 		xp_unlock_cost = 150

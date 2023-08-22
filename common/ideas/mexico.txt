@@ -129,10 +129,6 @@ ideas = {
 				always = no
 			}
 
-			allowed_civil_war = {
-				
-			}
-
 			removal_cost = -1
 			
 			modifier = {
@@ -145,10 +141,6 @@ ideas = {
 			
 			allowed = {
 				always = no
-			}
-
-			allowed_civil_war = {
-				
 			}
 
 			removal_cost = -1
@@ -1005,9 +997,6 @@ ideas = {
 				has_dlc = "Man the Guns"
 			}
 			
-			available = {
-			}
-			
 			research_bonus = {
 				armor = -0.05
 			}
@@ -1035,9 +1024,6 @@ ideas = {
 			allowed = {
 				original_tag = MEX
 				has_dlc = "Man the Guns"
-			}
-			
-			available = {
 			}
 			
 			research_bonus = {
@@ -1105,9 +1091,6 @@ ideas = {
 			allowed = {
 				original_tag = MEX
 				has_dlc = "Man the Guns"
-			}
-			
-			available = {
 			}
 			
 			research_bonus = {
@@ -1185,9 +1168,6 @@ ideas = {
 			}
 			
 			traits = { raiding_fleet_naval_manufacturer }
-			
-			modifier = {
-			}
 		}
 		
 		MEX_astimar_pacific = {
@@ -1206,9 +1186,6 @@ ideas = {
 			}
 			
 			traits = { pacific_fleet_naval_manufacturer }
-			
-			modifier = {
-			}
 		}
 	}
 	
@@ -1226,8 +1203,8 @@ ideas = {
 			}
 			
 			equipment_bonus = {
-			    fighter_equipment = { maximum_speed = 0.1 air_range = 0.1 build_cost_ic = -0.1 }
-				heavy_fighter_equipment = { maximum_speed = 0.1 build_cost_ic = -0.1 }			
+			    small_plane_airframe = { maximum_speed = 0.1 air_range = 0.1 build_cost_ic = -0.1 }
+				medium_plane_fighter_airframe = { maximum_speed = 0.1 build_cost_ic = -0.1 }			
 			}
 			
 			research_bonus = {
@@ -1235,9 +1212,6 @@ ideas = {
 			}
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
 			traits = { medium_aircraft_manufacturer }
-			
-			modifier = {
-			}
 		}
 		
 		MEX_tnca = {
@@ -1398,9 +1372,6 @@ ideas = {
 			}
 			
 			traits = { infantry_equipment_manufacturer }
-			
-			modifier = {
-			}
 		}
 	
 		comesa = {
@@ -1421,9 +1392,6 @@ ideas = {
 			}
 			
 			traits = { artillery_manufacturer }
-			
-			modifier = {
-			}
 		}
 		
 		mexican_ford = {
@@ -1439,9 +1407,6 @@ ideas = {
 			}
 			
 			traits = { motorized_equipment_manufacturer }
-			
-			modifier = {
-			}
 		}
 	}
 }

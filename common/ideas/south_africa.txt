@@ -539,47 +539,47 @@ ideas = {
 			picture = generic_air_bonus
 
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					air_range = 0.1
 					air_attack = 0.05
 					instant = yes
 				}
-				cv_fighter_equipment = {
+				cv_small_plane_airframe = {
 					air_range = 0.1
 					air_attack = 0.05
 					instant = yes
 				}
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					air_range = 0.1
 					air_ground_attack = 0.05
 					instant = yes
 				}
-				cv_CAS_equipment = {
+				cv_small_plane_cas_airframe = {
 					air_range = 0.1
 					air_ground_attack = 0.05
 					instant = yes
 				}
-				cv_nav_bomber_equipment = {
+				cv_small_plane_naval_bomber_airframe = {
 					air_range = 0.1
 					naval_strike_attack = 0.05
 					instant = yes
 				}
-				nav_bomber_equipment = {
+				small_plane_naval_bomber_airframe = {
 					air_range = 0.1
 					naval_strike_attack = 0.05
 					instant = yes
 				}
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					air_range = 0.1
 					air_ground_attack = 0.05
 					instant = yes
 				}
-				heavy_fighter_equipment = {
+				medium_plane_fighter_airframe = {
 					air_range = 0.1
 					air_attack = 0.05
 					instant = yes
 				}
-				strat_bomber_equipment = {
+				large_plane_airframe = {
 					air_range = 0.1
 					air_bombing = 0.05
 					instant = yes
@@ -773,7 +773,7 @@ ideas = {
 
 			modifier = {
 				production_speed_buildings_factor = 0.075
-				production_factory_max_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.07
 				production_factory_efficiency_gain_factor = 0.05
 				global_building_slots_factor = 0.1
 			}
@@ -835,7 +835,7 @@ ideas = {
 			picture = man_five_year_plan_industry
 
 			modifier = {
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.10
 				production_speed_infrastructure_factor = 0.15
 				production_speed_steel_refinery_factor = 0.15
 				production_speed_synthetic_rubber_refinery_factor = 0.15
@@ -893,10 +893,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_artillery_regiments
-
-			modifier = {
-
-			}
 			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.1 instant = yes
@@ -1234,10 +1230,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = man_five_year_plan_air
-
-			modifier = {
-
-			}
 			equipment_bonus = {
 				fighter_equipment = {
 					build_cost_ic = -0.1 instant = yes
@@ -1263,10 +1255,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = man_five_year_plan_tank
-
-			modifier = {
-
-			}
 			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.15 instant = yes
@@ -1372,10 +1360,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = jap_supremacy_of_technology
-
-			modifier = {
-
-			}
 			research_bonus = { armor = 0.1 }
 			research_bonus = { air_equipment = 0.1 }
 			research_bonus = { motorized_equipment = 0.1 }
@@ -1785,10 +1769,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = jap_supremacy_of_technology
-
-			modifier = {
-
-			}
 			research_bonus = { infantry_weapons = 0.05 }
 		}
 
@@ -1804,10 +1784,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = jap_supremacy_of_technology
-
-			modifier = {
-
-			}
 			research_bonus = { armor = 0.05 }
 		}
 
@@ -1823,10 +1799,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = jap_supremacy_of_technology
-
-			modifier = {
-
-			}
 			research_bonus = { air_equipment = 0.05 }
 		}
 
@@ -1842,10 +1814,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = jap_supremacy_of_technology
-
-			modifier = {
-
-			}
 			research_bonus = { naval_equipment = 0.05 }
 		}
 
@@ -1861,10 +1829,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = jap_supremacy_of_technology
-
-			modifier = {
-
-			}
 			research_bonus = { artillery = 0.05 }
 		}
 
@@ -1880,10 +1844,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = jap_supremacy_of_technology
-
-			modifier = {
-
-			}
 			research_bonus = { industry = 0.05 }
 		}
 
@@ -1899,10 +1859,6 @@ ideas = {
 			removal_cost = -1
 
 			picture = jap_supremacy_of_technology
-
-			modifier = {
-
-			}
 			research_bonus = { electronics = 0.05 }
 		}
 
@@ -2148,9 +2104,6 @@ ideas = {
 
 			picture = generic_naval_manufacturer_2
 
-			available = {
-			}
-
 			research_bonus = {
 				naval_equipment = -0.05
 			}
@@ -2168,9 +2121,6 @@ ideas = {
 
 			picture = generic_naval_manufacturer_2
 
-			available = {
-			}
-
 			research_bonus = {
 				naval_equipment = -0.05
 			}
@@ -2187,9 +2137,6 @@ ideas = {
 			}
 
 			picture = generic_naval_manufacturer_2
-
-			available = {
-			}
 
 			research_bonus = {
 				naval_equipment = -0.05
@@ -2308,9 +2255,6 @@ ideas = {
 				original_TAG = SAF
 			}
 
-			available = {
-			}
-
 			research_bonus = {
 				air_equipment = -0.05
 			}
@@ -2341,9 +2285,6 @@ ideas = {
 			}
 
 			traits = { industrial_concern }
-
-			modifier = {
-			}
 		}
 
 		SAF_anglo_american = {
@@ -2360,9 +2301,6 @@ ideas = {
 			}
 
 			traits = { resource_concern }
-
-			modifier = {
-			}
 		}
 
 		SAF_sasol = {
@@ -2382,9 +2320,6 @@ ideas = {
 			}
 
 			traits = { refinery_concern }
-
-			modifier = {
-			}
 		}
 
 		SAF_bernard_price_institute = {
@@ -2404,9 +2339,6 @@ ideas = {
 			}
 
 			traits = { electronics_concern }
-
-			modifier = {
-			}
 		}
 	}
 }

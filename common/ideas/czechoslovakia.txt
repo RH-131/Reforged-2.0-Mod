@@ -16,7 +16,7 @@ ideas = {
 			picture = german_pilot_training
 
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					air_agility = 0.05 instant = yes
 					air_range = 0.05  instant = yes
 				}
@@ -145,10 +145,6 @@ ideas = {
 				original_tag = CZE
 			}
 
-			allowed_civil_war = {
-
-			}
-
 			picture = generic_infantry_bonus
 
 			removal_cost = -1
@@ -224,8 +220,6 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			cancel = {
-			}
 
 			picture = free_trade
 
@@ -246,8 +240,6 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
-			}
-			cancel = {
 			}
 			picture = free_trade
 
@@ -275,8 +267,6 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
-			}
-			cancel = {
 			}
 			picture = free_trade
 
@@ -758,10 +748,6 @@ ideas = {
 				naval_equipment = 0.07
 			}
 
-			equipment_bonus = {
-
-			}
-
 			traits = { convoy_escort_naval_manufacturer }
 
 		}
@@ -811,13 +797,10 @@ ideas = {
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
 
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					air_agility = 0.1 air_range = 0.05
 				}
-				heavy_fighter_equipment = {
-					air_agility = 0.1 air_range = 0.05
-				}
-				jet_fighter_equipment = {
+				medium_plane_airframe = {
 					air_agility = 0.1 air_range = 0.05
 				}
 			}
@@ -846,7 +829,7 @@ ideas = {
 			}
 			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					air_range = 0.1 air_bombing = 0.1
 				}
 			}
@@ -921,10 +904,6 @@ ideas = {
 			research_bonus = { artillery = -0.05 rocketry = -0.05 }
 
 			traits = { artillery_manufacturer }
-
-			equipment_bonus = {
-
-			}
 		}
 
 		CZE_praga = {

@@ -211,8 +211,6 @@ country_event = { #Iron Guards Gathering
 			popularity = 0.02
 		}
 		add_political_power = -20
-		ai_chance = {
-		}
 		hidden_effect = {
 			country_event = { id = romania.100 }
 		}
@@ -248,8 +246,6 @@ country_event = { #Iron Guards Harassing Minorities
 			popularity = 0.01
 		}
 		add_stability = -0.01
-		ai_chance = {
-		}
 		hidden_effect = {
 			country_event = { id = romania.100 }
 		}
@@ -289,8 +285,6 @@ country_event = { #Iron Guards Infiltrating the Army
 			popularity = 0.02
 		}
 		add_war_support = -0.02
-		ai_chance = {
-		}
 		hidden_effect = {
 			country_event = { id = romania.100 }
 		}
@@ -331,8 +325,6 @@ country_event = { #Iron Guards Assassination
 			popularity = 0.01
 		}
 		add_stability = -0.05
-		ai_chance = {
-		}
 		hidden_effect = {
 			country_event = { id = romania.100 }
 		}
@@ -374,8 +366,6 @@ country_event = { #Terror Bombing
 				damage = 3 
 			}
 		}
-		ai_chance = {
-		}
 		hidden_effect = {
 			country_event = { id = romania.100 }
 		}
@@ -388,8 +378,6 @@ country_event = { #Terror Bombing
 				type = infrastructure 
 				damage = 3 
 			}
-		}
-		ai_chance = {
 		}
 		hidden_effect = {
 			country_event = { id = romania.100 }
@@ -405,9 +393,6 @@ country_event = { #Election
 	
 	is_triggered_only = yes
 
-	trigger = {
-	}
-
 	option = { 
 		name = romania.12.a
 		add_stability = -0.05
@@ -416,8 +401,6 @@ country_event = { #Election
 				type = infrastructure 
 				damage = 2 
 			}
-		}
-		ai_chance = {
 		}
 	}
 }

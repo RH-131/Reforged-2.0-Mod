@@ -21,7 +21,6 @@ country_event = {
 			ideology = conservatism
 			traits = {
 				defeatist
-				railroad_enthusiast
 			}
 		}
 		remove_ideas = HOL_weak_government
@@ -49,6 +48,7 @@ country_event = {
 			ideology = conservatism
 			traits = {
 				little_churchill
+				railroad_enthusiast
 			}
 		}
 	}
@@ -66,8 +66,6 @@ country_event = {
 	# Ok - give them infantry equipment
 	option = {
 		name = mtg_netherlands.29.a
-		trigger = {
-		}
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -502,12 +500,12 @@ country_event = {
 		army_experience = -15
 		effect_tooltip = {
 			FROM = {
-				add_tech_bonus = {
-					name = HOL_secret_staff_talks
-					bonus = 1.0
-					uses = 2
-					category = land_doctrine
-				}
+			add_doctrine_cost_reduction = {
+				name = HOL_secret_staff_talks
+				cost_reduction = 0.50
+				uses = 2
+				category = land_doctrine
+			}
 			}
 		}
 		FROM = { country_event = { id = mtg_netherlands.42 hours = 6 } }
