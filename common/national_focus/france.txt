@@ -2661,7 +2661,7 @@ focus_tree = {
 				producer = FRA 
 			}
 			add_equipment_to_stockpile = {
-				type = cv_fighter_equipment_1936
+				type = cv_nav_bomber_equipment_1936
 				amount = 60
 				producer = FRA 
 			}
@@ -3358,7 +3358,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			SOV = {
-			    add_equipment_to_stockpile = { type = small_plane_airframe amount = 150 producer = FRA }
+			    add_equipment_to_stockpile = { type = fighter_equipment_1936 amount = 150 producer = FRA }
 			} 
 		}
 	}

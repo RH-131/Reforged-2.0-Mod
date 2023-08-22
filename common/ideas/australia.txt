@@ -311,9 +311,10 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.03
-				industrial_capacity_factory = 0.225
-				industrial_capacity_dockyard = 0.225
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
 				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 				stability_factor = 0.1
 			}
 		}
@@ -363,7 +364,7 @@ ideas = {
 			picture = generic_war_preparation
 			
 			modifier = {
-				production_speed_arms_factory_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
 			}
 		}
 		AST_volunteer_defence_corps = {
@@ -433,47 +434,47 @@ ideas = {
 			picture = generic_air_bonus
 
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					air_range = 0.1
 					air_attack = 0.05
 					instant = yes
 				}
-				cv_fighter_equipment = {
+				cv_small_plane_airframe = {
 					air_range = 0.1
 					air_attack = 0.05
 					instant = yes
 				}
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					air_range = 0.1
 					air_ground_attack = 0.05
 					instant = yes
 				}
-				cv_CAS_equipment = {
+				cv_small_plane_cas_airframe = {
 					air_range = 0.1
 					air_ground_attack = 0.05
 					instant = yes
 				}
-				cv_nav_bomber_equipment = {
+				cv_small_plane_naval_bomber_airframe = {
 					air_range = 0.1
 					naval_strike_attack = 0.05
 					instant = yes
 				}
-				nav_bomber_equipment = {
+				small_plane_naval_bomber_airframe = {
 					air_range = 0.1
 					naval_strike_attack = 0.05
 					instant = yes
 				}
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					air_range = 0.1
 					air_ground_attack = 0.05
 					instant = yes
 				}
-				heavy_fighter_equipment = {
+				medium_plane_fighter_airframe = {
 					air_range = 0.1
 					air_attack = 0.05
 					instant = yes
 				}
-				strat_bomber_equipment = {
+				large_plane_airframe = {
 					air_range = 0.1
 					air_bombing = 0.05
 					instant = yes
@@ -614,10 +615,10 @@ ideas = {
 			removal_cost = -1
 		
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					build_cost_ic = -0.1 instant = yes
 				}
-				heavy_fighter_equipment = {
+				medium_plane_fighter_airframe = {
 					build_cost_ic = -0.1 instant = yes
 				}
 			}
@@ -752,6 +753,9 @@ ideas = {
 			}
 			
 			traits = { industrial_concern }
+			
+			modifier = {
+			}
 		}
 
 	}
@@ -768,7 +772,9 @@ ideas = {
 			research_bonus = {
 				industry = 0.15
 			}
-            traits = { industrial_research_trait }
+            traits = { industrial_research_trait }		
+			modifier = {
+			}
 		}
 
 		AST_jack_piddington = {
@@ -836,7 +842,10 @@ ideas = {
 				original_TAG = AST
 			}
 						
-			research_bonus = { armor = 0.15 }  traits = { tank_research_trait }
+			research_bonus = { armor = 0.15 }  traits = { tank_research_trait }		
+
+			modifier = {
+			}
 		}
 	}
 	naval_research = {
@@ -977,6 +986,9 @@ ideas = {
 			allowed = {
 				original_tag = AST
 			}
+
+			available = {
+			}
 			
 			research_bonus = {
 				air_equipment = -0.10
@@ -1010,6 +1022,9 @@ ideas = {
 
 			allowed = {
 				original_tag = AST
+			}
+
+			available = {
 			}
 			
 			research_bonus = { air_equipment = 0.15 } traits = { aircraft_research_trait }			

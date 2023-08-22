@@ -257,8 +257,8 @@ focus_tree = {
 					modifier = AST_support_the_policy_of_appeasement
 				}
 			}
-			add_political_power = 50		
-            add_ideas = SAF_civil_industrial_infrastructure		
+			add_political_power = 50
+			add_timed_idea = { idea = SAF_civil_industrial_infrastructure days = 700 }
 		}
 	}
 	
@@ -386,7 +386,7 @@ focus_tree = {
 		}
 			add_stability = -0.1
 			add_ideas = low_economic_mobilisation
-			add_ideas = SAF_kickstarting_rearmament
+			add_timed_idea = { idea = SAF_kickstarting_rearmament days = 900 }
 			remove_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }
 		}
 	}
