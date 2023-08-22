@@ -690,15 +690,23 @@ NMilitary = {
 	
 	PIERCING_THRESHOLDS = {					-- Our piercing / their armor must be this value to deal damage fraction equal to the index in the array below [higher number = higher penetration]. If armor is 0, 1.00 will be returned.
 		1.00,
-		0.75,
+		0.90,
+		0.80,
+		0.70, --there isn't much point setting this higher than 0
+		0.60,
 		0.50,
-		0.00, --there isn't much point setting this higher than 0
+		0.40,
+		0.00,
 	},
 	PIERCING_THRESHOLD_DAMAGE_VALUES = {	-- 0 armor will always receive maximum damage (so add overmatching at your own peril). the system expects at least 2 values, with no upper limit.
 		1.00,
+		0.90,
 		0.80,
-		0.65,
+		0.70,
+		0.60,
 		0.50,
+		0.40,
+		0.30,
 	},
 
 	DIVISIONAL_COMMANDER_TRAIT_XP_REQUIREMENT = 600.0,	--Get a trait if any valid options & xp gained >= this
