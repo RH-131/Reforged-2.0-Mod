@@ -1049,16 +1049,16 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = marines
-			
+			leads_to_tech = marines	
 		}
 		path = {
-			leads_to_tech = tech_mountaineers
-			
+			leads_to_tech = tech_mountaineers	
 		}
         path = {
-			leads_to_tech = paratroopers
-			
+			leads_to_tech = paratroopers	
+		}
+		path = {
+			leads_to_tech = ranger_tech
 		}
 		research_cost = 2
 		start_year = 1918
@@ -1365,7 +1365,153 @@ technologies = {
 			factor = 5
 		}
 	}
+	ranger_tech = {
+
+		enable_subunits = {
+			ranger_infantry
+		}
+		
+		path = {
+			leads_to_tech = ranger_tech2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1936
+		folder = {
+			name = infantry_folder
+			position = { x = 22 y = @1936 }
+		}
+		
+		categories = {
+			special_tech
+			rangers_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				tag = GER
+				factor = 10
+			}
+			modifier = {
+				tag = USA
+				factor = 10
+			}
+		}
+	}
 	
+	ranger_tech2 = {
+
+		light_infantry = {
+			max_organisation = 2
+			soft_attack = 0.02
+		}
+	
+		
+		path = {
+			leads_to_tech = ranger_tech3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1938
+		folder = {
+			name = infantry_folder
+			position = { x = 22 y = @1938 }
+		}
+		
+		categories = {
+			special_tech
+			rangers_tech
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}	
+	}
+	ranger_tech3 = {
+		enable_subunits = {
+			commando_unit		
+		}
+		light_infantry = {
+			max_organisation = 1
+			soft_attack = 0.03
+		}
+	
+		research_cost = 1.5
+		start_year = 1940
+		folder = {
+			name = infantry_folder
+			position = { x = 22 y = @1940 }
+		}
+		path = {
+			leads_to_tech = ranger_tech4
+			research_cost_coeff = 1
+		}
+		categories = {
+			special_tech
+			rangers_tech
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}	
+	ranger_tech4 = {
+
+		light_infantry = {
+			max_organisation = 1
+			soft_attack = 0.03
+			hard_attack = 0.03
+		}
+	
+		
+		research_cost = 1.5
+		start_year = 1942
+		folder = {
+			name = infantry_folder
+			position = { x = 22 y = @1942 }
+		}
+		path = {
+			leads_to_tech = ranger_tech5
+			research_cost_coeff = 1
+		}
+		categories = {
+			special_tech
+			rangers_tech
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	ranger_tech5 = {
+
+
+		light_infantry = {
+			max_organisation = 1
+			hard_attack = 0.03
+			breakthrough = 0.03
+		}
+	
+		
+		research_cost = 1.5
+		start_year = 1944
+		folder = {
+			name = infantry_folder
+			position = { x = 22 y = @1944 }
+		}
+		
+		categories = {
+			special_tech
+			rangers_tech
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
 	paratroopers = {
 
 		enable_subunits = {
@@ -1383,7 +1529,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = infantry_folder
-			position = { x = 22 y = @1936 }
+			position = { x = 24 y = @1936 }
 		}
 		
 		categories = {
@@ -1426,7 +1572,7 @@ technologies = {
 		start_year = 1938
 		folder = {
 			name = infantry_folder
-			position = { x = 22 y = @1938 }
+			position = { x = 24 y = @1938 }
 		}
 		
 		categories = {
@@ -1454,7 +1600,7 @@ technologies = {
 		start_year = 1940
 		folder = {
 			name = infantry_folder
-			position = { x = 22 y = @1940 }
+			position = { x = 24 y = @1940 }
 		}
 		
 		categories = {
@@ -1481,7 +1627,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = infantry_folder
-			position = { x = 22 y = @1942 }
+			position = { x = 24 y = @1942 }
 		}
 		
 		categories = {
@@ -1505,7 +1651,7 @@ technologies = {
 		start_year = 1944
 		folder = {
 			name = infantry_folder
-			position = { x = 22 y = @1944 }
+			position = { x = 24 y = @1944 }
 		}
 		
 		categories = {
@@ -1542,7 +1688,7 @@ technologies = {
 		start_year = 1938
 		folder = {
 			name = infantry_folder
-			position = { x = 25 y = @1938 }
+			position = { x = 27 y = @1938 }
 		}
 		
 		categories = {
@@ -1603,7 +1749,7 @@ technologies = {
 		start_year = 1940
 		folder = {
 			name = infantry_folder
-			position = { x = 24 y = @1940 }
+			position = { x = 26 y = @1940 }
 		}
 		
 		categories = {
@@ -1636,7 +1782,7 @@ technologies = {
 		start_year = 1940
 		folder = {
 			name = infantry_folder
-			position = { x = 26 y = @1940 }
+			position = { x = 28 y = @1940 }
 		}
 		
 		categories = {
@@ -1671,7 +1817,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = infantry_folder
-			position = { x = 24 y = @1942 }
+			position = { x = 26 y = @1942 }
 		}
 		
 		categories = {
@@ -1706,7 +1852,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = infantry_folder
-			position = { x = 26 y = @1942 }
+			position = { x = 28 y = @1942 }
 		}
 		
 		categories = {
@@ -1736,7 +1882,7 @@ technologies = {
 		start_year = 1944
 		folder = {
 			name = infantry_folder
-			position = { x = 25 y = @1944 }
+			position = { x = 27 y = @1944 }
 		}
 		special_forces_min = 15
 		categories = {
