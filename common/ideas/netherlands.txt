@@ -63,8 +63,6 @@ ideas = {
 	            army_attack_factor = -0.20
 	            army_defence_factor = -0.20
 				surrender_limit = -0.5
-				production_speed_bunker_factor = -1.0
-				production_speed_coastal_bunker_factor = -1.0
 			}
 		}
 		
@@ -83,8 +81,8 @@ ideas = {
 			removal_cost = -1
 						
 			modifier = {
-				army_core_attack_factor = -0.15
-				army_core_defence_factor = -0.15
+				army_core_attack_factor = -0.1
+				army_core_defence_factor = -0.1
 				surrender_limit = -0.5
 			}
 		}
@@ -111,6 +109,7 @@ ideas = {
 			    special_forces_min = 20
 			    production_speed_synthetic_refinery_factor = 0.05
 			    production_speed_synthetic_rubber_refinery_factor = 0.05
+				production_speed_steel_refinery_factor = 0.1
 			}
 		}
 
@@ -131,7 +130,6 @@ ideas = {
 			removal_cost = -1
 						
 			modifier = {
-				conscription_factor = -0.3
 				industrial_capacity_factory = -0.25
 				industrial_capacity_dockyard = -0.10
 			}
@@ -154,7 +152,6 @@ ideas = {
 			removal_cost = -1
 						
 			modifier = {
-				conscription_factor = -0.26
 				industrial_capacity_factory = -0.2
 				industrial_capacity_dockyard = -0.08
 			}
@@ -177,7 +174,6 @@ ideas = {
 			removal_cost = -1
 						
 			modifier = {
-				conscription_factor = -0.18
 				industrial_capacity_factory = -0.15
 				industrial_capacity_dockyard = -0.06
 			}
@@ -200,7 +196,6 @@ ideas = {
 			removal_cost = -1
 						
 			modifier = {
-				conscription_factor = -0.12
 				industrial_capacity_factory = -0.1
 				industrial_capacity_dockyard = -0.04
 			}
@@ -223,7 +218,6 @@ ideas = {
 			removal_cost = -1
 						
 			modifier = {
-				conscription_factor = -0.06
 				industrial_capacity_factory = -0.05
 				industrial_capacity_dockyard = -0.02
 			}
@@ -349,7 +343,7 @@ ideas = {
 			removal_cost = -1
 						
 			modifier = {
-				political_power_cost = 0.5
+				political_power_cost = 0.35
 				stability_factor = -0.10
 			}
 		}
@@ -505,55 +499,39 @@ ideas = {
 			removal_cost = -1
 						
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
 				}
-				cv_fighter_equipment = {
+				cv_small_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
 				}
-				jet_fighter_equipment = {
+				cv_small_plane_cas_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
 				}
-				cv_CAS_equipment = {
+				small_plane_cas_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
 				}
-				CAS_equipment = {
+				small_plane_naval_bomber_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
 				}
-				nav_bomber_equipment = {
+				cv_small_plane_naval_bomber_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
 				}
-				cv_nav_bomber_equipment = {
+				medium_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
 				}
-				rocket_interceptor_equipment = {
+				medium_plane_fighter_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
 				}
-				tac_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				jet_tac_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				jet_strat_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				heavy_fighter_equipment = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				strat_bomber_equipment = {
+				large_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
 				}
@@ -656,8 +634,8 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.1
-				war_support_weekly = 0.002
-				global_building_slots_factor = 0.2
+				war_support_weekly = 0.001
+				global_building_slots_factor = 0.25
 			}
 		}
 

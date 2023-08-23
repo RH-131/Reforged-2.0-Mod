@@ -41,7 +41,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		    add_political_power = 120
+		    add_political_power = 150
 			HOL_de_crisisjaren_level_down = yes
 			unlock_decision_category_tooltip = HOL_obtain_foreign_colonial_investments
 			custom_effect_tooltip = HOL_obtain_foreign_colonial_investments_tt
@@ -61,7 +61,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = HOL_obtain_foreign_colonial_investments		 
-		cost = 3
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -142,10 +142,10 @@ focus_tree = {
 					type = aluminium
 					amount = 15
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -237,7 +237,7 @@ focus_tree = {
 			689 = {
 				add_resource = {
 					type = steel
-					amount = 20
+					amount = 15
 				}
 			}
 			689 = {
@@ -503,7 +503,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
-		    add_political_power = 50
+		    HOL_de_crisisjaren_level_down = yes
 		}
 	}
 
@@ -693,6 +693,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			HOL_de_crisisjaren_level_down = yes
+			add_political_power = 150
 		}
 	}
 
@@ -710,7 +711,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = HOL_abandon_the_gold_standard
-		cost = 7.16
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
@@ -787,7 +788,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = HOL_finish_the_noordoostpolder
-		cost = 7.16
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -2272,7 +2273,6 @@ focus_tree = {
 					ideology = conservatism
 					traits = {
 						defeatist
-						railroad_enthusiast
 					}
 				}
 				remove_ideas = HOL_weak_government
@@ -2298,7 +2298,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_political_power = 120
+		    add_stability = 0.05
+			add_ideas = free_trade
 		}
 	}
 
@@ -2328,8 +2329,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			add_ideas = free_trade
-			HOL_de_crisisjaren_level_down = yes
+			add_to_tech_sharing_group = commonwealth_research
 			add_timed_idea = { idea = HOL_caved_to_the_british days = 1095 }
 			GER = {
 				add_opinion_modifier = { target = HOL modifier = HOL_caved_to_the_british_ger }
@@ -2403,7 +2403,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = HOL_unity_through_democracy
-		cost = 5
+		cost = 7.16
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
@@ -2420,6 +2420,7 @@ focus_tree = {
 					ideology = conservatism
 					traits = {
 						little_churchill
+						railroad_enthusiast
 					}
 				}
 			}
@@ -2446,18 +2447,23 @@ focus_tree = {
 		id = HOL_go_with_britain
 		available = {
 			ENG = { has_government = democratic }
+			has_government = democratic
+			is_in_faction_with = ENG
 		}
 		prerequisite = { focus = HOL_unity_through_democracy }
 		icon = GFX_focus_chi_british_cooperation
 		x = 1
 		y = 1
 		relative_position_id = HOL_unity_through_democracy
-		cost = 5
+		cost = 7.16
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_to_tech_sharing_group = commonwealth_research	    
+			modify_tech_sharing_bonus = {
+			  	id = commonwealth_research
+			   	bonus = 0.1
+			}	    
 		}
 	}
 
@@ -2469,7 +2475,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = HOL_replace_the_defeatist_government
-		cost = 5
+		cost = 7.16
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_MANPOWER}
@@ -2489,12 +2495,11 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = HOL_de_vaarplicht
-		cost = 5
+		cost = 7.16
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_political_power = 60
 			unlock_decision_category_tooltip = HOL_request_allied_favors
 			custom_effect_tooltip = HOL_request_allied_favors_tt
 		}
@@ -2504,11 +2509,8 @@ focus_tree = {
 		id = HOL_the_singapore_conferences
 		prerequisite = { focus = HOL_go_with_britain }
 		available = {
-			has_government = democratic
-			is_in_faction_with = ENG
 		}
 		bypass = {
-			has_war_with = JAP
 		}
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		x = 1
@@ -2593,7 +2595,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = HOL_ship_a_day_sinking_quotas
-		cost = 5
+		cost = 7.16
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
@@ -2628,7 +2630,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = HOL_request_allied_favors
-		cost = 5
+		cost = 7.16
 
 		available_if_capitulated = yes
 

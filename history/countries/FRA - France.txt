@@ -534,8 +534,8 @@ if = {
 			fixed_ship_armor_slot = ship_armor_bb_1
 			front_1_custom_slot = ship_heavy_battery_1
 			mid_1_custom_slot = ship_airplane_launcher_1
-			mid_2_custom_slot = ship_secondaries_2
-			rear_1_custom_slot = ship_anti_air_2
+			mid_2_custom_slot = ship_anti_air_2
+			rear_1_custom_slot = ship_heavy_battery_1
 		}
 		obsolete = yes
 	}
@@ -554,8 +554,8 @@ if = {
 			fixed_ship_armor_slot = ship_armor_bb_1
 			front_1_custom_slot = ship_heavy_battery_1
 			mid_1_custom_slot = ship_airplane_launcher_1
-			mid_2_custom_slot = ship_secondaries_2
-			rear_1_custom_slot = ship_anti_air_1
+			mid_2_custom_slot = ship_anti_air_2
+			rear_1_custom_slot = ship_heavy_battery_1
 		}
 		obsolete = yes
 	}
@@ -573,7 +573,7 @@ if = {
 			fixed_ship_engine_slot = heavy_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_2
 			fixed_ship_armor_slot = ship_armor_bc_2
-			front_1_custom_slot = ship_heavy_battery_1
+			front_1_custom_slot = ship_heavy_battery_2
 			mid_1_custom_slot = ship_airplane_launcher_1
 			mid_2_custom_slot = ship_anti_air_2
 			rear_1_custom_slot = ship_secondaries_2
@@ -596,7 +596,7 @@ if = {
 			front_1_custom_slot = ship_heavy_battery_2
 			mid_1_custom_slot = ship_airplane_launcher_1
 			mid_2_custom_slot = ship_anti_air_2
-			rear_1_custom_slot = ship_secondaries_2
+			rear_1_custom_slot = ship_heavy_battery_2
 		}
 	}
 	# Carriers #
@@ -612,8 +612,7 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = carrier_ship_engine_1
 			fixed_ship_secondaries_slot = ship_secondaries_1
-			mid_1_custom_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_deck_space
 		}
-		obsolete = yes
 	}
 }

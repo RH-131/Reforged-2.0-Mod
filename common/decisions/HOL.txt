@@ -12,36 +12,7 @@ HOL_obtain_foreign_colonial_investments = {
 			OR = {
 				has_idea = export_focus
 				has_idea = free_trade
-				is_in_faction_with = USA
-				is_in_faction_with = ENG
-				is_in_faction_with = JAP
 			}
-			has_war = no
-			OR = {
-				USA = { has_war = no }
-				ENG = { has_war = no }
-				JAP = { has_war = no }
-			}
-			695 = {
-				controller = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-					has_full_control_of_state = PREV
-				}
-			}
-			309 = {
-				controller = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-					has_full_control_of_state = PREV
-				}
-			}
-			has_full_control_of_state = 309
-			has_full_control_of_state = 695
 		}
 
 		cost = 50
@@ -73,36 +44,7 @@ HOL_obtain_foreign_colonial_investments = {
 			OR = {
 				has_idea = export_focus
 				has_idea = free_trade
-				is_in_faction_with = USA
-				is_in_faction_with = ENG
-				is_in_faction_with = JAP
 			}
-			has_war = no
-			OR = {
-				USA = { has_war = no }
-				ENG = { has_war = no }
-				JAP = { has_war = no }
-			}
-			309 = {
-				controller = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-					has_full_control_of_state = PREV
-				}
-			}
-			695 = {
-				controller = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-					has_full_control_of_state = PREV
-				}
-			}
-			has_full_control_of_state = 309
-			has_full_control_of_state = 695
 		}
 
 		cost = 50
@@ -134,12 +76,7 @@ HOL_obtain_foreign_colonial_investments = {
 			OR = {
 				has_idea = export_focus
 				has_idea = free_trade
-				is_in_faction_with = USA
-				is_in_faction_with = ENG
 			}
-			NOT = { has_war_with = USA }
-			NOT = { has_war_with = ENG }
-			HOL = { has_full_control_of_state = 695 }
 		}
 
 		cost = 20
@@ -203,11 +140,7 @@ HOL_obtain_foreign_colonial_investments = {
 			OR = {
 				has_idea = export_focus
 				has_idea = free_trade
-				is_in_faction_with = USA
-				is_in_faction_with = ENG
 			}
-			NOT = { has_war_with = USA }
-			NOT = { has_war_with = ENG }
 		}
 
 		cost = 10
@@ -222,7 +155,7 @@ HOL_obtain_foreign_colonial_investments = {
 		}
 
 		remove_effect = {
-			309 = {
+			689 = {
 				add_resource = {
 					type = oil
 					amount = 1
@@ -240,7 +173,7 @@ HOL_obtain_foreign_colonial_investments = {
 				limit = {
 					check_variable = { var = east_indies_oil value = 2 compare = equals }
 				}
-				669 = {
+				689 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -253,7 +186,7 @@ HOL_obtain_foreign_colonial_investments = {
 				limit = {
 					check_variable = { var = east_indies_oil value = 5 compare = equals }
 				}
-				669 = {
+				689 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -266,7 +199,7 @@ HOL_obtain_foreign_colonial_investments = {
 				limit = {
 					check_variable = { var = east_indies_oil value = 9 compare = equals }
 				}
-				669 = {
+				689 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -601,7 +534,7 @@ HOL_secret_staff_talks = {
 			FROM = { army_experience = -15 }
 			effect_tooltip = {
 			add_doctrine_cost_reduction = {
-				name = HOL_appoint_new_supreme_commander
+				name = HOL_secret_staff_talks
 				cost_reduction = 0.50
 				uses = 2
 				category = land_doctrine
@@ -861,7 +794,7 @@ operations = {
 		}
 
 		complete_effect = {
-			set_capital = { state = 800 }
+			set_capital = { state = 309 }
 			add_equipment_to_stockpile = {
 				type = convoy
 				amount = 150

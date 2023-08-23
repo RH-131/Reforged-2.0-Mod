@@ -1032,7 +1032,7 @@ NMilitary = {
 	GARRISON_ORDER_ARMY_CAP_FACTOR = 1.0,			-- armies gets increased cap when they are garrisoned
 
 	COMMANDER_LEVEL_UP_STAT_COUNT = 3, 				-- num stats gained on level up
-	COMMANDER_LEVEL_UP_STAT_WEIGHTS = {5, 5, 3, 4}, -- level up stat random base weights attack, defense, planning, logistics
+	COMMANDER_LEVEL_UP_STAT_WEIGHTS = {5, 5, 5, 5}, -- level up stat random base weights attack, defense, planning, logistics
 
 	NAVY_LEADER_LEVEL_UP_STAT_WEIGHTS = {5, 5, 5, 5}, -- level up stat random base weights attack, defense, maneuvering, coordination
 
@@ -1476,7 +1476,7 @@ NNavy = {
 	NAVAL_SUPREMACY_CAN_INVADE = 0.5,								-- required naval supremacy to perform invasions on an area
 	CARRIER_STACK_PENALTY = 5,										-- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
 	CARRIER_STACK_PENALTY_EFFECT = 0.10,							-- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
-	SHORE_BOMBARDMENT_CAP = 0.40,
+	SHORE_BOMBARDMENT_CAP = 0.30,
 	ANTI_AIR_TARGETING = 0.9,                                       -- how good ships are at hitting aircraft
 	MIN_TRACTED_ASSIST_DAMAGE_RATIO = 0.05,							-- How much damage counts as assist damage
 	SUPPLY_NEED_FACTOR = 4,										    -- multiplies supply usage
