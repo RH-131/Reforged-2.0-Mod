@@ -1032,7 +1032,7 @@ NMilitary = {
 	GARRISON_ORDER_ARMY_CAP_FACTOR = 1.0,			-- armies gets increased cap when they are garrisoned
 
 	COMMANDER_LEVEL_UP_STAT_COUNT = 3, 				-- num stats gained on level up
-	COMMANDER_LEVEL_UP_STAT_WEIGHTS = {5, 5, 3, 4}, -- level up stat random base weights attack, defense, planning, logistics
+	COMMANDER_LEVEL_UP_STAT_WEIGHTS = {5, 5, 5, 5}, -- level up stat random base weights attack, defense, planning, logistics
 
 	NAVY_LEADER_LEVEL_UP_STAT_WEIGHTS = {5, 5, 5, 5}, -- level up stat random base weights attack, defense, maneuvering, coordination
 
