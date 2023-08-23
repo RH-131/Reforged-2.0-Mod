@@ -292,7 +292,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_nokia }
         prerequisite = { focus = FIN_promote_sisu }
 		available = {
-			has_war_with = SOV
+			num_of_factories > 50
 		}
 		cancel_if_invalid = no
 		x = 4
