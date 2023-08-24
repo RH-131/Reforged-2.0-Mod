@@ -1775,9 +1775,6 @@ equipments = {
 		air_agility = 30
 		air_attack = 47
 		air_defence = 5
-		
-		naval_strike_attack = 5
-		naval_strike_targetting = 10
 
 		build_cost_ic = 60
 		fuel_consumption = 0
@@ -1801,9 +1798,6 @@ equipments = {
 		air_agility = 36
 		air_attack = 56
 		air_defence = 7
-
-		naval_strike_attack = 5
-		naval_strike_targetting = 10
 		
 		build_cost_ic = 65
 		fuel_consumption = 0
@@ -1827,9 +1821,6 @@ equipments = {
 		air_agility = 60
 		air_attack = 60
 		air_defence = 10
-
-		naval_strike_attack = 5
-		naval_strike_targetting = 10
 
 		build_cost_ic = 70
 		fuel_consumption = 0
@@ -2681,11 +2672,11 @@ equipments = {
 		air_defence = 25
 
 		# Air vs Navy - high damage / low hit chance / hard to hurt
+		air_bombing = 37
 		naval_strike_attack = 8
 		naval_strike_targetting = 0.6
 		surface_detection = 10 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 2.5 # For airwing of 100 planes (Destroyer I: 5 sub detection )
-		air_bombing = 37
 
 		build_cost_ic = 120
 		fuel_consumption = 0.82
@@ -2818,20 +2809,6 @@ equipments = {
 		archetype = large_plane_airframe
 		parent = strat_bomber_equipment_1941
 		priority = 140
-
-		allow_mission_type = {
-			strategic_bomber
-			naval_bomber
-			port_strike
-			training
-		}
-		
-		upgrades = {
-			plane_bomb_upgrade
-			plane_range_upgrade
-			plane_engine_upgrade
-			plane_reliability_upgrade
-		}
 
 		air_range = 4000
 		maximum_speed = 450
