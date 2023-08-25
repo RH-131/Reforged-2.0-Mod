@@ -1128,12 +1128,33 @@ ideas = {
 				}
 			}
 		}
-	}
 
-	SPA_rearmament = {
+		SPA_domestic_weapons_manufacturing = {
 
 			allowed = {
-				always = no
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				infantry_weapons = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+
+			picture = eng_special_air_service
+
+			removal_cost = -1
+		}
+
+		SPA_civil_war_veterans_idea = {
+
+			allowed = {
+				original_tag = SPR
 			}
 
 			allowed_civil_war = {
@@ -1141,19 +1162,18 @@ ideas = {
 			}
 
 			modifier = {
-				special_forces_cap = 0.025
-				special_forces_training_time_factor = -0.05
+				conscription_factor = 0.05
 			}
 
 			picture = eng_special_air_service
 
 			removal_cost = -1
-	}
+		}
 
-	SPA_domestic_weapons_manufacturing = {
+		SPA_lessons_of_the_rif_war_idea = {
 
 			allowed = {
-				always = no
+				original_tag = SPR
 			}
 
 			allowed_civil_war = {
@@ -1161,14 +1181,34 @@ ideas = {
 			}
 
 			modifier = {
-				infantry_weapons = 
-				special_forces_training_time_factor = 
+				heat_attrition_factor = -0.2
+				acclimatization_hot_climate_gain_factor = 0.05						
 			}
 
 			picture = eng_special_air_service
 
 			removal_cost = -1
-	}	
+		}
+
+		SPA_lessons_of_teruel_idea = {
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				winter_attrition_factor = -0.2
+				acclimatization_cold_climate_gain_factor = 0.05						
+			}
+
+			picture = eng_special_air_service
+
+			removal_cost = -1
+		}	
 
 	naval_manufacturer = { 			
 		
