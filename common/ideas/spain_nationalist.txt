@@ -49,44 +49,6 @@ ideas = {
 			}
 		}
 		
-#		SPR_med_focus = {
-#
-#			allowed = {
-#				always = no
-#			}
-#
-#			allowed_civil_war = {
-#				always = yes
-#			}
-#
-#			removal_cost = -1
-#
-#			picture = generic_intel_bonus
-#
-#			modifier = {
-#
-#			}
-#		}
-#		
-#		SPR_atlantik_focus = {
-#
-#			allowed = {
-#				always = no
-#			}
-#
-#			allowed_civil_war = {
-#				always = yes
-#			}
-#
-#			removal_cost = -1
-#
-#			picture = generic_intel_bonus
-#
-#			modifier = {
-#
-#			}
-#		}
-		
 	    SPA_spanish_civil_war_industry = {
 
 			picture = generic_goods_red_bonus
@@ -1089,9 +1051,7 @@ ideas = {
 			}
 		}
 
-		SPA_crusade_against_democracy_1 = {
-
-			name = SPA_crusade_against_democracy
+		SPA_para_lespana_idea = {
 
 			picture = SPA_crusade_against_democracy
 
@@ -1104,7 +1064,8 @@ ideas = {
 			}
 
 			modifier = {
-				defence = 0.05
+				army_attack_factor = 0.025
+				army_defence_factor = 0.025
 				army_org_factor = 0.1
 				army_morale_factor = 0.05
 			}
@@ -1208,7 +1169,76 @@ ideas = {
 			picture = eng_special_air_service
 
 			removal_cost = -1
-		}	
+		}
+
+		SPA_always_prepared_idea = {
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				planning_speed = 0.1
+			}
+
+			picture = eng_special_air_service
+
+			removal_cost = -1
+		}
+	}	
+
+	tank_manufacturer = {
+
+		designer = yes
+
+		SPA_adesa = {
+
+			picture = generic_tank_manufacturer_1
+
+			allowed = {
+			    OR = {
+					original_tag = SPR
+				}
+			}
+
+			available = {
+				has_completed_focus = SPA_develop_the_verdeja
+			}
+
+			research_bonus = {
+				armor = -0.05
+			}
+
+			modifier = { tank_manufacturer_cost_factor = -0.33 }
+
+			traits = { GER_ckd_tank_manufacturer }
+
+			equipment_bonus = {
+				light_tank_aa_chassis = {
+					air_attack = 0.1
+					armor_value = 0.1
+				}
+				light_tank_artillery_chassis = {
+					soft_attack = 0.15
+					armor_value = 0.1
+				}
+				light_tank_destroyer_chassis = {
+					hard_attack = 0.10
+					ap_attack = 0.10
+					armor_value = 0.1
+				}
+				light_tank_chassis = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					armor_value = 0.1
+				}
+			}
+		}
+	}
 
 	naval_manufacturer = { 			
 		

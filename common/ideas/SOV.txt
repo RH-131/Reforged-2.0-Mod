@@ -2374,6 +2374,9 @@ ideas = {
 
 			available = {
 				has_completed_focus = SOV_heavy_state_funding_for_tank_bureaus
+				NOT = {
+					has_completed_focus = SOV_tankograd
+				}
 				controls_state = 221
 			}
 
@@ -2626,6 +2629,7 @@ ideas = {
 
 			available = {
 				has_completed_focus = SOV_morozov_will_show_the_way
+				controls_state = 217
 			}
 
 			research_bonus = {
