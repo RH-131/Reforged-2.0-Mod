@@ -1,7 +1,7 @@
 sub_units = {
 
 	light_tank_destroyer_brigade = {
-		sprite = "light_armor"
+		sprite = light_armor
 		map_icon_category = armored
 		priority = 1795
 		active = yes
@@ -254,5 +254,155 @@ sub_units = {
 			defence = 0.0 
 			movement = 0.0
 		}
-	}	
+	}
+	
+	light_tank_destroyer_company = {
+		sprite = light_armor
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = yes
+		affects_speed = no
+		
+		group = support
+		
+		type = {
+			armor
+			anti_tank
+			support
+		}
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_all_armor
+			category_army
+			category_anti_tank
+		}
+
+
+		combat_width = 0
+
+		need = {
+			light_tank_destroyer_chassis = 25
+		}
+		manpower = 300
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.2
+		training_time = 120
+		weight = 0.1
+
+		can_be_parachuted = no
+		
+		supply_consumption = 0.12
+
+		# Support nerfs to combat abilities
+		defense = -0.5
+		breakthrough = -0.5
+		soft_attack = -0.5
+		hard_attack = -0.2
+		ap_attack = -0.15
+	}
+	
+	medium_tank_destroyer_company = {
+		sprite = medium_armor
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = yes
+		affects_speed = no
+		
+		group = support
+		
+		type = {
+			armor
+			anti_tank
+			support
+		}
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_all_armor
+			category_army
+			category_anti_tank
+		}
+
+
+		combat_width = 0
+
+		need = {
+			medium_tank_destroyer_chassis = 25
+		}
+		manpower = 300
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.2
+		training_time = 120
+		weight = 0.1
+
+		can_be_parachuted = no
+		
+		supply_consumption = 0.16
+
+		# Support nerfs to combat abilities
+		defense = -0.5
+		breakthrough = -0.5
+		soft_attack = -0.5
+		hard_attack = -0.2
+		ap_attack = -0.15
+	}
+	
+	USA_tank_hunter_section = {
+		sprite = medium_armor
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = yes
+		affects_speed = no
+		
+		group = support
+		
+		type = {
+			armor
+			anti_tank
+			support
+		}
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_all_armor
+			category_army
+			category_anti_tank
+			category_recon
+		}
+
+
+		combat_width = 0
+
+		need = {
+			armored_cars_equipment = 20
+			medium_tank_destroyer_chassis = 20
+		}
+		manpower = 300
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.2
+		recon = 1
+		training_time = 120
+		weight = 0.1
+
+		can_be_parachuted = no
+		
+		supply_consumption = 0.16
+
+		# Support nerfs to combat abilities
+		defense = -0.5
+		breakthrough = -0.5
+		soft_attack = -0.5
+		hard_attack = -0.2
+		ap_attack = -0.15
+	}
 }
