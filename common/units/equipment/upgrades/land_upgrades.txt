@@ -8,24 +8,24 @@ upgrades = {
 		hard_attack = 0.08
 		ap_attack = 0.065
 		maximum_speed = -0.02
-		reliability = -0.04
+		reliability = -0.05
 		build_cost_ic = 0.02
 	}
 	tank_armor_upgrade = {
 		max_level = 2
 
 		cost = land
-		armor_value = 0.05
-		hardness = 0.025
+		armor_value = 0.1
+		hardness = 0.035
 		maximum_speed = -0.02
-		reliability = -0.02
+		reliability = -0.05
 		build_cost_ic = 0.02
 	}
 	tank_engine_upgrade = {
 		max_level = 2
 		cost = land
 		maximum_speed = 0.04
-		build_cost_ic = 0.02
+		build_cost_ic = 0.025
 	}	
 	ac_engine_upgrade = {
 		max_level = 2
@@ -94,16 +94,7 @@ upgrades = {
 		soft_attack = 0.04
 		breakthrough = 0.05
 		build_cost_ic = 0.03
-		reliability = -0.02
-	}
-	art_at_upgrade = {
-		max_level = 2
-
-		cost = land
-		hard_attack = 0.04
-		ap_attack = 0.03
-		build_cost_ic = 0.03
-		reliability = -0.02
+		reliability = -0.03
 	}
 	art_aa_upgrade = {
 		max_level = 2
@@ -113,8 +104,29 @@ upgrades = {
 		hard_attack = 0.03
 		ap_attack = 0.03
 		build_cost_ic = 0.03
-		reliability = -0.02
+		reliability = -0.03
 	}
+	
+	### AT ###
+	
+	art_at_upgrade = {
+		max_level = 2
+
+		cost = land
+		hard_attack = 0.04
+		ap_attack = 0.03
+		build_cost_ic = 0.03
+		reliability = -0.05
+	}
+	art_at_hvy_upgrade = {
+		max_level = 2
+
+		cost = land
+		hard_attack = 0.05
+		ap_attack = 0.10
+		build_cost_ic = 0.75
+		reliability = -0.10
+	}	
 	
 	### Motor, Mech, and Amtracs###
 	
@@ -129,7 +141,7 @@ upgrades = {
 		max_level = 2
 
 		cost = land
-		armor_value = 0.05
+		armor_value = 0.10
 		hardness = 0.05
 		maximum_speed = -0.04
 		reliability = -0.04
