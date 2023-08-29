@@ -1968,6 +1968,33 @@ ideas = {
 				}
 			}
 		}
+		
+		usa_assault_gun_doctrine = {
+
+			allowed = {
+				original_tag = USA
+			}
+
+			traits = { GER_Krupp_tank_manufacturer }
+
+			research_bonus = {
+				armor = -0.05
+			}
+			modifier = { tank_manufacturer_cost_factor = -0.33 }
+			available = {
+			#	has_completed_focus = USA_improve_armour
+			}
+
+			equipment_bonus = {
+				medium_tank_chassis = {
+					reliability = -0.1
+					maximum_speed = -0.075
+					armor_value = 0.20
+					hard_attack = 0.1
+					defense = 0.25
+				}
+			}
+		}
 	}
 
 	tank_research = {
