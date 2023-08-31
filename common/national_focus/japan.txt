@@ -2081,7 +2081,6 @@ focus_tree = {
 			    MON = {add_ideas = SOV_copro_reduced_trade}
 				ENG = {
 					add_to_faction = USA
-					add_to_faction = MEX
 				}
 				USA = {
 					add_to_war = {
@@ -2089,12 +2088,6 @@ focus_tree = {
 						enemy = GER
 					}
 					add_ideas = allies_air_production_malus_1
-				}
-				MEX = {
-					add_to_war = {
-						targeted_alliance = ENG
-						enemy = GER
-					}
 				}
 				declare_war_on = {
 					target = USA
