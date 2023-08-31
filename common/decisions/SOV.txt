@@ -5539,6 +5539,45 @@ operations = {
 			}
 		}
 	}
+	SOV_annex_mon = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = SOV			
+		}
+
+		available = {
+			date > 1936.7.1	
+			is_ai = no
+			MON = { is_ai = yes }
+			country_exists = MON
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		cost = 0
+		days_remove = 180
+
+		fire_only_once = yes
+
+
+		complete_effect = {
+			annex_country = {
+              target = MON
+              transfer_troops = yes
+			}
+			every_state = {
+				every_state = {
+				limit = { is_core_of = MON }
+				set_resistance = 0
+				set_compliance = 70
+				}	
+			}
+		}
+	}
 	SOV_sealion = {
 
 		icon = generic_industry
