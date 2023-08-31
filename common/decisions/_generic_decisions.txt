@@ -842,7 +842,7 @@ propaganda_efforts = {
 		days_remove = 180
 		
 		remove_trigger = {
-			has_war = no
+			has_casualties_war_support < 0
         }
 		
 		cost = 25
@@ -907,7 +907,7 @@ propaganda_efforts = {
 		days_remove = 180
 		
 		remove_trigger = {
-			has_war = no
+			has_convoys_war_support < 0
         }
 		
 		cost = 25
@@ -957,7 +957,7 @@ propaganda_efforts = {
 		days_remove = 180
 		
 		remove_trigger = {
-			has_war = no
+			has_bombing_war_support < 0
         }
 		
 		cost = 25
