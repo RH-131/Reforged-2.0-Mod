@@ -49,44 +49,6 @@ ideas = {
 			}
 		}
 		
-#		SPR_med_focus = {
-#
-#			allowed = {
-#				always = no
-#			}
-#
-#			allowed_civil_war = {
-#				always = yes
-#			}
-#
-#			removal_cost = -1
-#
-#			picture = generic_intel_bonus
-#
-#			modifier = {
-#
-#			}
-#		}
-#		
-#		SPR_atlantik_focus = {
-#
-#			allowed = {
-#				always = no
-#			}
-#
-#			allowed_civil_war = {
-#				always = yes
-#			}
-#
-#			removal_cost = -1
-#
-#			picture = generic_intel_bonus
-#
-#			modifier = {
-#
-#			}
-#		}
-		
 	    SPA_spanish_civil_war_industry = {
 
 			picture = generic_goods_red_bonus
@@ -161,34 +123,6 @@ ideas = {
 				max_dig_in = 10
 				dig_in_speed_factor = 1.0
 				supply_consumption_factor = -0.5
-			}
-		}
-		
-		SPA_death_before_surrender = {
-
-			name = SPR_death_before_surrender
-
-			picture = spanish_civil_war
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			rule = {
-				can_join_factions = no 
-			}
-
-			modifier = {
-				surrender_limit = 1
-				army_org_factor = 0.1
-				max_dig_in = 5
-				army_defence_factor = 0.25
-				dig_in_speed_factor = 1.0
-				max_surrender_limit_offset = 0.10
 			}
 		}
 
@@ -912,8 +846,8 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.1
-				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
 			}
 		}
 
@@ -1089,9 +1023,7 @@ ideas = {
 			}
 		}
 
-		SPA_crusade_against_democracy_1 = {
-
-			name = SPA_crusade_against_democracy
+		SPA_para_lespana_idea = {
 
 			picture = SPA_crusade_against_democracy
 
@@ -1104,228 +1036,9 @@ ideas = {
 			}
 
 			modifier = {
-				defence = 0.05
+				army_defence_factor = 0.05
 				army_org_factor = 0.1
-				army_morale_factor = 0.05
-			}
-		}
-
-		SPA_crusade_against_democracy_2 = {
-
-			name = SPA_crusade_against_democracy
-
-			picture = SPA_crusade_against_democracy
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				defence = 0.05
-				offence = 0.05
-				army_org_factor = 0.1
-				conscription = 0.03
-			}
-		}
-
-		SPA_crusade_against_democracy_3 = {
-
-			name = SPA_crusade_against_democracy
-
-			picture = SPA_crusade_against_democracy
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				defence = 0.05
-				offence = 0.05
-				army_org_factor = 0.1
-				training_time_factor = -0.2
-				conscription = 0.05
-			}
-		}
-
-		SPA_crusade_against_democracy_4 = {
-
-			name = SPA_crusade_against_democracy
-
-			picture = SPA_crusade_against_democracy
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				defence = 0.05
-				offence = 0.05
-				army_org_factor = 0.05
-				army_morale_factor = 0.1
-				political_power_factor = 0.1
-			}
-		}
-
-		SPA_crusade_against_democracy_5 = {
-
-			name = SPA_crusade_against_democracy
-
-			picture = SPA_crusade_against_democracy
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				defence = 0.1
-				offence = 0.1
-				army_org_factor = 0.05
-				army_morale_factor = 0.15
-				political_power_factor = 0.1
-			}
-		}
-
-		SPA_crusade_against_democracy_6 = {
-
-			name = SPA_crusade_against_democracy
-
-			picture = SPA_crusade_against_democracy
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				defence = 0.05
-				offence = 0.05
-				army_org_factor = 0.1
-				conscription = 0.03
-				army_morale_factor = 0.1
-				political_power_factor = 0.1
-			}
-		}
-
-		SPA_crusade_against_democracy_7 = {
-
-			name = SPA_crusade_against_democracy
-
-			picture = SPA_crusade_against_democracy
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				defence = 0.05
-				offence = 0.05
-				army_org_factor = 0.1
-				training_time_factor = -0.2
-				conscription = 0.05
-				army_morale_factor = 0.1
-				political_power_factor = 0.1
-			}
-		}
-
-		SPA_crusade_against_democracy_8 = {
-
-			name = SPA_crusade_against_democracy
-
-			picture = SPA_crusade_against_democracy
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				defence = 0.1
-				offence = 0.1
-				army_org_factor = 0.1
-				conscription = 0.03
-				army_morale_factor = 0.15
-				political_power_factor = 0.1
-			}
-		}
-
-		SPA_crusade_against_democracy_9 = {
-
-			name = SPA_crusade_against_democracy
-
-			picture = SPA_crusade_against_democracy
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				defence = 0.1
-				offence = 0.1
-				army_org_factor = 0.1
-				training_time_factor = -0.2
-				conscription = 0.05
-				army_morale_factor = 0.15
-				political_power_factor = 0.1
-			}
-		}
-
-		SPA_crusade_against_democracy_10 = {
-
-			name = SPA_crusade_against_democracy
-
-			picture = SPA_crusade_against_democracy
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				defence = 0.1
-				offence = 0.15
-				army_org_factor = 0.1
-				army_speed_factor = 0.05
-				training_time_factor = -0.2
-				conscription = 0.05
-				army_morale_factor = 0.15
-				political_power_factor = 0.1
-				conscription_factor = 0.2
-				experience_loss_factor = -0.25
-				breakthrough_factor = 0.1
-				no_supply_grace = 48
+				army_morale_factor = 0.08
 			}
 		}
 
@@ -1347,7 +1060,157 @@ ideas = {
 				}
 			}
 		}
+
+		SPA_domestic_weapons_manufacturing = {
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				infantry_weapons = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+
+			picture = eng_special_air_service
+
+			removal_cost = -1
+		}
+
+		SPA_civil_war_veterans_idea = {
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = 0.05
+			}
+
+			picture = eng_special_air_service
+
+			removal_cost = -1
+		}
+
+		SPA_lessons_of_the_rif_war_idea = {
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				heat_attrition_factor = -0.2
+				acclimatization_hot_climate_gain_factor = 0.05						
+			}
+
+			picture = eng_special_air_service
+
+			removal_cost = -1
+		}
+
+		SPA_lessons_of_teruel_idea = {
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				winter_attrition_factor = -0.2
+				acclimatization_cold_climate_gain_factor = 0.05						
+			}
+
+			picture = eng_special_air_service
+
+			removal_cost = -1
+		}
+
+		SPA_always_prepared_idea = {
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				planning_speed = 0.1
+			}
+
+			picture = eng_special_air_service
+
+			removal_cost = -1
+		}
+	}	
+
+	tank_manufacturer = {
+
+		designer = yes
+
+		SPA_adesa = {
+
+			picture = generic_tank_manufacturer_1
+
+			allowed = {
+			    OR = {
+					original_tag = SPR
+				}
+			}
+
+			available = {
+				has_completed_focus = SPA_develop_the_verdeja
+			}
+
+			research_bonus = {
+				armor = -0.05
+			}
+
+			modifier = { tank_manufacturer_cost_factor = -0.33 }
+
+			traits = { GER_ckd_tank_manufacturer }
+
+			equipment_bonus = {
+				light_tank_aa_chassis = {
+					air_attack = 0.1
+					armor_value = 0.1
+				}
+				light_tank_artillery_chassis = {
+					soft_attack = 0.15
+					armor_value = 0.1
+				}
+				light_tank_destroyer_chassis = {
+					hard_attack = 0.10
+					ap_attack = 0.10
+					armor_value = 0.1
+				}
+				light_tank_chassis = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					armor_value = 0.1
+				}
+			}
+		}
 	}
+
 	naval_manufacturer = { 			
 		
 		designer = yes
@@ -1666,6 +1529,5 @@ ideas = {
 			
 			traits = { refinery_concern }
 		}
-
 	}
 }
