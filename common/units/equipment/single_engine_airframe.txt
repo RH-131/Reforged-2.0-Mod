@@ -298,49 +298,49 @@ equipments = {
 #		manpower = 20
 #	}
 
-	jet_fighter_equipment = {
-		year = 1945
+	# jet_fighter_equipment = {
+	# 	year = 1945
 
-		is_archetype = yes
-		is_convertable = yes
-		picture = archetype_fighter_equipment
-		is_buildable = no
-		type = fighter
-		group_by = archetype
-		sprite = light_plane
-		air_map_icon_frame = 4
+	# 	is_archetype = yes
+	# 	is_convertable = yes
+	# 	picture = archetype_fighter_equipment
+	# 	is_buildable = no
+	# 	type = fighter
+	# 	group_by = archetype
+	# 	sprite = light_plane
+	# 	air_map_icon_frame = 4
 
-		interface_category = interface_category_air
+	# 	interface_category = interface_category_air
 
-		# Fighter
-		interface_overview_category_index = 1
-		allow_mission_type = {
-			air_superiority
-			interception
-			training
-		}
+	# 	# Fighter
+	# 	interface_overview_category_index = 1
+	# 	allow_mission_type = {
+	# 		air_superiority
+	# 		interception
+	# 		training
+	# 	}
 
-		upgrades = {
-			plane_gun_upgrade
-			plane_range_upgrade
-			plane_engine_upgrade
-			plane_reliability_upgrade
-		}
+	# 	upgrades = {
+	# 		plane_gun_upgrade
+	# 		plane_range_upgrade
+	# 		plane_engine_upgrade
+	# 		plane_reliability_upgrade
+	# 	}
 
-		air_superiority = 1.2
-		reliability = 0.65
-        supply_consumption = 0.11
+	# 	air_superiority = 1.2
+	# 	reliability = 0.65
+    #     supply_consumption = 0.11
 
-		#Space taken in convoy
-		lend_lease_cost = 8
-		build_cost_ic = 61
-		resources = {
-			aluminium = 3
-			tungsten = 2
-		}
-		manpower = 40
-		fuel_consumption = 0.42
-	}
+	# 	#Space taken in convoy
+	# 	lend_lease_cost = 8
+	# 	build_cost_ic = 61
+	# 	resources = {
+	# 		aluminium = 3
+	# 		tungsten = 2
+	# 	}
+	# 	manpower = 40
+	# 	fuel_consumption = 0.42
+	# }
 
 	##Fighters Equipment
 
