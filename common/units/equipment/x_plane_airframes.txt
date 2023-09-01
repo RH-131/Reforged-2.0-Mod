@@ -259,7 +259,7 @@ equipments = {
 
 		air_range = 700
 		maximum_speed = 430
-		air_agility = 40
+		air_agility = 50
 		air_attack = 18
 		air_defence = 4
 
@@ -272,7 +272,7 @@ equipments = {
 		fuel_consumption = 0.31
 		resources = {
 			#oil = 1
-			aluminium = 3
+			aluminium = 2
 			rubber = 1
 		}
 	}
@@ -287,7 +287,7 @@ equipments = {
 
 		air_range = 800
 		maximum_speed = 490
-		air_agility = 48
+		air_agility = 54
 		air_attack = 20
 		air_defence = 6
 
@@ -315,9 +315,9 @@ equipments = {
 
 		air_range = 850
 		maximum_speed = 520
-		air_agility = 52
-		air_attack = 21
-		air_defence = 7
+		air_agility = 56
+		air_attack = 22
+		air_defence = 8
 
 		naval_strike_attack = 2
 		naval_strike_targetting = 10
@@ -343,7 +343,7 @@ equipments = {
 
 		air_range = 900
 		maximum_speed = 550
-		air_agility = 56
+		air_agility = 58
 		air_attack = 22
 		air_defence = 8
 
@@ -372,19 +372,19 @@ equipments = {
 		air_range = 950
 		maximum_speed = 580
 		air_agility = 60
-		air_attack = 23
-		air_defence = 9
+		air_attack = 24
+		air_defence = 10
 
-		naval_strike_attack = 2
+		naval_strike_attack = 4
 		naval_strike_targetting = 10
-		surface_detection = 13 # For airwing of 100 planes (Destroyer I: 20 surface detection)
-		sub_detection = 3 # For airwing of 100 planes (Destroyer I: 5 sub detection )
+		surface_detection = 16 # For airwing of 100 planes (Destroyer I: 20 surface detection)
+		sub_detection = 4 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
 		build_cost_ic = 64
 		fuel_consumption = 0.36
 		resources = {
 			#oil = 1
-			aluminium = 2
+			aluminium = 3
 			rubber = 1
 		}
 	}
@@ -399,7 +399,7 @@ equipments = {
 
 		air_range = 1000
 		maximum_speed = 610
-		air_agility = 64
+		air_agility = 62
 		air_attack = 24
 		air_defence = 10
 
@@ -427,9 +427,9 @@ equipments = {
 
 		air_range = 1050
 		maximum_speed = 640
-		air_agility = 68
-		air_attack = 25
-		air_defence = 11
+		air_agility = 64
+		air_attack = 26
+		air_defence = 12
 
 		naval_strike_attack = 4
 		naval_strike_targetting = 10
@@ -454,7 +454,7 @@ equipments = {
 
 		air_range = 1100
 		maximum_speed = 670
-		air_agility = 72
+		air_agility = 66
 		air_attack = 26
 		air_defence = 12
 
@@ -482,20 +482,20 @@ equipments = {
 
 		air_range = 1150
 		maximum_speed = 700
-		air_agility = 76
-		air_attack = 27
-		air_defence = 13
+		air_agility = 68
+		air_attack = 28
+		air_defence = 14
 
-		naval_strike_attack = 4
+		naval_strike_attack = 6
 		naval_strike_targetting = 10
-		surface_detection = 18 # For airwing of 100 planes (Destroyer I: 20 surface detection)
+		surface_detection = 19 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 5 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
 		build_cost_ic = 72
 		fuel_consumption = 0.40
 		resources = {
 			#oil = 2
-			aluminium = 3
+			aluminium = 4
 			rubber = 1
 		}
 	}
@@ -510,13 +510,13 @@ equipments = {
 
 		air_range = 1200
 		maximum_speed = 730
-		air_agility = 80
+		air_agility = 70
 		air_attack = 28
 		air_defence = 14
 
 		naval_strike_attack = 6
 		naval_strike_targetting = 10
-		surface_detection = 20 # For airwing of 100 planes (Destroyer I: 20 surface detection)
+		surface_detection = 19 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 5 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
 		build_cost_ic = 74
@@ -558,7 +558,7 @@ equipments = {
 		air_defence = 16
 
 		# Air vs Navy - low damage / high hit chance / easy to hurt
-		naval_strike_attack = 5
+		naval_strike_attack = 6
 		naval_strike_targetting = 10
 		surface_detection = 12 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 3 # For airwing of 100 planes (Destroyer I: 5 sub detection )
@@ -569,8 +569,9 @@ equipments = {
 		reliability = 0.80
 		manpower = 40
 		resources = {
-			aluminium = 2
-			tungsten = 3
+			aluminium = 4
+			rubber = 1
+			tungsten = 1
 		}
 	}
 	
@@ -582,23 +583,24 @@ equipments = {
 		parent = jet_fighter_equipment_1945
 		priority = 20
 
-		air_range = 1550
-		maximum_speed = 960
-		air_agility = 96
+		air_range = 1600
+		maximum_speed = 910
+		air_agility = 92
 		air_attack = 32
 		air_defence = 18
 
 		# Air vs Navy - low damage / high hit chance / easy to hurt
-		naval_strike_attack = 5
+		naval_strike_attack = 6
 		naval_strike_targetting = 10
 		surface_detection = 12 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 3 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
 		build_cost_ic = 82
-		fuel_consumption = 0.55
+		fuel_consumption = 0.52
 		resources = {
-			aluminium = 2
-			tungsten = 3
+			aluminium = 4
+			rubber = 1
+			tungsten = 1
 		}
 	}
 
@@ -660,19 +662,19 @@ equipments = {
 		parent = cv_fighter_equipment
 		priority = 10
 
-		air_range = 380
-		maximum_speed = 330
-		air_agility = 45
-		air_attack = 10
-		air_defence = 5
+		air_range = 525
+		maximum_speed = 400
+		air_agility = 52
+		air_attack = 18
+		air_defence = 4
 
 		naval_strike_attack = 3
 		naval_strike_targetting = 10
 		surface_detection = 18 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 4 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
-		build_cost_ic = 56
-		fuel_consumption = 0.33
+		build_cost_ic = 64
+		fuel_consumption = 0.31
 		resources = {
 			#oil = 1
 			aluminium = 2
@@ -688,9 +690,9 @@ equipments = {
 		parent = cv_fighter_equipment_1934
 		priority = 10
 
-		air_range = 400
+		air_range = 625
 		maximum_speed = 460
-		air_agility = 50
+		air_agility = 56
 		air_attack = 20
 		air_defence = 6
 
@@ -699,8 +701,8 @@ equipments = {
 		surface_detection = 18 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 4 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
-		build_cost_ic = 60
-		fuel_consumption = 0.34
+		build_cost_ic = 68
+		fuel_consumption = 0.33
 		resources = {
 			#oil = 1
 			aluminium = 2
@@ -716,19 +718,19 @@ equipments = {
 		parent = cv_fighter_equipment_1934
 		priority = 10
 
-		air_range = 425
+		air_range = 675
 		maximum_speed = 490
-		air_agility = 52
-		air_attack = 21
-		air_defence = 7
+		air_agility = 58
+		air_attack = 22
+		air_defence = 8
 
 		naval_strike_attack = 3
 		naval_strike_targetting = 10
 		surface_detection = 18 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 4 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
-		build_cost_ic = 62
-		fuel_consumption = 0.35
+		build_cost_ic = 70
+		fuel_consumption = 0.34
 		resources = {
 			#oil = 1
 			aluminium = 2
@@ -744,19 +746,19 @@ equipments = {
 		parent = cv_fighter_equipment_1936
 		priority = 10
 
-		air_range = 450
+		air_range = 725
 		maximum_speed = 520
-		air_agility = 55
+		air_agility = 60
 		air_attack = 22
 		air_defence = 8
 
-		naval_strike_attack = 4
+		naval_strike_attack = 3
 		naval_strike_targetting = 10
-		surface_detection = 20 # For airwing of 100 planes (Destroyer I: 20 surface detection)
-		sub_detection = 5 # For airwing of 100 planes (Destroyer I: 5 sub detection )
+		surface_detection = 18 # For airwing of 100 planes (Destroyer I: 20 surface detection)
+		sub_detection = 4 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
-		build_cost_ic = 64
-		fuel_consumption = 0.36
+		build_cost_ic = 72
+		fuel_consumption = 0.35
 		resources = {
 			#oil = 1
 			aluminium = 2
@@ -772,22 +774,22 @@ equipments = {
 		parent = cv_fighter_equipment_1937
 		priority = 10
 
-		air_range = 500
-		maximum_speed = 570
-		air_agility = 60
-		air_attack = 23
-		air_defence = 9
+		air_range = 775
+		maximum_speed = 550
+		air_agility = 62
+		air_attack = 24
+		air_defence = 10
 
-		naval_strike_attack = 4
+		naval_strike_attack = 5
 		naval_strike_targetting = 10
-		surface_detection = 20 # For airwing of 100 planes (Destroyer I: 20 surface detection)
+		surface_detection = 21 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 5 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
-		build_cost_ic = 66
-		fuel_consumption = 0.37
+		build_cost_ic = 74
+		fuel_consumption = 0.36
 		resources = {
 			#oil = 1
-			aluminium = 2
+			aluminium = 3
 			rubber = 1
 		}
 	}
@@ -800,18 +802,18 @@ equipments = {
 		parent = cv_fighter_equipment_1938
 		priority = 10
 
-		air_range = 550
-		maximum_speed = 620
-		air_agility = 65
+		air_range = 825
+		maximum_speed = 580
+		air_agility = 64
 		air_attack = 24
 		air_defence = 10
 
-		naval_strike_attack = 4
+		naval_strike_attack = 5
 		naval_strike_targetting = 10
-		surface_detection = 20 # For airwing of 100 planes (Destroyer I: 20 surface detection)
+		surface_detection = 21 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 5 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
-		build_cost_ic = 68
+		build_cost_ic = 76
 		fuel_consumption = 0.37
 		resources = {
 			#oil = 1
@@ -828,18 +830,18 @@ equipments = {
 		parent = cv_fighter_equipment_1939
 		priority = 10
 
-		air_range = 600
-		maximum_speed = 645
-		air_agility = 70
-		air_attack = 25
-		air_defence = 11
+		air_range = 875
+		maximum_speed = 610
+		air_agility = 66
+		air_attack = 26
+		air_defence = 12
 
 		naval_strike_attack = 5
 		naval_strike_targetting = 10
-		surface_detection = 22 # For airwing of 100 planes (Destroyer I: 20 surface detection)
-		sub_detection = 6 # For airwing of 100 planes (Destroyer I: 5 sub detection )
+		surface_detection = 21 # For airwing of 100 planes (Destroyer I: 20 surface detection)
+		sub_detection = 5 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
-		build_cost_ic = 70
+		build_cost_ic = 78
 		fuel_consumption = 0.38
 		resources = {
 			#oil = 1
@@ -856,18 +858,18 @@ equipments = {
 		parent = cv_fighter_equipment_1940
 		priority = 10
 
-		air_range = 650
-		maximum_speed = 675
-		air_agility = 75
+		air_range = 925
+		maximum_speed = 640
+		air_agility = 98
 		air_attack = 26
 		air_defence = 12
 
 		naval_strike_attack = 5
 		naval_strike_targetting = 10
-		surface_detection = 22 # For airwing of 100 planes (Destroyer I: 20 surface detection)
-		sub_detection = 6 # For airwing of 100 planes (Destroyer I: 5 sub detection )
+		surface_detection = 21 # For airwing of 100 planes (Destroyer I: 20 surface detection)
+		sub_detection = 5 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
-		build_cost_ic = 72
+		build_cost_ic = 80
 		fuel_consumption = 0.39
 		resources = {
 			#oil = 1
@@ -884,22 +886,22 @@ equipments = {
 		parent = cv_fighter_equipment_1941
 		priority = 10
 
-		air_range = 700
-		maximum_speed = 700
-		air_agility = 77
-		air_attack = 27
-		air_defence = 13
+		air_range = 975
+		maximum_speed = 670
+		air_agility = 70
+		air_attack = 28
+		air_defence = 14
 
-		naval_strike_attack = 6
+		naval_strike_attack = 7
 		naval_strike_targetting = 10
 		surface_detection = 24 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 6 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
-		build_cost_ic = 74
+		build_cost_ic = 82
 		fuel_consumption = 0.40
 		resources = {
 			#oil = 1
-			aluminium = 3
+			aluminium = 4
 			rubber = 1
 		}
 	}
@@ -912,23 +914,23 @@ equipments = {
 		parent = cv_fighter_equipment_1942
 		priority = 10
 
-		air_range = 750
-		maximum_speed = 720
-		air_agility = 80
+		air_range = 1025
+		maximum_speed = 700
+		air_agility = 72
 		air_attack = 28
 		air_defence = 14
 
-		naval_strike_attack = 6
+		naval_strike_attack = 7
 		naval_strike_targetting = 10
 		surface_detection = 24 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 6 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
-		build_cost_ic = 76
+		build_cost_ic = 84
 		fuel_consumption = 0.41
 
 		resources = {
 			#oil = 1
-			aluminium = 3
+			aluminium = 4
 			rubber = 1
 		}
 	}
