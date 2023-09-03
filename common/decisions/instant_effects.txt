@@ -54,6 +54,36 @@ TUR_instant_effect_decisions = {
 			base = 5000			
 		}
 	}
+
+	china_ded = {
+
+		icon = generic_megaphone
+		fire_only_once = yes
+
+		allowed = {
+			tag = TUR
+		}
+
+		available = {
+			JAP = {
+				has_war = no
+			}
+			NOT = {
+				country_exists = CHI
+			}
+		}
+
+		cost = 0
+		
+		complete_effect = {
+			JAP = {
+				add_ideas = airandnavy_idea
+			}
+		}
+		ai_will_do = {
+			base = 5000			
+		}
+	}
 	
     salo = {
 	   

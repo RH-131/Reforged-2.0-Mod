@@ -39,12 +39,6 @@ focus_tree = {
          			bonus = 0.15
     			}
 			}
-			set_popularities = {
-				democratic = 60
-				fascism = 10
-				communism = 10
-				neutrality = 20
-			}
 		}
 	}
 
@@ -129,7 +123,6 @@ focus_tree = {
 		}
 
 		available = {
-		    has_completed_focus = MEX_focus_control_the_army
 		}
 
 		cancel_if_invalid = yes
@@ -402,7 +395,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_completed_focus = MEX_focus_control_the_army
 		}
 
 		cancel_if_invalid = yes
@@ -1854,7 +1846,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_completed_focus = MEX_focus_control_the_army
 		}
 
 		cancel_if_invalid = yes
@@ -2259,6 +2250,10 @@ focus_tree = {
 		relative_position_id = MEX_focus_spanish_civil_war_refugees
 
 		cost = 5
+		
+		available = {
+			date > 1938.01.01
+		}
 
 		ai_will_do = {
 			factor = 100
@@ -2269,6 +2264,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+		    add_ideas = partial_economic_mobilisation
 			add_war_support = 0.05
 			add_political_power = 50
 		}
@@ -2283,6 +2279,10 @@ focus_tree = {
 		relative_position_id = MEX_focus_realpolitik
 
 		cost = 5
+		
+		available = {
+			date > 1940.01.01
+		}
 
 		ai_will_do = {
 			factor = 100
@@ -2298,7 +2298,8 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
-		
+		    add_ideas = war_economy
+		    remove_ideas = refinery_idea
 			unlock_decision_tooltip = MEX_decision_coastal_defence_plan
 			
 			481 = {

@@ -35,11 +35,13 @@ sub_units = {
 		supply_consumption = 0.15
 		
 		forest = {
-		    attack = -0.1
+		    attack = -0.10
+			defence = -0.05
 			movement = -0.2
 		}
 		hills = 	{
 		    attack = -0.1
+			defence = -0.05
 			defence = -0.05
 		}
 		mountain = 	{
@@ -71,12 +73,12 @@ sub_units = {
 			attack = -3.0
 		}	
 		plains = {
-			attack = 0.1 
-			movement = 0.1 
+			attack = 0.05
+			movement = 0.05 
 		}
         	desert = {
-			attack = 0.15
-			movement = 0.1
+			attack = 0.05
+			movement = 0.05
 		}	
 	}
 	
