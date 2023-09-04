@@ -3810,6 +3810,9 @@ foreign_politics = {
 		}
 
 		available = {
+			NOT = {
+				has_war_with = SOV
+			}
 			AND = { date > 1941.7.01 date < 1941.08.30 }
 			is_puppet = no
 			has_army_manpower = { size > 100000 } 
@@ -3950,6 +3953,9 @@ foreign_politics = {
 		}
 
 		available = {
+			NOT = {
+				has_war_with = SOV
+			}
 			date > 1941.9.01
 			is_puppet = no
 			has_army_manpower = { size > 100000 } 
