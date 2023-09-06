@@ -1675,11 +1675,9 @@ operation_steal_tech_civilian = { ### 12 3/35
 		ROOT = {
 			steal_random_tech_bonus = {
 				folder = industry_folder
-				bonus = 0.33
+				bonus = 0.4
 				name = operation_steal_tech_civilian
 				target = FROM
-				dynamic = yes
-				instant = yes
 				uses = 1
 			}
 			remove_operation_token = {
@@ -1694,10 +1692,7 @@ operation_steal_tech_civilian = { ### 12 3/35
 				ROOT = {
 					steal_random_tech_bonus = {
 						folder = industry_folder
-
-						bonus = 0.33
-						dynamic = yes
-						instant = yes
+						bonus = 0.8
 						name = operation_steal_tech_civilian
 						target = FROM
 						uses = 1
@@ -1708,10 +1703,7 @@ operation_steal_tech_civilian = { ### 12 3/35
 				ROOT = {
 					steal_random_tech_bonus = {
 						folder = industry_folder
-
-						bonus = 0.33
-						dynamic = yes
-						instant = yes
+						bonus = 0.4
 						name = operation_steal_tech_civilian
 						target = FROM
 						uses = 1
@@ -1725,9 +1717,7 @@ operation_steal_tech_civilian = { ### 12 3/35
 		ROOT = {
 			steal_random_tech_bonus = {
 				folder = industry_folder
-				bonus = 0.33
-				dynamic = yes
-				instant = yes
+				bonus = 0.4
 				name = operation_steal_tech_civilian
 				target = FROM
 				uses = 1
@@ -1827,11 +1817,9 @@ operation_steal_tech_electronics = { ### 12 3/35
 		ROOT = {
 			steal_random_tech_bonus = {
 				folder = electronics_folder
-				bonus = 0.40
+				bonus = 0.4
 				name = operation_steal_tech_civilian
 				target = FROM
-				dynamic = yes
-				instant = yes
 				uses = 1
 			}
 			remove_operation_token = {
@@ -1846,10 +1834,7 @@ operation_steal_tech_electronics = { ### 12 3/35
 				ROOT = {
 					steal_random_tech_bonus = {
 						folder = electronics_folder
-
-						bonus = 0.80
-						dynamic = yes
-						instant = yes
+						bonus = 0.8
 						name = operation_steal_tech_civilian
 						target = FROM
 						uses = 1
@@ -1860,10 +1845,7 @@ operation_steal_tech_electronics = { ### 12 3/35
 				ROOT = {
 					steal_random_tech_bonus = {
 						folder = electronics_folder
-
-						bonus = 0.40
-						dynamic = yes
-						instant = yes
+						bonus = 0.4
 						name = operation_steal_tech_civilian
 						target = FROM
 						uses = 1
@@ -1877,9 +1859,7 @@ operation_steal_tech_electronics = { ### 12 3/35
 		ROOT = {
 			steal_random_tech_bonus = {
 				folder = electronics_folder
-				bonus = 1.0
-				dynamic = yes
-				instant = yes
+				bonus = 0.4
 				name = operation_steal_tech_civilian
 				target = FROM
 				uses = 1
@@ -2406,9 +2386,7 @@ operation_steal_tech_army = { ### 16 3/55
 				folder = artillery_folder
 				folder = infantry_folder
 				folder = support_folder
-				bonus = 0.40
-				dynamic = yes
-				instant = yes
+				bonus = 0.4
 				name = operation_steal_tech_army
 				target = FROM
 				uses = 1
@@ -2427,10 +2405,7 @@ operation_steal_tech_army = { ### 16 3/55
 						folder = artillery_folder
 						folder = infantry_folder
 						folder = support_folder
-
-						bonus = 0.80
-						dynamic = yes
-						instant = yes
+						bonus = 0.8
 						name = operation_steal_tech_army
 						target = FROM
 						uses = 1
@@ -2443,10 +2418,7 @@ operation_steal_tech_army = { ### 16 3/55
 						folder = artillery_folder
 						folder = infantry_folder
 						folder = support_folder
-
-						bonus = 0.40
-						dynamic = yes
-						instant = yes
+						bonus = 0.4
 						name = operation_steal_tech_army
 						target = FROM
 						uses = 1
@@ -2462,9 +2434,7 @@ operation_steal_tech_army = { ### 16 3/55
 				folder = artillery_folder
 				folder = infantry_folder
 				folder = support_folder
-				bonus = 0.40
-				dynamic = yes
-				instant = yes
+				bonus = 0.4
 				name = operation_steal_tech_army
 				target = FROM
 				uses = 1
@@ -2701,10 +2671,7 @@ operation_steal_tech_navy = { ### 18 3/55
   			ROOT = {
 				steal_random_tech_bonus = {
 					folder = mtgnavalfolder
-
-					bonus = 0.5
-					dynamic = yes
-					instant = yes
+					bonus = 0.4
 					name = operation_steal_tech_navy
 					target = FROM
 					uses = 1
@@ -2719,10 +2686,7 @@ operation_steal_tech_navy = { ### 18 3/55
 	  		ROOT = {
 				steal_random_tech_bonus = {
 					folder = naval_folder
-
-					bonus = 0.5
-					dynamic = yes
-					instant = yes
+					bonus = 0.4
 					name = operation_steal_tech_navy
 					target = FROM
 					uses = 1
@@ -2740,16 +2704,10 @@ operation_steal_tech_navy = { ### 18 3/55
 			33 = {
 				if = {
   					limit = { has_dlc = "Man the Guns"} 
-						   
-							 
-
   					ROOT = {
 						steal_random_tech_bonus = {
 							folder = mtgnavalfolder
-
-							bonus = 0.5
-							dynamic = yes
-							instant = yes
+							bonus = 0.8
 							name = operation_steal_tech_navy
 							target = FROM
 							uses = 1
@@ -2760,10 +2718,7 @@ operation_steal_tech_navy = { ### 18 3/55
 					ROOT = {
 						steal_random_tech_bonus = {
 							folder = naval_folder
-
-							bonus = 0.5
-							dynamic = yes
-							instant = yes
+							bonus = 0.8
 							name = operation_steal_tech_navy
 							target = FROM
 							uses = 1
@@ -2774,16 +2729,10 @@ operation_steal_tech_navy = { ### 18 3/55
 			67 = {
 				if = {
   					limit = { has_dlc = "Man the Guns"} 
-						   
-							 
-
 					ROOT = {
 						steal_random_tech_bonus = {
 							folder = mtgnavalfolder
-
-							bonus = 0.5
-							dynamic = yes
-							instant = yes
+							bonus = 0.4
 							name = operation_steal_tech_navy
 							target = FROM
 							uses = 1
@@ -2794,10 +2743,7 @@ operation_steal_tech_navy = { ### 18 3/55
 					ROOT = {
 						steal_random_tech_bonus = {
 							folder = naval_folder
-
-							bonus = 0.5
-							dynamic = yes
-							instant = yes
+							bonus = 0.4
 							name = operation_steal_tech_navy
 							target = FROM
 							uses = 1
@@ -2812,10 +2758,7 @@ operation_steal_tech_navy = { ### 18 3/55
 			steal_random_tech_bonus = {
 				folder = naval_folder
 				folder = mtgnavalfolder
-
-				bonus = 0.5
-				dynamic = yes
-				instant = yes
+				bonus = 0.4
 				name = operation_steal_tech_navy
 				target = FROM
 				uses = 1
