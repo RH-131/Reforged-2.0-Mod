@@ -2136,6 +2136,7 @@ leader_traits = {
 				default_morale = 0.1
 			}
 		}
+
 		ai_will_do = {
 			factor = 1000
 		}
@@ -2145,6 +2146,7 @@ leader_traits = {
 		sprite = 14
 		experience_gain_army = 0.30
 		cat_superior_firepower_cost_factor = -0.15
+
 		equipment_bonus = {
 			artillery = {
 				instant = yes
@@ -2155,6 +2157,7 @@ leader_traits = {
 				soft_attack = 0.1
 			}
 		}
+
 		ai_will_do = {
 			factor = 500
 		}
@@ -2175,8 +2178,9 @@ leader_traits = {
 	mass_assault_expert = {
 		sprite = 14
 		experience_gain_army = 0.30
-		army_attack_factor = 0.05
 		cat_mass_assault_cost_factor = -0.15
+		
+		army_attack_factor = 0.05
 
 		ai_will_do = {
 			factor = 500
@@ -2209,6 +2213,7 @@ leader_traits = {
 
 	dive_bomber = {
 		sprite = 14
+		experience_gain_air = 0.30
 		cat_battlefield_support_cost_factor = -0.15
 
 		equipment_bonus = {
@@ -2217,7 +2222,6 @@ leader_traits = {
 				air_ground_attack = 0.1
 			}
 		}
-		experience_gain_air = 0.30
 
 		ai_will_do = {
 			factor = 100
@@ -2226,6 +2230,7 @@ leader_traits = {
 
 	GERdive_bomber = {
 		sprite = 14
+		experience_gain_air = 0.30
 		cat_battlefield_support_cost_factor = -0.15
 
 		equipment_bonus = {
@@ -2235,7 +2240,6 @@ leader_traits = {
 				maximum_speed = -0.1
 			}
 		}
-		experience_gain_air = 0.30
 
 		ai_will_do = {
 			factor = 100
@@ -2398,10 +2402,10 @@ leader_traits = {
 
 	blitzkrieg_theorist = {
 		sprite = 14
-
-		army_armor_speed_factor = 0.05
 		experience_gain_army = 0.20
 		cat_mobile_warfare_cost_factor = -0.10
+
+		army_armor_speed_factor = 0.05
 
 		ai_will_do = {
 			factor = 100
