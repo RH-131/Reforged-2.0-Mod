@@ -18,22 +18,22 @@ characters={
 			slot = theorist
 			idea_token = tomoyuki_yamashita
 			ledger  = army 
-				allowed  = {
-					original_tag  = JAP
-				}
-				cost  = 200.000
-				traits  = {
-					grand_battle_plan_expert 
-				}
-				available  = {
-					has_completed_focus  = JAP_the_old_guard
-					NOT = {
-						OR = {
-							has_idea = hisaichi_terauchi
-							has_idea = toyosaku_shimada
-						}
+			allowed  = {
+				original_tag  = JAP
+			}
+			cost  = 250.000
+			traits  = {
+				grand_battle_plan_expert 
+			}
+			available  = {
+				has_completed_focus  = JAP_the_old_guard
+				NOT = {
+					OR = {
+						has_idea = hisaichi_terauchi
+						has_idea = toyosaku_shimada
 					}
 				}
+			}
 		}
 		portraits={
 			army={
@@ -1052,7 +1052,7 @@ characters={
 				allowed  = {
 					original_tag  = JAP
 				}
-				cost  = 200.000
+				cost  = 250.000
 				traits  = {
 					mobile_warfare_expert 
 				}
