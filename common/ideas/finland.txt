@@ -1,6 +1,83 @@
 ideas = {
-
 	country = {
+			FIN_short_term_production = {
+
+			picture = ger_bulwark_against_bolshevism
+
+		    allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+			    
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				trade_laws_cost_factor = 0.5
+				}
+	}	
+			Economic_Boom = {
+
+			picture = GFX_goal_generic_construct_civ_factory
+
+		    allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+			    research_speed_factor = 0.05
+				}
+	}
+			FIN_The_golden_era= {
+
+			picture = ger_bulwark_against_bolshevism
+
+		    allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+			    
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+				
+				}
+	}
+		
+		FIN_advanced_training= {
+
+			picture = ger_bulwark_against_bolshevism
+
+		    allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+			    
+				supply_consumption_factor = -0.025
+				}
+	}
+		FIN_long_term_production = {
+
+			picture = ger_bulwark_against_bolshevism
+
+		    allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+			    
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+				
+				}
+	}
+	
 		FIN_valpo_idea = {
 
 			picture = office_of_strategic_services
@@ -202,7 +279,7 @@ ideas = {
 			picture = generic_manpower_bonus
 			
 			modifier = {
-				conscription = 0.05	
+				conscription = 0.06	
 			}
 		}
 	
