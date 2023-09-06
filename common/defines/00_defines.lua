@@ -690,15 +690,23 @@ NMilitary = {
 	
 	PIERCING_THRESHOLDS = {					-- Our piercing / their armor must be this value to deal damage fraction equal to the index in the array below [higher number = higher penetration]. If armor is 0, 1.00 will be returned.
 		1.00,
-		0.75,
+		0.90,
+		0.80,
+		0.70, --there isn't much point setting this higher than 0
+		0.60,
 		0.50,
-		0.00, --there isn't much point setting this higher than 0
+		0.40,
+		0.00,
 	},
 	PIERCING_THRESHOLD_DAMAGE_VALUES = {	-- 0 armor will always receive maximum damage (so add overmatching at your own peril). the system expects at least 2 values, with no upper limit.
 		1.00,
+		0.90,
 		0.80,
-		0.65,
+		0.70,
+		0.60,
 		0.50,
+		0.40,
+		0.30,
 	},
 
 	DIVISIONAL_COMMANDER_TRAIT_XP_REQUIREMENT = 600.0,	--Get a trait if any valid options & xp gained >= this
@@ -1032,7 +1040,7 @@ NMilitary = {
 	GARRISON_ORDER_ARMY_CAP_FACTOR = 1.0,			-- armies gets increased cap when they are garrisoned
 
 	COMMANDER_LEVEL_UP_STAT_COUNT = 3, 				-- num stats gained on level up
-	COMMANDER_LEVEL_UP_STAT_WEIGHTS = {5, 5, 3, 4}, -- level up stat random base weights attack, defense, planning, logistics
+	COMMANDER_LEVEL_UP_STAT_WEIGHTS = {5, 5, 5, 5}, -- level up stat random base weights attack, defense, planning, logistics
 
 	NAVY_LEADER_LEVEL_UP_STAT_WEIGHTS = {5, 5, 5, 5}, -- level up stat random base weights attack, defense, maneuvering, coordination
 

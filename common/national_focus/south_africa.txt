@@ -227,7 +227,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 120
-			add_timed_idea = { idea = SAF_up_making_gains days = 180 }
+			add_ideas = SAF_up_making_gains
 		}
 	}
 	
@@ -258,7 +258,7 @@ focus_tree = {
 				}
 			}
 			add_political_power = 50
-			add_timed_idea = { idea = SAF_civil_industrial_infrastructure days = 700 }
+			add_ideas = SAF_civil_industrial_infrastructure
 		}
 	}
 	
@@ -386,7 +386,7 @@ focus_tree = {
 		}
 			add_stability = -0.1
 			add_ideas = low_economic_mobilisation
-			add_timed_idea = { idea = SAF_kickstarting_rearmament days = 900 }
+			add_ideas = SAF_kickstarting_rearmament
 			remove_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }
 		}
 	}
@@ -758,7 +758,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_timed_idea = { idea = SAF_idea_reconciliation days = 120 }			 
+			add_timed_idea = { idea = SAF_idea_reconciliation days = 180 }		 
 		}
 	}
 	
