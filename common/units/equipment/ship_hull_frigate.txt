@@ -71,37 +71,29 @@ equipments = {
 		
 		lg_armor_piercing = 0
 		lg_attack = 0
-		
 		hg_armor_piercing = 0
 		hg_attack = 0
-		
 		torpedo_attack = 0
 		sub_attack = 1
-		
 		anti_air_attack = 0
-		
-		armor_value = 0
 
-		
-		surface_detection = 20
-		sub_detection = 1
-		surface_visibility = 10
-		naval_speed = 18
-		reliability = 0.80
-		
-		naval_range = 3000
-		
-		max_strength = 20
-		
-
+		build_cost_ic = 220
+		manpower = 150
 		fuel_consumption = 0
 		
-		build_cost_ic = 250
-		resources = {
-			steel = 2
-		}
+		max_strength = 20
+		armor_value = 0
+		reliability = 0.75
+		naval_speed = 20
+
+		naval_range = 3000
+		surface_detection = 20
+		surface_visibility = 10
+		sub_detection = 1
 		
-		manpower = 150
+		resources = {
+			steel = 1
+		}
 	}
 
 	ship_hull_frigate_1 = {
@@ -114,51 +106,51 @@ equipments = {
 		module_slots = inherit
 	}
 
-	ship_hull_frigate_2 = {
-		year = 1940
+	# ship_hull_frigate_2 = {
+	# 	year = 1940
 
-		archetype = ship_hull_frigate
-		priority = 2000
-		parent = ship_hull_frigate_1
-		#alias = destroyer_2
+	# 	archetype = ship_hull_frigate
+	# 	priority = 2000
+	# 	parent = ship_hull_frigate_1
+	# 	#alias = destroyer_2
 		
-		module_slots = {
-			fixed_ship_battery_slot = inherit
-			fixed_ship_anti_air_slot = inherit
-			fixed_ship_radar_slot_1 = inherit
-			fixed_ship_radar_slot_2 = inherit
-			fixed_ship_engine_slot = inherit
+	# 	module_slots = {
+	# 		fixed_ship_battery_slot = inherit
+	# 		fixed_ship_anti_air_slot = inherit
+	# 		fixed_ship_radar_slot_1 = inherit
+	# 		fixed_ship_radar_slot_2 = inherit
+	# 		fixed_ship_engine_slot = inherit
 
-			front_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_depth_charge
-					ship_anti_air
-				}
-			}
-			rear_1_custom_slot = front_1_custom_slot
-		}
+	# 		front_1_custom_slot = {
+	# 			required = no
+	# 			allowed_module_categories = {
+	# 				ship_depth_charge
+	# 				ship_anti_air
+	# 			}
+	# 		}
+	# 		rear_1_custom_slot = front_1_custom_slot
+	# 	}
 
-		default_modules = {
-			fixed_ship_battery_slot = empty
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_radar_slot_1 = empty
-			fixed_ship_radar_slot_2 = empty
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_2
-		}
+	# 	default_modules = {
+	# 		fixed_ship_battery_slot = empty
+	# 		fixed_ship_anti_air_slot = empty
+	# 		fixed_ship_radar_slot_1 = empty
+	# 		fixed_ship_radar_slot_2 = empty
+	# 		mid_1_custom_slot = empty
+	# 		rear_1_custom_slot = empty
+	# 		fixed_ship_engine_slot = light_ship_engine_2
+	# 	}
 
 
-		reliability = 0.85
-		naval_range = 4000
-		max_strength = 30
-		build_cost_ic = 350
-		resources = {
-			steel = 2
-		}
-		manpower = 225
-	}
+	# 	reliability = 0.85
+	# 	naval_range = 4000
+	# 	max_strength = 30
+	# 	build_cost_ic = 350
+	# 	resources = {
+	# 		steel = 2
+	# 	}
+	# 	manpower = 225
+	# }
 
 	frigate_1 = {
 		year = 1922
@@ -206,54 +198,54 @@ equipments = {
 		manpower = 150
 	}
 	
-	frigate_2 = {
-		year = 1940
+	# frigate_2 = {
+	# 	year = 1940
 
-		archetype = ship_hull_frigate
-		priority = 2000
-		parent = frigate_1
-		module_slots = inherit
-		default_modules = {
-			fixed_ship_battery_slot = ship_light_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_2
-			fixed_ship_radar_slot_1 = empty
-			fixed_ship_radar_slot_2 = empty
-			fixed_ship_engine_slot = light_ship_engine_2
-			front_1_custom_slot = empty
-			rear_1_custom_slot = ship_depth_charge_2
-		}
-		lg_armor_piercing = 0
-		lg_attack = 0
-		torpedo_attack = 0
-		sub_attack = 1
+	# 	archetype = ship_hull_frigate
+	# 	priority = 2000
+	# 	parent = frigate_1
+	# 	module_slots = inherit
+	# 	default_modules = {
+	# 		fixed_ship_battery_slot = ship_light_battery_2
+	# 		fixed_ship_anti_air_slot = ship_anti_air_2
+	# 		fixed_ship_radar_slot_1 = empty
+	# 		fixed_ship_radar_slot_2 = empty
+	# 		fixed_ship_engine_slot = light_ship_engine_2
+	# 		front_1_custom_slot = empty
+	# 		rear_1_custom_slot = ship_depth_charge_2
+	# 	}
+	# 	lg_armor_piercing = 0
+	# 	lg_attack = 0
+	# 	torpedo_attack = 0
+	# 	sub_attack = 1
 		
-		anti_air_attack = 0
+	# 	anti_air_attack = 0
 		
-		armor_value = 0
-
-		
-		surface_detection = 25
-		sub_detection = 10
-		surface_visibility = 10
-		naval_speed = 23
-		reliability = 0.85
-
-		naval_range = 4000
-		
-		max_strength = 30
-		
+	# 	armor_value = 0
 
 		
-		type = { 
-			screen_ship
-			anti_air
-		}
+	# 	surface_detection = 25
+	# 	sub_detection = 10
+	# 	surface_visibility = 10
+	# 	naval_speed = 23
+	# 	reliability = 0.85
 
-		build_cost_ic = 350
-		resources = {
-			steel = 3
-		}		
-		manpower = 225
-	}
+	# 	naval_range = 4000
+		
+	# 	max_strength = 30
+		
+
+		
+	# 	type = { 
+	# 		screen_ship
+	# 		anti_air
+	# 	}
+
+	# 	build_cost_ic = 350
+	# 	resources = {
+	# 		steel = 3
+	# 	}		
+	# 	manpower = 225
+	# }
 }
 
