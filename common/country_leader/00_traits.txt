@@ -2104,17 +2104,7 @@ leader_traits = {
 
 	military_theorist = {
 		sprite = 14
-		experience_gain_army = 0.15
-		land_doctrine_cost_factor = -0.10
-
-		ai_will_do = {
-			factor = 500
-		}
-	}
-
-	usa_military_theorist = {
-		sprite = 14
-		experience_gain_army = 0.20
+		experience_gain_army = 0.2
 		land_doctrine_cost_factor = -0.10
 
 		ai_will_do = {
@@ -2124,7 +2114,7 @@ leader_traits = {
 
 	mobile_warfare_expert = {
 		sprite = 14
-		experience_gain_army = 0.25
+		experience_gain_army = 0.3
 		cat_mobile_warfare_cost_factor = -0.15
 
 		army_armor_speed_factor = 0.05
@@ -2146,6 +2136,7 @@ leader_traits = {
 				default_morale = 0.1
 			}
 		}
+
 		ai_will_do = {
 			factor = 1000
 		}
@@ -2156,7 +2147,6 @@ leader_traits = {
 		experience_gain_army = 0.30
 		cat_superior_firepower_cost_factor = -0.15
 
-		planning_speed = -0.05
 		equipment_bonus = {
 			artillery = {
 				instant = yes
@@ -2167,6 +2157,7 @@ leader_traits = {
 				soft_attack = 0.1
 			}
 		}
+
 		ai_will_do = {
 			factor = 500
 		}
@@ -2187,8 +2178,9 @@ leader_traits = {
 	mass_assault_expert = {
 		sprite = 14
 		experience_gain_army = 0.30
-		army_attack_factor = 0.05
 		cat_mass_assault_cost_factor = -0.15
+		
+		army_attack_factor = 0.05
 
 		ai_will_do = {
 			factor = 500
@@ -2221,7 +2213,8 @@ leader_traits = {
 
 	dive_bomber = {
 		sprite = 14
-		cat_battlefield_support_cost_factor = -0.10
+		experience_gain_air = 0.30
+		cat_battlefield_support_cost_factor = -0.15
 
 		equipment_bonus = {
 			small_plane_cas_airframe = {
@@ -2229,7 +2222,6 @@ leader_traits = {
 				air_ground_attack = 0.1
 			}
 		}
-		experience_gain_air = 0.20
 
 		ai_will_do = {
 			factor = 100
@@ -2238,7 +2230,8 @@ leader_traits = {
 
 	GERdive_bomber = {
 		sprite = 14
-		cat_battlefield_support_cost_factor = -0.10
+		experience_gain_air = 0.30
+		cat_battlefield_support_cost_factor = -0.15
 
 		equipment_bonus = {
 			small_plane_cas_airframe = {
@@ -2247,7 +2240,6 @@ leader_traits = {
 				maximum_speed = -0.1
 			}
 		}
-		experience_gain_air = 0.20
 
 		ai_will_do = {
 			factor = 100
@@ -2257,7 +2249,7 @@ leader_traits = {
 	victory_through_airpower = {
 		sprite = 14
 		experience_gain_air = 0.30
-		cat_strategic_destruction_cost_factor = -0.15
+		air_doctrine_cost_factor = -0.15
 
 		equipment_bonus = {
 			small_plane_airframe = {
@@ -2274,56 +2266,6 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 100
-		}
-	}
-
-
-	GERvictory_through_airpower = {
-		sprite = 14
-		experience_gain_air = 0.30
-		cat_strategic_destruction_cost_factor = -0.15
-
-		equipment_bonus = {
-
-			small_plane_airframe = {
-				instant = yes
-				reliability = 0.05
-				build_cost_ic = -0.05
-			}
-			medium_plane_fighter_airframe = {
-				instant = yes
-				reliability = 0.05
-				build_cost_ic = -0.05
-			}
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	USAvictory_through_airpower = {
-		sprite = 14
-		experience_gain_air = 0.30
-		cat_strategic_destruction_cost_factor = -0.15
-
-		equipment_bonus = {
-				small_plane_airframe = {
-					build_cost_ic = -0.08 instant = yes
-				}
-				cv_small_plane_airframe = {
-					build_cost_ic = -0.08 instant = yes
-				}
-				medium_plane_fighter_airframe = {
-					build_cost_ic = -0.08 instant = yes
-				}
-				cv_medium_plane_fighter_airframe = {
-					build_cost_ic = -0.08 instant = yes
-				}
-		}
-
-		ai_will_do = {
-			factor = 200
 		}
 	}
 
@@ -2345,63 +2287,34 @@ leader_traits = {
 		}
 	}
 
-	GERcarpet_bomber = {
-		sprite = 14
-		experience_gain_air = 0.20
-		cat_strategic_destruction_cost_factor = -0.10
-
-		air_strategic_bomber_bombing_factor = 0.1
-		equipment_bonus = {
-			large_plane_airframe = {
-				instant = yes
-				build_cost_ic = -0.05
-				reliability = 0.1
-			}
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
-	USAcarpet_bomber = {
-		sprite = 14
-		experience_gain_air = 0.20
-		cat_strategic_destruction_cost_factor = -0.10
-
-		equipment_bonus = {
-			large_plane_airframe = {
-				instant = yes
-				build_cost_ic = -0.05
-			}
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
 	close_air_support_proponent = {
 		sprite = 14
 		experience_gain_air = 0.20
-		cat_battlefield_support_cost_factor = -0.15
+		cat_battlefield_support_cost_factor = -0.10
+
+		equipment_bonus = {
+			small_plane_cas_airframe = {
+				air_ground_attack = 0.05 instant = yes
+				reliability = 0.05 instant = yes
+			}
+		}
 
 		ai_will_do = {
 			factor = 100
 		}
 	}
 
-	GERclose_air_support_proponent = {
+	tactical_air_support_proponent = {
 		sprite = 14
 		experience_gain_air = 0.20
-		cat_battlefield_support_cost_factor = -0.15
+		cat_battlefield_support_cost_factor = -0.10
 
-			equipment_bonus = {
-			     medium_plane_airframe = {
-					air_bombing = 0.2 instant = yes
-					maximum_speed = 0.05 instant = yes
-			    }
-		    }
+		equipment_bonus = {
+			medium_plane_airframe = {
+				air_bombing = 0.2 instant = yes
+				maximum_speed = 0.05 instant = yes
+			}
+		}
 
 		ai_will_do = {
 			factor = 100
@@ -2411,7 +2324,14 @@ leader_traits = {
 	assault_avaition = {
 		sprite = 14
 		experience_gain_air = 0.20
-		cat_operational_integrity_cost_factor = -0.15
+		cat_operational_integrity_cost_factor = -0.10
+
+		equipment_bonus = {
+			medium_plane_airframe = {
+				air_bombing = 0.1 instant = yes
+				reliability = 0.05 instant = yes
+			}
+		}
 
 		ai_will_do = {
 			factor = 100
@@ -2430,33 +2350,28 @@ leader_traits = {
 
 	naval_aviation_pioneer = {
 		sprite = 14
-		experience_gain_navy = 0.1
+		experience_gain_navy = 0.3
 		cat_base_strike_cost_factor = -0.15
 
 		equipment_bonus = {
 			cv_small_plane_airframe = {
 				instant = yes
+				build_cost_ic = -0.05
 				reliability = 0.05
 			}
-		}
-
-		equipment_bonus = {
 			cv_medium_plane_fighter_airframe = {
 				instant = yes
+				build_cost_ic = -0.05
 				reliability = 0.05
 			}
-		}
-
-		equipment_bonus = {
 			cv_small_plane_cas_airframe = {
 				instant = yes
+				build_cost_ic = -0.05
 				reliability = 0.05
 			}
-		}
-
-		equipment_bonus = {
 			cv_small_plane_naval_bomber_airframe = {
 				instant = yes
+				build_cost_ic = -0.05
 				reliability = 0.05
 			}
 		}
@@ -2468,8 +2383,10 @@ leader_traits = {
 
 	grand_fleet_proponent = {
 		sprite = 14
-		experience_gain_navy = 0.25
-		cat_fleet_in_being_cost_factor = -0.15
+		experience_gain_navy = 0.2
+		cat_fleet_in_being_cost_factor = -0.1
+
+		navy_capital_ship_attack_factor = 0.05
 
 		ai_will_do = {
 			factor = 100
@@ -2479,14 +2396,9 @@ leader_traits = {
 	submarine_specialist = {
 		sprite = 14
 		experience_gain_navy = 0.20
-		cat_trade_interdiction_cost_factor = -0.15
+		cat_trade_interdiction_cost_factor = -0.10
 
-		equipment_bonus = {
-			cv_small_plane_airframe = {
-				instant = yes
-				reliability = -0.05
-			}
-		}
+		convoy_raiding_efficiency_factor = 0.05
 
 		equipment_bonus = {
 			cv_medium_plane_fighter_airframe = {
@@ -2502,10 +2414,10 @@ leader_traits = {
 
 	blitzkrieg_theorist = {
 		sprite = 14
+		experience_gain_army = 0.20
+		cat_mobile_warfare_cost_factor = -0.10
 
 		army_armor_speed_factor = 0.05
-		experience_gain_army = 0.20
-		cat_mobile_warfare_cost_factor = -0.15
 
 		ai_will_do = {
 			factor = 100
