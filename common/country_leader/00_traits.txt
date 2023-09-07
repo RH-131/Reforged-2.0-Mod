@@ -2317,6 +2317,9 @@ leader_traits = {
 				medium_plane_fighter_airframe = {
 					build_cost_ic = -0.08 instant = yes
 				}
+				cv_medium_plane_fighter_airframe = {
+					build_cost_ic = -0.08 instant = yes
+				}
 		}
 
 		ai_will_do = {
@@ -2438,6 +2441,13 @@ leader_traits = {
 		}
 
 		equipment_bonus = {
+			cv_medium_plane_fighter_airframe = {
+				instant = yes
+				reliability = 0.05
+			}
+		}
+
+		equipment_bonus = {
 			cv_small_plane_cas_airframe = {
 				instant = yes
 				reliability = 0.05
@@ -2473,6 +2483,13 @@ leader_traits = {
 
 		equipment_bonus = {
 			cv_small_plane_airframe = {
+				instant = yes
+				reliability = -0.05
+			}
+		}
+
+		equipment_bonus = {
+			cv_medium_plane_fighter_airframe = {
 				instant = yes
 				reliability = -0.05
 			}
