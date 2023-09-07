@@ -1780,7 +1780,11 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = USA_aircraft_carrier_tactics_1 
-			navy_experience = 25 
+			navy_experience = 25
+			custom_effect_tooltip = USA_SBD_tt
+			hidden_effect = {
+				set_technology = { cv_naval_bomber_1940 = 1 }
+			}
 		}
 	}					
 
