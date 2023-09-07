@@ -42,6 +42,7 @@ set_technology = { #player
 	tech_armored_cars2 = 1
 	light_tank_1934 = 1 
 	light_tank_1936 = 1
+	medium_tank_1937 = 1 
 	heavy_tank_1934 = 1
 	############# aircraft ############
     fighter_1934 = 1
@@ -83,7 +84,7 @@ if = {
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
-		early_ship_hull_frigate = 1
+		#early_ship_hull_frigate = 1
 		early_ship_hull_light = 1
 		basic_ship_hull_light = 1
 		early_ship_hull_submarine = 1
@@ -575,8 +576,8 @@ if = {
 			fixed_ship_armor_slot = ship_armor_bc_2
 			front_1_custom_slot = ship_heavy_battery_2
 			mid_1_custom_slot = ship_airplane_launcher_1
-			mid_2_custom_slot = ship_anti_air_2
-			rear_1_custom_slot = ship_secondaries_2
+			mid_2_custom_slot = ship_secondaries_2
+			rear_1_custom_slot = ship_anti_air_2
 		}
 	}
 	# Battleships #

@@ -1,4 +1,4 @@
-﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
@@ -25,7 +25,7 @@ focus_tree = {
 	default = no
 
 
-continuous_focus_position = { x = 1800 y = 900 }
+continuous_focus_position = { x = 1900 y = 1100 }
 
 
 #  #  ##  ### ###  ##  #  #  ##  #   ###  ## ###     ###  #  # ### #   ###     #  # ###
@@ -60,7 +60,6 @@ focus = {
 		set_party_name = { ideology = neutrality long_name = SPR_fascism_francoist_party_long name = SPR_fascism_francoist_party }
 		remove_ideas = SPA_spanish_civil_war_industry
 		add_ideas = SPA_recovering_from_civil_war 	
-		remove_ideas = SPA_death_before_surrender
 	}
 }
 
@@ -68,11 +67,9 @@ focus = {
 	focus = {
 		id = SPA_a_great_spain
 
-
 		icon = GFX_goal_generic_demand_territory
 		x = 4
 		y = 0
-
 
 		cost = 10
 
@@ -165,155 +162,6 @@ focus = {
 	        add_stability = 0.05
 	   }
 	}
-	
-focus = {
-		id = SPA_the_corpo_truppe_volontarie
-		prerequisite = { focus = SPA_unify_the_nationalist_front }
-
-		icon = GFX_focus_befriend_italy
-		x = 4
-		y = 1
-		relative_position_id = SPA_unify_the_nationalist_front
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			army_experience = 75
-			ITA = {
-
-				add_opinion_modifier = { target = ROOT modifier = SPA_spanish_civil_war_commitments }
-			}
-			add_tech_bonus = {
-				name = SPA_the_corpo_truppe_volontarie
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
-			}
-			add_tech_bonus = {
-				name = SPA_the_corpo_truppe_volontarie
-				bonus = 1.0
-				uses = 1
-				category = artillery
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_the_condor_legion
-		prerequisite = { focus = SPA_unify_the_nationalist_front }
-
-		icon = GFX_focus_chi_mission_to_germany
-		x = 2
-		y = 0
-		relative_position_id = SPA_the_corpo_truppe_volontarie
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			air_experience = 100
-			GER = {
-
-				add_opinion_modifier = { target = ROOT modifier = SPA_spanish_civil_war_commitments }
-			}
-			add_tech_bonus = {
-				name = SPA_the_condor_legion
-				bonus = 1.0
-				uses = 1
-				category = light_fighter
-			}
-			add_tech_bonus = {
-				name = SPA_the_condor_legion
-				bonus = 1.0
-				uses = 1
-				category = cas_bomber
-			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SPA_wilhelm_ritter_von_thoma
-
-		}
-	}
-
-	focus = {
-		id = SPA_equipment_shipments
-		prerequisite = { focus = SPA_the_corpo_truppe_volontarie }
-		prerequisite = { focus = SPA_the_condor_legion }
-
-		icon = GFX_goal_generic_build_tank
-		x = 1
-		y = 1
-		relative_position_id = SPA_the_corpo_truppe_volontarie
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-		army_experience = 75
-		add_equipment_to_stockpile = {
-	  type = infantry_equipment_1
-	  amount = 5000
-		producer = GER
-	    }
-			add_equipment_to_stockpile = {
-			type = artillery_equipment_1
-			amount = 500
-			producer = GER
-	 }
-	 add_equipment_to_stockpile = {
-			 type = support_equipment_1
-			 amount = 500
-			 producer = GER
-	 }
-		}
-	}
-
-	focus = {
-		id = SPA_obtain_training_staff
-		prerequisite = { focus = SPA_equipment_shipments }
-
-		icon = GFX_focus_generic_military_academy
-		x = -1
-		y = 1
-		relative_position_id = SPA_equipment_shipments
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 50
-			add_timed_idea = { idea = SPA_foreign_training_staff days = 730 }
-		}
-	}
-
-	focus = {
-		id = SPA_doctrinal_advancements
-		prerequisite = { focus = SPA_equipment_shipments }
-
-		icon = GFX_goal_generic_army_doctrines
-		x = 1
-		y = 1
-		relative_position_id = SPA_equipment_shipments
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-		army_experience = 50
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.50
-				uses = 1
-				category = land_doctrine
-			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.50
-				uses = 1
-				category = air_doctrine
-			}
-		}
-	}
-
-
 
 #  #  ##  ### ###  ##  #  #  ##  #   ###  ## ###  ##            ###  ##   ##  ##  ###  ## ###  ##
 ## # #  #  #   #  #  # ## # #  # #    #  #    #  #              #   #  # #   #  #  #  #    #  #
@@ -322,212 +170,6 @@ focus = {
 #  # #  #  #  ###  ##  #  # #  # ### ### ##   #  ##             #   #  # ##   ##  ### ##   #  ##
 
 
-
-######
-	focus = {
-		id = SPA_the_national_and_popular_army_of_spain
-		prerequisite = { focus = SPA_fuse_the_parties }
-
-		icon = GFX_goal_generic_army_doctrines
-		x = -7
-		y = 1
-		relative_position_id = SPA_fuse_the_parties
-		cost = 10
-		available_if_capitulated = yes
-		complete_tooltip = {
-			every_state = {
-				limit	= {	has_state_flag = SPA_the_national_and_popular_army_of_spain_2mil }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		completion_reward = {
-			army_experience = 10
-			add_ideas = SPA_crusade_against_democracy_1
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-					}
-					is_core_of = ROOT
-				}
-				set_state_flag = SPA_the_national_and_popular_army_of_spain_2mil
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-
-
-	focus = {
-		id = SPA_the_army_of_africa_model
-		prerequisite = { focus = SPA_the_national_and_popular_army_of_spain }
-
-		icon = GFX_goal_generic_army_artillery
-		x = 0
-		y = 1
-		relative_position_id = SPA_the_national_and_popular_army_of_spain
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			army_experience = 25
-			add_doctrine_cost_reduction = {
-				name = SPA_doctrinal_advancements
-				cost_reduction = 0.50
-				uses = 2
-				category = land_doctrine
-			}
-		}
-	}
-	
-	focus = {
-		id = SPA_direct_the_universities
-		available = {
-			num_of_factories > 50
-		}
-		prerequisite = { focus = SPA_the_army_of_africa_model }
-
-		icon = GFX_focus_research2
-		x = -1
-		y = 1
-		relative_position_id = SPA_the_army_of_africa_model
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = SPA_equipment_modernization
-		prerequisite = { focus = SPA_the_army_of_africa_model }
-
-		icon = GFX_goal_generic_small_arms
-		x = 0
-		y = 2
-		relative_position_id = SPA_the_army_of_africa_model
-		cost = 7.143
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_tech_bonus = {
-				name = SPA_equipment_modernization
-				bonus = 1.0
-				uses = 2
-				category = infantry_weapons
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_artillery_modernization
-		prerequisite = { focus = SPA_equipment_modernization }
-
-		icon = GFX_goal_generic_army_artillery2
-		x = -1
-		y = 1
-		relative_position_id = SPA_equipment_modernization
-		cost = 7.143
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_tech_bonus = {
-				name = SPA_artillery_modernization
-				bonus = 1.0
-				uses = 2
-				category = artillery
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_expand_the_special_forces
-		prerequisite = { focus = SPA_equipment_modernization }
-
-		icon = GFX_goal_generic_special_forces
-		x = 1
-		y = 1
-		relative_position_id = SPA_equipment_modernization
-		cost = 7.143
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_tech_bonus = {
-				name = SPA_expand_the_special_forces
-				bonus = 1.0
-				uses = 1
-				category = marine_tech
-			}
-			add_tech_bonus = {
-				name = SPA_expand_the_special_forces
-				bonus = 1.0
-				uses = 1
-				category = mountaineers_tech
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_motorization
-		prerequisite = { focus = SPA_the_army_of_africa_model }
-
-		icon = GFX_goal_generic_army_motorized
-		x = 1
-		y = 1
-		relative_position_id = SPA_the_army_of_africa_model
-		cost = 7.143
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_tech_bonus = {
-				name = SPA_equipment_modernization
-				bonus = 1.25
-				uses = 1
-				category = motorized_equipment
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_an_armored_corps_new
-		prerequisite = { focus = SPA_motorization }
-
-		icon = GFX_goal_generic_build_tank
-		x = 1
-		y = 1
-		relative_position_id = SPA_motorization
-		cost = 7.143
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_tech_bonus = {
-				name = SPA_an_armored_corps
-				bonus = 1.0
-				uses = 2
-				category = armor
-			}
-		}
-	}
 ######
 #Repay Axis debts
 	focus = {
@@ -698,14 +340,13 @@ technology = construction4
 					is_controlled_by = ROOT
 					is_core_of = ROOT
 					NOT = {
-
 						state = 165
 						state = 176
 						state = 792
 						state = 41
 					}
 				}
-				build_1_infrastructure = yes
+				build_2_infrastructure = yes
 			}
 		}
 	}
@@ -1385,12 +1026,20 @@ technology = construction4
 		x = 3
 		y = 1
 		relative_position_id = SPA_fuse_the_parties
-		cost = 5
+		cost = 7.145
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-            add_ideas = war_economy
+			if = {
+				limit = {
+					has_idea = war_economy
+				}
+				add_political_power = 150
+			}
+			else = {
+            	add_ideas = war_economy
+			}
 	    }
     }
 	focus = {
@@ -1679,18 +1328,18 @@ technology = construction4
 		id = SPA_la_division_azul
 		available = {
 			or = {
-			date > 1941.1.1
-			FRA = {
-		       has_capitulated = yes 
-			}
+				date > 1941.1.1
+				FRA = {
+					has_capitulated = yes 
+				}
 			}
 		}
-		prerequisite = { focus = SPA_fuse_the_parties  }
+		prerequisite = { focus = SPA_unify_the_nationalist_front  }
 
 		icon = GFX_focus_attack_soviet
-		x = 7
+		x = 5
 		y = 1
-		relative_position_id = SPA_fuse_the_parties
+		relative_position_id = SPA_unify_the_nationalist_front
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1707,7 +1356,7 @@ technology = construction4
 	focus = {
 		id = EFR_economic_help
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = SPA_la_division_azul
 		cost = 5
@@ -1732,37 +1381,12 @@ technology = construction4
 	}
 
 	focus = {
-		id = EFR_German_war_reparations
-		icon = GFX_goal_continuous_repairments
-		relative_position_id = EFR_economic_help
-		prerequisite = {focus = EFR_economic_help}
-		x = -1
-		y = 1
-		cost = 5
-
-		available_if_capitulated = yes
-		available = {
-		    date > 1941.1.1
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			add_timed_idea = {idea = EFR_war_repairs days = 80}
-			GER = {add_timed_idea = {idea = EFR_german_war_repairs days = 140}}
-
-		}
-	}
-
-	focus = {
 		id = EFR_german_economic_help
 		icon = GFX_goal_generic_construct_civ_factory
 		relative_position_id = EFR_economic_help
 		prerequisite = {focus = EFR_economic_help}
 		x = 0
-		y = 2
+		y = 1
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1784,11 +1408,33 @@ technology = construction4
 	}
 
 	focus = {
+		id = EFR_German_war_reparations
+		icon = GFX_goal_continuous_repairments
+		relative_position_id = SPA_la_division_azul
+		prerequisite = { focus = SPA_la_division_azul }
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_timed_idea = {idea = EFR_war_repairs days = 80}
+			GER = {add_timed_idea = {idea = EFR_german_war_repairs days = 140}}
+
+		}
+	}
+
+	focus = {
 		id = EFR_STO
 		icon = GFX_goal_anschluss
-		relative_position_id = EFR_economic_help
-		prerequisite = {focus = EFR_economic_help}
-		x = 1
+		relative_position_id = SPA_la_division_azul
+		prerequisite = { focus = SPA_la_division_azul }
+		x = 2
 		y = 1
 		cost = 5
 
@@ -1822,7 +1468,7 @@ technology = construction4
 		prerequisite = { focus = EFR_STO }
 		relative_position_id = EFR_STO
 		x = 0
-		y = 2
+		y = 1
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1845,7 +1491,612 @@ technology = construction4
 			}
 		}
 	}
-	
+
+	########################
+	##### Army SECTION #####
+	########################
+
+	focus = {
+		id = SPA_equipment_shipments
+
+		icon = GFX_goal_generic_build_tank
+		x = 19
+		y = 0
+		cost = 3
+
+		available_if_capitulated = yes
+
+		available = {
+			has_completed_focus = SPA_unify_the_nationalist_front
+		}
+
+		completion_reward = {
+			army_experience = 150
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 7500
+				producer = ITA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 750
+				producer = ITA
+		 	}
+			add_equipment_to_stockpile = {
+				type = radio_equipment
+				amount = 750
+				producer = ITA
+		 	}
+			add_equipment_to_stockpile = {
+				type = pack_artillery_equipment_1
+				amount = 500
+				producer = ITA
+			}	
+			add_equipment_to_stockpile = {
+				type = special_equipment
+				amount = 250
+				producer = ITA
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_the_corpo_truppe_volontarie
+		prerequisite = { focus = SPA_equipment_shipments }
+		mutually_exclusive = { focus = SPA_the_condor_legion }
+
+
+		icon = GFX_ITA_Regio_Esercito
+		x = -1
+		y = 1
+		relative_position_id = SPA_equipment_shipments
+		cost = 2
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			ITA = {
+				add_opinion_modifier = { 
+					target = ROOT 
+					modifier = SPA_spanish_civil_war_commitments 
+				}
+			}
+			add_tech_bonus = {
+				name = SPA_the_corpo_truppe_volontarie
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = SPA_the_corpo_truppe_volontarie
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SPA_inf_sister
+		}
+	}
+
+	focus = {
+		id = SPA_support_domestic_manufacturers
+		prerequisite = { focus = SPA_the_corpo_truppe_volontarie }
+
+		icon = GFX_GOAL_infantry_equipment
+		x = -1
+		y = 1
+		relative_position_id = SPA_the_corpo_truppe_volontarie
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			172 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_ideas = SPA_domestic_weapons_manufacturing 
+		}
+	}
+
+	focus = {
+		id = SPA_invite_italian_manufacturers
+		prerequisite = { focus = SPA_support_domestic_manufacturers }
+
+		icon = GFX_focus_befriend_italy
+		x = -1
+		y = 1
+		relative_position_id = SPA_support_domestic_manufacturers
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SPA_italian_cooperation
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+			ITA = {
+				add_tech_bonus = {
+				name = SPA_italian_cooperation
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_updating_the_arsenal
+		prerequisite = { focus = SPA_support_domestic_manufacturers }
+
+		icon = GFX_ROM_import_and_convert_antique_artillery
+		x = 1
+		y = 1
+		relative_position_id = SPA_support_domestic_manufacturers
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			791 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = artillery_modernization
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_innovative_engineer_corps
+		prerequisite = { focus = SPA_invite_italian_manufacturers }
+
+		icon = GFX_focus_generic_land_reclamation
+		x = -2
+		y = 2
+		relative_position_id = SPA_support_domestic_manufacturers
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				technology = tech_engineers
+				technology = tech_engineers2
+				technology = tech_engineers3
+				technology = tech_engineers4
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_a_new_standard
+		prerequisite = { focus = SPA_invite_italian_manufacturers }
+		prerequisite = { focus = SPA_updating_the_arsenal }
+
+		icon = GFX_goal_generic_special_forces
+		x = 0
+		y = 2
+		relative_position_id = SPA_support_domestic_manufacturers
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = mountaineers_tech
+			}
+			add_tech_bonus = {
+				ahead_reduction = 1
+				bonus = 1
+				uses = 1
+				category = special_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_home_defense_batallions 
+		prerequisite = { focus = SPA_innovative_engineer_corps focus = SPA_a_new_standard }
+
+		icon = GFX_focus_generic_fascist_troops
+		x = -3
+		y = 3
+		relative_position_id = SPA_support_domestic_manufacturers
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = we_need_more_men
+			hidden_effect = {
+				set_technology = {
+					Desperate_for_men_tech = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_civil_war_veterans
+		prerequisite = { focus = SPA_innovative_engineer_corps }
+		prerequisite = { focus = SPA_a_new_standard }
+
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = -1
+		y = 3
+		relative_position_id = SPA_support_domestic_manufacturers
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SPA_civil_war_veterans_idea
+		}
+	}
+
+	focus = {
+		id = SPA_research_breakthroughs
+		prerequisite = { focus = SPA_innovative_engineer_corps focus = SPA_a_new_standard }
+
+		icon = GFX_focus_generic_cryptologic_bomb
+		x = 1
+		y = 3
+		relative_position_id = SPA_support_domestic_manufacturers
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_the_hills_of_spain
+		prerequisite = { focus = SPA_civil_war_veterans }
+		prerequisite = { focus = SPA_home_defense_batallions focus = SPA_research_breakthroughs }
+
+		icon = GFX_focus_GRE_a_land_of_mountains
+		x = -1
+		y = 4
+		relative_position_id = SPA_support_domestic_manufacturers
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = people_of_the_pyrenees_tt
+			hidden_effect = {
+				set_technology = { 
+					people_of_the_pyrenees = 1 
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_the_condor_legion
+		prerequisite = { focus = SPA_equipment_shipments }
+		mutually_exclusive = { focus = SPA_the_corpo_truppe_volontarie }
+
+		icon = GFX_GER_Feuerzauber
+		x = 1
+		y = 1
+		relative_position_id = SPA_equipment_shipments
+		cost = 2
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = { target = ROOT modifier = SPA_spanish_civil_war_commitments }
+			}
+			hidden_effect = {
+				set_technology = {
+					axis_light_tank_1936 = 1
+				}
+			}
+			custom_effect_tooltip = SPA_light_tank_unlock_tt
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_1936
+				amount = 200
+				producer = ITA
+			}
+			add_equipment_to_stockpile = {
+				type = medium_tank_equipment_1936
+				amount = 50
+				producer = GER
+			}
+			custom_effect_tooltip = available_political_advisor
+            show_ideas_tooltip = SPA_wilhelm_ritter_von_thoma
+		}
+	}
+
+	focus = {
+		id = SPA_develop_the_verdeja
+		prerequisite = { focus = SPA_the_condor_legion }
+
+		icon = GFX_SOV_armour_development
+		x = 1
+		y = 1
+		relative_position_id = SPA_the_condor_legion
+		cost = 7.145
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_light_armor
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = SPA_adesa
+		}
+	}
+
+	focus = {
+		id = SPA_a_spanish_halftrack
+		prerequisite = { focus = SPA_develop_the_verdeja }
+
+		icon = GFX_focus_generic_truck
+		x = -1
+		y = 1
+		relative_position_id = SPA_develop_the_verdeja
+		cost = 7.145
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = SPA_spanish_halftrack
+				bonus = 1
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_copy_german_designs
+		prerequisite = { focus = SPA_develop_the_verdeja }
+
+		icon = GFX_focus_chi_mission_to_germany
+		x = 1
+		y = 1
+		relative_position_id = SPA_develop_the_verdeja
+		cost = 7.145
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_tech_bonus = {
+				name = SPA_german_designs
+				bonus = 1
+				uses = 2
+				category = cat_medium_armor
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_expand_the_zaragoza_tank_workshop
+		prerequisite = { focus = SPA_a_spanish_halftrack }
+
+		icon = GFX_focus_generic_tank_production
+		x = 0
+		y = 2
+		relative_position_id = SPA_develop_the_verdeja
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			166 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_never_overextended
+		prerequisite = { focus = SPA_a_spanish_halftrack }
+		prerequisite = { focus = SPA_copy_german_designs }
+
+		icon = GFX_SOV_improve_logistics
+		x = 2
+		y = 2
+		relative_position_id = SPA_develop_the_verdeja
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				technology = tech_logistics_company
+				technology = tech_logistics_company2
+				technology = tech_logistics_company3
+				technology = tech_logistics_company4
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_lessons_of_the_rif_war
+		prerequisite = { focus = SPA_expand_the_zaragoza_tank_workshop focus = SPA_never_overextended }
+		available = {
+			NOT = {
+				has_completed_focus = SPA_lessons_of_teruel
+			}
+		}
+
+		icon = GFX_goal_Desert_Officers_2
+		x = -1
+		y = 3
+		relative_position_id = SPA_develop_the_verdeja
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SPA_lessons_of_the_rif_war_idea
+		}
+	}
+
+	focus = {
+		id = SPA_no_man_left_behind
+		prerequisite = { focus = SPA_expand_the_zaragoza_tank_workshop }
+		prerequisite = { focus = SPA_never_overextended }
+
+		icon = GFX_USA_well_supplied_and_motivated
+		x = 1
+		y = 3
+		relative_position_id = SPA_develop_the_verdeja
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				technology = tech_field_hospital
+				technology = tech_field_hospital2
+				technology = tech_field_hospital3
+				technology = tech_field_hospital4
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_lessons_of_teruel
+		prerequisite = { focus = SPA_expand_the_zaragoza_tank_workshop focus = SPA_never_overextended }
+		available = {
+			NOT = {
+				has_completed_focus = SPA_lessons_of_the_rif_war
+			}
+		}
+
+		icon = GFX_SOV_good_quality_equipment
+		x = 3
+		y = 3
+		relative_position_id = SPA_develop_the_verdeja
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SPA_lessons_of_teruel_idea
+		}
+	}
+
+	focus = {
+		id = SPA_always_prepared
+		prerequisite = { focus = SPA_no_man_left_behind }
+		prerequisite = { focus = SPA_lessons_of_the_rif_war focus = SPA_lessons_of_teruel }
+
+		icon = GFX_ITA_Innovative_theories
+		x = 1
+		y = 4
+		relative_position_id = SPA_develop_the_verdeja
+		cost = 7.145
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SPA_always_prepared_idea
+		}
+	}
+
+	focus = {
+		id = SPA_cooperate_with_axis_scientists
+		prerequisite = { focus = SPA_the_condor_legion focus = SPA_the_corpo_truppe_volontarie }
+
+		available = {
+			has_completed_focus = SPA_fuse_the_parties
+		}
+
+		icon = GFX_goal_continuous_research
+		x = 0
+		y = 2
+		relative_position_id = SPA_equipment_shipments
+		cost = 7.145
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_to_tech_sharing_group = axis_research
+		}
+	}
+
+	focus = {
+		id = SPA_establish_state_funded_universities 
+		prerequisite = { focus = SPA_cooperate_with_axis_scientists }
+
+		icon = GFX_SOV_reform_the_education_system
+		x = 0
+		y = 2
+		relative_position_id = SPA_cooperate_with_axis_scientists
+		cost = 7.145
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = SPA_para_lespana
+		prerequisite = { focus = SPA_establish_state_funded_universities  }
+		prerequisite = { focus = SPA_the_hills_of_spain focus = SPA_always_prepared }
+
+		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
+		x = 0
+		y = 3
+		relative_position_id = SPA_establish_state_funded_universities 
+		cost = 7.145
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_ideas = SPA_para_lespana_idea
+		}
+	}
+
 	########################
 	##### Navy SECTION #####
 	########################
@@ -1853,7 +2104,7 @@ technology = construction4
 	focus = {
 		id = SPR_navy_funds
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 8
+		x = 26
 		y = 0
 		cost = 5
 
@@ -1874,23 +2125,20 @@ technology = construction4
 				level = 2
 				instant_build = yes
 			}
-			navy_experience = 25
-			
+			navy_experience = 25	
 		}
 		
 		completion_reward = {
-		        navy_experience = 25
-				792 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
+		    navy_experience = 25
+			792 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
-				
-			}
-			
+			}		
+		}		
 	}
 	
 	focus = {
@@ -1898,8 +2146,9 @@ technology = construction4
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = SPR_navy_funds }
 		mutually_exclusive = { focus = SPR_navy_doc_2 }
-		x = 7
+		x = -1
 		y = 1
+		relative_position_id = SPR_navy_funds
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1912,68 +2161,14 @@ technology = construction4
 			}
 		}
 	}
-	
-	focus = {
-		id = SPR_navy_doc_2
-		icon = GFX_goal_generic_wolf_pack
-		prerequisite = { focus = SPR_navy_funds }
-		mutually_exclusive = { focus = SPR_navy_doc_1 }
-		x = 9
-		y = 1
-		cost = 5
 
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.50
-				uses = 2
-				category = trade_interdiction_tree
-			}
-		}
-	}
-		
-	focus = {
-		id = SPR_submarine_effort
-		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = SPR_navy_doc_1 focus = SPR_navy_doc_2}
-		x = 9
-		y = 2
-		cost = 5
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = naval_doctrine_bonus
-				bonus = 1
-				uses = 1
-				category = ss_tech
-			}
-		}
-	}
-	
-	
 	focus = {
 		id = SPR_destroyer_effort
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = SPR_navy_doc_1 focus = SPR_navy_doc_2}
-		x = 7
+		x = -1
 		y = 2
+		relative_position_id = SPR_navy_funds
 		cost = 5
 
 		available_if_capitulated = yes
@@ -2001,13 +2196,14 @@ technology = construction4
 			}
 		}
 	}
-	
-	focus = {
+
+		focus = {
 		id = SPR_big_ship_effort
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = SPR_destroyer_effort focus = SPR_submarine_effort }
-		x = 7
+		x = -1
 		y = 3
+		relative_position_id = SPR_navy_funds
 		cost = 5
 
 		available_if_capitulated = yes
@@ -2040,11 +2236,68 @@ technology = construction4
 	}
 	
 	focus = {
+		id = SPR_navy_doc_2
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = SPR_navy_funds }
+		mutually_exclusive = { focus = SPR_navy_doc_1 }
+		x = 1
+		y = 1
+		relative_position_id = SPR_navy_funds
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.50
+				uses = 2
+				category = trade_interdiction_tree
+			}
+		}
+	}
+		
+	focus = {
+		id = SPR_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SPR_navy_doc_1 focus = SPR_navy_doc_2}
+		x = 1
+		y = 2
+		relative_position_id = SPR_navy_funds
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+	
+	focus = {
 		id = SPR_naval_doctrine_1
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = SPR_destroyer_effort focus = SPR_submarine_effort }
-		x = 9
+		x = 1
 		y = 3
+		relative_position_id = SPR_navy_funds
 		cost = 5
 
 		available_if_capitulated = yes
@@ -2076,13 +2329,44 @@ technology = construction4
 	##### AIRFORCE SECTION #####
 	############################
 
+	focus = {
+		id = SPA_the_german_testing_ground
+
+		icon = GFX_GER_Legion_Condor
+		x = 32
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+		available = {
+			has_completed_focus = SPA_unify_the_nationalist_front
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			air_experience = 100
+			add_tech_bonus = {
+				name = SPA_the_condor_legion
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				name = SPA_the_condor_legion
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
 
 	focus = {
 		id = SPA_air_base_expansion
+		prerequisite = { focus = SPA_the_german_testing_ground }
 		icon = GFX_goal_generic_air_production
 
-		x = 14
-		y = 0
+		x = 0
+		y = 1
+		relative_position_id = SPA_the_german_testing_ground
 		cost = 5
 
 		ai_will_do = {
@@ -2090,10 +2374,6 @@ technology = construction4
 		}
 
 		available_if_capitulated = yes
-		
-		available = {
-		    has_completed_focus = SPA_unify_the_nationalist_front
-		}
 
 		complete_tooltip = {
 		    air_experience = 50
@@ -2106,12 +2386,38 @@ technology = construction4
 	}
 
 	focus = {
+		id = SPA_air_innovations
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = SPA_air_base_expansion }
+
+		x = -1
+		y = 1
+		relative_position_id = SPA_air_base_expansion
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.50
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
 		id = SPA_fighter_modernisation
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = SPA_air_base_expansion }
 
-		x = 15
+		x = 1
 		y = 1
+		relative_position_id = SPA_air_base_expansion
 		cost = 5
 
 		ai_will_do = {
@@ -2131,65 +2437,14 @@ technology = construction4
 		}
 	}
 
-
-
-	focus = {
-		id = SPA_air_innovations
-		icon = GFX_goal_generic_build_airforce
-		prerequisite = { focus = SPA_air_base_expansion }
-
-		x = 13
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.50
-				uses = 1
-				category = air_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_heavy_fighter_concept
-		icon = GFX_goal_generic_air_fighter2
-		prerequisite = { focus = SPA_air_innovations focus = SPA_fighter_modernisation }
-
-		x = 14
-		y = 2
-		cost = 5
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = POL_heavy_fighter_concept
-				bonus = 1
-				uses = 1
-				category = cat_heavy_fighter
-			}
-			#1x 50% research bonus to Heavy Fighters
-		}
-	}
-
 	focus = {
 		id = SPA_naval_bomber_experiments
 		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = { focus = SPA_air_innovations }
 
-		x = 12
-		y = 2
+		x = -1
+		y = 1
+		relative_position_id = SPA_air_innovations
 		cost = 5
 
 		ai_will_do = {
@@ -2210,12 +2465,40 @@ technology = construction4
 	}
 
 	focus = {
+		id = SPA_heavy_fighter_concept
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = SPA_air_innovations focus = SPA_fighter_modernisation }
+
+		x = 0
+		y = 2
+		relative_position_id = SPA_air_base_expansion
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_heavy_fighter_concept
+				bonus = 1
+				uses = 1
+				category = cat_heavy_fighter
+			}
+			#1x 50% research bonus to Heavy Fighters
+		}
+	}
+
+	focus = {
 		id = SPA_medium_bomber_focus
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = SPA_heavy_fighter_concept focus = SPA_air_innovations }
 
-		x = 13
-		y = 3
+		x = -1
+		y = 1
+		relative_position_id = SPA_heavy_fighter_concept
 		cost = 5
 
 		ai_will_do = {
@@ -2240,8 +2523,9 @@ technology = construction4
 		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = SPA_heavy_fighter_concept focus = SPA_fighter_modernisation }
 
-		x = 15
-		y = 3
+		x = 1
+		y = 1
+		relative_position_id = SPA_heavy_fighter_concept
 		cost = 5
 
 		ai_will_do = {
@@ -2266,8 +2550,9 @@ technology = construction4
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = SPA_light_bomber_focus focus = SPA_medium_bomber_focus }
 
-		x = 14
-		y = 4
+		x = 0
+		y = 2
+		relative_position_id = SPA_heavy_fighter_concept
 		cost = 5
 
 		ai_will_do = {
@@ -2296,8 +2581,9 @@ technology = construction4
 		icon = GFX_focus_rocketry
 		prerequisite = { focus = SPA_air_modernisations_program }
 
-		x = 14
-		y = 5
+		x = 0
+		y = 1
+		relative_position_id = SPA_air_modernisations_program
 		cost = 5
 
 		ai_will_do = {
@@ -2325,8 +2611,8 @@ technology = construction4
 	focus = {
 		id = SPR_revitalize_the_army
 		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
-		x = 20
-		y = 0
+		x = 13
+		y = 9
 		cost = 3
 		ai_will_do = {
 			factor = 100

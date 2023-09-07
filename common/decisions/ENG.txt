@@ -1832,10 +1832,10 @@ operations = {
 		visible = {
 			tag = ENG
 			country_exists = HOL
-			date > 1936.3.1
+			HOL = { is_ai = yes }
 		}
 		available = {
-			date > 1936.3.1
+			HOL = { is_ai = yes }
 		}
 
 		cost = 0
@@ -1844,7 +1844,6 @@ operations = {
 
 
 		complete_effect = {
-			transfer_state = 308
 			transfer_state = 695
 			transfer_state = 309
 			transfer_state = 692

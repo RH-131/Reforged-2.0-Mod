@@ -3670,7 +3670,7 @@ foreign_politics = {
 		}
 
 		available = {
-		    date > 1941.5.15
+			AND = { date > 1941.5.15 date < 1941.06.30 }
 			is_puppet = no
 			has_army_manpower = { size > 100000 } 
 			is_neighbor_of = SOV
@@ -3741,7 +3741,7 @@ foreign_politics = {
 			
 		    add_timed_idea = {
 		     	idea = Barbarossa_II
-		     	days = 210
+		     	days = 180
 		  	}
 			SOV = {
 				add_timed_idea = { idea = SOV_surprise_strike days = 120 }
@@ -3797,7 +3797,289 @@ foreign_politics = {
 				}
 			}
 		}
-	}			
+	}
+
+	GER_ussr_war_goal_2 = { #barba2
+
+		icon = ger_reichskommissariats
+	
+		fire_only_once = yes
+
+		allowed = {
+		   tag = GER
+		}
+
+		available = {
+			NOT = {
+				has_war_with = SOV
+			}
+			AND = { date > 1941.7.01 date < 1941.08.30 }
+			is_puppet = no
+			has_army_manpower = { size > 100000 } 
+			is_neighbor_of = SOV
+			country_exists = EFR
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+		
+		visible = {
+			has_war = yes
+		}
+
+        days_remove = 14
+
+		remove_effect = {
+			hidden_effect = {
+				complete_national_focus = GER_ussr_war_goal
+				play_song = "Vorwärts nach Osten (Russlandlied)"
+			}
+			if = {
+				limit = {
+					GER = { is_in_faction_with = HUN }
+				}
+				HUN = {
+					declare_war_on = {
+						target = SOV
+						type = annex_everything
+					}
+			    }	
+			}
+			if = {
+				limit = {
+					GER = { is_in_faction_with = ROM }
+				}
+				ROM = {
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+					}
+			    }	
+			}
+			if = {
+				limit = {
+					GER = { is_in_faction_with = ITA }
+				}
+				ITA = {
+					declare_war_on = {
+						target = SOV
+						type = annex_everything
+					}
+			    }	
+			}
+			GER = {
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+				}
+		    }
+			add_timed_idea = {
+			    idea = Barbarossa_I
+			    days = 60
+            }
+			every_army_leader = {
+				add_unit_leader_trait = barbarossa_river
+			}
+			
+		    add_timed_idea = {
+		     	idea = Barbarossa_II
+		     	days = 120
+		  	}
+			SOV = {
+				add_timed_idea = { idea = SOV_surprise_strike days = 120 }
+				add_timed_idea = { idea = SOV_vvs_crippled days = 365 }
+				add_ideas = Disorganized_Red_Army_1
+				country_event = { id = soviet.46 days = 2 } 
+				if = {
+					limit = {
+						OR = {
+							has_idea = disarmed_nation 
+							has_idea = volunteer_only
+							has_idea = limited_conscription
+						}
+					}
+					add_ideas = extensive_conscription
+				}
+			}
+			MON = {
+				add_timed_idea = { idea = SOV_surprise_strike days = 120 }
+				add_timed_idea = { idea = SOV_vvs_crippled days = 365 }
+			}
+			if = {
+				limit = {
+					GER = { is_ai = yes }
+					SOV = { is_ai = no }
+				}
+				SOV = {
+					add_ideas = { SOV_surprise_strike_extra_for_ai }
+			    }	
+			}
+			hidden_effect = {	
+				every_other_country = { 
+					limit = { NOT = { tag = SOV } NOT = { tag = GER } } 
+					news_event = { hours = 6 id = news.459 }
+				}
+				SOV = {
+					diplomatic_relation = { country = ENG relation = non_aggression_pact }						
+					diplomatic_relation = { country = FRA relation = non_aggression_pact }
+					diplomatic_relation = { country = SAF relation = non_aggression_pact }
+					diplomatic_relation = { country = CAN relation = non_aggression_pact }
+					diplomatic_relation = { country = RAJ relation = non_aggression_pact }
+					diplomatic_relation = { country = AST relation = non_aggression_pact }
+					diplomatic_relation = { country = NZL relation = non_aggression_pact }
+					diplomatic_relation = { country = PHI relation = non_aggression_pact }
+					diplomatic_relation = { country = NOR relation = non_aggression_pact }
+					diplomatic_relation = { country = SWE relation = non_aggression_pact }
+					diplomatic_relation = { country = HOL relation = non_aggression_pact }
+					diplomatic_relation = { country = BEL relation = non_aggression_pact }
+					diplomatic_relation = { country = LUX relation = non_aggression_pact }
+					diplomatic_relation = { country = YUG relation = non_aggression_pact }
+					diplomatic_relation = { country = GRE relation = non_aggression_pact }
+					play_song = "The Sacred War"
+				}
+			}
+		}
+	}
+
+	GER_ussr_war_goal_3 = { #barba3
+
+		icon = ger_reichskommissariats
+	
+		fire_only_once = yes
+
+		allowed = {
+		   tag = GER
+		}
+
+		available = {
+			NOT = {
+				has_war_with = SOV
+			}
+			date > 1941.9.01
+			is_puppet = no
+			has_army_manpower = { size > 100000 } 
+			is_neighbor_of = SOV
+			country_exists = EFR
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+		
+		visible = {
+			has_war = yes
+		}
+
+        days_remove = 14
+
+		remove_effect = {
+			hidden_effect = {
+				complete_national_focus = GER_ussr_war_goal
+				play_song = "Vorwärts nach Osten (Russlandlied)"
+			}
+			if = {
+				limit = {
+					GER = { is_in_faction_with = HUN }
+				}
+				HUN = {
+					declare_war_on = {
+						target = SOV
+						type = annex_everything
+					}
+			    }	
+			}
+			if = {
+				limit = {
+					GER = { is_in_faction_with = ROM }
+				}
+				ROM = {
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+					}
+			    }	
+			}
+			if = {
+				limit = {
+					GER = { is_in_faction_with = ITA }
+				}
+				ITA = {
+					declare_war_on = {
+						target = SOV
+						type = annex_everything
+					}
+			    }	
+			}
+			GER = {
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+				}
+		    }
+			every_army_leader = {
+				add_unit_leader_trait = barbarossa_river
+			}
+			
+		    add_timed_idea = {
+		     	idea = Barbarossa_II
+		     	days = 90
+		  	}
+			SOV = {
+				add_timed_idea = { idea = SOV_surprise_strike days = 120 }
+				add_timed_idea = { idea = SOV_vvs_crippled days = 365 }
+				add_ideas = Disorganized_Red_Army_1
+				country_event = { id = soviet.46 days = 2 } 
+				if = {
+					limit = {
+						OR = {
+							has_idea = disarmed_nation 
+							has_idea = volunteer_only
+							has_idea = limited_conscription
+						}
+					}
+					add_ideas = extensive_conscription
+				}
+			}
+			MON = {
+				add_timed_idea = { idea = SOV_surprise_strike days = 120 }
+				add_timed_idea = { idea = SOV_vvs_crippled days = 365 }
+			}
+			if = {
+				limit = {
+					GER = { is_ai = yes }
+					SOV = { is_ai = no }
+				}
+				SOV = {
+					add_ideas = { SOV_surprise_strike_extra_for_ai }
+			    }	
+			}
+			hidden_effect = {	
+				every_other_country = { 
+					limit = { NOT = { tag = SOV } NOT = { tag = GER } } 
+					news_event = { hours = 6 id = news.459 }
+				}
+				SOV = {
+					diplomatic_relation = { country = ENG relation = non_aggression_pact }						
+					diplomatic_relation = { country = FRA relation = non_aggression_pact }
+					diplomatic_relation = { country = SAF relation = non_aggression_pact }
+					diplomatic_relation = { country = CAN relation = non_aggression_pact }
+					diplomatic_relation = { country = RAJ relation = non_aggression_pact }
+					diplomatic_relation = { country = AST relation = non_aggression_pact }
+					diplomatic_relation = { country = NZL relation = non_aggression_pact }
+					diplomatic_relation = { country = PHI relation = non_aggression_pact }
+					diplomatic_relation = { country = NOR relation = non_aggression_pact }
+					diplomatic_relation = { country = SWE relation = non_aggression_pact }
+					diplomatic_relation = { country = HOL relation = non_aggression_pact }
+					diplomatic_relation = { country = BEL relation = non_aggression_pact }
+					diplomatic_relation = { country = LUX relation = non_aggression_pact }
+					diplomatic_relation = { country = YUG relation = non_aggression_pact }
+					diplomatic_relation = { country = GRE relation = non_aggression_pact }
+					play_song = "The Sacred War"
+				}
+			}
+		}
+	}
 
 	GER_integrate_war_economies = {
 		icon = ger_reichskommissariats

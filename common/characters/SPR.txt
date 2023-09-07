@@ -1263,6 +1263,41 @@ characters={
 			}
 		}
 	}
+	SPA_inf_sister = { # Based
+		advisor = {
+			slot = high_command
+			idea_token = SPA_inf_sister
+			ledger = army
+			
+			picture = generic_army_europe_1
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+
+			visible = {
+				NOT = {
+					tag = SPD
+					tag = SPC
+				}
+			}
+
+			available = {
+				has_completed_focus = SPA_the_corpo_truppe_volontarie
+				custom_trigger_tooltip = {
+					tooltip = SPA_not_republican_spain_tt
+					NOT = { tag = SPD }
+				}
+			}
+			
+			traits = { army_commando_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
 	### Vanilla ###
 
 	SPA_jose_enrique_varela_vanilla = {
