@@ -46,38 +46,31 @@ equipments = {
 		
 		lg_armor_piercing = 0
 		lg_attack = 0
-		
 		hg_armor_piercing = 0
 		hg_attack = 0
-		
 		torpedo_attack = 0
 		sub_attack = 0
-		
 		anti_air_attack = 0
-		
-		armor_value = 0
 
-		
-		surface_detection = 20
-		sub_detection = 0
-		surface_visibility = 1
-		sub_visibility = 25
-		naval_speed = 14
-		reliability = 0.60
-		
-		naval_range = 2500
-		
-		max_strength = 10
-		
-
+		build_cost_ic = 200
+		manpower = 200
 		fuel_consumption = 1
 		
-		build_cost_ic = 300
+		max_strength = 8
+		armor_value = 0
+		reliability = 0.60
+		naval_speed = 12
+
+		naval_range = 3000
+		surface_detection = 20
+		surface_visibility = 10
+		sub_detection = 0
+		sub_visibility = 25
+		
 		resources = {
 			steel = 1
+			chromium = 1
 		}
-		
-		manpower = 200
 	}
 
 	ship_hull_submarine_1 = {
@@ -95,6 +88,7 @@ equipments = {
 		archetype = ship_hull_submarine
 		priority = 2500
 		parent = ship_hull_submarine_1
+
 		module_slots = {
 			fixed_ship_torpedo_slot = inherit 
 			fixed_ship_engine_slot = inherit
@@ -111,24 +105,17 @@ equipments = {
 			rear_1_custom_slot = empty
 			fixed_ship_engine_slot = sub_ship_engine_2
 		}
-		sub_visibility = 20
+
+		build_cost_ic = 310
+		manpower = 200
+		max_strength = 14
+		reliability = 0.70
 		naval_speed = 14
-		reliability = 0.70
-
 		naval_range = 4000
-		reliability = 0.70
-		max_strength = 12
-		
-
-		
-		build_cost_ic = 400
+		sub_visibility = 20
 		resources = {
 			steel = 2
 			chromium = 1
-			
-		}
-		type = { 
-			submarine
 		}
 	}
 
@@ -138,6 +125,7 @@ equipments = {
 		archetype = ship_hull_submarine
 		priority = 2500
 		parent = ship_hull_submarine_2
+
 		module_slots = {
 			fixed_ship_torpedo_slot = inherit 
 			fixed_ship_engine_slot = inherit
@@ -156,29 +144,23 @@ equipments = {
 		}
 
 		default_modules = {
+			fixed_ship_engine_slot = sub_ship_engine_3
 			front_1_custom_slot = empty
 			mid_1_custom_slot = empty
 			rear_1_custom_slot = empty
 		}
-		
-		sub_visibility = 15
-		naval_speed = 15
+
+		build_cost_ic = 365
+		manpower = 200
+		max_strength = 17
 		reliability = 0.75
-		
-		naval_range = 5000
-		
-		max_strength = 14
-
-
-		
-		build_cost_ic = 500
+		naval_speed = 14
+		naval_range = 4500
+		sub_visibility = 17.5
 		resources = {
-			steel = 3
-			chromium = 1
+			steel = 2
+			chromium = 2
 		}
-		type = { 
-			submarine
-		}	
 	}
 	ship_hull_submarine_4 = {
 		year = 1944
@@ -186,46 +168,29 @@ equipments = {
 		archetype = ship_hull_submarine
 		priority = 2500
 		parent = ship_hull_submarine_3
+
 		module_slots = {
 			fixed_ship_torpedo_slot = inherit 
 			fixed_ship_engine_slot = inherit
-			front_1_custom_slot = {
-				required = no
-				allowed_module_categories = { ship_torpedo_sub }
-			}
-			mid_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_radar
-					ship_sub_snorkel
-				}
-			}
-			rear_1_custom_slot = front_1_custom_slot
+			front_1_custom_slot = inherit
+			mid_1_custom_slot = inherit
+			rear_1_custom_slot = inherit
 		}
 
 		default_modules = {
-			front_1_custom_slot = empty
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = empty
+			fixed_ship_engine_slot = sub_ship_engine_4
 		}
-		
-		sub_visibility = 12
-		naval_speed = 16
+
+		build_cost_ic = 420
+		manpower = 200
+		max_strength = 20
 		reliability = 0.80
-
-		naval_range = 6000
-		
-		max_strength = 16
-		
-
-		
-		build_cost_ic = 600
+		naval_speed = 16
+		naval_range = 5000
+		sub_visibility = 15
 		resources = {
 			steel = 3
 			chromium = 2
-		}
-		type = { 
-			submarine
 		}	
 	}
 
@@ -234,6 +199,7 @@ equipments = {
 
 		archetype = ship_hull_submarine
 		priority = 2600
+
 		module_slots = {
 			fixed_ship_torpedo_slot = inherit 
 			fixed_ship_engine_slot = inherit
@@ -252,41 +218,30 @@ equipments = {
 					ship_sub_snorkel
 				}
 			}
-			rear_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_torpedo_sub
-					ship_airplane_launcher
-					ship_extra_fuel_tank
-				}
-			}
+			rear_1_custom_slot = front_1_custom_slot
 		}
 
 		default_modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1 
+			fixed_ship_engine_slot = sub_ship_engine_1
 			front_1_custom_slot = empty
 			mid_1_custom_slot = empty
 			rear_1_custom_slot = empty
 		}
 		
-		sub_visibility = 20
-		naval_speed = 12
+		build_cost_ic = 365
+		manpower = 200
+		max_strength = 17
 		reliability = 0.75
-		
+		naval_speed = 15
 		naval_range = 5000
-		
-		max_strength = 14
-
-
-		
-		build_cost_ic = 400
+		sub_visibility = 20
 		resources = {
-			steel = 2
-			chromium = 1
-		}
-		type = { 
-			submarine
+			steel = 3
+			chromium = 2
 		}	
 	}
+
 	submarine_1 = {
 		year = 1922
 

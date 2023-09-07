@@ -2359,6 +2359,11 @@ leader_traits = {
 				build_cost_ic = -0.05
 				reliability = 0.05
 			}
+			cv_medium_plane_fighter_airframe = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = 0.05
+			}
 			cv_small_plane_cas_airframe = {
 				instant = yes
 				build_cost_ic = -0.05
@@ -2394,6 +2399,13 @@ leader_traits = {
 		cat_trade_interdiction_cost_factor = -0.10
 
 		convoy_raiding_efficiency_factor = 0.05
+
+		equipment_bonus = {
+			cv_medium_plane_fighter_airframe = {
+				instant = yes
+				reliability = -0.05
+			}
+		}
 
 		ai_will_do = {
 			factor = 100

@@ -638,7 +638,7 @@ ideas = {
 				navy_intel_factor = 0.1
 				operative_slot = 1
 				decryption_power_factor = 0.1
-				agency_upgrade_time = -0.1
+				agency_upgrade_time = -0.25
 			}
 		}
 
@@ -2292,6 +2292,12 @@ ideas = {
 					air_range = 0.1 
 				}
 				medium_plane_fighter_airframe = {
+					reliability = 0.05
+					air_agility = 0.05
+					air_range = 0.05
+					maximum_speed = 0.05
+				}
+				cv_medium_plane_fighter_airframe = {
 					reliability = 0.05
 					air_agility = 0.05
 					air_range = 0.05
