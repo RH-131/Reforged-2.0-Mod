@@ -1403,43 +1403,42 @@ focus_tree = {
 				}
 			}
 		}
-	}		
-
-
-	focus = {
-		id = USA_the_island_hopping_campaign
-		icon = GFX_USA_the_island_hopping_campaign
-		prerequisite = { focus = USA_bases_in_anzac }
-		relative_position_id = USA_bases_in_anzac
-		x = 0
-		y = 2
-		cost = 7.16
-		ai_will_do = {
-			factor = 100 
-		}
-		available_if_capitulated = yes		
-		
-		available = { 
-			has_war_with = JAP 
-		}
-		
-		completion_reward = {
-			USA = {
-				country_event = { id = usa.40 }
-			}
-			JAP = {
-				country_event = { id = usa.40 }
-			}
-		}
 	}	
+
+	# focus = {
+	# 	id = USA_the_island_hopping_campaign
+	# 	icon = GFX_USA_the_island_hopping_campaign
+	# 	prerequisite = { focus = USA_bases_in_anzac }
+	# 	relative_position_id = USA_bases_in_anzac
+	# 	x = 0
+	# 	y = 2
+	# 	cost = 7.16
+	# 	ai_will_do = {
+	# 		factor = 100 
+	# 	}
+	# 	available_if_capitulated = yes		
+		
+	# 	available = { 
+	# 		has_war_with = JAP 
+	# 	}
+		
+	# 	completion_reward = {
+	# 		USA = {
+	# 			country_event = { id = usa.40 }
+	# 		}
+	# 		JAP = {
+	# 			country_event = { id = usa.40 }
+	# 		}
+	# 	}
+	# }	
 
 	focus = {
 		id = USA_semper_fi
 		icon = GFX_USA_semper_fi
-		prerequisite = { focus = USA_the_island_hopping_campaign }
-		relative_position_id = USA_the_island_hopping_campaign
+		prerequisite = { focus = USA_bases_in_anzac }
+		relative_position_id = USA_bases_in_anzac
 		x = 0
-		y = 1
+		y = 2
 		cost = 7.16
 		ai_will_do = {
 			factor = 100 
@@ -1461,9 +1460,9 @@ focus_tree = {
 		id = USA_airbases_close_to_japan
 		icon = GFX_USA_airbases_close_to_japan
 		prerequisite = { focus = USA_semper_fi }
-		relative_position_id = USA_the_island_hopping_campaign
+		relative_position_id = USA_semper_fi
 		x = 0
-		y = 2
+		y = 1
 		cost = 7.16
 		ai_will_do = {
 			factor = 100 
