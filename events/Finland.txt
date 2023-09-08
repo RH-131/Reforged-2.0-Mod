@@ -343,9 +343,12 @@ country_event = {
 		white_peace = {
 		tag = SOV
 		message = FIN_agree_peace
+		}
 		diplomatic_relation = { country = SOV relation = non_aggression_pact }
+		FIN = {
 		add_offsite_building = { type = arms_factory level = 5 }
 		add_offsite_building = { type = industrial_complex level = 5 }
+		}
 		add_ideas = airandnavy_idea	
 		MON = {
 		    add_ideas = airandnavy_idea
@@ -356,7 +359,6 @@ country_event = {
 			}
 		}
 	}
-	}
 country_event = {
 	id = finland.10
 	title = finland.10.t
@@ -365,7 +367,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { 
-		name_finland.10
+		name = finland.10.a
 		
 		effect_tooltip = {
 			FIN = { 
