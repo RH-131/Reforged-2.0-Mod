@@ -328,7 +328,63 @@ country_event = {
 	}
 
 }
-
+country_event = {
+	id=finland.9
+	title = finland.9.t
+	desc = finland.9.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+	#finland victory
+	
+	option = { 
+		name = finland.9
+		
+		white_peace = {
+		tag = SOV
+		message = FIN_agree_peace
+		diplomatic_relation = { country = SOV relation = non_aggression_pact }
+		add_offsite_building = { type = arms_factory level = 5 }
+		add_offsite_building = { type = industrial_complex level = 5 }
+		add_ideas = airandnavy_idea	
+		MON = {
+		    add_ideas = airandnavy_idea	
+		SOV = {
+		    add_ideas = airandnavy_idea	
+		country_event = { id = finland.10 }	
+			}
+		}
+	}
+	}
+	}
+country_event = {
+	id=finland.10
+	title = finland.10.t
+	desc = finland.10.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	is_triggered_only = yes
+	
+	option = { 
+		name_finland.10
+		
+		effect_tooltip = {
+			fin = { 
+				white_peace = { 
+				tag = SOV
+				message = FIN_agree_peace
+			}
+			diplomatic_relation = { country = SOV relation = non_aggression_pact } 
+			 add_offsite_building = { type = arms_factory level = 5 }
+			 dd_offsite_building = { type = industrial_capacity level = 5 }
+        add_ideas = airandnavy_idea
+	 }
+    add_ideas = airandnavy_idea
+    MON = {
+        add_ideas = airandnavy_idea
+    }
+}
+}
+}
 #mannerheim line 
 country_event = {
 	id = finland.11

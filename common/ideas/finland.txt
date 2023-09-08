@@ -1,5 +1,20 @@
 ideas = {
 	country = {
+			FIN_Revanchism = {
+
+			picture = ger_bulwark_against_bolshevism
+
+		    allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+			    
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05 
+				}
+			}
 			FIN_short_term_production = {
 
 			picture = ger_bulwark_against_bolshevism
@@ -13,10 +28,42 @@ ideas = {
 			    
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
-				production_factory_max_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.07
 				trade_laws_cost_factor = 0.5
+				stability_factor = -0.1
+				production_speed_buildings_factor = -0.1
 				}
 	}	
+		FIN_Ensure_the_future = {
+
+			picture = ger_bulwark_against_bolshevism
+
+			name = Ensure_the_future
+		    
+			allowed = {
+				always = no
+			}
+
+			removal_cost = 1
+			modifier = {
+				weekly_manpower = 250
+			}
+		} 
+			FIN_hold_the_line = {
+
+			picture = ger_bulwark_against_bolshevism
+
+			name = Hold_the_line
+		    
+			allowed = {
+				always = no
+			}
+
+			removal_cost = 1
+			modifier = {
+				army_defence_factor = 0.1
+			}
+		} 
 			Economic_Boom = {
 
 			picture = GFX_goal_generic_construct_civ_factory
@@ -144,9 +191,9 @@ ideas = {
 
 			removal_cost = -1
 			modifier = {
-				army_core_attack_factor = 0.25
-				army_attack_factor = -0.25
-				cas_damage_reduction = 0.5	
+				army_attack_factor = -0.1
+				army_defence_factor = 0.1
+				cas_damage_reduction = 0.25	
 			}
 		}
 		continuation_war_idea_push = {
@@ -161,9 +208,9 @@ ideas = {
 
 			removal_cost = -1
 			modifier = {
-				army_core_attack_factor = 0.25
-				army_attack_factor = -0.15
-				cas_damage_reduction = 0.5
+				army_attack_factor = 0.2
+				army_attack_factor = 0.10
+				cas_damage_reduction = 0.25	
 			}
 		}
 		continuation_war_idea_hold = {
@@ -178,10 +225,9 @@ ideas = {
 
 			removal_cost = -1
 			modifier = {
-				army_core_attack_factor = 0.25
-				army_attack_factor = -0.25
-				army_defence_factor = 0.1
-				cas_damage_reduction = 0.5
+				army_defence_factor = 0.25
+				army_attack_factor = -0.1
+				cas_damage_reduction = 0.25	
 			}
 		}
 		FIN_revenge = {
@@ -228,9 +274,8 @@ ideas = {
 				winter_attrition_factor = -0.5
 				acclimatization_cold_climate_gain_factor = 0.25
 				army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.25
+				army_core_defence_factor = 0.15
 				equipment_capture = 0.02
-				stability_factor = 0.05
 				conscription_factor = 0.05
 				conscription = 0.04
 			}
