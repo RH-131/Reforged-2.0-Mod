@@ -28,8 +28,7 @@ ideas = {
 			    
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
-				production_factory_max_efficiency_factor = 0.07
-				trade_laws_cost_factor = 0.5
+				production_factory_max_efficiency_factor = 0.05
 				stability_factor = -0.1
 				production_speed_buildings_factor = -0.1
 				}
@@ -119,7 +118,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			    
-				production_speed_buildings_factor = 0.1
+				production_speed_buildings_factor = 0.05
 				consumer_goods_factor = -0.05
 				
 				}
@@ -154,7 +153,7 @@ ideas = {
 			modifier = {
 			    
 				army_defence_factor = 0.25
-				max_dig_in = 3
+				max_dig_in = 2
 				dig_in_speed_factor = 0.4
 			}
 		}
@@ -196,7 +195,7 @@ ideas = {
 				cas_damage_reduction = 0.25	
 			}
 		}
-		continuation_war_idea_push = {
+		continuation_war_idea_push = { 
 
 			picture = ger_bulwark_against_bolshevism
 
@@ -208,8 +207,8 @@ ideas = {
 
 			removal_cost = -1
 			modifier = {
-				army_attack_factor = 0.2
-				army_attack_factor = 0.10
+			army_attack_factor = 0.1
+				army_defence_factor = -0.1
 				cas_damage_reduction = 0.25	
 			}
 		}
@@ -226,7 +225,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				army_defence_factor = 0.25
-				army_attack_factor = -0.1
+				army_attack_factor = -0.2
 				cas_damage_reduction = 0.25	
 			}
 		}

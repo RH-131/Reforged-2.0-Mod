@@ -877,10 +877,9 @@ SOV_socialism_in_one_country = {
 		available = {
 			OR = {
 				AND = {
-					FIN = { surrender_progress > 0.25 }
 					SOV = { has_full_control_of_state = 146 }
 				}
-				FIN = { surrender_progress > 0.5 }
+				FIN = { surrender_progress > 0.2 }
 			}
 		}
 

@@ -1,17 +1,5 @@
 focus_tree = {
-	id = finnish_focUs
-	
-	country = {
-		factor = 0
-		
-		modifier =  {
-			add = 10
-			tag = FIN
-		}
-	
-	continuous_focus_position = { x = 50 y = 1000 }
 
-	default = no
 	focus = {
 		id = Super_highway
 		icon = GFX_focus_POL_warsaw_main_station
@@ -58,7 +46,7 @@ focus_tree = {
 				tooltip = infrastructure_effort_tt
 				all_owned_state = {			
 					free_building_slots = {
-						building = infrastructure
+						building = infrastructure 
 						size < 1
 					}
 				}
@@ -99,7 +87,7 @@ focus_tree = {
 			}
 		}
         ai_will_do = {
-			factor = 10
+			factor = 10 
 		}
 
 		completion_reward = {
@@ -120,9 +108,6 @@ focus_tree = {
 		x = 18
 		y = 4
 		cost = 5
-		ai_will_do = {
-			factor = 10
-		}	
 		completion_reward = {
 			add_tech_bonus = {
 				technology = improved_machine_tools
@@ -130,8 +115,6 @@ focus_tree = {
 				technology = assembly_line_production
 				uses = 1 
 				bonus = 1
-			{
-			}
 			}
 			}
 		}
@@ -263,10 +246,6 @@ focus_tree = {
 		x = 24
 		y = 3
 		cost = 5
-		ai_will_do = {
-			factor = 4
-		completion_reward = {
-		}	
 		completion_reward = {
 			add_tech_bonus = {
 				technology = construction2
@@ -285,7 +264,6 @@ focus_tree = {
 		x = 28
 		y = 3
 		cost = 7.15
-			factor = 4
 		completion_reward = {
 		add_ideas = { Economic_Boom }
 			}
@@ -577,7 +555,7 @@ focus_tree = {
 				all_owned_state = {
 					free_building_slots = {
 						building = arms_factory
-						size < 4
+						size < 3
 						include_locked = yes
 					}					
 				}
@@ -585,7 +563,7 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 4
+			add_extra_state_shared_building_slots = 3
 			add_building_construction = {
 				type = arms_factory
 				level = 4
@@ -595,10 +573,10 @@ focus_tree = {
 
 		completion_reward = {
 			148 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -613,36 +591,6 @@ focus_tree = {
 		x = 16
 		y = 5
 		cost = 7.16
-		completion_reward = {
-			custom_trigger_tooltip = {
-				tooltip = production_effort_tt
-				remove_building = {
-					type = industrial_complex
-					level = 3
-				}
-				all_owned_state = {
-					free_building_slots = {
-						building = arms_factory
-						size < 5
-						include_locked = yes
-					}					
-				}
-			}
-		}
-
-		complete_tooltip = {
-		remove_building = {
-					type = industrial_complex
-					level = 3
-				}
-			add_extra_state_shared_building_slots = 5
-			add_building_construction = {
-				type = arms_factory
-				level = 5
-				instant_build = yes
-			}
-		}		
-
 		completion_reward = {
 			148 = {
 			remove_building = {
@@ -685,9 +633,6 @@ focus_tree = {
 		y = 2
 
 		cost = 7.15
-		ai_will_do = {
-			factor = 1
-		}	
 		completion_reward = {
 			add_resource = {
 				type = steel
@@ -710,13 +655,7 @@ focus_tree = {
 				amount = 15
 				state = 148
 			}
-           limit = {
-			NOT = { has_idea = closed_economy }
-				}
-			add_ideas = closed_economy
-			add idea = later
-			
-			}
+		}
 		}
       focus = {
 		id = Axis_frendly_resource_development
@@ -756,26 +695,17 @@ focus_tree = {
 				type = aluminium
 				amount = 10
 				state = 148
-			}
-           limit = {
-			NOT = { has_idea = export_focus }
-				}
-			
+			}	
 			}
 		}
-	focus = {
+		focus = {
 		id = FIN_winter_hungary
 		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
-		relative_position_id = FIN_nokia
 		mutually_exclusive = { focus = FIN_winter_romania }
 		x = 0
 		y = 0
 		
 		cost = 2.9
-
-		ai_will_do = {
-			factor = 1
-		}
 
 		available = {
 			date > 1939.1.1
@@ -794,7 +724,6 @@ focus_tree = {
 	focus = {
 		id = FIN_winter_romania
 		icon = GFX_ROM_for_the_preservation_of_greater_romania
-		relative_position_id = FIN_nokia
 		mutually_exclusive = { focus = FIN_winter_hungary }
 		x = 2
 		y = 0
@@ -827,7 +756,6 @@ focus_tree = {
 		y = 8
 		cost = 5
 		completion_reward = { 
-		navy_xp = 200
 		add_tech_bonus = {
 				category = naval_equipment
 				uses = 2
@@ -880,9 +808,9 @@ focus_tree = {
 	focus = {
 		id = FIN_molotov_cocktails
 		icon = GFX_idea_MEX_politicised_army
-		prerequisite = { focus = FIN_ski_infantry }
-		x = 6
-		y = 1
+		prerequisite = { focus = FIN_Doctriane_advancements }
+		x = 7
+		y = 4
 		cost = 7.16
 		completion_reward = {
 			add_tech_bonus = {
@@ -998,12 +926,12 @@ focus_tree = {
 		}
 		}
 	focus = {
-		id = White_reaper's 
+		id = White_reaper's
 		x = 7.9
 		y = 5
 		cost = 7.15
 		icon = GFX_focus_TUR_crowning_ourselves_with_the_fin_ugor
-		prerequisite = { focus = FIN_Doctriane_advancements } 
+		prerequisite = { focus = FIN_molotov_cocktails } 
 		prerequisite = { focus = FIN_advanced_infantry_standerds } 
 		prerequisite = { focus = FIN_new_arty }
 		completion_reward = {
@@ -1032,7 +960,7 @@ focus_tree = {
 		}
 		}
 	focus = {
-		id = Ensure_future_men 
+		id = Ensure_future_men  
 		icon = GFX_focus_generic_manpower
 		prerequisite = { focus = FIN_develop_ski_tropp_doctrine}
 		x = 5
@@ -1043,7 +971,7 @@ focus_tree = {
 		}
 		}
 	focus = {
-		id = FIN_new_arty 
+		id = FIN_new_arty
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = FIN_diciplane_trainning}
 		x = 5
@@ -1120,7 +1048,7 @@ focus_tree = {
 		}
 	focus = {
 		id = FIN_develop_ski_tropp_doctrine
-		icon = GFX_focus_generic_infiltration
+		icon = GFX_focus_generic_infiltration  
 		prerequisite = { focus = Legacy_of_the_white_gaurd}
 		x = 6
 		y = 1
@@ -1286,10 +1214,8 @@ focus_tree = {
 				technology = dispersed_industry5
 				uses = 1 
 				bonus = 1
-			{
-			}
-			}
-			}
+				}
+				}
 		}
 		focus = {
 		id = Ready_and_waiting  
@@ -1298,6 +1224,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_rifles_and_support } 
 		prerequisite = { focus = FIN_german_support } 
 		prerequisite = { focus = Expand_concription } 
+		prerequisite = { focus = Expore_new_options } 
 		x = 35
 		y = 8
 		cost = 7.15
@@ -1441,6 +1368,17 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = Expore_new_options
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = Learn_from_the_winter_war }
+		x = 35
+		y = 5
+		cost = 7.15
+		completion_reward = {
+			add_research_slot = 1
+	}
+	}
+	focus = {
 		id = Build_national_library
 		icon = GFX_focus_generic_improve_the_administration
 		prerequisite = { focus = Expand_major_ports }
@@ -1449,7 +1387,7 @@ focus_tree = {
 		y = 5
 		cost = 7.15
 		completion_reward = {
-			add_research_slot = 2
+			add_research_slot = 1
 	}
 	}
 	focus = {
@@ -1589,7 +1527,7 @@ focus_tree = {
 	}
     
 		focus = {
-		id =Hold_at_all_cost
+		id = Hold_at_all_cost
 		icon = GFX_GER_festung_principle
 		prerequisite = { focus = emergancy_axis_aid }
 		prerequisite = { focus = Russia_empire_vets }
@@ -1612,9 +1550,7 @@ focus_tree = {
 			has_war_with = SOV }
 		completion_reward = {
 			add_ideas = war_economy
-				{
-			}
-		}
+				}			
 	}
 	focus = {
 		id = Expand_concription
@@ -1690,12 +1626,7 @@ focus_tree = {
 		y = 2
 		cost = 7.15
 		completion_reward = {
-			limit = {
-					NOT = { has_idea = partial_economic_mobilisation }
-				}
 				add_ideas = partial_economic_mobilisation
-				{
-			}
 		}
 	}
 	focus = {
@@ -1770,7 +1701,7 @@ focus_tree = {
 		add_state_core = 213
 		add_state_core = 215 
 		add_state_core = 216
-		set_cosmetic_tag = Greater_finish_empire
+		set_cosmetic_tag = FIN_greater_finish_empire
 	}	
 	}
 	focus = {
