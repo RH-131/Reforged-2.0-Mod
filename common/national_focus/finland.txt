@@ -1,4 +1,15 @@
 focus_tree = {
+	id = finnish_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = FIN
+		}
+	 
+	continuous_focus_position = { x = 50 y = 1000 }
 
 	focus = {
 		id = Super_highway
@@ -811,7 +822,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_Doctriane_advancements }
 		x = 7
 		y = 4
-		cost = 7.16
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
@@ -1343,7 +1354,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = The_bear_to_the_east
+		id = The_bear_to_the_east  
 		icon = GFX_focus_ger_great_red_menace 
 		x =20
 		y = 0
@@ -1704,7 +1715,7 @@ focus_tree = {
 		set_cosmetic_tag = FIN_greater_finish_empire
 	}	
 	}
-	focus = {
+	focus = { 
 		id = FIN_reclaim_land
 		icon = GFX_focus_generic_coastal_fort
         prerequisite = { focus = FIN_continuation_war }
