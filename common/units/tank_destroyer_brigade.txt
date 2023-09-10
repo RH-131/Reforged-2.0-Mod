@@ -300,7 +300,6 @@ sub_units = {
 		# Support nerfs to combat abilities
 		defense = -0.25
 		breakthrough = -0.5
-		soft_attack = -0.1
 		ap_attack = -0.10
 		
 		same_support_type = anti_tank # blocks adding other anti-tank types to template
@@ -351,7 +350,6 @@ sub_units = {
 		defense = -0.25
 		breakthrough = -0.5
 		armor_value = -0.25
-		soft_attack = -0.15
 		hard_attack = -0.1
 		ap_attack = -0.15
 		
@@ -363,7 +361,7 @@ sub_units = {
 		map_icon_category = armored
 		priority = 0
 		ai_priority = 0
-		active = yes
+		active = no
 		affects_speed = no
 		
 		group = support
@@ -407,7 +405,7 @@ sub_units = {
 		breakthrough = -0.5
 		armor_value = -0.25
 		soft_attack = -0.4
-		hard_attack = -0.2
+		hard_attack = -0.15
 		ap_attack = -0.15
 		
 		same_support_type = anti_tank # blocks adding other anti-tank types to template
