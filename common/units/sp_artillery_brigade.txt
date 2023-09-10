@@ -552,7 +552,7 @@ sub_units = {
 		combat_width = 0
 
 		need = {
-			light_tank_artillery_chassis = 25
+			light_tank_artillery_chassis = 30
 		}
 
 		manpower = 350
@@ -567,7 +567,8 @@ sub_units = {
 		# Support nerfs to combat abilities
 		defense = -0.5
 		breakthrough = -0.5
-		soft_attack = -0.5
+		armor_value = -0.25
+		soft_attack = -0.4
 		hard_attack = -0.5
 		
 		urban = {
@@ -575,6 +576,8 @@ sub_units = {
 		}
 		
 		can_be_parachuted = no
+		
+		same_support_type = artillery # blocks adding other heavy arty or tank types to template
 	}
 	
 	medium_sp_artillery_company = {
@@ -603,7 +606,7 @@ sub_units = {
 		combat_width = 0
 
 		need = {
-			medium_tank_artillery_chassis = 20		
+			medium_tank_artillery_chassis = 25	
 		}
 
 		manpower = 350
@@ -618,13 +621,16 @@ sub_units = {
 		# Support nerfs to combat abilities
 		defense = -0.5
 		breakthrough = -0.5
-		soft_attack = -0.5
+		armor_value = -0.25
+		soft_attack = -0.4
 		hard_attack = -0.5
 		
 		urban = {
-			attack = 0.05
+			attack = 0.025
 		}
 		
 		can_be_parachuted = no
+		
+		same_support_type = artillery # blocks adding other heavy arty or tank types to template
 	}
 }
