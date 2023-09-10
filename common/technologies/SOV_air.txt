@@ -693,11 +693,39 @@ technologies = {
 			cat_heavy_fighter
 		}
 
+		sub_technologies = {
+			sov_cv_heavy_fighter_1940
+		}
+
 		ai_will_do = {
 			factor = 4
 
 		}
 	}
+
+	sov_cv_heavy_fighter_1940 = {
+
+		enable_equipments = {
+			cv_heavy_fighter_equipment_1940
+		}
+
+		research_cost = 0.8
+		start_year = 1936
+
+		categories = {
+			naval_air
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 4
+				has_navy_size = { size > 0 type = carrier }
+				num_of_military_factories > 39
+			}
+		}
+	}
+
 	sov_heavy_fighter_1942 = {
 
 		enable_equipments = {
@@ -724,11 +752,39 @@ technologies = {
 			cat_heavy_fighter
 		}
 
+		sub_technologies = {
+			sov_cv_heavy_fighter_1942
+		}
+
 		ai_will_do = {
 			factor = 4
 
 		}
 	}
+
+	sov_cv_heavy_fighter_1942 = {
+
+		enable_equipments = {
+			cv_heavy_fighter_equipment_1942
+		}
+
+		research_cost = 0.8
+		start_year = 1936
+
+		categories = {
+			naval_air
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 4
+				has_navy_size = { size > 0 type = carrier }
+				num_of_military_factories > 39
+			}
+		}
+	}
+
 	sov_heavy_fighter_1944 = {
 
 		enable_equipments = {
@@ -752,9 +808,36 @@ technologies = {
 			cat_heavy_fighter
 		}
 
+		sub_technologies = {
+			sov_cv_heavy_fighter_1944
+		}
+
 		ai_will_do = {
 			factor = 4
 
+		}
+	}
+
+	sov_cv_heavy_fighter_1944 = {
+
+		enable_equipments = {
+			cv_heavy_fighter_equipment_1944
+		}
+
+		research_cost = 0.8
+		start_year = 1936
+
+		categories = {
+			naval_air
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 4
+				has_navy_size = { size > 0 type = carrier }
+				num_of_military_factories > 39
+			}
 		}
 	}
 

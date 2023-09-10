@@ -822,6 +822,9 @@ ideas = {
 				medium_plane_fighter_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
+				cv_medium_plane_fighter_airframe = {
+					build_cost_ic = -0.10 instant = yes
+				}
 				small_plane_cas_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
@@ -2704,22 +2707,22 @@ ideas = {
 					build_cost_ic = -0.05 armor_value = 0.1 reliability = -0.05
 				} 
 				medium_tank_chassis = {
-					build_cost_ic = -0.05 armor_value = 0.05 reliability = -0.05
+					build_cost_ic = -0.05 armor_value = 0.1 reliability = -0.05
 				}
 				amphibious_tank_chassis = {
-					build_cost_ic = -0.05 armor_value = 0.05 reliability = -0.05
+					build_cost_ic = -0.05 armor_value = 0.1 reliability = -0.05
 				}
 				medium_assault_gun_equipment = {
-					build_cost_ic = -0.05 armor_value = 0.05 reliability = -0.05
+					build_cost_ic = -0.05 armor_value = 0.1 reliability = -0.05
 				}
 				medium_tank_destroyer_chassis = {
-					build_cost_ic = -0.05 armor_value = 0.05 reliability = -0.05
+					build_cost_ic = -0.05 armor_value = 0.1 reliability = -0.05
 				}
 				medium_tank_artillery_chassis = {
-					build_cost_ic = -0.05 armor_value = 0.05 reliability = -0.05
+					build_cost_ic = -0.05 armor_value = 0.1 reliability = -0.05
 				}
 				medium_tank_aa_chassis = {
-					build_cost_ic = -0.05 armor_value = 0.05 reliability = -0.05
+					build_cost_ic = -0.05 armor_value = 0.1 reliability = -0.05
 				}
 			}
 		}
@@ -3555,7 +3558,7 @@ ideas = {
 			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 			equipment_bonus = {
 				motorized_equipment = {
-					build_cost_ic = -0.15 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}				
 			}
 

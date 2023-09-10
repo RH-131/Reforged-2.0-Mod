@@ -13,7 +13,7 @@ focus_tree = {
 	continuous_focus_position = { x = 2900 y = 1250 }
 	default = no
 
-	## Goering 4 year plan ##
+	## Goring 4 year plan ##
 
 	focus = {
 		id = GER_autobahn
@@ -616,7 +616,7 @@ focus_tree = {
 
 			custom_effect_tooltip = available_political_advisor
 
-			show_ideas_tooltip = goering_e
+			show_ideas_tooltip = goring_e
 
 			hidden_effect = {
 				if = {
@@ -624,7 +624,7 @@ focus_tree = {
 						GER = {	is_ai = yes }
 					}
 					add_ideas = hjalmar_schacht 
-					add_ideas = goering_e
+					add_ideas = goring_e
 					add_political_power = -300
 				}
 			}
@@ -1407,7 +1407,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 		available = {
-			has_idea = goering_e
+			has_idea = goring_e
 		}
 
 		ai_will_do = {
@@ -1519,7 +1519,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 		available = {
-			has_idea = goering_e
+			has_idea = goring_e
 		}
 
 		ai_will_do = {
@@ -3063,8 +3063,16 @@ focus_tree = {
 
 			add_state_core = 85
 			add_state_core = 86 
+			add_state_core = 762
+			add_state_core = 807
 			86 = { set_state_name = "Posen" }
 			set_province_name = { id = 6558 name = "Posen" }
+			762 = { set_state_name = "Kattowitz" }
+			set_province_name = { id = 6464 name = "Kattowitz" }
+			807 = { set_state_name = "Danzig-Westpreußen" }
+			set_province_name = { id = 279 name = "Bromberg" }
+			set_province_name = { id = 3295 name = "Thorn" }
+			set_province_name = { id = 9263 name = "Putzig" }
 
 			every_state = {
 				limit = {
@@ -3595,7 +3603,7 @@ focus_tree = {
 		relative_position_id = GER_mobilize_the_reich
 		prerequisite = { focus = GER_mobilize_the_reich }
 		available = {
-			has_idea = goering
+			has_idea = goring
 		}
 		mutually_exclusive = { 
 			focus = GER_air_shield
@@ -5282,7 +5290,23 @@ focus_tree = {
 				set_technology = { 
 					ger_medium_tank_1938 = 1
 				}
-			}		
+			}
+			if = {
+				limit = {
+					GER = { has_tech = ger_light_tank_1938 }
+				}
+				set_technology = { 
+					ger_light_tank_1940 = 1
+				}
+			}
+			if = {
+				limit = {
+					GER = { has_tech = ger_light_tank_1936 }
+				}
+				set_technology = { 
+					ger_light_tank_1938 = 1
+				}
+			}
 			hidden_effect = {
 				load_oob = "GER_Panzer_Division_plan"
 				GER_mefo_bills_level_up = yes

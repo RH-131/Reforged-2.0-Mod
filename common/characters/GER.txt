@@ -948,10 +948,7 @@ characters={
 					has_idea = otto_ciliax
 				}
 			}
-			research_bonus  = {
-				naval_equipment = 0.05
-			}
-			cost = 250
+			cost = 200
 			traits  = {
 				submarine_specialist 
 			}
@@ -987,9 +984,6 @@ characters={
 				NOT = {
 					has_idea = alfred_saalwachter
 				}
-			}
-			research_bonus  = {
-				naval_equipment = 0.05
 			}
 			cost = 150
 			traits  = {
@@ -1063,7 +1057,7 @@ characters={
 	}
 	GER_walther_wever={
 		advisor={
-			slot = air_chief
+			slot = theorist
 			idea_token = walther_wever
 			allowed  = {
 					original_tag  = GER 
@@ -1073,10 +1067,17 @@ characters={
 				}
 				available  = {
 					has_completed_focus  = GER_Ural_Bomber 
+					NOT = {
+						has_idea = erhard_milch_t
+						has_idea = goring_t
+						has_idea = hugo_sperrle_t
+						has_idea = wolfram_von_richthofen_t
+						has_idea = ernst_udet
+					}
 				}
 				cost  = 200.000
 				traits  = {
-					GERcarpet_bomber 
+					carpet_bomber 
 				}
 		}
 		name="walther_wever"
@@ -1275,7 +1276,8 @@ characters={
 					}
 				}
 				NOT = {
-					has_idea = goering_t
+					has_idea = walther_wever
+					has_idea = goring_t
 					has_idea = hugo_sperrle_t
 					has_idea = wolfram_von_richthofen_t
 					has_idea = ernst_udet
@@ -1285,7 +1287,7 @@ characters={
 				light_fighter = 0.1
 			}
 			cost = 250
-			traits = { GERvictory_through_airpower }
+			traits = { victory_through_airpower }
 			ai_will_do = {
 				factor = 50
 			}
@@ -1313,8 +1315,9 @@ characters={
 					has_completed_focus = GER_udets_strike_force
 				}
 				NOT = {
-					has_idea = goering_t
+					has_idea = goring_t
 					has_idea = erhard_milch_t
+					has_idea = walther_wever
 					has_idea = wolfram_von_richthofen_t
 					has_idea = hugo_sperrle_t
 				}
@@ -1322,7 +1325,7 @@ characters={
 			research_bonus = {
 				CAS_bomber = 0.10
 			}
-			cost = 150
+			cost = 250
 			traits = { GERdive_bomber }
 		}
 		name="ernst_udet"
@@ -1588,20 +1591,21 @@ characters={
 					has_completed_focus = GER_Fast_Bomber
 				}
 				NOT = {
-					has_idea = goering_t
+					has_idea = goring_t
 					has_idea = erhard_milch_t
+					has_idea = walther_wever
 					has_idea = wolfram_von_richthofen_t
 					has_idea = ernst_udet
 				}
 			}
 			research_bonus = {
-				tactical_bomber = 0.07
+				tactical_bomber = 0.05
 			}
 			research_bonus = {
-				heavy_air = -0.07
+				heavy_air = -0.05
 			}
-			cost = 150
-			traits = { GERclose_air_support_proponent }
+			cost = 200
+			traits = { tactical_air_support_proponent }
 		}
 		name="hugo_sperrle"
 		portraits={
@@ -1610,10 +1614,10 @@ characters={
 			}
 		}
 	}
-	GER_goering={
+	GER_goring={
 		advisor={
 			slot = air_chief
-			idea_token = goering
+			idea_token = goring
 			allowed  = {
 					original_tag  = GER 
 				}
@@ -1629,7 +1633,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = goering_e
+			idea_token = goring_e
 			allowed  = {
 				original_tag  = GER 
 			}
@@ -1643,15 +1647,15 @@ characters={
 				factor  = 100.000
 			}
 			modifier  = {
-				political_power_cost  = 0.100
-				production_speed_arms_factory_factor  = 0.200
-				production_speed_dockyard_factor  = 0.200
-				production_speed_industrial_complex_factor  = -0.200
+				political_power_cost  = 0.1
+				production_speed_arms_factory_factor  = 0.1
+				production_speed_dockyard_factor  = 0.1
+				production_speed_industrial_complex_factor  = -0.1
 			}
 		}
 		advisor = {
 			slot = theorist
-			idea_token = goering_t
+			idea_token = goring_t
 			ledger = air
 			allowed = {
 				OR = {
@@ -1663,6 +1667,7 @@ characters={
 				NOT = {
 					has_idea = hugo_sperrle_t
 					has_idea = erhard_milch_t
+					has_idea = walther_wever
 					has_idea = wolfram_von_richthofen_t
 					has_idea = ernst_udet
 				}
@@ -1670,7 +1675,7 @@ characters={
 			cost = 150
 			traits = { GER_Goring_T3 }
 		}
-		name="goering"
+		name="goring"
 		portraits={
 			army={
 				small="GFX_idea_goering"
@@ -1883,13 +1888,14 @@ characters={
 					has_completed_focus = GER_Legion_Condor
 				}
 				NOT = {
-					has_idea = goering_t
+					has_idea = goring_t
 					has_idea = erhard_milch_t
+					has_idea = walther_wever
 					has_idea = hugo_sperrle_t
 					has_idea = ernst_udet
 				}
 			}
-			cost = 150
+			cost = 200
 			traits = { close_air_support_proponent }
 		}
 		name="wolfram_von_richthofen"
