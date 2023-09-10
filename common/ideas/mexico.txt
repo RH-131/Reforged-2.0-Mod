@@ -146,7 +146,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				fuel_gain_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.15
+				production_speed_synthetic_rubber_refinery_factor = 0.15
+				production_speed_steel_refinery_factor = 0.15
+				fuel_gain_factor = 0.5
 				local_resources_factor = 0.1
 				fuel_gain_factor_from_states = 0.5
 			}
@@ -536,7 +539,6 @@ ideas = {
 			modifier = {
 				army_leader_start_planning_level = 1
 				army_leader_start_logistics_level = 1
-				special_forces_cap = 0.025	
 			}
 		}
 		
@@ -810,9 +812,10 @@ ideas = {
 			
 			modifier = {
 				air_volunteer_cap = 2000
-				send_volunteer_size = 6
+				send_volunteer_size = 11
 				send_volunteers_tension = -1
 				send_volunteer_divisions_required = -1
+				special_forces_min = 150
 			}
 		}
 		
@@ -1287,6 +1290,7 @@ ideas = {
 				production_speed_infrastructure_factor = 0.1
 				production_speed_synthetic_refinery_factor = 0.1
 				production_speed_synthetic_rubber_refinery_factor = 0.1
+				production_speed_steel_refinery_factor = 0.1
 				fuel_gain_factor = 0.25
 			}
 			

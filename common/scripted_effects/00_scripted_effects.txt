@@ -24,7 +24,7 @@ build_1_infrastructure = {
 			limit = {
 				owner = {
 					OR = {
-						tag = USA
+						has_tech = USA_infrastructure_tech
 						has_tech = construction5
 					}
 				}
@@ -95,7 +95,7 @@ build_2_infrastructure = {
 			limit = {
 				owner = {
 					OR = {
-						tag = USA
+						has_tech = USA_infrastructure_tech
 						has_tech = construction5
 					}
 				}
@@ -217,7 +217,7 @@ build_3_infrastructure = {
 			limit = {
 				owner = {
 					OR = {
-						tag = USA
+						has_tech = USA_infrastructure_tech
 						has_tech = construction5
 					}
 				}
@@ -379,7 +379,7 @@ build_4_infrastructure = {
 			limit = {
 				owner = {
 					OR = {
-						tag = USA
+						has_tech = USA_infrastructure_tech
 						has_tech = construction5
 					}
 				}

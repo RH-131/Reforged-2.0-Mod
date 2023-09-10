@@ -2044,6 +2044,10 @@ focus_tree = {
 		complete_tooltip = {
 		    country_event = {id = japan.20 }
 		    add_ideas = JAP_major_conquest_1
+			add_ideas = JAP_island_hopping8
+			USA = {
+				add_ideas = USA_island_hopping8
+			}
 		    every_country = {
 		    	limit = {
 		    		OR = {
@@ -2060,6 +2064,10 @@ focus_tree = {
 		completion_reward = {
 		    country_event = {id = japan.20 }
 		    add_ideas = JAP_major_conquest_1
+			add_ideas = JAP_island_hopping8
+			USA = {
+				add_ideas = USA_island_hopping8
+			}
 			effect_tooltip = {
 				every_country = {
 					limit = {
@@ -2081,7 +2089,6 @@ focus_tree = {
 			    MON = {add_ideas = SOV_copro_reduced_trade}
 				ENG = {
 					add_to_faction = USA
-					add_to_faction = MEX
 				}
 				USA = {
 					add_to_war = {
@@ -2090,14 +2097,12 @@ focus_tree = {
 					}
 					add_ideas = allies_air_production_malus_1
 				}
-				MEX = {
-					add_to_war = {
-						targeted_alliance = ENG
-						enemy = GER
-					}
-				}
 				declare_war_on = {
 					target = USA
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = INS
 					type = annex_everything
 				}
 				MAN = {

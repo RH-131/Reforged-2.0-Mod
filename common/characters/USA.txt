@@ -70,7 +70,7 @@ characters={
 					has_idea = william_simpson
 				}
 			}
-			cost  = 150.000
+			cost  = 250.000
 			traits  = {
 				superior_firepower_expert 
 			}
@@ -130,7 +130,7 @@ characters={
 					has_idea = dewitt_clinton_ramsey
 				}
 			}
-			cost = 200
+			cost = 250
 			traits = { naval_aviation_pioneer }
 		}
 		portraits = {
@@ -180,11 +180,8 @@ characters={
 					has_idea = curtis_lemay
 				}
 			}
-			cost = 150
-			modifier = {
-				air_strategic_bomber_bombing_factor = 0.1
-			}
-			traits = { USAcarpet_bomber }
+			cost = 200
+			traits = { carpet_bomber }
 		}
 		portraits = {
 			army = {
@@ -216,8 +213,11 @@ characters={
 				}
 				}
 			}
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.1
+			}
 			cost = 250
-			traits = { USAvictory_through_airpower }
+			traits = { victory_through_airpower }
 		}
 		portraits = {
 			army = {
@@ -583,9 +583,9 @@ characters={
 					has_idea = omar_bradley
 				}
 			}
-			cost  = 200.000
+			cost  = 150.000
 			traits  = {
-				usa_military_theorist 
+				military_theorist 
 			}
 		}
 		portraits={

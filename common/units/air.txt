@@ -102,7 +102,18 @@ sub_units = {
 		type = fighter
 		need = { cv_small_plane_airframe = 1 }
 		categories = { category_fighter category_all_air }
-		carrier_air_wing_size = 20
+		carrier_air_wing_size = 10
+		land_air_wing_size = 100
+	}
+
+	cv_heavy_fighter = {
+		sprite = medium_plane
+		priority = 1
+		active = yes
+		type = fighter
+		need = { cv_medium_plane_fighter_airframe = 1 }
+		categories = { category_heavy_fighter category_all_air }
+		carrier_air_wing_size = 10
 		land_air_wing_size = 100
 	}
 
@@ -113,7 +124,7 @@ sub_units = {
 		type = cas
 		need = { cv_small_plane_cas_airframe = 1 }
 		categories = { category_cas category_all_air }
-		carrier_air_wing_size = 20
+		carrier_air_wing_size = 10
 		land_air_wing_size = 100
 	}
 
@@ -124,7 +135,7 @@ sub_units = {
 		type = naval_bomber
 		need = { cv_small_plane_naval_bomber_airframe = 1 }
         categories = { category_nav_bomber category_all_air }
-		carrier_air_wing_size = 20
+		carrier_air_wing_size = 10
 		land_air_wing_size = 100
 	}
 	
