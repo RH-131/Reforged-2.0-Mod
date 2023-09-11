@@ -143,6 +143,22 @@ ideas = {
 			}	
 			removal_cost = -1
 		}
+		ai_operatives_idea = {
+			allowed = {
+				always = no
+			}
+			cancel = {
+				is_ai = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				operative_slot = -10
+				agency_upgrade_time = 100
+				intel_network_gain = -100
+			}
+		}
 		special_forces = {
 			allowed = {
 				always = no

@@ -39,7 +39,46 @@ ai_decision_2 = {
 			base = 5000		
 		}
 	}
-	
+
+	operative_slot_decision_ai_add = {
+
+		icon = generic_megaphone
+
+		available = {		
+			NOT = { has_idea = ai_operatives_idea }
+		}
+		
+		cost = 0
+
+		complete_effect = { 
+			add_ideas = ai_operatives_idea
+		}
+
+		ai_will_do = {
+			base = 5000		
+		}
+	}
+
+	# operative_kill_decision_ai = {
+
+	# 	icon = generic_megaphone
+
+	# 	available = {		
+	# 		num_of_operatives > 1
+	# 	}
+		
+	# 	cost = 0
+
+	# 	complete_effect = { 
+	# 		every_operative = {
+	# 			kill_operative = PREV
+	# 		}
+	# 	}
+
+	# 	ai_will_do = {
+	# 		base = 5000		
+	# 	}
+	# }
 }
 ai_decision = {
 	remove_mod_decision = {
