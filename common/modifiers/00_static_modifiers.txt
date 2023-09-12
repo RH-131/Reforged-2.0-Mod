@@ -590,11 +590,13 @@ ship_experience_malus_min = {
 }
 
 carrier_experience_bonus_max = {
-	fighter_sortie_efficiency = 0.2
+	navy_carrier_air_targetting_factor = 0.1
+	navy_carrier_air_attack_factor = 0.1
 }
 
 carrier_experience_malus_min = {
-	fighter_sortie_efficiency = -0.1						 						  									  						   										   
+	navy_carrier_air_targetting_factor = 0.05
+	navy_carrier_air_attack_factor = -0.05						 						  									  						   										   
 }
 
 pride_of_the_fleet = {
@@ -623,7 +625,7 @@ screening_bonus = {
 
 capital_screening_bonus = { 
   naval_retreat_speed = 0.2
-  sortie_efficiency = 0.1
+  navy_carrier_air_targetting_factor = 0.1
 }
 
 country_is_at_peace = {

@@ -22,6 +22,14 @@ technologies = {
 		destroyer = {
 			surface_detection = 0.10
 		}
+		
+		on_research_complete = {
+			hidden_effect = {
+				remove_ideas = massed_strikes_idea
+				add_ideas = massed_strikes_removed_idea
+				remove_ideas = massed_strikes_removed_idea
+			}
+		}
 		#####
 
 
@@ -290,7 +298,7 @@ technologies = {
 		carrier = {
 			max_organisation = 20
 		}
-		sortie_efficiency = 0.2
+		sortie_efficiency = 0.1
 		########
 
 		path = {
@@ -832,6 +840,14 @@ technologies = {
 			max_organisation = 10
 			surface_detection = 0.05
 		}
+		
+		on_research_complete = {
+			hidden_effect = {
+				remove_ideas = massed_strikes_idea
+				add_ideas = massed_strikes_removed_idea
+				remove_ideas = massed_strikes_removed_idea
+			}
+		}
 		#######
 
 		xor = { fleet_in_being base_strike }
@@ -1370,7 +1386,7 @@ technologies = {
 		carrier = {
 			max_organisation = 20
 		}
-		sortie_efficiency = 0.2
+		sortie_efficiency = 0.1
 		########
 
 		xp_research_type = navy
@@ -1821,11 +1837,16 @@ technologies = {
 		carrier = {
 			max_organisation = 20
 		}
-		carrier_capacity_penalty_reduction = -0.2
-		sortie_efficiency = 0.2
 
 		modifier = {
 			naval_strike_targetting_factor = 0.2
+		}
+		
+		on_research_complete = {
+			custom_effect_tooltip = massed_strikes_tt
+			hidden_effect = {
+				add_ideas = massed_strikes_idea
+			}
 		}
 		########
 

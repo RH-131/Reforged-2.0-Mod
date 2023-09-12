@@ -1703,7 +1703,6 @@ leader_traits = {
 		cost = 500
 		modifier = {
 			navy_carrier_air_targetting_factor = 0.1 # Airplanes from carriers has better naval targetting
-			sortie_efficiency = 0.1
 		}
 		
 		ai_will_do = {
@@ -2095,7 +2094,7 @@ leader_traits = {
 	flight_deck_manager = { 
 		type = navy
 		modifier = {
-			 sortie_efficiency = 0.1
+			 navy_carrier_air_attack_factor = 0.1
 		}
 		
 		slot = high_command
@@ -2116,9 +2115,16 @@ leader_traits = {
 	}
 	fighter_director = { 
 		type = navy
-		modifier = {
-			fighter_sortie_efficiency = 0.2
-		}
+		sub_unit_modifiers = {
+			cv_fighter = {
+				air_attack_factor = 0.1
+				air_mission_efficiency = 0.1
+			}
+			cv_heavy_fighter = {
+				air_attack_factor = 0.1
+				air_mission_efficiency = 0.1
+			}
+		}	
 				
 		ai_will_do = {
 			factor = 0
@@ -2136,7 +2142,7 @@ leader_traits = {
 		type = navy
 		sub_unit_modifiers = {
 			cv_cas = {
-				air_attack_factor = 0.1
+				naval_strike_targetting_factor = 0.1
 				air_mission_efficiency = 0.1
 			}
 		}	
@@ -2162,7 +2168,7 @@ leader_traits = {
 		type = navy
 		sub_unit_modifiers = {
 			cv_nav_bomber = {
-				air_attack_factor = 0.1
+				naval_strike_targetting_factor = 0.1
 				air_mission_efficiency = 0.1
 			}
 		}		

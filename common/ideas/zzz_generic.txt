@@ -143,6 +143,35 @@ ideas = {
 			}	
 			removal_cost = -1
 		}
+
+		massed_strikes_idea = {
+			picture = generic_navy_carrier_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				carrier = {
+					carrier_size = 1
+					instant = yes
+				}
+			}
+		}
+
+		massed_strikes_removed_idea = {
+			picture = generic_navy_carrier_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				carrier = {
+					carrier_size = -1
+					instant = yes
+				}
+			}
+		}
+
 		special_forces = {
 			allowed = {
 				always = no
