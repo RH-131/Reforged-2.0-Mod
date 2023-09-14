@@ -34,8 +34,8 @@ ideas = {
 		best_of_the_best_spirit = {
 			ledger = army
 			modifier = {
-				special_forces_attack_factor = 0.025
-				special_forces_defence_factor = 0.025
+				special_forces_attack_factor = 0.03
+				special_forces_defence_factor = 0.03
 				custom_modifier_tooltip = best_of_the_best_spirit_tt
 			}
 			ai_will_do = {
@@ -47,9 +47,8 @@ ideas = {
 			ledger = army
 			modifier = {
 				army_leader_start_level = 1
-				army_chief_cost_factor = -0.25
-				army_leader_cost_factor = -0.3 
-				unit_leader_as_advisor_cp_cost_factor = -0.75
+				army_advisor_cost_factor = -0.25
+				command_power_gain = 0.2
 				custom_modifier_tooltip = academy_scholarships_spirit_tt
 			}
 			ai_will_do = {
@@ -75,6 +74,7 @@ ideas = {
 				trait_commando_xp_gain_factor = 0.25
 				trait_trickster_xp_gain_factor = 0.25
 				planning_speed = 0.15
+				coordination_bonus = 0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -109,7 +109,10 @@ ideas = {
 			modifier = {
 				custom_modifier_tooltip = theatre_training_academy_spirit_tt
 				terrain_trait_xp_gain_factor = 0.25
-				terrain_penalty_reduction = 0.1
+				acclimatization_cold_climate_gain_factor = 0.05
+				acclimatization_hot_climate_gain_factor = 0.05
+				winter_attrition_factor = -0.15
+				heat_attrition_factor = -0.15
 			}
 			ai_will_do = {
 				factor = 1
@@ -121,7 +124,6 @@ ideas = {
 				custom_modifier_tooltip = mass_assault_academy_spirit_tt
 				trait_infantry_leader_xp_gain_factor = 0.25
 				army_morale_factor = 0.1
-				dig_in_speed_factor = 0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -133,9 +135,8 @@ ideas = {
 		professional_officer_corps_spirit = {
 			ledger = army
 			modifier = {
-				experience_gain_army_factor = 0.05
+				experience_gain_army_factor = 0.25
 				land_doctrine_cost_factor = -0.05
-				command_power_gain = 0.2
 			}
 			ai_will_do = {
 				factor = 1
@@ -147,7 +148,7 @@ ideas = {
 			modifier = {
 				trait_engineer_xp_gain_factor = 0.25
 				dig_in_speed_factor = 0.1
-				railway_gun_bombardment_factor = 0.1
+				railway_gun_bombardment_factor = 0.2
 			}
 			ai_will_do = {
 				factor = 1
@@ -180,7 +181,6 @@ ideas = {
 		relief_of_command_spirit = {
 			ledger = army
 			modifier = {
-				experience_gain_army_factor = 0.20
 				army_advisor_cost_factor = -0.5
 			}
 			ai_will_do = {
@@ -191,8 +191,8 @@ ideas = {
 		ideological_loyalty_spirit = {
 			ledger = army
 			modifier = {
-				pocket_penalty = -0.2
-				weekly_manpower = 500
+				pocket_penalty = -0.25
+				weekly_manpower = 1250
 			}
 			ai_will_do = {
 				factor = 1
@@ -213,7 +213,6 @@ ideas = {
 		mobile_warfare_army_spirit = {
 			ledger = army
 			modifier = {
-
 				experience_gain_motorized_combat_factor = 0.1
 				experience_gain_mechanized_combat_factor = 0.1
 				experience_gain_light_armor_combat_factor = 0.1
@@ -243,7 +242,7 @@ ideas = {
 				naval_invasion_capacity = 10
 				extra_paratrooper_supply_grace = 24
 				extra_marine_supply_grace = 24
-				naval_invasion_planning_bonus_speed = 0.3
+				naval_invasion_planning_bonus_speed = 0.15
 			}
 			ai_will_do = {
 				factor = 1
@@ -294,6 +293,7 @@ ideas = {
 				tactic_infantry_charge_preferred_weight_factor = 1
 				intel_from_combat_factor = 0.15
 				recon_factor = 0.15
+				initiative = 0.05
 			}
 			ai_will_do = {
 				factor = 1
