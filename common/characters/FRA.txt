@@ -423,9 +423,14 @@ characters={
 					original_tag  = FRA
 				}
 				available  = {
-					has_completed_focus  = FRA_regulate_the_banking_sector 
+				    AND = {
+					has_government  = democratic
+				    OR = {
+					    has_completed_focus  = FRA_regulate_the_banking_sector 
+						has_completed_focus  = FRA_free_france 
+					}
+					}
 				}
-				cost  = 75.000
 				traits  = {
 					democratic_reformer 
 				}
@@ -522,7 +527,6 @@ characters={
 					original_tag  = FRA
 				}
 				available  = {
-					has_government  = democratic 
 				}
 				cost  = 75.000
 				traits  = {
@@ -760,11 +764,10 @@ characters={
 					original_tag  = FRA
 				}
 				available  = {
-					has_government  = democratic 
+				    has_government = communism
 				}
-				cost  = 75.000
 				traits  = {
-					appeaser 
+					communist_revolutionary 
 				}
 				ai_will_do  = {
 					factor  = 1.000
@@ -881,7 +884,7 @@ characters={
 					}
 				}
 				}
-				cost  = 150.000
+				cost  = 200.000
 				
 				
 				traits  = {

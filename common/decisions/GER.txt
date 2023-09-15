@@ -2534,6 +2534,11 @@ foreign_politics = {
 		allowed = {
 		   tag = GER
 		}
+		
+		visible = {
+	        date > 1937.6.1
+		}
+		
 		available = {
 			42 = { is_demilitarized_zone = no }
 			51 = { is_demilitarized_zone = no }
@@ -2672,6 +2677,10 @@ foreign_politics = {
 		
 		allowed = {
 		   tag = GER
+		}
+		
+		visible = {
+	        owns_state = 4
 		}
 
 		days_remove = 70
@@ -2819,6 +2828,10 @@ foreign_politics = {
 		   tag = GER
 		}
 	
+		visible = {
+	        owns_state = 69
+		}
+		
 		available = {
 			is_puppet = no
 			owns_state = 69
@@ -2862,6 +2875,10 @@ foreign_politics = {
 		
 		allowed = {
 		   tag = GER
+		}
+		
+		visible = {
+	        owns_state = 69
 		}
 		
 
@@ -2936,6 +2953,10 @@ foreign_politics = {
 		
 		allowed = {
 		   tag = GER
+		}
+		
+		visible = {
+	        date > 1940.8.1
 		}
 		
 		days_remove = 15
@@ -3083,6 +3104,10 @@ foreign_politics = {
 		   tag = GER
 		}
 		
+		visible = {			
+			owns_state = 69	
+		}
+		
 		available = {
 			is_puppet = no
 			has_army_manpower = { size > 100000 }
@@ -3126,6 +3151,10 @@ foreign_politics = {
 		   tag = GER
 		}
 		
+		visible = {			
+			is_in_faction_with = YUG
+		}
+		
 		available = {
 			is_in_faction_with = YUG
 		}
@@ -3154,6 +3183,10 @@ foreign_politics = {
 		   tag = GER
 		}
 		
+		visible = {			
+			date > 1939.8.1
+		}
+		
 		available = {	
 			has_capitulated = no
 			if = {
@@ -3166,7 +3199,7 @@ foreign_politics = {
 				limit = {
 					GER = {	is_ai = yes }
 				}
-				date > 1939.9.1 
+				date > 1939.8.31
 			}
 		    date > 1939.8.31		 
 			has_country_flag = GER_the_end_of_czechoslovakia
@@ -3411,7 +3444,11 @@ foreign_politics = {
 		allowed = {
 		   tag = GER
 		}
-	
+		
+		visible = {
+			owns_state = 188		
+		}
+		
 		available = {
 			NOT = { is_in_faction_with = POL }
 			is_puppet = no

@@ -3891,10 +3891,17 @@ news_event = {
 	trigger = {
 		tag = GER
 		has_tech = rocket_engines
+		NOT = { has_country_flag = GER_komet_sighted }
 	}
 
 	mean_time_to_happen = {
 		days = 2
+	}
+
+	immediate = {
+		GER = {
+			set_country_flag = GER_komet_sighted
+		}
 	}
 	
 	option = {

@@ -122,13 +122,7 @@ ideas = {
 				heavy_fighter_equipment = {
 					build_cost_ic = 0.25 instant = yes
 				}
-				cv_fighter_equipment = {
-					build_cost_ic = 0.25 instant = yes
-				}
-				cv_CAS_equipment = {
-					build_cost_ic = 0.25 instant = yes
-				}
-				cv_nav_bomber_equipment = {
+				cv_heavy_fighter_equipment = {
 					build_cost_ic = 0.25 instant = yes
 				}
 				tac_bomber_equipment = {
@@ -223,11 +217,15 @@ ideas = {
 				medium_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
-				}				
+				}			
 				medium_plane_fighter_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
-				}
+				}	
+				cv_medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}	
 				large_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
@@ -283,6 +281,10 @@ ideas = {
 					instant = yes
 					build_cost_ic = 0.02
 				}
+				cv_medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.02
+				}	
 				large_plane_airframe = {
 					instant = yes
 					build_cost_ic = 0.02
@@ -716,6 +718,9 @@ ideas = {
 				}
 				heavy_fighter_equipment = {
 					build_cost_ic = 0.1 instant = yes
+				}
+				cv_heavy_fighter_equipment = {
+					build_cost_ic = 0.3 instant = yes
 				}
 			}
 		}

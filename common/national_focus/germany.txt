@@ -3063,8 +3063,16 @@ focus_tree = {
 
 			add_state_core = 85
 			add_state_core = 86 
+			add_state_core = 762
+			add_state_core = 807
 			86 = { set_state_name = "Posen" }
 			set_province_name = { id = 6558 name = "Posen" }
+			762 = { set_state_name = "Kattowitz" }
+			set_province_name = { id = 6464 name = "Kattowitz" }
+			807 = { set_state_name = "Danzig-Westpreußen" }
+			set_province_name = { id = 279 name = "Bromberg" }
+			set_province_name = { id = 3295 name = "Thorn" }
+			set_province_name = { id = 9263 name = "Putzig" }
 
 			every_state = {
 				limit = {
@@ -5282,7 +5290,23 @@ focus_tree = {
 				set_technology = { 
 					ger_medium_tank_1938 = 1
 				}
-			}		
+			}
+			if = {
+				limit = {
+					GER = { has_tech = ger_light_tank_1938 }
+				}
+				set_technology = { 
+					ger_light_tank_1940 = 1
+				}
+			}
+			if = {
+				limit = {
+					GER = { has_tech = ger_light_tank_1936 }
+				}
+				set_technology = { 
+					ger_light_tank_1938 = 1
+				}
+			}
 			hidden_effect = {
 				load_oob = "GER_Panzer_Division_plan"
 				GER_mefo_bills_level_up = yes

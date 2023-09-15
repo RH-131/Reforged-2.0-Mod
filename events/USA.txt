@@ -471,16 +471,9 @@ country_event = {
 
 	option = {
 		name = usa.30.a
-		USA_great_depression_level_up = yes
-
-		if = {
-			limit = {
-				has_idea = great_depression 
-			}
-			add_timed_idea = { 
-				idea = great_recession
-				days = 365 
-			}
+		add_timed_idea = { 
+			idea = great_recession
+			days = 365 
 		}
 	}
 }
@@ -612,15 +605,12 @@ country_event = {
 			tag = USA 
 		}
 		name = usa.40.a
-		add_ideas = USA_island_hopping8 
-
 	}
 	option = {
 		trigger = {
 			tag = JAP  
 		}
 		name = usa.40.a
-		add_ideas = JAP_island_hopping8 
 	}	
 }
 
@@ -1097,12 +1087,21 @@ country_event = {
 	fire_only_once = yes
 	
 	is_triggered_only = yes
+
+	immediate = {
+		USA = {
+			country_event = { id = usa.40 }
+		}
+		JAP = {
+			country_event = { id = usa.40 }
+		}
+	}
 	
 	option = { 
 		name = usa.75.a
 
 		complete_national_focus = USA_join_the_allies
-		complete_national_focus = USA_the_island_hopping_campaign
+		#complete_national_focus = USA_the_island_hopping_campaign
 
 	    #destroy_ships = {
         #    type = ship_hull_heavy
