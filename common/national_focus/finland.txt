@@ -262,7 +262,7 @@ focus_tree = {
 		x = -1
 		y = 1
         relative_position_id = FIN_ski_infantry
-		cost = 5
+		cost = 7.15
 		completion_reward = {
 			add_ideas = FIN_ensure_the_future
 		}
@@ -276,7 +276,7 @@ focus_tree = {
 		x = 0
 		y = 1
         relative_position_id = FIN_ensure_future_men
-		cost = 5
+		cost = 7.15
 		completion_reward = {
 			add_ideas = FIN_advanced_training
 		}
@@ -290,7 +290,7 @@ focus_tree = {
 		x = 0
 		y = 1
         relative_position_id = FIN_military_discipline
-		cost = 5
+		cost = 7.15
 		bypass = {
             148 = {
                 free_building_slots = {
@@ -367,7 +367,7 @@ focus_tree = {
 		x = 0
 		y = 1
         relative_position_id = FIN_doctrine_advancements
-		cost = 5
+		cost = 7.15
 		completion_reward = {
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
@@ -392,7 +392,7 @@ focus_tree = {
 		x = 3
 		y = 1
         relative_position_id = FIN_ski_infantry
-		cost = 5
+		cost = 7.15
 		completion_reward = {
 			add_tech_bonus = {
 				name = POL_standardisation_of_equipment
@@ -411,7 +411,7 @@ focus_tree = {
 		x = 0
 		y = 1
         relative_position_id = FIN_sub_machine_gun_development
-		cost = 5
+		cost = 7.15
 		completion_reward = {
 			add_ideas = SPA_domestic_weapons_manufacturing
 		}
@@ -425,7 +425,7 @@ focus_tree = {
 		x = 0
 		y = 1
         relative_position_id = FIN_sub_machine_gun_production
-		cost = 5
+		cost = 7.15
 		completion_reward = {
 			custom_effect_tooltip = Advanced_training_tooltip
 			hidden_effect = {
@@ -502,6 +502,7 @@ focus_tree = {
 		cost = 7.15
 		completion_reward = {
 			add_ideas = partial_economic_mobilisation
+			add_stability = -0.2
 		}
 	}
 	focus = {
@@ -521,17 +522,17 @@ focus_tree = {
             149 = {
                 free_building_slots = {
                     building = arms_factory
-                    size < 4
+                    size < 3
                     include_locked = yes
                 }
             }
 		}
 		completion_reward = {
 			149 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -607,7 +608,7 @@ focus_tree = {
 		x = 0
 		y = 1
         relative_position_id = FIN_prepare_our_people
-		cost = 5
+		cost = 7.15
 		ai_will_do = {
 			factor = 10
 		}
@@ -806,15 +807,15 @@ focus_tree = {
         relative_position_id = FIN_stockpile_rations
 		cost = 7.15
 		completion_reward = {
-			148 = {
+			111 = {
 				remove_building = {
 					type = industrial_complex
 					level = 3
 				}
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 5
+					level = 3
 					instant_build = yes
 				}
 			}
