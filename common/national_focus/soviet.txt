@@ -2177,11 +2177,6 @@ focus_tree = {
 		relative_position_id = SOV_finnish_wargoal 
 		prerequisite = { focus = SOV_finnish_wargoal }
 		prerequisite = { focus = SOV_baltic_security }
-
-		available = {
-			has_full_control_of_state = 146
-		}
-
 		continue_if_invalid = yes
 		x = 1
 		y = 1
@@ -5030,7 +5025,7 @@ focus_tree = {
 					is_ai = no 
 				}
 				remove_ideas = home_of_revolution
-				add_timed_idea = { idea = home_of_revolution_2 days = 250 }
+				add_timed_idea = { idea = home_of_revolution_2 days = 180 }
 
 			}
 			if = {
@@ -5050,7 +5045,7 @@ focus_tree = {
 					is_ai = no 
 				}
 				remove_ideas = home_of_revolution
-				add_timed_idea = { idea = home_of_revolution_2 days = 250 }
+				add_timed_idea = { idea = home_of_revolution_2 days = 180 }
 
 			}
 			if = {
@@ -5305,7 +5300,7 @@ focus_tree = {
 		}
 		available = {
 			SOV = {
-				has_full_control_of_state = 195
+				    controls_state = 195
 				OR = {
 					surrender_progress > 0.4
 					GER = { controls_state = 13 }

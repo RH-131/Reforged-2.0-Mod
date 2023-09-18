@@ -3342,11 +3342,11 @@ foreign_politics = {
 		   tag = GER
 		}
 		visible = {
-			FIN = { has_completed_focus	 = FIN_abandoned }		
+			date > 1941.1.1	
 		}
 
 		available = {
-			FIN = { has_completed_focus	 = FIN_abandoned }
+			date > 1941.1.1
 		}
 
 		ai_will_do = {
@@ -3383,7 +3383,7 @@ foreign_politics = {
 				date > 1940.5.15	
 			}						
 		}
-
+ 
 		ai_will_do = {
 			factor = 10
 		}

@@ -111,7 +111,19 @@ technologies = {
 			breakthrough = 0.05
 		}
 	}
-	
+	Advanced_training = {
+		research_cost = -1
+		allow = {
+			always = no
+		}
+
+		light_infantry = {
+			need = {
+			   	infantry_equipment = 35
+			}
+		}
+	}
+
 	Desperate_for_men_tech = {
 		research_cost = -1
 		allow = {
