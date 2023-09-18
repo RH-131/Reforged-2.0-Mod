@@ -180,11 +180,11 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.08
-				industrial_capacity_factory = 0.10
-				production_factory_max_efficiency_factor = 0.10
-				production_factory_efficiency_gain_factor = 0.10
-				stability_factor = -0.05
-				political_power_factor = -0.05
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				stability_factor = -0.1
+				political_power_factor = -0.1
 			}
 		}
 		
@@ -196,10 +196,11 @@ ideas = {
 			
 			modifier = {
 			    consumer_goods_factor = -0.04
-				industrial_capacity_factory = 0.10
+				industrial_capacity_factory = 0.05
 				production_factory_max_efficiency_factor = 0.05
 				production_lack_of_resource_penalty_factor = -0.1
 				political_power_factor = 0.10
+				production_speed_buildings_factor = 0.05
 			}
 		}
 		
@@ -213,7 +214,7 @@ ideas = {
 				consumer_goods_factor = -0.02
 				production_factory_start_efficiency_factor = 0.05
 				stability_factor = -0.10
-				political_power_factor = -0.05
+				political_power_factor = -0.1
 			}
 		}
 		
@@ -225,11 +226,10 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.06
-				production_speed_buildings_factor = 0.10
+				production_speed_buildings_factor = 0.15
 				industrial_capacity_factory = 0.05
-				production_factory_start_efficiency_factor = 0.10
-				line_change_production_efficiency_factor = 0.10
-				stability_factor = -0.05
+				production_factory_start_efficiency_factor = 0.05
+				stability_factor = -0.1
 			}
 		}
 		
@@ -458,7 +458,7 @@ ideas = {
 			picture = generic_foreign_capital
 			
 			modifier = {
-				production_speed_buildings_factor = 0.075
+				production_speed_buildings_factor = 0.05
 			}
 		}
 
@@ -810,21 +810,18 @@ ideas = {
 					reliability = 0.05
 					soft_attack = 0.1
 					armor_value = 0.05
-					build_cost_ic = 0.1
 				}
 
 				medium_tank_aa_equipment = {
 					reliability = 0.05
 					air_attack = 0.1
 					armor_value = 0.05 
-					build_cost_ic = 0.05
 				}
 
 				medium_tank_artillery_equipment = {
 					reliability = 0.05
 					soft_attack = 0.15
 					armor_value = 0.05
-					build_cost_ic = 0.05
 				}
 
 				medium_tank_equipment = {
@@ -832,31 +829,26 @@ ideas = {
 					soft_attack = 0.1
 					hard_attack = 0.1
 					armor_value = 0.05
-					build_cost_ic = 0.05
 				}
 
 			    light_tank_equipment = {
 					reliability = 0.05
 					soft_attack = 0.1
 					armor_value = 0.1					
-					build_cost_ic = 0.05
 				}
 
 				light_tank_artillery_equipment = {
 					reliability = 0.05
 					soft_attack = 0.1
-					build_cost_ic = 0.05
 				}
 
 				light_tank_destroyer_equipment = {
 					reliability = 0.05
 					hard_attack = 0.1
-					build_cost_ic = 0.05
 				}
 				light_tank_aa_equipment = {
 					reliability = 0.05
 					air_attack = 0.1
-					build_cost_ic = 0.05
 				}
 			}
 		}
@@ -918,60 +910,7 @@ ideas = {
 				factor = 1
 			}
 		}
-		
-		HUN_messerschmitt = {
-			
-			picture = GFX_idea_messerschmitt
-			
-			allowed = {
-				original_tag = HUN	
-			}	
-			
-			available = {
-				has_completed_focus = HUN_messerschmitt
-			}
-
-			research_bonus = {
-				air_equipment = -0.05
-			}
-			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
-			equipment_bonus = {
-				small_plane_airframe = {
-					air_agility = 0.1 air_range = 0.08  
-				}
-				medium_plane_fighter_airframe = {
-					reliability = 0.1 air_range = 0.1  
-				}		
-			}
-			
-			traits = { GER_messerschmitt_manufacturer }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-		HUN_macchi = {
-			
-			picture = GFX_idea_macchi
-			
-			allowed = {
-				original_tag = HUN
-			}
-			
-			available = {
-				has_completed_focus = HUN_macchi
-			}
-			
-			research_bonus = {
-				air_equipment = -0.05
-			}
-			
-			modifier = { aircraft_manufacturer_cost_factor = -0.33 }
-			traits = { light_aircraft_manufacturer }
-		}
 	}
-
 	naval_manufacturer = {
 	
 		designer = yes
@@ -1020,6 +959,7 @@ ideas = {
 	
 		designer = yes
 	
+		
 		HUN_femaru_fegyver_es_gepgyar = {
 			
 			picture = generic_infantry_equipment_manufacturer_2
@@ -1028,6 +968,29 @@ ideas = {
 				original_tag = HUN
 			}
 			
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				infantry_weapons = -0.05
+			}
+			
+			traits = { infantry_equipment_producer_mass }
+			modifier = { materiel_manufacturer_cost_factor = -0.33 }
+		}
+			
+			
+		HUN_Fiat_arms = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				original_tag = HUN
+				}
+				available = { 
+				has_completed_focus = HUN_fiat
+			}
 			cost = 150
 			removal_cost = 10
 			
@@ -1038,7 +1001,7 @@ ideas = {
 			traits = { infantry_equipment_manufacturer }
 			modifier = { materiel_manufacturer_cost_factor = -0.33 }
 		}
-		
+
 		HUN_hanomag = {
 			
 			allowed = {
@@ -1076,7 +1039,7 @@ ideas = {
 				artillery = -0.05
 			}
 			modifier = { materiel_manufacturer_cost_factor = -0.33 }
-			traits = { artillery_manufacturer }
+			traits = { HUN_breda_artillery_license }
 		}
 	}
 	
@@ -1095,10 +1058,6 @@ ideas = {
 			
 			
 			# made light bombers Weiss WM-21
-						
-			ai_will_do = {
-				factor = 1
-			}
 		}
 	}
 
@@ -1116,7 +1075,8 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			
-			research_bonus = { naval_equipment = 0.15 } traits = { naval_research_trait }
+			research_bonus = { naval_equipment = 0.15 } 
+			traits = { naval_research_trait }
 			
 		}
 	}
@@ -1151,7 +1111,8 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			
-			research_bonus = { infantry_weapons = 0.15 } traits = { materiel_research_trait }
+			research_bonus = { infantry_weapons = 0.15 } 
+			traits = { materiel_research_trait }
 		}
 	}
 }
