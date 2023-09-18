@@ -3109,6 +3109,24 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	
+	HUN_breda_artillery_license = {
+		random = no
+		equipment_bonus = {
+				artillery_equipment = {
+                   soft_attack = 0.10
+				}
+				pack_artillery_equipment = {
+				   soft_attack = 0.10
+				}
+				heavy_artillery_equipment = {
+                   soft_attack = 0.10
+				}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 	mechanized_equipment_manufacturer = {
 		random = no
@@ -3123,7 +3141,9 @@ leader_traits = {
 		random = no
 		equipment_bonus = {
 				infantry_equipment = {
-					breakthrough = 0.05 soft_attack = 0.1 defense = 0.05
+					breakthrough = 0.05 
+					soft_attack = 0.1
+					defense = 0.05
 				}
 			}
 		ai_will_do = {
@@ -3131,12 +3151,12 @@ leader_traits = {
 		}
 	}
 
-	infantry_equipment_producer_mass= {
+	infantry_equipment_producer_mass = {
 		random = no
 		equipment_bonus = {
 			infantry_equipment = {
-				reliability = -0.1 instant = yes
-				build_cost_ic = -0.16 instant = yes
+#				reliability = -0.1 instant = yes
+				build_cost_ic = -0.1 instant = yes
 			}
 		}
 		ai_will_do = {
