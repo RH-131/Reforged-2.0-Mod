@@ -597,7 +597,6 @@ ideas = {
 
 			modifier = {
 				navy_screen_attack_factor = 0.05
-				navy_submarine_attack_factor = 0.05
 			}
 		}
 
@@ -671,7 +670,9 @@ ideas = {
 			picture = generic_navy_carrier_bonus
 
 			modifier = {
-				sortie_efficiency = 0.2
+				navy_carrier_air_attack_factor = 0.1
+				navy_carrier_air_targetting_factor = 0.1
+				navy_carrier_air_agility_factor = 0.1
 			}
 		}
 
@@ -690,7 +691,8 @@ ideas = {
 			picture = generic_navy_carrier_bonus
 
 			modifier = {
-				sortie_efficiency = 0.05
+				navy_carrier_air_attack_factor = 0.05
+				navy_carrier_air_agility_factor = 0.05
 			}
 		}
 
@@ -1618,19 +1620,11 @@ ideas = {
 
 			picture = generic_navy_carrier_bonus
 
-			targeted_modifier = {
-				tag = PHI
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.1
-			}
-
 			modifier = {
 				port_strike = 1
-				carrier_capacity_penalty_reduction = -0.5
-				sortie_efficiency = 0.5
-				naval_strike_attack_factor = 0.12
-				naval_strike_targetting_factor = 0.12
-				naval_strike_agility_factor = 0.12
+				naval_strike_attack_factor = 0.2
+				naval_strike_targetting_factor = 0.2
+				naval_strike_agility_factor = 0.2
 				army_core_defence_factor = 1.00
 				army_core_attack_factor = 1.00
 			}
