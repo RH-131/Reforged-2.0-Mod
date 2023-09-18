@@ -1920,8 +1920,8 @@ ideas = {
 			picture = man_five_year_plan_industry
 
 			modifier = {
-				production_speed_industrial_complex_factor = 0.10
-				production_speed_arms_factory_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
 				production_speed_synthetic_refinery_factor = 0.05
 				production_speed_bunker_factor = -0.25
 			}
@@ -1943,10 +1943,10 @@ ideas = {
 			picture = man_five_year_plan_industry
 
 			modifier = {
-				production_speed_arms_factory_factor = 0.10
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_synthetic_refinery_factor = 0.05
-				production_speed_bunker_factor = -0.5
+				production_speed_bunker_factor = -0.25
 			}
 		}
 
@@ -2002,7 +2002,16 @@ ideas = {
 				}
 			}
 		}
-
+			SOV_cheaper_tanks_idea = {
+			picture = generic_army_war_college
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				experience_loss_factor = 0.1
+			}
+		}
 		SOV_idea_license = {
 			allowed = {
 				always = no

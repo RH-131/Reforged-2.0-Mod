@@ -796,7 +796,7 @@ focus_tree = {
 			add_political_power = 50
 			add_resource = {
 				type = rubber
-				amount = 48
+				amount = 60
 				state = 229
 			}
 			add_ideas = SOV_Tolkach
@@ -5799,6 +5799,9 @@ focus_tree = {
 		relative_position_id = SOV_military_research
 		completion_reward = {
 			custom_effect_tooltip = SOV_create_unit_tank_corps_reformed_tt
+			add_ideas = { 
+			SOV_cheaper_tanks_idea 
+			}
 			hidden_effect = {
 				set_technology = {
 					sov_mechanised_infantry = 1
@@ -5806,68 +5809,11 @@ focus_tree = {
 					sov_medium_td_1939 = 1
 					sov_medium_art_1939 = 1
 					sov_heavy_assault_gun_1939 = 1
-				}
-				division_template = {
-					name = "Tankoviy Korpus Reformed"
-					priority = 2
-	
-					regiments = {
-						mechanized = { x = 0 y = 0 }
-						mechanized = { x = 0 y = 1 }
-						mechanized = { x = 0 y = 2 }
-			            mechanized = { x = 0 y = 3 }
-			            mechanized = { x = 0 y = 4 }
-
-	    	   		 	medium_armor = { x = 1 y = 0 }
-						medium_armor = { x = 1 y = 1 }
-						medium_armor = { x = 1 y = 2 }
-						heavy_assaut_gun_brigade = { x = 1 y = 3 }
-                       
-						medium_armor = { x = 2 y = 0 }
-						medium_armor = { x = 2 y = 1 }
-						medium_armor = { x = 2 y = 2 }
-						heavy_assaut_gun_brigade = { x = 2 y = 3 }
-
-						medium_tank_destroyer_brigade = { x = 3 y = 0 }
-						medium_sp_artillery_brigade = { x = 3 y = 1 }
-						medium_sp_artillery_brigade =  { x = 3 y = 2 }
-   					}
-					
-			        support = {
-						DIV_HQ = { x = 0 y = 0 }
-				       	recon = { x = 0 y = 1 }
-				       	engineer = { x = 0 y = 2 }
-						recon_ac = { x = 0 y = 3 }
-						maintenance_company = { x = 1 y = 0 }
-						logistics_company = { x = 1 y = 1 }
-						military_police = { x = 1 y = 2 }	
+					SOV_cheaper_tanks = 1 
 					}
-				}
-
-				random_owned_controlled_state = {
-					prioritize = { 219 }
-					create_unit = {
-						division = "name = \"1. Tankoviy Korpus\" division_template = \"Tankoviy Korpus Reformed\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
-						owner = SOV
-					}	
-					create_unit = {
-						division = "name = \"2. Tankoviy Korpus\" division_template = \"Tankoviy Korpus Reformed\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
-						owner = SOV
-					}	
-					create_unit = {
-						division = "name = \"3. Tankoviy Korpus\" division_template = \"Tankoviy Korpus Reformed\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
-						owner = SOV
-					}	
-					create_unit = {
-						division = "name = \"4. Tankoviy Korpus\" division_template = \"Tankoviy Korpus Reformed\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
-						owner = SOV
-					}							
-				}
-				play_song = "March of the Soviet Tankists"
-			}
 		}
 	}
-
+	}
 	focus = {
 		id = SOV_american_lend_lease
 		icon = GFX_SOV_usa_sov_agreement
@@ -5999,12 +5945,8 @@ focus_tree = {
 		cost = 5 
 
 		prerequisite = {
-			focus = SOV_arctic_lend_lease
+			focus = SOV_arctic_lend_lease focus = SOV_murmansk_lend_lease
 		}
-		prerequisite = {
-			focus = SOV_murmansk_lend_lease
-		}
-
 		x = 0
 		y = 2
 
@@ -6023,7 +5965,7 @@ focus_tree = {
 		            SOV = { controls_state = 266 }
 			    }
 				surrender_progress > 0.4
-				date > 1943.1.1
+				date > 1942.1.1
 			}
 		}
 

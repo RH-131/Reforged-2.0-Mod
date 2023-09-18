@@ -111,6 +111,28 @@ technologies = {
 			breakthrough = 0.05
 		}
 	}
+	SOV_cheaper_tanks = {
+		research_cost = -1
+		allow = {
+			always = no
+		}
+		light_armor = { 
+			need = { 
+					light_tank_chassis = -4 
+			}
+			}
+		medium_armor = {
+			need = {
+			   	medium_tank_chassis = -4
+			}
+			}
+		heavy_armor = { 
+			need = { 
+				heavy_tank_chassis = -2
+			}
+			}
+	}
+
 	Advanced_training = {
 		research_cost = -1
 		allow = {

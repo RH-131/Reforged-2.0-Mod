@@ -3417,11 +3417,6 @@ SOV_great_patriotic_war = {
 						controls_state = 214 
 					}
 				}
-				NOT = {
-					SOV = { 
-						controls_state = 215 
-					}
-				}
 			}
 		}	
 		activation = {
@@ -3429,20 +3424,24 @@ SOV_great_patriotic_war = {
 			SOV = { 
 				controls_state = 213 
 				controls_state = 214 
-				controls_state = 215
 			}
 		}
 
 		selectable_mission = no
 		days_mission_timeout = 100
-		days_remove = 150
+		days_remove = 100
 		is_good = no
 		fire_only_once = no
 
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
+				type = infantry_equipment
 					amount = 5000
+					producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+					amount = 200
 					producer = USA
 			}
 			add_equipment_to_stockpile = {
@@ -3464,18 +3463,18 @@ SOV_great_patriotic_war = {
 			}
 				
 			add_equipment_to_stockpile = {
-				type = anti_tank_equipment_1
+				type = anti_tank_equipment
 					amount = 200
 					producer = USA
 			}
 			
 			add_equipment_to_stockpile = {
-				type = artillery_equipment_1
+				type = artillery_equipment
 					amount = 500
 					producer = USA
 			}
 			add_equipment_to_stockpile = {
-				type = heavy_artillery_equipment_1
+				type = anti_air_equipment
 					amount = 200
 					producer = USA
 			}			
@@ -3514,14 +3513,19 @@ SOV_great_patriotic_war = {
 
 		selectable_mission = no
 		days_mission_timeout = 100
-		days_remove = 150
+		days_remove = 100
 		is_good = no
 		fire_only_once = no
 
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
+				type = infantry_equipment
 					amount = 5000
+					producer = USA
+					}
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+					amount = 200
 					producer = USA
 			}
 			add_equipment_to_stockpile = {
@@ -3543,18 +3547,18 @@ SOV_great_patriotic_war = {
 			}
 				
 			add_equipment_to_stockpile = {
-				type = anti_tank_equipment_1
+				type = anti_tank_equipment
 					amount = 200
 					producer = USA
 			}
 			
 			add_equipment_to_stockpile = {
-				type = artillery_equipment_1
+				type = artillery_equipment
 					amount = 500
 					producer = USA
 			}
 			add_equipment_to_stockpile = {
-				type = heavy_artillery_equipment_1
+				type = anti_air_equipment
 					amount = 200
 					producer = USA
 			}			
@@ -3591,7 +3595,7 @@ SOV_great_patriotic_war = {
 
 		selectable_mission = no
 		days_mission_timeout = 100
-		days_remove = 150
+		days_remove = 100
 		is_good = no
 		fire_only_once = no
 
@@ -3599,6 +3603,11 @@ SOV_great_patriotic_war = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
 					amount = 5000
+					producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+					amount = 200
 					producer = USA
 			}
 			add_equipment_to_stockpile = {
@@ -3620,18 +3629,18 @@ SOV_great_patriotic_war = {
 			}
 				
 			add_equipment_to_stockpile = {
-				type = anti_tank_equipment_1
+				type = anti_tank_equipment
 					amount = 200
 					producer = USA
 			}
 			
 			add_equipment_to_stockpile = {
-				type = artillery_equipment_1
+				type = artillery_equipment
 					amount = 500
 					producer = USA
 			}
 			add_equipment_to_stockpile = {
-				type = heavy_artillery_equipment_1
+				type = anti_air_equipment
 					amount = 200
 					producer = USA
 			}			
