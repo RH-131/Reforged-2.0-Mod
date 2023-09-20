@@ -172,7 +172,7 @@ USA_popular_support = {
 			add_stability = 0.05 
 			add_days_mission_timeout = {
 				mission = USA_social_security_act_mission
-				days = -25
+				days = -50
 			}
 		}
 	}
@@ -229,6 +229,7 @@ USA_popular_support = {
 			add_stability = USA_democratic_support_var_stab
 		}
 	}
+
 	USA_pack_the_court = {
 		icon = generic_political_discourse
 		available = {
@@ -248,9 +249,34 @@ USA_popular_support = {
 			add_days_mission_timeout = {
 				mission = USA_social_security_act_mission
 				days = -25
+			}
 		}
 	}
-}
+
+	USA_make_compromises = {
+		icon = generic_political_discourse
+		available = {
+			has_completed_focus = USA_our_america_our_problems
+		}
+		
+		cost = 25
+
+		ai_will_do = {
+			factor = 1
+		}
+		modifier = {
+			stability_factor = -0.1
+		}
+		days_re_enable = 180
+		days_remove = 90
+		remove_effect = {
+			add_political_power = 75
+			add_days_mission_timeout = {
+				mission = USA_social_security_act_mission
+				days = -25
+			}
+		}
+	}
 
 	USA_convert_republicans = {
 		icon = eng_trade_unions_demand
