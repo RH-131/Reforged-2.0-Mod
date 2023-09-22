@@ -94,7 +94,7 @@ sub_units = {
 		hard_attack = -0.5
 		
 		amphibious = {
-			attack = 0.02
+			attack = 0.025
 		}
 		
 		can_be_parachuted = no
@@ -143,10 +143,10 @@ sub_units = {
 		hard_attack = -0.5
 		
 		hills = {
-			attack = 0.02
+			attack = 0.025
 		}
 		mountain = {
-			attack = 0.02
+			attack = 0.025
 		}
 		
 		can_be_parachuted = yes
@@ -194,13 +194,13 @@ sub_units = {
 		soft_attack = -0.5
 		hard_attack = -0.5
 
-        fort = {
-			attack = 0.025
-		}
 		urban = {
 			attack = 0.025
 		}
 		
 		can_be_parachuted = no
+		
+		same_support_type = artillery # blocks adding other heavy arty or tank types to template
 	}
+	
 }

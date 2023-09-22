@@ -76,7 +76,7 @@ sub_units = {
 			attack = 0.05
 			movement = 0.05 
 		}
-        	desert = {
+    desert = {
 			attack = 0.05
 			movement = 0.05
 		}	
@@ -164,5 +164,113 @@ sub_units = {
 			defence = 0.0 
 			movement = 0.05
 		}
+	}
+	
+	light_sp_anti_air_company = {
+		sprite = light_armor
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = yes
+		affects_speed = no
+		type = {
+			armor
+			anti_air
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+			category_all_armor
+			category_anti_air
+		}
+
+		
+		combat_width = 0
+		training_time = 120
+
+		need = {
+			light_tank_aa_chassis = 20
+		}
+
+		can_be_parachuted = no
+		
+		#Size Definitions
+		max_strength = 0.2
+		max_organisation = 0
+		default_morale = 0.1
+		manpower = 300
+		weight = 0.1
+		
+        supply_consumption = 0.12
+
+		# Support nerfs to combat abilities
+		defense = -0.5
+		breakthrough = -0.5
+		armor_value = -0.125
+		soft_attack = -0.25
+		hard_attack = -0.25
+		air_attack = -0.4
+		ap_attack = -0.25
+		
+		same_support_type = anti_air # blocks adding other anti_air types to template
+
+	}
+	
+	medium_sp_anti_air_company = {
+		sprite = medium_armor
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = yes
+		affects_speed = no
+		type = {
+			armor
+			anti_air
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_all_armor
+			category_army
+			category_anti_air
+		}
+
+		
+		combat_width = 0
+		training_time = 120
+
+		need = {
+			medium_tank_aa_chassis = 15
+		}
+
+		can_be_parachuted = no
+		
+		#Size Definitions
+		max_strength = 0.2
+		max_organisation = 0
+		default_morale = 0.1
+		manpower = 300
+		weight = 0.1
+		
+        supply_consumption = 0.15
+
+		# Support nerfs to combat abilities
+		defense = -0.5
+		breakthrough = -0.5
+		armor_value = -0.25
+		soft_attack = -0.25
+		hard_attack = -0.25
+		air_attack = -0.35
+		ap_attack = -0.25
+		
+		same_support_type = anti_air # blocks adding other anti_air types to template
+
 	}
 }
