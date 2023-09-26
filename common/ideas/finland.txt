@@ -20,7 +20,6 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
-				production_factory_max_efficiency_factor = 0.025
 				stability_factor = -0.1
 				production_speed_buildings_factor = -0.1
 			}
@@ -94,9 +93,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_defence_factor = 0.25
+				army_defence_factor = 0.15
 				max_dig_in = 2
-				dig_in_speed_factor = 0.4
+				dig_in_speed_factor = 0.2
 			}
 		}
 		FIN_continuation_war_idea = {
@@ -106,8 +105,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_attack_factor = -0.1
-				army_defence_factor = 0.1
+				army_attack_factor = -0.05
+				army_defence_factor = 0.05
 				cas_damage_reduction = 0.25
 			}
 		}
@@ -119,7 +118,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_attack_factor = 0.1
+				army_attack_factor = 0.05
 				army_defence_factor = -0.1
 				cas_damage_reduction = 0.25
 			}
@@ -132,8 +131,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_defence_factor = 0.25
-				army_attack_factor = -0.2
+				army_defence_factor = 0.15
+				army_attack_factor = -0.1
 				cas_damage_reduction = 0.25
 			}
 		}
@@ -147,8 +146,8 @@ ideas = {
 				attrition = -0.15
 				winter_attrition_factor = -0.5
 				acclimatization_cold_climate_gain_factor = 0.25
-				army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1 
 				equipment_capture = 0.02
 				conscription_factor = 0.05
 				conscription = 0.04
