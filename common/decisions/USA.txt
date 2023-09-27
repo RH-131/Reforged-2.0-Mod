@@ -231,7 +231,7 @@ USA_popular_support = {
 	}
 
 	USA_pack_the_court = {
-		icon = generic_political_discourse
+		icon = GFX_decision_generic_political_rally
 		available = {
 			has_completed_focus = USA_replace_supreme_court_judges
 		}
@@ -318,7 +318,7 @@ USA_popular_support = {
 
 		priority = 10
 
-		icon = eng_puppet_usa
+		icon = GFX_decision_USA_congress
 
 		available = {
 			hidden_trigger = { always = no }
@@ -443,7 +443,7 @@ USA_popular_support = {
 
 		priority = 10
 
-		icon = eng_puppet_usa
+		icon = GFX_decision_USA_congress
 
 		available = {
 			hidden_trigger = { always = no }
@@ -568,7 +568,7 @@ USA_popular_support = {
 
 		priority = 10
 
-		icon = eng_puppet_usa
+		icon = GFX_decision_USA_congress
 
 		available = {
 			hidden_trigger = { always = no }
@@ -681,6 +681,63 @@ USA_popular_support = {
 					level = 5
 					instant_build = yes 
 				}
+			}
+		}
+	}
+
+	USA_heavy_industry_revival_mission = {
+
+		priority = 10
+
+		icon = "GFX_decision_generic_factory"
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 365
+
+		fire_only_once = yes
+
+		cancel_if_not_visible = yes
+
+		is_good = yes
+
+		activation = {
+			has_completed_focus = USA_heavy_industry_revival
+		}
+
+		timeout_effect = {
+			country_event = {
+				id = usa.28 
+			}
+		}
+	}
+	USA_public_works_projects_mission = {
+
+		priority = 10
+
+		icon = "GFX_decision_generic_construction"
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 365
+
+		fire_only_once = yes
+
+		cancel_if_not_visible = yes
+
+		is_good = yes
+
+		activation = {
+			has_completed_focus = USA_public_works_projects
+		}
+
+		timeout_effect = {
+			country_event = { 
+				id = usa.27
 			}
 		}
 	}

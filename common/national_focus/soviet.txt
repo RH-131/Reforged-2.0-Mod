@@ -5881,7 +5881,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_murmansk_lend_lease
+		id = SOV_arctic_lend_lease
 		icon = GFX_SOV_lend_lease
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		cost = 5 
@@ -5905,12 +5905,13 @@ focus_tree = {
 		relative_position_id = SOV_american_lend_lease
 
 		completion_reward = {
-			activate_mission_tooltip = SOV_murmansk_lend_lease_decision			
+			activate_mission_tooltip = SOV_arctic_lend_lease_murmansk_decision	
+			activate_mission_tooltip = SOV_arctic_lend_lease_arkhangelsk_decision		
 		}
 	}
 
 	focus = {
-		id = SOV_arctic_lend_lease
+		id = SOV_pacific_lend_lease
 		icon = GFX_SOV_lend_lease
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		cost = 5 
@@ -5934,7 +5935,7 @@ focus_tree = {
 		relative_position_id = SOV_american_lend_lease
 
 		completion_reward = {
-			activate_mission_tooltip = SOV_arctic_lend_lease_decision			
+			activate_mission_tooltip = SOV_pacific_lend_lease_decision			
 		}
 	}	
 
@@ -5945,7 +5946,7 @@ focus_tree = {
 		cost = 5 
 
 		prerequisite = {
-			focus = SOV_arctic_lend_lease focus = SOV_murmansk_lend_lease
+			focus = SOV_pacific_lend_lease focus = SOV_arctic_lend_lease
 		}
 		x = 0
 		y = 2

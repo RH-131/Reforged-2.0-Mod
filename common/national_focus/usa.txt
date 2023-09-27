@@ -4125,10 +4125,7 @@ focus_tree = {
 		
 		completion_reward = {
 			set_country_flag = { flag = USA_congress_blocking_focus value = 1 days = 35 }	
-			custom_effect_tooltip = USA_infrastructure_projects_tt
-			hidden_effect = {
-				country_event = { id = usa.28 days = 365 }
-			}
+			custom_effect_tooltip = USA_heavy_industry_revival_tt
 			add_days_mission_timeout = {
 				mission = USA_federal_housing_act_mission
 				days = -75
@@ -4170,11 +4167,8 @@ focus_tree = {
 			set_country_flag = { flag = USA_congress_blocking_focus value = 1 days = 35 }
 			add_ideas = USA_public_works_administration		
 
-			custom_effect_tooltip = USA_heavy_industry_revival_tt
+			custom_effect_tooltip = USA_infrastructure_projects_tt
 
-			hidden_effect = {
-				country_event = { id = usa.27 days = 365 }
-			}
 			add_days_mission_timeout = {
 				mission = USA_federal_housing_act_mission
 				days = -75
