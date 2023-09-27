@@ -12,6 +12,7 @@ sub_units = {
 		type = {
 			infantry
 			support
+			anti_tank
 		}
 		
 		categories = {
@@ -42,7 +43,9 @@ sub_units = {
 		defense = -0.5
 		breakthrough = -0.5
 		soft_attack = -0.5
-		hard_attack = -0.2
+		hard_attack = -0.25
 		ap_attack = -0.15
+		
+		same_support_type = anti_tank # blocks adding other anti-tank types to template
 	}
 }

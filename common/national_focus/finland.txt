@@ -954,7 +954,7 @@ focus_tree = {
 		x = 1
 		y = 1
         relative_position_id = FIN_invest_in_the_private_sector
-		cost = 5
+		cost = 7.15
 		completion_reward = {
 			add_tech_bonus = {
 				technology = construction2
@@ -1191,6 +1191,7 @@ focus_tree = {
 	focus = {
 		id = FIN_the_war_for_the_future
 		icon = GFX_goal_generic_major_war
+		
 		x = 35
 		y = 0
 		cost = 1
@@ -1403,8 +1404,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			every_army_leader = {
-				add_attack = 1
+				add_defense = 1
+				
 			}
+			army_experience = -150
 		}
 	}
 	focus = {
@@ -1677,7 +1680,9 @@ focus_tree = {
 				add_defense = 1
 				add_logistics = 1
 				add_attack = -1
+				
 			}
+			army_experience = -200 
 		}
 	}
 	focus = {

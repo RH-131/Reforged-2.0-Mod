@@ -14,6 +14,7 @@ sub_units = {
 		type = {
 			infantry
 			support
+			anti_air
 		}
 
 		group = support
@@ -50,6 +51,8 @@ sub_units = {
 		hard_attack = -0.5
 		air_attack = -0.5
 		ap_attack = -0.25
+		
+		same_support_type = anti_air # blocks adding other anti_air types to template
 
 	}
 }
