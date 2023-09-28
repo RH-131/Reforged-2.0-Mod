@@ -2491,6 +2491,57 @@ ideas = {
 				controls_state = 195
 			}
 
+			visible = {
+				NOT = {
+					has_country_flag = relocated_leningrad_industry
+				}
+			}
+
+			research_bonus = {
+				armor = -0.05
+			}
+			modifier = { tank_manufacturer_cost_factor = -0.33 }
+
+			equipment_bonus = {
+				heavy_tank_chassis = {
+					reliability = -0.1
+					armor_value = 0.1
+					hard_attack = 0.1
+					soft_attack = 0.1
+					build_cost_ic = 0.1
+				}
+				heavy_tank_destroyer_chassis = {
+					reliability = -0.1
+					hard_attack = 0.15
+					ap_attack = 0.10
+					armor_value = 0.10
+					build_cost_ic = 0.1
+				}
+				heavy_tank_artillery_chassis = {
+					reliability = -0.1
+					soft_attack = 0.15
+					armor_value = 0.10
+					build_cost_ic = 0.1
+				}
+			}
+
+			traits = { SOV_heavy_tank_designer }
+		}
+
+		kirov_plant_barb = {
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_completed_focus = SOV_heavy_state_funding_for_tank_bureaus
+				controls_state = 572
+			}
+
+			visible = {
+				has_country_flag = relocated_leningrad_industry
+			}
+
 			research_bonus = {
 				armor = -0.05
 			}
@@ -2525,12 +2576,17 @@ ideas = {
 		factory_no_174_k_e_voroshilov = { #Cavalry Tank Designer
 			allowed = {
 				original_tag = SOV
-
 			}
 
 			available = {
 				has_completed_focus = SOV_heavy_state_funding_for_tank_bureaus
 				controls_state = 195
+			}
+
+			visible = {
+				NOT = {
+					has_country_flag = relocated_leningrad_industry
+				}
 			}
 
 			research_bonus = {
@@ -2585,6 +2641,73 @@ ideas = {
 
 			traits = { SOV_cavalry_tank_designer }
 		}
+
+		factory_no_174_k_e_voroshilov_barb = { #Cavalry Tank Designer
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_heavy_state_funding_for_tank_bureaus
+			controls_state = 571
+		}
+
+		visible = {
+			has_country_flag = relocated_leningrad_industry
+		}
+
+		research_bonus = {
+			armor = -0.05
+		}
+		modifier = { tank_manufacturer_cost_factor = -0.33 }
+		equipment_bonus = {
+			medium_tank_aa_chassis = {
+				reliability = -0.05
+				maximum_speed = 0.1
+				armor_value = -0.1
+				build_cost_ic = -0.05
+			}
+			medium_tank_artillery_chassis = {
+				reliability = -0.05
+				maximum_speed = 0.1
+				armor_value = -0.10
+				build_cost_ic = -0.05
+			}
+			medium_tank_chassis = {
+				reliability = -0.05
+				maximum_speed = 0.1
+				armor_value = -0.10
+				build_cost_ic = -0.05
+			}
+			light_tank_chassis = {
+				reliability = -0.05
+				maximum_speed = 0.1
+				armor_value = -0.1
+				build_cost_ic = -0.05
+			}
+			light_tank_artillery_chassis = {
+				reliability = -0.05
+				maximum_speed = 0.1
+				armor_value = -0.1
+				build_cost_ic = -0.05
+			}
+
+			light_tank_destroyer_chassis = {
+				reliability = -0.05
+				maximum_speed = 0.1
+				armor_value = -0.1
+				build_cost_ic = -0.05
+			}
+			light_tank_aa_chassis = {
+				reliability = -0.05
+				maximum_speed = 0.1
+				armor_value = -0.1
+				build_cost_ic = -0.05
+			}
+		}
+
+		traits = { SOV_cavalry_tank_designer }
+	}
 
 		chelyabinsk_tractor_plant = {
 			allowed = {

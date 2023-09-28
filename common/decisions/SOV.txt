@@ -2196,7 +2196,30 @@ SOV_industry_relocation = {
 						damage_building = { type = industrial_complex damage = 0.4 }
 					}
 				}
+				if = {
+					limit = {
+						SOV = {
+							has_idea = kirov_plant
+						}
+					}
+					swap_ideas = {
+						remove_idea = kirov_plant
+						add_idea = kirov_plant_barb
+					}
+				}
+				else_if = {
+					limit = {
+						SOV = {
+							has_idea = factory_no_174_k_e_voroshilov
+						}
+					}
+					swap_ideas = {
+						remove_idea = factory_no_174_k_e_voroshilov
+						add_idea = factory_no_174_k_e_voroshilov_barb
+					}
+				}
 				custom_effect_tooltip = relocate_industry_repair
+				set_country_flag = relocated_leningrad_industry
 			}
 			custom_effect_tooltip = SOV_relocate_industry_from_leningrad_tt
 		}
@@ -3391,98 +3414,86 @@ SOV_great_patriotic_war = {
 		}
 	}
 
-	SOV_murmansk_lend_lease_decision = {
+	SOV_arctic_lend_lease_murmansk_decision = {
 
 		allowed = { always = yes }
 
 		icon = ger_mefo_bills
 
 		available = {
-			tag = SOV
-			SOV = { 
-				controls_state = 213 
-				controls_state = 214 
-				controls_state = 215
-			}			
-		}
-		cancel_trigger = {
-			OR = {
-				NOT = {
+			NOT = {
+				AND = {
 					SOV = { 
-						controls_state = 213 
-					}
-				}	
-				NOT = {
-					SOV = { 
-						controls_state = 214 
+						controls_state = 215
+						controls_state = 213
 					}
 				}
 			}
-		}	
+		}
+
 		activation = {
-			has_completed_focus = SOV_murmansk_lend_lease
+			has_completed_focus = SOV_arctic_lend_lease
 			SOV = { 
 				controls_state = 213 
-				controls_state = 214 
+				controls_state = 215
 			}
 		}
 
 		selectable_mission = no
 		days_mission_timeout = 100
-		days_remove = 100
-		is_good = no
+		is_good = yes
 		fire_only_once = no
 
-		remove_effect = {
+		timeout_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-					amount = 5000
+					amount = 2500
 					producer = USA
 			}
 			add_equipment_to_stockpile = {
 				type = small_plane_airframe
-					amount = 200
+					amount = 100
 					producer = USA
 			}
 			add_equipment_to_stockpile = {
 				type = radio_equipment_1
-					amount = 750
+					amount = 375
 					producer = USA
 			}
 			
 			add_equipment_to_stockpile = {
 				type = support_equipment_1
-					amount = 1250
+					amount = 625
 					producer = USA
 			}
 			
 			add_equipment_to_stockpile = {
 				type = motorized_equipment_1
-					amount = 2500
+					amount = 1250
 					producer = USA
 			}
 				
 			add_equipment_to_stockpile = {
 				type = anti_tank_equipment
-					amount = 200
+					amount = 100
 					producer = USA
 			}
 			
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
-					amount = 500
+					amount = 250
 					producer = USA
 			}
 			add_equipment_to_stockpile = {
 				type = anti_air_equipment
-					amount = 200
+					amount = 100
 					producer = USA
 			}			
 		}
 
 		timeout_effect = {
 			hidden_effect = {
-				activate_mission = SOV_murmansk_lend_lease_decision
+				activate_mission = SOV_arctic_lend_lease_murmansk_decision
 			}
 		}
 
@@ -3491,33 +3502,111 @@ SOV_great_patriotic_war = {
 		}
 	}
 
-	SOV_arctic_lend_lease_decision = {
+	SOV_arctic_lend_lease_arkhangelsk_decision = {
 
 		allowed = { always = yes }
 
 		icon = ger_mefo_bills
 
 		available = {
-			tag = SOV
-			SOV = { controls_state = 408 }
+			NOT = { 
+				SOV = {
+					controls_state = 214 
+				}
+			}
 		}
-		cancel_trigger = {
-			NOT = {
-				SOV = { controls_state = 408 }
-			}	
-		}	
 		activation = {
 			has_completed_focus = SOV_arctic_lend_lease
+			SOV = { 
+				controls_state = 214 
+			}
+		}
+
+		selectable_mission = no
+		days_mission_timeout = 100
+		is_good = yes
+		fire_only_once = no
+
+		timeout_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+					amount = 2500
+					producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+					amount = 100
+					producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = radio_equipment_1
+					amount = 375
+					producer = USA
+			}
+			
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+					amount = 625
+					producer = USA
+			}
+			
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+					amount = 1250
+					producer = USA
+			}
+				
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+					amount = 100
+					producer = USA
+			}
+			
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+					amount = 250
+					producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+					amount = 100
+					producer = USA
+			}
+		}
+
+		timeout_effect = {
+			hidden_effect = {
+				activate_mission = SOV_arctic_lend_lease_arkhangelsk_decision
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	SOV_pacific_lend_lease_decision = {
+
+		allowed = { always = yes }
+
+		icon = ger_mefo_bills
+
+		available = {
+			NOT = {
+				SOV = { controls_state = 408 }
+			}
+		}
+		activation = {
+			has_completed_focus = SOV_pacific_lend_lease
 			SOV = { controls_state = 408 }
 		}
 
 		selectable_mission = no
 		days_mission_timeout = 100
-		days_remove = 100
-		is_good = no
+		is_good = yes
 		fire_only_once = no
 
-		remove_effect = {
+		timeout_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 					amount = 5000
@@ -3566,7 +3655,7 @@ SOV_great_patriotic_war = {
 
 		timeout_effect = {
 			hidden_effect = {
-				activate_mission = SOV_arctic_lend_lease_decision
+				activate_mission = SOV_pacific_lend_lease_decision
 			}
 		}
 
@@ -3582,11 +3671,15 @@ SOV_great_patriotic_war = {
 		icon = ger_mefo_bills
 
 		available = {
-			tag = SOV
-			PER = { has_capitulated = no }
-		}
-		cancel_trigger = {
-			PER = { has_capitulated = yes }	
+			PER = { has_capitulated = yes }
+			NOT = {
+				AND = {
+					SOV = {
+						controls_state = 217
+						controls_state = 229
+					}
+				}
+			}
 		}
 		activation = {
 			has_completed_focus = SOV_persian_lend_lease
@@ -3595,13 +3688,12 @@ SOV_great_patriotic_war = {
 
 		selectable_mission = no
 		days_mission_timeout = 100
-		days_remove = 100
-		is_good = no
+		is_good = yes
 		fire_only_once = no
 
-		remove_effect = {
+		timeout_effect = {
 			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
+				type = infantry_equipment
 					amount = 5000
 					producer = USA
 			}
