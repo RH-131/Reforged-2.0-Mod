@@ -861,6 +861,552 @@ SOV_gulag_economy = {
 
 }
 
+SOV_fortify_regions = {
+	
+	SOV_fortify_molotov_line = {
+
+		icon = generic_construction
+
+		fire_only_once = yes
+		
+		allowed = {
+		   tag = SOV
+		}
+		
+		available = { 
+			has_offensive_war = no 
+			SOV = {
+				AND = {
+					AND = { owns_state = 11 controls_state = 11 }
+					AND = { owns_state = 12 controls_state = 12 }
+					AND = { owns_state = 13 controls_state = 13 }
+					AND = { owns_state = 89 controls_state = 89 }
+					AND = { owns_state = 91 controls_state = 91 }
+					AND = { owns_state = 93 controls_state = 93 }
+					AND = { owns_state = 94 controls_state = 94 }
+					AND = { owns_state = 95 controls_state = 95 }
+					AND = { owns_state = 96 controls_state = 96 }
+					AND = { owns_state = 97 controls_state = 97 }
+					AND = { owns_state = 189 controls_state = 189 }
+					AND = { owns_state = 190 controls_state = 190 }
+					AND = { owns_state = 191 controls_state = 191 }
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = SOV_baltic_security 
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		modifier = {
+			civilian_factory_use = 10 
+		}
+		
+		days_remove = 70
+
+		remove_effect = {
+			11 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 6407
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 6360
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 327
+					instant_build = yes
+				}
+			}
+			89 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 11411
+					instant_build = yes
+
+				}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 6483
+					instant_build = yes
+
+				}
+			}
+			95 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 3393
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 3366
+					instant_build = yes
+				}
+			}
+			91 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 11479
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 9558
+					instant_build = yes
+				}
+			}
+			94 = {
+				set_building_level = {
+					type = bunker
+					level = 7
+					province = 3392
+					instant_build = yes
+				}
+			}
+			189 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 6314
+					instant_build = yes
+				}
+
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 3354
+					instant_build = yes
+				}
+			}
+			97 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 290
+					instant_build = yes
+				}
+			}
+			190 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 9262
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	SOV_improve_stalin_line = {
+
+		icon = generic_construction
+
+		fire_only_once = yes
+		
+		allowed = {
+		   tag = SOV
+		}
+		
+		available = {
+			has_offensive_war = no 
+			SOV = {
+				AND = {
+					AND = { owns_state = 11 controls_state = 11 }
+					AND = { owns_state = 12 controls_state = 12 }
+					AND = { owns_state = 13 controls_state = 13 }
+					AND = { owns_state = 89 controls_state = 89 }
+					AND = { owns_state = 91 controls_state = 91 }
+					AND = { owns_state = 93 controls_state = 93 }
+					AND = { owns_state = 94 controls_state = 94 }
+					AND = { owns_state = 95 controls_state = 95 }
+					AND = { owns_state = 96 controls_state = 96 }
+					AND = { owns_state = 97 controls_state = 97 }
+					AND = { owns_state = 189 controls_state = 189 }
+					AND = { owns_state = 190 controls_state = 190 }
+					AND = { owns_state = 191 controls_state = 191 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		visible = {
+			has_completed_focus = SOV_baltic_security 
+		}
+		
+		modifier = {
+			civilian_factory_use = 10 
+		}
+
+		days_remove = 70
+
+		remove_effect = {
+			209 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 11202
+						instant_build = yes
+					}
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 11392
+						instant_build = yes
+					}
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 6324
+						instant_build = yes
+					}
+				}
+			}
+			210 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 6242
+						instant_build = yes
+					}
+				}
+			}
+			207 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 9323
+						instant_build = yes
+					}
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 9241
+						instant_build = yes
+					}
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 3331
+						instant_build = yes
+					}
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 11220
+						instant_build = yes
+					}
+				}
+			}
+			206 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 11370
+						instant_build = yes
+					}
+				}
+			}
+			202 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					set_building_level = {
+						type = bunker
+						level = 5
+						province = 489
+						instant_build = yes
+					}
+					set_building_level = {
+						type = bunker
+						level = 5
+						province = 525
+						instant_build = yes
+					}
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 13269
+						instant_build = yes
+					}
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 3494
+						instant_build = yes
+					}
+				}
+
+			}
+			203 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 11409
+						instant_build = yes
+					}
+				}
+			}
+			834 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 754
+						instant_build = yes
+					}
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 741
+						instant_build = yes
+					}
+				}
+			}
+			192 = {
+				if = {
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = 11670
+						instant_build = yes
+					}
+				}
+			}
+			196 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 721
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 737
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 3573
+					instant_build = yes
+				}
+			}
+			200 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 11405
+					instant_build = yes
+
+				}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 588
+					instant_build = yes
+
+				}
+			}
+			259 = {
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 6507
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 6495
+					instant_build = yes
+				}
+			}
+		}		
+	}	
+	SOV_fortify_sevastopol = {
+
+		icon = generic_construction
+
+		fire_only_once = yes
+		
+		allowed = {
+		   tag = SOV
+		}
+		
+		available = { 
+			has_offensive_war = no 
+			SOV = {
+				controls_state = 137
+			}
+		}
+		
+		visible = {
+			has_completed_focus = SOV_baltic_security 
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		modifier = {
+			civilian_factory_use = 10 
+		}
+		
+		days_remove = 90
+
+		remove_effect = {
+			137 = {
+				set_building_level = {
+					type = bunker
+					level = 10
+					province = 3686
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 10
+					province = 6704
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 10
+					province = 13257
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 6
+					province = 3686
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 6704
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 13257
+					instant_build = yes
+				}
+				set_building_level = {
+					type = anti_air_building
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	SOV_fortify_leningrad = {
+
+		icon = generic_construction
+
+		fire_only_once = yes
+		
+		allowed = {
+		   tag = SOV
+		}
+		
+		available = { 
+			has_offensive_war = no 
+			SOV = {
+				controls_state = 195
+			}
+		}
+		
+		visible = {
+			has_completed_focus = SOV_baltic_security 
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		modifier = {
+			civilian_factory_use = 10 
+		}
+		
+		days_remove = 90
+
+		remove_effect = {
+			137 = {
+				set_building_level = {
+					type = bunker
+					level = 5
+					province = 3151
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 5
+					province = 13260
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 5
+					province = 13262
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 5
+					province = 13263
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 5
+					province = 149
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 13263
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+
 SOV_socialism_in_one_country = {
 
 	SOV_baltic_security_mission = {
@@ -1216,399 +1762,6 @@ SOV_socialism_in_one_country = {
 			factor = 1
 		}
 	}
-
-	SOV_fortify_molotov_line = {
-
-		icon = generic_construction
-
-		fire_only_once = yes
-		
-		allowed = {
-		   tag = SOV
-		}
-		
-		available = { 
-			has_offensive_war = no 
-			SOV = {
-				AND = {
-					AND = { owns_state = 11 controls_state = 11 }
-					AND = { owns_state = 12 controls_state = 12 }
-					AND = { owns_state = 13 controls_state = 13 }
-					AND = { owns_state = 89 controls_state = 89 }
-					AND = { owns_state = 91 controls_state = 91 }
-					AND = { owns_state = 93 controls_state = 93 }
-					AND = { owns_state = 94 controls_state = 94 }
-					AND = { owns_state = 95 controls_state = 95 }
-					AND = { owns_state = 96 controls_state = 96 }
-					AND = { owns_state = 97 controls_state = 97 }
-					AND = { owns_state = 189 controls_state = 189 }
-					AND = { owns_state = 190 controls_state = 190 }
-					AND = { owns_state = 191 controls_state = 191 }
-				}
-			}
-		}
-		
-		visible = {
-			has_completed_focus = SOV_baltic_security 
-		}
-		
-		ai_will_do = {
-			factor = 10
-		}
-
-		modifier = {
-			civilian_factory_use = 10 
-		}
-		
-		days_remove = 70
-
-		remove_effect = {
-			11 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 6407
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 6360
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 327
-					instant_build = yes
-				}
-			}
-			89 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 11411
-					instant_build = yes
-
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 6483
-					instant_build = yes
-
-				}
-			}
-			95 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 3393
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 3366
-					instant_build = yes
-				}
-			}
-			91 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 11479
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 9558
-					instant_build = yes
-				}
-			}
-			94 = {
-				add_building_construction = {
-					type = bunker
-					level = 7
-					province = 3392
-					instant_build = yes
-				}
-			}
-			189 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 6314
-					instant_build = yes
-				}
-
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 3354
-					instant_build = yes
-				}
-			}
-			97 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 290
-					instant_build = yes
-				}
-			}
-			190 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 9262
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	SOV_improve_stalin_line = {
-
-		icon = generic_construction
-
-		fire_only_once = yes
-		
-		allowed = {
-		   tag = SOV
-		}
-		
-		available = {
-			has_offensive_war = no 
-			SOV = {
-				AND = {
-					AND = { owns_state = 11 controls_state = 11 }
-					AND = { owns_state = 12 controls_state = 12 }
-					AND = { owns_state = 13 controls_state = 13 }
-					AND = { owns_state = 89 controls_state = 89 }
-					AND = { owns_state = 91 controls_state = 91 }
-					AND = { owns_state = 93 controls_state = 93 }
-					AND = { owns_state = 94 controls_state = 94 }
-					AND = { owns_state = 95 controls_state = 95 }
-					AND = { owns_state = 96 controls_state = 96 }
-					AND = { owns_state = 97 controls_state = 97 }
-					AND = { owns_state = 189 controls_state = 189 }
-					AND = { owns_state = 190 controls_state = 190 }
-					AND = { owns_state = 191 controls_state = 191 }
-				}
-			}
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-		
-		visible = {
-			has_completed_focus = SOV_baltic_security 
-		}
-		
-		modifier = {
-			civilian_factory_use = 10 
-		}
-
-		days_remove = 70
-
-		remove_effect = {
-			209 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 11202
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 11392
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 6324
-						instant_build = yes
-					}
-				}
-			}
-			210 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 6242
-						instant_build = yes
-					}
-				}
-			}
-			207 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 9323
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 9241
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 3331
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 11220
-						instant_build = yes
-					}
-				}
-			}
-			206 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 11370
-						instant_build = yes
-					}
-				}
-			}
-			202 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = bunker
-						level = 5
-						province = 489
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 5
-						province = 525
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 13269
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 3494
-						instant_build = yes
-					}
-				}
-
-			}
-			203 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 11409
-						instant_build = yes
-					}
-				}
-			}
-			834 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 754
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 741
-						instant_build = yes
-					}
-				}
-			}
-			192 = {
-				if = {
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 11670
-						instant_build = yes
-					}
-				}
-			}
-			196 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 721
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 737
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 3573
-					instant_build = yes
-				}
-			}
-			200 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 11405
-					instant_build = yes
-
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 588
-					instant_build = yes
-
-				}
-			}
-			259 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 6507
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 6495
-					instant_build = yes
-				}
-			}
-		}		
-	}	
 }
 
 SOV_military_district_garrisons = {
