@@ -1630,14 +1630,14 @@ NNavy = {
 	MISSION_SUPREMACY_RATIOS = { -- supremacy multipliers for different mission types
 		0.0, -- HOLD
 		1.0, -- PATROL
-		1.0, -- STRIKE FORCE
-		0.5, -- CONVOY RAIDING
-		0.5, -- CONVOY ESCORT
+		0.1, -- STRIKE FORCE
+		0.4, -- CONVOY RAIDING
+		0.6, -- CONVOY ESCORT
 		0.3, -- MINES PLANTING
 		0.3, -- MINES SWEEPING
 		0.0, -- TRAIN
 		0.0, -- RESERVE_FLEET
-		1.0, -- NAVAL_INVASION_SUPPORT
+		0.5, -- NAVAL_INVASION_SUPPORT
 	},
 
 	SUPREMACY_PER_SHIP_PER_MANPOWER = 0.05,							-- supremacy of a ship is calculated using its IC, manpower and a base define
