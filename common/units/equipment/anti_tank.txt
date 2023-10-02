@@ -95,5 +95,29 @@ equipments = {
 			art_at_hvy_upgrade
 		}
 	}
-	
+
+	### Special German AT ###
+	anti_tank_flak_equipment = {
+		archetype = anti_tank_equipment
+		parent = anti_tank_equipment_2
+		priority = 90
+		visual_level = 2
+		defense = 14
+		breakthrough = 10
+		soft_attack = 8
+		hard_attack = 45
+		air_attack = 14
+		ap_attack = 125
+		resources = {
+			steel = 2
+			tungsten = 2
+		}
+		build_cost_ic = 15
+		
+		upgrades = {
+			art_cost_upgrade
+			art_at_upgrade
+			art_at_hvy_upgrade
+		}
+	}
 }
