@@ -530,27 +530,6 @@ ideas = {
 			}
 		}
 
-		BUL_liberal_trade_policies = {
-			picture = can_wartime_prices_and_trade_board
-
-			allowed = {
-				original_tag = BUL
-			}
-
-			allowed_civil_war = {
-				NOT = {
-					has_government = communism
-					has_government = fascism
-				}
-			}
-			removal_cost = -1
-
-			modifier = {
-				trade_laws_cost_factor = -0.50
-				consumer_goods_factor = -0.05
-			}
-		}
-
 		BUL_bulgarian_patriarchate_restored = {
 			picture = YUG_orthodox_church_support
 
@@ -603,7 +582,7 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.02
 				production_factory_max_efficiency_factor = 0.02
-				consumer_goods_factor = 0.04
+				consumer_goods_factor = 0.2
 			}
 		}
 
@@ -624,7 +603,7 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
-				consumer_goods_factor = 0.08
+				consumer_goods_factor = 0.4
 			}
 		}
 
@@ -646,7 +625,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.1
 				production_factory_max_efficiency_factor = 0.1
 				global_building_slots_factor = 0.2
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.075
 			}
 		}
 
@@ -664,7 +643,7 @@ ideas = {
 
 			modifier = {
 				industrial_capacity_factory = 0.1
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.15
 			}
 		}
 
@@ -1071,15 +1050,6 @@ ideas = {
 			}
 			removal_cost = -1
 
-			on_remove = {
-				if = {
-					limit = {
-						BUL = { has_idea = BUL_uranium_concession_agreement_ns }
-					}
-					BUL = { set_country_flag = BUL_uranium_concession_agreement_ended_flag }
-				}
-			}
-
 			cancel = {
 				has_war_with = BUL
 			}
@@ -1090,31 +1060,6 @@ ideas = {
 			}
 			research_bonus = {
 				nuclear = 0.05
-			}
-		}
-
-		BUL_uranium_concession_agreement_ns = {
-			picture = generic_exploit_mines
-
-			allowed = {
-				original_tag = BUL
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
-			cancel = {
-				has_country_flag = BUL_uranium_concession_agreement_ended_flag
-			}
-
-			on_remove = {
-				clr_country_flag = BUL_uranium_concession_agreement_ended_flag
-			}
-
-			modifier = {
-				consumer_goods_factor = -0.05
 			}
 		}
 
@@ -1212,45 +1157,6 @@ ideas = {
 				political_power_factor = -0.25
 				military_leader_cost_factor = 0.25
 				political_advisor_cost_factor = 0.25
-			}
-		}
-
-		BUL_government_reforms_communists_01 = {
-			picture = generic_political_support
-
-			allowed = {
-				original_tag = BUL
-			}
-
-			allowed_civil_war = {
-				tag = BUL
-			}
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = -0.05
-				conscription = 0.02
-			}
-		}
-
-		BUL_government_reforms_communists_02 = {
-			name = BUL_government_reforms_communists_01
-
-			picture = generic_political_support
-
-			allowed = {
-				original_tag = BUL
-			}
-
-			allowed_civil_war = {
-				tag = BUL
-			}
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = -0.05
-				conscription = 0.02
-				industrial_capacity_factory = 0.1
 			}
 		}
 
@@ -1366,26 +1272,6 @@ ideas = {
 				tag = SOV
 				attack_bonus_against = 0.1
 				defense_bonus_against = 0.1
-			}
-		}
-
-		BUL_balkan_trade_union_secretariat = {
-			picture = can_wartime_prices_and_trade_board
-
-			allowed = {
-				original_tag = BUL
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = -0.05
-				trade_laws_cost_factor = -0.35
-				economy_cost_factor = -0.35
 			}
 		}
 
@@ -1742,7 +1628,7 @@ ideas = {
 			modifier = {
 				economy_cost_factor = -0.5
 				production_speed_industrial_complex_factor = 0.075
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.1
 				trade_laws_cost_factor = 0.5
 				min_export = -0.15
 			}
@@ -1765,7 +1651,7 @@ ideas = {
 			modifier = {
 				economy_cost_factor = -0.5
 				production_speed_industrial_complex_factor = 0.1
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.25
 				trade_laws_cost_factor = 0.5
 				min_export = -0.15
 				local_resources_factor = 0.15
@@ -1788,50 +1674,6 @@ ideas = {
 				political_advisor_cost_factor = -0.30
 				political_power_factor = 0.05
 				democratic_drift = 0.05
-			}
-		}
-
-		BUL_government_reforms_democratic_01 = {
-			name = BUL_government_reforms_communists_01
-
-			picture = generic_political_support
-
-			allowed = {
-				original_tag = BUL
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = -0.05
-				production_speed_buildings_factor = 0.05
-				global_building_slots_factor = 0.1
-			}
-		}
-
-		BUL_government_reforms_democratic_02 = {
-			name = BUL_government_reforms_communists_01
-
-			picture = generic_political_support
-
-			allowed = {
-				original_tag = BUL
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-
-			modifier = {
-				industrial_capacity_factory = 0.05
-				production_factory_max_efficiency_factor = 0.05
-				production_factory_start_efficiency_factor = 0.1
-				line_change_production_efficiency_factor = 0.1
-				industrial_capacity_dockyard = 0.05
 			}
 		}
 
@@ -1896,27 +1738,6 @@ ideas = {
 
 			modifier = {
 				custom_modifier_tooltip = BUL_the_fight_against_bolshevism_ns_target_tt
-			}
-		}
-
-		BUL_bulgarian_capital_injection = {
-
-			picture = generic_foreign_capital
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = -0.05
-				drift_defence_factor = -0.5
-				democratic_drift = 0.05
 			}
 		}
 

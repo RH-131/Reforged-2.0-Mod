@@ -154,7 +154,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.25
 			}
 		}
 
@@ -208,7 +208,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.04
+				consumer_goods_factor = 0.25
 				political_power_gain = 0.1
 			}
 		}
@@ -226,7 +226,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.08
+				consumer_goods_factor = 0.8
 				political_power_gain = 0.2
 			}
 		}
@@ -251,7 +251,7 @@ ideas = {
 
 			modifier = {
 				political_power_cost = 0.25
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.075
 				industrial_capacity_factory = 0.025
 				production_factory_max_efficiency_factor = 0.025
 			}
@@ -545,7 +545,7 @@ ideas = {
 			modifier = {
 				production_speed_dockyard_factor = 0.35
 				production_speed_naval_base_factor = 0.25
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.06
 			}
 		}
 
@@ -669,7 +669,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.2
 				industrial_capacity_dockyard = 0.1
 			}
 		}
@@ -737,7 +737,7 @@ ideas = {
 
 			modifier = {
 				political_power_cost = 0.2
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.085
 				local_resources_factor = -0.1
 				stability_weekly = -0.001
 			}
@@ -759,7 +759,7 @@ ideas = {
 
 			modifier = {
 				political_power_cost = 0.75
-				consumer_goods_factor = 0.30
+				consumer_goods_factor = 0.85
 				conscription_factor = -0.5
 				join_faction_tension = 1
 				local_resources_factor = -0.4
@@ -784,7 +784,7 @@ ideas = {
 
 			modifier = {
 				political_power_cost = 0.6
-				consumer_goods_factor = 0.25
+				consumer_goods_factor = 0.7
 				conscription_factor = -0.45
 				join_faction_tension = 1
 				local_resources_factor = -0.35
@@ -809,7 +809,7 @@ ideas = {
 
 			modifier = {
 				political_power_cost = 0.45
-				consumer_goods_factor = 0.20
+				consumer_goods_factor = 0.55
 				conscription_factor = -0.40
 				join_faction_tension = 1
 				local_resources_factor = -0.3
@@ -834,7 +834,7 @@ ideas = {
 
 			modifier = {
 				political_power_cost = 0.3
-				consumer_goods_factor = 0.15
+				consumer_goods_factor = 0.45
 				conscription_factor = -0.35
 				join_faction_tension = 1
 				local_resources_factor = -0.25
@@ -859,7 +859,7 @@ ideas = {
 
 			modifier = {
 				political_power_cost = 0.15
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.275
 				conscription_factor = -0.3
 				join_faction_tension = 1
 				local_resources_factor = -0.2
@@ -1034,19 +1034,6 @@ ideas = {
 			}
 		}
 
-		USA_state_funds_refused = {
-			picture = mex_callistas
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = 0.05
-			}
-		}
-
 		USA_maritime_commission = {
 			picture = generic_sea_focused_navy
 			allowed = {
@@ -1184,7 +1171,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.05
 				industrial_capacity_factory = 0.1
 				production_factory_efficiency_gain_factor = 0.1
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.1
 			}
 		}
 
@@ -1208,7 +1195,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.15
 				industrial_capacity_factory = 0.15
 				production_factory_efficiency_gain_factor = 0.15
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.5
 			}
 		}
 
@@ -1221,7 +1208,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.5
 				political_power_cost = 0.2
 			}
 		}
@@ -1515,24 +1502,6 @@ ideas = {
 				boost_ideology_mission_factor = 0.25
 				operation_infiltrate_outcome = 0.25
 				boost_resistance_factor = 0.25
-			}
-		}
-
-
-		war_bonds_focus = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = democratic
-			}
-			removal_cost = -1
-
-			picture = generic_goods_red_bonus
-
-			modifier = {
-				consumer_goods_factor = -0.05
 			}
 		}
 

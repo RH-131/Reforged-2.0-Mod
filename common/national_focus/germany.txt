@@ -2335,18 +2335,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			show_ideas_tooltip = GER_swedish_trade2
-			hidden_effect = {
-				if = {
-					limit = {
-						has_idea = GER_swedish_trade
-					}
-					swap_ideas = { 
-						remove_idea = GER_swedish_trade
-						add_idea = GER_swedish_trade2
-					}
-				}
-			} 
+			swap_ideas = { 
+				remove_idea = GER_swedish_trade
+				add_idea = GER_swedish_trade2
+			}
 		}
 	}
 

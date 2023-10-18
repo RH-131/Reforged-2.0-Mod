@@ -107,7 +107,7 @@ ideas = {
 			picture = generic_foreign_capital
 			
 			modifier = {
-				consumer_goods_factor = 0.04
+				consumer_goods_factor = 0.15
 				production_speed_buildings_factor = -0.10
 				industrial_capacity_factory = -0.10
 			}
@@ -120,7 +120,7 @@ ideas = {
 			picture = generic_foreign_capital
 			
 			modifier = {
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.075
 				production_speed_buildings_factor = -0.05
 				industrial_capacity_factory = -0.05
 			}
@@ -133,7 +133,7 @@ ideas = {
 			picture = chi_hyper_inflation2
 			
 			modifier = {
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.03
 				industrial_capacity_factory = -0.10
 				stability_factor = -0.10
 				stability_weekly = -0.002
@@ -148,7 +148,7 @@ ideas = {
 			picture = chi_hyper_inflation2
 			
 			modifier = {
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.03
 				industrial_capacity_factory = -0.05
 				stability_factor = -0.05
 				stability_weekly = -0.001
@@ -163,7 +163,7 @@ ideas = {
 			picture = generic_foreign_capital
 			
 			modifier = {
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.05
 				production_speed_buildings_factor = 0.10
 				production_factory_max_efficiency_factor = 0.10
 				production_factory_efficiency_gain_factor = 0.05
@@ -179,7 +179,7 @@ ideas = {
 			picture = generic_foreign_capital
 			
 			modifier = {
-				consumer_goods_factor = -0.08
+				consumer_goods_factor = -0.55
 				industrial_capacity_factory = 0.05
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.05
@@ -195,7 +195,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 			
 			modifier = {
-			    consumer_goods_factor = -0.04
+			    consumer_goods_factor = -0.25
 				industrial_capacity_factory = 0.05
 				production_factory_max_efficiency_factor = 0.05
 				production_lack_of_resource_penalty_factor = -0.1
@@ -211,7 +211,7 @@ ideas = {
 			picture = generic_foreign_capital
 			
 			modifier = {
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.1
 				production_factory_start_efficiency_factor = 0.05
 				stability_factor = -0.10
 				political_power_factor = -0.1
@@ -225,7 +225,7 @@ ideas = {
 			picture = generic_foreign_capital
 			
 			modifier = {
-				consumer_goods_factor = -0.06
+				consumer_goods_factor = -0.4
 				production_speed_buildings_factor = 0.15
 				industrial_capacity_factory = 0.05
 				production_factory_start_efficiency_factor = 0.05
@@ -407,35 +407,6 @@ ideas = {
 			}
 		}
 
-		HUN_interventionism = {
-
-			picture = FRA_scw_intervention_republicans_focus
-
-			modifier = {
-				political_power_factor = -0.25
-				consumer_goods_factor = -0.05
-			}
-		}
-
-		HUN_interventionism_2 = {
-
-			picture = FRA_scw_intervention_republicans_focus
-
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-		}
-
-		HUN_interventionism_communism = {
-
-			picture = FRA_scw_intervention_nationalists_focus
-
-			modifier = {
-				consumer_goods_factor = -0.05
-				communism_drift = 0.02
-			}
-		}
-
 		HUN_the_hungarian_red_army = {
 
 			picture = generic_communist_army
@@ -558,7 +529,7 @@ ideas = {
 			picture = generic_license_production
 			
 			modifier = {
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.05
 				political_power_cost = 0.05
 			}
 		}
@@ -568,7 +539,7 @@ ideas = {
 			picture = generic_license_production
 			
 			modifier = {
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.05
 				political_power_gain = 0.05
 			}
 		}
@@ -578,7 +549,7 @@ ideas = {
 			picture = generic_license_production
 			
 			modifier = {
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.15
 				political_power_cost = 0.15
 			}
 		}
@@ -588,7 +559,7 @@ ideas = {
 			picture = generic_license_production
 			
 			modifier = {
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.15
 				political_power_gain = 0.15
 			}
 		}
@@ -654,7 +625,7 @@ ideas = {
 			picture = HUN_axis_bills
 
 			modifier = {
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.03
 				political_power_cost = 0.35
 			}
 		}
@@ -673,7 +644,7 @@ ideas = {
 			picture = HUN_axis_bills
 
 			modifier = {
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.1
 				political_power_cost = 0.5
 			}
 		}
@@ -711,7 +682,7 @@ ideas = {
 			picture = HUN_axis_bills
 
 			modifier = {
-				consumer_goods_factor = 0.07
+				consumer_goods_factor = 0.15
 				political_power_cost = 0.8
 			}
 		}
@@ -730,7 +701,7 @@ ideas = {
 			picture = HUN_axis_bills
 
 			modifier = {
-				consumer_goods_factor = 0.09
+				consumer_goods_factor = 0.3
 				political_power_cost = 0.95
 			}
 		}
@@ -749,7 +720,7 @@ ideas = {
 			picture = HUN_axis_bills
 
 			modifier = {
-				consumer_goods_factor = 0.11
+				consumer_goods_factor = 0.36
 				political_power_cost = 1.1
 			}
 		}
@@ -767,7 +738,7 @@ ideas = {
 			picture = great_depression
 
 			modifier = {
-				consumer_goods_factor = 0.20
+				consumer_goods_factor = 0.66
 				industrial_capacity_factory = -0.20
 				political_power_cost = 1.5
 			}

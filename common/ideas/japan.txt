@@ -80,38 +80,6 @@ ideas = {
 			}
 		}
 
-		jap_chinese_occupation = {
-
-			allowed = {
-				always = no
-			}
-			picture = jap_ichi_go
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = 0.05
-				political_power_gain = -0.25
-				war_support_factor = -0.20
-				stability_factor = -0.20
-			}
-		}
-
-		jap_chinese_occupation_2 = {
-
-			allowed = {
-				always = no
-			}
-			picture = jap_ichi_go
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = 0.10
-				political_power_gain = -0.35
-				war_support_factor = -0.40
-				stability_factor = -0.40
-			}
-		}
-
 	    JAP_island_hopping1 = {
 			allowed = {
 				always = no
@@ -120,7 +88,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.07
+				consumer_goods_factor = 0.70
 				stability_weekly = -0.0035
 				political_power_gain = -0.35
 				war_support_factor = -0.35
@@ -135,7 +103,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.06
+				consumer_goods_factor = 0.60
 				stability_weekly = -0.003
 				political_power_gain = -0.30
 				war_support_factor = -0.3
@@ -152,7 +120,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.50
 				stability_weekly = -0.0025
 				political_power_gain = -0.25
 				war_support_factor = -0.25
@@ -169,7 +137,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.04
+				consumer_goods_factor = 0.40
 				stability_weekly = -0.002
 				political_power_gain = -0.20
 				war_support_factor = -0.2
@@ -186,7 +154,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.30
 				stability_weekly = -0.0015
 				political_power_gain = -0.15
 				war_support_factor = -0.15
@@ -203,7 +171,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.20
 				stability_weekly = -0.001
 				political_power_gain = -0.1
 				war_support_factor = -0.1
@@ -220,7 +188,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.10
 				stability_weekly = -0.0005
 				political_power_gain = -0.05
 				war_support_factor = -0.05
@@ -237,9 +205,6 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				political_power_gain = 0
-				war_support_factor = 0
-				stability_factor = 0
 				army_core_defence_factor = 0.35
 				army_core_attack_factor = 0.35
 			}
@@ -252,7 +217,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.1
 				political_power_gain = 0.05
 				war_support_factor = 0.05
 				stability_factor = 0.05
@@ -268,7 +233,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-			consumer_goods_factor = -0.02
+			consumer_goods_factor = -0.2
 				political_power_gain = 0.10
 				war_support_factor = 0.1
 				stability_factor = 0.1
@@ -284,7 +249,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-			consumer_goods_factor = -0.03
+			consumer_goods_factor = -0.3
 				political_power_gain = 0.15
 				war_support_factor = 0.15
 				stability_factor = 0.15
@@ -300,7 +265,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-			consumer_goods_factor = -0.04
+			consumer_goods_factor = -0.4
 				political_power_gain = 0.20
 				war_support_factor = 0.2
 				stability_factor = 0.2
@@ -316,7 +281,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.5
 				political_power_gain = 0.25
 				war_support_factor = 0.25
 				stability_factor = 0.25
@@ -332,7 +297,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-			consumer_goods_factor = -0.06
+			consumer_goods_factor = -0.6
 				political_power_gain = 0.30
 				war_support_factor = 0.3
 				stability_factor = 0.3
@@ -348,7 +313,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-			consumer_goods_factor = -0.07
+			consumer_goods_factor = -0.7
 				political_power_gain = 0.35
 				war_support_factor = 0.35
 				stability_factor = 0.35
@@ -747,10 +712,10 @@ ideas = {
 
 			modifier = {
 				political_power_cost = 0.25
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.05
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.33
 			}
 		}
 
@@ -774,7 +739,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.1
 				production_speed_dockyard_factor = 0.15
 				industrial_capacity_dockyard = 0.15
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.33
 			}
 		}
 
@@ -798,7 +763,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.15
 				production_speed_dockyard_factor = 0.1
 				industrial_capacity_factory = 0.1
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.33
 			}
 		}
 
@@ -2204,7 +2169,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.2
 			}
 
 			traits = { trait_industrial_specialization }
