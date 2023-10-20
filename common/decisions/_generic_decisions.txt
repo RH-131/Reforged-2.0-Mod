@@ -489,29 +489,7 @@ economy_decisions = {
 		fire_only_once = no
 
 		modifier = {
-#			if = {
-#				limit = { has_idea = civilian_economy }
-#				consumer_goods_factor = 0.07
-#			}
-#			else_if = {
-#				limit = { has_idea = low_economic_mobilisation }
-#				consumer_goods_factor = 0.08
-#			}
-#			else_if = {
-#				limit = { has_idea = partial_economic_mobilisation }
-#				consumer_goods_factor = 0.1
-#			}
-#			else_if = {
-#				limit = { has_idea = war_economy }
-#				consumer_goods_factor = 0.15
-#			}
-#			else_if = {
-#				limit = { has_idea = tot_economic_mobilisation }
-#				consumer_goods_factor = 0.2
-#			}
-#			else = {
-#				consumer_goods_factor = 0.15
-#			}
+			consumer_goods_factor = 0.1
 			production_factory_efficiency_gain_factor = 0.3
 			political_power_gain = -0.1
 		}
@@ -546,29 +524,7 @@ economy_decisions = {
 		fire_only_once = no
 
 		modifier = {
-#			if = {
-#				limit = { has_idea = civilian_economy }
-#				consumer_goods_factor = -0.08
-#			}
-#			else_if = {
-#				limit = { has_idea = low_economic_mobilisation }
-#				consumer_goods_factor = -0.1
-#			}
-#			else_if = {
-#				limit = { has_idea = partial_economic_mobilisation }
-#				consumer_goods_factor = -0.125
-#			}
-#			else_if = {
-#				limit = { has_idea = war_economy }
-#				consumer_goods_factor = -0.16
-#			}
-#			else_if = {
-#				limit = { has_idea = tot_economic_mobilisation }
-#				consumer_goods_factor = -0.25
-#			}
-#			else = {
-#				consumer_goods_factor = -0.16
-#			}
+			consumer_goods_factor = -0.125
 			production_factory_efficiency_gain_factor = -0.3
 			political_power_gain = 0.1
 		}

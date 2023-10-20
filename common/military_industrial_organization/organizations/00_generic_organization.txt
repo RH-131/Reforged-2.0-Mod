@@ -7367,7 +7367,6 @@ generic_motorized_mechanized_organization = {
 	equipment_type = {
 		motorized_equipment
 		mechanized_equipment
-		motorized_rocket_equipment
 	}
 	
 	research_categories = {
@@ -7404,7 +7403,7 @@ generic_motorized_mechanized_organization = {
 		
 		mutually_exclusive = { generic_mio_trait_steel_cargo_bed }
 
-		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
+		limit_to_equipment_type = { motorized_equipment }
 
 		equipment_bonus = {
 			reliability = -0.07
@@ -7422,7 +7421,7 @@ generic_motorized_mechanized_organization = {
 		
 		mutually_exclusive = { generic_mio_trait_composite_cargo_bed }
 
-		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
+		limit_to_equipment_type = { motorized_equipment }
 
 		equipment_bonus = {
 			reliability = 0.05
@@ -7442,7 +7441,7 @@ generic_motorized_mechanized_organization = {
 		
 		any_parent = { generic_mio_trait_composite_cargo_bed generic_mio_trait_steel_cargo_bed }
 
-		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
+		limit_to_equipment_type = { motorized_equipment }
 		
 		equipment_bonus = {
 			breakthrough = 0.035
@@ -7461,7 +7460,7 @@ generic_motorized_mechanized_organization = {
 		
 		mutually_exclusive = { generic_mio_trait_high_powered_engine }
 
-		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
+		limit_to_equipment_type = { motorized_equipment }
 
 		equipment_bonus = {
 			fuel_consumption = -0.05
@@ -7480,7 +7479,7 @@ generic_motorized_mechanized_organization = {
 		
 		mutually_exclusive = { generic_mio_trait_attached_wood_gas_generator }
 
-		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
+		limit_to_equipment_type = { motorized_equipment }
 
 		equipment_bonus = {
 			fuel_consumption = 0.05
@@ -7517,36 +7516,16 @@ generic_motorized_mechanized_organization = {
 	}
 
 	trait = {
-		token = generic_mio_trait_advanced_artillery_racks
-		name = generic_mio_trait_advanced_artillery_racks
-		icon = GFX_generic_mio_trait_icon_soft_attack
-		
-		position = { x=-1 y=2 }
-		relative_position_id = generic_mio_trait_armored_pulpit_mount
-		
-		all_parents = { generic_mio_trait_armored_pulpit_mount }
-		
-		mutually_exclusive = { generic_mio_trait_heavy_machinegun_mount generic_mio_trait_mounted_light_anti_tank_gun }
-		
-		limit_to_equipment_type = { motorized_rocket_equipment }
-
-		equipment_bonus = {
-			soft_attack = 0.035
-			build_cost_ic = 0.06
-		}
-	}
-
-	trait = {
 		token = generic_mio_trait_heavy_machinegun_mount
 		name = generic_mio_trait_heavy_machinegun_mount
 		icon = GFX_generic_mio_trait_icon_breakthrough
 		
-		position = { x=2 y=0 }
-		relative_position_id = generic_mio_trait_advanced_artillery_racks
+		position = { x=1 y=2 }
+		relative_position_id = generic_mio_trait_armored_pulpit_mount
 		
 		all_parents = { generic_mio_trait_armored_pulpit_mount }
 		
-		mutually_exclusive = { generic_mio_trait_advanced_artillery_racks generic_mio_trait_mounted_light_anti_tank_gun }
+		mutually_exclusive = { generic_mio_trait_mounted_light_anti_tank_gun }
 		
 		limit_to_equipment_type = { mechanized_equipment motorized_equipment }
 		
@@ -7564,7 +7543,7 @@ generic_motorized_mechanized_organization = {
 		position = { x=1 y=0 }
 		relative_position_id = generic_mio_trait_heavy_machinegun_mount
 		
-		mutually_exclusive = { generic_mio_trait_advanced_artillery_racks generic_mio_trait_heavy_machinegun_mount }
+		mutually_exclusive = { generic_mio_trait_heavy_machinegun_mount }
 		
 		all_parents = { generic_mio_trait_bulletproof_panels }
 		

@@ -144,11 +144,9 @@ script_enum_equipment_bonus_type = {
 	floating_harbor
 	railway_gun
 	armor
-	armored_car
 	motorized
 	mechanized
 	infantry
-	infantry_weapons
 	capital_ship
 	submarine
 	screen_ship
@@ -305,7 +303,6 @@ script_enum_equipment_bonus_type = {
 	infantry_equipment_2
 	infantry_equipment_3
 	infantry_equipment_4
-	infantry_equipment_5
 	support_equipment
 	support_equipment_1
 	special_equipment
@@ -353,7 +350,6 @@ script_enum_equipment_bonus_type = {
 	mechanized_equipment_3
 	motorized_equipment
 	motorized_equipment_1
-	motorized_rocket_equipment
 	train_equipment
 	train_equipment_1
 	train_equipment_2
@@ -367,7 +363,6 @@ script_enum_equipment_bonus_type = {
 	super_heavy_tank_chassis
 	modern_tank_chassis
 	amphibious_tank_chassis
-	amphibious_tank_equipment
 
 	light_tank_artillery_chassis
 	medium_tank_artillery_chassis
@@ -397,7 +392,6 @@ script_enum_equipment_bonus_type = {
 	ship_hull_hilfskreuzer
 	ship_hull_hilfskreuzer_1
 	light_cruiser
-	heavy_cruiser
 	ship_hull_cruiser
 	ship_hull_cruiser_1
 	ship_hull_cruiser_2
@@ -407,7 +401,6 @@ script_enum_equipment_bonus_type = {
 	ship_hull_torpedo_cruiser
 	ship_hull_cruiser_coastal_defense_ship
 	ship_hull_cruiser_panzerschiff
-	ship_hull_cruiser_panzerschiff_2
 	ship_hull_heavy
 	ship_hull_pre_dreadnought
 	ship_hull_heavy_1
@@ -419,7 +412,6 @@ script_enum_equipment_bonus_type = {
 	ship_hull_carrier_1
 	ship_hull_carrier_2
 	ship_hull_carrier_3
-	ship_hull_carrier_4
 	ship_hull_submarine
 	ship_hull_submarine_1
 	ship_hull_submarine_2
@@ -427,6 +419,496 @@ script_enum_equipment_bonus_type = {
 	ship_hull_submarine_4
 	ship_hull_cruiser_submarine
 	floating_harbor_equipment
+
+	#Misc.
+	maritime_patrol_plane
+	floating_harbor_equipment_1
+	small_plane_airframe_0
+	small_plane_airframe_1
+	small_plane_airframe_2
+	small_plane_airframe_3
+	small_plane_airframe_4
+	cv_small_plane_airframe_0
+	cv_small_plane_airframe_1
+	cv_small_plane_airframe_2
+	cv_small_plane_airframe_3
+	cv_small_plane_airframe_4
+	medium_plane_airframe_0
+	medium_plane_airframe_1
+	medium_plane_airframe_2
+	medium_plane_airframe_3
+	medium_plane_airframe_4
+	cv_medium_plane_airframe_0
+	cv_medium_plane_airframe_1
+	cv_medium_plane_airframe_2
+	cv_medium_plane_airframe_3
+	cv_medium_plane_airframe_4
+	large_plane_airframe_0
+	large_plane_airframe_1
+	large_plane_airframe_2
+	large_plane_airframe_3
+	large_plane_airframe_4
+	large_plane_maritime_patrol_plane_airframe
+	small_plane_cas_airframe_0
+	small_plane_cas_airframe_1
+	small_plane_cas_airframe_2
+	small_plane_cas_airframe_3
+	small_plane_cas_airframe_4
+	cv_small_plane_cas_airframe_0
+	cv_small_plane_cas_airframe_1
+	cv_small_plane_cas_airframe_2
+	cv_small_plane_cas_airframe_3
+	cv_small_plane_cas_airframe_4
+	small_plane_naval_bomber_airframe_0
+	small_plane_naval_bomber_airframe_1
+	small_plane_naval_bomber_airframe_2
+	small_plane_naval_bomber_airframe_3
+	small_plane_naval_bomber_airframe_4
+	cv_small_plane_naval_bomber_airframe_0
+	cv_small_plane_naval_bomber_airframe_1
+	cv_small_plane_naval_bomber_airframe_2
+	cv_small_plane_naval_bomber_airframe_3
+	cv_small_plane_naval_bomber_airframe_4
+	medium_plane_fighter_airframe_0
+	medium_plane_fighter_airframe_1
+	medium_plane_fighter_airframe_2
+	medium_plane_fighter_airframe_3
+	medium_plane_fighter_airframe_4
+	medium_plane_scout_plane_airframe_0
+	medium_plane_scout_plane_airframe_1
+	medium_plane_scout_plane_airframe_2
+	medium_plane_scout_plane_airframe_3
+	medium_plane_scout_plane_airframe_4
+	large_plane_maritime_patrol_plane_airframe_0
+	large_plane_maritime_patrol_plane_airframe_1
+	large_plane_maritime_patrol_plane_airframe_2
+	large_plane_maritime_patrol_plane_airframe_3
+	large_plane_maritime_patrol_plane_airframe_4
+	ship_hull_carrier_conversion_bb
+	ship_hull_carrier_conversion_ca
+	carrier_1
+	carrier_2
+	carrier_3
+	carrier_4
+	light_cruiser_1
+	light_cruiser_2
+	light_cruiser_3
+	light_cruiser_4
+	heavy_cruiser_1
+	heavy_cruiser_2
+	heavy_cruiser_3
+	heavy_cruiser_4
+	ship_hull_cruiser_panzerschiffe_2
+	frigate_1
+	battleship_1
+	battleship_2
+	battleship_3
+	battleship_4
+	SH_battleship_1
+	SH_battleship_2
+	battle_cruiser_1
+	battle_cruiser_2
+	hilfskreuzer
+	destroyer_1
+	destroyer_2
+	destroyer_3
+	destroyer_4
+	submarine_1
+	submarine_2
+	submarine_3
+	submarine_4
+	light_tank_chassis_1934
+	light_tank_chassis_1936
+	light_tank_chassis_1938
+	light_tank_chassis_1940
+	light_tank_chassis_1941
+	light_tank_chassis_1942
+	light_tank_chassis_1944
+	medium_tank_chassis_1936
+	medium_tank_chassis_1937
+	medium_tank_chassis_1938
+	medium_tank_chassis_1939
+	medium_tank_chassis_1940
+	medium_tank_chassis_1941
+	medium_tank_chassis_1942
+	medium_tank_chassis_1943
+	medium_tank_chassis_1944
+	panzer_tank_chassis_1944
+	medium_tank_chassis_1945
+	heavy_tank_chassis_1934
+	heavy_tank_chassis_1937
+	heavy_tank_chassis_1939
+	heavy_tank_chassis_1941
+	heavy_tank_chassis_1942
+	heavy_tank_chassis_1943
+	heavy_tank_chassis_1944
+	heavy_tank_chassis_1945
+	heavy_tank_chassis_1946
+	amphibious_tank_chassis_1
+	amphibious_tank_chassis_2
+	light_tank_chassis_0
+	light_tank_chassis_1
+	light_tank_chassis_2
+	light_tank_chassis_3
+	medium_tank_chassis_0
+	medium_tank_chassis_1
+	medium_tank_chassis_2
+	medium_tank_chassis_3
+	heavy_tank_chassis_0
+	heavy_tank_chassis_1
+	heavy_tank_chassis_2
+	heavy_tank_chassis_3
+	modern_tank_chassis_1
+	super_heavy_tank_chassis_1
+	heavy_assault_gun_equipment_1939
+	heavy_assault_gun_equipment_1941
+	heavy_assault_gun_equipment_1943
+	heavy_assault_gun_equipment_1944
+	heavy_assault_gun_equipment_1945
+	medium_assault_gun_equipment_1939
+	medium_assault_gun_equipment_1941
+	medium_assault_gun_equipment_1943
+	light_tank_amphibious_chassis
+	light_tank_flame_chassis
+	medium_tank_amphibious_chassis
+	medium_tank_flame_chassis
+	heavy_tank_aa_chassis
+	heavy_tank_amphibious_chassis
+	heavy_tank_flame_chassis
+	super_heavy_tank_aa_chassis
+	super_heavy_tank_artillery_chassis
+	super_heavy_tank_destroyer_chassis
+	modern_tank_aa_chassis
+	modern_tank_artillery_chassis
+	modern_tank_destroyer_chassis
+	light_tank_aa_chassis_1934
+	light_tank_aa_chassis_1944
+	light_tank_aa_chassis_0
+	light_tank_aa_chassis_1936
+	light_tank_aa_chassis_1
+	light_tank_aa_chassis_1938
+	light_tank_aa_chassis_2
+	light_tank_aa_chassis_1940
+	light_tank_aa_chassis_3
+	light_tank_aa_chassis_1941
+	light_tank_aa_chassis_1942
+	light_tank_artillery_chassis_1934
+	light_tank_artillery_chassis_1944
+	light_tank_artillery_chassis_0
+	light_tank_artillery_chassis_1936
+	light_tank_artillery_chassis_1
+	light_tank_artillery_chassis_1938
+	light_tank_artillery_chassis_2
+	light_tank_artillery_chassis_1940
+	light_tank_artillery_chassis_3
+	light_tank_artillery_chassis_1941
+	light_tank_artillery_chassis_1942
+	light_tank_destroyer_chassis_1934
+	light_tank_destroyer_chassis_1944
+	light_tank_destroyer_chassis_0
+	light_tank_destroyer_chassis_1936
+	light_tank_destroyer_chassis_1
+	light_tank_destroyer_chassis_1938
+	light_tank_destroyer_chassis_2
+	light_tank_destroyer_chassis_1940
+	light_tank_destroyer_chassis_3
+	light_tank_destroyer_chassis_1941
+	light_tank_destroyer_chassis_1942
+	light_tank_amphibious_chassis_1934
+	light_tank_amphibious_chassis_1944
+	light_tank_amphibious_chassis_0
+	light_tank_amphibious_chassis_1936
+	light_tank_amphibious_chassis_1
+	light_tank_amphibious_chassis_1938
+	light_tank_amphibious_chassis_2
+	light_tank_amphibious_chassis_1940
+	light_tank_amphibious_chassis_3
+	light_tank_amphibious_chassis_1941
+	light_tank_amphibious_chassis_1942
+	light_tank_flame_chassis_1934
+	light_tank_flame_chassis_1944
+	light_tank_flame_chassis_0
+	light_tank_flame_chassis_1936
+	light_tank_flame_chassis_1
+	light_tank_flame_chassis_1938
+	light_tank_flame_chassis_2
+	light_tank_flame_chassis_1940
+	light_tank_flame_chassis_3
+	light_tank_flame_chassis_1941
+	light_tank_flame_chassis_1942
+	medium_tank_aa_chassis_1936
+	medium_tank_aa_chassis_1944
+	medium_tank_aa_chassis_0
+	medium_tank_aa_chassis_1937
+	medium_tank_aa_chassis_1945
+	medium_tank_aa_chassis_1
+	medium_tank_aa_chassis_1938
+	medium_tank_aa_chassis_2
+	medium_tank_aa_chassis_1939
+	medium_tank_aa_chassis_3
+	medium_tank_aa_chassis_1940
+	medium_tank_aa_chassis_1941
+	medium_tank_aa_chassis_1942
+	medium_tank_aa_chassis_1943
+	medium_tank_aa_chassispanzer_tank_chassis_1944
+	medium_tank_artillery_chassis_1936
+	medium_tank_artillery_chassis_1944
+	medium_tank_artillery_chassis_0
+	medium_tank_artillery_chassis_1937
+	medium_tank_artillery_chassis_1945
+	medium_tank_artillery_chassis_1
+	medium_tank_artillery_chassis_1938
+	medium_tank_artillery_chassis_2
+	medium_tank_artillery_chassis_1939
+	medium_tank_artillery_chassis_3
+	medium_tank_artillery_chassis_1940
+	medium_tank_artillery_chassis_1941
+	medium_tank_artillery_chassis_1942
+	medium_tank_artillery_chassis_1943
+	medium_tank_artillery_chassispanzer_tank_chassis_1944
+	medium_tank_destroyer_chassis_1936
+	medium_tank_destroyer_chassis_1944
+	medium_tank_destroyer_chassis_0
+	medium_tank_destroyer_chassis_1937
+	medium_tank_destroyer_chassis_1945
+	medium_tank_destroyer_chassis_1
+	medium_tank_destroyer_chassis_1938
+	medium_tank_destroyer_chassis_2
+	medium_tank_destroyer_chassis_1939
+	medium_tank_destroyer_chassis_3
+	medium_tank_destroyer_chassis_1940
+	medium_tank_destroyer_chassis_1941
+	medium_tank_destroyer_chassis_1942
+	medium_tank_destroyer_chassis_1943
+	medium_tank_destroyer_chassispanzer_tank_chassis_1944
+	medium_tank_amphibious_chassis_1936
+	medium_tank_amphibious_chassis_1944
+	medium_tank_amphibious_chassis_0
+	medium_tank_amphibious_chassis_1937
+	medium_tank_amphibious_chassis_1945
+	medium_tank_amphibious_chassis_1
+	medium_tank_amphibious_chassis_1938
+	medium_tank_amphibious_chassis_2
+	medium_tank_amphibious_chassis_1939
+	medium_tank_amphibious_chassis_3
+	medium_tank_amphibious_chassis_1940
+	medium_tank_amphibious_chassis_1941
+	medium_tank_amphibious_chassis_1942
+	medium_tank_amphibious_chassis_1943
+	medium_tank_amphibious_chassispanzer_tank_chassis_1944
+	medium_tank_flame_chassis_1936
+	medium_tank_flame_chassis_1944
+	medium_tank_flame_chassis_0
+	medium_tank_flame_chassis_1937
+	medium_tank_flame_chassis_1945
+	medium_tank_flame_chassis_1
+	medium_tank_flame_chassis_1938
+	medium_tank_flame_chassis_2
+	medium_tank_flame_chassis_1939
+	medium_tank_flame_chassis_3
+	medium_tank_flame_chassis_1940
+	medium_tank_flame_chassis_1941
+	medium_tank_flame_chassis_1942
+	medium_tank_flame_chassis_1943
+	medium_tank_flame_chassispanzer_tank_chassis_1944
+	heavy_tank_aa_chassis_1934
+	heavy_tank_aa_chassis_0
+	heavy_tank_aa_chassis_1937
+	heavy_tank_aa_chassis_1
+	heavy_tank_aa_chassis_1939
+	heavy_tank_aa_chassis_2
+	heavy_tank_aa_chassis_1941
+	heavy_tank_aa_chassis_3
+	heavy_tank_aa_chassis_1942
+	heavy_tank_aa_chassis_1943
+	heavy_tank_aa_chassis_1944
+	heavy_tank_aa_chassis_1945
+	heavy_tank_aa_chassis_1946
+	heavy_tank_artillery_chassis_1934
+	heavy_tank_artillery_chassis_0
+	heavy_tank_artillery_chassis_1937
+	heavy_tank_artillery_chassis_1
+	heavy_tank_artillery_chassis_1939
+	heavy_tank_artillery_chassis_2
+	heavy_tank_artillery_chassis_1941
+	heavy_tank_artillery_chassis_3
+	heavy_tank_artillery_chassis_1942
+	heavy_tank_artillery_chassis_1943
+	heavy_tank_artillery_chassis_1944
+	heavy_tank_artillery_chassis_1945
+	heavy_tank_artillery_chassis_1946
+	heavy_tank_destroyer_chassis_1934
+	heavy_tank_destroyer_chassis_0
+	heavy_tank_destroyer_chassis_1937
+	heavy_tank_destroyer_chassis_1
+	heavy_tank_destroyer_chassis_1939
+	heavy_tank_destroyer_chassis_2
+	heavy_tank_destroyer_chassis_1941
+	heavy_tank_destroyer_chassis_3
+	heavy_tank_destroyer_chassis_1942
+	heavy_tank_destroyer_chassis_1943
+	heavy_tank_destroyer_chassis_1944
+	heavy_tank_destroyer_chassis_1945
+	heavy_tank_destroyer_chassis_1946
+	heavy_tank_amphibious_chassis_1934
+	heavy_tank_amphibious_chassis_0
+	heavy_tank_amphibious_chassis_1937
+	heavy_tank_amphibious_chassis_1
+	heavy_tank_amphibious_chassis_1939
+	heavy_tank_amphibious_chassis_2
+	heavy_tank_amphibious_chassis_1941
+	heavy_tank_amphibious_chassis_3
+	heavy_tank_amphibious_chassis_1942
+	heavy_tank_amphibious_chassis_1943
+	heavy_tank_amphibious_chassis_1944
+	heavy_tank_amphibious_chassis_1945
+	heavy_tank_amphibious_chassis_1946
+	heavy_tank_flame_chassis_1934
+	heavy_tank_flame_chassis_0
+	heavy_tank_flame_chassis_1937
+	heavy_tank_flame_chassis_1
+	heavy_tank_flame_chassis_1939
+	heavy_tank_flame_chassis_2
+	heavy_tank_flame_chassis_1941
+	heavy_tank_flame_chassis_3
+	heavy_tank_flame_chassis_1942
+	heavy_tank_flame_chassis_1943
+	heavy_tank_flame_chassis_1944
+	heavy_tank_flame_chassis_1945
+	heavy_tank_flame_chassis_1946
+	super_heavy_tank_aa_chassis_1
+	super_heavy_tank_artillery_chassis_1
+	super_heavy_tank_destroyer_chassis_1
+	modern_tank_aa_chassis_1
+	modern_tank_artillery_chassis_1
+	modern_tank_destroyer_chassis_1
+	light_tank_equipment_1934
+	light_tank_equipment_1936
+	light_tank_equipment_1938
+	light_tank_equipment_1940
+	light_tank_equipment_1941
+	light_tank_equipment_1942
+	light_tank_equipment_1944
+	light_tank_artillery_equipment_1938
+	light_tank_artillery_equipment_1940
+	light_tank_artillery_equipment_1941
+	light_tank_artillery_equipment_1942
+	light_tank_artillery_equipment_1944
+	light_tank_destroyer_equipment_1938
+	light_tank_destroyer_equipment_1940
+	light_tank_destroyer_equipment_1941
+	light_tank_destroyer_equipment_1942
+	light_tank_destroyer_equipment_1944
+	light_tank_aa_equipment_1938
+	light_tank_aa_equipment_1940
+	light_tank_aa_equipment_1941
+	light_tank_aa_equipment_1942
+	light_tank_aa_equipment_1944
+	medium_tank_equipment_1936
+	medium_tank_equipment_1937
+	medium_tank_equipment_1938
+	medium_tank_equipment_1939
+	medium_tank_equipment_1940
+	medium_tank_equipment_1941
+	medium_tank_equipment_1942
+	medium_tank_equipment_1943
+	medium_tank_equipment_1944
+	medium_tank_equipment_1945
+	hybrid_tank_equipment_1943
+	hybrid_tank_equipment_1945
+	panzer_tank_equipment_1944
+	medium_tank_artillery_equipment_1938
+	medium_tank_artillery_equipment_1939
+	medium_tank_artillery_equipment_1940
+	medium_tank_artillery_equipment_1941
+	medium_tank_artillery_equipment_1942
+	medium_tank_artillery_equipment_1943
+	hybrid_tank_artillery_equipment_1943
+	medium_tank_artillery_equipment_1944
+	medium_tank_destroyer_equipment_1938
+	medium_tank_destroyer_equipment_1939
+	medium_tank_destroyer_equipment_1940
+	medium_tank_destroyer_equipment_1941
+	medium_tank_destroyer_equipment_1942
+	medium_tank_destroyer_equipment_1943
+	hybrid_tank_destroyer_equipment_1943
+	medium_tank_destroyer_equipment_1944
+	medium_tank_aa_equipment_1938
+	medium_tank_aa_equipment_1939
+	medium_tank_aa_equipment_1940
+	medium_tank_aa_equipment_1941
+	medium_tank_aa_equipment_1942
+	medium_tank_aa_equipment_1943
+	hybrid_tank_aa_equipment_1943
+	medium_tank_aa_equipment_1944
+	heavy_tank_equipment_1934
+	heavy_tank_equipment_1937
+	heavy_tank_equipment_1939
+	heavy_tank_equipment_1941
+	heavy_tank_equipment_1942
+	heavy_tank_equipment_1943
+	heavy_tank_equipment_1944
+	heavy_tank_equipment_1945
+	heavy_tank_equipment_1946
+	heavy_tank_artillery_equipment_1939
+	heavy_tank_artillery_equipment_1941
+	heavy_tank_artillery_equipment_1942
+	heavy_tank_artillery_equipment_1943
+	heavy_tank_artillery_equipment_1944
+	heavy_tank_artillery_equipment_1945
+	heavy_tank_destroyer_equipment_1939
+	heavy_tank_destroyer_equipment_1941
+	heavy_tank_destroyer_equipment_1942
+	heavy_tank_destroyer_equipment_1943
+	heavy_tank_destroyer_equipment_1944
+	heavy_tank_destroyer_equipment_1945
+	amphibious_tank_equipment_1
+	amphibious_tank_equipment_2
+	gw_tank_equipment
+	light_tank_equipment_1
+	light_tank_equipment_2
+	light_tank_equipment_3
+	light_tank_artillery_equipment_1
+	light_tank_artillery_equipment_2
+	light_tank_artillery_equipment_3
+	light_tank_destroyer_equipment_1
+	light_tank_destroyer_equipment_2
+	light_tank_destroyer_equipment_3
+	light_tank_aa_equipment_1
+	light_tank_aa_equipment_2
+	light_tank_aa_equipment_3
+	medium_tank_equipment_1
+	medium_tank_equipment_2
+	medium_tank_equipment_3
+	medium_tank_artillery_equipment_1
+	medium_tank_artillery_equipment_2
+	medium_tank_artillery_equipment_3
+	medium_tank_destroyer_equipment_1
+	medium_tank_destroyer_equipment_2
+	medium_tank_destroyer_equipment_3
+	medium_tank_aa_equipment_1
+	medium_tank_aa_equipment_2
+	medium_tank_aa_equipment_3
+	heavy_tank_equipment_1
+	heavy_tank_equipment_2
+	heavy_tank_equipment_3
+	heavy_tank_artillery_equipment_1
+	heavy_tank_artillery_equipment_2
+	heavy_tank_artillery_equipment_3
+	heavy_tank_destroyer_equipment_1
+	heavy_tank_destroyer_equipment_2
+	heavy_tank_destroyer_equipment_3
+	heavy_tank_aa_equipment_1
+	heavy_tank_aa_equipment_2
+	heavy_tank_aa_equipment_3
+	modern_tank_equipment_1
+	modern_tank_artillery_equipment_1
+	modern_tank_destroyer_equipment_1
+	modern_tank_aa_equipment_1
+	super_heavy_tank_equipment_1
+	super_heavy_tank_artillery_equipment_1
+	super_heavy_tank_destroyer_equipment_1
+	super_heavy_tank_aa_equipment_1
 }
 
 script_enum_operative_mission_type = {
