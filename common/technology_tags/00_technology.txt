@@ -239,22 +239,10 @@ technology_folders = {
 	ger_armour_folder = {
 		ledger = army
         available = {
-        	#NOT = {has_dlc = "No Step Back"}
 		    OR  = {
 				original_tag = GER
 				original_tag = CZE
 		    }
-        }
-    }
-	ger_nsb_armour_folder = {
-		ledger = army
-        available = {
-        	always = no
-			#has_dlc = "No Step Back"
-		    #OR  = {
-				#original_tag = GER
-				#original_tag = CZE
-		    #}
         }
     }
     sov_armour_folder = {
