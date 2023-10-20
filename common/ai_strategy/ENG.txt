@@ -358,6 +358,7 @@ ENG_USA_focus_on_europe = {
 			is_in_faction_with = USA 
 		}
 	}
+	abort_when_not_enabled = yes
 	
 	ai_strategy = {
 		type = front_unit_request
@@ -422,6 +423,7 @@ ENG_gang_up_GER_with_USA = {
 			}
 		}
 	}
+	abort_when_not_enabled = yes
 	# after FRA falls, both ENG and USA will try to help in europe and africa
 	ai_strategy = {
 		type = force_defend_ally_borders

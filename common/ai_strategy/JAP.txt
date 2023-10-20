@@ -236,6 +236,7 @@ JAP_glorious_nippon_steel_has_triumphed = {
 			CHI = { is_subject_of = JAP }
 		}
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = { 
 		type = role_ratio
@@ -485,6 +486,7 @@ JAP_template_design = {
 		original_tag = JAP
 		date > 1940.1.1				
 	}
+	abort_when_not_enabled = yes
 	
 	ai_strategy = {
 		type = template_prio
@@ -618,6 +620,7 @@ jap_building_boats_is_great = {
 		tag = JAP
 		num_of_civilian_factories_available_for_projects > 15
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = dockyard_to_military_factory_ratio
@@ -764,6 +767,7 @@ JAP_naval_role_ratios_historical_late = {
 		original_tag = JAP
 		num_of_naval_factories > 60
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = role_ratio
@@ -867,6 +871,7 @@ jap_volunteers = {
 		tag = JAP
 	}
 	enable = { tag = JAP }
+	abort_when_not_enabled = yes
 
 	ai_strategy = { type = send_volunteers_desire 	id = "GER" 		                value = -5000 }
 	ai_strategy = { type = send_volunteers_desire 	id = "ITA" 		                value = -5000 }

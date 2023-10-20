@@ -73,6 +73,7 @@ dont_die_in_mountains = {
 		country_exists = SWE
 		country_exists = JAP
 	}
+	abort_when_not_enabled = yes
 				
 	ai_strategy = {
 		type = ignore
@@ -121,6 +122,7 @@ efr_is_our_bitch = {
 		tag = GER
 		country_exists = EFR
 	}
+	abort_when_not_enabled = yes
     ai_strategy = {
 		type = alliance
 		id = "EFR"
@@ -276,6 +278,7 @@ GER_scandinavia = {
 		original_tag = GER
 		NOR = {	has_capitulated = yes }
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = area_priority
@@ -291,6 +294,7 @@ GER_area_priority = {
 	enable = {
 		original_tag = GER
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = area_priority
@@ -716,10 +720,11 @@ GER_balkan_boys = {
 	allowed = {
 		tag = GER
 	}
-   enable = {
+    enable = {
 		tag = GER
 		country_exists = EFR
 	}
+	abort_when_not_enabled = yes
     ai_strategy = {
 		type = conquer
 		id = "ROM"
@@ -1179,6 +1184,7 @@ GER_barbarossa = {
 	enable = {
 		has_war_with = SOV 
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = front_control

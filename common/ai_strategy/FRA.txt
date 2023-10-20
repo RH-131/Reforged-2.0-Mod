@@ -245,6 +245,7 @@ FRA_area_priority = {
 	enable = {
 		original_tag = FRA
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = area_priority
@@ -303,6 +304,7 @@ FRA_area_priority = {
 		value = 10
 	}
 }
+
 FRA_naval_role_ratios_historical = {
 	allowed = {
 		tag = FRA
@@ -311,6 +313,7 @@ FRA_naval_role_ratios_historical = {
 		has_dlc = "Man the Guns"
 		original_tag = FRA
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = role_ratio

@@ -262,7 +262,8 @@ SOV_play_nice_with_ribbentrop_pact = {
 	}
 	enable = {
 		tag = SOV
-	}	
+	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = "POL"
@@ -338,6 +339,7 @@ SOV_naval_role_ratios_historical = {
 		has_dlc = "Man the Guns"
 		original_tag = SOV
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = role_ratio
@@ -447,6 +449,7 @@ SOV_home_land_is_safe = {
 	enable = {
 		original_tag = SOV
 	}
+	abort_when_not_enabled = yes
 	
 	ai_strategy = {
 		type = garrison
