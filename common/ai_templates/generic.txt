@@ -38,6 +38,20 @@ motorized_generic = {
 				anti_air_company = 1
 			}
 		}
+
+		allowed_types = {
+			mechanized
+			motorized
+			armored_car
+			artillery_brigade_mot
+			anti_tank_brigade_mot
+			DIV_HQ
+			engineer
+			logistics_company
+			maintenance_company
+			field_hospital
+			anti_air_company
+		}
 	}
 }
 armor_generic = {
@@ -92,6 +106,20 @@ armor_generic = {
 		}
 		
 		target_min_match = 0.5
+
+		allowed_types = {
+			light_armor
+			motorized
+			armored_car
+			artillery_brigade_mot
+			anti_tank_brigade_mot
+			engineer
+			DIV_HQ
+			logistics_company
+			maintenance_company
+			field_hospital
+			anti_air_company
+		}
 	}
 
 
@@ -125,6 +153,20 @@ armor_generic = {
 		}
 		
 		target_min_match = 0.5
+
+		allowed_types = {
+			heavy_armor
+			motorized
+			armored_car
+			artillery_brigade_mot
+			anti_tank_brigade_mot
+			engineer
+			DIV_HQ
+			logistics_company
+			maintenance_company
+			field_hospital
+			anti_air_company
+		}
 	}
 
 	medium_armor_default = {
@@ -155,34 +197,20 @@ armor_generic = {
 			}
 		}
 		target_min_match = 0.5
-	}
-	heavy_armor_default = {
-	
-		target_width = 20.0
-		width_weight = 1.5
-		column_swap_factor = 0.5
-		
-		target_template = {
-			weight = 0.9
-			match_value = 5000.0
-			
-			support = {
-				engineer = 1
-				DIV_HQ = 1
-				logistics_company = 1
-				maintenance_company = 1
-				field_hospital = 1
-				anti_air_company = 1
-			}
-			
-			regiments = {
-				heavy_armor = 3
-				motorized = 4
-				armored_car = 1
-				artillery_brigade_mot = 2
-			}
+
+		allowed_types = {
+			medium_armor
+			motorized
+			armored_car
+			artillery_brigade_mot
+			anti_tank_brigade_mot
+			engineer
+			DIV_HQ
+			logistics_company
+			maintenance_company
+			field_hospital
+			anti_air_company
 		}
-		target_min_match = 0.5
 	}
 }
 
@@ -609,6 +637,8 @@ mountaineers_generic = {
 			field_hospital
 			logistics_company
 			anti_tank
+			artillery_brigade
+			engineer
 		}
 	}
 }
@@ -686,6 +716,7 @@ marines_generic = {
 			marine
 			engineer
 			logistics_company
+			recon
 		}
 	}
 }

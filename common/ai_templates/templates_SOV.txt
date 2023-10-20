@@ -37,6 +37,18 @@ armored_SOV = {
 		}
 		
 		target_min_match = 0.5
+
+		allowed_types = {
+			DIV_HQ
+			engineer
+			logistics_company_mot
+			maintenance_company
+			recon_ac
+			military_police 
+			signal_company 
+			heavy_armor
+			motorized
+		}
 	}
 
 	medium_armor_default_SOV = {
@@ -65,6 +77,18 @@ armored_SOV = {
 			}
 		}
 		target_min_match = 0.5
+		
+		allowed_types = {
+			DIV_HQ
+			engineer
+			logistics_company_mot
+			maintenance_company
+			recon_ac
+			military_police 
+			signal_company 
+			medium_armor
+			motorized
+		}
 	}
 
 }
@@ -229,6 +253,8 @@ mountaineers_SOV = {
 		allowed_types = {
 			mountaineers
 			artillery
+			artillery_brigade
+			engineer
 			recon
 			signal_company
 			field_hospital
@@ -307,6 +333,7 @@ marines_SOV = {
 		allowed_types = {
 			marine
 			engineer
+			recon
 			logistics_company
 		}
 	}

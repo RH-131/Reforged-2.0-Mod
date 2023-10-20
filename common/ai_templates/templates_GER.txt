@@ -57,6 +57,17 @@ armored_GER = {
 		}
 		
 		target_min_match = 0.5
+
+		allowed_types = {
+			DIV_HQ
+			recon
+			engineer
+			maintenance_company
+			logistics_company
+			signal_company 
+			medium_armor
+			motorized
+		}
 	}
 
 	medium_armor_mech_default_GER = {
@@ -96,6 +107,19 @@ armored_GER = {
 		}
 		
 		target_min_match = 0.5
+
+		allowed_types = {
+			DIV_HQ
+			recon
+			engineer
+			maintenance_company
+			logistics_company
+			signal_company 
+			medium_armor
+			motorized
+			mechanized 
+			medium_tank_destroyer_brigade 
+		}
 	}
 
 
@@ -128,6 +152,17 @@ armored_GER = {
 		
 		replace_at_match = 0.8
 		target_min_match = 0.5
+
+		allowed_types = {
+			DIV_HQ
+			recon
+			engineer
+			maintenance_company
+			logistics_company
+			signal_company 
+			heavy_armor
+			motorized
+		}
 	}
 }
 
@@ -199,8 +234,12 @@ garrison_GER = {
 		}
 		
 		allowed_types = {
-			infantry
+			DIV_HQ
+			recon
 			engineer
+			anti_tank
+			infantry
+			artillery_brigade
 		}
 	}
 }
@@ -259,6 +298,19 @@ infantry_GER = {
 				anti_tank_brigade = 1 
 			}
 		}
+
+		allowed_types = {
+			DIV_HQ
+			engineer
+			recon
+			maintenance_company
+			logistics_company
+			field_hospital
+			infantry
+			artillery_brigade
+			artillery_heavy
+			anti_tank_brigade 
+		}
 	}
 }
 
@@ -315,6 +367,19 @@ infantry_GER = {
 				artillery_heavy = 1
 				anti_tank_brigade = 1 
 			}
+		}
+
+		allowed_types = {
+			DIV_HQ
+			engineer
+			recon
+			maintenance_company
+			logistics_company
+			field_hospital
+			infantry
+			artillery_brigade
+			artillery_heavy
+			anti_tank_brigade 
 		}
 	}
 }
@@ -372,6 +437,18 @@ motorized_infantry_GER = {
 				field_hospital = 1
 			}
 		}
+
+		allowed_types = {
+			DIV_HQ
+			engineer
+			recon
+			maintenance_company
+			logistics_company
+			field_hospital
+			motorized0
+			artillery_brigade_mot
+			anti_tank_brigade_mot 
+		}
 	}
 }
 
@@ -426,13 +503,15 @@ mountaineers_GER = {
 		}
 		
 		allowed_types = {
-			mountaineers
-			artillery
+			DIV_HQ
+			engineer
 			recon
-			signal_company
-			field_hospital
+			maintenance_company
 			logistics_company
-			anti_tank
+			field_hospital
+			mountaineers0
+			artillery_brigade
+			anti_tank_brigade 
 		}
 	}
 }
@@ -489,9 +568,13 @@ marines_GER = {
 
 		
 		allowed_types = {
-			marine
 			engineer
+			artillery
+			anti_tank
 			logistics_company
+			recon
+			marine
+			artillery_brigade
 		}
 	}
 }
@@ -596,6 +679,11 @@ suppression_GER = {
 			regiments = {
 				garrison = 5
 			}
+		}
+
+		allowed_types = {
+			garrison
+			military_police
 		}
 	}
 }

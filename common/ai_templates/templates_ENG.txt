@@ -51,6 +51,23 @@ armor_ENG = {
 		}
 		
 		target_min_match = 0.5
+
+		allowed_types = {
+			DIV_HQ
+			engineer
+			recon_ac
+			signal_company
+			maintenance_company
+			logistics_company
+			medium_armor
+			heavy_armor
+			motorized
+			armored_car
+			artillery_brigade_mot
+			artillery_heavy_mot
+			anti_tank_brigade_mot
+			anti_air_mot
+		}
 	}
 }
 
@@ -91,6 +108,19 @@ infantry_ENG = {
 				anti_air_company = 1
 			}
 		}
+
+		allowed_types = {
+			DIV_HQ
+			engineer
+			logistics_company_mot
+			maintenance_company
+			field_hospital
+			anti_air_company
+			motorized
+			armored_car
+			artillery_brigade_mot
+			anti_tank_brigade_mot
+		}
 	}
 	infantry_default_ENG = {
 		
@@ -118,6 +148,17 @@ infantry_ENG = {
 			}
 		}
 		
+		allowed_types = {
+			DIV_HQ
+			engineer
+			logistics_company_mot
+			recon
+			field_hospital
+			truck_infantry
+			artillery_brigade
+			anti_air
+			anti_tank_brigade
+		}
 	}
 }
 
@@ -239,6 +280,13 @@ marines_ENG = {
 			}
 		}
 
+		allowed_types = {
+			DIV_HQ
+			recon
+			engineer
+			marine
+			pack_artillery_brigade
+		}
 	}
 }
 
@@ -283,6 +331,12 @@ paratrooper_ENG = {
 			}
 		}
 
+		allowed_types = {
+			engineer
+			artillery
+			anti_tank
+			paratrooper
+		}
 	}
 	
 }

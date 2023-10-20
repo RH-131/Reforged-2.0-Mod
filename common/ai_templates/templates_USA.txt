@@ -42,6 +42,23 @@ armored_USA= {
 		}
 
 		target_min_match = 0.5
+
+		allowed_types = {
+			DIV_HQ
+			engineer
+			recon_ac
+			maintenance_company
+			logistics_company
+			field_hospital
+			anti_air_company
+			medium_armor
+			light_armor
+			motorized
+			mechanized
+			armored_car
+			artillery_brigade_mot
+			anti_tank_brigade_mot
+		}
 	}
 }
 
@@ -163,6 +180,20 @@ infantry_USA = {
 				anti_air_mot = 1 
 			}
 		}
+		
+		
+		allowed_types = {
+			DIV_HQ
+			engineer
+			recon
+			maintenance_company
+			logistics_company
+			field_hospital
+			motorized
+			artillery_heavy_mot
+			anti_tank_brigade_mot 
+			anti_air_mot 
+		}
 	}
 }
 
@@ -234,11 +265,13 @@ mountaineers_USA = {
 		
 		allowed_types = {
 			mountaineers
+			engineer
 			artillery
 			recon
 			signal_company
 			field_hospital
 			logistics_company
+			artillery_brigade
 			anti_tank
 		}
 	}
@@ -280,6 +313,15 @@ marines_USA = {
 			}
 		}
 
+		allowed_types = {
+			DIV_HQ
+			engineer
+			maintenance_company
+			recon
+			logistics_company
+			field_hospital
+			marine
+		}
 	}
 }
 
@@ -315,7 +357,13 @@ paratroopers_USA = {
 				paratrooper= 10 
 			}
 		}
-		
+
+		allowed_types = {
+			engineer
+			artillery
+			anti_tank
+			paratrooper 
+		}
 	}	
 }
 

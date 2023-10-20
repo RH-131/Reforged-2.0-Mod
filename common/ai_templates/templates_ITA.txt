@@ -590,7 +590,16 @@ infantry_ITA = {
 				pack_artillery_brigade = 1
 			}
 		}
-		
+
+		allowed_types = {
+			DIV_HQ
+			engineer
+			recon
+			infantry
+			light_infantry
+			artillery_brigade
+			pack_artillery_brigade
+		}
 	}
 	infantry_default_heavy_ITA = {
 	
@@ -620,6 +629,17 @@ infantry_ITA = {
 			}
 		}
 		
+		allowed_types = {
+			DIV_HQ
+			engineer
+			recon
+			field_hospital
+			maintenance_company
+			logistics_company
+			infantry1
+			artillery_brigade
+			anti_tank_brigade
+		}
 	}
 }
 
@@ -670,6 +690,14 @@ mountaineers_ITA = {
 			}
 		}
 		
+		allowed_types = {
+			DIV_HQ
+			engineer
+			recon
+			field_hospital
+			mountaineers
+			pack_artillery_brigade
+		}
 	}
 }
 
