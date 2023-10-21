@@ -104,31 +104,31 @@ characters={
 			id = -1
 		}
 		
-		advisor = {
-			cost = 150
-			slot = political_advisor
-			idea_token = ICE_brynjolfur_bjarnason
-			allowed = {
+		# advisor = {
+		# 	cost = 150
+		# 	slot = political_advisor
+		# 	idea_token = ICE_brynjolfur_bjarnason
+		# 	allowed = {
 			
-			}
-			available = {
-				has_completed_focus = ICE_anti_capitalist_propaganda
-				NOT = { has_completed_focus = ICE_state_corporatism }
-			}
-			visible = {
+		# 	}
+		# 	available = {
+		# 		has_completed_focus = ICE_anti_capitalist_propaganda
+		# 		NOT = { has_completed_focus = ICE_state_corporatism }
+		# 	}
+		# 	visible = {
 			
-			}
-			traits = {
-				marxist_philosopher
-			}
-			ai_will_do = {
-				base = 1.0
-				modifier = {
-					factor = 20
-					ICE_has_communist_ai = yes 
-				}
-			}
-		}
+		# 	}
+		# 	traits = {
+		# 		marxist_philosopher
+		# 	}
+		# 	ai_will_do = {
+		# 		base = 1.0
+		# 		modifier = {
+		# 			factor = 20
+		# 			ICE_has_communist_ai = yes 
+		# 		}
+		# 	}
+		# }
 		
 		
 	}
@@ -664,7 +664,7 @@ characters={
 					has_government = neutrality
 					has_government = democratic
 				}
-				has_completed_focus = ICE_the_kingdom_of_iceland
+				#has_completed_focus = ICE_the_kingdom_of_iceland
 			}
 			visible = {
 			
@@ -756,29 +756,29 @@ characters={
 
 		}		
 		
-		advisor = {
-			cost = 150
-			slot = political_advisor
-			idea_token = ICE_einar_olgeirsson
-			allowed = {
+		# advisor = {
+		# 	cost = 150
+		# 	slot = political_advisor
+		# 	idea_token = ICE_einar_olgeirsson
+		# 	allowed = {
 				
-			}
-			available = {
-				OR = {
-					has_government = communism 
-					has_completed_focus = ICE_political_unity
-				}
-			}
-			visible = {
+		# 	}
+		# 	available = {
+		# 		OR = {
+		# 			has_government = communism 
+		# 			has_completed_focus = ICE_political_unity
+		# 		}
+		# 	}
+		# 	visible = {
 			
-			}
-			traits = {
-				editor
-			}
-			ai_will_do = {
-				base = 1.0
-			}
-		}
+		# 	}
+		# 	traits = {
+		# 		editor
+		# 	}
+		# 	ai_will_do = {
+		# 		base = 1.0
+		# 	}
+		# }
 		
 		
 	}
@@ -791,29 +791,29 @@ characters={
 
 		}		
 		
-		advisor = {
-			cost = 150
-			slot = political_advisor
-			idea_token = ICE_isleifur_hognason
-			allowed = {
+		# advisor = {
+		# 	cost = 150
+		# 	slot = political_advisor
+		# 	idea_token = ICE_isleifur_hognason
+		# 	allowed = {
 			
-			}
-			available = {
-				OR = {
-					has_government = communism 
-					has_completed_focus = ICE_political_unity
-				}
-			}
-			visible = {
+		# 	}
+		# 	available = {
+		# 		OR = {
+		# 			has_government = communism 
+		# 			has_completed_focus = ICE_political_unity
+		# 		}
+		# 	}
+		# 	visible = {
 			
-			}
-			traits = {
-				ICE_trade_unionist
-			}
-			ai_will_do = {
-				base = 1.0
-			}
-		}
+		# 	}
+		# 	traits = {
+		# 		ICE_trade_unionist
+		# 	}
+		# 	ai_will_do = {
+		# 		base = 1.0
+		# 	}
+		# }
 		
 		
 	}
@@ -826,27 +826,27 @@ characters={
 
 		}		
 		
-		advisor = {
-			cost = 150
-			slot = political_advisor
-			idea_token = ICE_werner_gerlach
-			allowed = {
+		# advisor = {
+		# 	cost = 150
+		# 	slot = political_advisor
+		# 	idea_token = ICE_werner_gerlach
+		# 	allowed = {
 			
-			}
-			available = {
-				has_government = fascism 
-				has_completed_focus = ICE_state_visits
-			}
-			visible = {
+		# 	}
+		# 	available = {
+		# 		has_government = fascism 
+		# 		has_completed_focus = ICE_state_visits
+		# 	}
+		# 	visible = {
 			
-			}
-			traits = {
-				ICE_german_consul
-			}
-			ai_will_do = {
-				base = 1.0
-			}
-		}
+		# 	}
+		# 	traits = {
+		# 		ICE_german_consul
+		# 	}
+		# 	ai_will_do = {
+		# 		base = 1.0
+		# 	}
+		# }
 		
 		
 	}
