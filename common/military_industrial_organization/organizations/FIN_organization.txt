@@ -617,17 +617,10 @@ FIN_sisu_auto_organization = { #Motorized
 	}
 
 	override_trait = {
-		token = generic_mio_trait_advanced_artillery_racks
-
-		position = { x=0 y=2 }
-		relative_position_id = generic_mio_trait_armored_pulpit_mount
-	}
-
-	override_trait = {
 		token = generic_mio_trait_heavy_machinegun_mount
 
-		position = { x=1 y=0 }
-		relative_position_id = generic_mio_trait_advanced_artillery_racks
+		position = { x=1 y=2 }
+		relative_position_id = generic_mio_trait_armored_pulpit_mount
 	}
 
 	override_trait = {

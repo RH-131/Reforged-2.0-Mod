@@ -1035,11 +1035,11 @@ country_event = {
 		}
         hidden_effect = { news_event = news.453 }		
 	}
-	option = {
-		name = japan.19.b
-		ai_chance = { factor = 0 }
-		add_ideas = jap_chinese_occupation
-	}
+	# option = {
+	# 	name = japan.19.b
+	# 	ai_chance = { factor = 0 }
+	# 	add_ideas = jap_chinese_occupation
+	# }
 }
 #Pearl Harbour
 country_event = {
@@ -1189,7 +1189,7 @@ country_event = {
 			country_event = { id = china.205 }
 		}
 		JAP = { 
-			remove_ideas = jap_chinese_occupation		
+			#remove_ideas = jap_chinese_occupation		
 			if = { 
 				limit = { 
 					OR = {
@@ -1677,13 +1677,13 @@ country_event = {
 		}
         hidden_effect = { news_event = news.453 }		
 	}
-	option = {
-		name = japan.22.b
-		swap_ideas = { 
-			remove_idea = jap_chinese_occupation
-			add_idea = jap_chinese_occupation_2
-		}
-	}
+	# option = {
+	# 	name = japan.22.b
+	# 	swap_ideas = { 
+	# 		remove_idea = jap_chinese_occupation
+	# 		add_idea = jap_chinese_occupation_2
+	# 	}
+	# }
 }
 #Peace when Japan has taken too much land #3
 country_event = {
@@ -1715,7 +1715,7 @@ country_event = {
 			country_event = { id = china.205 }
 		}
 		JAP = { 
-			remove_ideas = jap_chinese_occupation_2		
+			#remove_ideas = jap_chinese_occupation_2		
 			if = { 
 				limit = { 
 					OR = {
