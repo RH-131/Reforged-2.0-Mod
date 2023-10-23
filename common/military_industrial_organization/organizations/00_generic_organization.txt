@@ -5093,9 +5093,7 @@ generic_naval_aircraft_organization = {
 
 	equipment_type = {
 		small_plane_naval_bomber_airframe
-		cv_small_plane_airframe
-		cv_small_plane_cas_airframe
-		cv_small_plane_naval_bomber_airframe
+		mio_cat_eq_all_cv_aircraft
 	}
 
 	research_categories = { mio_cat_all_naval_bomber_and_modules }
@@ -5287,9 +5285,7 @@ generic_naval_aircraft_organization = {
 		all_parents = { generic_mio_trait_navigation_equipment }
 
 		limit_to_equipment_type = {
-			cv_small_plane_airframe
-			cv_small_plane_cas_airframe
-			cv_small_plane_naval_bomber_airframe
+			mio_cat_eq_all_cv_aircraft
 		}
 
 		equipment_bonus = {
@@ -5310,6 +5306,7 @@ generic_naval_aircraft_organization = {
 
 		limit_to_equipment_type = {
 			cv_small_plane_airframe
+			cv_medium_plane_airframe
 		}
 
 		equipment_bonus = {
@@ -5330,6 +5327,7 @@ generic_naval_aircraft_organization = {
 
 		limit_to_equipment_type = {
 			cv_small_plane_airframe
+			cv_medium_plane_airframe
 		}
 
 		equipment_bonus = {
