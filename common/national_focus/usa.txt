@@ -1852,6 +1852,18 @@ focus_tree = {
 				idea = JAP_modernize_the_fleet
 				days = 365 
 			}
+			mio:USA_norfolk_naval_yard_organization = {
+				add_mio_funds = 2400
+			}
+			mio:USA_electric_boat_company_organization = {
+				add_mio_funds = 2400
+			}
+			mio:USA_brooklyn_naval_yard_organization = {
+				add_mio_funds = 2400
+			}
+			mio:USA_newport_news_shipbuilding_organization = {
+				add_mio_funds = 2400
+			}
 		}
 		
 		completion_reward = {
@@ -1930,6 +1942,18 @@ focus_tree = {
 			add_timed_idea = {
 				idea = JAP_modernize_the_fleet
 				days = 365 
+			}
+			mio:USA_norfolk_naval_yard_organization = {
+				add_mio_funds = 2400
+			}
+			mio:USA_electric_boat_company_organization = {
+				add_mio_funds = 2400
+			}
+			mio:USA_brooklyn_naval_yard_organization = {
+				add_mio_funds = 2400
+			}
+			mio:USA_newport_news_shipbuilding_organization = {
+				add_mio_funds = 2400
 			}
 		}
 	}					
@@ -2050,52 +2074,57 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				play_song = "Slap the Japs Right into the Laps of the Nazis (Soundie)"
-				}
-			
-			custom_effect_tooltip = USA_upgrade_naval_manufacturers_tt
-			if = {
-				limit = {
-					has_idea = newport_news_shipbuilding
-				}
-				swap_ideas = {
-					remove_idea = newport_news_shipbuilding
-					add_idea = newport_news_shipbuilding2 
-				}
 			}
 			if = {
-				limit = {
-					has_idea = brooklyn_naval_yard
-				}
-				swap_ideas = {
-					remove_idea = brooklyn_naval_yard
-					add_idea = brooklyn_naval_yard2 
-				}
+				limit = { has_dlc = "Arms Against Tyranny" }
+				add_ideas = USA_never_at_a_disadvantage_idea
 			}
-			if = {
-				limit = {
-					has_idea = brooklyn_naval_yard
+			else = {
+				custom_effect_tooltip = USA_upgrade_naval_manufacturers_tt
+				if = {
+					limit = {
+						has_idea = newport_news_shipbuilding
+					}
+					swap_ideas = {
+						remove_idea = newport_news_shipbuilding
+						add_idea = newport_news_shipbuilding2 
+					}
 				}
-				swap_ideas = {
-					remove_idea = brooklyn_naval_yard
-					add_idea = brooklyn_naval_yard2 
+				if = {
+					limit = {
+						has_idea = brooklyn_naval_yard
+					}
+					swap_ideas = {
+						remove_idea = brooklyn_naval_yard
+						add_idea = brooklyn_naval_yard2 
+					}
 				}
-			}
-			if = {
-				limit = {
-					has_idea = electric_boat_company
+				if = {
+					limit = {
+						has_idea = brooklyn_naval_yard
+					}
+					swap_ideas = {
+						remove_idea = brooklyn_naval_yard
+						add_idea = brooklyn_naval_yard2 
+					}
 				}
-				swap_ideas = {
-					remove_idea = electric_boat_company
-					add_idea = electric_boat_company2 
+				if = {
+					limit = {
+						has_idea = electric_boat_company
+					}
+					swap_ideas = {
+						remove_idea = electric_boat_company
+						add_idea = electric_boat_company2 
+					}
 				}
-			}
-			if = {
-				limit = {
-					has_idea = norfolk_naval_yard
-				}
-				swap_ideas = {
-					remove_idea = norfolk_naval_yard
-					add_idea = norfolk_naval_yard2
+				if = {
+					limit = {
+						has_idea = norfolk_naval_yard
+					}
+					swap_ideas = {
+						remove_idea = norfolk_naval_yard
+						add_idea = norfolk_naval_yard2
+					}
 				}
 			}
 		}

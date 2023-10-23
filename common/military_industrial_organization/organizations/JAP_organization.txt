@@ -38,10 +38,7 @@ JAP_kure_naval_arsenal_organization = {
 	}
 	available = {
 		FROM = {
-			OR = {
-#				has_completed_focus = JAP_supremacy_of_the_battlefleet
-#				has_completed_focus = JAP_the_ultimate_battleship
-			}
+			has_completed_focus = JAP_activate_the_arsenals
 		}
 	}
 }
@@ -52,6 +49,11 @@ JAP_yokosuka_naval_arsenal_organization = {
 	allowed = {	
 		tag = JAP
 		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = {
+			has_completed_focus = JAP_activate_the_arsenals
+		}
 	}
 }
 
