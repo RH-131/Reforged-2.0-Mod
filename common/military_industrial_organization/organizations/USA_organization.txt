@@ -373,6 +373,24 @@ USA_boeing_organization = {
 		tag = USA 
 	}
 	
+	add_trait = {
+		token = USA_mio_trait_smooth_finish
+		name = USA_mio_trait_smooth_finish
+		icon = GFX_generic_mio_trait_icon_air_agility
+		special_trait_background = yes
+		
+		position = { x=2 y=1 }
+		relative_position_id = generic_mio_trait_reinforced_frames
+
+		any_parent = { generic_mio_trait_reinforced_frames generic_mio_trait_extended_rear_fuselage }
+		limit_to_equipment_type = { large_plane_airframe } #large_plane_maritime_patrol_plane_airframe }
+			
+		equipment_bonus = {
+			air_agility = 0.05
+			maximum_speed = 0.05
+		}
+	}
+	
 	override_trait = {
 		token = generic_mio_trait_flying_fortress
 		position = { x=-1 y=1 }
@@ -393,7 +411,7 @@ USA_boeing_organization = {
 		relative_position_id = generic_mio_trait_flying_fortress
 		
 		any_parent = { generic_mio_trait_flying_fortress }
-		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+		limit_to_equipment_type = { large_plane_airframe } #large_plane_maritime_patrol_plane_airframe }
 			
 		equipment_bonus = {
 			air_defence = 0.1
@@ -410,24 +428,6 @@ USA_grumman_organization = {
 	
 	allowed = {	 
 		tag = USA 
-	}
-	
-	add_trait = {
-		token = USA_mio_trait_smooth_finish
-		name = USA_mio_trait_smooth_finish
-		icon = GFX_generic_mio_trait_icon_air_agility
-		special_trait_background = yes
-		
-		position = { x=2 y=1 }  
-		relative_position_id = generic_mio_trait_reinforced_fuselage
-		
-		any_parent = { generic_mio_trait_reinforced_fuselage }
-		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
-			
-		equipment_bonus = {
-			air_agility = 0.05
-			maximum_speed = 0.05
-		}
 	}
 	
 	override_trait = {
