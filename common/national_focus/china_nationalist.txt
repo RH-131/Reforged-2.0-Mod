@@ -598,7 +598,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_war = yes
+			OR = {
+				has_war = yes
+				JAP = { has_completed_focus = JAP_intervene_in_china }
+			}
 		}
 
 		bypass = {
@@ -630,7 +633,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_war = yes
+			OR = {
+				has_war = yes
+				JAP = { has_completed_focus = JAP_intervene_in_china }
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -661,7 +667,10 @@ focus_tree = {
 			NOT = {
 				has_idea = CHI_army_corruption_2
 			}
-			has_defensive_war = yes
+			OR = {
+				has_war = yes
+				JAP = { has_completed_focus = JAP_intervene_in_china }
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -699,7 +708,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_war = yes
+			OR = {
+				has_war = yes
+				JAP = { has_completed_focus = JAP_intervene_in_china }
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -727,8 +739,8 @@ focus_tree = {
 
 		available = {
 			OR = {
-				has_war_with = JAP
-				has_war_with = MAN
+				has_war = yes
+				JAP = { has_completed_focus = JAP_intervene_in_china }
 			}
 			has_country_flag = CHI_lessons_of_war_completed
 		}
@@ -976,7 +988,14 @@ focus_tree = {
 		}
 
 		available = {
-			USA_will_support = yes
+			OR = {
+				USA_will_support = yes
+				has_government = neutrality
+				USA = { has_government = ROOT }
+			}
+			not = {
+				has_War_with = USA
+			}
 			is_subject = no
 		}
 
@@ -1016,7 +1035,14 @@ focus_tree = {
 		}
 
 		available = {
-			USA_will_support = yes
+			OR = {
+				USA_will_support = yes
+				has_government = neutrality
+				USA = { has_government = ROOT }
+			}
+			not = {
+				has_War_with = USA
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -1053,7 +1079,14 @@ focus_tree = {
 		}
 
 		available = {
-			USA_will_support = yes
+			OR = {
+				USA_will_support = yes
+				has_government = neutrality
+				USA = { has_government = ROOT }
+			}
+			not = {
+				has_War_with = USA
+			}
 			is_subject = no
 		}
 
@@ -1088,10 +1121,6 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				has_completed_focus = CHI_mission_to_the_us
-				USA_will_support = yes
-			}
 			is_subject = no
 		}
 
@@ -1254,7 +1283,6 @@ focus_tree = {
 				is_subject_of = ENG
 			}
 			all_other_country = { NOT = { has_completed_focus = CHI_burma_road } }
-			ENG_will_support = yes
 			325 = { #Yunnan
 				CONTROLLER = {
 					OR = {
@@ -1338,7 +1366,16 @@ focus_tree = {
 			all_other_country = { NOT = { has_completed_focus = CHI_the_hump } }
 			OR = {
 				has_completed_focus = CHI_mission_to_the_us
-				USA_will_support = yes
+				AND = {
+					OR = {
+						USA_will_support = yes
+						has_government = neutrality
+						USA = { has_government = ROOT }
+					}
+					not = {
+						has_War_with = USA
+					}
+				}
 			}
 			601 = { #Xikang
 				CONTROLLER = {
@@ -1409,7 +1446,6 @@ focus_tree = {
 				is_subject_of = ENG
 			}
 			all_other_country = { NOT = { has_completed_focus = CHI_ledo_road } }
-			ENG_will_support = yes
 			325 = { #Yunnan
 				CONTROLLER = {
 					OR = {
