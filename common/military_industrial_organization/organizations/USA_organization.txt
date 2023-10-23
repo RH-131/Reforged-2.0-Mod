@@ -53,7 +53,7 @@ USA_chrysler_organization = {
 				FROM = { tag = NOR }
 			}
 			FROM = { 
-				has_completed_focus = NOR_invite_transnational_manufacturers
+#				has_completed_focus = NOR_invite_transnational_manufacturers
 			}
 		}
 	}
@@ -154,7 +154,7 @@ USA_detroit_arsenal_organization = {
 		tag = USA
 	}
 	available = {
-		FROM = { has_completed_focus = USA_main_battle_tanks }
+#		FROM = { has_completed_focus = USA_main_battle_tanks }
 	}
 }
 
@@ -166,7 +166,7 @@ USA_tank_destroyer_board_organization = {
 		tag = USA 
 	}
 	available = {
-		FROM = { has_completed_focus = USA_tank_destroyer_doctrine }
+#		FROM = { has_completed_focus = USA_tank_destroyer_doctrine }
 	}
 	initial_trait = {
 		name = ROM_mio_trait_mobile_tank_destroyers
@@ -520,7 +520,7 @@ USA_ford_motor_company_organization = {
 			}
 			FROM = {
 				has_country_flag = POL_ford_motors
-				NOT = { has_completed_focus = POL_adaptive_designs }
+#				NOT = { has_completed_focus = POL_adaptive_designs }
 			}
 		}
 	}
@@ -549,7 +549,7 @@ USA_ford_motor_company_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = BALTIC_ford_motors
+#				has_completed_focus = BALTIC_ford_motors
 			}
 		}
 	}

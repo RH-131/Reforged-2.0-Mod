@@ -204,7 +204,7 @@ NOR_marinens_flyvebaatfabrikk_organization = {
         
         available = {
             FROM = {
-                has_completed_focus = NOR_increase_air_production
+#                has_completed_focus = NOR_increase_air_production
             }
         }
 
@@ -252,7 +252,7 @@ NOR_raufoss_ammunisjonsfabrikker_organization = {
 
         all_parents = { generic_mio_trait_improved_hydraulic_recoil_system }
         available = {
-            NOR = { has_completed_focus = NOR_buy_aa_from_sweden }
+#            NOR = { has_completed_focus = NOR_buy_aa_from_sweden }
         }
 
         limit_to_equipment_type = {
@@ -305,7 +305,7 @@ NOR_cadillac_organization = { #TODO_Manu: This is a perfect candidate to become 
     }  
     available = {
         FROM = { NOT = { has_war_with = USA } } #This is a bit weird since the MIO does not exist in USA, but consistent with other foreign MIOs requisites
-        FROM = { has_completed_focus = NOR_invite_cadillac_to_norway }
+#        FROM = { has_completed_focus = NOR_invite_cadillac_to_norway }
     }
 
     initial_trait = {

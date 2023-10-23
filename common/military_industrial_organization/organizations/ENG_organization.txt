@@ -30,10 +30,10 @@ ENG_vickers_armstrong_eng_organization = {
 	}
 
 	visible = {
-		IF = {
-			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
+#		IF = {
+#			limit = { FROM = { original_tag = ETH } }
+#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+#		}
 	}
 	
 	available = {
@@ -152,12 +152,12 @@ ENG_vauxhall_organization = {
 			}
 			FROM = {
 				has_country_flag = POL_vauxhall_motors
-				NOT = { has_completed_focus = POL_adaptive_designs }
+#				NOT = { has_completed_focus = POL_adaptive_designs }
 			}
 		}
 		IF = {
 			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}
 	
 	}
@@ -383,7 +383,7 @@ ENG_john_brown_organization = {
 	visible = {
 		IF = {
 			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}
 	}
 	
@@ -549,7 +549,7 @@ ENG_de_havilland_organization = {
 				FROM = { tag = NOR }
 			}
 			FROM = {
-				has_completed_focus = NOR_invite_transnational_manufacturers
+#				has_completed_focus = NOR_invite_transnational_manufacturers
 			}
 		}
 	}
@@ -659,7 +659,7 @@ ENG_rsaf_enfield_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = BALTIC_british_designers
+#				has_completed_focus = BALTIC_british_designers
 			}
 		}
 	}
@@ -727,12 +727,12 @@ ENG_vauxhall_automotive_organization = {
 			}
 			FROM = {
 				has_country_flag = POL_vauxhall_motors
-				NOT = { has_completed_focus = POL_adaptive_designs }
+#				NOT = { has_completed_focus = POL_adaptive_designs }
 			}
 		}
 		IF = {
 			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}	
 	}
 	
@@ -820,7 +820,8 @@ ENG_royal_arsenal_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = BALTIC_british_designers
+
+#				has_completed_focus = BALTIC_british_designers
 			}
 		}
 	}

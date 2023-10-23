@@ -121,13 +121,13 @@ SOV_morozov_design_bureau_organization = {
 					}
 				} 
 			}
-			FROM = { has_completed_focus = CHI_hire_soviet_designer }
+#			FROM = { has_completed_focus = CHI_hire_soviet_designer }
 		}
 		ELSE_IF = {
 			limit = {
 				FROM = { original_tag = NOR }
 			}
-			FROM = { has_completed_focus = NOR_invite_soviet_designers }
+#			FROM = { has_completed_focus = NOR_invite_soviet_designers }
 		}
 	}
 
@@ -149,7 +149,7 @@ SOV_morozov_design_bureau_organization = {
 				has_full_control_of_state = 195 #LENINGRAD
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -183,7 +183,7 @@ SOV_morozov_design_bureau_organization = {
 				has_full_control_of_state = 252 #GORKY
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -217,7 +217,7 @@ SOV_morozov_design_bureau_organization = {
 				has_full_control_of_state = 653 #SVERDLOVSK
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -260,7 +260,7 @@ SOV_astrov_design_bureau_organization = {
 				has_full_control_of_state = 195 #LENINGRAD
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -294,7 +294,7 @@ SOV_astrov_design_bureau_organization = {
 				has_full_control_of_state = 252 #GORKY
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -328,7 +328,7 @@ SOV_astrov_design_bureau_organization = {
 				has_full_control_of_state = 653 #SVERDLOVSK
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -405,7 +405,7 @@ SOV_okmo_organization = {
 				has_full_control_of_state = 195 #LENINGRAD
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -439,7 +439,7 @@ SOV_okmo_organization = {
 				has_full_control_of_state = 252 #GORKY
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -473,7 +473,7 @@ SOV_okmo_organization = {
 				has_full_control_of_state = 653 #SVERDLOVSK
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -507,7 +507,7 @@ SOV_mytishchy_machine_building_plant_organization = {
 	visible = {
 		IF = { 
 			limit = { FROM = { original_tag = ETH } } 
-			FROM = { has_completed_focus = ETH_mytishchi-ababa_plant }
+#			FROM = { has_completed_focus = ETH_mytishchi-ababa_plant }
 		}
 	}
 
@@ -539,7 +539,7 @@ SOV_mytishchy_machine_building_plant_organization = {
 				has_full_control_of_state = 195 #LENINGRAD
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -573,7 +573,7 @@ SOV_mytishchy_machine_building_plant_organization = {
 				has_full_control_of_state = 252 #GORKY
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -607,7 +607,7 @@ SOV_mytishchy_machine_building_plant_organization = {
 				has_full_control_of_state = 653 #SVERDLOVSK
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -656,7 +656,7 @@ SOV_kirov_organization = {
 				has_full_control_of_state = 195 #LENINGRAD
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -690,7 +690,7 @@ SOV_kirov_organization = {
 				has_full_control_of_state = 252 #GORKY
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -724,7 +724,7 @@ SOV_kirov_organization = {
 				has_full_control_of_state = 653 #SVERDLOVSK
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -813,7 +813,7 @@ SOV_nevskoye_design_bureau_organization = {
 				has_full_control_of_state = 195 #LENINGRAD
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_merge_naval_plants
 			}
 		}
 
@@ -864,7 +864,7 @@ SOV_nevskoye_design_bureau_organization = {
 				has_full_control_of_state = 195 #LENINGRAD
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_merge_naval_plants
 			}
 		}
 
@@ -915,7 +915,7 @@ SOV_nevskoye_design_bureau_organization = {
 				has_full_control_of_state = 195 #LENINGRAD
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_merge_naval_plants
 			}
 			#Only exists in this MIO
 		}
@@ -946,7 +946,7 @@ SOV_rubin_design_bureau_organization = {
 	visible = {
 		IF = { 
 			limit = { FROM = { original_tag = ETH } } 
-			FROM = { has_completed_focus = ETH_soviet-ethiopian_trade_agreement }
+#			FROM = { has_completed_focus = ETH_soviet-ethiopian_trade_agreement }
 		}
 	}
 
@@ -963,7 +963,7 @@ SOV_rubin_design_bureau_organization = {
 			limit = {
 				FROM = { original_tag = NOR }
 			}
-			FROM = { has_completed_focus = NOR_invite_soviet_designers }
+#			FROM = { has_completed_focus = NOR_invite_soviet_designers }
 		}
 	}
 
@@ -985,7 +985,7 @@ SOV_rubin_design_bureau_organization = {
 				has_full_control_of_state = 195 #LENINGRAD
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_merge_naval_plants
 			}
 		}
 
@@ -1036,7 +1036,7 @@ SOV_rubin_design_bureau_organization = {
 				has_full_control_of_state = 195 #LENINGRAD
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_merge_naval_plants
 			}
 		}
 
@@ -1089,8 +1089,8 @@ SOV_rubin_design_bureau_organization = {
 				has_full_control_of_state = 195 #LENINGRAD
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-				has_completed_focus = SOV_surface_warfare
+#				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_surface_warfare
 			}
 			#Only exists in this MIO
 		}
@@ -1122,8 +1122,8 @@ SOV_rubin_design_bureau_organization = {
 				has_full_control_of_state = 195 #LENINGRAD
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-				has_completed_focus = SOV_submarine_warfare
+#				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_submarine_warfare
 			}
 			#Only exists in this MIO
 		}
@@ -1191,7 +1191,7 @@ SOV_black_sea_shipyard_organization = {
 				has_full_control_of_state = 227 #STALINO
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_merge_naval_plants
 			}
 		}
 
@@ -1242,7 +1242,7 @@ SOV_black_sea_shipyard_organization = {
 				has_full_control_of_state = 227 #STALINO
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_merge_naval_plants
 			}
 		}
 
@@ -1295,8 +1295,8 @@ SOV_black_sea_shipyard_organization = {
 				has_full_control_of_state = 202 #KIEV
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-				has_completed_focus = SOV_surface_warfare
+#				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_surface_warfare
 			}
 			#Only exists in this MIO
 		}
@@ -1328,8 +1328,8 @@ SOV_black_sea_shipyard_organization = {
 				has_full_control_of_state = 227 #STALINO
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-				has_completed_focus = SOV_submarine_warfare
+#				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_submarine_warfare
 			}
 			#Only exists in this MIO
 		}
@@ -1392,7 +1392,7 @@ SOV_sevastopol_marine_plant_organization = {
 				has_full_control_of_state = 227 #STALINO
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_merge_naval_plants
 			}
 		}
 
@@ -1443,7 +1443,7 @@ SOV_sevastopol_marine_plant_organization = {
 				has_full_control_of_state = 227 #STALINO
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_merge_naval_plants
 			}
 		}
 
@@ -1494,7 +1494,7 @@ SOV_sevastopol_marine_plant_organization = {
 				has_full_control_of_state = 197 #MYKOLAIV
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
+#				has_completed_focus = SOV_merge_naval_plants
 			}
 			#Only exists in this MIO
 		}
@@ -1535,7 +1535,7 @@ SOV_mig_design_bureau_organization = {
 	visible = {
 		IF = { 
 			limit = { FROM = { original_tag = ETH } } 
-			FROM = { has_completed_focus = ETH_soviet-ethiopian_trade_agreement }
+#			FROM = { has_completed_focus = ETH_soviet-ethiopian_trade_agreement }
 		}
 	}
 
@@ -1567,7 +1567,7 @@ SOV_mig_design_bureau_organization = {
 				has_full_control_of_state = 251 #KUYBYSHEV
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
+#				has_completed_focus = SOV_merge_aircraft_plants
 			}
 		}
 
@@ -1601,7 +1601,7 @@ SOV_mig_design_bureau_organization = {
 				has_full_control_of_state = 219 #MOSCOW
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
+#				has_completed_focus = SOV_merge_aircraft_plants
 			}
 		}
 
@@ -1640,7 +1640,7 @@ SOV_mig_design_bureau_organization = {
 				has_full_control_of_state = 808 #RIGA
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
+#				has_completed_focus = SOV_merge_aircraft_plants
 			}
 		}
 
@@ -1725,7 +1725,7 @@ SOV_ilyushin_design_bureau_organization = {
 				has_full_control_of_state = 251 #KUYBYSHEV
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
+#				has_completed_focus = SOV_merge_aircraft_plants
 			}
 		}
 
@@ -1759,7 +1759,7 @@ SOV_ilyushin_design_bureau_organization = {
 				has_full_control_of_state = 219 #MOSCOW
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
+#				has_completed_focus = SOV_merge_aircraft_plants
 			}
 		}
 
@@ -1798,7 +1798,7 @@ SOV_ilyushin_design_bureau_organization = {
 				has_full_control_of_state = 808 #RIGA
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
+#				has_completed_focus = SOV_merge_aircraft_plants
 			}
 		}
 
@@ -1849,7 +1849,7 @@ SOV_yakovlev_design_bureau_organization = {
 				has_full_control_of_state = 251 #KUYBYSHEV
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
+#				has_completed_focus = SOV_merge_aircraft_plants
 			}
 		}
 
@@ -1883,7 +1883,7 @@ SOV_yakovlev_design_bureau_organization = {
 				has_full_control_of_state = 219 #MOSCOW
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
+#				has_completed_focus = SOV_merge_aircraft_plants
 			}
 		}
 
@@ -1922,7 +1922,7 @@ SOV_yakovlev_design_bureau_organization = {
 				has_full_control_of_state = 808 #RIGA
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
+#				has_completed_focus = SOV_merge_aircraft_plants
 			}
 		}
 
@@ -2036,7 +2036,7 @@ SOV_tupolev_design_bureau_organization = {
 				has_full_control_of_state = 251 #KUYBYSHEV
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
+#				has_completed_focus = SOV_merge_aircraft_plants
 			}
 		}
 
@@ -2070,7 +2070,7 @@ SOV_tupolev_design_bureau_organization = {
 				has_full_control_of_state = 219 #MOSCOW
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
+#				has_completed_focus = SOV_merge_aircraft_plants
 			}
 		}
 
@@ -2109,7 +2109,7 @@ SOV_tupolev_design_bureau_organization = {
 				has_full_control_of_state = 808 #RIGA
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
+#				has_completed_focus = SOV_merge_aircraft_plants
 			}
 		}
 
@@ -2175,7 +2175,7 @@ SOV_grabin_design_bureau_organization = {
 		IF = {
 			limit = { FROM = { original_tag = GRE } }
 			FROM = {
-				has_completed_focus = GRE_appeal_to_the_soviet_union 
+#				has_completed_focus = GRE_appeal_to_the_soviet_union 
 			}
 		}
 	}
@@ -2198,7 +2198,7 @@ SOV_grabin_design_bureau_organization = {
 				has_full_control_of_state = 398 #PERM
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 			#Only exists in this MIO
 		}
@@ -2226,7 +2226,7 @@ SOV_grabin_design_bureau_organization = {
 				has_full_control_of_state = 227 #STALINO
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -2260,7 +2260,7 @@ SOV_grabin_design_bureau_organization = {
 				has_full_control_of_state = 582 #MAGNITOGORSK
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -2334,7 +2334,7 @@ SOV_tula_arms_plant_organization = {
 				has_full_control_of_state = 399 #UDMURTIA (Izhevsk)
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 			#Only exists in this MIO
 		}
@@ -2362,7 +2362,7 @@ SOV_tula_arms_plant_organization = {
 				has_full_control_of_state = 227 #STALINO
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -2396,7 +2396,7 @@ SOV_tula_arms_plant_organization = {
 				has_full_control_of_state = 582 #MAGNITOGORSK
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -2435,7 +2435,7 @@ SOV_gaz_organization = {
 	visible = {
 		IF = { 
 			limit = { FROM = { original_tag = ETH } } 
-			FROM = { has_completed_focus = ETH_soviet-ethiopian_trade_agreement }
+#			FROM = { has_completed_focus = ETH_soviet-ethiopian_trade_agreement }
 		}
 	}
 	
@@ -2469,7 +2469,7 @@ SOV_gaz_organization = {
 			limit = {
 				FROM = { original_tag = NOR }
 			}
-			FROM = { has_completed_focus = NOR_invite_soviet_designers }
+#			FROM = { has_completed_focus = NOR_invite_soviet_designers }
 		}
 	}
 
@@ -2491,7 +2491,7 @@ SOV_gaz_organization = {
 				has_full_control_of_state = 252 #GORKY
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 			#Only exists in this MIO
 		}
@@ -2519,7 +2519,7 @@ SOV_gaz_organization = {
 				has_full_control_of_state = 227 #STALINO
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
@@ -2553,7 +2553,7 @@ SOV_gaz_organization = {
 				has_full_control_of_state = 582 #MAGNITOGORSK
 			}
 			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#				has_completed_focus = SOV_merge_tank_and_materiel_plants
 			}
 		}
 
