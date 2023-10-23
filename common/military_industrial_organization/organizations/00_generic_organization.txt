@@ -1792,7 +1792,7 @@ generic_task_force_ship_organization = {
 		limit_to_equipment_type = { mio_cat_eq_all_cruiser }
 
 		equipment_bonus = {
-			hg_attack = 0.05
+			lg_attack = 0.05
 		}
 	}
 
@@ -1811,7 +1811,7 @@ generic_task_force_ship_organization = {
 		limit_to_equipment_type = { mio_cat_eq_all_cruiser }
 
 		equipment_bonus = {
-			hg_armor_piercing = 0.05
+			lg_armor_piercing = 0.05
 		}
 	}
 }
@@ -6386,7 +6386,7 @@ generic_artillery_organization = {
 	}
 
 	equipment_type = {
-		artillery_equipment
+		mio_cat_eq_all_artillery
 		anti_tank_equipment
 		anti_air_equipment
 		rocket_artillery_equipment
@@ -6531,7 +6531,7 @@ generic_artillery_organization = {
 		}
 
 		limit_to_equipment_type = { 
-			artillery_equipment
+			mio_cat_eq_all_artillery
 			rocket_artillery_equipment
 		}
 
@@ -6602,7 +6602,7 @@ generic_artillery_organization = {
 		relative_position_id = generic_mio_trait_advanced_barrel_forging
 
 		limit_to_equipment_type = { 
-			artillery_equipment
+			mio_cat_eq_all_artillery
 			rocket_artillery_equipment
 		}
 
@@ -6643,7 +6643,7 @@ generic_artillery_organization = {
 		all_parents = {	generic_mio_trait_big_guns }
 
 		limit_to_equipment_type = { 
-			artillery_equipment
+			mio_cat_eq_all_artillery
 			rocket_artillery_equipment
 		}
 
@@ -7365,6 +7365,7 @@ generic_motorized_mechanized_organization = {
 	equipment_type = {
 		motorized_equipment
 		mechanized_equipment
+		amphibious_mechanized_equipment
 	}
 	
 	research_categories = {
@@ -7525,7 +7526,7 @@ generic_motorized_mechanized_organization = {
 		
 		mutually_exclusive = { generic_mio_trait_mounted_light_anti_tank_gun }
 		
-		limit_to_equipment_type = { mechanized_equipment motorized_equipment }
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment motorized_equipment }
 		
 		equipment_bonus = {
 			breakthrough = 0.04
@@ -7545,7 +7546,7 @@ generic_motorized_mechanized_organization = {
 		
 		all_parents = { generic_mio_trait_bulletproof_panels }
 		
-		limit_to_equipment_type = { mechanized_equipment }
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
 
 		equipment_bonus = {
 			ap_attack = 0.1
@@ -7561,7 +7562,7 @@ generic_motorized_mechanized_organization = {
 		position = { x=2 y=0 }
 		relative_position_id = generic_mio_trait_medium_machinegun_mounts
 		
-		limit_to_equipment_type = { mechanized_equipment }
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
 		
 		mutually_exclusive = { generic_mio_trait_closed_chassi }
 
@@ -7579,7 +7580,7 @@ generic_motorized_mechanized_organization = {
 		position = { x=2 y=0 }
 		relative_position_id = generic_mio_trait_open_chassi
 		
-		limit_to_equipment_type = { mechanized_equipment }
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
 		
 		mutually_exclusive = { generic_mio_trait_open_chassi }
 
@@ -7597,7 +7598,7 @@ generic_motorized_mechanized_organization = {
 		position = { x=-1 y=2 }
 		relative_position_id = generic_mio_trait_closed_chassi
 		
-		limit_to_equipment_type = { mechanized_equipment }
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
 		
 		any_parent = { generic_mio_trait_closed_chassi generic_mio_trait_open_chassi }
 
@@ -7614,7 +7615,7 @@ generic_motorized_mechanized_organization = {
 		position = { x=0 y=2 }
 		relative_position_id = generic_mio_trait_bulletproof_panels
 		
-		limit_to_equipment_type = { mechanized_equipment }
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
 		
 		all_parents = { generic_mio_trait_bulletproof_panels }
 
@@ -7631,7 +7632,7 @@ generic_motorized_mechanized_organization = {
 		position = { x=1 y=0 }
 		relative_position_id = generic_mio_trait_light_flame_projectors
 		
-		limit_to_equipment_type = { mechanized_equipment }
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
 		
 		all_parents = { generic_mio_trait_bulletproof_panels }
 

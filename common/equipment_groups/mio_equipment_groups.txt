@@ -1,4 +1,10 @@
-
+mio_cat_eq_all_artillery = {
+	equipment_type = {
+		pack_artillery_equipment
+		artillery_equipment
+		heavy_artillery_equipment
+	}
+}
 
 ########    ###    ##    ## ##    ##     ######   ########   #######  ##     ## ########   ######  
    ##      ## ##   ###   ## ##   ##     ##    ##  ##     ## ##     ## ##     ## ##     ## ##    ## 
@@ -12,13 +18,14 @@
 mio_cat_eq_all_light_tank = { #Includes (standalone) Amphibious Tank Chassis
 	equipment_type = {
 		light_tank_chassis
-		amphibious_tank_chassis
 	}	
 }
 
 mio_cat_eq_all_medium_tank = { #Includes Modern Tank Chassis
 	equipment_type = {
 		medium_tank_chassis
+		medium_assault_gun_equipment
+		amphibious_tank_chassis
 		modern_tank_chassis
 	}
 }
@@ -26,6 +33,7 @@ mio_cat_eq_all_medium_tank = { #Includes Modern Tank Chassis
 mio_cat_eq_all_heavy_tank = { #Includes Super Heavy Tank Chassis
 	equipment_type = {
 		heavy_tank_chassis
+		heavy_assault_gun_equipment
 		super_heavy_tank_chassis
 	}
 }
@@ -64,6 +72,7 @@ mio_cat_eq_all_cruiser = { #Includes all Cruiser (CA, CL, Coastal Defense, Torpe
 mio_cat_eq_all_destroyer = { #Includes all Destroyers --- Used due to custom loc capabilities (loc for ship_hull_light just sucks)
 	equipment_type = {
 		ship_hull_light
+		ship_hull_frigate
 	}
 }
 
