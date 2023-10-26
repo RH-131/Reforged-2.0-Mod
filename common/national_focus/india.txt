@@ -4182,7 +4182,8 @@ focus_tree = {
 		}
 
 		available = {
-			date > 1940.06.01
+			date > 1939.09.01
+			has_idea = RAJ_poor_industrial_infrastructure_2
 		}
 
 
@@ -4201,7 +4202,10 @@ focus_tree = {
 				load_oob = RAJ_tank
 			}
 			custom_effect_tooltip = RAJ_create_unit_tank_tt
-			
+			swap_ideas = {
+				remove_idea = RAJ_poor_industrial_infrastructure_2
+				add_idea = RAJ_poor_industrial_infrastructure_3
+			}
 			mio:generic_tank_organization = {
 				add_mio_funds = 500
 			}
