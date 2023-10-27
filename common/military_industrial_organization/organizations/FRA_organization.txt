@@ -23,12 +23,12 @@ FRA_renault_organization = {
 	}
 
 	visible = {
-		IF = {
-			limit = {
-				FROM = { original_tag = ETH }
-			}
-#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
+#		IF = {
+#			limit = {
+#				FROM = { original_tag = ETH }
+#			}
+##			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+#		}
 	}
 
 	available = {
@@ -217,12 +217,12 @@ FRA_bloch_organization = {
 	}
 
 	visible = {
-		IF = {
-			limit = {
-				FROM = { original_tag = ETH }
-			}
-#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
+#		IF = {
+#			limit = {
+#				FROM = { original_tag = ETH }
+#			}
+##			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+#		}
 	}
 	
 	available = {
@@ -319,15 +319,15 @@ FRA_somua_organization = {
 	}
 
 	visible = {
-		IF = { 
-			limit = {
-				FROM = { tag = POL }
-			}
-			FROM = {
-				has_country_flag = POL_somua_motors
-#				NOT = { has_completed_focus = POL_adaptive_designs }
-			}
-		}
+#		IF = { 
+#			limit = {
+#				FROM = { tag = POL }
+#			}
+#			FROM = {
+#				has_country_flag = POL_somua_motors
+##				NOT = { has_completed_focus = POL_adaptive_designs }
+#			}
+#		}
 	}
 
 	available = {
@@ -356,12 +356,12 @@ FRA_mas_organization = {
 	}
 	
 	visible = {
-		IF = {
-			limit = {
-				FROM = { original_tag = ETH }
-			}
-#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
+#		IF = {
+#			limit = {
+#				FROM = { original_tag = ETH }
+#			}
+##			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+#		}
 	}
 
 	available = {
