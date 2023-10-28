@@ -2412,8 +2412,16 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = MEX_astimar_gulf
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:MEX_astimar_gulf_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = MEX_astimar_gulf
+			}
 		}
 	}
 
@@ -2470,8 +2478,16 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = MEX_astimar_pacific
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:MEX_astimar_pacific_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = MEX_astimar_pacific
+			}
 		}
 	}
 

@@ -46,6 +46,35 @@ GER_porsche_organization = {
 #			FROM = { has_completed_focus = NOR_invite_german_engineers }
 		}
 	}
+
+	add_trait = {
+		token = GER_mio_trait_high_quality_manufacturing
+		name = GER_mio_trait_high_quality_manufacturing
+		icon = GFX_generic_mio_department_icon_tank_heavy_tank_materials
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_one_piece_hull_side_coverings
+
+		available = {
+			owner = {
+				has_completed_focus = GER_festung_principle
+			}
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.15
+			production_resource_need_factor = 0.15
+		}
+		equipment_bonus = {
+			reliability = -0.1
+			soft_attack = 0.25 
+			hard_attack = 0.25
+			ap_attack = 0.15
+			defense = 0.25
+			armor_value = 0.05
+		}
+	}
 }
 
 GER_henschel_organization = {
@@ -132,6 +161,33 @@ GER_man_organization = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
+		}
+	}
+
+	add_trait = {
+		token = GER_mio_trait_improved_armaments
+		name = GER_mio_trait_improved_armaments
+		icon = GFX_generic_mio_department_icon_tank_medium_tank_weapons
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_power_traverse
+
+		available = {
+			owner = {
+				has_completed_focus = GER_offense_is_the_best_defense
+			}
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.1
+		}
+		equipment_bonus = {
+			soft_attack = 0.15
+			hard_attack = 0.15
+			air_attack = 0.1
+			ap_attack = 0.1
+			maximum_speed = 0.05
 		}
 	}
 }

@@ -2753,8 +2753,16 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			custom_effect_tooltip = USA_springfield_arsenal_available_tt
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_springfield_armory_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				custom_effect_tooltip = USA_springfield_arsenal_available_tt
+			}
 			357 = {
 				add_extra_state_shared_building_slots = 10
 				add_building_construction = {
@@ -2912,13 +2920,18 @@ focus_tree = {
 				name = USA_detroit_vehicle_arsenal
 			}
 			if = {
-				limit ={has_war_support > 1.0}
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_detroit_arsenal_organization = {
+					add_mio_funds = 800
+				}
+			}
+			if = {
+				limit = {has_war_support > 1.0}
 			}
 			else = { 
 				custom_effect_tooltip = USA_dont_send_our_boys_to_war_tt
 				USA_we_dont_want_to_send_our_boys_away = yes
 			}
-
 		}
 	}	
 
@@ -2967,8 +2980,16 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = army_ordnance_department
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_army_ordnance_department_organization = {
+					add_mio_funds = 1600
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = army_ordnance_department
+			}
 		}
 	}						
 
@@ -2987,8 +3008,16 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = chrysler
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_chrysler_organization = {
+					add_mio_funds = 1600
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = chrysler
+			}
 		}
 	}						
 
@@ -3015,8 +3044,16 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			custom_effect_tooltip = USA_rock_island_arsenal_available_tt
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_rock_island_arsenal_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				custom_effect_tooltip = USA_rock_island_arsenal_available_tt
+			}
 			395 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -3180,8 +3217,16 @@ focus_tree = {
 				ahead_reduction = 1
 				bonus = 1 
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = north_american_aviation 
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_north_american_aviation_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = north_american_aviation 
+			}
 		}
 	}						
 
@@ -3230,8 +3275,16 @@ focus_tree = {
 				uses = 1 
 				name = USA_a_modern_anaconda_plan
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = boeing 
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_boeing_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = boeing 
+			}
 		}
 	}		
 

@@ -78,9 +78,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = andre_marty_shipyard_plant_number_194
-
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:SOV_rubin_design_bureau_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = andre_marty_shipyard_plant_number_194
+			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
@@ -95,9 +102,16 @@ focus_tree = {
 					instant_build = yes 
 				}
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = sevmash_plant_no_402
-
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:SOV_sevmash_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = sevmash_plant_no_402
+			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
@@ -112,10 +126,16 @@ focus_tree = {
 					instant_build = yes 
 				}
 			}
-
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = south_point_shipyard
-
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:SOV_nevskoye_design_bureau_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = south_point_shipyard
+			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
@@ -130,9 +150,16 @@ focus_tree = {
 					instant_build = yes 
 				}
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = lenin_komsomol_plant_no_199
-
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:SOV_black_sea_shipyard_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = lenin_komsomol_plant_no_199
+			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
@@ -3030,8 +3057,16 @@ focus_tree = {
 		}
 		relative_position_id = SOV_heavy_state_funding_for_tank_bureaus
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = dzerzhinsky_stalingrad_tractor_factory
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:SOV_astrov_design_bureau_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = dzerzhinsky_stalingrad_tractor_factory
+			}
 			add_ideas = morozov_design_bureau
 		}
 	}
@@ -3158,8 +3193,16 @@ focus_tree = {
 		}
 		relative_position_id = SOV_heavy_state_funding_for_tank_bureaus
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = chelyabinsk_tractor_plant
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:SOV_okmo_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = chelyabinsk_tractor_plant
+			}
 			add_ideas = okmo_research
 		}
 	}	
@@ -3509,11 +3552,18 @@ focus_tree = {
 
 		relative_position_id = SOV_artillery_development
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = grabin_design_bureau_mass
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = grabin_design_bureau_hammer
-
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:SOV_grabin_design_bureau_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = grabin_design_bureau_mass
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = grabin_design_bureau_hammer
+			}
 			add_tech_bonus = {
 				bonus = 1
 				uses = 2
@@ -4475,8 +4525,16 @@ focus_tree = {
 		relative_position_id = SOV_air_volunteers_in_china
 		completion_reward = {
 			activate_mission_tooltip = SOV_5_year_plan_build_airforce_cas
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = ilyushin_design_bureau	
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:SOV_ilyushin_design_bureau_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = ilyushin_design_bureau	
+			}
 			
 			add_timed_idea = {
 				idea = SOV_aviation_enthusiasm 

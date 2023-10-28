@@ -1129,8 +1129,18 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = CHI_camco_1
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip  = CHI_camco_medium_organization
+				mio:CHI_camco_medium_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = CHI_camco_1
+			}
 		}
 	}
 
@@ -1158,8 +1168,18 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = CHI_camco_2
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip  = CHI_camco_fighter_organization
+				mio:CHI_camco_fighter_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = CHI_camco_2
+			}
 		}
 	}
 
@@ -1186,8 +1206,18 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = CHI_camco_3
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip  = CHI_camco_bomber_organization
+				mio:CHI_camco_bomber_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = CHI_camco_3
+			}
 		}
 	}
 
@@ -1979,8 +2009,6 @@ focus_tree = {
 
 		complete_tooltip = {
 			CHI_hyper_inflation_level_up = yes
-			custom_effect_tooltip = available_designer
-			add_ideas = CHI_hanyan_arsenal			
 			random_state = {
 				limit = {
 					has_state_flag = CHI_develop_the_hanyan_arsenal_AF
@@ -1992,12 +2020,20 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:CHI_hanyan_arsenal_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				add_ideas = CHI_hanyan_arsenal
+			}
 		}
 
 		completion_reward = {
-			CHI_hyper_inflation_level_up = yes
-			custom_effect_tooltip = available_designer
-			add_ideas = CHI_hanyan_arsenal						
+			CHI_hyper_inflation_level_up = yes		
 			random_owned_controlled_state = {
 				prioritize = { 620 }
 				limit = {
@@ -2014,6 +2050,16 @@ focus_tree = {
 					instant_build = yes
 				}
 				set_state_flag = CHI_develop_the_hanyan_arsenal_AF
+			}
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:CHI_hanyan_arsenal_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				add_ideas = CHI_hanyan_arsenal
 			}
 		}
 	}

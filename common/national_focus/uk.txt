@@ -3654,8 +3654,16 @@ focus_tree = {
 					uses = 2
 					category = land_doctrine
 				}
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = vauxhall
+				if = {
+					limit = { has_dlc = "Arms Against Tyranny" }
+					mio:ENG_vauxhall_organization = {
+						add_mio_funds = 800
+					}
+				}
+				else = {
+					custom_effect_tooltip = available_designer
+					show_ideas_tooltip = vauxhall
+				}
 				custom_effect_tooltip = ENG_focus_boost_tt
 				effect_tooltip = {
 					add_tech_bonus = {				
