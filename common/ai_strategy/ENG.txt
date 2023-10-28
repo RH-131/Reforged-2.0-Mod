@@ -17,7 +17,6 @@ ENG_dont_defend_poland_against_germany = {
 		original_tag = ENG
 	}
 	enable = {
-		tag = ENG
 		GER = { has_war_with = POL }
 		country_exists = POL
 	}
@@ -47,7 +46,7 @@ ENG_destroy_the_empire_of_dirt = {
 		original_tag = ENG
 	}
 	enable = {
-		tag = ENG
+		always = yes
 	}
 	abort = {
 		NOT = { country_exists = ITA }
@@ -96,24 +95,7 @@ RAJ_deals_with_ethiopia = {
 		original_tag = RAJ
 	}
 	enable = {
-		tag = RAJ
-	}
-	abort = {
-		NOT = { country_exists = ETH }
-	}
-	ai_strategy = {
-		type = front_unit_request 
-		tag = ETH 
-		value = 100
-	}
-}
-
-RAJ_deals_with_ethiopia = {
-	allowed = {
-		original_tag = RAJ
-	}
-	enable = {
-		tag = RAJ
+		always = yes
 	}
 	abort = {
 		NOT = { country_exists = ETH }
@@ -149,7 +131,6 @@ RAJ_deals_with_ethiopia = {
 		ordertype = front
 		execution_type = rush
 		manual_attack = yes
-		value = 400
 	}
 }
 
@@ -159,7 +140,6 @@ ENG_dont_click_invasion_before_america_joins = {
 		original_tag = ENG
 	}
 	enable = {
-		tag = ENG
 		date < 1942.9.1
 	}
 	abort = {
@@ -175,11 +155,6 @@ ENG_dont_click_invasion_before_america_joins = {
 	ai_strategy = {
 		type = invade
 		id = "GER"			
-		value = -9999
-	}
-	ai_strategy = {
-		type = invade
-		id = "GNO"			
 		value = -9999
 	}
 	ai_strategy = {
@@ -283,7 +258,7 @@ ENG_garrison_home = {
 		type = put_unit_buffers
 		ratio = 0.60
 		states = { 
-			127
+			127#South England
 			126
 			125
 			123
@@ -292,9 +267,9 @@ ENG_garrison_home = {
 			129
 			130
 			132 
-			118
-			116
-			183
+			118#Gib
+			116#Malta
+			183#Cyprus
 		}
 		subtract_invasions_from_need = no
 		subtract_fronts_from_need = no
@@ -306,7 +281,6 @@ ENG_the_channel_is_dangerous = {
 		original_tag = ENG
 	}
 	enable = {
-		original_tag = ENG
 		has_war_with = GER
 	}
 	abort_when_not_enabled = yes
@@ -323,11 +297,9 @@ ENG_lifeline_of_the_empire = {
 		original_tag = ENG
 	}
 	enable = {
-		original_tag = ENG
+		always = yes
 	}
-	abort = {
-		always = no
-	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = ignore
 		id = "ITA"
@@ -377,13 +349,10 @@ ENG_time_to_ditch_FRA = {
 			has_capitulated = no
 			surrender_progress > 0.7
 		}
-		OR = {
-			NOT = { has_global_flag = FRA_already_surrendered }
-			#lets give a month of retreat time after capitulation
-			set_temp_variable = { t = global.num_days }
-			subtract_from_temp_variable = { t = global.FRA_capitulation_days }
-			check_variable = { t < 30 }
-		}
+		#lets give a month of retreat time after capitulation
+		set_temp_variable = { t = global.num_days }
+		subtract_from_temp_variable = { t = global.FRA_capitulation_days }
+		check_variable = { t < 30 }
 	}
 	
 	abort_when_not_enabled = yes
@@ -480,8 +449,6 @@ dont_get_sucked_into_FRA_and_die = {
 		has_war_together_with = FRA
 
 		date < 1941.9.9
-
-		NOT = { has_global_flag = FRA_already_surrendered }
 	}
 	abort_when_not_enabled = yes	
 
@@ -502,7 +469,7 @@ RAJ_africa = {
 		original_tag = RAJ
 	}
 	enable = {
-		original_tag = RAJ
+		always = yes
 	}
 	abort = {
 		date > 1941.1.1

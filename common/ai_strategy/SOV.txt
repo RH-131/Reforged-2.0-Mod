@@ -16,7 +16,6 @@ SOV_wants_civ = {
 		tag = SOV
 	}
 	enable = {
-		tag = SOV
 		has_war = no
 	}
 	abort = {
@@ -33,7 +32,6 @@ SOV_wants_mils = {
 		tag = SOV
 	}
 	enable = {
-		tag = SOV
 		has_completed_focus = SOV_begin_the_3_5_year_plan
 	}
 	abort_when_not_enabled = yes
@@ -53,7 +51,7 @@ SOV_siberia = {
 		tag = SOV
 	}
 	enable = {
-		original_tag = SOV
+		always = yes
 	}
 
 	abort_when_not_enabled = yes
@@ -132,15 +130,11 @@ claims_on_finland = {
 		tag = SOV
 	}
 	enable = {
-		tag = SOV
 		country_exists = FIN
 	}
 	abort = {
-	country_exists = FIN
-		FIN = {
-			has_government = ROOT
-			}
-		}
+		NOT = { country_exists = FIN }
+	}
 	
 	ai_strategy = {
 		type = ignore
@@ -154,7 +148,6 @@ germany_enemy = {
 		tag = SOV
 	}
 	enable = {
-		tag = SOV
 		country_exists = GER
 		OR = {
 			date > 1942.1.1
@@ -167,7 +160,7 @@ germany_enemy = {
 	
 	ai_strategy = {
 		type = antagonize
-		id = "GER"			
+		id = "GER"		
 		value = 200
 	}	
 }
@@ -175,12 +168,12 @@ germany_enemy = {
 spanish_civil_war_SOV = {
 	allowed = {
 		tag = SOV
+		NOT = { has_dlc = "La Resistance" }	
 	}
 	enable = {
 		original_tag = SOV
 		has_government = communism
-		SPR = { has_civil_war = yes }
-		NOT = { has_dlc = "La Resistance" }							 
+		SPR = { has_civil_war = yes }						 
 		NOT = { has_global_flag = scw_over }
 	}
 	
@@ -201,12 +194,12 @@ spanish_civil_war_SOV = {
 spanish_civil_war_SOV_resistance = {
 	allowed = {
 		tag = SOV
+		has_dlc = "La Resistance"
 	}
 	enable = {
 		original_tag = SOV
 		has_government = communism
 		country_exists = SPD
-		has_dlc = "La Resistance"
 		has_global_flag = spanish_civil_war
 		NOT = { has_global_flag = scw_over }
 	}
@@ -217,17 +210,17 @@ spanish_civil_war_SOV_resistance = {
 	
 	ai_strategy = {
 		type = befriend
-		id = "SPD"			
+		id = "D01"			
 		value = 100
 	}	
 	ai_strategy = {
 		type = support
-		id = "SPD"			
+		id = "D01"			
 		value = 100
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "SPD"			
+		id = "D01"			
 		value = 100
 	}	
 }
@@ -237,7 +230,6 @@ SOV_pp_spending = {
 		tag = SOV
 	}
 	enable = {
-		original_tag = SOV
 		has_manpower < 100000
 		has_political_power < 200
 	}
@@ -261,7 +253,7 @@ SOV_play_nice_with_ribbentrop_pact = {
 		tag = SOV
 	}
 	enable = {
-		tag = SOV
+		always = yes
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -334,10 +326,10 @@ SOV_play_nice_with_ribbentrop_pact = {
 SOV_naval_role_ratios_historical = {
 	allowed = {
 		tag = SOV
+		has_dlc = "Man the Guns"
 	}
 	enable = {
-		has_dlc = "Man the Guns"
-		original_tag = SOV
+		always = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -382,40 +374,6 @@ SOV_naval_role_ratios_historical = {
 		id = naval_cruiser_heavy
 		value = -15
 	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_sweeper
-		value = 15
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_layer
-		value = 80
-	}
-}
-
-SOV_the_nkvd_is_all_the_intel_we_need = {
-	allowed = {
-		tag = SOV
-	}
-	enable = {
-		tag = SOV
-		has_government = communism
-		has_dlc = "La Resistance"
-		num_of_civilian_factories < 90
-		num_of_civilian_factories > 35
-	}
-	abort = {
-		OR = {
-			num_of_civilian_factories > 90
-		}
-	}
-	ai_strategy = {
-		type = intelligence_agency_usable_factories
-		value = -20
-	}
 }
 
 SOV_dont_upgrade_to_weapons_2_too_early = {
@@ -423,7 +381,6 @@ SOV_dont_upgrade_to_weapons_2_too_early = {
 		tag = SOV
 	}
 	enable = {
-		original_tag = SOV
 		OR = {
 			date < "1943.1.1" # stock up on lots of rifles, we got the manpower
 			AND = {
@@ -447,7 +404,7 @@ SOV_home_land_is_safe = {
 		tag = SOV
 	}
 	enable = {
-		original_tag = SOV
+		always = yes
 	}
 	abort_when_not_enabled = yes
 	
@@ -462,7 +419,6 @@ SOV_great_patriotic_war = {
 		tag = SOV
 	}
 	enable = {
-		original_tag = SOV
 		date < 1942.6.1
 	}
 

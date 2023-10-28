@@ -15,7 +15,6 @@ british_help_against_germany = {
 		tag = POL
 	}
 	enable = {
-		tag = POL
 		GER = { has_war_with = POL }		
 		country_exists = ENG
 	}
@@ -38,8 +37,7 @@ defend_against_adolfo = {
 	allowed = {
 		tag = POL
 	}
-	enable = {
-		tag = POL	
+	enable = {	
 		country_exists = GER
 	}
 	abort = {
@@ -97,12 +95,6 @@ POL_template_design = {
 		type = template_prio
 		id = medium_armor
 		value = -10
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = heavy_armor
-		value = -50
 	}
 
 	ai_strategy = {

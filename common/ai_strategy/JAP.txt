@@ -526,12 +526,6 @@ JAP_template_design = {
 
 	ai_strategy = {
 		type = template_prio
-		id = heavy_armor
-		value = -100
-	}
-
-	ai_strategy = {
-		type = template_prio
 		id = paratroopers
 		value = -10
 	}
@@ -692,18 +686,6 @@ JAP_naval_role_ratios_historical = {
 		id = naval_cruiser_heavy
 		value = -50
 	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_sweeper
-		value = 5
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_layer
-		value = 5
-	}
 	# general building directives
 	ai_strategy = {
 		type = unit_ratio
@@ -820,18 +802,6 @@ JAP_naval_role_ratios_historical_late = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_cruiser_heavy
-		value = 5
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_sweeper
-		value = 5
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_layer
 		value = 5
 	}
 	# general building directives

@@ -19,7 +19,7 @@ GER_destroyers = {
 	}
 	
 	destroyer_default = {
-	
+		name = angry_speedboat
 		priority = {
 			factor = 1
 			modifier = {
@@ -31,7 +31,7 @@ GER_destroyers = {
 		target_variant = {
 			match_value = 2000.0
 			
-			type = ship_hull_light
+			type = ship_hull_light_1
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
 				fixed_ship_anti_air_slot = ship_anti_air
@@ -112,9 +112,9 @@ GER_destroyers = {
 				fixed_ship_radar_slot = ship_sonar
 				fixed_ship_engine_slot = light_ship_engine_2
 				fixed_ship_torpedo_slot = ship_torpedo
-				front_1_custom_slot = ship_anti_air
-				mid_1_custom_slot = ship_anti_air
-				rear_1_custom_slot = ship_depth_charge
+				front_1_custom_slot = ship_depth_charge
+				mid_1_custom_slot = ship_torpedo
+				rear_1_custom_slot = ship_torpedo
 			}
 		}
 		
@@ -151,10 +151,10 @@ GER_destroyers = {
 				fixed_ship_radar_slot = ship_sonar
 				fixed_ship_engine_slot = light_ship_engine
 				fixed_ship_torpedo_slot = ship_torpedo
-				front_1_custom_slot = ship_anti_air
+				front_1_custom_slot = ship_depth_charge
 				mid_1_custom_slot = ship_torpedo
-				rear_1_custom_slot = ship_depth_charge
-				mid_2_custom_slot = ship_light_battery
+				mid_2_custom_slot = ship_torpedo
+				rear_1_custom_slot = ship_light_battery
 			}
 		}
 		
@@ -208,8 +208,8 @@ GER_naval_light_cruiser = {
 				fixed_ship_engine_slot = cruiser_ship_engine_1
 				fixed_ship_armor_slot = ship_armor_cruiser_1
 				fixed_ship_secondaries_slot = empty
-				mid_1_custom_slot = ship_torpedo
-				mid_2_custom_slot = ship_light_medium_battery_1
+				mid_1_custom_slot = ship_light_medium_battery_1
+				mid_2_custom_slot = ship_torpedo
 				rear_1_custom_slot = ship_torpedo
 			}
 		}
@@ -248,9 +248,9 @@ GER_naval_light_cruiser = {
 				fixed_ship_armor_slot = ship_armor_cruiser_1
 				fixed_ship_secondaries_slot = empty
 				front_1_custom_slot = ship_anti_air_1
-				mid_1_custom_slot = ship_torpedo_1
-				mid_2_custom_slot = ship_light_medium_battery_1
-				rear_1_custom_slot = ship_airplane_launcher_1
+				mid_1_custom_slot = ship_light_medium_battery_1
+				mid_2_custom_slot = ship_torpedo_1
+				rear_1_custom_slot = ship_light_medium_battery_1
 			}
 		}
 		
@@ -290,8 +290,8 @@ GER_naval_light_cruiser = {
 				fixed_ship_engine_slot = cruiser_ship_engine
 				fixed_ship_armor_slot = ship_armor_cruiser_1
 				front_1_custom_slot = ship_anti_air
-				mid_1_custom_slot = { any_of = { ship_torpedo ship_anti_air } }
-				mid_2_custom_slot > ship_light_medium_battery_1
+				mid_1_custom_slot > ship_light_medium_battery_1
+				mid_2_custom_slot = { any_of = { ship_torpedo ship_anti_air } }
 				rear_1_custom_slot = ship_airplane_launcher_1
 			}
 		}
@@ -334,9 +334,9 @@ GER_naval_light_cruiser = {
 				fixed_ship_engine_slot = cruiser_ship_engine
 				fixed_ship_armor_slot > ship_armor_cruiser_1
 				front_1_custom_slot = ship_anti_air
-				mid_1_custom_slot = ship_torpedo
-				mid_2_custom_slot > ship_light_medium_battery_2
-				rear_1_custom_slot = ship_airplane_launcher
+				mid_1_custom_slot > ship_light_medium_battery_2
+				mid_2_custom_slot = ship_torpedo
+				rear_1_custom_slot > ship_light_medium_battery_2
 			}
 		}
 		
@@ -390,16 +390,16 @@ GER_naval_cruiser_scout = {
 			
 			type = ship_hull_cruiser_2
 			modules = {
-				fixed_ship_battery_slot = ship_medium_battery_2
-				fixed_ship_fire_control_system_slot = ship_fire_control_system
+				fixed_ship_battery_slot = dp_light_battery
+				fixed_ship_fire_control_system_slot = ship_radar
 				fixed_ship_anti_air_slot = ship_anti_air
-				fixed_ship_radar_slot = ship_radar
+				fixed_ship_radar_slot = ship_sonar
 				fixed_ship_engine_slot = cruiser_ship_engine
 				fixed_ship_armor_slot = empty
 				fixed_ship_secondaries_slot = ship_secondaries
 				front_1_custom_slot = ship_anti_air
 				mid_1_custom_slot = {
-					any_of = { ship_anti_air ship_torpedo ship_secondaries }
+					any_of = { ship_anti_air ship_airplane_launcher }
 				}
 				mid_2_custom_slot = {
 					any_of = { ship_airplane_launcher ship_anti_air ship_torpedo }
@@ -459,18 +459,19 @@ GER_naval_cruiser_panzerschiff = {
 				fixed_ship_armor_slot = ship_armor_cruiser_1
 				fixed_ship_fire_control_system_slot = ship_fire_control_system
 				fixed_ship_engine_slot = cruiser_ship_engine_1
-				front_1_custom_slot = empty
+				front_1_custom_slot = ship_anti_air
 				mid_1_custom_slot = ship_airplane_launcher
-				rear_1_custom_slot = ship_torpedo
+				rear_1_custom_slot = ship_heavy_battery_2
 			}
 		}
 		
 		allowed_modules = {
 			ship_anti_air
-			ship_medium_battery
+			ship_heavy_battery
 			ship_radar
 			ship_torpedo
 			ship_airplane_launcher
+			ship_secondaries
 		}
 	}
 	panzerschiff_basic_upgrade = {
@@ -494,20 +495,22 @@ GER_naval_cruiser_panzerschiff = {
 				fixed_ship_anti_air_slot = ship_anti_air
 				fixed_ship_armor_slot = ship_armor_cruiser_1
 				fixed_ship_fire_control_system_slot = ship_fire_control_system
-				fixed_ship_engine_slot = cruiser_ship_engine_1
+				fixed_ship_engine_slot = cruiser_ship_engine
 				front_1_custom_slot = ship_anti_air
 				mid_1_custom_slot = ship_airplane_launcher
-				mid_2_custom_slot = ship_anti_air
-				rear_1_custom_slot = ship_torpedo
+				mid_2_custom_slot = ship_secondaries
+				rear_1_custom_slot = ship_heavy_battery_2
 			}
 		}
 		
 		allowed_modules = {
 			ship_anti_air
-			ship_medium_battery
+			ship_heavy_battery
 			ship_radar
 			ship_torpedo
+			cruiser_ship_engine
 			ship_airplane_launcher
+			ship_secondaries
 		}
 	}
 	panzerschiff_basic_late = {
@@ -534,20 +537,22 @@ GER_naval_cruiser_panzerschiff = {
 				fixed_ship_anti_air_slot = ship_anti_air
 				fixed_ship_armor_slot = ship_armor_cruiser_1
 				fixed_ship_fire_control_system_slot = ship_fire_control_system
-				fixed_ship_engine_slot = cruiser_ship_engine_1
+				fixed_ship_engine_slot = cruiser_ship_engine
 				front_1_custom_slot = ship_anti_air
 				mid_1_custom_slot = ship_airplane_launcher
 				mid_2_custom_slot = dp_ship_secondaries
-				rear_1_custom_slot = ship_torpedo
+				rear_1_custom_slot = ship_heavy_battery_2
 			}
 		}
 		
 		allowed_modules = {
 			ship_anti_air
-			ship_medium_battery
+			ship_heavy_battery
 			ship_radar
 			ship_torpedo
+			cruiser_ship_engine
 			ship_airplane_launcher
+			ship_secondaries
 		}
 	}
 }
@@ -593,8 +598,8 @@ GER_naval_cruiser_heavy = {
 				fixed_ship_engine_slot = cruiser_ship_engine_1
 				fixed_ship_armor_slot = ship_armor_cruiser_2
 				front_1_custom_slot = ship_anti_air
-				mid_1_custom_slot = ship_torpedo
-				mid_2_custom_slot = ship_airplane_launcher
+				mid_1_custom_slot = ship_medium_battery_2
+				mid_2_custom_slot = ship_anti_air
 				rear_1_custom_slot = ship_medium_battery_2
 			}
 		}
@@ -630,8 +635,8 @@ GER_naval_cruiser_heavy = {
 				fixed_ship_engine_slot = cruiser_ship_engine
 				fixed_ship_armor_slot = ship_armor_cruiser_2
 				front_1_custom_slot = ship_anti_air
-				mid_1_custom_slot = ship_torpedo
-				mid_2_custom_slot = ship_airplane_launcher_1
+				mid_1_custom_slot = ship_medium_battery_2
+				mid_2_custom_slot = ship_anti_air
 				rear_1_custom_slot = ship_medium_battery_2
 			}
 		}
@@ -666,8 +671,8 @@ GER_naval_cruiser_heavy = {
 				fixed_ship_engine_slot = cruiser_ship_engine
 				fixed_ship_armor_slot = ship_armor_cruiser_2
 				front_1_custom_slot = ship_anti_air
-				mid_1_custom_slot = ship_torpedo
-				mid_2_custom_slot = ship_airplane_launcher
+				mid_1_custom_slot = ship_medium_battery_2
+				mid_2_custom_slot = ship_anti_air
 				rear_1_custom_slot = ship_medium_battery_2
 			}
 		}
@@ -708,8 +713,8 @@ GER_naval_cruiser_heavy = {
 				fixed_ship_armor_slot > ship_armor_cruiser_2
 				fixed_ship_secondaries_slot = ship_secondaries
 				front_1_custom_slot = ship_anti_air
-				mid_1_custom_slot = ship_anti_air
-				mid_2_custom_slot = ship_airplane_launcher
+				mid_1_custom_slot > ship_medium_battery_2
+				mid_2_custom_slot = ship_anti_air
 				rear_1_custom_slot > ship_medium_battery_2
 			}
 		}
@@ -749,11 +754,11 @@ GER_naval_cruiser_heavy = {
 				fixed_ship_engine_slot > cruiser_ship_engine_1
 				fixed_ship_armor_slot > ship_armor_cruiser_2
 				fixed_ship_secondaries_slot = ship_secondaries
-				front_1_custom_slot = ship_anti_air
+				front_1_custom_slot > ship_medium_battery_2
 				mid_1_custom_slot = ship_anti_air
-				mid_2_custom_slot = ship_airplane_launcher
+				mid_2_custom_slot = ship_anti_air
 				rear_1_custom_slot > ship_medium_battery_2
-				rear_2_custom_slot = ship_anti_air
+				rear_2_custom_slot > ship_medium_battery_2
 			}
 		}
 		
@@ -853,7 +858,7 @@ GER_naval_capital_battleship = {
 				fixed_ship_armor_slot = ship_armor_bb_1
 				front_1_custom_slot = ship_anti_air
 				mid_1_custom_slot = ship_anti_air
-				rear_1_custom_slot = ship_anti_air
+				rear_1_custom_slot = ship_heavy_battery_1
 			}
 		}
 		
@@ -935,7 +940,7 @@ GER_naval_capital_battleship = {
 				fixed_ship_armor_slot = ship_armor_bb_1
 				front_1_custom_slot = ship_anti_air
 				mid_1_custom_slot = ship_anti_air
-				mid_2_custom_slot = ship_anti_air
+				mid_2_custom_slot = ship_airplane_launcher
 				rear_1_custom_slot = ship_heavy_battery_2
 			}
 		}
@@ -1360,7 +1365,7 @@ GER_naval_submarine = {
 	}
 
 	submarine_early = {
-	
+		name = type_ii_class
 		priority = {
 			factor = 10
 		}
@@ -1385,7 +1390,7 @@ GER_naval_submarine = {
 		}
 	}
 	submarine_basic = {
-	
+		name = type_vii_class
 		priority = {
 			factor = 20
 		}
@@ -1410,7 +1415,7 @@ GER_naval_submarine = {
 		}
 	}
 	submarine_improved = {
-	
+		name = type_viic_class
 		priority = {
 			factor = 20
 		}
@@ -1437,7 +1442,7 @@ GER_naval_submarine = {
 		}
 	}
 	submarine_advanced = {
-	
+		name = type_xxi_class
 		priority = {
 			factor = 50
 			modifier = {

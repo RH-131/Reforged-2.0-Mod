@@ -81,24 +81,9 @@ USA_unit_buffer_for_africa = {
 		tag = USA
 	}
 	enable = {
-		tag = USA
 		date > 1941.1.1
 		
 		should_USA_invade_europe_or_africa = yes
-		
-		all_state = {
-			OR = {
-				is_on_continent = africa
-				AND = {
-					GER = {
-						divisions_in_state = { state = PREV size < 1 }
-					}
-					ITA = {
-						divisions_in_state = { state = PREV size < 1 }
-					}
-				}
-			}
-		}
 	}
 	
 	abort_when_not_enabled = yes
@@ -286,7 +271,6 @@ USA_wants_civ = {
 		tag = USA
 	}
 	enable = {
-		tag = USA
 		has_war = no
 	}
 	abort = {
@@ -303,7 +287,6 @@ USA_wants_mils = {
 		tag = USA
 	}
 	enable = {
-		tag = USA
 		has_completed_focus = USA_the_giant_wakes
 	}
 	abort_when_not_enabled = yes
@@ -323,13 +306,13 @@ USA_wants_docks = {
 		tag = USA
 	}
 	enable = {
-		tag = USA
+		always = yes
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = dockyard
-		value = 10
+		value = 20
 	}
 }
 USA_wants_rubber = {
@@ -337,7 +320,6 @@ USA_wants_rubber = {
 		tag = USA
 	}
 	enable = {
-		tag = USA
 		date > 1939.9.1
 	}
 	abort_when_not_enabled = yes
@@ -352,20 +334,7 @@ USA_save_the_aussies = {
 		tag = USA
 	}
 	enable = {
-		tag = USA
-		has_government = democratic
-		is_in_faction = no
-		has_war = no
-
 		JAP = {	has_war_with = AST }
-		AST = {
-			has_government = democratic			
-			surrender_progress > 0.15
-		}
-		has_opinion = {
-			target = AST
-			value > 0 # not if we hate AST
-		}
 	}
 	abort = {
 		OR = {
@@ -400,14 +369,8 @@ USA_save_india = { # in the case where japan has beaten china and is moving on i
 		tag = USA
 	}
 	enable = {
-		tag = USA
-		has_government = democratic
-		is_in_faction = no
-		has_war = no
-
 		JAP = {	
-			has_war_with = RAJ 
-			NOT = { has_war_with = CHI }
+			has_war_with = RAJ
 		}
 		RAJ = {
 			is_in_faction_with = ENG
@@ -442,17 +405,11 @@ USA_stop_soviet_from_falling = {
 		tag = USA
 	}
 	enable = {
-		tag = USA
 		has_war = no
 		num_divisions > 85 # we must have some divisions ourselves
-
-		NOT = { has_government = fascism }
-		NOT = { is_in_faction_with = GER }
 		NOT = { has_war_with = SOV }
 		GER = { 
-			has_war_with = SOV 
-			has_war_with = ENG
-			has_government = fascism
+			has_war_with = SOV
 		}
 		SOV = {
 			surrender_progress > 0.05
@@ -463,10 +420,7 @@ USA_stop_soviet_from_falling = {
 	abort = {
 		OR = {
 			has_war = yes
-			has_war_with = SOV
 			NOT = { GER = { has_war_with = SOV } }
-			is_in_faction_with = GER
-			has_government = fascism
 			SOV = { has_war = no }
 			SOV = { surrender_progress < 0.01 }
 		}
@@ -495,12 +449,6 @@ USA_stop_soviet_from_falling = {
 		id = medium_armor
 		value = -25
 	}
-
-	ai_strategy = {
-		type = template_prio
-		id = heavy_armor
-		value = -25
-	}
 }
 
 # this one is same as above, but if you have entered the war yourself
@@ -509,14 +457,9 @@ USA_stop_soviet_from_falling_2 = {
 		tag = USA
 	}
 	enable = {
-		tag = USA
 		has_war = yes
-		NOT = { has_government = fascism }
-		NOT = { is_in_faction_with = GER }
-		NOT = { has_war_with = SOV }
 		GER = { 
 			has_war_with = SOV 
-			has_war_with = USA
 		}
 		SOV = {
 			surrender_progress > 0.05
@@ -527,10 +470,7 @@ USA_stop_soviet_from_falling_2 = {
 	abort = {
 		OR = {
 			has_war = no
-			has_war_with = SOV
 			NOT = { GER = { has_war_with = SOV } }
-			is_in_faction_with = GER
-			has_government = fascism
 			SOV = { has_war = no }
 			SOV = { surrender_progress < 0.01 }
 		}
@@ -548,7 +488,6 @@ USA_template_design_1 = {
 		tag = USA
 	}
 	enable = {
-		original_tag = USA
 		date < 1940.1.1				
 	}
 	abort = { 
@@ -581,12 +520,6 @@ USA_template_design_1 = {
 
 	ai_strategy = {
 		type = template_prio
-		id = heavy_armor
-		value = -50
-	}
-
-	ai_strategy = {
-		type = template_prio
 		id = paratroopers
 		value = -50
 	}
@@ -608,7 +541,6 @@ USA_template_design_2 = {
 		tag = USA
 	}
 	enable = {
-		original_tag = USA
 		date > 1940.1.1				
 	}
 	abort_when_not_enabled = yes
@@ -636,18 +568,6 @@ USA_template_design_2 = {
 		id = medium_armor
 		value = 20
 	}
-	
-	ai_strategy = {
-		type = template_prio
-		id = modern_armor
-		value = 40
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = heavy_armor
-		value = -20
-	}
 
 	ai_strategy = {
 		type = template_prio
@@ -673,7 +593,6 @@ USA_garrison_production = {
 		tag = USA
 	}
 	enable = {
-		original_tag = USA
 		ai_wants_divisions >  12 #Massively decreasing the amount of paratroopers the AI wants
 	}
 	abort = {
@@ -714,13 +633,8 @@ GER_is_bad = {
 		GER = {
 			exists = yes
 		}
-		NOT = { is_ally_with = GER }
 		ENG = {
 			has_war_with = GER
-		}
-		has_government = democratic
-		ENG = {
-			has_government = democratic
 		}
 		date > 1939.1.1
 	}
@@ -736,10 +650,10 @@ GER_is_bad = {
 USA_naval_role_ratios_historical = {
 	allowed = {
 		tag = USA
+		has_dlc = "Man the Guns"
 	}
 	enable = {
-		has_dlc = "Man the Guns"
-		original_tag = USA
+		always = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -792,18 +706,6 @@ USA_naval_role_ratios_historical = {
 	}
 
 	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_sweeper
-		value = 15
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_layer
-		value = 10
-	}
-
-	ai_strategy = {
 		type = unit_ratio
 		id = capital_ship
 		value = 1		 #1 to 2
@@ -823,10 +725,9 @@ USA_naval_role_ratios_historical = {
 USA_naval_role_ratios_anti_submarine = {
 	allowed = {
 		tag = USA
+		has_dlc = "Man the Guns"
 	}
 	enable = {
-		has_dlc = "Man the Guns"
-		original_tag = USA
 		anti_submarine_strategy_required_trigger = yes
 	}
 
@@ -870,7 +771,6 @@ USA_semper_fi = {
 		tag = USA
 	}
 	enable = {
-		original_tag = USA
 		has_war_with = JAP
 	}
 	abort = {
@@ -891,14 +791,7 @@ USA_home_land_is_safe = {
 		tag = USA
 	}
 	enable = {
-		original_tag = USA
-		NOT = {
-			OR = {
-				has_civil_war = yes
-				has_war_with = CAN
-				has_war_with = MEX
-			}
-		}
+		always = yes
 	}
 	abort_when_not_enabled = yes
 	
@@ -914,7 +807,6 @@ USA_democracy_on_JAP = {
 		tag = USA
 	}
 	enable = {
-		original_tag = USA
 		has_war_with = JAP
 	}
 	abort = {
@@ -934,7 +826,6 @@ USA_help_waters_around_GER = {
 		tag = USA
 	}
 	enable = {
-		original_tag = USA
 		is_in_faction_with = ENG
 		NOT = { has_war_with = JAP }
 		has_war_with = GER

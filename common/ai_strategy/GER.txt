@@ -17,7 +17,6 @@ war_with_poland = {
 		tag = GER
 	}
 	enable = {
-		tag = GER
 		country_exists = POL
 	}
 	abort = {
@@ -41,14 +40,12 @@ danzig_of_war_preparation = {
 		tag = GER
 	}
 	enable = {
-		tag = GER
 		country_exists = POL
 	}
 	
 	abort = {
 		OR = {
 			NOT = { country_exists = POL }
-			
 			AND = {
 				GER = { has_war_with = POL }
 			}
@@ -68,7 +65,6 @@ dont_die_in_mountains = {
 		tag = GER
 	}
 	enable = {
-		tag = GER
 		country_exists = SWI
 		country_exists = SWE
 		country_exists = JAP
@@ -119,7 +115,6 @@ efr_is_our_bitch = {
 		tag = GER
 	}
     enable = {
-		tag = GER
 		country_exists = EFR
 	}
 	abort_when_not_enabled = yes
@@ -146,7 +141,6 @@ soviet_ally = {
 	}
 
 	enable = {
-		tag = GER
 		country_exists = SOV
 	}
 
@@ -171,7 +165,6 @@ italy_ally = {
 		tag = GER
 	}
 	enable = {
-		tag = GER
 		country_exists = ITA
 	}
 	abort = {
@@ -188,48 +181,32 @@ italy_ally = {
 spain_scw_support_GER_resistance = {
 	allowed = {
 		tag = GER
+		has_dlc = "La Resistance"
 	}
 	enable = {
-		tag = GER
 		has_government = fascism
-		has_dlc = "La Resistance"
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = SPA }
-			SPA = { has_completed_focus = SPA_allies }
+			NOT = { country_exists = SPR }
+			SPR = { has_completed_focus = SPA_allies }
 		}
 	}
 	ai_strategy = {
 		type = support
-		id = "SPD"			
-		value = -100
-	}	
-	ai_strategy = {
-		type = befriend
-		id = "SPD"			
+		id = "SPR"			
 		value = -100
 	}
 	ai_strategy = {
 		type = befriend
 		id = "SPA"			
 		value = 100
-	}	
-	ai_strategy = {
-		type = support
-		id = "SPA"
-		value = 100
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "SPA"
+		id = "SPR"
 		value = 9999
-	}	
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "SPD"
-		value = -9999
-	}	
+	}
 }
 
 play_nice_with_ribbentrop_pact = {
@@ -237,18 +214,12 @@ play_nice_with_ribbentrop_pact = {
 		tag = GER
 	}
 	enable = {
-		tag = GER
 		has_global_flag = sov_yes_pact		
 	}
 	abort = {
 		OR ={
 			GER = { has_war_with = SOV }
 			date > 1941.3.1
-			AND = {
-				LIT = { is_in_faction_with = SOV }
-				LAT = { is_in_faction_with = SOV }
-				EST = { is_in_faction_with = SOV }
-			}
 		}
 	}
 	
@@ -275,7 +246,6 @@ GER_scandinavia = {
 		tag = GER
 	}
 	enable = {
-		original_tag = GER
 		NOR = {	has_capitulated = yes }
 	}
 	abort_when_not_enabled = yes
@@ -292,7 +262,7 @@ GER_area_priority = {
 		tag = GER
 	}
 	enable = {
-		original_tag = GER
+		always = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -362,7 +332,6 @@ worry_about_barbarossa_before_africa = {
 		tag = GER
 	}
 	enable = {
-		tag = GER
 		country_exists = SOV
 		NOT = {	is_in_faction_with = SOV }
 		has_war_with = ENG
@@ -388,7 +357,6 @@ make_sure_poland_is_ganked_before_we_move = {
 		tag = GER
 	}
 	enable = {
-		tag = GER
 		has_war_with = POL
 		POL = { has_capitulated = no }
 		DEN = { has_capitulated = yes }
@@ -528,7 +496,6 @@ play_nice_with_benelux = {
 		tag = GER
 	}
 	enable = {
-		tag = GER
 		date < 1940.3.1	
 	}
 	abort = {
@@ -573,13 +540,11 @@ kill_benelux = {
 		tag = GER
 	}
 	enable = {
-		tag = GER
 		date > 1940.5.5	
 		HOL = {	has_capitulated = no }
 		BEL = {	has_capitulated = no }
 	}
 	abort = {
-	    tag = GER
 		HOL = {	has_capitulated = yes }
 		BEL = {	has_capitulated = yes }
 	}
@@ -641,7 +606,6 @@ war_with_yugoslavia = {
 		tag = GER
 	}
 	enable = {
-		tag = GER
 		date > 1940.12.1
 		country_exists = YUG
 	}
@@ -665,7 +629,6 @@ war_with_soviets = {
 		tag = GER
 	}
 	enable = {
-		tag = GER
 		date > 1941.1.1
 		country_exists = SOV
 	}
@@ -694,34 +657,11 @@ war_with_soviets = {
 	}
 }
 
-GER_we_are_bad_at_espionage_because_it_is_expensive_and_not_tanks = {
-	allowed = {
-		tag = GER
-	}
-	enable = {
-		tag = GER
-		has_dlc = "La Resistance"
-		num_of_civilian_factories < 90
-		num_of_civilian_factories > 30
-	}
-	abort = {
-		OR = {
-			num_of_civilian_factories > 90
-		}
-			
-	}
-	ai_strategy = {
-		type = intelligence_agency_usable_factories
-		value = -20
-	}
-}
-
 GER_balkan_boys = {
 	allowed = {
 		tag = GER
 	}
     enable = {
-		tag = GER
 		country_exists = EFR
 	}
 	abort_when_not_enabled = yes
@@ -804,7 +744,6 @@ GER_my_precisioussss = {
 		tag = GER
 	}
 	enable = {
-		tag = GER
 		OR = {
 			date < 1942.6.1
 			has_war = yes
@@ -856,7 +795,6 @@ GER_let_italy_handle_french_front_alone = {
 		tag = GER
 	}
 	enable = {
-		tag = GER
 		is_in_faction_with = ITA
 		has_war_together_with = ITA
 		has_war_with = FRA

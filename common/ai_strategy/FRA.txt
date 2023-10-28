@@ -24,13 +24,13 @@ FRA_no_retardo = {
 
 	ai_strategy = {
 		type = invade
-		id = "ITA"			
+		id = ITA			
 		value = -500
 	}
 
 	ai_strategy = {
 		type = invade
-		id = "GER"			
+		id = GER		
 		value = -500
 	}
 	ai_strategy = {
@@ -44,7 +44,7 @@ FRA_no_spain = {
 		tag = FRA
 	}
 	enable = {
-		original_tag = FRA
+		always = yes
 	}
 	abort = {
 		country_exists = EFR
@@ -102,50 +102,133 @@ FRA_unit_production = {
 			has_capitulated = yes 
 		}
 	}
-	ai_strategy = { type = role_ratio id = infantry 							value =	100	 	}	
-	ai_strategy = { type = role_ratio id = mountaineers 						value = -25		}	
-	ai_strategy = { type = role_ratio id = marines 								value = -25		}	
-	ai_strategy = { type = role_ratio id = paratroopers 						value = -25		}	
-	ai_strategy = { type = role_ratio id = motorized 							value = 40		}	
-	ai_strategy = { type = role_ratio id = cavalry 								value = -25		}	
-	ai_strategy = { type = role_ratio id = armor 								value = 50		}	
-	ai_strategy = { type = role_ratio id = heavy_armor 							value = 50		}	
 
-	ai_strategy = { type = role_ratio id = mechanized 							value = 50  	}	
-	ai_strategy = { type = role_ratio id = garrison						    	value = 25		}
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 10
+	}
 
-	ai_strategy = { type = equipment_production_factor id = fighter				value = -200    }	
-	ai_strategy = { type = equipment_production_factor id = tactical_bomber 	value = -200    }	
-	ai_strategy = { type = equipment_production_factor id = naval_bomber 		value = -200    }	
-	ai_strategy = { type = equipment_production_factor id = strategic_bomber 	value = -200 	}	
-	ai_strategy = { type = equipment_production_factor id = cas					value = -200    }	
-	ai_strategy = { type = equipment_production_factor id = air_transport 		value = -200 	}	
-	
-	ai_strategy = { type = unit_ratio id = fighter		 						value = 80   	}	
-	ai_strategy = { type = unit_ratio id = interceptor	 						value = -200	}	
-	ai_strategy = { type = unit_ratio id = tactical_bomber 						value = -200 	}	
-	ai_strategy = { type = unit_ratio id = naval_bomber 						value = -200 	}	
-	ai_strategy = { type = unit_ratio id = strategic_bomber 					value = -200 	}	
-	ai_strategy = { type = unit_ratio id = cas 									value = 20  	}	
-	ai_strategy = { type = unit_ratio id = air_transport 						value = -200 	}	
-	
-	ai_strategy = { type = unit_ratio id = capital_ship 						value = -100 	} 	
-	ai_strategy = { type = unit_ratio id = submarine 							value = -100 	}	
-	ai_strategy = { type = unit_ratio id = screen_ship 							value = -100 	} 	
-	ai_strategy = { type = unit_ratio id = convoy 								value = 15 		} 	
-	ai_strategy = { type = unit_ratio id = carrier	 					    	value = -100 	}
-	
-	ai_strategy = { type = equipment_production_factor id = submarine 			value = -100 	}
-	ai_strategy = { type = equipment_production_factor id = screen_ship 		value = -100 	}	
-	ai_strategy = { type = equipment_production_factor id = capital_ship 		value = -100 	}
-	ai_strategy = { type = equipment_production_factor id = carrier		 		value = -100 	}
-	ai_strategy = { type = equipment_production_factor id = convoy 				value = 25 		}
+
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 30
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 80
+	}
+
+	#Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 75 # From 70 to 75
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 10 # 15 to 10
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = naval_bomber
+		value = 5
+	}
+
+
+	# Naval unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 20 # from 15 to 25
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 40 #from 50 to 40
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 25
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 20
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 20
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 35
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 25
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 20
+	}
 
 	ai_strategy = { type = air_factory_balance value = 25 }
 	ai_strategy = { type = equipment_variant_production_factor id = infantry_equipment value = 100 		}
-	ai_strategy = { type = equipment_variant_production_factor id = light_tank_chassis value = -200	}
-	ai_strategy = { type = equipment_variant_production_factor id = medium_tank_chassis value = 60	}
-	ai_strategy = { type = equipment_variant_production_factor id = heavy_tank_chassis value = 40		}
 	ai_strategy = { type = equipment_variant_production_factor id = motorized_equipment value = 20 		}
 	ai_strategy = { type = equipment_variant_production_factor id = armored_cars_equipment value = 5 	}
     ai_strategy = { type = equipment_variant_production_factor id = artillery_equipment	value = 25		}
@@ -167,7 +250,6 @@ FRA_armored_production = {
 		tag = FRA
 	}
 	enable = {
-		original_tag = FRA
 		ai_wants_divisions > 12 #Decreasing the amount of tanks the AI wants
 	}
 	abort = {
@@ -185,7 +267,7 @@ FRA_belgium_protect = {
 		tag = FRA
 	}
 	enable = {
-		original_tag = FRA		
+		always = yes	
 	}
 
 	abort = {
@@ -225,7 +307,6 @@ FRA_highered_armored_production = {
 		tag = FRA
 	}
 	enable = {
-		original_tag = FRA
 		num_of_military_factories > 109
 	}
 	abort = {
@@ -243,7 +324,7 @@ FRA_area_priority = {
 		tag = FRA
 	}
 	enable = {
-		original_tag = FRA
+		always = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -308,10 +389,10 @@ FRA_area_priority = {
 FRA_naval_role_ratios_historical = {
 	allowed = {
 		tag = FRA
+		has_dlc = "Man the Guns"
 	}
 	enable = {
-		has_dlc = "Man the Guns"
-		original_tag = FRA
+		always = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -355,17 +436,5 @@ FRA_naval_role_ratios_historical = {
 		type = role_ratio
 		id = naval_cruiser_heavy
 		value = -20
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_sweeper
-		value = 15
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_layer
-		value = 10
 	}
 }
