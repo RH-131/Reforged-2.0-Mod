@@ -1554,9 +1554,6 @@ leader_traits = {
 		}
 		
 		slot = high_command
-		specialist_advisor_trait = navy_anti_submarine_1
-		expert_advisor_trait = navy_anti_submarine_2
-		genius_advisor_trait = navy_anti_submarine_3
 
 		custom_gain_xp_trigger_tooltip = SEAWOLF_TRIGGER_TT
 		ai_will_do = {
@@ -1828,7 +1825,11 @@ leader_traits = {
 		type = navy
 		modifier = {
 			navy_submarine_detection_factor = 0.2
-			navy_submarine_attack_factor = 0.1
+		}
+		sub_unit_modifiers = {
+			destroyer = {
+				naval_hit_chance = 0.1
+			}
 		}
 				
 		ai_will_do = {
@@ -1836,6 +1837,9 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
+		specialist_advisor_trait = navy_anti_submarine_1
+		expert_advisor_trait = navy_anti_submarine_2
+		genius_advisor_trait = navy_anti_submarine_3
 		any_parent = { destroyer_leader }
 		
 		gui_row = 3
