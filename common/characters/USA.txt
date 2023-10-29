@@ -928,6 +928,20 @@ characters={
 				large="gfx/leaders/USA/Portrait_USA_William_Halsey_Jr.dds"
 			}
 		}
+		advisor={
+			slot = high_command
+			idea_token = william_halsey_jr
+			ledger  = navy 
+				allowed  = {
+					original_tag  = USA
+				}
+				traits  = {
+					air_naval_strike_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
 		navy_leader={
 			traits={ bold aviation_enthusiast superior_tactician spotter }
 			skill=4
