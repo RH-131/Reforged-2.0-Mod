@@ -242,7 +242,7 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.15
 				industrial_capacity_dockyard = 0.15
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.05
 				production_speed_buildings_factor = 0.075
 			}
 
@@ -498,7 +498,8 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			modifier = {
-				consumer_goods_factor = -0.04
+				consumer_goods_factor = -0.15
+
 			}
 
 		}
@@ -517,7 +518,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.25
 				production_speed_buildings_factor = 0.10
                 local_resources_factor = 0.15
 			}
@@ -735,7 +736,7 @@ ideas = {
 			picture = generic_production_bonus
 
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.15
 				production_speed_buildings_factor = 0.05
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
@@ -758,7 +759,7 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = 0.075
 				global_building_slots_factor = 0.05
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.03
 			}
 
 		}
@@ -781,7 +782,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.075
 				production_factory_efficiency_gain_factor = 0.075
 				global_building_slots_factor = 0.1
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.05
 			}
 
 		}
@@ -1107,45 +1108,6 @@ ideas = {
 			}
 		}
 
-		SAF_trade_relations = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_flexible_foreign_policy
-
-			modifier = {
-				consumer_goods_factor = -0.03
-				base_fuel_gain = 2
-			}
-			targeted_modifier = { tag = GER trade_cost_for_target_factor = -0.25 }
-		}
-
-		SAF_sa_gold = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_foreign_capital
-
-			modifier = {
-				consumer_goods_factor = -0.04
-			}
-			targeted_modifier = { tag = SAF trade_cost_for_target_factor = -0.25 }
-		}
-
 		SAF_sa_general_staff = {
 			allowed = {
 				always = no
@@ -1460,51 +1422,6 @@ ideas = {
 
 		}
 
-		SAF_planned_economy_2 = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = eng_spirit_of_the_industrial_revolution
-
-			modifier = {
-				industrial_capacity_factory = 0.025
-				industrial_capacity_dockyard = 0.025
-				consumer_goods_factor = -0.03
-				local_resources_factor = 0.15
-			}
-
-		}
-
-		SAF_planned_economy_3 = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = eng_spirit_of_the_industrial_revolution
-
-			modifier = {
-				industrial_capacity_factory = 0.025
-				industrial_capacity_dockyard = 0.025
-				consumer_goods_factor = -0.04
-				local_resources_factor = 0.15
-				production_lack_of_resource_penalty_factor = -0.1
-			}
-
-		}
-
 		SAF_idea_war_rationing = {
 			allowed = {
 				always = no
@@ -1664,27 +1581,6 @@ ideas = {
 			modifier = {
 				autonomy_gain = 1
 			}
-		}
-
-		SAF_soviet_investment = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_foreign_capital
-
-			modifier = {
-				consumer_goods_factor = -0.05
-				license_production_speed = 0.2
-				license_purchase_cost = -0.25
-			}
-
 		}
 
 		SAF_strategic_research = {

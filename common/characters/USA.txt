@@ -928,6 +928,20 @@ characters={
 				large="gfx/leaders/USA/Portrait_USA_William_Halsey_Jr.dds"
 			}
 		}
+		advisor={
+			slot = high_command
+			idea_token = william_halsey_jr
+			ledger  = navy 
+				allowed  = {
+					original_tag  = USA
+				}
+				traits  = {
+					air_naval_strike_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
 		navy_leader={
 			traits={ bold aviation_enthusiast superior_tactician spotter }
 			skill=4
@@ -1060,7 +1074,7 @@ characters={
 					line_change_production_efficiency_factor  = -0.050
 					production_speed_arms_factory_factor  = -0.150
 					trade_opinion_factor  = 0.250
-					consumer_goods_factor  = -0.050
+					consumer_goods_factor  = -0.15
 					local_resources_factor  = 0.100
 					min_export  = 0.100
 				}
@@ -1085,28 +1099,15 @@ characters={
 			cost  = 50.000
 			visible  = {
 				not  = {
-					has_completed_focus  = USA_treasure_ministry 
+					has_completed_focus  = USA_treasure_ministry #updates on focus completion
 				}
 			}
 			allowed  = {
 				original_tag  = USA
 			}
 			modifier  = {
-				#if = {
-					#limit = {
-					#	NOT = {has_completed_focus = USA_treasure_ministry}
-					#}
-					consumer_goods_factor  = -0.030
-					stability_weekly  = 0.001
-				#}
-
-				#if = {
-					#limit = {
-					#	has_completed_focus = USA_treasure_ministry
-					#}
-					#consumer_goods_factor  = -0.050
-					#stability_weekly  = 0.001
-				#}
+				consumer_goods_factor  = -0.09
+				stability_weekly  = 0.001
 			}
 			traits  = {
 				USA_secretary_of_the_treasure 
@@ -1136,7 +1137,7 @@ characters={
 				USA_special_assistant_for_air_affairs 
 			}
 			modifier  = {
-				consumer_goods_factor  = 0.010
+				consumer_goods_factor  = 0.075
 				political_power_factor  = -0.050
 				industrial_capacity_factory  = -0.025
 				industrial_capacity_dockyard  = -0.025
@@ -1453,7 +1454,7 @@ characters={
 					has_completed_focus  = USA_increase_navy_budget 
 				}
 				modifier  = {
-					consumer_goods_factor  = 0.010
+					consumer_goods_factor  = 0.075
 					political_power_factor  = -0.050
 					industrial_capacity_factory  = -0.025
 					industrial_capacity_dockyard  = 0.100
@@ -1484,7 +1485,7 @@ characters={
 					industrial_capacity_factory  = 0.100
 					production_factory_max_efficiency_factor  = 0.050
 					line_change_production_efficiency_factor  = 0.050
-					consumer_goods_factor  = 0.050
+					consumer_goods_factor  = 0.25
 				}
 				available  = {
 					has_completed_focus  = USA_cash_and_carry 
@@ -1511,7 +1512,7 @@ characters={
 					original_tag  = USA
 				}
 				traits  = {
-					navy_chief_reform_2 
+					navy_chief_decisive_battle_2 
 				}
 				ai_will_do  = {
 					factor  = 1.000

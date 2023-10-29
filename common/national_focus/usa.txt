@@ -1852,6 +1852,18 @@ focus_tree = {
 				idea = JAP_modernize_the_fleet
 				days = 365 
 			}
+			mio:USA_norfolk_naval_yard_organization = {
+				add_mio_funds = 2400
+			}
+			mio:USA_electric_boat_company_organization = {
+				add_mio_funds = 2400
+			}
+			mio:USA_brooklyn_naval_yard_organization = {
+				add_mio_funds = 2400
+			}
+			mio:USA_newport_news_shipbuilding_organization = {
+				add_mio_funds = 2400
+			}
 		}
 		
 		completion_reward = {
@@ -1930,6 +1942,18 @@ focus_tree = {
 			add_timed_idea = {
 				idea = JAP_modernize_the_fleet
 				days = 365 
+			}
+			mio:USA_norfolk_naval_yard_organization = {
+				add_mio_funds = 2400
+			}
+			mio:USA_electric_boat_company_organization = {
+				add_mio_funds = 2400
+			}
+			mio:USA_brooklyn_naval_yard_organization = {
+				add_mio_funds = 2400
+			}
+			mio:USA_newport_news_shipbuilding_organization = {
+				add_mio_funds = 2400
 			}
 		}
 	}					
@@ -2050,52 +2074,57 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				play_song = "Slap the Japs Right into the Laps of the Nazis (Soundie)"
-				}
-			
-			custom_effect_tooltip = USA_upgrade_naval_manufacturers_tt
-			if = {
-				limit = {
-					has_idea = newport_news_shipbuilding
-				}
-				swap_ideas = {
-					remove_idea = newport_news_shipbuilding
-					add_idea = newport_news_shipbuilding2 
-				}
 			}
 			if = {
-				limit = {
-					has_idea = brooklyn_naval_yard
-				}
-				swap_ideas = {
-					remove_idea = brooklyn_naval_yard
-					add_idea = brooklyn_naval_yard2 
-				}
+				limit = { has_dlc = "Arms Against Tyranny" }
+				add_ideas = USA_never_at_a_disadvantage_idea
 			}
-			if = {
-				limit = {
-					has_idea = brooklyn_naval_yard
+			else = {
+				custom_effect_tooltip = USA_upgrade_naval_manufacturers_tt
+				if = {
+					limit = {
+						has_idea = newport_news_shipbuilding
+					}
+					swap_ideas = {
+						remove_idea = newport_news_shipbuilding
+						add_idea = newport_news_shipbuilding2 
+					}
 				}
-				swap_ideas = {
-					remove_idea = brooklyn_naval_yard
-					add_idea = brooklyn_naval_yard2 
+				if = {
+					limit = {
+						has_idea = brooklyn_naval_yard
+					}
+					swap_ideas = {
+						remove_idea = brooklyn_naval_yard
+						add_idea = brooklyn_naval_yard2 
+					}
 				}
-			}
-			if = {
-				limit = {
-					has_idea = electric_boat_company
+				if = {
+					limit = {
+						has_idea = brooklyn_naval_yard
+					}
+					swap_ideas = {
+						remove_idea = brooklyn_naval_yard
+						add_idea = brooklyn_naval_yard2 
+					}
 				}
-				swap_ideas = {
-					remove_idea = electric_boat_company
-					add_idea = electric_boat_company2 
+				if = {
+					limit = {
+						has_idea = electric_boat_company
+					}
+					swap_ideas = {
+						remove_idea = electric_boat_company
+						add_idea = electric_boat_company2 
+					}
 				}
-			}
-			if = {
-				limit = {
-					has_idea = norfolk_naval_yard
-				}
-				swap_ideas = {
-					remove_idea = norfolk_naval_yard
-					add_idea = norfolk_naval_yard2
+				if = {
+					limit = {
+						has_idea = norfolk_naval_yard
+					}
+					swap_ideas = {
+						remove_idea = norfolk_naval_yard
+						add_idea = norfolk_naval_yard2
+					}
 				}
 			}
 		}
@@ -2724,8 +2753,16 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			custom_effect_tooltip = USA_springfield_arsenal_available_tt
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_springfield_armory_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				custom_effect_tooltip = USA_springfield_arsenal_available_tt
+			}
 			357 = {
 				add_extra_state_shared_building_slots = 10
 				add_building_construction = {
@@ -2883,13 +2920,18 @@ focus_tree = {
 				name = USA_detroit_vehicle_arsenal
 			}
 			if = {
-				limit ={has_war_support > 1.0}
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_detroit_arsenal_organization = {
+					add_mio_funds = 800
+				}
+			}
+			if = {
+				limit = {has_war_support > 1.0}
 			}
 			else = { 
 				custom_effect_tooltip = USA_dont_send_our_boys_to_war_tt
 				USA_we_dont_want_to_send_our_boys_away = yes
 			}
-
 		}
 	}	
 
@@ -2938,8 +2980,16 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = army_ordnance_department
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_army_ordnance_department_organization = {
+					add_mio_funds = 1600
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = army_ordnance_department
+			}
 		}
 	}						
 
@@ -2958,8 +3008,16 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = chrysler
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_chrysler_organization = {
+					add_mio_funds = 1600
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = chrysler
+			}
 		}
 	}						
 
@@ -2986,8 +3044,16 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			custom_effect_tooltip = USA_rock_island_arsenal_available_tt
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_rock_island_arsenal_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				custom_effect_tooltip = USA_rock_island_arsenal_available_tt
+			}
 			395 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -3151,8 +3217,16 @@ focus_tree = {
 				ahead_reduction = 1
 				bonus = 1 
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = north_american_aviation 
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_north_american_aviation_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = north_american_aviation 
+			}
 		}
 	}						
 
@@ -3201,8 +3275,16 @@ focus_tree = {
 				uses = 1 
 				name = USA_a_modern_anaconda_plan
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = boeing 
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:USA_boeing_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = boeing 
+			}
 		}
 	}		
 
@@ -4591,7 +4673,7 @@ focus_tree = {
 						slot = political_advisor
 						idea_token = USA_henry_morgenthau_jr_2
 						modifier  = {
-							consumer_goods_factor  = -0.050
+							consumer_goods_factor  = -0.016
 							stability_weekly  = 0.001
 						}
 						cost = 50

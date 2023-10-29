@@ -24,6 +24,7 @@ autonomy_state = {
 		extra_trade_to_overlord_factor = 1.0
 		overlord_trade_cost_factor = -0.9
 		autonomy_gain_global_factor = -0.3
+		lend_lease_tension_with_overlord = -0.10
 	}
 	
 	ai_subject_wants_higher = {
@@ -47,8 +48,8 @@ autonomy_state = {
 			}
 			AND = {
 				OR = {
-					has_government = fascism
-					has_government = neutrality
+					OVERLORD = { has_government = fascism }
+					OVERLORD = { has_government = neutrality }
 				}
 				OVERLORD = { original_tag = MAN }
 			}

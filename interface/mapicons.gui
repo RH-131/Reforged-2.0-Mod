@@ -196,7 +196,7 @@ guiTypes = {
 
 		iconType ={
 			name ="group_marker"
-			spriteType = "GFX_group_marker_rhs_9x32"
+			spriteType = "GFX_group_markers_naval"
 			position = { x=63 y=2 }
 			alwaystransparent = yes
 		}
@@ -232,13 +232,13 @@ guiTypes = {
 		iconType = {
 			name = "capital_ship"
 			spriteType = "GFX_capital_ship_icon"
-			position = { x=59 y=7 }
+			position = { x=60 y=5 }
 			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
 			name = "capital_count_txt"
-			position = { x=32 y=3 }
+			position = { x=36 y=2 }
 			font = "Main_14"
 			maxWidth = 34
 			maxHeight = 14
@@ -249,7 +249,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "count_txt"
-			position = { x=32 y=18 }
+			position = { x=36 y=13 }
 			font = "Main_14"
 			maxWidth = 34
 			maxHeight = 14
@@ -293,15 +293,15 @@ guiTypes = {
 
 		iconType = {
 			name = "bar_org"
-			spriteType = "GFX_mapicon_unit_bar_org"
-			position = { x=13 y=15 }
+			spriteType = "GFX_mapicon_bar_org_sprite_naval"
+			position = { x=3 y=1 }
 			alwaystransparent = yes
 			rotation = 1.5708
 		}
 		iconType = {
 			name = "bar_str"
-			spriteType = "GFX_mapicon_unit_bar_str"
-			position = { x=13 y=19 }
+			spriteType = "GFX_mapicon_bar_str_sprite_naval"
+			position = { x=3 y=5 }
 			alwaystransparent = yes
 			rotation = 1.5708
 		}
@@ -309,7 +309,7 @@ guiTypes = {
 		iconType = {
 			name = "flag"
 			spriteType = "GFX_mapicon_unit_flag_stripe"
-			position = { x=4 y=22 }
+			position = { x=4 y=19 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -333,8 +333,8 @@ guiTypes = {
 		iconType ={
 			name ="pride_of_the_fleet_icon"
 			spriteType = "GFX_NV_icon_pride_small"
-			position = { x=24 y=10 }
-			#scale = 0.55
+			position = { x=28 y=2 }
+			scale = 0.75
 			alwaystransparent = yes
 		}
 
@@ -502,7 +502,7 @@ guiTypes = {
 		#
 		iconType = {
 			name = "counter_overlay"
-			spriteType = "GFX_onmap_unit_counter_overlay"
+			spriteType = "GFX_onmap_unit_counter_overlay_air"
 			position = { x=3 y=3 }
 			alwaystransparent = yes
 		}
@@ -517,16 +517,16 @@ guiTypes = {
 		iconType = {
 			name ="wing_type"
 			spriteType = "GFX_wing_types_map"
-			position = { x=3 y=3 }
+			position = { x=3 y=0 }
 			alwaystransparent = yes
 			frame = 1
 		}
 
 		instantTextboxType = {
 			name = "count_txt"
-			position = { x=21 y=6 }
+			position = { x=32 y=4 }
 			font = "Main_14"
-			maxWidth = 50
+			maxWidth = 25
 			maxHeight = 14
 			format = center
 			alwaystransparent = yes
@@ -541,7 +541,7 @@ guiTypes = {
 		iconType = {
 			name = "bar_str"
 			spriteType = "GFX_mapicon_unit_bar_str"
-			position = { x=13 y=12 }
+			position = { x=3 y=6 }
 			alwaystransparent = yes
 			rotation = 1.5708
 		}
@@ -549,7 +549,7 @@ guiTypes = {
 		iconType = {
 			name = "flag"
 			spriteType = "GFX_mapicon_unit_flag_stripe"
-			position = { x=4 y=15 }
+			position = { x=43 y=20 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}

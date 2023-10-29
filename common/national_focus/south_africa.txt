@@ -1556,8 +1556,18 @@ focus_tree = {
 				uses = 1
 				category = infantry_weapons
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = pretoria_royal_mint
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip  = SAF_pretoria_royal_mint_organization
+				mio:SAF_pretoria_royal_mint_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = pretoria_royal_mint
+			}
 		}
 	}
 	
@@ -1595,8 +1605,18 @@ focus_tree = {
 				uses = 1
 				category = artillery
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = pretoria_metal_pressings
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip  = SAF_pretoria_metal_pressings_organization
+				mio:SAF_pretoria_metal_pressings_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = pretoria_metal_pressings
+			}
 		}
 	}
 	
@@ -1655,8 +1675,18 @@ focus_tree = {
 				category = recon_tech
 				category = maintenance_company_tech
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = SAFR_marmon_herrington
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip  = SAF_marmon_herrington_organization
+				mio:SAF_marmon_herrington_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = SAFR_marmon_herrington
+			}
 		}
 	}
 	
@@ -2602,8 +2632,18 @@ focus_tree = {
 					amount = 10
 				}
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = SAF_iscor
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip  = SAF_iscor_organization
+				mio:SAF_iscor_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = SAF_iscor
+			}
 		}
 	}
 	

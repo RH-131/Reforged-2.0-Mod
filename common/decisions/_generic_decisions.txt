@@ -235,7 +235,7 @@ political_actions = {
 
 		modifier = {
 			stability_weekly = 0.005
-			consumer_goods_factor = 0.02
+			consumer_goods_factor = 0.15
 			political_power_gain = -0.25
 		}
 
@@ -489,8 +489,8 @@ economy_decisions = {
 		fire_only_once = no
 
 		modifier = {
+			consumer_goods_factor = 0.1
 			production_factory_efficiency_gain_factor = 0.3
-			consumer_goods_factor = 0.02
 			political_power_gain = -0.1
 		}
 
@@ -524,8 +524,8 @@ economy_decisions = {
 		fire_only_once = no
 
 		modifier = {
-			production_factory_efficiency_gain_factor = -0.5
-			consumer_goods_factor = -0.025
+			consumer_goods_factor = -0.125
+			production_factory_efficiency_gain_factor = -0.3
 			political_power_gain = 0.1
 		}
 

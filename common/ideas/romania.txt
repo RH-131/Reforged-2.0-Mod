@@ -43,7 +43,7 @@ ideas = {
 			modifier = {
 				local_resources_factor = 0.1
 				fuel_gain_factor  = -0.30
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.25
 				industrial_capacity_factory = 0.10
 				production_factory_max_efficiency_factor = 0.08
 				production_speed_buildings_factor = 0.1
@@ -112,7 +112,7 @@ ideas = {
 				stability_factor = -0.1
 				local_resources_factor = 0.1
 				min_export = 0.1
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.25
 			}
 		}
 
@@ -130,7 +130,7 @@ ideas = {
 				stability_factor = -0.15
 				local_resources_factor = 0.15
 				min_export = 0.15
-				consumer_goods_factor = -0.08
+				consumer_goods_factor = -0.40
 			}
 		}
 
@@ -148,7 +148,7 @@ ideas = {
 				stability_factor = -0.2
 				local_resources_factor = 0.25
 				min_export = 0.2
-				consumer_goods_factor = -0.10
+				consumer_goods_factor = -0.50
 			}
 		}
 
@@ -167,7 +167,7 @@ ideas = {
 			}
 			
 			modifier = {
-				consumer_goods_factor = 0.1				
+				consumer_goods_factor = 0.33
 			}
 		}
 
@@ -186,7 +186,7 @@ ideas = {
 			}
 			
 			modifier = {
-				consumer_goods_factor = 0.05				
+				consumer_goods_factor = 0.25				
 			}
 		}
 
@@ -405,7 +405,7 @@ ideas = {
 			
 			modifier = {
 				stability_factor = -0.2
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.33
 				local_resources = -0.5 		
 			}
 		}
@@ -426,7 +426,7 @@ ideas = {
 					
 			modifier = {
 				stability_factor = -0.15
-				consumer_goods_factor = 0.075
+				consumer_goods_factor = 0.25
 				local_resources = -0.35
 			}
 		}
@@ -447,8 +447,7 @@ ideas = {
 			
 			modifier = {
 				stability_factor = -0.1
-
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.15
 				local_resources = -0.20		
 			}
 		}
@@ -469,7 +468,7 @@ ideas = {
 
 			modifier = {
 				stability_factor = -0.05
-				consumer_goods_factor = 0.025
+				consumer_goods_factor = 0.08
 				local_resources = -0.10		
 			}
 		}
@@ -544,7 +543,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.1
 			}
 		}
 
@@ -601,7 +600,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.1
 			}
 		}
 
@@ -694,20 +693,6 @@ ideas = {
 			modifier = {
 				army_morale_factor = 0.1
 				conscription = 0.02
-			}
-		}
-
-		ROM_king_carol_emptied_accounts = {
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-			
-			modifier = {
-				consumer_goods_factor = 0.10
-				political_power_gain = -0.15
 			}
 		}
 
@@ -824,7 +809,7 @@ ideas = {
 				political_power_gain = 0.05
 				drift_defence_factor = 0.25
 				conscription_factor = 0.10
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.1
 				production_speed_industrial_complex_factor = 0.10				
 			}
 		}
@@ -843,7 +828,7 @@ ideas = {
 			modifier = {
 				stability_factor = 0.25
 				political_power_gain = 0.05
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.1
 				production_speed_arms_factory_factor = 0.10				
 			}
 		}
@@ -1170,9 +1155,9 @@ ideas = {
 			}
 			
 			equipment_bonus = {
-				heavy_cruiser = { #If you change this - Change the custom tooltip too: ROM_coastal_defense_ships_tech_tt
+				ship_hull_cruiser = { #If you change this - Change the custom tooltip too: ROM_coastal_defense_ships_tech_tt
 					armor_value = 0.2
-					hg_attack = 0.1
+					lg_attack = 0.1
 					instant = yes
 				}
 			}
@@ -1189,9 +1174,9 @@ ideas = {
 			}
 			
 			equipment_bonus = {
-				heavy_cruiser = { #If you change this - Change the custom tooltip too: ROM_coastal_defense_ships_tech_tt
+				ship_hull_cruiser = { #If you change this - Change the custom tooltip too: ROM_coastal_defense_ships_tech_tt
 					armor_value = 0.2
-					hg_attack = 0.1
+					lg_attack = 0.1
 					instant = yes
 				}
 			

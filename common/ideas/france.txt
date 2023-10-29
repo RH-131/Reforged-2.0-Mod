@@ -384,7 +384,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.075
 				industrial_capacity_factory = -0.15
 				industrial_capacity_dockyard = -0.15
 			}
@@ -408,7 +408,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.04
+				consumer_goods_factor = 0.15
 				industrial_capacity_factory = -0.20
 				industrial_capacity_dockyard = -0.20
 			}
@@ -443,7 +443,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				stability_factor = -0.05
 			}
 		}
@@ -907,77 +907,6 @@ ideas = {
 			
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
-			}
-		}
-		FRA_occupation_costs_4 = {
-			picture = generic_goods_red_bonus
-			name = FRA_occupation_costs_1
-			allowed = {
-				original_tag = FRA #should probably be VIC
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = fascism
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = 0.2
-			}
-		}
-		FRA_occupation_costs_3 = {
-			picture = generic_goods_red_bonus
-			name = FRA_occupation_costs_1
-			allowed = {
-				original_tag = FRA #should probably be VIC
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = fascism
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = 0.15
-			}
-		}
-		FRA_occupation_costs_2 = {
-			picture = generic_goods_red_bonus
-			name = FRA_occupation_costs_1
-			allowed = {
-				original_tag = FRA #should probably be VIC
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = fascism
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = 0.1
-			}
-		}
-		FRA_occupation_costs_1 = {
-			picture = generic_goods_red_bonus
-			allowed = {
-				original_tag = FRA #should probably be VIC
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = fascism
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = 0.05
 			}
 		}
 		FRA_mandatory_work_service = {
@@ -1455,7 +1384,7 @@ ideas = {
 				army_morale_factor = 0.05
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.2
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.33
 				industrial_capacity_factory = -0.15
 			}
 			
@@ -1496,7 +1425,7 @@ ideas = {
         	picture = generic_agrarian_reform
 
         	modifier = {
-        		consumer_goods_factor = -0.02 
+        		consumer_goods_factor = -0.1
         		min_export = -0.1 
         		political_power_gain = -0.25
         	}
@@ -1877,7 +1806,7 @@ ideas = {
 				amphibious_mechanized_equipment = {
 					build_cost_ic = -0.05 instant = yes
 				}
-				armored_car = {
+				armored_cars_equipment = {
 					build_cost_ic = -0.05 instant = yes
 				}
 			}
@@ -2058,7 +1987,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.15
 				production_factory_max_efficiency_factor = -0.05
 				production_factory_start_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = -0.2	
@@ -2646,7 +2575,7 @@ ideas = {
 				heavy_tank_chassis = {
 					build_cost_ic = -0.05 instant = yes
 				}
-				amphibious_tank_equipment = {
+				amphibious_tank_chassis = {
 					build_cost_ic = -0.05 instant = yes
 				}
 			}
