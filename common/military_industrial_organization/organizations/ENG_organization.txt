@@ -12,64 +12,7 @@ ENG_vickers_armstrong_eng_organization = {
 	icon = GFX_idea_vickers_armstrong_eng
 	
 	allowed = {	
-		OR = {
-			tag = ENG 
-			AND = {
-				tag = GRE
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				tag = ETH 
-				has_dlc = "By Blood Alone"
-			}
-		}
-	}
-
-	visible = {
-#		IF = {
-#			limit = { FROM = { original_tag = ETH } }
-#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-#		}
-	}
-	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ENG } }
-			}
-			FROM = { NOT = { has_war_with = ENG } }
-		}
-
-		IF = {
-			limit = { 
-				OR = { 
-					FROM = { original_tag = BUL }
-					FROM = { original_tag = ETH }
-				}  
-			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_vickers_mio_flag 
-				}
-			}
-		}
-		IF = {
-			limit = { FROM = { original_tag = BUL } } 
-			FROM = {
-				OR = {
-					is_subject = no
-					is_subject_of = ENG
-				}
-				#is_in_faction_with = ENG
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-		}
+		tag = ENG
 	}
 
 	initial_trait = {
@@ -127,74 +70,11 @@ ENG_vauxhall_organization = {
 	allowed = {	
 		OR = {
 			tag = ENG
-			AND = {
-				tag = POL # If Poland sets up a local one
-				OR = {
-					has_dlc = "Poland: United and Ready"
-					has_dlc = "No Step Back"
-				}
-			}
-			AND = {
-				tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				tag = ETH 
-				has_dlc = "By Blood Alone"
-			}
-		}
-	}
-
-	visible = {
-		IF = { 
-			limit = {
-				FROM = { original_tag = POL }
-			}
-			FROM = {
-				has_country_flag = POL_vauxhall_motors
-#				NOT = { has_completed_focus = POL_adaptive_designs }
-			}
-		}
-		IF = {
-			limit = { FROM = { original_tag = ETH } }
-#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
-	
-	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ENG } }
-			}
-			FROM = { NOT = { has_war_with = ENG } }
-		}
-
-		IF = {
-			limit = { 
-				OR = { 
-					FROM = { original_tag = BUL }
-					FROM = { original_tag = ETH }
-				}  
-			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_vauxhall_mio_flag 
-				}
-			}
-		}
-		IF = {
-			limit = { FROM = { original_tag = BUL } } 
-			FROM = {
-				OR = {
-					is_subject = no
-					is_subject_of = ENG
-				}
-				#is_in_faction_with = ENG
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
+			tag = SAF
+			tag = CAN
+			tag = AST
+			tag = NZL
+			tag = IRE
 		}
 	}
 
@@ -704,76 +584,8 @@ ENG_vauxhall_automotive_organization = {
 	allowed = {	
 		OR = {
 			tag = ENG
-			tag = POL # If Poland sets up a local one
-			AND = {
-				tag = ROM
-				has_dlc = "Death or Dishonor"
-			}
-			AND = {
-				tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				tag = ETH 
-				has_dlc = "By Blood Alone"
-			}
+			tag = CAN
 		}
-	}
-	
-	visible = {
-		IF = { 
-			limit = {
-				FROM = { original_tag = POL }
-			}
-			FROM = {
-				has_country_flag = POL_vauxhall_motors
-#				NOT = { has_completed_focus = POL_adaptive_designs }
-			}
-		}
-		IF = {
-			limit = { FROM = { original_tag = ETH } }
-#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}	
-	}
-	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ENG } }
-			}
-			FROM = { NOT = { has_war_with = ENG } }
-		}
-
-		IF = {
-			limit = {
-				OR = { 
-					FROM = { original_tag = BUL }
-					FROM = { original_tag = ETH }
-				}  
-			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_vauxhall_mio_flag 
-				}
-			}
-		}
-		IF = {
-			limit = { FROM = { original_tag = BUL } }
-			FROM = {
-				OR = {
-					is_subject = no
-					is_subject_of = ENG
-				}
-				#is_in_faction_with = ENG
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-		}
-		IF = {
-			limit = { FROM = { original_tag = ROM } }
-			FROM = { has_country_flag = ENG_mot_chosen }
-		}	
 	}
 	
 	initial_trait = {
@@ -789,40 +601,10 @@ ENG_royal_arsenal_organization = {
 	allowed = {
 		OR = {
 			tag = ENG
-			AND = {
-				OR = {
-					original_TAG = LAT
-					original_TAG = LIT
-					original_TAG = EST
-				}
-				has_dlc = "No Step Back"
-			}
-		}
-	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ENG } }
-			}
-			FROM = { NOT = { has_war_with = ENG } }
-		}
-
-		if = {
-			limit = {
-				FROM = {
-					OR = {
-						original_TAG = LAT
-						original_TAG = LIT
-						original_TAG = EST
-					}
-				}
-			}
-			FROM = {
-
-#				has_completed_focus = BALTIC_british_designers
-			}
+			tag = CAN
+			tag = AST
+			tag = NZL
+			tag = IRE
 		}
 	}
 }
