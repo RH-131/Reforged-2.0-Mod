@@ -1,0 +1,368 @@
+MAN_resource_infra = {
+    allowed = {
+        tag = MAN
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 714
+        value = 10
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 328
+        value = 10
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 716
+        value = 10
+    }
+}
+
+SIA_resource_infra = {
+    allowed = {
+        tag = SIA
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 724
+        value = 10
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 289
+        value = 10
+    }
+}
+
+POR_resource_infra = {
+    allowed = {
+        tag = POR
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 795
+        value = 10
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 181
+        value = 10
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 112
+        value = 10
+    }
+}
+
+YUG_resource_infra = {
+    allowed = {
+        tag = YUG
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 106
+        value = 10
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 105
+        value = 10
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 104
+        value = 10
+    }
+}
+
+MAN_loves_civs = {
+    allowed = {
+        OR = {
+            tag = MAN
+            tag = SIA
+            tag = IRE
+            tag = YUG
+            tag = GRE
+            tag = ALB
+            tag = AUS
+            tag = BUL
+            tag = POR
+            tag = MON
+            tag = NZL
+            tag = ETH
+            tag = HOL
+            tag = BEL
+            tag = LUX
+        }
+    }
+    enable = {
+        date < 1938.1.1
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = building_target
+        id = industrial_complex
+        value = 100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = dockyard
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = air_base
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = supply_node
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = rail_way
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = naval_base
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = bunker
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = coastal_bunker
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = anti_air_building
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = fuel_silo
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = radar_station
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = nuclear_reactor
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = rocket_site
+        value = -100
+    }
+}
+
+MAN_hates_civs_now = {
+    allowed = {
+        OR = {
+            tag = MAN
+            tag = SIA
+            tag = IRE
+            tag = YUG
+            tag = GRE
+            tag = ALB
+            tag = AUS
+            tag = BUL
+            tag = POR
+            tag = MON
+            tag = NZL
+            tag = ETH
+            tag = HOL
+            tag = BEL
+            tag = LUX
+        }
+    }
+    enable = {
+        date > 1938.1.1
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = building_target
+        id = industrial_complex
+        value = 0
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = arms_factory
+        value = 100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = dockyard
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = air_base
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = supply_node
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = rail_way
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = naval_base
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = bunker
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = coastal_bunker
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = anti_air_building
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = synthetic_refinery
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = fuel_silo
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = synthetic_rubber_refinery
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = steel_refinery
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = radar_station
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = nuclear_reactor
+        value = -100
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = rocket_site
+        value = -100
+    }
+}
+
+trade_ai_love_infra = {
+    allowed = {
+        OR = {
+            tag = TUR
+            tag = SWE
+            tag = MEX
+            tag = INS
+        }
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = building_target
+        id = infrastructure
+        value = 5000
+    }
+}
