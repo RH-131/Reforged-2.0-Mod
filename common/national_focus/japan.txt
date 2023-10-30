@@ -3498,13 +3498,9 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { has_dlc = "Arms Against Tyranny" }
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip  = JAP_kure_naval_arsenal_organization
 				mio:JAP_kure_naval_arsenal_organization = {
 					add_mio_funds = 800
 				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip  = JAP_yokosuka_naval_arsenal_organization
 				mio:JAP_yokosuka_naval_arsenal_organization = {
 					add_mio_funds = 800
 				}
@@ -3924,8 +3920,12 @@ focus_tree = {
 	focus = {
 		id = JAP_fighter_modernization
 		icon = GFX_goal_generic_build_airforce
+		prerequisite = {
+			focus = JAP_range_focus
+			focus = JAP_agility_focus
+		}
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = JAP_jungle_fighting_techniques
 
 		cost = 5
@@ -3952,9 +3952,8 @@ focus_tree = {
 	focus = {
 		id = JAP_range_focus
 		icon = GFX_idea_aichi
-		prerequisite = { focus = JAP_fighter_modernization }
 		x = -1
-		y = 1
+		y = -1
 		relative_position_id = JAP_fighter_modernization
 		mutually_exclusive = { focus = JAP_agility_focus }
 
@@ -3974,7 +3973,7 @@ focus_tree = {
 				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = JAP_aichi_organization
 				mio:JAP_aichi_organization = {
-					add_mio_funds = 1500
+					add_mio_funds = 1600
 				}
 			}
 			else_if = {
@@ -3992,7 +3991,7 @@ focus_tree = {
 				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = JAP_aichi_organization
 				mio:JAP_aichi_organization = {
-					add_mio_funds = 1500
+					add_mio_funds = 1600
 				}
 			}
 			else_if = {
@@ -4015,9 +4014,8 @@ focus_tree = {
 	focus = {
 		id = JAP_agility_focus
 		icon = GFX_idea_mitsubishi
-		prerequisite = { focus = JAP_fighter_modernization }
 		x = 1
-		y = 1
+		y = -1
 		relative_position_id = JAP_fighter_modernization
 		mutually_exclusive = { focus = JAP_range_focus }
 
@@ -4041,7 +4039,7 @@ focus_tree = {
 				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = JAP_mitsubishi_organization
 				mio:JAP_mitsubishi_organization = {
-					add_mio_funds = 1500
+					add_mio_funds = 1600
 				}
 			}
 			else_if = {
@@ -4059,7 +4057,7 @@ focus_tree = {
 				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = JAP_mitsubishi_organization
 				mio:JAP_mitsubishi_organization = {
-					add_mio_funds = 1500
+					add_mio_funds = 1600
 				}
 			}
 			else_if = {
@@ -4083,12 +4081,11 @@ focus_tree = {
 		id = JAP_strengthen_the_army_air_arm
 		icon = GFX_focus_usa_escort_fighters
 		prerequisite = {
-			focus = JAP_range_focus
-			focus = JAP_agility_focus
+			focus = JAP_fighter_modernization
 		}
 		mutually_exclusive = { focus = JAP_strengthen_the_fleet_air_arm }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = JAP_range_focus
 
 		cost = 5
@@ -4134,12 +4131,11 @@ focus_tree = {
 		id = JAP_strengthen_the_fleet_air_arm
 		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = {
-			focus = JAP_range_focus
-			focus = JAP_agility_focus
+			focus = JAP_fighter_modernization
 		}
 		mutually_exclusive = { focus = JAP_strengthen_the_army_air_arm }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = JAP_agility_focus
 
 		cost = 5
