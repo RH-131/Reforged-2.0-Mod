@@ -14,7 +14,6 @@ ITA_wants_civ = {
 		tag = ITA
 	}
 	enable = {
-		tag = ITA
 		has_war = no
 	}
 	abort = {
@@ -31,7 +30,6 @@ ITA_wants_mils = {
 		tag = ITA
 	}
 	enable = {
-		tag = ITA
 		date > 1938.3.2
 	}
 	abort_when_not_enabled = yes
@@ -51,7 +49,7 @@ ITA_wants_docks = {
 		tag = ITA
 	}
 	enable = {
-		tag = ITA
+		always = yes
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -65,7 +63,6 @@ ITA_wants_synths = {
 		tag = ITA
 	}
 	enable = {
-		tag = ITA
 		date > 1937.6.1
 	}
 	abort_when_not_enabled = yes
@@ -85,7 +82,6 @@ no_turkey = {
 		tag = ITA
 	}
 	enable = {
-		tag = ITA
 		country_exists = TUR
 	}
 	abort = {
@@ -109,7 +105,6 @@ spirit_of_spartans = {
 		tag = GRE
 	}
 	enable = {
-		tag = GRE
 		date < 1940.1.1		
 		country_exists = GRE
 	}
@@ -131,7 +126,6 @@ greece_chill = {
 		tag = ITA
 	}
 	enable = {
-		tag = ITA
 		date < 1940.9.25		
 		country_exists = GRE
 	}
@@ -173,7 +167,6 @@ greece_war_goal = {
 		tag = ITA
 	}
 	enable = {
-		tag = ITA
 		focus_progress = { focus = ITA_greece_war_goal progress > 0 }
 		country_exists = GRE
 	}
@@ -201,60 +194,33 @@ greece_war_goal = {
 
 }
 
-spain_ally_ita = {
-	allowed = {
-		tag = ITA
-	}
-	enable = {
-		tag = ITA
-		country_exists = SPR
-		SPR = { has_government = fascism } # TODO Find way to detect dynamic revolter tag
-	}
-	abort = {
-		NOT = { country_exists = SPR }
-	}
-		
-	ai_strategy = { type = send_volunteers_desire id = "SPR" value = 5000 }
-}
-
 spain_scw_support_ITA_resistance = {
 	allowed = {
 		tag = ITA
+		has_dlc = "La Resistance"
 	}
 	enable = {
-		tag = ITA
 		has_government = fascism
-		has_dlc = "La Resistance"
 	}
 	abort = {
 		OR = {
-			NOT = { country_exists = SPA }
-			SPA = { has_completed_focus = SPA_allies }
+			NOT = { country_exists = SPR }
+			SPR = { has_completed_focus = SPA_allies }
 		}
 	}
 	ai_strategy = {
-		type = support
-		id = "SPD"			
-		value = -100
-	}	
-	ai_strategy = {
 		type = befriend
-		id = "SPD"			
-		value = -100
-	}
-	ai_strategy = {
-		type = befriend
-		id = "SPA"			
+		id = "SPR"			
 		value = 100
 	}	
 	ai_strategy = {
 		type = support
-		id = "SPA"			
+		id = "SPR"			
 		value = 100
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "SPA"			
+		id = "SPR"			
 		value = 9999
 	}	
 }
@@ -264,7 +230,6 @@ anti_uk_war_goals = {
 		tag = ITA
 	}
 	enable = {
-		tag = ITA
 		country_exists = ENG
 		date > 1937.1.1
 	}
@@ -302,7 +267,6 @@ germany_ally = {
 		tag = ITA
 	}
 	enable = {
-		tag = ITA
 		has_completed_focus = ITA_pact_of_steel
 		country_exists = GER
 	}
@@ -322,7 +286,6 @@ ITA_hold_africa = {
 		tag = ITA
 	}
 	enable = {
-		tag = ITA
 		OR = {
 			NOT = { country_exists = ETH }
 			ETH = { is_puppet_of = ITA }
@@ -330,7 +293,10 @@ ITA_hold_africa = {
 		date < 1941.1.1
 	}
 	abort = {
-		any_owned_state = { is_core_of = ITA NOT = { is_controlled_by = ITA } }
+		any_owned_state = { 
+			is_core_of = ITA 
+			NOT = { is_controlled_by = ITA } 
+		}
 		date > 1941.1.1
 	}
 	
@@ -357,7 +323,6 @@ crush_ethiopia = {
 		tag = ITA
 	}
 	enable = {
-		tag = ITA
 		country_exists = ETH
 		ITA = { has_war_with = ETH }
 	}
@@ -430,12 +395,6 @@ ITA_template_design_1 = {
 
 	ai_strategy = {
 		type = template_prio
-		id = heavy_armor
-		value = -50
-	}
-
-	ai_strategy = {
-		type = template_prio
 		id = paratroopers
 		value = -50
 	}
@@ -449,6 +408,7 @@ ITA_template_design_2 = {
 		original_tag = ITA
 		date > 1940.1.1				
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = template_prio
@@ -476,12 +436,6 @@ ITA_template_design_2 = {
 
 	ai_strategy = {
 		type = template_prio
-		id = heavy_armor
-		value = 10
-	}
-
-	ai_strategy = {
-		type = template_prio
 		id = paratroopers
 		value = -50
 	}
@@ -500,7 +454,6 @@ italy_be_careful_transporting_through_the_med = {
 		tag = ITA
 	}
 	enable = {
-		tag = ITA
 		date < 1942.1.1
 		has_war = yes
 		enemies_naval_strength_ratio > 1
@@ -549,7 +502,6 @@ dont_take_claims_on_yug = {
 		tag = ITA
 	}
 	enable = {
-		tag = ITA
 		country_exists = YUG
 		is_historical_focus_on = yes
 		date < 1940.1.1
@@ -573,11 +525,12 @@ dont_take_claims_on_yug = {
 ITA_naval_role_ratios_historical = {
 	allowed = {
 		tag = ITA
+		has_dlc = "Man the Guns"
 	}
 	enable = {
-		has_dlc = "Man the Guns"
-		original_tag = ITA
+		always = yes
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = role_ratio
@@ -614,18 +567,6 @@ ITA_naval_role_ratios_historical = {
 		id = naval_cruiser_heavy
 		value = -5
 	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_sweeper
-		value = 20
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_layer
-		value = 10
-	}
 }
 
 ITA_share_borders_with_GER_against_SOV = {
@@ -634,7 +575,6 @@ ITA_share_borders_with_GER_against_SOV = {
 	}
 
 	enable = {
-		tag = ITA
 		is_in_faction_with = GER
 		has_war_with = SOV
 	}
@@ -668,7 +608,7 @@ ITA_protect_mama = {
 	}
 
 	enable = {
-		tag = ITA
+		always = yes
 	}
 
 	abort_when_not_enabled = yes
@@ -696,7 +636,7 @@ ITA_protect_via_balbia = {
 	}
 
 	enable = {
-		tag = ITA
+		always = yes
 	}
 
 	abort_when_not_enabled = yes
@@ -705,7 +645,7 @@ ITA_protect_via_balbia = {
 		type = put_unit_buffers
 		ratio = 0.15
 		states = { 
-			448
+			448 # Libyan Coast
 			449
 			450
 			451

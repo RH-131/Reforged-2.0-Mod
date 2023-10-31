@@ -449,18 +449,6 @@ on_actions = {
 			}
 		}
 	}
-
-	on_weekly = {
-		effect = {
-			if = {
-				limit = { 
-					has_intelligence_agency = yes
-					is_ai = yes
-				}
-				update_operation_ai = yes
-			}
-		}
-	}
 	# ROOT is capitulated country, FROM is winner
 	on_capitulation = {
 		effect = {

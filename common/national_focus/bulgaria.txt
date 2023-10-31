@@ -639,8 +639,16 @@ focus_tree = {
 			    uses = 2
 				category = light_air
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = BUL_dar
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:BUL_dar_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = BUL_dar
+			}
 		}
 	}
 
@@ -759,8 +767,16 @@ focus_tree = {
 				category = infantry_weapons
 				category = support_tech
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = BUL_dvf
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:BUL_dvf_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = BUL_dvf
+			}
 		}
 	}
 
@@ -796,8 +812,16 @@ focus_tree = {
 			    uses = 2
 				category = artillery
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = BUL_dvf_sopot
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:BUL_dvf_sopot_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = BUL_dvf_sopot
+			}
 		}
 	}
 
@@ -1661,8 +1685,16 @@ focus_tree = {
 					province = 9783
 				}
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = BUL_varna_naval_dockyard
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:BUL_varna_naval_dockyard_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = BUL_varna_naval_dockyard
+			}
 		}
 	}
 
@@ -1693,7 +1725,14 @@ focus_tree = {
 			    category = cl_tech
 			    category = ca_tech
 			}
-
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:BUL_varna_naval_dockyard_organization = {
+					complete_mio_trait = BUL_mio_trait_an_aegean_sea_fleet
+				}
+			}
 			custom_effect_tooltip = BUL_an_aegean_sea_fleet_tt
 			every_controlled_state = {
 				limit = {

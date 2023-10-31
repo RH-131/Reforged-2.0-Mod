@@ -1527,16 +1527,38 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = idea_alkett
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:GER_man_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = idea_alkett
+			}
 			random_state = {
 				limit = { has_state_flag = GER_absorb_rheinmetall_target }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
 			}
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = idea_alkett
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:GER_man_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = idea_alkett
+			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1715,8 +1737,16 @@ focus_tree = {
 			effect_tooltip = {
 				GER_mefo_bills_level_up = yes
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = opel
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:GER_opel_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = opel
+			}
 		}
 
 		completion_reward = {
@@ -1764,8 +1794,16 @@ focus_tree = {
 			hidden_effect = {
 				GER_mefo_bills_level_up = yes
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = opel
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:GER_opel_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = opel
+			}
 			hidden_effect = {
 				 sound_effect = ger_kdf_wagen
 			}
@@ -2335,18 +2373,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			show_ideas_tooltip = GER_swedish_trade2
-			hidden_effect = {
-				if = {
-					limit = {
-						has_idea = GER_swedish_trade
-					}
-					swap_ideas = { 
-						remove_idea = GER_swedish_trade
-						add_idea = GER_swedish_trade2
-					}
-				}
-			} 
+			swap_ideas = { 
+				remove_idea = GER_swedish_trade
+				add_idea = GER_swedish_trade2
+			}
 		}
 	}
 
@@ -5330,8 +5360,16 @@ focus_tree = {
 		}	
 		available_if_capitulated = yes
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = hanomag
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:GER_opel_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = hanomag
+			}
 			add_tech_bonus = {				
 				bonus = 1
 				uses = 1 
@@ -5488,10 +5526,18 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = henschel2
-			add_ideas = OB_ost_turtle
-			custom_effect_tooltip = GER_osttruppen_tt				
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:GER_porsche_organization = {
+					complete_mio_trait = GER_mio_trait_high_quality_manufacturing
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = henschel2
+			}
+			add_ideas = OB_ost_turtle		
+			add_timed_idea = { idea = GER_tiger_production days = 365 }
 		}
 	}			
 	focus = { 
@@ -5670,9 +5716,18 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = MAN_man
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:GER_man_organization = {
+					complete_mio_trait = GER_mio_trait_improved_armaments
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = MAN_man
+			}
 			add_ideas = OB_ost_wolf
+			add_timed_idea = { idea = GER_panther_production days = 365 }
 		}
 	}	
 
@@ -6483,9 +6538,17 @@ focus_tree = {
 		x = -4
 		y = 2
 		relative_position_id = GER_air_innovation
-		completion_reward = {	
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = junkers
+		completion_reward = {
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:GER_junkers_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = junkers
+			}
 		}
 	}
 
@@ -6806,10 +6869,18 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = { 
 			air_experience = 50
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = focke_wulf
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = henschel_aircraft
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:GER_focke_wulf_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = focke_wulf
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = henschel_aircraft
+			}
 		}
 	}
 
@@ -7209,10 +7280,21 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = blohm_und_voss
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = germaniawerft
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:GER_blohm_und_voss_organization = {
+					add_mio_funds = 800
+				}
+				mio:GER_germaniawerft_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = blohm_und_voss
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = germaniawerft
+			}
 			navy_experience = 50
 			every_state = {
 				limit = { has_state_flag = GER_prepare_the_kriegsmarine_1dockyard }
@@ -7232,10 +7314,21 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = blohm_und_voss
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = germaniawerft
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:GER_blohm_und_voss_organization = {
+					add_mio_funds = 800
+				}
+				mio:GER_germaniawerft_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = blohm_und_voss
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = germaniawerft
+			}
 			navy_experience = 50
 			random_owned_controlled_state = {
 				limit = {

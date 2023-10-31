@@ -626,27 +626,6 @@ ideas = {
 			}
 		}
 
-		HOL_friesland_agricultural_impetu = {
-
-			picture = generic_foreign_capital
-			
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				consumer_goods_factor = -0.1
-				war_support_weekly = 0.001
-				global_building_slots_factor = 0.25
-			}
-		}
-
 		HOL_domestic_vehicle_designs = {
 
 			picture = FRA_motorized_focus
@@ -803,7 +782,7 @@ ideas = {
 				amphibious_mechanized_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
-				amphibious_tank_equipment = {
+				amphibious_tank_chassis = {
 					build_cost_ic = -0.1 instant = yes
 				}
 			}

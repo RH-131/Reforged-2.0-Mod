@@ -652,7 +652,7 @@ ENG_budget_decisions = {
 
 		modifier = {
 			industrial_capacity_dockyard = 0.1 
-		 	consumer_goods_factor = 0.01
+		 	consumer_goods_factor = 0.075
 		}
 
 		remove_effect = {
@@ -999,7 +999,7 @@ ENG_budget_decisions = {
 			production_factory_efficiency_gain_factor = 0.20
 			industrial_capacity_factory = 0.10 
 			industrial_capacity_dockyard = 0.10 
-			consumer_goods_factor = 0.02
+			consumer_goods_factor = 0.1
 		}
 
 		days_remove = 120
@@ -2357,6 +2357,9 @@ operations = {
 				}
 				has_equipment = {
 					fighter_equipment < 1501
+				}
+				has_equipment = {
+					heavy_fighter_equipment < 1201
 				}
 			}
 			NOT = {

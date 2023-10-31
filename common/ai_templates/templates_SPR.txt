@@ -26,6 +26,10 @@ infantry_D01 = {
 				light_infantry = 5
 			}
 		}
+
+		allowed_types = {
+			light_infantry
+		}
 	}
 }
 infantry_SPR = {
@@ -59,6 +63,13 @@ infantry_SPR = {
 				recon = 1
 				DIV_HQ = 1
 			}
+		}
+
+		allowed_types = {
+			light_infantry
+			engineer
+			recon
+			DIV_HQ
 		}
 	}
 }

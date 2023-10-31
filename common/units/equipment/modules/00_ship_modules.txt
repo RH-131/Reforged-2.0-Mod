@@ -251,7 +251,7 @@ equipment_modules = {
 
 		add_stats = {
 			hg_attack = 20
-			build_cost_ic = 1800
+			build_cost_ic = 1710
 		}
 		build_cost_resources = {
 			steel = 1
@@ -261,7 +261,7 @@ equipment_modules = {
 			naval_speed = -0.09
 		}
 		add_average_stats = {
-			hg_armor_piercing = 60
+			hg_armor_piercing = 55
 		}
 		critical_parts = { damaged_heavy_guns }
 	}
@@ -1350,6 +1350,7 @@ equipment_modules = {
 
 		add_stats = {
 			torpedo_attack = 20
+			naval_torpedo_hit_chance_factor = 0.05
 			build_cost_ic = 60
 		}
 		multiply_stats = {
@@ -1369,7 +1370,7 @@ equipment_modules = {
 
 		add_stats = {
 			torpedo_attack = 30
-			naval_torpedo_hit_chance_factor = 0.05
+			naval_torpedo_hit_chance_factor = 0.075
 			build_cost_ic = 130
 		}
 		multiply_stats = {
@@ -1396,7 +1397,7 @@ equipment_modules = {
 
 		add_stats = {
 			torpedo_attack = 35
-			naval_torpedo_hit_chance_factor = 0.075
+			naval_torpedo_hit_chance_factor = 0.1
 			build_cost_ic = 165
 		}
 		multiply_stats = {
@@ -1420,7 +1421,7 @@ equipment_modules = {
 
 		add_stats = {
 			torpedo_attack = 40
-			naval_torpedo_hit_chance_factor = 0.1
+			naval_torpedo_hit_chance_factor = 0.125
 			build_cost_ic = 200
 		}
 		multiply_stats = {
@@ -1777,7 +1778,7 @@ equipment_modules = {
 		}
 		multiply_stats = {
 			build_cost_ic = 0.05
-			naval_speed = -0.15
+			naval_speed = -0.125
 			max_strength = 0.04
 		}
 		dismantle_cost_ic = 4500
@@ -1812,7 +1813,7 @@ equipment_modules = {
 		}
 		multiply_stats = {
 			build_cost_ic = 0.09
-			naval_speed = -0.15
+			naval_speed = -0.125
 			max_strength = 0.08
 		}
 		build_cost_resources = {
@@ -1851,7 +1852,7 @@ equipment_modules = {
 		}
 		multiply_stats = {
 			build_cost_ic = 0.011
-			naval_speed = -0.15
+			naval_speed = -0.125
 			max_strength = 0.10
 		}
 		build_cost_resources = {
@@ -1866,13 +1867,13 @@ equipment_modules = {
 		gfx = ship_armor_thick_3
 
 		add_stats = {
-			armor_value = 65
+			armor_value = 55
 			surface_visibility = 14
 		}
 		multiply_stats = {
-			build_cost_ic = 0.25
+			build_cost_ic = 0.21
 			naval_speed = -0.25
-			max_strength = 0.24
+			max_strength = 0.20
 		}
 		build_cost_resources = {
 			steel = 2

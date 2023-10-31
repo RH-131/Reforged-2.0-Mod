@@ -16,7 +16,7 @@ ideas = {
 			picture = great_depression
 			
 			modifier = {
-				consumer_goods_factor = 0.2
+				consumer_goods_factor = 0.7
 				industrial_capacity_factory = -0.15
 				industrial_capacity_dockyard = -0.15
 				production_speed_arms_factory_factor = -0.15
@@ -38,7 +38,7 @@ ideas = {
 			picture = great_depression
 			
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.4
 				industrial_capacity_factory = -0.10
 				industrial_capacity_dockyard = -0.10
 				production_speed_arms_factory_factor = -0.05
@@ -285,7 +285,7 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.15
 			}
 		}
 
@@ -306,7 +306,7 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.10
 				industrial_capacity_dockyard = 0.10
-				consumer_goods_factor = -0.04
+				consumer_goods_factor = -0.25
 			}
 		}
 
@@ -636,10 +636,7 @@ ideas = {
 				frigate = {
 					sub_detection = 0.1 instant = yes
 				}
-				light_cruiser = {
-					sub_detection = 0.1 instant = yes
-				}
-				heavy_cruiser = {
+				ship_hull_cruiser = {
 					sub_detection = 0.1 instant = yes
 				}
 			}
