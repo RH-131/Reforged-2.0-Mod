@@ -2346,23 +2346,20 @@ operations = {
 
 		allowed = {
 			tag = ENG
-			always = yes
-		}
-		available = {
-			has_war = yes
-			# num_deployed_planes_with_type@fighter
-			# num_equipment@small_plane_airframe
-			set_temp_variable = { ENG_air_var = num_deployed_planes_with_type@fighter }
-			add_to_temp_variable = { ENG_air_var = num_deployed_planes_with_type@heavy_fighter }
-			add_to_temp_variable = { ENG_air_var = num_equipment@small_plane_airframe }
-			add_to_temp_variable = { ENG_air_var = num_equipment@medium_plane_fighter_airframe }
-			check_variable = { ENG_air_var < 1500 }
-			NOT = {
-				has_idea = ENG_emergencyfighter
-			}
 		}
 		visible = {
-			always = yes
+			has_war = yes
+		}
+		available = {
+			set_temp_variable = { ENG_air_var = num_deployed_planes_with_type@small_plane_airframe }
+			add_to_temp_variable = { ENG_air_var = num_deployed_planes_with_type@medium_plane_fighter_airframe }
+			add_to_temp_variable = { ENG_air_var = num_equipment@small_plane_airframe }
+			add_to_temp_variable = { ENG_air_var = num_equipment@medium_plane_fighter_airframe }
+			has_war = yes
+			custom_trigger_tooltip = {
+				tooltip = less_than_1500_fighter_heavy_tt
+				check_variable = { ENG_air_var < 1500 }
+			}
 		}
 
 		cost = 25

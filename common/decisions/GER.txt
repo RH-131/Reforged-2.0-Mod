@@ -5192,50 +5192,30 @@ GER_military_buildup = {
 
 		icon = generic_air
 
-		available = {
+		allowed = {
+			tag = GER
+		}
+		visible = {
 			has_war = yes
-			AND = {
-				has_deployed_air_force_size = {
-					type = fighter
-					size < 1501
-				}
-				has_equipment = {
-					small_plane_airframe < 1501
-				}
-			}
-			NOT = {
-				has_idea = GER_jaegernotprogramm
+		}
+		available = {
+			set_temp_variable = { GER_air_var = num_deployed_planes_with_type@small_plane_airframe }
+			add_to_temp_variable = { GER_air_var = num_deployed_planes_with_type@medium_plane_fighter_airframe }
+			add_to_temp_variable = { GER_air_var = num_equipment@small_plane_airframe }
+			add_to_temp_variable = { GER_air_var = num_equipment@medium_plane_fighter_airframe }
+			has_war = yes
+			custom_trigger_tooltip = {
+				tooltip = less_than_1500_fighter_heavy_tt
+				check_variable = { GER_air_var < 1500 }
 			}
 		}
 
         fire_only_once = yes
 
-		visible = {
-			has_war = yes
-			AND = {
-				has_deployed_air_force_size = {
-					type = fighter
-					size < 1501
-				}
-				has_equipment = {
-					small_plane_airframe < 1501
-				}
-			}
-			NOT = {
-				has_idea = GER_jaegernotprogramm
-			}
-		}
-
 		cost = 25
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		visible = {
-			NOT = {
-				has_idea = GER_jaegernotprogramm
-			}
 		}
 
 		complete_effect = {
