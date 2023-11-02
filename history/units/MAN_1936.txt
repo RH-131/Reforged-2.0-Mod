@@ -179,25 +179,6 @@ instant_effect = {
 		progress = 0.4
 		efficiency = 100
 	}
-	add_equipment_production = {
-		equipment = {
-			type = tac_bomber_equipment_1934
-			creator = "MAN" 
-		}
-		requested_factories = 1
-		progress = 0.4
-		efficiency = 100
-	}
-	
-	add_equipment_production = { 
-		equipment = {
-			type = fighter_equipment_1936
-			creator = "MAN" 
-		}
-		requested_factories = 1
-		progress = 0.8
-		efficiency = 100
-	}
 	
 	#################### stockpile 
 
@@ -205,6 +186,11 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = infantry_equipment_0
 			amount = 5000
+			producer = MAN
+		}
+	add_equipment_to_stockpile = {
+		type = motorized_equipment_1
+			amount = 50
 			producer = MAN
 		}
 }
