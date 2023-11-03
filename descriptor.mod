@@ -1,4 +1,4 @@
-version="1.05.29"
+version="1.06.01"
 replace_path="common/units/names_divisions"
 replace_path="history/countries"
 replace_path="history/states"
