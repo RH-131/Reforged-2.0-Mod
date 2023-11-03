@@ -3160,6 +3160,12 @@ focus_tree = {
 			}
 				set_technology = {
 					early_ship_hull_carrier = 1
+					cv_fighter_1936 = 1 
+				}
+				add_equipment_to_stockpile = {
+					type = cv_fighter_equipment_1936
+					amount = 40
+					producer = CAN 
 				}
 				create_equipment_variant = {
 					name = "Ruler Class"

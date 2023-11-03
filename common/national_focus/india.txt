@@ -5931,6 +5931,7 @@ focus_tree = {
 				mtg_transport = 1
 				improved_secondary_battery = 1
 				basic_fire_control_system = 1
+				cv_fighter_1936 = 1 
 			}
 	create_equipment_variant = {
 		name = "S Class"
@@ -6277,6 +6278,11 @@ focus_tree = {
 
 		complete_tooltip = {
 			unlock_decision_tooltip = RAJ_illustrious_decision
+				add_equipment_to_stockpile = {
+					type = cv_fighter_equipment_1936
+					amount = 40
+					producer = RAJ 
+				}
 			create_equipment_variant = {
 				name = "Illustrious Class"
 				type = ship_hull_carrier_1
@@ -6296,6 +6302,11 @@ focus_tree = {
 
 		completion_reward = {
 			unlock_decision_tooltip = RAJ_illustrious_decision
+				add_equipment_to_stockpile = {
+					type = cv_fighter_equipment_1936
+					amount = 40
+					producer = RAJ 
+				}
 			create_equipment_variant = {
 				name = "Illustrious Class"
 				type = ship_hull_carrier_1
