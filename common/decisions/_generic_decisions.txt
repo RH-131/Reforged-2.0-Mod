@@ -146,19 +146,17 @@ ai_decision = {
 		cost = 0
 
 		available = {
-			always = no
+			amount_research_slots < 1
 		}
 
 		visible = {
-			always = no
+			amount_research_slots < 1
 		}
+		
+		fire_only_once = yes
 
 		complete_effect = {
-		   every_country = {
-           limit = { has_idea = developing_country }
- 		   remove_ideas = developing_country
-		   remove_ideas = neutral_minor
-		   }
+		   add_research_slot = 3
 		}
 
 		ai_will_do = {
