@@ -168,6 +168,10 @@ characters={
 			}
 			
 			traits = { technocrat }
+			
+			ai_will_do = {
+				factor = 100
+			}
 		}
 	}
 	MAN_nalan_kang_an = {
@@ -195,6 +199,10 @@ characters={
 			}
 			
 			traits = { railroad_enthusiast }
+			
+			ai_will_do = {
+				factor = 999
+			}
 		}
 	}
 	MAN_tuksu_zi = {
@@ -222,9 +230,12 @@ characters={
 			}
 			
 			traits = { army_chief_offensive_2 }
-			
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
 			}
 		}
 	}
@@ -240,9 +251,12 @@ characters={
 			}
 					
 			traits = { navy_chief_commerce_raiding_1 }
-			
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
 			}
 		}
 	}
@@ -259,9 +273,12 @@ characters={
 			}
 			
 			traits = { air_air_combat_training_2 }
-			
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
 			}
 		}
 	}
@@ -277,9 +294,12 @@ characters={
 			}
 					
 			traits = { air_bomber_interception_2 }
-			
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
 			}
 		}
 	}
@@ -295,9 +315,12 @@ characters={
 			}
 			
 			traits = { army_chief_defensive_2 }
-			
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
 			}
 		}
 	}
@@ -312,9 +335,12 @@ characters={
 			}
 			
 			traits = { air_air_superiority_2 }
-			
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
 			}
 		}
 	}
@@ -329,9 +355,12 @@ characters={
 			}
 			
 			traits = { navy_chief_decisive_battle_1 }
-			
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
 			}
 		}
 	}
@@ -348,9 +377,12 @@ characters={
 			}
 			
 			traits = { army_regrouping_2 }
-			
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
 			}
 		}
 	}
@@ -367,9 +399,12 @@ characters={
 			}
 			
 			traits = { army_infantry_2 }
-			
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
 			}
 		}
 	}
@@ -386,9 +421,12 @@ characters={
 			}
 			
 			traits = { navy_fleet_logistics_1 }
-			
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
 			}
 		}
 	}
@@ -406,9 +444,12 @@ characters={
 			}
 			
 			traits = { army_armored_2 }
-			
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
 			}
 		}
 		portraits={
@@ -444,6 +485,13 @@ characters={
 			
 			
 			traits = { military_theorist }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
+			}
 		}
 	}
 	MAN_xian_yuan = {
@@ -461,6 +509,13 @@ characters={
 			
 			
 			traits = { naval_theorist }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
+			}
 		}
 	}	
 	MAN_deng_linge = {
@@ -477,6 +532,13 @@ characters={
 			
 			
 			traits = { air_warfare_theorist }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					date < 1937.6.1
+				}
+			}
 		}
 	}
 	MAN_megata_toshiro = {
@@ -490,6 +552,14 @@ characters={
 			}
 			
 			traits = { war_industrialist }
+			
+			ai_will_do = {
+				factor = 1000
+				modifier = {
+					factor = 0
+					date < 1938.1.1
+				}
+			}
 		}
 	}
 	MAN_songgotu_zhanshan = {
@@ -510,6 +580,14 @@ characters={
 			}
 			
 			traits = { captain_of_industry }
+			
+			ai_will_do = {
+				factor = 999
+				modifier = {
+					factor = 0
+					date > 1938.1.1
+				}
+			}
 		}
 	}
 }

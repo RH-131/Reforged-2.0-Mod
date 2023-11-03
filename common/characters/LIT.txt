@@ -348,13 +348,21 @@ characters={
 		advisor={
 			slot = theorist_production
 			idea_token = LIT_vladas_jurgutis
-		picture = generic_political_advisor_europe_1
-		
-		allowed = {
-			original_tag = LIT
-		}
-		
-		traits = { captain_of_industry }
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = LIT
+			}
+			
+			traits = { captain_of_industry }
+				
+			ai_will_do = {
+				factor = 99
+				modifier = {
+					factor = 0
+					date > 1938.1.1
+				}
+			}
 		}
 	}
 	LIT_Buffer_Character_1 = { 
