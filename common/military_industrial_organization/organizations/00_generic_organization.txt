@@ -4831,7 +4831,9 @@ generic_cas_aircraft_organization = {
 	icon = GFX_idea_generic_air_manufacturer_1
 
 	allowed = {
-		always = no # Archetype only - countries using it have their own verisons
+		OR = {
+			tag = SOV
+		}
 	}
 
 	equipment_type = {
@@ -5746,7 +5748,7 @@ generic_high_agility_fighter_aircraft_organization = {
 
 		equipment_bonus = {
 			air_agility = 0.10
-			air_range = -0.10
+			air_range = 0.10
 		}
 	}
 
@@ -7308,7 +7310,7 @@ generic_motorized_mechanized_organization = {
 	icon = GFX_idea_generic_motorized_equipment_manufacturer_3
 
 	allowed = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CZE tag = ROM tag = MEX } }
+		NOT = { OR = { tag = GER tag = ENG tag = CAN tag = SAF tag = AST tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CZE tag = ROM tag = MEX } }
 		NOT = {
 			AND = {
 				tag = POL
