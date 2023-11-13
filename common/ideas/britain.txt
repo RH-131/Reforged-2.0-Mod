@@ -1097,6 +1097,36 @@ ideas = {
 				trade_cost_for_target_factor = -0.25
 			}
 		}
+		
+	    ENG_trade_democracy1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = can_wartime_prices_and_trade_board
+
+			modifier = {
+				min_export = -0.05
+				global_building_slots_factor = 0.10
+				consumer_goods_factor = -0.05
+			    production_speed_industrial_complex_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = FRA
+				trade_cost_for_target_factor = -0.50
+			}
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.25
+			}
+		}
 
 		ENG_escort_effort_focus = {
 

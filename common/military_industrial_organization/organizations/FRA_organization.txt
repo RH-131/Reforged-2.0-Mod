@@ -8,13 +8,13 @@
 
  #################### 
 
-
 FRA_renault_organization = {
 	include = generic_infantry_tank_organization
 	icon = GFX_idea_renault
 	allowed = {	
 		OR = {
 			tag = FRA 
+			tag = EFR
 			AND = {
 				tag = ETH 
 				has_dlc = "By Blood Alone"
@@ -23,12 +23,12 @@ FRA_renault_organization = {
 	}
 
 	visible = {
-#		IF = {
-#			limit = {
-#				FROM = { original_tag = ETH }
-#			}
-##			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-#		}
+		IF = {
+			limit = {
+				FROM = { original_tag = ETH }
+			}
+#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+		}
 	}
 
 	available = {
@@ -99,7 +99,10 @@ FRA_hotchkiss_organization = {
 	include = generic_mobile_tank_organization
 	icon = GFX_idea_generic_tank_manufacturer_3
 	allowed = {	
-		tag = FRA 
+		OR = {
+			tag = FRA 
+			tag = EFR
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 	add_trait = { 
@@ -125,7 +128,10 @@ FRA_apx_organization = {
 	include = generic_medium_tank_organization
 	icon = GFX_idea_FRA_atelier_puteaux
 	allowed = {	
-		tag = FRA 
+		OR = {
+			tag = FRA 
+			tag = EFR
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -152,7 +158,10 @@ FRA_fcm_organization = {
 	include = generic_escort_ship_organization
 	icon = GFX_idea_fcm
 	allowed = {	
-		tag = FRA 
+		OR = {
+			tag = FRA 
+			tag = EFR
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -161,7 +170,10 @@ FRA_aeb_organization = {
 	include = generic_task_force_ship_organization
 	icon = GFX_idea_FRA_aeb
 	allowed = {	
-		tag = FRA 
+		OR = {
+			tag = FRA 
+			tag = EFR
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -170,7 +182,10 @@ FRA_acl_organization = {
 	include = generic_battle_line_ship_organization
 	icon = GFX_idea_FRA_acl
 	allowed = {	
-		tag = FRA 
+		OR = {
+			tag = FRA 
+			tag = EFR
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -179,7 +194,10 @@ FRA_acf_organization = {
 	include = generic_raider_ship_organization
 	icon = GFX_idea_FRA_acf
 	allowed = {	
-		tag = FRA 
+		OR = {
+			tag = FRA 
+			tag = EFR
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -209,6 +227,7 @@ FRA_bloch_organization = {
 	allowed = {	
 		OR = {
 			tag = FRA 
+			tag = EFR
 			AND = {
 				tag = ETH 
 				has_dlc = "By Blood Alone"
@@ -217,12 +236,12 @@ FRA_bloch_organization = {
 	}
 
 	visible = {
-#		IF = {
-#			limit = {
-#				FROM = { original_tag = ETH }
-#			}
-##			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-#		}
+		IF = {
+			limit = {
+				FROM = { original_tag = ETH }
+			}
+#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+		}
 	}
 	
 	available = {
@@ -252,7 +271,10 @@ FRA_amiot_organization = {
 	include = generic_heavy_aircraft_organization
 	icon = GFX_idea_amiot
 	allowed = {	
-		tag = FRA 
+		OR = {
+			tag = FRA 
+			tag = EFR
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -261,7 +283,10 @@ FRA_levasseur_organization = {
 	include = generic_naval_aircraft_organization
 	icon = GFX_idea_levasseur
 	allowed = {	
-		tag = FRA 
+		OR = {
+			tag = FRA 
+			tag = EFR
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 }
@@ -272,6 +297,7 @@ FRA_SNCAC_organization = {
 	icon = GFX_idea_FRA_sncac
 	allowed = {	
 		tag = FRA 
+		tag = EFR
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
@@ -296,7 +322,10 @@ FRA_panhard_organization = {
 	include = generic_armored_car_organization
 	icon = GFX_idea_FRA_panhard
 	allowed = {	
-		tag = FRA 
+		OR = {
+			tag = FRA 
+			tag = EFR
+		}
 		has_dlc = "La Resistance"
 	}
 }
@@ -308,6 +337,7 @@ FRA_somua_organization = {
 	allowed = {	
 		OR = {
 			tag = FRA 
+			tag = EFR
 			AND = {
 				tag = POL # If Poland sets up a local one
 				OR = {
@@ -319,15 +349,15 @@ FRA_somua_organization = {
 	}
 
 	visible = {
-#		IF = { 
-#			limit = {
-#				FROM = { tag = POL }
-#			}
-#			FROM = {
-#				has_country_flag = POL_somua_motors
-##				NOT = { has_completed_focus = POL_adaptive_designs }
-#			}
-#		}
+		IF = { 
+			limit = {
+				FROM = { tag = POL }
+			}
+			FROM = {
+				has_country_flag = POL_somua_motors
+#				NOT = { has_completed_focus = POL_adaptive_designs }
+			}
+		}
 	}
 
 	available = {
@@ -348,6 +378,7 @@ FRA_mas_organization = {
 	allowed = {	 
 		OR = {
 			tag = FRA 
+			tag = EFR
 			AND = {
 				tag = ETH
 				has_dlc = "By Blood Alone"
@@ -356,12 +387,12 @@ FRA_mas_organization = {
 	}
 	
 	visible = {
-#		IF = {
-#			limit = {
-#				FROM = { original_tag = ETH }
-#			}
-##			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-#		}
+		IF = {
+			limit = {
+				FROM = { original_tag = ETH }
+			}
+#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+		}
 	}
 
 	available = {
@@ -391,6 +422,9 @@ FRA_schneider_organization = {
 	include = generic_artillery_organization
 	icon = GFX_idea_schneider
 	allowed = {	
-		tag = FRA 
+		OR = {
+			tag = FRA 
+			tag = EFR
+		}
 	}
 }

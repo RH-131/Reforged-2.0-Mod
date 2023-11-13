@@ -574,10 +574,10 @@ characters={
 			}
 		}
 	}
-	MEX_gilberto_limon = {
+	MEX_gilberto_lemon = {
 		advisor={
 			slot = army_chief
-			idea_token = MEX_gilberto_limon	
+			idea_token = MEX_gilberto_lemon	
 			picture = generic_army_europe_5
 			
 			allowed = {
@@ -681,10 +681,10 @@ characters={
 			}
 		}
 	}
-	MEX_pablo_macias = {
+	MEX_pablo_m_valenzuela = {
 		advisor={
 			slot = high_command
-			idea_token = MEX_pablo_macias	
+			idea_token = MEX_pablo_m_valenzuela	
 			ledger = army
 			
 			picture = generic_army_europe_3
@@ -756,7 +756,7 @@ characters={
 			}
 			
 			cost = 250
-			traits = { superior_firepower_expert }
+			traits = { military_theorist }
 		}
 	}
 	MEX_enrique_estrada = {
@@ -835,14 +835,6 @@ characters={
 			}
 			
 			traits = { captain_of_industry }
-			
-			ai_will_do = {
-				factor = 99
-				modifier = {
-					factor = 0
-					date > 1938.1.1
-				}
-			}
 		}
 	}
 }
