@@ -98,7 +98,6 @@ focus_tree = {
 		cost = 5
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = { 
-
 			796 = {		
 				add_building_construction = {
 					type = naval_base
@@ -106,30 +105,26 @@ focus_tree = {
 					province = 2115
 					instant_build = yes
 				}	
-
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}					
-				add_extra_state_shared_building_slots = 1	
+				add_extra_state_shared_building_slots = 1
+				build_1_infrastructure = yes					
 			}
-
 			540 = {		
-
 				add_building_construction = {
 					type = naval_base
 					level = 1
 					province = 8248
 					instant_build = yes
 				}	
-
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}	
-				add_extra_state_shared_building_slots = 1					
+				add_extra_state_shared_building_slots = 1	
+				build_2_infrastructure = yes					
+			}		
+			891 = {		
+				add_extra_state_shared_building_slots = 1	
+                build_1_infrastructure = yes				
+			}	
+			892 = {		
+				add_extra_state_shared_building_slots = 1	
+                build_1_infrastructure = yes			
 			}				
 		}
 	}
@@ -152,7 +147,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = { 
 			796 = {
-				add_extra_state_shared_building_slots = 2
+			    add_extra_state_shared_building_slots = 2
+			    build_1_infrastructure = yes
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -191,22 +187,26 @@ focus_tree = {
 					amount = 15
 				}			
 				add_extra_state_shared_building_slots = 2
+				build_2_infrastructure = yes
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
 				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}	
-				add_building_construction = {
 					type = naval_base
 					level = 1
 					province = 8248
 					instant_build = yes
 				}
+			}
+			891 = {		
+				add_extra_state_shared_building_slots = 2
+				build_1_infrastructure = yes
+			}
+			892 = {	
+				add_extra_state_shared_building_slots = 2
+				build_1_infrastructure = yes
 			}
 		}
 	}
@@ -232,21 +232,8 @@ focus_tree = {
 			544 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-
-				add_building_construction = {
 					type = industrial_complex
 					level = 1
-					instant_build = yes
-				}
-
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					province = 2123				
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -259,6 +246,21 @@ focus_tree = {
 					type = aluminium
 					amount = 15
 				}
+				build_2_infrastructure = yes
+			}
+			897 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 2123				
+					instant_build = yes
+				}
+				build_2_infrastructure = yes
+			}
+			896 = {
+				add_extra_state_shared_building_slots = 2
+				build_2_infrastructure = yes
 			}
 		}
 	}
@@ -282,23 +284,22 @@ focus_tree = {
 			if = {
 				limit = { has_full_control_of_state = 795 }
 				795 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}	
+					add_extra_state_shared_building_slots = 2
+					build_1_infrastructure = yes
 				}
 			}
 			if = {
 				limit = { has_full_control_of_state = 112 }
 				112 = {
 					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}			
+					build_1_infrastructure = yes			
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 181 }
+				181 = {
+					add_extra_state_shared_building_slots = 2
+					build_1_infrastructure = yes			
 				}
 			}
 		}
@@ -323,13 +324,23 @@ focus_tree = {
 			add_ideas = POR_hydroelectric_power
 			if = {
 				limit = { has_full_control_of_state = 112 }
-				112 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}			
-					add_extra_state_shared_building_slots = 1	
+				112 = {	
+					add_extra_state_shared_building_slots = 2
+                    build_1_infrastructure = yes						
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 179 }
+				179 = {	
+					add_extra_state_shared_building_slots = 2
+                    build_1_infrastructure = yes						
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 795 }
+				795 = {	
+					add_extra_state_shared_building_slots = 2
+                    build_1_infrastructure = yes						
 				}
 			}
 		}
@@ -897,8 +908,8 @@ focus_tree = {
 				}
 			}
 			if = {
-				limit = { has_full_control_of_state = 796 }
-				796 = {
+				limit = { has_full_control_of_state = 897 }
+				897 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex		
@@ -958,8 +969,8 @@ focus_tree = {
 			}
 
 			if = {
-				limit = { has_full_control_of_state = 544 }
-				544 = {
+				limit = { has_full_control_of_state = 891 }
+				891 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex		
@@ -1000,8 +1011,8 @@ focus_tree = {
 			}
 
 			if = {
-				limit = { has_full_control_of_state = 540 }
-				540 = {
+				limit = { has_full_control_of_state = 892 }
+				892 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex		
@@ -1423,6 +1434,7 @@ focus_tree = {
 			remove_ideas = POR_unreliable_army
 			army_experience	= -50
 			add_stability = -0.1
+			add_ideas = partial_economic_mobilisation
 		}
 	}
 	
