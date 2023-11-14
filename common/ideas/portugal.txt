@@ -288,8 +288,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			    conscription = 0.02
-				conscription_factor = 0.05
+			    conscription = 0.01
 			}
 		}
 		
@@ -482,6 +481,8 @@ ideas = {
 				political_power_gain = 0.3
 				production_speed_industrial_complex_factor = 0.10
 				stability_weekly = 0.005
+				production_factory_efficiency_gain_factor = 0.02
+				production_factory_max_efficiency_factor = 0.02
 			}
 		}
 
@@ -625,7 +626,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				research_speed_factor = 0.05
 				stability_weekly = 0.001
 				democratic_drift = 0.05
 			}
