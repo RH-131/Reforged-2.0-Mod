@@ -227,6 +227,9 @@ country_event = {
 						transfer_state = 783
 						transfer_state = 699
 					}
+					FRA = {
+						transfer_state = 297
+					}
 					ENG = {
 						country_event = { id = portugal.1 hours = 6 }
 					}
@@ -247,33 +250,47 @@ country_event = {
 				112 = { add_core_of = SPR }
 				181 = { add_core_of = SPR }
 				180 = { add_core_of = SPR }
-				
-				POR = {
-					transfer_navy = {
-						target = SPR
+				if = {
+					limit = { POR = { is_ai = yes } }
+					POR = {
+						transfer_navy = {
+							target = SPR
+						}
+				    }
+					ENG = {
+						transfer_state = 698
+						transfer_state = 697
+						transfer_state = 702
+					}
+					FRA = {
+						transfer_state = 296
+						transfer_state = 297
+						transfer_state = 796
+						transfer_state = 540
+						transfer_state = 892
+						transfer_state = 891
+					}
+					EFR = {
+						transfer_state = 290
+						transfer_state = 783
+						transfer_state = 699
 					}
 				}
-				ENG = {
-					transfer_state = 698
-					transfer_state = 697
-					transfer_state = 702
-				}
-				FRA = {
-					transfer_state = 296
-					transfer_state = 297
-					transfer_state = 796
-					transfer_state = 540
-					transfer_state = 892
-					transfer_state = 891
-				}
-				EFR = {
-					transfer_state = 290
-					transfer_state = 783
-					transfer_state = 699
+				else = {
+					EFR = {
+						transfer_state = 290
+						transfer_state = 783
+						transfer_state = 699
+					}
+					FRA = {
+						transfer_state = 297
+					}
+					ENG = {
+						country_event = { id = portugal.1 hours = 6 }
+					}
 				}
 			}
 		}
-		
 	}
 	#germany denies
 	option = {
