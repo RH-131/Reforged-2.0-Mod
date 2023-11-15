@@ -1539,7 +1539,7 @@ leader_traits = {
 	
 
 
-    ##################################
+##################################
 # Naval traits.
 ##################################
 	
@@ -1552,10 +1552,8 @@ leader_traits = {
 		modifier = {
 			navy_submarine_attack_factor = 0.2 # +X% stronger damage for submarines
 		}
-		
-		slot = high_command
-
 		custom_gain_xp_trigger_tooltip = SEAWOLF_TRIGGER_TT
+
 		ai_will_do = {
 			factor = 1
 		}
@@ -1836,6 +1834,7 @@ leader_traits = {
 			factor = 0
 		}
 		
+		slot = high_command
 		trait_type = assignable_trait
 		specialist_advisor_trait = navy_anti_submarine_1
 		expert_advisor_trait = navy_anti_submarine_2

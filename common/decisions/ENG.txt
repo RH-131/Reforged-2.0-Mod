@@ -2346,24 +2346,19 @@ operations = {
 
 		allowed = {
 			tag = ENG
-			always = yes
+		}
+		visible = {
+			has_war = yes
 		}
 		available = {
+			set_temp_variable = { ENG_air_var = num_deployed_planes_with_type@small_plane_airframe }
+			add_to_temp_variable = { ENG_air_var = num_deployed_planes_with_type@medium_plane_fighter_airframe }
+			add_to_temp_variable = { ENG_air_var = num_equipment@small_plane_airframe }
+			add_to_temp_variable = { ENG_air_var = num_equipment@medium_plane_fighter_airframe }
 			has_war = yes
-			AND = {
-				has_deployed_air_force_size = {
-					type = fighter
-					size < 1501
-				}
-				has_equipment = {
-					fighter_equipment < 1501
-				}
-				has_equipment = {
-					heavy_fighter_equipment < 1201
-				}
-			}
-			NOT = {
-				has_idea = ENG_emergencyfighter
+			custom_trigger_tooltip = {
+				tooltip = less_than_1500_fighter_heavy_tt
+				check_variable = { ENG_air_var < 1500 }
 			}
 		}
 
@@ -2373,21 +2368,6 @@ operations = {
 			factor = 1
 		}
         fire_only_once = yes
-		visible = {
-			has_war = yes
-			AND = {
-				has_deployed_air_force_size = {
-					type = fighter
-					size < 1500
-				}
-				has_equipment = {
-					fighter_equipment < 1500
-				}
-			}
-			NOT = {
-				has_idea = ENG_emergencyfighter
-			}
-		}
 
 		complete_effect = {
 			add_timed_idea = { idea = ENG_emergencyfighter days = 180 }

@@ -49,9 +49,6 @@ CHI_jiangnan_shipyard_group_organization = {
 		} 
 		has_dlc = "Waking the Tiger"
 	}
-	available = {
-		owner = { controls_state = 613 }
-	}
 }
 
 CHI_dagu_shipyard_organization = {
@@ -64,9 +61,6 @@ CHI_dagu_shipyard_organization = {
 			tag = MEN
 		} 
 		has_dlc = "Waking the Tiger"
-	}
-	available = {
-		owner = { controls_state = 608 }
 	}
 }
 
@@ -94,8 +88,6 @@ CHI_camco_medium_organization = {
 	allowed = {	
 		OR = {
 			is_literally_china = yes
-			tag = MAN
-			tag = MEN
 		} 
 		has_dlc = "Waking the Tiger"
 	}
@@ -109,8 +101,6 @@ CHI_camco_fighter_organization = {
 	allowed = {	
 		OR = {
 			is_literally_china = yes
-			tag = MAN
-			tag = MEN
 		} 
 		has_dlc = "Waking the Tiger"
 	}
@@ -124,8 +114,6 @@ CHI_camco_bomber_organization = {
 	allowed = {	
 		OR = {
 			is_literally_china = yes
-			tag = MAN
-			tag = MEN
 		} 
 		has_dlc = "Waking the Tiger"
 	}
@@ -156,23 +144,16 @@ CHI_taiyuan_arsenal_organization = {
 		} 
 		has_dlc = "Waking the Tiger"
 	}
-	available = {
-		owner = { controls_state = 615 }
-	}
 }
 CHI_liaoning_arsenal_organization = {
 	include = generic_motorized_mechanized_organization
 	icon = GFX_idea_generic_motorized_equipment_manufacturer_1
 	allowed = {	
 		OR = {
-			is_literally_china = yes
 			tag = MAN
 			tag = MEN
 		} 
 		has_dlc = "Waking the Tiger"
-	}
-	available = {
-		owner = { controls_state = 715 }
 	}
 }
 CHI_hanyan_arsenal_organization = {
@@ -181,8 +162,6 @@ CHI_hanyan_arsenal_organization = {
 	allowed = {	
 		OR = {
 			is_literally_china = yes
-			tag = MAN
-			tag = MEN
 		} 
 		has_dlc = "Waking the Tiger"
 	}
@@ -195,13 +174,9 @@ CHI_mukden_arsenal_organization = {
 	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
 	allowed = {	
 		OR = {
-			is_literally_china = yes
 			tag = MAN
 			tag = MEN
 		} 
 		has_dlc = "Waking the Tiger"
-	}
-	available = {
-		owner = { controls_state = 716 }
 	}
 }
