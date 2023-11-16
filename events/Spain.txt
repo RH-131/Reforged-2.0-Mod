@@ -185,18 +185,18 @@ country_event = {
 			SPR = {
 				add_ideas = { SPR_prepare_for_war }
 				load_oob = SPR_fleet
-				transfer_state = 179
-				transfer_state = 795
-				transfer_state = 112
-				transfer_state = 181
-				transfer_state = 180
-				179 = { add_core_of = SPR }
-				795 = { add_core_of = SPR }
-				112 = { add_core_of = SPR }
-				181 = { add_core_of = SPR }
-				180 = { add_core_of = SPR }
 				if = {
 					limit = { POR = { is_ai = yes } }
+					transfer_state = 179
+					transfer_state = 795
+					transfer_state = 112
+					transfer_state = 181
+					transfer_state = 180
+					179 = { add_core_of = SPR }
+					795 = { add_core_of = SPR }
+					112 = { add_core_of = SPR }
+					181 = { add_core_of = SPR }
+					180 = { add_core_of = SPR }
 					POR = {
 						transfer_navy = {
 							target = SPR
@@ -229,9 +229,6 @@ country_event = {
 					}
 					FRA = {
 						transfer_state = 297
-					}
-					ENG = {
-						country_event = { id = portugal.1 hours = 6 }
 					}
 				}
 			}
@@ -240,16 +237,6 @@ country_event = {
 			SPR = {
 				add_ideas = { SPR_prepare_for_war }
 				load_oob = SPR_fleet
-				transfer_state = 179
-				transfer_state = 795
-				transfer_state = 112
-				transfer_state = 181
-				transfer_state = 180
-				179 = { add_core_of = SPR }
-				795 = { add_core_of = SPR }
-				112 = { add_core_of = SPR }
-				181 = { add_core_of = SPR }
-				180 = { add_core_of = SPR }
 				if = {
 					limit = { POR = { is_ai = yes } }
 					POR = {
@@ -257,6 +244,16 @@ country_event = {
 							target = SPR
 						}
 				    }
+					transfer_state = 179
+					transfer_state = 795
+					transfer_state = 112
+					transfer_state = 181
+					transfer_state = 180
+					179 = { add_core_of = SPR }
+					795 = { add_core_of = SPR }
+					112 = { add_core_of = SPR }
+					181 = { add_core_of = SPR }
+					180 = { add_core_of = SPR }
 					ENG = {
 						transfer_state = 698
 						transfer_state = 697
@@ -290,19 +287,6 @@ country_event = {
 					}
 				}
 			}
-		}
-	}
-	#germany denies
-	option = {
-		name = spainwar.1.b	# germany denies joining war
-		
-		ai_chance = { factor = 90 }
-			
-		effect_tooltip = {
-			
-		}
-		hidden_effect = {
-			
 		}
 	}
 

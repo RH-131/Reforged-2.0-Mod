@@ -16,11 +16,180 @@ operations = {
 		fire_only_once = yes
 
 		complete_effect = {
+			add_to_tech_sharing_group = commonwealth_research
+		   	GER = {
+				60 = {
+				add_resource = {
+					type = tungsten
+					amount = 25
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+					}
+				}
+			}
+	   	    ITA = {
+				158 = {
+	            add_resource = {
+					type = steel
+					amount = 15
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+					}
+				}
+			}
+	  	  JAP = {
+				535 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+					}
+				}
+			}
+		}		
+	}
+    POR_honor1 = {
+
+		icon = generic_bureaucracy
+
+		allowed = {
+			tag = POR			
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		complete_effect = {
+		    SPR = {
+		        transfer_state = 179
+				transfer_state = 795
+				transfer_state = 112
+				transfer_state = 181
+				transfer_state = 180
+				179 = { add_core_of = SPR }
+				795 = { add_core_of = SPR }
+				112 = { add_core_of = SPR }
+				181 = { add_core_of = SPR }
+				180 = { add_core_of = SPR }
+			}
 			ENG = {
 				country_event = { id = portugal.1 hours = 6 }
 			}
-		    GER = {
-		        country_event = { id = portugal.2 hours = 6 }
+		}		
+	}
+    POR_axis = {
+
+		icon = generic_bureaucracy
+
+		allowed = {
+			tag = POR			
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		complete_effect = {
+		    add_to_tech_sharing_group = axis_research
+		   	ENG = {
+				126 = {
+				add_resource = {
+					type = tungsten
+					amount = 25
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+					}
+				}
+			}
+	   	    USA = {
+				361 = {
+	            add_resource = {
+					type = steel
+					amount = 15
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+					}
+				}
+			}
+	  	    SOV = {
+				219 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+					}
+				}
+			}
+	  	    FRA = {
+				772 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				    }
+				}
+			}
+		}		
+	}
+    POR_axis1 = {
+
+		icon = generic_bureaucracy
+
+		allowed = {
+			tag = POR			
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		complete_effect = {
+			ENG = {
+				transfer_state = 698
+				transfer_state = 697
+				transfer_state = 702
+				transfer_state = 729
+				transfer_state = 721
+			}
+			FRA = {
+				transfer_state = 296
+			    transfer_state = 796
+				transfer_state = 540
+				transfer_state = 892
+				transfer_state = 891
+				transfer_state = 705
+				transfer_state = 897
+				transfer_state = 544
+				transfer_state = 896
+			}
+			GER = {
+				country_event = { id = portugal.2 hours = 6 }
 			}
 		}		
 	}
