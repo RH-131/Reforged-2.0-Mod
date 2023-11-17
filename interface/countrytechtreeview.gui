@@ -3803,18 +3803,6 @@ guiTypes = {
 				orientation = center_up
 				origo = center_up
 				instantTextBoxType = {
-					name = "ger_nsb_armour_subtitle_inftank"
-					position = { x = -200 y = 710 }
-					textureFile = ""
-					font = "hoi_36header"
-					borderSize = {x = 0 y = 4}
-					text = "ARMOUR_TITLE_GERASS"
-					maxWidth = 500
-					maxHeight = 62
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
 					name = "ger_nsb_armour_subtitle_motor"
 					position = { x = -650 y = 0 }
 					textureFile = ""
@@ -6604,18 +6592,6 @@ guiTypes = {
 				orientation = center_up
 				origo = center_up
 				instantTextBoxType = {
-					name = "sov_nsb_armour_subtitle_hvassault"
-					position = { x = -180 y = 570 }
-					textureFile = ""
-					font = "hoi_36header"
-					borderSize = {x = 0 y = 4}
-					text = "ARMOUR_TITLE_HVASS"
-					maxWidth = 500
-					maxHeight = 62
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
 					name = "sov_nsb_armour_subtitle_motor"
 					position = { x = -400 y = 0 }
 					textureFile = ""
@@ -6700,28 +6676,21 @@ guiTypes = {
 				format = "LEFT"
 			}
 			gridboxtype = { 
-				name = "sov_light_tank_chassis_1934_tree"
+				name = "sov_t18_tank_chassis_1934_tree"
 				position = { x = 10% y = 115 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 			gridboxtype = { 
-				name = "sov_medium_tank_chassis_1937_tree"
+				name = "sov_t28_tank_chassis_1937_tree"
 				position = { x = 10% y = 115 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			} 
 			gridboxtype = { 
-				name = "sov_nsb_heavy_assault_gun_1939_tree"
-				position = { x = 10% y = 115 }
-				size = { width = 80% height = 80% }
-				slotsize = { width = 70 height = 70 }
-				format = "LEFT"
-			}
-			gridboxtype = { 
-				name = "sov_heavy_tank_chassis_1934_tree"
+				name = "sov_t35_tank_chassis_1934_tree"
 				position = { x = 10% y = 115 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }

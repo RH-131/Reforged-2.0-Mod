@@ -273,7 +273,7 @@ technologies = {
 	}
 	
 	############################# Light armor ############################
-	sov_light_tank_chassis_1934 = {
+	sov_t18_tank_chassis_1934 = {
 		enable_equipment_modules = {
 			tank_torsion_bar_suspension
 			tank_riveted_armor
@@ -313,7 +313,7 @@ technologies = {
 		}		
 		
 		path = {
-			leads_to_tech = sov_light_tank_chassis_1936
+			leads_to_tech = sov_t26_tank_chassis_1936
 			research_cost_coeff = 1
 		}
 		
@@ -335,14 +335,14 @@ technologies = {
 		}
 	}	
 	
-	sov_light_tank_chassis_1936 = { 
+	sov_t26_tank_chassis_1936 = { 
 
 		enable_equipments = {
 			light_tank_chassis_1936 
 		}
 		
 		path = {
-			leads_to_tech = sov_light_tank_chassis_1938
+			leads_to_tech = sov_bt_tank_chassis_1938
 			research_cost_coeff = 1
 		}
 		
@@ -365,7 +365,7 @@ technologies = {
 		}
 	}
 	
-	sov_light_tank_chassis_1938 = { 
+	sov_bt_tank_chassis_1938 = { 
 
 		enable_equipments = {
 			light_tank_chassis_1938
@@ -375,7 +375,7 @@ technologies = {
 		}	
 		
 		path = {
-			leads_to_tech = sov_light_tank_chassis_1940
+			leads_to_tech = sov_t50_tank_chassis_1940
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -400,7 +400,7 @@ technologies = {
 		}
 	}
 	
-	sov_light_tank_chassis_1940 = { 
+	sov_t50_tank_chassis_1940 = { 
 
 		enable_equipments = {
 			light_tank_chassis_1940
@@ -410,7 +410,7 @@ technologies = {
 		}	
 		
 		path = {
-			leads_to_tech = sov_light_tank_chassis_1942
+			leads_to_tech = sov_t70_tank_chassis_1942
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -435,7 +435,7 @@ technologies = {
 		}
 	}
 
-	sov_light_tank_chassis_1942 = { 
+	sov_t70_tank_chassis_1942 = { 
 
 		enable_equipments = {
 			light_tank_chassis_1942
@@ -466,7 +466,7 @@ technologies = {
 		}
 	}
 	
-	sov_medium_tank_chassis_1937 = {	
+	sov_t28_tank_chassis_1937 = {	
 
 		enable_equipments = {
 			medium_tank_chassis_1937
@@ -476,7 +476,7 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = sov_medium_tank_chassis_1939
+			leads_to_tech = sov_t34_tank_chassis_1941
 			research_cost_coeff = 1
 		}
 		
@@ -500,90 +500,15 @@ technologies = {
 			cat_medium_armor
 		}
 	}
-
 	
-	sov_medium_tank_chassis_1939 = { 
+	sov_t34_tank_chassis_1941 = { 
 
 		enable_equipments = {
-			medium_tank_chassis_1939
-			medium_tank_destroyer_chassis_1939
-			medium_tank_artillery_chassis_1939
-			medium_tank_aa_chassis_1939
+			medium_tank_chassis_1940
 		}
 		
 		path = {
-			leads_to_tech = sov_medium_tank_chassis_1941
-			research_cost_coeff = 1
-		}
-		
-		dependencies = {
-			improved_machine_tools = 1
-		}
-		
-		research_cost = 1.8
-		start_year = 1939
-
-		folder = {
-			name = sov_nsb_armour_folder
-			position = { x = 2 y = @1939 }
-		}
-		
-		ai_will_do = {
-			factor = 10
-			
-		}
-		
-		categories = { all_armour
-			armor
-			cat_medium_armor
-		}
-	}
-	
-	sov_nsb_heavy_assault_gun_1939 = { 
-
-		enable_equipments = {
-			heavy_assault_gun_equipment_1939
-		}
-		
-		enable_subunits = {
-			heavy_assaut_gun_brigade
-			heavy_assaut_gun_company
-		}
-		path = {
-			leads_to_tech = sov_nsb_heavy_assault_gun_1941
-			research_cost_coeff = 1
-		}
-		research_cost = 1.6
-		start_year = 1939
-		dependencies = {
-			improved_machine_tools = 1
-		}
-		folder = {
-			name = sov_nsb_armour_folder
-			position = { x = 4 y = @1939 }
-		}
-				
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = { all_armour
-			armor
-			cat_heavy_armor
-		}
-	}
-	
-	sov_medium_tank_chassis_1941 = { 
-
-		enable_equipments = {
-			medium_tank_chassis_1941
-			medium_tank_destroyer_chassis_1941
-			medium_tank_artillery_chassis_1941
-			medium_tank_aa_chassis_1941
-		}
-		
-		path = {
-			leads_to_tech = sov_medium_tank_chassis_1943
+			leads_to_tech = sov_t3485_tank_chassis_1943
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -591,11 +516,11 @@ technologies = {
 		}	
 		
 		research_cost = 1.8
-		start_year = 1941
+		start_year = 1940
 		
 		folder = {
 			name = sov_nsb_armour_folder
-			position = { x = 2 y = @1941 }
+			position = { x = 2 y = @1940 }
 		}
 
 		ai_will_do = {
@@ -609,39 +534,7 @@ technologies = {
 		}
 	}
 	
-	sov_nsb_heavy_assault_gun_1941 = { 
-
-		enable_equipments = {
-			heavy_assault_gun_equipment_1941
-		}
-		
-		dependencies = {
-			advanced_machine_tools = 1
-		}
-		path = {
-			leads_to_tech = sov_nsb_heavy_assault_gun_1943
-			research_cost_coeff = 1
-		}	
-		
-		research_cost = 1.6
-		start_year = 1941
-
-		folder = {
-			name = sov_nsb_armour_folder
-			position = { x = 4 y = @1941 }
-		}
-				
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = { all_armour
-			armor
-			cat_heavy_armor
-		}
-	}
-	
-	sov_medium_tank_chassis_1943 = { 
+	sov_t3485_tank_chassis_1943 = { 
 
 		enable_equipments = {
 			medium_tank_chassis_1943
@@ -651,7 +544,7 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = sov_medium_tank_chassis_1945
+			leads_to_tech = sov_t44_tank_chassis_1945
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -675,7 +568,7 @@ technologies = {
 		}
 	}
 	
-	sov_medium_tank_chassis_1945 = { 
+	sov_t44_tank_chassis_1945 = { 
 
 		enable_equipments = {
 			medium_tank_chassis_1945
@@ -704,37 +597,7 @@ technologies = {
 		}
 	}
 	
-	sov_nsb_heavy_assault_gun_1943 = { 
-
-		enable_equipments = {
-			heavy_assault_gun_equipment_1943
-		}
-		dependencies = {
-			assembly_line_production = 1
-		}	
-		research_cost = 1.6
-		start_year = 1943
-        path = {
-			leads_to_tech = sov_nsb_heavy_assault_gun_1945
-			research_cost_coeff = 1
-		}
-		folder = {
-			name = sov_nsb_armour_folder
-			position = { x = 4 y = @1943 }
-		}
-				
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = { all_armour
-			armor
-			cat_heavy_armor
-		}
-	}
-	
-	
-	sov_heavy_tank_chassis_1934 = { 
+	sov_t35_tank_chassis_1934 = { 
 
 		enable_equipments = {
 			heavy_tank_chassis_1934
@@ -744,7 +607,7 @@ technologies = {
 		}
 			
 		path = {
-			leads_to_tech = sov_heavy_tank_chassis_1939
+			leads_to_tech = sov_kv1_tank_chassis_1939
 			research_cost_coeff = 1
 		}
 		
@@ -769,7 +632,7 @@ technologies = {
 	
 	
 	
-	sov_heavy_tank_chassis_1939 = { 
+	sov_kv1_tank_chassis_1939 = { 
 
 		enable_equipments = {
 			heavy_tank_chassis_1939
@@ -779,7 +642,7 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = sov_heavy_tank_chassis_1941
+			leads_to_tech = sov_is_tank_chassis_1943
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -809,43 +672,7 @@ technologies = {
 		}
 	}
 	
-	sov_heavy_tank_chassis_1941 = { 
-
-		enable_equipments = {
-			heavy_tank_chassis_1941
-			heavy_tank_destroyer_chassis_1941
-			heavy_tank_artillery_chassis_1941
-		}
-		
-		
-		path = {
-			leads_to_tech = sov_heavy_tank_chassis_1943
-			research_cost_coeff = 1
-		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
-		
-		research_cost = 2.2
-		start_year = 1941
-		
-		folder = {
-			name = sov_nsb_armour_folder
-			position = { x = 6 y = @1941 }
-		}
-		
-		ai_will_do = {
-			factor = 10
-			
-		}
-		
-		categories = { all_armour
-			armor
-			cat_heavy_armor
-		}
-	}
-	
-	sov_heavy_tank_chassis_1943 = { 
+	sov_is_tank_chassis_1943 = { 
 
 		enable_equipments = {
 			heavy_tank_chassis_1943
@@ -856,12 +683,6 @@ technologies = {
 			assembly_line_production = 1
 		}
 		
-		path = {
-			leads_to_tech = sov_heavy_tank_chassis_1945
-			research_cost_coeff = 1
-		}
-		
-		
 		research_cost = 2.2
 		start_year = 1943
 		
@@ -870,56 +691,6 @@ technologies = {
 			position = { x = 6 y = @1943 }
 		}
 
-		ai_will_do = {
-			factor = 10
-			
-		}
-		
-		categories = { all_armour
-			armor
-			cat_heavy_armor
-		}
-	}
-	
-	sov_nsb_heavy_assault_gun_1945 = { 
-
-		enable_equipments = {
-			heavy_assault_gun_equipment_1945
-		}
-			
-		research_cost = 1.6
-		start_year = 1945
-		dependencies = {
-			modern_tools = 1
-		}
-		ai_will_do = {
-			factor = 0
-		}
-		folder = {
-			name = sov_nsb_armour_folder
-			position = { x = 4 y = @1945 }
-		}
-		categories = { all_armour
-			armor
-			cat_medium_armor
-		}
-	}
-	sov_heavy_tank_chassis_1945 = { 
-
-		enable_equipments = {
-			heavy_tank_chassis_1945
-		}
-		dependencies = {
-			modern_tools = 1
-		}
-		research_cost = 2.2
-		start_year = 1945
-		
-		folder = {
-			name = sov_nsb_armour_folder
-			position = { x = 6 y = @1945 }
-		}
-		
 		ai_will_do = {
 			factor = 10
 			
