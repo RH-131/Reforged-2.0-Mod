@@ -278,22 +278,11 @@ technologies = {
 	}
 	
 	############################# Light armor ############################
-	ger_panzeri_tank_chassis_1934 = {
+	ger_panzeri_tank_chassis = {
 		enable_equipment_modules = {
 			tank_light_one_man_tank_turret
-			tank_light_two_man_tank_turret
-			tank_light_three_man_tank_turret
 			tank_light_fixed_superstructure_turret
-			tank_medium_one_man_tank_turret
-			tank_medium_two_man_tank_turret
-			tank_medium_three_man_tank_turret
 			tank_medium_fixed_superstructure_turret
-			tank_heavy_two_man_tank_turret
-			tank_heavy_three_man_tank_turret
-			tank_heavy_fixed_superstructure_turret
-			tank_super_heavy_four_man_tank_turret
-			tank_super_heavy_three_man_tank_turret
-			tank_modern_tank_turret
 			sloped_armor
 			extra_ammo_storage
 			wet_ammo_storage
@@ -307,11 +296,11 @@ technologies = {
 			light_tank_chassis_1934 
 		}	
 		path = {
-			leads_to_tech = ger_panzerii_tank_chassis_1936
+			leads_to_tech = ger_panzerii_tank_chassis
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = ger_czech_tank_chassis_1942
+			leads_to_tech = ger_czech_tank_chassis
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
@@ -331,12 +320,13 @@ technologies = {
 		}
 	}	
 	
-	ger_panzerii_tank_chassis_1936 = { 
+	ger_panzerii_tank_chassis = { 
 		enable_equipments = {
-			light_tank_chassis_1936 
+			light_tank_chassis_1936
+			tank_light_two_man_tank_turret			
 		}
 		path = {
-			leads_to_tech = ger_panzeriif_tank_chassis_1938
+			leads_to_tech = ger_panzeriif_tank_chassis
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
@@ -355,7 +345,7 @@ technologies = {
 		}
 	}
 	
-	ger_panzeriif_tank_chassis_1938 = {
+	ger_panzeriif_tank_chassis = {
 		enable_equipments = {
 			light_tank_chassis_1938
 			light_tank_destroyer_chassis_1938
@@ -364,7 +354,7 @@ technologies = {
 		}	
 		
 		path = {
-			leads_to_tech = ger_luchs_tank_chassis_1944
+			leads_to_tech = ger_luchs_tank_chassis
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -385,7 +375,7 @@ technologies = {
 			cat_light_armor
 		}
 	}
-	ger_luchs_tank_chassis_1944 = {
+	ger_luchs_tank_chassis = {
 		enable_equipments = {
 			light_tank_chassis_1940
 			light_tank_destroyer_chassis_1940
@@ -410,18 +400,19 @@ technologies = {
 			cat_light_armor
 		}
 	}
-	ger_czech_tank_chassis_1942 = {
+	ger_czech_tank_chassis = {
 		enable_equipments = {
 			light_tank_chassis_1942
 			light_tank_destroyer_chassis_1942
 			light_tank_artillery_chassis_1942
 			light_tank_aa_chassis_1942
+			tank_light_three_man_tank_turret
 		}	
 		dependencies = {
 			advanced_machine_tools = 1
 		}
 		path = {
-			leads_to_tech = ger_hetzer_tank_chassis_1944
+			leads_to_tech = ger_hetzer_tank_chassis
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
@@ -439,7 +430,7 @@ technologies = {
 			cat_light_armor
 		}
 	}
-	ger_hetzer_tank_chassis_1944 = { 
+	ger_hetzer_tank_chassis = { 
 		enable_equipments = {
 			light_tank_chassis_1944
 			light_tank_destroyer_chassis_1944
@@ -464,15 +455,18 @@ technologies = {
 			cat_light_armor
 		}
 	}
-	ger_panzeriii_tank_chassis_1936 = {	
+	ger_panzeriii_tank_chassis = {	
 		enable_equipments = {
 			medium_tank_chassis_1936
+			tank_medium_one_man_tank_turret
+			tank_medium_two_man_tank_turret
+			tank_medium_three_man_tank_turret
 		}
 		enable_subunits = {
 			medium_armor
 		}
 		path = {
-			leads_to_tech = ger_panzeriiij_tank_chassis_1938
+			leads_to_tech = ger_panzeriiij_tank_chassis
 			research_cost_coeff = 1
 		}
 		research_cost = 1.8
@@ -490,24 +484,27 @@ technologies = {
 			cat_medium_armor
 		}
 	}
-	ger_panzeriiij_tank_chassis_1938 = { 
+	ger_panzeriiij_tank_chassis = { 
 		enable_equipments = {
 			medium_tank_chassis_1938
 			medium_tank_destroyer_chassis_1938
 			medium_tank_artillery_chassis_1938
 			medium_tank_assault_gun_chassis_1938
 			medium_tank_aa_chassis_1938
+			tank_medium_one_man_tank_turret
+			tank_medium_two_man_tank_turret
+			tank_medium_three_man_tank_turret
 		}
 		enable_subunits = {
 			medium_assault_gun_brigade
 			medium_assault_gun_company
 		}
 		path = {
-			leads_to_tech = ger_panzerivg_tank_chassis_1942
+			leads_to_tech = ger_panzerivg_tank_chassis
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = ger_panther_tank_chassis_1943
+			leads_to_tech = ger_panther_tank_chassis
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -530,7 +527,7 @@ technologies = {
 		}
 	}
 	
-	ger_panzeriv_tank_chassis_1940 = { 
+	ger_panzeriv_tank_chassis = { 
 		enable_equipments = {
 			medium_tank_chassis_1940
 			medium_tank_destroyer_chassis_1940
@@ -538,7 +535,7 @@ technologies = {
 			medium_tank_aa_chassis_1940
 		}
 		path = {
-			leads_to_tech = ger_panzerivg_tank_chassis_1942
+			leads_to_tech = ger_panzerivg_tank_chassis
 			research_cost_coeff = 1
 		}	
 		dependencies = {
@@ -560,7 +557,7 @@ technologies = {
 		}
 	}
 	
-	ger_panzerivg_tank_chassis_1942 = {
+	ger_panzerivg_tank_chassis = {
 		enable_equipments = {
 			medium_tank_chassis_1942
 			medium_tank_destroyer_chassis_1942
@@ -568,7 +565,7 @@ technologies = {
 			medium_tank_aa_chassis_1942
 		}
 		path = {
-			leads_to_tech = ger_panther_tank_chassis_1943
+			leads_to_tech = ger_panther_tank_chassis
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -590,7 +587,7 @@ technologies = {
 		}
 	}
 	
-	ger_panther_tank_chassis_1943 = { #PANTHER
+	ger_panther_tank_chassis = { #PANTHER
 		enable_equipments = {
 			medium_tank_chassis_1943
 			medium_tank_destroyer_chassis_1943
@@ -598,7 +595,7 @@ technologies = {
 			medium_tank_aa_chassis_1943
 		}	
 		path = {
-			leads_to_tech = ger_pantherii_tank_chassis_1945
+			leads_to_tech = ger_pantherii_tank_chassis
 			research_cost_coeff = 1
 		}
 		research_cost = 1.8
@@ -619,7 +616,7 @@ technologies = {
 			cat_medium_armor
 		}
 	}
-	ger_pantherii_tank_chassis_1945 = { 
+	ger_pantherii_tank_chassis = { 
 		enable_equipments = {
 			medium_tank_chassis_1945 
 		}
@@ -642,15 +639,18 @@ technologies = {
 		}
 	}
 	
-	ger_heavy_tank_chassis_1934 = { 
+	ger_neubau_tank_chassis = { 
 		enable_equipments = {
 			heavy_tank_chassis_1934 
+			tank_heavy_two_man_tank_turret
+			tank_heavy_three_man_tank_turret
+			tank_heavy_fixed_superstructure_turret
 		}
 		enable_subunits = {
 			heavy_armor
 		}
 		path = {
-			leads_to_tech = ger_heavy_tank_chassis_1942
+			leads_to_tech = ger_heavy_tank_chassis
 			research_cost_coeff = 1
 		}
 		research_cost = 2
@@ -668,14 +668,14 @@ technologies = {
 			cat_heavy_armor
 		}
 	}
-	ger_heavy_tank_chassis_1942 = {
+	ger_heavy_tank_chassis = {
 		enable_equipments = {
 			heavy_tank_chassis_1942
 			heavy_tank_destroyer_chassis_1942
 			heavy_tank_artillery_chassis_1942
 		}
 		path = {
-			leads_to_tech = ger_heavy_tank_chassis_1944
+			leads_to_tech = ger_heavy_tank_chassis
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -702,7 +702,7 @@ technologies = {
 			cat_heavy_armor
 		}
 	}
-	ger_heavy_tank_chassis_1944 = { 
+	ger_heavy_tank_chassis = { 
 		enable_equipments = {
 			heavy_tank_chassis_1944
 			heavy_tank_destroyer_chassis_1944

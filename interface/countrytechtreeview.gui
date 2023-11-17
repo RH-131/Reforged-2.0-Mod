@@ -3887,28 +3887,28 @@ guiTypes = {
 				format = "LEFT"
 			}
 			gridboxtype = { 
-				name = "ger_panzeri_tank_chassis_1934_tree"
+				name = "ger_panzeri_tank_chassis_tree"
 				position = { x = 10% y = 0 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 			gridboxtype = { 
-				name = "ger_panzeriii_tank_chassis_1936_tree"
+				name = "ger_panzeriii_tank_chassis_tree"
 				position = { x = 10% y = 0 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 			gridboxtype = { 
-				name = "ger_panzeriv_tank_chassis_1940_tree"
+				name = "ger_panzeriv_tank_chassis_tree"
 				position = { x = 10% y = 0 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 			gridboxtype = { 
-				name = "ger_heavy_tank_chassis_1934_tree"
+				name = "ger_neubau_tank_chassis_tree"
 				position = { x = 10% y = 0 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
@@ -8512,6 +8512,313 @@ guiTypes = {
 			}
 			
 		}
+		
+		containerWindowType = {
+			name = "nsb_armour_techs_folder"
+			position = { x=0 y=47 }
+			size = { width = 100% height = 100%% }
+			margin = { top = 13 left = 13 bottom = 24 right = 25}
+			drag_scroll = { left middle }
+			verticalScrollbar = "right_vertical_slider"
+			horizontalScrollbar = "bottom_horizontal_slider"
+			scroll_wheel_factor = 40
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window_2b_border"
+			}
+					
+			containerWindowType = {
+				name = "techtree_stripes"
+				position = { x= 0 y= 0 }
+				size = { width = 100%% height = 100%% }
+				clipping = no
+				
+				containerWindowType = {
+					name = "techtree_stripes2"
+					position = { x= 0 y= -30 }
+					size = { 
+						width = 100%% height = 100%%
+					}
+					background = {
+						name = "Background"
+						quadTextureSprite ="GFX_techtree_stripes"
+					}
+				}
+				iconType = {
+					name ="armortech_bg"
+					spriteType = "GFX_armortech_bg"
+					position = { x=0 y=0 }
+					alwaystransparent = yes
+				}
+
+				containerWindowType = {
+					name = "armour_year_left"
+					position = { x=0 y=0 }
+					size = { width = 80 height = 950 }
+					orientation = upper_left
+						
+					instantTextBoxType = {
+						name = "armour_year1"
+						position = { x = 190 y = 50 }
+						textureFile = ""
+						font = "hoi_36header"
+						borderSize = {x = 0 y = 4}
+						text = "1934"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+						
+					instantTextBoxType = {
+						name = "armour_year2"
+						position = { x = 325 y = 50 }
+						textureFile = ""
+						font = "hoi_36header"
+						borderSize = {x = 0 y = 4}
+						text = "1935"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+	
+					instantTextBoxType = {
+						name = "armour_year3"
+						position = { x = 470 y = 50 }
+						textureFile = ""
+						font = "hoi_36header"
+						borderSize = {x = 0 y = 4}
+						text = "1936"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+	
+					instantTextBoxType = {
+						name = "armour_year4"
+						position = { x = 610 y = 50 }
+						textureFile = ""
+						font = "hoi_36header"
+						borderSize = {x = 0 y = 4}
+						text = "1937"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+	
+					instantTextBoxType = {
+						name = "armour_year5"
+						position = { x = 750 y = 50 }
+						textureFile = ""
+						font = "hoi_36header"
+						borderSize = {x = 0 y = 4}
+						text = "1938"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+	
+					instantTextBoxType = {
+						name = "armour_year6"
+						position = { x = 890 y = 50 }
+						textureFile = ""
+						font = "hoi_36header"
+						borderSize = {x = 0 y = 4}
+						text = "1939"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "armour_year7"
+						position = { x = 1030 y = 50 }
+						textureFile = ""
+						font = "hoi_36header"
+						borderSize = {x = 0 y = 4}
+						text = "1940"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "armour_year8"
+						position = { x = 1170 y = 50 }
+						textureFile = ""
+						font = "hoi_36header"
+						borderSize = {x = 0 y = 4}
+						text = "1941"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "armour_year9"
+						position = { x = 1310 y = 50 }
+						textureFile = ""
+						font = "hoi_36header"
+						borderSize = {x = 0 y = 4}
+						text = "1942"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "armour_year10"
+						position = { x = 1450 y = 50 }
+						textureFile = ""
+						font = "hoi_36header"
+						borderSize = {x = 0 y = 4}
+						text = "1943"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "armour_year11"
+						position = { x = 1590 y = 50 }
+						textureFile = ""
+						font = "hoi_36header"
+						borderSize = {x = 0 y = 4}
+						text = "1944"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+				}		
+			}
+
+			containerWindowType = {
+				name = "nsb_armour_subtitles"
+				position = { x = -600 y = 0 }
+				size = { width = 600 height = 80% }				
+				orientation = center_up
+				origo = center_up
+
+				instantTextBoxType = {
+					name = "armour_subtitle_turret"
+					position = { x = -30 y = 100 }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = {x = 0 y = 4}
+					text = "TURRET MODULES"
+					maxWidth = 160
+					maxHeight = 62
+					format = center
+					Orientation = "UPPER_LEFT"
+				}	
+				instantTextBoxType = {
+					name = "armour_subtitle_hull"
+					position = { x = -38 y = 310	 }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = {x = 0 y = 4}
+					text = "HULL MODULES"
+					maxWidth = 200
+					maxHeight = 62
+					format = center
+					Orientation = "UPPER_LEFT"
+				}	
+				instantTextBoxType = {
+					name = "armour_subtitle_optics"
+					position = { x = -43 y = 395 }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = {x = 0 y = 4}
+					text = "OPTICS"
+					maxWidth = 250
+					maxHeight = 62
+					format = center
+					Orientation = "UPPER_LEFT"
+				}	
+				instantTextBoxType = {
+					name = "armour_subtitle_armour"
+					position = { x = -35 y = 510 }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = {x = 0 y = 4}
+					text = "ARMOUR UPGRADES"
+					maxWidth = 210
+					maxHeight = 62
+					format = center
+					Orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "armour_subtitle_suspension"
+					position = { x = -33 y = 675 }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = {x = 0 y = 4}
+					text = "SUSPENSION"
+					maxWidth = 250
+					maxHeight = 62
+					format = center
+					Orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "armour_subtitle_misc"
+					position = { x = -40 y = 815 }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = {x = 0 y = 4}
+					text = "MISCELLANEOUS"
+					maxWidth = 170
+					maxHeight = 62
+					format = center
+					Orientation = "UPPER_LEFT"
+				}						
+			}	
+
+			containerWindowType = {
+				name = "tiled_research_bg"
+				position = { x=1560 y=577 }
+				size = { width = 175 height = 100 }
+				clipping = no
+	
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_tiled_research_bg"
+				}			
+			}
+		
+			gridboxtype = {
+				name = "turret_tree"
+				position = { x = 1725 y = 135 }
+				size = { width = 100 height = 140 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+			gridboxtype = {
+				name = "hull_tree"
+				position = { x = 1725 y = 133 }
+				size = { width = 100 height = 140 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+			gridboxtype = {
+				name = "night_vision_tree"
+				position = { x = 1725 y = 131 }
+				size = { width = 100 height = 140 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}	
+		}
+		
 		containerWindowType = {
 			name = "naval_folder"
 			position = { x=0 y=47 }
@@ -12402,18 +12709,25 @@ guiTypes = {
 				frame = 1
 				clicksound = click_default
 			}
-			
+			# Armour Techs tab
+			buttonType = {
+				name = "nsb_armour_techs_folder_tab"
+				position = { x = 330 y = 0 }
+				quadTextureSprite = "GFX_armour_folder_tab"
+				frame = 1
+				clicksound = ui_research_tab_armor
+			}
 			# Naval tab
 			buttonType = {
 				name = "naval_folder_tab"
-				position = { x = 330 y = 0 }
+				position = { x = 410 y = 0 }
 				quadTextureSprite = "GFX_naval_folder_tab"
 				frame = 1
 				clicksound = click_default
 			}
 			buttonType = {
 				name = "mtgnavalfolder_tab"
-				position = { x = 330 y = 0 }
+				position = { x = 410 y = 0 }
 				quadTextureSprite = "GFX_naval_folder_tab"
 				frame = 1
 				clicksound = click_default
@@ -12421,7 +12735,7 @@ guiTypes = {
 			# Air tab 
 			buttonType = {
 				name = "air_techs_folder_tab"
-				position = { x = 410 y = 0 }
+				position = { x = 490 y = 0 }
 				quadTextureSprite = "GFX_air_techs_folder_tab"
 				frame = 1
 				clicksound = click_default
@@ -12429,7 +12743,7 @@ guiTypes = {
 			# GER Air tab 
 			buttonType = {
 				name = "ger_air_techs_folder_tab"
-				position = { x = 410 y = 0 }
+				position = { x = 490 y = 0 }
 				quadTextureSprite = "GFX_air_techs_folder_tab"
 				frame = 1
 				clicksound = click_default
@@ -12437,7 +12751,7 @@ guiTypes = {
 			# SOV Air tab 
 			buttonType = {
 				name = "sov_air_techs_folder_tab"
-				position = { x = 410 y = 0 }
+				position = { x = 490 y = 0 }
 				quadTextureSprite = "GFX_air_techs_folder_tab"
 				frame = 1
 				clicksound = click_default
@@ -12445,7 +12759,7 @@ guiTypes = {
 			# ENG Air tab 
 			buttonType = {
 				name = "eng_air_techs_folder_tab"
-				position = { x = 410 y = 0 }
+				position = { x = 490 y = 0 }
 				quadTextureSprite = "GFX_air_techs_folder_tab"
 				frame = 1
 				clicksound = click_default
@@ -12453,14 +12767,14 @@ guiTypes = {
 			# USA Air tab 
 			buttonType = {
 				name = "usa_air_techs_folder_tab"
-				position = { x = 410 y = 0 }
+				position = { x = 490 y = 0 }
 				quadTextureSprite = "GFX_air_techs_folder_tab"
 				frame = 1
 				clicksound = click_default
 			}
 			# Electronics tab
 			buttonType = {
-				position = { x = 490 y = 0 }
+				position = { x = 570 y = 0 }
 				name = "electronics_folder_tab"
 				quadTextureSprite = "GFX_techtree_engineering_tab"
 				frame = 1
@@ -12469,13 +12783,13 @@ guiTypes = {
 			iconType = {
 				name = "highlight_engineering_folder"
 				spriteType = "GFX_tutorial_research_folder_icon_glow"
-				position = { x=490 y=0}
+				position = { x=570 y=0}
 				hide = yes
 				alwaystransparent = yes
 			}			
 			# Industry tab
 			buttonType = {
-				position = { x = 570 y = 0 }
+				position = { x = 650 y = 0 }
 				name = "industry_folder_tab"
 				quadTextureSprite = "GFX_industry_folder_tab"
 				frame = 1
@@ -12485,14 +12799,14 @@ guiTypes = {
 			iconType = {
 				name = "highlight_industry_folder"
 				spriteType = "GFX_tutorial_research_folder_icon_glow"
-				position = { x=570 y=0}
+				position = { x=650 y=0}
 				hide = yes
 				alwaystransparent = yes
 			}
 			# Support tab
 			#buttonType = {
 			#	name = "secret_weapons_folder_tab"
-			#	position = { x = 650 y = 0 }
+			#	position = { x = 730 y = 0 }
 			#	quadTextureSprite = "GFX_secret_weapons_folder_tab"
 			#	frame = 1
 			#	clicksound = click_default
@@ -15737,6 +16051,98 @@ guiTypes = {
 		iconType = {
 			name = "can_assign_design_team_icon"
 			position = { x=5 y=55 }
+			spriteType = "GFX_design_team_icon"
+		}
+	}
+	
+	containerWindowType = {
+		name = "techtree_nsb_armour_techs_folder_small_item"
+		position = { x=0 y=0 }
+		size = { width = 72 height = 72 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=3 y=3 }
+			spriteType = "GFX_technology_medium"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "bonus_icon"
+			position = { x=3 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = 17 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 50
+			maxHeight = 20
+			format = right
+		}
+	}
+
+	containerWindowType = {
+		name = "techtree_nsb_armour_techs_folder_item"
+		position = { x=-55 y=0 }
+		size = { width = 204 height = 72 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		instantTextBoxType = {
+			name = "Name"
+			position = { x = 3 y = -1 }
+			textureFile = ""
+			font = "hoi_20bs"
+			borderSize = {x = 4 y = 4}
+			text = "Lortespasserkanon"
+			maxWidth = 166
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=85 y=50 }
+			spriteType = "GFX_technology_medium"
+			centerposition = yes	
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "bonus_icon"
+			position = { x=111 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = 111 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "bang bang klik"
+			maxWidth = 80
+			maxHeight = 20
+			format = center
+		}
+		
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
 			spriteType = "GFX_design_team_icon"
 		}
 	}

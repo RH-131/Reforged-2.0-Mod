@@ -1582,6 +1582,22 @@ equipment_modules = {
 
 		}
 	}
+	
+	grenade_launchers = {
+		abbreviation = "gren"
+		category = tank_turret_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 0.5
+			defense = 2
+			breakthrough = 1
+		}
+		xp_cost = 1
+		multiply_stats = {
+
+		}
+	}
 
 	extra_ammo_storage_turret = {
 		abbreviation = "extrat"
@@ -1674,6 +1690,21 @@ equipment_modules = {
 	
 	periscope = {
 		abbreviation = "pscope"
+		category = tank_turret_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			entrenchment = 2
+			build_cost_ic = 1
+		}
+		xp_cost = 1
+		multiply_stats = {
+			
+		}
+	}
+	
+	night_vision = {
+		abbreviation = "infred"
 		category = tank_turret_module
 		sfx = sfx_ui_sd_module_turret
 

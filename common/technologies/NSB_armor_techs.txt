@@ -1,0 +1,1605 @@
+technologies = {
+
+
+	@1934 = -22
+	@1935 = -20
+	@1936 = -18
+	@1937 = -16
+	@1938 = -14
+	@1939 = -12
+	@1940 = -10
+	@1941 = -8
+	@1942 = -6
+	@1943 = -4
+	@1944 = -2
+
+
+	turret = { 
+		enable_equipment_modules = {
+			tank_heavy_machine_gun
+			additional_machine_guns
+			secondary_turret_hmg
+		}
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		path = {
+			leads_to_tech = turret2
+			research_cost_coeff = 1
+		}
+		research_cost = 0.5
+		start_year = 1934
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = -1 y = -22 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	hull = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_anti_air_cannon
+		}
+		path = {
+			leads_to_tech = hull2
+			research_cost_coeff = 1
+		}
+		research_cost = 0.5
+		start_year = 1936
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = -1 y = @1936 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	hull3 = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		path = {
+			leads_to_tech = hull4
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = {
+			tank_anti_air_cannon_2
+		}
+		research_cost = 0.5
+		start_year = 1939
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = -1 y = @1939 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	hull4 = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_anti_air_cannon_3
+		}
+		research_cost = 0.5
+		start_year = 1942
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = -1 y = @1942 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor	
+		}
+	}
+
+	autocannons = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		path = {
+			leads_to_tech = improved_autocannons
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = {
+			tank_auto_cannon
+		}
+		research_cost = 0.5
+		start_year = 1937
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 0 y = @1937 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	improved_autocannons = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_auto_cannon_2
+		}
+		research_cost = 0.5
+		start_year = 1940
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 0 y = @1940 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	small_cannon = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_small_cannon
+			secondary_turret_small_cannon
+		}
+		path = {
+			leads_to_tech = howitzer
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1935
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 3 y = @1935 }
+		}
+		path = {
+			leads_to_tech = improved_small_cannon
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = stabilizer
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = close_support_gun
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = medium_cannon
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = heavy_cannon
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	close_support_gun = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_close_support_gun
+		}
+		enable_subunits = {
+			light_csg_artillery_brigade
+			medium_csg_artillery_brigade
+			heavy_csg_artillery_brigade
+		}
+		research_cost = 0.5
+		start_year = 1937
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 2 y = @1937 }
+		}
+		path = {
+			leads_to_tech = smoke_launcher
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = close_support_gun_2
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	smoke_launcher = { 
+		xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			smoke_launchers
+		}
+		path = {
+			leads_to_tech = granade_launcher
+			research_cost_coeff = 1
+		}
+		research_cost = 0.25
+		start_year = 1939
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 1 y = @1939 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	granade_launcher = { 
+		xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			granade_launchers_module
+		}
+		path = {
+			leads_to_tech = multi_purpose_granade_launcher
+			research_cost_coeff = 1
+		}
+		research_cost = 0.25
+		start_year = 1941
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 1 y = @1941 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	multi_purpose_granade_launcher = { 
+		xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			granade_launchers_improved_module
+		}
+		research_cost = 0.25
+		start_year = 1944
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 1 y = @1944 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	close_support_gun_2 = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_close_support_gun_2
+		}
+		research_cost = 0.5
+		start_year = 1940
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 2 y = @1940 }
+		}
+		path = {
+			leads_to_tech = close_support_gun_3
+			research_cost_coeff = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	close_support_gun_3 = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_close_support_gun_3
+		}
+		research_cost = 0.5
+		start_year = 1942
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 2 y = @1942 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	improved_small_cannon = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_small_cannon_2
+		}
+		research_cost = 1
+		start_year = 1936
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 1 y = @1936 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	heavy_cannon = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_heavy_cannon
+		}
+		research_cost = 1
+		start_year = 1938
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 3 y =  @1938 }
+		}
+		path = {
+			leads_to_tech = improved_heavy_cannon
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = high_velocity_cannon
+			research_cost_coeff = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	improved_heavy_cannon = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_heavy_cannon_2
+		}
+		research_cost = 1
+		start_year = 1941
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 3 y = @1941 }
+		}
+		path = {
+			leads_to_tech = advanced_heavy_cannon
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = improved_high_velocity_cannon
+			research_cost_coeff = 0.9
+		}
+		path = {
+			leads_to_tech = improved_medium_cannon
+			research_cost_coeff = 0.9
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	advanced_heavy_cannon = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_heavy_cannon_3
+		}
+		path = {
+			leads_to_tech = night_vision_tank
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1943
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 3 y = @1943 }
+		}
+		path = {
+			leads_to_tech = advanced_high_velocity_cannon
+			research_cost_coeff = 0.9
+		}
+		path = {
+			leads_to_tech = advanced_medium_cannon
+			research_cost_coeff = 0.9
+		}
+		path = {
+			leads_to_tech = auto_loader
+			research_cost_coeff = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	high_velocity_cannon = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_high_velocity_cannon
+		}
+		research_cost = 0.5
+		start_year = 1939
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 5 y = @1939 }
+		}
+		path = {
+			leads_to_tech = improved_high_velocity_cannon
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = squeezer_bore_adaptor
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	squeezer_bore_adaptor = { 
+		xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			squeezebore_adaptor
+		}
+		research_cost = 0.75
+		start_year = 1940
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 4 y = @1940 }
+		}
+ 
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	improved_high_velocity_cannon = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_high_velocity_cannon_2
+		}
+		research_cost = 0.5
+		start_year = 1941
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 5 y = @1941 }
+		}
+		path = {
+			leads_to_tech = advanced_high_velocity_cannon
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	advanced_high_velocity_cannon = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_high_velocity_cannon_3
+		}
+		research_cost = 0.5
+		start_year = 1943
+		path = {
+			leads_to_tech = night_vision_tank
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 5 y = @1943 }
+		}
+		path = {
+			leads_to_tech = auto_loader
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	medium_cannon = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_medium_cannon
+		}
+		research_cost = 1
+		start_year = 1939
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 7 y = @1939 }
+		}
+		path = {
+			leads_to_tech = high_velocity_cannon
+			research_cost_coeff = 0.9
+		}
+		path = {
+			leads_to_tech = improved_medium_cannon
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_rocket_launcher
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	improved_medium_cannon = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_medium_cannon_2
+		}
+		research_cost = 1
+		start_year = 1941
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 7 y = @1941 }
+		}
+		path = {
+			leads_to_tech = advanced_medium_cannon
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = improved_high_velocity_cannon
+			research_cost_coeff = 0.9
+		}
+		path = {
+			leads_to_tech = improved_heavy_cannon
+			research_cost_coeff = 0.9
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	advanced_medium_cannon = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_medium_cannon_3
+		}
+		research_cost = 1
+		start_year = 1943
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 7 y = @1943 }
+		}
+		path = {
+			leads_to_tech = auto_loader
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = night_vision_tank
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = advanced_high_velocity_cannon
+			research_cost_coeff = 0.9
+		}
+		path = {
+			leads_to_tech = advanced_heavy_cannon
+			research_cost_coeff = 0.9
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	tech_rocket_launcher = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_rocket_launcher
+		}
+		research_cost = 0.5
+		start_year = 1940
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 8 y = @1940 }
+		}
+		path = {
+			leads_to_tech = advanced_rocket_launcher
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			rocket_artillery = 1
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+			rocketry
+		}
+	}
+
+	advanced_rocket_launcher = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_rocket_launcher_2
+		}
+		research_cost = 0.5
+		start_year = 1944
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 8 y = @1944 }
+		}
+		dependencies = {
+			rocket_artillery4 = 1
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+			rocketry
+		}
+	}
+
+	howitzer = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_medium_howitzer
+		}
+		research_cost = 0.5
+		start_year = 1937
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 9 y = @1937 }
+		}
+		path = {
+			leads_to_tech = improved_howitzer
+			research_cost_coeff = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	improved_howitzer = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_medium_howitzer_2
+		}
+		research_cost = 0.5
+		start_year = 1939
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 9 y = @1939 }
+		}
+		path = {
+			leads_to_tech = advanced_howitzer
+			research_cost_coeff = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	advanced_howitzer = { 
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			tank_heavy_howitzer
+		}
+		research_cost = 0.5
+		start_year = 1942
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 9 y = @1942 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	stabilizer = { 
+		xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			stabilizer
+		}
+		research_cost = 0.5
+		start_year = 1937
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 4 y = @1937 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	auto_loader = { 
+		xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			auto_loader
+		}
+		research_cost = 2
+		start_year = 1944
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 4 y = @1944 }
+		}
+
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+
+	night_vision_tank = { 
+		xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.5
+		enable_equipment_modules = {
+			night_vision_tank_module
+		}
+		dependencies = {
+			night_vision = 1
+		}
+		research_cost = 2
+		start_year = 1944
+		folder = {
+			name = nsb_armour_techs_folder
+			position = { x = 6 y = @1944 }
+		}
+
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			tank_armament
+			armor
+		}
+	}
+}
