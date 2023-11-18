@@ -40,7 +40,7 @@ mio_policy_navy_space_efficient_design = {
 			carrier_size = 1
 		}
 		same_as_mio = {
-			naval_range = 0.25
+			naval_range = 0.2
 		}
 	}
 }
@@ -62,8 +62,8 @@ mio_policy_navy_stable_platforms = {
 	available = { has_mio_size > 5}
 	equipment_bonus = {
 		same_as_mio = {
-			naval_light_gun_hit_chance_factor = 0.1
-			naval_heavy_gun_hit_chance_factor = 0.1
+			naval_light_gun_hit_chance_factor = 0.025
+			naval_heavy_gun_hit_chance_factor = 0.025
 		}
 	}
 }
@@ -85,7 +85,7 @@ mio_policy_navy_great_sea_keeping  = {
 	available = { has_mio_size > 5}
 	equipment_bonus = {
 		same_as_mio = {
-			naval_weather_penalty_factor = -0.5
+			naval_weather_penalty_factor = -0.1
 		}
 	}
 }
