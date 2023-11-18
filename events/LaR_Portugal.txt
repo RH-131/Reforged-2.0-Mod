@@ -120,11 +120,10 @@ country_event = {
 		add_to_faction = POR
 		POR = {
 			add_to_tech_sharing_group = commonwealth_research
-			add_ideas = ENG_british_commonwealth_air_training_plan
 		}
 	}
 }
-#Portugal Send Resources to Axis
+#Portugal Aids Axis
 country_event = {
 	id = portugal.2
 	title = portugal.2.t
@@ -136,44 +135,9 @@ country_event = {
 	# ok
 	option = {
 		name = portugal.2.a
+		add_to_faction = POR
 		POR = {
-		    add_equipment_to_stockpile = { type = fighter_equipment_1936 amount = 100 producer = GER }
-		}
-	    GER = {
-			60 = {
-				add_resource = {
-					type = tungsten
-					amount = 25
-				}
-				add_resource = {
-					type = chromium
-					amount = 10
-				}
-			}
-		}
-	    ITA = {
-			158 = {
-				add_resource = {
-					type = steel
-					amount = 15
-				}
-				add_resource = {
-					type = chromium
-					amount = 10
-				}
-			}
-		}
-	    JAP = {
-			535 = {
-				add_resource = {
-					type = steel
-					amount = 15
-				}
-				add_resource = {
-					type = tungsten
-					amount = 10
-				}
-			}
+			add_to_tech_sharing_group = axis_research
 		}
 	}
 }

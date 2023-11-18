@@ -4182,7 +4182,8 @@ focus_tree = {
 		}
 
 		available = {
-			date > 1940.06.01
+			date > 1939.09.01
+			has_idea = RAJ_poor_industrial_infrastructure_2
 		}
 
 
@@ -4201,7 +4202,10 @@ focus_tree = {
 				load_oob = RAJ_tank
 			}
 			custom_effect_tooltip = RAJ_create_unit_tank_tt
-			
+			swap_ideas = {
+				remove_idea = RAJ_poor_industrial_infrastructure_2
+				add_idea = RAJ_poor_industrial_infrastructure_3
+			}
 			mio:generic_tank_organization = {
 				add_mio_funds = 500
 			}
@@ -5927,6 +5931,7 @@ focus_tree = {
 				mtg_transport = 1
 				improved_secondary_battery = 1
 				basic_fire_control_system = 1
+				cv_fighter_1936 = 1 
 			}
 	create_equipment_variant = {
 		name = "S Class"
@@ -6273,6 +6278,11 @@ focus_tree = {
 
 		complete_tooltip = {
 			unlock_decision_tooltip = RAJ_illustrious_decision
+				add_equipment_to_stockpile = {
+					type = cv_fighter_equipment_1936
+					amount = 40
+					producer = RAJ 
+				}
 			create_equipment_variant = {
 				name = "Illustrious Class"
 				type = ship_hull_carrier_1
@@ -6292,6 +6302,11 @@ focus_tree = {
 
 		completion_reward = {
 			unlock_decision_tooltip = RAJ_illustrious_decision
+				add_equipment_to_stockpile = {
+					type = cv_fighter_equipment_1936
+					amount = 40
+					producer = RAJ 
+				}
 			create_equipment_variant = {
 				name = "Illustrious Class"
 				type = ship_hull_carrier_1
