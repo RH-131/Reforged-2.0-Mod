@@ -144,9 +144,6 @@ JAP_mitsubishi_organization = {
 			}
 			FROM = { NOT = { has_war_with = JAP } }
 		}
-		ELSE = {
-			FROM = { has_completed_focus = JAP_agility_focus }
-		}
 
 		IF = {
 			limit = {
@@ -167,9 +164,6 @@ JAP_aichi_organization = {
 	icon = GFX_idea_aichi
 	allowed = {	
 		tag = JAP
-	}
-	available = {
-		FROM = { has_completed_focus = JAP_range_focus }
 	}
 }
 
