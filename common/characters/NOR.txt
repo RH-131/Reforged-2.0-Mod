@@ -3,7 +3,7 @@ characters={
 		name="Johan Nygaardsvold"
 		portraits={
 			civilian={
-				large="gfx/leaders/NOR/Portrait_Norway_Johan_Nygaardsvold.dds"
+				large="gfx/leaders/NOR/portrait_NOR_johan_nygaardsvold.dds"
 			}
 		}
 		country_leader={
@@ -239,10 +239,10 @@ characters={
 			}
 		}
 	}
-	NOR_alfred_roscher-lund={
+	NOR_alfred_roscher_lund={
 		advisor={
 			slot = high_command
-			idea_token = NOR_alfred_roscher-lund
+			idea_token = NOR_alfred_roscher_lund
 			ledger  = army 
 				allowed  = {
 					original_tag  = NOR
@@ -254,7 +254,7 @@ characters={
 					factor  = 1.000
 				}
 		}
-		name="NOR_alfred_roscher-lund"
+		name="NOR_alfred_roscher_lund"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_2"
@@ -405,10 +405,10 @@ characters={
 			}
 		}
 	}
-	NOR_willhelm_von_tangen_hansteen={
+	NOR_wilhelm_von_tangen_hansteen={
 		advisor={
 			slot = army_chief
-			idea_token = NOR_willhelm_von_tangen_hansteen
+			idea_token = NOR_wilhelm_von_tangen_hansteen
 			allowed  = {
 					original_tag  = NOR
 				}
@@ -419,7 +419,7 @@ characters={
 					factor  = 1.000
 				}
 		}
-		name="NOR_willhelm_von_tangen_hansteen"
+		name="NOR_wilhelm_von_tangen_hansteen"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_5"
@@ -461,8 +461,12 @@ characters={
 			traits = { captain_of_industry }
 			
 			ai_will_do = {
-			   factor = 3
-		    }
+				factor = 99
+				modifier = {
+					factor = 0
+					date > 1938.1.1
+				}
+			}
 		}
 	}
 }

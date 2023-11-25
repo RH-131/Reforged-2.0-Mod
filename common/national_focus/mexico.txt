@@ -1764,46 +1764,6 @@ focus_tree = {
 						owner = MEX
 					}
 				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 481 }
-					create_unit = {
-						division = "division_template = \"Guardia Cristera\" start_experience_factor = 0.1"
-						owner = MEX
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 475 }
-					create_unit = {
-						division = "division_template = \"Guardia Cristera\" start_experience_factor = 0.1"
-						owner = MEX
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 476 }
-					create_unit = {
-						division = "division_template = \"Guardia Cristera\" start_experience_factor = 0.1"
-						owner = MEX
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 477 }
-					create_unit = {
-						division = "division_template = \"Guardia Cristera\" start_experience_factor = 0.1"
-						owner = MEX
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 485 }
-					create_unit = {
-						division = "division_template = \"Guardia Cristera\" start_experience_factor = 0.1"
-						owner = MEX
-					}
-				}
 			}
 		}
 	}
@@ -2299,7 +2259,6 @@ focus_tree = {
 		
 		completion_reward = {
 		    add_ideas = war_economy
-		    remove_ideas = refinery_idea
 			unlock_decision_tooltip = MEX_decision_coastal_defence_plan
 			
 			481 = {

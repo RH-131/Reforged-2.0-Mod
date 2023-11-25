@@ -2171,10 +2171,24 @@ focus_tree = {
 
 		complete_tooltip = {
 			air_experience = 25
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = MAN_mamc_light
-			show_ideas_tooltip = MAN_mamc_medium
-			show_ideas_tooltip = MAN_mamc_heavy		
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:MAN_mamc_light_organization = {
+					add_mio_funds = 800
+				}
+				mio:MAN_mamc_medium_organization = {
+					add_mio_funds = 800
+				}
+				mio:MAN_mamc_heavy_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = MAN_mamc_light
+				show_ideas_tooltip = MAN_mamc_medium
+				show_ideas_tooltip = MAN_mamc_heavy		
+			}
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.50
 				uses = 1

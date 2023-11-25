@@ -12,7 +12,7 @@ sub_units = {
 			artillery
 		}
 		
-		group = armor
+		group = armor_combat_support
 
 		categories = {
 			category_all_armor
@@ -98,7 +98,7 @@ sub_units = {
 			artillery			
 		}
 		
-		group = armor
+		group = armor_combat_support
 
 		categories = {
 			category_all_armor
@@ -109,7 +109,7 @@ sub_units = {
 		combat_width = 2
 
 		need = {
-			medium_tank_artillery_chassis = 25
+			medium_tank_artillery_chassis = 30
 		}
 		manpower = 450
 		max_organisation = 0
@@ -169,7 +169,7 @@ sub_units = {
 			movement = 0.05
 		}
 		fort = {
-			attack = 0.25
+			attack = 0.2
 		}
 	}
 	
@@ -187,7 +187,7 @@ sub_units = {
 			
 		}
 		
-		group = armor
+		group = armor_combat_support
 		
 		categories = {
 			category_all_armor
@@ -199,7 +199,7 @@ sub_units = {
 		combat_width = 2
 
 		need = {
-			heavy_tank_artillery_chassis = 20
+			heavy_tank_artillery_chassis = 25
 		}
 		manpower = 500
 		max_organisation = 0
@@ -248,7 +248,7 @@ sub_units = {
 			attack = -7.0
 		}
 		fort = {
-			attack = 0.35
+			attack = 0.3
 		}
 		plains = {
 			attack = 0.05
@@ -297,11 +297,11 @@ sub_units = {
 		suppression = 2
 		
 		forest = {
-		    attack = -0.1
+		    attack = -0.2
 			movement = -0.2
 		}
 		hills = 	{
-		    attack = -0.1
+		    attack = -0.2
 			defence = -0.05
 		}
 		mountain = 	{
@@ -343,7 +343,7 @@ sub_units = {
 			movement = 0.05
 		}
 		fort = {
-			attack = 0.15
+			attack = 0.125
 		}
 
 	}

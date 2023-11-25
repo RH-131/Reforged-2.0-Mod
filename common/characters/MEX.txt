@@ -337,6 +337,28 @@ characters={
 			legacy_id=706
 		}
 	}
+	MEX_gilberto_limon={
+		name=MEX_gilberto_limon
+		portraits={
+			army={
+				small=GFX_portrait_MEX_gilberto_limon_small
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = MEX_gilberto_limon
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				army_chief_drill_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 	MEX_heriberto_jara_corona={
 		name="Heriberto Jara Corona"
 		portraits={
@@ -681,6 +703,29 @@ characters={
 			}
 		}
 	}
+	MEX_pablo_macias={
+		name=MEX_pablo_macias
+		portraits={
+			army={
+				small=GFX_portrait_MEX_pablo_macias_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MEX_pablo_macias
+			ledger = army
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 	MEX_pablo_m_valenzuela = {
 		advisor={
 			slot = high_command
@@ -756,7 +801,7 @@ characters={
 			}
 			
 			cost = 250
-			traits = { superior_firepower_expert }
+			traits = { military_theorist }
 		}
 	}
 	MEX_enrique_estrada = {

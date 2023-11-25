@@ -1,0 +1,80 @@
+# MAN_resource_infra = {
+#     allowed = {
+#         tag = MAN
+#     }
+#     enable = {
+#         always = yes
+#     }
+#     abort_when_not_enabled = yes
+
+#     ai_strategy = {
+#         type = build_building
+#         id = infrastructure
+#         target = 714
+#         value = 100
+#     }
+
+#     ai_strategy = {
+#         type = build_building
+#         id = infrastructure
+#         target = 716
+#         value = 100
+#     }
+
+#     ai_strategy = {
+#         type = build_building
+#         id = infrastructure
+#         target = 328
+#         value = 100
+#     }
+# }
+
+# MAN_loves_civs = {
+#     allowed = {
+#         tag = MAN
+#         714 = {
+#             infrastructure > 5
+#         }
+#         716 = {
+#             infrastructure > 5
+#         }
+#         328 = {
+#             infrastructure > 5
+#         }
+#     }
+#     enable = {
+#         date < 1938.1.1
+#     }
+#     abort_when_not_enabled = yes
+
+#     ai_strategy = {
+#         type = building_target
+#         id = industrial_complex
+#         value = 100
+#     }
+# }
+
+# MAN_loves_mils_now = {
+#     allowed = {
+#         tag = MAN
+#         714 = {
+#             infrastructure > 5
+#         }
+#         716 = {
+#             infrastructure > 5
+#         }
+#         328 = {
+#             infrastructure > 5
+#         }
+#     }
+#     enable = {
+#         date > 1938.1.1
+#     }
+#     abort_when_not_enabled = yes
+
+#     ai_strategy = {
+#         type = building_target
+#         id = arms_factory
+#         value = 100
+#     }
+# }

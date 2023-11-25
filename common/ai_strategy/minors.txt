@@ -1,0 +1,734 @@
+MAN_resource_infra = {
+    allowed = {
+        tag = MAN
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 714
+        value = 100
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 716
+        value = 100
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 328
+        value = 100
+    }
+}
+
+SIA_resource_infra = {
+    allowed = {
+        tag = SIA
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 724
+        value = 100
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 289
+        value = 100
+    }
+}
+
+POR_resource_infra = {
+    allowed = {
+        tag = POR
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 795
+        value = 100
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 181
+        value = 100
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 112
+        value = 100
+    }
+}
+
+YUG_resource_infra = {
+    allowed = {
+        tag = YUG
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 106
+        value = 100
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 105
+        value = 100
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = infrastructure
+        target = 104
+        value = 100
+    }
+}
+
+MAN_stop_with_AFs = {
+    allowed = {
+        tag = MAN
+    }
+    enable = {
+        date < 1937.12.31
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = build_building
+        id = arms_factory
+        target = 328
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = arms_factory
+        target = 610
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = arms_factory
+        target = 611
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = arms_factory
+        target = 612
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = arms_factory
+        target = 714
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = arms_factory
+        target = 715
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = arms_factory
+        target = 716
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = arms_factory
+        target = 717
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = arms_factory
+        target = 761
+        value = -9999
+    }
+}
+
+MAN_stop_with_AFs = {
+    allowed = {
+        tag = MAN
+    }
+    enable = {
+        date < 1937.12.31
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = build_building
+        id = arms_factory
+        target = 289
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = arms_factory
+        target = 724
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = arms_factory
+        target = 868
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = build_building
+        id = arms_factory
+        target = 869
+        value = -9999
+    }
+}
+
+MAN_loves_civs = {
+    allowed = {
+        OR = {
+            tag = MAN
+            tag = SIA
+            tag = IRE
+            tag = YUG
+            tag = GRE
+            tag = ALB
+            tag = AUS
+            tag = BUL
+            tag = POR
+            tag = MON
+            tag = NZL
+            tag = ETH
+            tag = HOL
+            tag = BEL
+            tag = LUX
+            tag = CZE
+            tag = FIN
+        }
+    }
+    enable = {
+        date < 1938.1.1
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = building_target
+        id = arms_factory
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = added_military_to_civilian_factory_ratio
+        value = -9999 #More civs over mils
+    }
+}
+
+MAN_hates_civs_now = {
+    allowed = {
+        OR = {
+            tag = MAN
+            tag = SIA
+            tag = IRE
+            tag = YUG
+            tag = GRE
+            tag = ALB
+            tag = AUS
+            tag = BUL
+            tag = POR
+            tag = MON
+            tag = NZL
+            tag = ETH
+            tag = HOL
+            tag = BEL
+            tag = LUX
+            tag = CZE
+            tag = FIN
+        }
+    }
+    enable = {
+        date > 1938.1.1
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = building_target
+        id = industrial_complex
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = added_military_to_civilian_factory_ratio
+        value = 9999 #More mils over civs
+    }
+}
+
+MAN_produce_inf_equip = {
+    allowed = {
+        OR = {
+            tag = MAN
+            tag = SIA
+            tag = IRE
+            tag = YUG
+            tag = GRE
+            tag = ALB
+            tag = AUS
+            tag = BUL
+            tag = POR
+            tag = MON
+            tag = NZL
+            tag = ETH
+            tag = HOL
+            tag = BEL
+            tag = LUX
+            tag = CZE
+            tag = FIN
+        }
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = equipment_production_min_factories
+        id = infantry
+        value = 3
+    }
+
+    ai_strategy = {
+        type = equipment_production_min_factories
+        id = support
+        value = 1
+    }
+
+    ai_strategy = {
+        type = equipment_production_min_factories
+        id = motorized
+        value = 1
+    }
+
+    ai_strategy = {
+        type = equipment_production_min_factories
+        id = train
+        value = 1
+    }
+
+    ai_strategy = {
+        type = equipment_production_min_factories
+        id = artillery
+        value = 1
+    }
+
+    ai_strategy = {
+        type = equipment_production_factor
+        id = infantry
+        value = 40
+    }
+
+    ai_strategy = {
+        type = equipment_production_factor
+        id = support
+        value = 7
+    }
+
+    ai_strategy = {
+        type = equipment_production_factor
+        id = motorized
+        value = 5
+    }
+
+    ai_strategy = {
+        type = equipment_production_factor
+        id = train
+        value = 5
+    }
+
+    ai_strategy = {
+        type = equipment_production_factor
+        id = artillery
+        value = 15
+    }
+
+    ai_strategy = {
+        type = equipment_production_factor
+        id = armor
+        value = -9999
+    }
+}
+
+MAN_has_bad_boats = {
+    allowed = {
+        tag = MAN
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 50
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = -1000
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bc
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = 40
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_escort
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_heavy
+		value = -1000
+	}
+}
+
+trade_ai_love_infra = {
+    allowed = {
+        OR = {
+            tag = TUR
+            tag = SWE
+            tag = MEX
+            tag = INS
+        }
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = building_target
+        id = infrastructure
+        value = 5000
+    }
+}
+
+ai_bad_at_air = {
+    allowed = {
+        OR = {
+            tag = MAN
+            tag = SIA
+            tag = IRE
+            tag = YUG
+            tag = GRE
+            tag = ALB
+            tag = AUS
+            tag = BUL
+            tag = POR
+            tag = MON
+            tag = NZL
+            tag = ETH
+            tag = HOL
+            tag = BEL
+            tag = LUX
+            tag = TUR
+            tag = SWE
+            tag = MEX
+            tag = INS
+            tag = CZE
+            tag = FIN
+        }
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = air_factory_balance
+        value = -1000 #mils over air
+    }
+
+    ai_strategy = {
+        type = equipment_production_min_factories
+        id = fighter
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = equipment_production_min_factories
+        id = heavy_fighter
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = equipment_production_min_factories
+        id = cas
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = equipment_production_min_factories
+        id = naval_bomber
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = equipment_production_min_factories
+        id = tactical_bomber
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = equipment_production_min_factories
+        id = strategic_bomber
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = unit_ratio
+        id = fighter
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = unit_ratio
+        id = heavy_fighter
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = unit_ratio
+        id = cas
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = unit_ratio
+        id = naval_bomber
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = unit_ratio
+        id = tactical_bomber
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = unit_ratio
+        id = strategic_bomber
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = equipment_production_factor
+        id = fighter
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = equipment_production_factor
+        id = heavy_fighter
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = equipment_production_factor
+        id = cas
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = equipment_production_factor
+        id = naval_bomber
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = equipment_production_factor
+        id = tactical_bomber
+        value = -9999
+    }
+
+    ai_strategy = {
+        type = equipment_production_factor
+        id = strategic_bomber
+        value = -9999
+    }
+}
+
+everyone_hates_fuel_silos = {
+    allowed = {
+        OR = {
+            tag = MAN
+            tag = SIA
+            tag = IRE
+            tag = YUG
+            tag = GRE
+            tag = ALB
+            tag = AUS
+            tag = BUL
+            tag = POR
+            tag = MON
+            tag = NZL
+            tag = ETH
+            tag = HOL
+            tag = BEL
+            tag = LUX
+            tag = CZE
+            tag = FIN
+        }
+    }
+    enable = {
+        always = yes
+    }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = building_target
+        id = dockyard
+        value = -1000
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = air_base
+        value = -1000
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = supply_node
+        value = -1000
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = rail_way
+        value = -1000
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = naval_base
+        value = -1000
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = bunker
+        value = -1000
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = coastal_bunker
+        value = -1000
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = anti_air_building
+        value = -1000
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = fuel_silo
+        value = -1000
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = radar_station
+        value = -1000
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = nuclear_reactor
+        value = -1000
+    }
+
+    ai_strategy = {
+        type = building_target
+        id = rocket_site
+        value = -1000
+    }
+}

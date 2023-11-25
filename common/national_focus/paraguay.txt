@@ -1,0 +1,36 @@
+focus_tree = {
+	id = paraguay_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = PAR
+			has_dlc = "La Resistance"
+		}
+	}
+
+	default = no
+
+
+	continuous_focus_position = { x = 1 y = 3000 }
+
+	focus = {
+		id = PAR_unaligned_nations
+		available = {
+			always = no
+		}
+		cancel_if_invalid = yes
+		
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 2500
+
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 1
+		}
+	}
+}

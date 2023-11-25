@@ -21,7 +21,6 @@ add_ideas = {
 set_technology = {
 	################# infantry ###############
 	infantry_weapons = 1  
-	fuel_silos = 1 
 	field_equipment = 1 
 	tech_radio_1 = 1 
 	infantry_weapons1 = 1
@@ -40,6 +39,9 @@ set_technology = {
 	light_tank_1934 = 1 
 	################## economy #############
 	basic_train = 1
+	starting_industry = 1
+	construction1 = 1
+	construction2 = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -95,7 +97,7 @@ recruit_character = TUR_salih_omurtak
 recruit_character = TUR_ali_fuat_cebesoy
 recruit_character = TUR_ali_orlungat
 recruit_character = TUR_memduh_tagmac
-recruit_character = TUR_mehmet_ali_ungen
+recruit_character = TUR_mehmet_ali_ulgen
 recruit_character = TUR_sabiha_gokcen
 recruit_character = TUR_mehmet_gunaltay
 recruit_character = TUR_kazim_orbay

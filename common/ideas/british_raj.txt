@@ -226,7 +226,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.04
+				consumer_goods_factor = 0.2
 			}
 		}
 
@@ -250,7 +250,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.04
+				consumer_goods_factor = 0.2
 				production_speed_arms_factory_factor = 0.10
 				production_speed_dockyard_factor = 0.05
 			}
@@ -276,7 +276,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.04
+				consumer_goods_factor = 0.2
 				production_speed_arms_factory_factor = 0.125
 				production_speed_dockyard_factor = 0.05
 				min_export = -0.05
@@ -303,7 +303,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.2
 				production_speed_arms_factory_factor = 0.15
 				production_speed_dockyard_factor = 0.075
 				min_export = -0.05
@@ -466,7 +466,7 @@ ideas = {
 				industrial_capacity_factory = -0.15
 				industrial_capacity_dockyard = -0.15
 				conscription_factor = -0.1
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.33
 			}
 		}
 
@@ -494,7 +494,7 @@ ideas = {
 				conscription_factor = -0.1
 				industrial_capacity_factory = -0.05
 				industrial_capacity_dockyard = -0.05
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.075
 			}
 		}
 
@@ -729,6 +729,39 @@ ideas = {
 				}
 			}
 		}
+		
+		RAJ_poor_industrial_infrastructure_3 = {
+			picture = SPR_anarchist_public_transport
+
+			allowed = {
+				original_tag = RAJ
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+			    has_capitulated = yes
+			}
+
+			removal_cost = -1
+			equipment_bonus = {
+				railway_gun_equipment = {
+					build_cost_ic = 0.35 instant = yes
+				}
+			}
+			equipment_bonus = {
+				amphibious_tank_chassis = {
+					build_cost_ic = 0.15 instant = yes
+				}
+			}
+			equipment_bonus = {
+				heavy_tank_chassis = {
+					build_cost_ic = 0.25 instant = yes 
+				}
+			}
+		}
 
 		RAJ_princely_states = {
 
@@ -751,7 +784,7 @@ ideas = {
 
 			modifier = {
 				autonomy_gain = -0.3
-				consumer_goods_factor = 0.04
+				consumer_goods_factor = 0.2
 			}
 		}
 
@@ -776,7 +809,7 @@ ideas = {
 
 			modifier = {
 				autonomy_gain = -0.1
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.1
 				conscription_factor = 0.05
 			}
 		}
@@ -825,7 +858,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.2
 				conscription_factor = 0.20
 			}
 		}
@@ -851,7 +884,7 @@ ideas = {
 
 			modifier = {
 				autonomy_gain = -0.2
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.075
 				conscription_factor = 0.10
 			}
 		}
@@ -900,7 +933,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.1
 			}
 		}
 
@@ -923,7 +956,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = -0.025
+				consumer_goods_factor = -0.08
 			}
 		}
 
@@ -1142,7 +1175,7 @@ ideas = {
 
 			modifier = {
 				conscription_factor = -0.70
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.1
 				industrial_capacity_factory = -0.1
 			}
 		}
@@ -1167,7 +1200,7 @@ ideas = {
 
 			modifier = {
 				conscription_factor = -0.65
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.075
 				industrial_capacity_factory = -0.05
 			}
 		}
@@ -1192,7 +1225,7 @@ ideas = {
 
 			modifier = {
 				conscription_factor = -0.50
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.075
 				industrial_capacity_factory = -0.025
 			}
 		}
@@ -1217,7 +1250,6 @@ ideas = {
 
 			modifier = {
 				conscription_factor = -0.45
-				consumer_goods_factor = 0.00
 				industrial_capacity_factory = 0.05
 			}
 		}
@@ -1242,7 +1274,7 @@ ideas = {
 
 			modifier = {
 				conscription_factor = -0.70
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.2
 
 			}
 		}
@@ -1478,7 +1510,7 @@ ideas = {
 
 			modifier = {
 				conscription_factor = -0.08
-				consumer_goods_factor = 0.08
+				consumer_goods_factor = 0.275
 				autonomy_gain = -0.4
 				stability_factor = -0.15
 				stability_weekly = -0.003
@@ -1510,7 +1542,7 @@ ideas = {
 
 			modifier = {
 				conscription_factor = -0.06
-				consumer_goods_factor = 0.06
+				consumer_goods_factor = 0.2
 				autonomy_gain = -0.2
 				stability_factor = -0.12
 				stability_weekly = -0.001
@@ -1537,7 +1569,7 @@ ideas = {
 
 			modifier = {
 				conscription_factor = -0.04
-				consumer_goods_factor = 0.04
+				consumer_goods_factor = 0.15
 				autonomy_gain = -0.1
 				stability_factor = -0.05
 			}
@@ -1562,7 +1594,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.075
 				autonomy_gain = 0.4
 			}
 		}
@@ -1586,7 +1618,6 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.0
 				autonomy_gain = 0.8
 				stability_weekly = 0.001
 			}
@@ -1650,7 +1681,7 @@ ideas = {
 			modifier = {
 				stability_weekly = 0.001
 				conscription_factor = -0.25
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.04
 				autonomy_gain = 0.2
 			}
 		}
@@ -1673,7 +1704,7 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 				conscription_factor = -0.15
 				stability_weekly = 0.001
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.05
 				autonomy_gain = 0.3
 			}
 		}
@@ -1696,7 +1727,7 @@ ideas = {
 				stability_factor = 0.1
 				industrial_capacity_dockyard = 0.12
 				research_speed_factor = 0.10
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.2
 				stability_weekly = 0.001
 				autonomy_gain = 0.4
 			}
@@ -1770,57 +1801,6 @@ ideas = {
 
 			modifier = {
 				autonomy_gain = -0.4
-			}
-		}
-
-		RAJ_princely_states_donations = {
-
-			picture = generic_economic_increase
-
-			allowed = {
-				original_tag = RAJ
-			}
-
-			allowed_civil_war = {
-				NOT = {
-					OR = {
-						has_government = communism
-						has_government = fascism
-					}
-				}
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				autonomy_gain = -0.4
-				consumer_goods_factor = -0.01
-			}
-		}
-
-		RAJ_princely_states_donations_troops = {
-
-			picture = generic_manpower_bonus
-
-			allowed = {
-				original_tag = RAJ
-			}
-
-			allowed_civil_war = {
-				NOT = {
-					OR = {
-						has_government = communism
-						has_government = fascism
-					}
-				}
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				autonomy_gain = -0.1
-				consumer_goods_factor = -0.03
-				conscription_factor = 0.05
 			}
 		}
 
@@ -2002,7 +1982,7 @@ ideas = {
 			removal_cost = -1
 
 			equipment_bonus = {
-				infantry_weapons = {
+				infantry_equipment = {
 					breakthrough = 0.05 instant = yes
 				}
 			}
@@ -2038,7 +2018,7 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
                 production_factory_efficiency_gain_factor = 0.025
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.05
 				conscription_factor = -0.04
 			}
 		}
@@ -2057,7 +2037,7 @@ ideas = {
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
                 production_factory_efficiency_gain_factor = 0.05
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.15
 				conscription_factor = -0.08
 			}
 		}

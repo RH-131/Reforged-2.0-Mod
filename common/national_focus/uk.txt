@@ -9447,10 +9447,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 5
 					instant_build = yes
 				}
 				set_state_flag = ENG_visit_france_IC_ENG
@@ -9463,10 +9463,10 @@ focus_tree = {
 			}
 			FRA = {
 				539 = {
-					add_extra_state_shared_building_slots = 4
+					add_extra_state_shared_building_slots = 5
 					add_building_construction = {
 						type = industrial_complex
-						level = 4
+						level = 5
 						instant_build = yes
 					}
 				}
@@ -9532,7 +9532,10 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_country_leader_trait = economic_reformer
+			swap_ideas = {
+				remove_idea = ENG_trade_democracy
+				add_idea = ENG_trade_democracy1
+			}	
 		}
 	}
 

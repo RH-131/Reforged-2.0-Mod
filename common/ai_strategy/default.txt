@@ -4,16 +4,16 @@
 default_unit_production = { #If adding country-unique ones, bear in mind that they STACK
 	enable = {
 		always = yes
-		NOT = { original_tag = GER } NOT = { original_tag = FRA } NOT = { original_tag = CHI  } NOT = { original_tag = ENG  }
+		NOT = { original_tag = GER }
+		NOT = { original_tag = FRA }
+		NOT = { original_tag = CHI }
+		NOT = { original_tag = ENG }
 		NOT = { original_tag = CZE }
-		NOT = { tag = SOV }
+		NOT = { original_tag = SOV }
 		NOT = { original_tag = ITA }
-		NOT = {
-			OR = {
-				original_tag = JAP
-			}
-		}
+		NOT = { original_tag = JAP }
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = role_ratio
@@ -138,29 +138,30 @@ default_role_ratios = {
 			has_dlc = "Man the Guns"
 		}
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = role_ratio
 		id = naval_capital
-		value = 100
+		value = 15
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = naval_carrier
-		value = 100
+		value = 5
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = naval_sub
-		value = 100
+		value = 15
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = naval_screen
-		value = 100
+		value = 80
 	}
 }
 
@@ -178,6 +179,7 @@ default_role_ratios = {
 			}
 		}
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = role_ratio
@@ -200,7 +202,7 @@ default_role_ratios = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_submarine
-		value = 100
+		value = 20
 	}
 
 	ai_strategy = {
@@ -212,7 +214,7 @@ default_role_ratios = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_escort
-		value = 35
+		value = 20
 	}
 
 	ai_strategy = {
@@ -224,18 +226,6 @@ default_role_ratios = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_cruiser_heavy
-		value = 20
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_sweeper
-		value = 15
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_layer
 		value = 20
 	}
 }
@@ -319,12 +309,6 @@ bba_air_prod_1 = {
 	}
 
 	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = large_plane_airframe
-		value = 0
-	}
-
-	ai_strategy = {
 		type = equipment_production_factor
 		id = heavy_fighter
 		value = 1
@@ -345,6 +329,7 @@ bba_support_boosts = {
 		is_historical_focus_on = yes
 		date < 1939.1.1
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = equipment_variant_production_factor
@@ -375,11 +360,6 @@ convoy_voy_voy_voy = {
 	}
 
 	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_layer
-		value = -10
-	}
-	ai_strategy = {
 		type = unit_ratio
 		id = screen_ship
 		value = 30
@@ -398,66 +378,11 @@ convoy_voy_voy_voy = {
 	}
 }
 
-ill_show_you_mine = {
-	enable = {
-		has_dlc = "Man the Guns"
-		mine_threat > 0.2
-	}
-	abort = {
-		mine_threat < 0.2
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_cruiser_heavy
-		value = -20
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_sweeper
-		value = 25
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_layer
-		value = -10
-	}
-}
-
-ill_show_you_mine_2 = {
-	enable = {
-		has_dlc = "Man the Guns"
-		mine_threat > 0.5
-	}
-	abort = {
-		mine_threat < 0.5
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_cruiser_light
-		value = -20
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_sweeper
-		value = 25
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_mine_layer
-		value = -10
-	}
-}
-
 default_pp_spend_amount = {
 	enable = {
 		always = yes
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = pp_spend_amount
@@ -485,22 +410,6 @@ default_paratroopers_production = {
 		type = role_ratio
 		id = paratroopers
 		value = 0
-	}
-}
-
-build_patrol_bombers = {
-
-	enable = {
-		has_dlc = "By Blood Alone"
-		has_navy_size = {
-			size > 1
-		}
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = maritime_patrol_plane
-		value = 2
 	}
 }
 
@@ -640,6 +549,7 @@ slightly_naval_focused_nation = {
 			tag = ITA
 		}
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = unit_ratio
@@ -675,6 +585,7 @@ more_naval_focused_nation = {
 		}
 		date > "1941.1.1" #Delaying it by a couple of years
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = unit_ratio
@@ -708,6 +619,7 @@ default_area_priority = {
 		NOT = { original_tag = FRA }
 		NOT = { original_tag = JAP }
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = area_priority
@@ -780,6 +692,7 @@ default_area_priority_non_africa = {
         NOT = { is_subject_of = ENG }
         NOT = { capital_scope = { is_on_continent = africa } }
     }
+	abort_when_not_enabled = yes
 
     ai_strategy = {
         type = area_priority
@@ -906,12 +819,6 @@ DEFAULT_early_template_design = {
 
 	ai_strategy = {
 		type = template_prio
-		id = heavy_armor
-		value = -50
-	}
-
-	ai_strategy = {
-		type = template_prio
 		id = paratroopers
 		value = -50
 	}
@@ -938,6 +845,7 @@ DEFAULT_midlate_template_design = {
 		}
 		date > 1940.1.1
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = template_prio
@@ -961,18 +869,6 @@ DEFAULT_midlate_template_design = {
 		type = template_prio
 		id = medium_armor
 		value = 20
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = modern_armor
-		value = 50
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = heavy_armor
-		value = 10
 	}
 
 	ai_strategy = {
@@ -1039,107 +935,15 @@ do_not_waste_pp_if_saving_for_manpower_laws = {
 	}
 }
 
-build_intelligence_agency_as_major = {
-	enable = {
-		is_major = yes
-		OR = {
-			has_war = yes
-			date > 1938.1.1
-		}
-	}
-
-	ai_strategy = {
-		type = intelligence_agency_usable_factories
-		value = 5
-	}
-
-}
-
-build_intelligence_agency = {
-	enable = {
-		date > 1940.1.1
-		has_war = no
-		num_of_civilian_factories > 25
-	}
-	abort = {
-		OR = {
-			has_war = yes
-			num_of_civilian_factories < 25
-		}
-	}
-
-	ai_strategy = {
-		type = intelligence_agency_usable_factories
-		value = 5
-	}
-
-}
-
-upgrade_intelligence_agency = {
-	enable = {
-		date > 1940.1.1
-		num_of_civilian_factories > 50
-	}
-	abort = {
-		OR = {
-			num_of_civilian_factories < 40
-		}
-	}
-
-	ai_strategy = {
-		type = intelligence_agency_usable_factories
-		value = 5
-	}
-}
-
-upgrade_intelligence_agency_as_spy_master = {
-	enable = {
-		is_spymaster = yes
-		OR = {
-			has_war = no
-			num_of_civilian_factories > 50
-		}
-	}
-	abort = {
-		is_spymaster = no
-		num_of_civilian_factories < 40
-	}
-
-	ai_strategy = {
-		type = intelligence_agency_usable_factories
-		value = 10
-	}
-}
-
-addintelligence_agency_normal_upgrade_prio = {
+spies_are_icky = {
 	enable = {
 		always = yes
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = intelligence_agency_branch_desire_factor
-		id = branch_intelligence
-		value = 1000
-	}
-	ai_strategy = {
-		type = intelligence_agency_branch_desire_factor
-		id = branch_defense
-		value = 1000
-	}
-	ai_strategy = {
-		type = intelligence_agency_branch_desire_factor
-		id = branch_operation
-		value = 500
-	}
-	ai_strategy = {
-		type = intelligence_agency_branch_desire_factor
-		id = branch_operative
-		value = 100
-	}
-	ai_strategy = {
-		type = intelligence_agency_branch_desire_factor
-		id = branch_crypto
-		value = 2000
+		type = intelligence_agency_usable_factories
+		value = -20
 	}
 }
 
@@ -1160,32 +964,12 @@ ask_foreign_manpower_as_major = {
 	}
 }
 
-more_upgrades_as_spymaster = {
-
-	enable = {
-		is_spymaster = yes
-	}
-
-	abort = {
-		is_spymaster = no
-	}
-
-	ai_strategy = {
-		type = agency_ai_base_num_factories_factor
-		value = -50    # -50% on the define
-	}
-
-	ai_strategy = {
-		type = agency_ai_per_upgrade_factories_factor
-		value = -25    # -25% on the define
-	}
-}
-
 
 put_garrisons_on_high_prio = {
 	enable = {
 		always = yes
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = garrison_reinforcement_priority
@@ -1195,9 +979,7 @@ put_garrisons_on_high_prio = {
 
 default_spyplanes_production = {
 	enable = {
-		OR = {
-			has_tech = scout_plane1
-		}
+		has_tech = scout_plane1
 		is_major = yes
 		#OR = {
 		#	has_equipment = {
@@ -1233,9 +1015,7 @@ default_spyplanes_production = {
 
 minors_dont_spy = {
 	enable = {
-		OR = {
-			has_tech = scout_plane1
-		}
+		has_tech = scout_plane1
 		is_major = no
 	}
 
@@ -1245,6 +1025,20 @@ minors_dont_spy = {
 		type = unit_ratio
 		id = scout_plane
 		value = -10
+	}
+}
+
+default_produce_some_trucks_for_buffer = {
+	enable = {
+		num_of_military_factories > 12
+		has_equipment = { motorized_equipment < 3000 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 1
 	}
 }
 
@@ -1315,11 +1109,6 @@ comintern_avoid_starting_wars_during_endgame = { #Sov should avoid attacking all
 		type = conquer
 		id = FIN
 		value = 400 #These values offset each other. Basically we won't start wars with anyone except for finland while this strategy is active
-	}
-	ai_strategy = {
-		type = conquer
-		id = PER
-		value = 400 #These values offset each other. Basically we won't start wars with anyone except for iran while this strategy is active
 	}
 }
 

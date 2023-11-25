@@ -9,7 +9,7 @@ ideas = {
 			picture = generic_build_infrastructure
 
 			modifier = {
-				consumer_goods_factor = 0.025
+				consumer_goods_factor = 0.175
 				production_speed_industrial_complex_factor = -0.2
 				production_speed_arms_factory_factor = -0.2
 				production_factory_efficiency_gain_factor = -0.2
@@ -705,7 +705,7 @@ ideas = {
 			modifier = {
 				cavalry_attack_factor = -0.1
 				cavalry_defence_factor = -0.1
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.2
 				experience_gain_army = 0.15
 			}
 		}
@@ -1465,24 +1465,7 @@ ideas = {
 
 			modifier = {
 				industrial_capacity_factory = -0.05
-				consumer_goods_factor = 0.03
-			}
-		}
-
-		SOV_spanish_gold = {
-			removal_cost = -1
-
-			allowed = {
-				always = no # Added via focus
-			}
-			allowed_civil_war = {
-				has_government = communism
-			}
-
-			picture = generic_goods_red_bonus
-
-			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = 0.2
 			}
 		}
 
@@ -1499,7 +1482,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			modifier = {
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.15
 				industrial_capacity_factory = -0.05
 			}
 		}
@@ -1792,26 +1775,6 @@ ideas = {
 
 			modifier = {
 				conscription = 0.03
-			}
-		}
-
-		emergency_industrial_effort = {
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			picture = generic_central_management
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-
-			modifier = {
-				 production_speed_arms_factory_factor = 0.15
-				 consumer_goods_factor = -0.05
-				 industrial_capacity_factory = 0.05
 			}
 		}
 
@@ -3103,7 +3066,7 @@ ideas = {
 			cost = 250
 
 			modifier = {
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.9
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.4

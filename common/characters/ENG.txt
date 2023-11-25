@@ -1306,6 +1306,10 @@ characters={
 			allowed = {
 				original_tag = ENG
 			}
+			
+			available = {
+				has_completed_focus  = ENG_force_abdication 
+			}
 						
 			traits = { ENG_secretary_of_state_home_department }
 
@@ -1435,7 +1439,7 @@ characters={
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.15
 				political_power_factor = -0.05 
 				production_speed_radar_station_factor = 0.05 
 				production_speed_air_base_factor = 0.05 
@@ -1460,7 +1464,7 @@ characters={
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.01 
+				consumer_goods_factor = 0.075
 				political_power_factor = -0.05 
 				industrial_capacity_factory = -0.025 
 				industrial_capacity_dockyard = 0.1
@@ -1494,7 +1498,7 @@ characters={
 				line_change_production_efficiency_factor = -0.05
 				production_speed_arms_factory_factor = -0.05
 				trade_opinion_factor = 0.25
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				local_resources_factor = 0.10
 				min_export = 0.1
 			}
@@ -1521,7 +1525,7 @@ characters={
 				industrial_capacity_factory = 0.1
 				production_factory_max_efficiency_factor = 0.05
 				line_change_production_efficiency_factor = 0.05
-				consumer_goods_factor = 0.04
+				consumer_goods_factor = 0.25
 			}
 
 			traits = { ENG_minister_of_labour }

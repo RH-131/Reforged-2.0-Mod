@@ -325,9 +325,9 @@ FRA_naval_light_cruiser = {
 				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = cruiser_ship_engine_1
-				mid_1_custom_slot = ship_torpedo_1
-				mid_2_custom_slot = ship_light_medium_battery_1
-				rear_1_custom_slot = ship_airplane_launcher_1
+				mid_1_custom_slot = ship_light_medium_battery_1
+				mid_2_custom_slot = ship_torpedo_1
+				rear_1_custom_slot = ship_light_medium_battery_1
 			}
 		}
 		
@@ -366,9 +366,9 @@ FRA_naval_light_cruiser = {
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = cruiser_ship_engine_1
 				fixed_ship_secondaries_slot = empty
-				mid_1_custom_slot = ship_torpedo
-				mid_2_custom_slot = ship_light_medium_battery_1
-				rear_1_custom_slot = ship_airplane_launcher
+				mid_1_custom_slot = ship_light_medium_battery_1
+				mid_2_custom_slot = ship_torpedo_1
+				rear_1_custom_slot = ship_light_medium_battery_1
 			}
 		}
 		
@@ -452,9 +452,9 @@ FRA_naval_light_cruiser = {
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = cruiser_ship_engine_1
 				fixed_ship_armor_slot = ship_armor_cruiser_1
-				mid_1_custom_slot = ship_anti_air_1
-				mid_2_custom_slot = ship_light_medium_battery_2
-				rear_1_custom_slot = ship_airplane_launcher_1
+				mid_1_custom_slot = ship_light_medium_battery_2
+				mid_2_custom_slot = ship_torpedo_2
+				rear_1_custom_slot = ship_light_medium_battery_2
 			}
 		}
 		
@@ -494,9 +494,9 @@ FRA_naval_light_cruiser = {
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = cruiser_ship_engine_1
 				fixed_ship_armor_slot = ship_armor_cruiser_1
-				mid_1_custom_slot = ship_anti_air
-				mid_2_custom_slot = ship_light_medium_battery_2
-				rear_1_custom_slot = ship_airplane_launcher
+				mid_1_custom_slot = ship_light_medium_battery_2
+				mid_2_custom_slot = ship_torpedo
+				rear_1_custom_slot = ship_light_medium_battery_2
 			}
 		}
 		
@@ -577,7 +577,7 @@ FRA_naval_light_cruiser = {
 				front_1_custom_slot = ship_anti_air
 				mid_1_custom_slot = dp_ship_secondaries
 				mid_2_custom_slot = ship_anti_air
-				rear_1_custom_slot = ship_airplane_launcher
+				rear_1_custom_slot = ship_light_medium_battery_3
 				rear_2_custom_slot = ship_light_medium_battery_3
 			}
 		}
@@ -706,13 +706,15 @@ FRA_naval_cruiser_heavy = {
 				fixed_ship_armor_slot = ship_armor_cruiser_1
 				mid_1_custom_slot = ship_medium_battery_1
 				mid_2_custom_slot = ship_torpedo_1
-				rear_1_custom_slot = ship_airplane_launcher_1
+				rear_1_custom_slot = ship_medium_battery_1
 			}
 		}
 		
 		allowed_modules = {
 			ship_anti_air
 			ship_medium_battery
+			ship_fire_control_system
+			cruiser_ship_engine
 			ship_radar
 			ship_torpedo
 			ship_airplane_launcher
@@ -750,6 +752,8 @@ FRA_naval_cruiser_heavy = {
 		allowed_modules = {
 			ship_anti_air
 			ship_medium_battery
+			ship_fire_control_system
+			cruiser_ship_engine
 			ship_radar
 			ship_torpedo
 			ship_airplane_launcher
@@ -778,13 +782,15 @@ FRA_naval_cruiser_heavy = {
 				fixed_ship_armor_slot = ship_armor_cruiser_1
 				mid_1_custom_slot = ship_medium_battery_1
 				mid_2_custom_slot = ship_anti_air_1
-				rear_1_custom_slot = ship_airplane_launcher_1
+				rear_1_custom_slot = ship_medium_battery_1
 			}
 		}
 		
 		allowed_modules = {
 			ship_anti_air
 			ship_medium_battery
+			ship_fire_control_system
+			cruiser_ship_engine
 			ship_radar
 			ship_torpedo
 			ship_airplane_launcher
@@ -814,13 +820,15 @@ FRA_naval_cruiser_heavy = {
 				fixed_ship_armor_slot = ship_armor_cruiser_1
 				mid_1_custom_slot = ship_medium_battery_1
 				mid_2_custom_slot = ship_anti_air
-				rear_1_custom_slot = ship_airplane_launcher
+				rear_1_custom_slot = ship_medium_battery_1
 			}
 		}
 		
 		allowed_modules = {
 			ship_anti_air
 			ship_medium_battery
+			ship_fire_control_system
+			cruiser_ship_engine
 			ship_radar
 			ship_torpedo
 			ship_airplane_launcher
@@ -850,17 +858,18 @@ FRA_naval_cruiser_heavy = {
 				front_1_custom_slot = ship_anti_air
 				mid_1_custom_slot = ship_medium_battery_2
 				mid_2_custom_slot = ship_torpedo
-				rear_1_custom_slot = ship_anti_air
+				rear_1_custom_slot = ship_medium_battery_2
 			}
 		}
 		
 		allowed_modules = {
 			ship_anti_air
 			ship_medium_battery
+			ship_fire_control_system
+			cruiser_ship_engine
 			ship_radar
 			ship_torpedo
 			ship_airplane_launcher
-			ship_fire_control_system
 		}
 	}
 	
@@ -886,17 +895,18 @@ FRA_naval_cruiser_heavy = {
 				front_1_custom_slot = ship_anti_air
 				mid_1_custom_slot > ship_medium_battery_2
 				mid_2_custom_slot = ship_anti_air
-				rear_1_custom_slot = dp_ship_secondaries
+				rear_1_custom_slot > ship_medium_battery_2
 			}
 		}
 		
 		allowed_modules = {
 			ship_anti_air
 			ship_medium_battery
+			ship_fire_control_system
+			cruiser_ship_engine
 			ship_radar
 			ship_torpedo
 			ship_airplane_launcher
-			ship_fire_control_system
 		}
 	}
 	capital_cruiser_advanced_upgrade = {
@@ -922,20 +932,21 @@ FRA_naval_cruiser_heavy = {
 				fixed_ship_engine_slot = cruiser_ship_engine_2
 				fixed_ship_armor_slot = ship_armor_cruiser_2
 				fixed_ship_secondaries_slot = ship_secondaries
-				front_1_custom_slot = ship_torpedo
+				front_1_custom_slot = ship_anti_air
 				mid_1_custom_slot = ship_medium_battery_2
-				mid_2_custom_slot = ship_airplane_launcher
-				rear_1_custom_slot = ship_airplane_launcher
+				mid_2_custom_slot = ship_anti_air
+				rear_1_custom_slot = ship_medium_battery_2
 			}
 		}
 		
 		allowed_modules = {
 			ship_anti_air
 			ship_medium_battery
+			ship_fire_control_system
+			cruiser_ship_engine
 			ship_radar
 			ship_torpedo
 			ship_airplane_launcher
-			ship_fire_control_system
 		}
 	}
 	capital_cruiser_late = {
@@ -958,20 +969,21 @@ FRA_naval_cruiser_heavy = {
 				fixed_ship_armor_slot = ship_armor_cruiser_3
 				fixed_ship_secondaries_slot = dp_ship_secondaries
 				front_1_custom_slot = ship_medium_battery_4
-				mid_1_custom_slot = ship_anti_air
-				mid_2_custom_slot = dp_ship_secondaries
-				rear_1_custom_slot = ship_anti_air
-				rear_2_custom_slot = ship_anti_air
+				mid_1_custom_slot = ship_medium_battery_4
+				mid_2_custom_slot = ship_anti_air
+				rear_1_custom_slot = ship_medium_battery_4
+				rear_2_custom_slot = ship_medium_battery_4
 			}
 		}
 		
 		allowed_modules = {
 			ship_anti_air
 			ship_medium_battery
+			ship_fire_control_system
+			cruiser_ship_engine
 			ship_radar
 			ship_torpedo
 			ship_airplane_launcher
-			ship_fire_control_system
 		}
 	}
 }

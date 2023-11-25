@@ -246,10 +246,10 @@ characters={
 			}
 		}
 	}
-	TUR_mehmet_ali_ungen={
+	TUR_mehmet_ali_ulgen={
 		advisor={
 			slot = navy_chief
-			idea_token = TUR_mehmet_ali_ungen
+			idea_token = TUR_mehmet_ali_ulgen
 			allowed  = {
 					original_tag  = TUR
 				}
@@ -260,7 +260,7 @@ characters={
 					factor  = 1.000
 				}
 		}
-		name="TUR_mehmet_ali_ungen"
+		name="TUR_mehmet_ali_ulgen"
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_europe_3"
@@ -364,6 +364,14 @@ characters={
 			}
 			
 			traits = { captain_of_industry }
+			
+			ai_will_do = {
+				factor = 99
+				modifier = {
+					factor = 0
+					date > 1938.1.1
+				}
+			}
 		}
 	}
 }

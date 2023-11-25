@@ -1219,7 +1219,7 @@ equipments = {
 		substitute = cv_medium_plane_airframe
 		allowed_types = {
 			tactical_bomber
-			fighter
+			heavy_fighter
 			scout_plane
 		}
 		allow_mission_type = training
@@ -2049,7 +2049,7 @@ equipments = {
 		type_override = fixed_main_weapon_slot
 		allowed_types = {
 			tactical_bomber
-			fighter
+			heavy_fighter
 			scout_plane
 		}
 		allow_mission_type = training
@@ -3758,7 +3758,7 @@ duplicate_archetypes = {
 
 	medium_plane_fighter_airframe = {
 		archetype = medium_plane_airframe
-		type = fighter
+		type = heavy_fighter
 		ai_type = heavy_fighter
 		for_each = {
 			air_superiority = { set = 1.15 }

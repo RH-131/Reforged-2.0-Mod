@@ -1874,8 +1874,16 @@ technology = construction4
 				uses = 1
 				category = cat_light_armor
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = SPA_adesa
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:SPR_adesa_organization = {
+					add_mio_funds = 800
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = SPA_adesa
+			}
 		}
 	}
 

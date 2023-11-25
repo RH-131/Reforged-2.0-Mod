@@ -17,6 +17,7 @@ autonomy_state = {
 		extra_trade_to_overlord_factor = 0.25
 		overlord_trade_cost_factor = -0.25
 		can_master_build_for_us = 1
+		lend_lease_tension_with_overlord = -0.10
 	}
 	
 	ai_subject_wants_higher = {
@@ -36,7 +37,7 @@ autonomy_state = {
 
 		if = {
 			limit = { has_dlc = "Death or Dishonor" }
-			NOT = { has_government = fascism }
+			OVERLORD = { NOT = { has_government = fascism } }
 		}
 	}
 	
