@@ -729,6 +729,39 @@ ideas = {
 				}
 			}
 		}
+		
+		RAJ_poor_industrial_infrastructure_3 = {
+			picture = SPR_anarchist_public_transport
+
+			allowed = {
+				original_tag = RAJ
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+			    has_capitulated = yes
+			}
+
+			removal_cost = -1
+			equipment_bonus = {
+				railway_gun_equipment = {
+					build_cost_ic = 0.35 instant = yes
+				}
+			}
+			equipment_bonus = {
+				amphibious_tank_chassis = {
+					build_cost_ic = 0.15 instant = yes
+				}
+			}
+			equipment_bonus = {
+				heavy_tank_chassis = {
+					build_cost_ic = 0.25 instant = yes 
+				}
+			}
+		}
 
 		RAJ_princely_states = {
 

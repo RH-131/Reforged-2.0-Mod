@@ -35,7 +35,7 @@ mio_policy_general_assembly_line_optimisers = {
 	available = { has_mio_size > 5}
 	production_bonus = {
 		same_as_mio = {
-			production_efficiency_cap_factor = 0.05
+			production_efficiency_cap_factor = 0.01
 			production_efficiency_gain_factor = 0.05
 		}
 	}
@@ -47,8 +47,8 @@ mio_policy_general_vertical_integration = {
 	available = { has_mio_size > 5}
 	production_bonus = {
 		same_as_mio = {
-			production_resource_need_factor = -0.1
-			production_resource_penalty_factor = 0.1
+			production_resource_need_factor = -0.15
+			production_resource_penalty_factor = 0.15
 		}
 	}
 }
@@ -69,7 +69,7 @@ mio_policy_general_experimental_development_teams = {
 	allowed = { always = yes }
 	available = { has_mio_size > 5}
 	organization_modifier = {
-		military_industrial_organization_research_bonus = 0.2
+		military_industrial_organization_research_bonus = 0.05
 	}
 }
 
@@ -85,7 +85,7 @@ mio_policy_NOR_general_permanent_industrial_revolution = {
 #			} 
 	}
 	organization_modifier = {
-		military_industrial_organization_research_bonus = 0.1
+		military_industrial_organization_research_bonus = 0.05
 	}
 
 	production_bonus = {
