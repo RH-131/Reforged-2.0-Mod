@@ -1,71 +1,20 @@
-political_actions = {
-    AST_annex_nzl = {
-
-		icon = generic_political_discourse
-
-		allowed = {
-			tag = AST			
-		}
-
-		available = {
-			is_ai = no
-			NZL = { is_ai = yes }
-			country_exists = NZL
-			OR = {
-				has_completed_focus = AST_support_the_policy_of_appeasement
-				has_war_with = GER
-			}
-		}
-
-		modifier = {
-			consumer_goods_factor = 0.2
-			local_factories = 0.3
-		}
-
-		cost = 0
-		days_remove = 365
-
-		fire_only_once = yes
-
-
-		complete_effect = {
-			NZL = {
-				transfer_navy = {
-					target = AST
-				}
-			}
-			annex_country = {
-              target = NZL
-              transfer_troops = yes
-			}
-			every_state = {
-				every_state = {
-				limit = { is_core_of = NZL }
-				set_resistance = 0
-				set_compliance = 100
-				}	
-			}
-		}
-	}
-}
-
 operations = {
 	AST_Order_UK_Air = {
 		
 		icon = generic_air
 	
 		available = {
-			date >1938.1.1
+			date > 1938.8.1
 		}
 	
 		visible = {
-			date >1936.1.1
+			date > 1936.1.1
 		}
 		modifier = {
 			civilian_factory_use = 4
 		}
 		cost = 75
-		days_remove = 60
+		days_remove = 90
 		ai_will_do = {
 			factor = 1
 		}			
@@ -73,12 +22,7 @@ operations = {
 		remove_effect = {
 			add_equipment_to_stockpile = {
 				type = medium_plane_fighter_airframe
-				amount = 50
-				producer = ENG
-			}
-			add_equipment_to_stockpile = {
-				type = medium_plane_airframe
-				amount = 50
+				amount = 100
 				producer = ENG
 			}
 			add_equipment_to_stockpile = {
@@ -97,18 +41,18 @@ operations = {
 		icon = generic_air
 	
 		available = {
-			date >1939.1.1
+			date > 1939.10.1
 	
 		}
 	
 		visible = {
-			date >1936.1.1
+			date > 1936.1.1
 		}
 		modifier = {
 			civilian_factory_use = 4
 		}
 		cost = 75
-		days_remove = 120
+		days_remove = 90
 		ai_will_do = {
 			factor = 1
 		}			
@@ -116,21 +60,21 @@ operations = {
 		remove_effect = {
 			add_equipment_to_stockpile = {
 				type = small_plane_airframe
-				amount = 100
+				amount = 50
 				producer = USA
 			}
 			add_equipment_to_stockpile = {
 				type = small_plane_cas_airframe
-				amount = 100
+				amount = 50
 				producer = USA
 			}
 			add_equipment_to_stockpile = {
-				type = medium_plane_airframe
-				amount = 100
+				type = small_plane_naval_bomber_airframe
+				amount = 50
 				producer = USA
 			}
 			USA = {
-				add_offsite_building = { type = arms_factory level = 4 }
+				add_offsite_building = { type = arms_factory level = 2 }
 			}
 		}		
 	}
@@ -145,12 +89,12 @@ operations = {
 		}
 	
 		visible = {
-			has_completed_focus = AST_Homeland_defence
+			date > 1936.1.1
 		}
 		modifier = {
-			civilian_factory_use = 7
+			civilian_factory_use = 6
 		}
-		cost = 50
+		cost = 75
 		days_remove = 60
 		ai_will_do = {
 			factor = 1
@@ -169,7 +113,7 @@ operations = {
 			}
 			add_equipment_to_stockpile = {
 				type = radio_equipment
-				amount = 50
+				amount = 100
 				producer = USA
 			}
 			add_equipment_to_stockpile = {
@@ -179,11 +123,11 @@ operations = {
 			}
 			add_equipment_to_stockpile = {
 				type = motorized_equipment
-				amount = 150
+				amount = 100
 				producer = USA
 			}
 			USA = {
-				add_offsite_building = { type = arms_factory level = 5 }
+				add_offsite_building = { type = arms_factory level = 3 }
 			}
 		}		
 	}
