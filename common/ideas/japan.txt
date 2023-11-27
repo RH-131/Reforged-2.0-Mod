@@ -1031,17 +1031,14 @@ ideas = {
 
 			picture = jap_interservice_rivalry_army_dominant
 
-			research_bonus = {
-				naval_equipment = -0.1
-				naval_doctrine = -0.1
-				land_doctrine = 0.05
-			}
-
 			modifier = {
 				production_speed_arms_factory_factor = 0.1
-				production_speed_dockyard_factor = -0.2
+				production_speed_dockyard_factor = -0.1
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = -0.06
+				land_doctrine_cost_factor = -0.1
+				naval_doctrine_cost_factor = 0.1
+
 			}
 		}
 
@@ -1060,7 +1057,7 @@ ideas = {
 
 			modifier = {
 				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = -0.1
+				production_speed_dockyard_factor = -0.05
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = -0.03
 			}
@@ -1094,8 +1091,8 @@ ideas = {
 			picture = jap_interservice_rivalry_navy_strengthened
 
 			modifier = {
-				production_speed_arms_factory_factor = -0.1
-				production_speed_dockyard_factor = 0.1
+				production_speed_arms_factory_factor = -0.05
+				production_speed_dockyard_factor = 0.05
 				industrial_capacity_factory = -0.03
 				industrial_capacity_dockyard = 0.05
 			}
@@ -1114,17 +1111,13 @@ ideas = {
 
 			picture = jap_interservice_rivalry_navy_dominant
 
-			research_bonus = {
-				land_doctrine = -0.1
-				naval_doctrine = 0.1
-			}
-
 			modifier = {
-				production_speed_arms_factory_factor = -0.2
-				production_speed_dockyard_factor = 0.2
-				planning_speed = -0.1
+				production_speed_arms_factory_factor = -0.1
+				production_speed_dockyard_factor = 0.1
 				industrial_capacity_factory = -0.06
 				industrial_capacity_dockyard = 0.1
+				land_doctrine_cost_factor = 0.1
+				naval_doctrine_cost_factor = -0.1
 			}
 		}
 
@@ -1583,21 +1576,16 @@ ideas = {
 
 			picture = generic_navy_carrier_bonus
 
-			targeted_modifier = {
-				tag = PHI
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.1
-			}
-
 			modifier = {
 				port_strike = 1
-				carrier_capacity_penalty_reduction = -0.5
-				sortie_efficiency = 0.5
+				sortie_efficiency = 0.2
+				naval_speed_factor = 0.1
+				naval_damage_factor = 0.15
 				naval_strike_attack_factor = 0.12
 				naval_strike_targetting_factor = 0.12
 				naval_strike_agility_factor = 0.12
-				army_core_defence_factor = 1.00
-				army_core_attack_factor = 1.00
+				amphibious_invasion = 0.25
+				amphibious_invasion_defence = 0.25
 			}
 		}
 
