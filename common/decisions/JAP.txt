@@ -943,39 +943,6 @@ operations = {
 			}
 		}		
 	}
-
-	JAP_tora_tora_tora = {
-		allowed = {
-			original_tag = JAP
-		}			 
-		icon = decision_generic_naval
-
-		available = {
-			OR = {
-				has_war_with = HOL
-				has_war_with = ENG
-				has_war_with = USA
-				has_war_with = FRA
-			}
-		}
-		is_good = no	  
-	
-		fire_only_once = yes
-	
-		days_mission_timeout = 120
-	
-		activation = {
-			has_completed_focus = JAP_strike_on_the_southern_resource_area
-		}
-		
-		visible = {
-			has_completed_focus = JAP_strike_on_the_southern_resource_area
-		}
-	
-		complete_effect = {
-			add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 120 }
-		}
-	}
 	
 	JAP_operation_mi = {
 		icon = generic_operation
