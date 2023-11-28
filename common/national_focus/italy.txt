@@ -3325,19 +3325,29 @@ focus_tree = {
 				controls_state = 451
 				controls_state = 448
 				controls_state = 115
+				controls_state = 103
 				has_idea = mare_nostrum
 	} 
 	completion_reward = {
 			add_state_core = 1
 			add_state_core = 116
 			add_state_core = 735
+			add_state_core = 103
+			add_state_core = 163
 			add_ideas = rome_reformed
 			add_stability = 0.25
 			add_war_support = 0.25
 			set_cosmetic_tag = ITA_new_rome
-			set_global_flag = SPQR_UNIFIED
-		}
-	}
+			ITA_benito_mussolini = {
+                        set_character_name = {
+                            name = ITA_benito_mussolini_roman_emperor
+                        }
+                        set_portraits = {
+                            civilian = { large = GFX_portrait_italy_emperor_mussolini }
+                        }
+                    }
+ }
+}
 	focus = {
 		id = ITA_seek_help_from_german_scientists
 		icon = GFX_focus_research
