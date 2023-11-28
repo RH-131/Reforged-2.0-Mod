@@ -82,16 +82,6 @@ SPR_casa_organization = {
 		has_dlc = "La Resistance"
 		tag = SPR
 	}
-
-	available = {
-		OR = {
-			custom_trigger_tooltip = {
-				tooltip = SPR_scw_not_in_progress_tt
-				NOT = { SPR_scw_in_progress = yes }
-			}
-			FROM = { controls_state = 167 }
-		}
-	}
 }
 
 SPR_hispano_aviacion_organization = {
@@ -106,33 +96,6 @@ SPR_hispano_aviacion_organization = {
 			AND = {
 				has_dlc = "By Blood Alone"
 				tag = SWI
-			}
-		}
-	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SPR } }
-			}
-			FROM = { NOT = { has_war_with = SPR } }
-		}
-
-		if = {
-			limit = {
-				FROM = { tag = SWI }
-			}
-			custom_trigger_tooltip = {
-				tooltip = SPR_scw_not_in_progress_tt
-				NOT = { SPR_scw_in_progress = yes }
-			}	
-		}
-		else = {
-			FROM = { controls_state = 169 }
-			custom_trigger_tooltip = {
-				tooltip = SPR_scw_not_in_progress_tt
-				NOT = { SPR_scw_in_progress = yes }
 			}
 		}
 	}
@@ -157,16 +120,6 @@ SPR_star_bonifacio_echeverria_organization = {
 		has_dlc = "La Resistance"
 		tag = SPR
 	}
-
-	available = {
-		OR = {
-			custom_trigger_tooltip = {
-				tooltip = SPR_scw_not_in_progress_tt
-				NOT = { SPR_scw_in_progress = yes }
-			}
-			FROM = { controls_state = 792 }
-		}
-	}
 }
 
 SPR_esperanza_y_cia_organization = {
@@ -176,16 +129,6 @@ SPR_esperanza_y_cia_organization = {
 		has_dlc = "La Resistance"
 		tag = SPR
 	}
-
-	available = {
-		OR = {
-			custom_trigger_tooltip = {
-				tooltip = SPR_scw_not_in_progress_tt
-				NOT = { SPR_scw_in_progress = yes }
-			}
-			FROM = { controls_state = 792 }
-		}
-	}
 }
 
 SPR_llama_gabilondo_y_cia_organization = {
@@ -194,16 +137,6 @@ SPR_llama_gabilondo_y_cia_organization = {
 	allowed = {	
 		has_dlc = "La Resistance"
 		tag = SPR
-	}
-
-	available = {
-		OR = {
-			custom_trigger_tooltip = {
-				tooltip = SPR_scw_not_in_progress_tt
-				NOT = { SPR_scw_in_progress = yes }
-			}
-			FROM = { controls_state = 792 }
-		}
 	}
 }
 
@@ -221,41 +154,6 @@ SPR_hispano_suiza_organization = {
 				has_dlc = "By Blood Alone"
 				tag = SWI
 			}
-		}
-	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SPR } }
-			}
-			FROM = { NOT = { has_war_with = SPR } }
-		}
-		
-		if = {
-			limit = {
-				FROM = { tag = SWI }
-			}
-			custom_trigger_tooltip = {
-				tooltip = SPR_scw_not_in_progress_tt
-				NOT = { SPR_scw_in_progress = yes }
-			}	
-		}
-		else = {
-			FROM = { controls_state = 169 }
-			custom_trigger_tooltip = {
-				tooltip = SPR_scw_not_in_progress_tt
-				NOT = { SPR_scw_in_progress = yes }
-			}
-		}
-	}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			FROM = { original_tag = SWI }
-			NOT = { has_global_flag = scw_over } 
 		}
 	}
 }
