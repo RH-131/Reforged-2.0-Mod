@@ -1059,7 +1059,7 @@ focus_tree = {
 		    OR = {
 			    NOT = { 115 = { is_owned_and_controlled_by = ITA } }
 			}
-			has_war_with = SOV
+		 date > 1942.1.1	
 		}
 		completion_reward = {
 			add_war_support = 0.15
@@ -3048,10 +3048,18 @@ focus_tree = {
 				date > 1940.1.1
 			}
 		}
+		
 		available_if_capitulated = no
 
 
 		completion_reward = {
+			add_ideas = war_economy 
+			if = {
+				limit = {
+					has_idea = war_economy
+				}
+				add_political_power = 150 
+			}
 		custom_effect_tooltip = salo_warning
 		add_war_support = 0.05
 			GER = {
@@ -3291,6 +3299,55 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = ITA_new_rome
+		icon = GFX_focus_ETH_the-italo_ethiopian_empire
+		prerequisite = { focus = ITA_viva_il_duce}
+		x = 32
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+        available = {
+				controls_state = 1
+				controls_state = 116
+				controls_state = 118
+				controls_state = 183
+				controls_state = 735
+				controls_state = 907
+				controls_state = 656	
+				controls_state = 458
+				controls_state = 47
+				controls_state = 182
+				controls_state = 187
+				controls_state = 450
+				controls_state = 451
+				controls_state = 448
+				controls_state = 115
+				controls_state = 103
+				has_idea = mare_nostrum
+	} 
+	completion_reward = {
+			add_state_core = 1
+			add_state_core = 116
+			add_state_core = 735
+			add_state_core = 103
+			add_state_core = 163
+			add_ideas = rome_reformed
+			add_stability = 0.25
+			add_war_support = 0.25
+			set_cosmetic_tag = ITA_new_rome
+			ITA_benito_mussolini = {
+                        set_character_name = {
+                            name = ITA_benito_mussolini_roman_emperor
+                        }
+                        set_portraits = {
+                            civilian = { large = GFX_portrait_italy_emperor_mussolini }
+                        }
+                    }
+ }
+}
 	focus = {
 		id = ITA_seek_help_from_german_scientists
 		icon = GFX_focus_research
