@@ -2,7 +2,10 @@ operations = {
 	AST_Order_UK_Air = {
 		
 		icon = generic_air
-	
+		
+		allowed = {
+			tag = AST
+		}
 		available = {
 			date > 1938.8.1
 		}
@@ -39,7 +42,10 @@ operations = {
 	AST_Order_USA_Air = {
 		
 		icon = generic_air
-	
+		
+		allowed = {
+			tag = AST
+		}
 		available = {
 			date > 1939.10.1
 	
@@ -82,10 +88,12 @@ operations = {
 	AST_Procure_Arms = {
 		
 		icon = generic_army
-	
+		
+		allowed = {
+			tag = AST
+		}
 		available = {
 			has_completed_focus = AST_Indo_pacific
-	
 		}
 	
 		visible = {
