@@ -7,6 +7,33 @@
    ##    ##     ## ##   ### ##   ##  ##    ## 
    ##    ##     ## ##    ## ##    ##  ######  
 
+
+ENG_vickers_armstrong_org = {
+	icon = GFX_idea_vickers_armstrong_eng
+	
+	allowed = {	
+		tag = ENG
+	}
+	
+	equipment_type = { mio_cat_eq_all_light_tank medium_tank_chassis }
+	research_categories = { mio_cat_tech_light_armor_and_modules mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+
+}
 ENG_vickers_armstrong_eng_organization = {
 	include = generic_medium_tank_organization
 	icon = GFX_idea_vickers_armstrong_eng
