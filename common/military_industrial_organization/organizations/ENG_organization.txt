@@ -56,7 +56,7 @@ ENG_vickers_armstrong_org = {
 	}
 	
 	trait = {
-		token = generic_mio_trait_light_tank_improvements
+		token = ENG_mio_trait_light_tank_improvements
 		name = generic_mio_trait_light_tank_improvements
 		icon = GFX_generic_mio_department_icon_tank_light_tank_weapons
 
@@ -71,14 +71,14 @@ ENG_vickers_armstrong_org = {
 	}
 	
 	trait = {
-		token = generic_mio_trait_improved_gun_metallurgy
+		token = ENG_mio_trait_improved_gun_metallurgy
 		name = generic_mio_trait_improved_gun_metallurgy
 		icon = GFX_generic_mio_trait_icon_ap_attack
 
 		position = { x=0 y=3 }
 		relative_position_id = generic_mio_trait_power_traverse
 
-		all_parents = { generic_mio_trait_light_tank_improvements }
+		all_parents = { ENG_mio_trait_light_tank_improvements }
 		
 		equipment_bonus = {
 			soft_attack = 0.02
@@ -88,32 +88,32 @@ ENG_vickers_armstrong_org = {
 	}
 	
 	trait = {
-		token = generic_mio_trait_crew_survival_layout
+		token = ENG_mio_trait_crew_survival_layout
 		name = generic_mio_trait_crew_survival_layout
 		icon = GFX_generic_mio_trait_icon_defense		
 
 		position = { x=4 y=0 }
 		
 		equipment_bonus = {
-			defense = 0.05
+			defense = 0.075
 		}
 	}
 	
 	trait = {
-		token = generic_mio_trait_engines
+		token = ENG_mio_trait_engines
 		name = generic_mio_trait_engines
 		icon = GFX_generic_mio_trait_icon_maximum_speed
 
 		position = { x=3 y=1 }
 		relative_position_id = generic_mio_trait_power_traverse
 
-		any_parent = { generic_mio_trait_crew_survival_layout }
+		any_parent = { ENG_mio_trait_crew_survival_layout }
 		
 		equipment_bonus = {
 			maximum_speed = 0.04
 		}
 		production_bonus = {
-			production_cost_factor = 0.025
+			production_resource_need_factor = 0.025
 		}
 
 	}
@@ -127,7 +127,7 @@ ENG_vickers_armstrong_org = {
 		position = { x=2 y=3 }
 		relative_position_id = generic_mio_trait_power_traverse
 
-		all_parents = { generic_mio_trait_light_tank_improvements generic_mio_trait_engines }
+		all_parents = { ENG_mio_trait_light_tank_improvements ENG_mio_trait_engines }
 
 		equipment_bonus = {
 			reliability = 0.05
@@ -230,6 +230,41 @@ ENG_vickers_armstrong_org = {
 		}
 	}
 
+}
+
+ENG_Leyland_org = {
+	icon = GFX_idea_Leyland
+	
+	allowed = {	
+		tag = ENG
+	}
+	
+	equipment_type = { mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			maximum_speed = 0.025
+			reliability = -0.05
+			hard_attack = 0.025
+		}
+
+	}
 }
 ENG_vickers_armstrong_eng_organization = {
 	include = generic_medium_tank_organization
