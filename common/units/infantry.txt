@@ -221,7 +221,7 @@ sub_units = {
 		combat_width = 2
 
 		need = {
-			infantry_equipment = 100
+			infantry_equipment = 80
 			motorized_equipment = 20
 		}
 		maximum_speed = -0.25
@@ -236,9 +236,14 @@ sub_units = {
 		suppression = 1.7
 		weight = 0.5
 		
-		hardness = -0.25
+		hardness = -0.20
 		
 		supply_consumption = 0.13
+		
+		defense = 0.05
+		soft_attack = 0.05
+		hard_attack = 0.05
+		breakthrough = 0.05
 		
 		
 		forest = {
@@ -279,7 +284,7 @@ sub_units = {
 		combat_width = 2
 		
 		need = {
-			infantry_equipment = 80
+			infantry_equipment = 75
 			motorized_equipment = 16
 		}	
 		maximum_speed = -0.20
@@ -348,23 +353,23 @@ sub_units = {
 		manpower = 600
 
 		#Misc Abilities
-		maximum_speed = -0.39
+		maximum_speed = -0.35
 		training_time = 70
 		suppression = 1.9
 		weight = 0.3
 		
-		hardness = -0.25
+		hardness = -0.30
 		
 		#Offensive Abilities
 		defense = -0.2
-		soft_attack = -0.35 
-		hard_attack = -0.35
-		breakthrough = -0.35
+		soft_attack = -0.30
+		hard_attack = -0.30
+		breakthrough = -0.30
 
 		supply_consumption = 0.09
 		
 		need = {
-			infantry_equipment = 60
+			infantry_equipment = 50
 			motorized_equipment = 12
 		}
 		
