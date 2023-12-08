@@ -2,7 +2,10 @@ operations = {
 	AST_Order_UK_Air = {
 		
 		icon = generic_air
-	
+		
+		allowed = {
+			tag = AST
+		}
 		available = {
 			date > 1938.8.1
 		}
@@ -30,16 +33,19 @@ operations = {
 				amount = 50
 				producer = ENG
 			}
-			ENG = {
-				add_offsite_building = { type = arms_factory level = 2 }
-			}
+#			ENG = {
+#				add_offsite_building = { type = arms_factory level = 2 }
+#			}
 		}		
 	}
 	
 	AST_Order_USA_Air = {
 		
 		icon = generic_air
-	
+		
+		allowed = {
+			tag = AST
+		}
 		available = {
 			date > 1939.10.1
 	
@@ -73,19 +79,21 @@ operations = {
 				amount = 50
 				producer = USA
 			}
-			USA = {
-				add_offsite_building = { type = arms_factory level = 2 }
-			}
+#			USA = {
+#				add_offsite_building = { type = arms_factory level = 2 }
+#			}
 		}		
 	}
 	
 	AST_Procure_Arms = {
 		
 		icon = generic_army
-	
+		
+		allowed = {
+			tag = AST
+		}
 		available = {
 			has_completed_focus = AST_Indo_pacific
-	
 		}
 	
 		visible = {
@@ -126,9 +134,9 @@ operations = {
 				amount = 100
 				producer = USA
 			}
-			USA = {
-				add_offsite_building = { type = arms_factory level = 3 }
-			}
+#			USA = {
+#				add_offsite_building = { type = arms_factory level = 3 }
+#			}
 		}		
 	}
 	
