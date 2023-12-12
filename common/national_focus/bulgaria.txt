@@ -242,8 +242,7 @@ focus_tree = {
 					tag = SOV
 				}
 			}
-			is_subject = no
-		}
+			is_subject = yes		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
@@ -1392,8 +1391,7 @@ focus_tree = {
 					}
 				}
 			}
-			is_subject = no
-		}
+			is_subject = yes		}
 
 		bypass = {
 			NOT = {
@@ -1440,8 +1438,7 @@ focus_tree = {
 					}
 				}
 			}
-			is_subject = no
-		}
+			is_subject = yes		}
 
 		bypass = {
 			NOT = {
@@ -1488,8 +1485,7 @@ focus_tree = {
 					}
 				}
 			}
-			is_subject = no
-		}
+			is_subject = yes		}
 
 		bypass = {
 			NOT = {
@@ -2748,12 +2744,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			184 = {	
-				set_resistance = 5
-				set_compliance = 85
+				add_core_of = BUL
 			}
 			731 = {	
-				set_resistance = 5
-				set_compliance = 85
+				add_core_of = BUL
 			}		
 		}
 	}
@@ -2872,8 +2866,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			is_subject = no
-		}
+			is_subject = yes		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
