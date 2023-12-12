@@ -7391,7 +7391,7 @@ generic_motorized_mechanized_organization = {
 		name = generic_mio_initial_trait_motorized_mechanized_manufacturer
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.025
 		}
 	}
 
@@ -7407,8 +7407,8 @@ generic_motorized_mechanized_organization = {
 		limit_to_equipment_type = { motorized_equipment }
 
 		equipment_bonus = {
-			reliability = -0.07
-			build_cost_ic = -0.05
+			build_cost_ic = -0.10
+			hardness = -0.10
 		}
 	}
 
@@ -7425,10 +7425,11 @@ generic_motorized_mechanized_organization = {
 		limit_to_equipment_type = { motorized_equipment }
 
 		equipment_bonus = {
-			reliability = 0.05
+			reliability = -0.05
+			hardness = 0.10
 		}
 		production_bonus = {
-			production_resource_need_factor = 0.02
+			production_resource_need_factor = 0.05
 		}
 	}
 
@@ -7445,7 +7446,7 @@ generic_motorized_mechanized_organization = {
 		limit_to_equipment_type = { motorized_equipment }
 		
 		equipment_bonus = {
-			breakthrough = 0.035
+			maximum_speed = 0.025
 		}
 	}
 
@@ -7464,7 +7465,7 @@ generic_motorized_mechanized_organization = {
 		limit_to_equipment_type = { motorized_equipment }
 
 		equipment_bonus = {
-			fuel_consumption = -0.05
+			fuel_consumption = -0.10
 		}
 	}
 
@@ -7484,7 +7485,7 @@ generic_motorized_mechanized_organization = {
 
 		equipment_bonus = {
 			fuel_consumption = 0.05
-			maximum_speed = 0.05
+			maximum_speed = 0.025
 		}
 	}
 
