@@ -65,8 +65,8 @@ ENG_vickers_armstrong_org = {
 		any_parent = { generic_mio_trait_power_traverse }
 
 		equipment_bonus = {
-			soft_attack = 0.04
-			hard_attack = 0.025
+			soft_attack = 0.03
+			hard_attack = 0.02
 		}
 	}
 	
@@ -110,7 +110,7 @@ ENG_vickers_armstrong_org = {
 		any_parent = { ENG_mio_trait_crew_survival_layout }
 		
 		equipment_bonus = {
-			maximum_speed = 0.04
+			maximum_speed = 0.03
 		}
 		production_bonus = {
 			production_resource_need_factor = 0.025
@@ -232,7 +232,7 @@ ENG_vickers_armstrong_org = {
 
 }
 
-ENG_Leyland_org = {
+ENG_leyland_org = {
 	icon = GFX_idea_Leyland
 	
 	allowed = {	
@@ -259,11 +259,138 @@ ENG_Leyland_org = {
 	
 	initial_trait = {
 		equipment_bonus = {
-			maximum_speed = 0.025
+			maximum_speed = 0.02
 			reliability = -0.05
 			hard_attack = 0.025
 		}
 
+	}
+	
+	trait = {
+		token = ENG_mio_cruiser_stabilization
+		name = ENG_mio_cruiser_stabilization
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			reliability = 0.025
+			defense = 0.05
+		}
+	}
+	
+	trait = {
+		token = ENG_mio_cruiser_gun_improvements
+		name = ENG_mio_cruiser_gun_improvements
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x=1 y=1 }
+		
+		any_parent = { ENG_mio_cruiser_stabilization }
+		
+		equipment_bonus = {
+			soft_attack = 0.025
+			hard_attack = 0.035
+			build_cost_ic = 0.02
+		}
+	}
+	
+	trait = {
+		token = ENG_mio_cruiser_armor_piercing_rounds
+		name = ENG_mio_cruiser_armor_piercing_rounds
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x=1 y=2 }
+		
+		any_parent = { ENG_mio_cruiser_gun_improvements }
+		
+		equipment_bonus = {
+			ap_attack = 0.065
+		}
+	}
+	
+	trait = {
+		token = generic_mio_trait_power_traverse
+		name = generic_mio_trait_power_traverse
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x=4 y=0 }
+		
+		equipment_bonus = {
+			breakthrough = 0.05
+		}
+	}
+	
+	trait = {
+		token = ENG_mio_trait_engines
+		name = generic_mio_trait_engines
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x=4 y=1 }
+
+		any_parent = { generic_mio_trait_power_traverse }
+		
+		equipment_bonus = {
+			maximum_speed = 0.02
+			build_cost_ic = 0.02
+		}
+
+	}
+	
+	trait = {
+		token = ENG_mio_trait_speed_improvements
+		name = generic_mio_trait_speed_improvements
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		
+		position = { x=4 y=2 }
+
+	
+		any_parent = { ENG_mio_trait_engines }
+		
+		
+		equipment_bonus = {
+			maximum_speed = 0.02
+			breakthrough = 0.05
+			build_cost_ic = 0.02
+		}
+	}
+	
+	trait = {
+		token = ENG_mio_trait_speed_teething
+		name = generic_mio_trait_speed_improvements
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		
+		position = { x=3 y=3 }
+
+	
+		any_parent = { ENG_mio_trait_speed_improvements }
+		mutually_exclusive= { ENG_mio_trait_fix_problems }
+		
+		equipment_bonus = {
+			armor_value = -0.05
+			reliability = -0.05
+			maximum_speed = 0.02
+		}
+	}
+	
+	trait = {
+		token = ENG_mio_trait_fix_problems
+		name = ENG_mio_trait_fix_problems
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		
+		position = { x=6 y=3 }
+
+	
+		any_parent = { ENG_mio_trait_speed_improvements }
+		mutually_exclusive= { ENG_mio_trait_speed_teething }
+		
+		equipment_bonus = {
+			reliability = 0.05
+			maximum_speed = -0.01
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.10
+		}
 	}
 }
 ENG_vickers_armstrong_eng_organization = {
