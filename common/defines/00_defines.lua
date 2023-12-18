@@ -1165,7 +1165,7 @@ NMilitary = {
 
 	ARMY_MAX_FUEL_FLOW_MULT = 2.0,					-- max fuel ratio that an army can get per hour, multiplied by supply situation
 
-	ARMY_FUEL_COST_MULT = 0.5,						-- fuel cost multiplier for all army related stuff
+	ARMY_FUEL_COST_MULT = 0.7,						-- fuel cost multiplier for all army related stuff
 	ARMY_COMBAT_FUEL_MULT =   1.0,					-- fuel consumption ratio in combat (plus ARMY_MOVEMENT_FUEL_MULT if you are also moving. ie offensive combat)
 	ARMY_TRAINING_FUEL_MULT = 0.5,					-- fuel consumption ratio while training
 	ARMY_MOVEMENT_FUEL_MULT = 1.0,					-- fuel consumption ratio while moving
@@ -1589,7 +1589,7 @@ NNavy = {
 	TRAINING_FUEL_COST_FOR_ESCORT_SHIPS = 0.15,						-- ships that are on training mission but not training (ie they are at max xp and training will cancel at max xp) will consume this ratio of fuel
 
 	MAX_FUEL_FLOW_MULT = 2.0, -- max fuel flow ratio for ships, which will be multiplied by supply
-	FUEL_COST_MULT = 0.10, -- fuel multiplier for all naval missions
+	FUEL_COST_MULT = 0.20, -- fuel multiplier for all naval missions
 
 	OUT_OF_FUEL_SPEED_FACTOR = -0.75,
 	OUT_OF_FUEL_RANGE_FACTOR = -0.75,
