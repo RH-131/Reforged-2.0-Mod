@@ -16,18 +16,48 @@ operations = {
 		fire_only_once = yes
 
 		complete_effect = {
-			ENG = {
-				country_event = { id = portugal.1 hours = 6 }
+			add_to_tech_sharing_group = commonwealth_research
+		   	GER = {
+				60 = {
+				add_resource = {
+					type = tungsten
+					amount = 25
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+					}
+				}
 			}
-		    GER = {
-			    country_event = { id = portugal.3 hours = 6 }
-		        country_event = { id = portugal.2 hours = 48 }
+	   	    ITA = {
+				158 = {
+	            add_resource = {
+					type = steel
+					amount = 15
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+					}
+				}
+			}
+	  	  JAP = {
+				535 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+					}
+				}
 			}
 		}		
 	}
-    POR_sovg = {
+    POR_honor1 = {
 
-		icon = generic_paperwork
+		icon = generic_bureaucracy
 
 		allowed = {
 			tag = POR			
@@ -35,25 +65,134 @@ operations = {
 
 		available = {
 			is_ai = no
-			SOV = { has_war_with = GER }
 		}
 
-		cost = 100
+		cost = 0
 
 		fire_only_once = yes
 
-        days_remove = 35
-
-		remove_effect = {
-			SOV = {
-				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1250 producer = POR }
-				add_equipment_to_stockpile = { type = support_equipment_1 amount = 150 producer = POR }
-				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 150 producer = POR }
-				add_equipment_to_stockpile = { type = radio_equipment amount = 100 producer = POR }
-				add_equipment_to_stockpile = { type = horse_equipment_0 amount = 100 producer = POR }
+		complete_effect = {
+		    SPR = {
+		        transfer_state = 179
+				transfer_state = 795
+				transfer_state = 112
+				transfer_state = 181
+				transfer_state = 180
+				179 = { add_core_of = SPR }
+				795 = { add_core_of = SPR }
+				112 = { add_core_of = SPR }
+				181 = { add_core_of = SPR }
+				180 = { add_core_of = SPR }
+			}
+			ENG = {
+				country_event = { id = portugal.1 hours = 6 }
 			}
 		}		
-	} 
+	}
+    POR_axis = {
+
+		icon = generic_bureaucracy
+
+		allowed = {
+			tag = POR			
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		complete_effect = {
+		    add_to_tech_sharing_group = axis_research
+		   	ENG = {
+				126 = {
+				add_resource = {
+					type = tungsten
+					amount = 25
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+					}
+				}
+			}
+	   	    USA = {
+				361 = {
+	            add_resource = {
+					type = steel
+					amount = 15
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+					}
+				}
+			}
+	  	    SOV = {
+				219 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+					}
+				}
+			}
+	  	    FRA = {
+				772 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				    }
+				}
+			}
+		}		
+	}
+    POR_axis1 = {
+
+		icon = generic_bureaucracy
+
+		allowed = {
+			tag = POR			
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		complete_effect = {
+			ENG = {
+				transfer_state = 698
+				transfer_state = 697
+				transfer_state = 702
+				transfer_state = 729
+				transfer_state = 721
+			}
+			FRA = {
+				transfer_state = 296
+			    transfer_state = 796
+				transfer_state = 540
+				transfer_state = 892
+				transfer_state = 891
+				transfer_state = 705
+				transfer_state = 897
+				transfer_state = 544
+				transfer_state = 896
+			}
+			GER = {
+				country_event = { id = portugal.2 hours = 6 }
+			}
+		}		
+	}
 }
 
 POR_overseas_provinces = {
@@ -64,7 +203,7 @@ POR_overseas_provinces = {
 
 		available = {
 			
-#			has_completed_focus = POR_luso_tropicalism
+			has_completed_focus = POR_luso_tropicalism
 			AND = {
 				POR = {
 					controls_state = 540
@@ -83,9 +222,13 @@ POR_overseas_provinces = {
 			political_power_gain = -0.2
 		}
 		visible = {
-#			has_completed_focus = POR_luso_tropicalism
+			has_completed_focus = POR_luso_tropicalism
 		}
 		remove_effect = {
+			add_state_core = 540
+			add_state_core = 796
+			add_state_core = 891
+			add_state_core = 892
 			country_event = lar_portugal_overseas_provinces.1
 		}		
 	}
@@ -95,7 +238,7 @@ POR_overseas_provinces = {
 		icon = infiltrate_state
 
 		available = {
-#			has_completed_focus = POR_luso_tropicalism
+			has_completed_focus = POR_luso_tropicalism
 			AND = {
 				POR = {
 					controls_state = 544
@@ -115,9 +258,12 @@ POR_overseas_provinces = {
 		}
 		
 		visible = {
-#			has_completed_focus = POR_luso_tropicalism
+			has_completed_focus = POR_luso_tropicalism
 		}
-		remove_effect = {			
+		remove_effect = {		
+			add_state_core = 544
+			add_state_core = 896
+			add_state_core = 897		
 			country_event = lar_portugal_overseas_provinces.2
 		}
 	}	
@@ -134,7 +280,7 @@ POR_prospect_for_resources = {
 		}
 
 		available = {
-#			has_completed_focus = POR_extraction_industries
+			has_completed_focus = POR_extraction_industries
 			num_of_civilian_factories_available_for_projects > 2
 			owns_state = 540
 			controls_state = 540
@@ -185,7 +331,7 @@ POR_prospect_for_resources = {
 		}
 
 		available = {
-#			has_completed_focus = POR_extraction_industries
+			has_completed_focus = POR_extraction_industries
 			num_of_civilian_factories_available_for_projects > 2
 			owns_state = 544
 			controls_state = 544
@@ -200,7 +346,7 @@ POR_prospect_for_resources = {
 		}
 
 		cost = 25
-		days_remove = POR_santarem_chromium_duration
+		days_remove = 90
 
 		modifier = {
 			civilian_factory_use = 3

@@ -241,6 +241,13 @@ SOV_astrov_design_bureau_organization = {
 	allowed = {	
 		original_tag = SOV
 	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			reliability = -0.05
+			build_cost_ic = -0.1
+		}
+	}
 
 	add_trait = { 
 		token = SOV_mio_trait_merge_plant_no_174
@@ -636,6 +643,13 @@ SOV_kirov_organization = {
 		token = generic_mio_trait_wide_tracks
 
 		position = { x=0 y=0 }
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			reliability = -0.05
+			build_cost_ic = -0.1
+		}
 	}
 
 	add_trait = { 

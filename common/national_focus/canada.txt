@@ -2942,16 +2942,8 @@ focus_tree = {
 				category = tactical_bomber
 				category = cas_bomber
 			}
-			if = {
-				limit = { has_dlc = "Arms Against Tyranny" }
-				mio:CAN_fairchild_aircraft_ltd_organization = {
-					add_mio_funds = 800
-				}
-			}
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = CAN_fairchild_aircraft_ltd
-			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = CAN_fairchild_aircraft_ltd
 		}
 	}
 
@@ -2984,16 +2976,8 @@ focus_tree = {
 				uses = 1
 				category = cat_strategic_bomber
 			}
-			if = {
-				limit = { has_dlc = "Arms Against Tyranny" }
-				mio:CAN_handley_page_organization = {
-					add_mio_funds = 800
-				}
-			}
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = CAN_handley_page
-			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = CAN_handley_page
 		}
 	}
 
@@ -3176,6 +3160,12 @@ focus_tree = {
 			}
 				set_technology = {
 					early_ship_hull_carrier = 1
+					cv_fighter_1936 = 1 
+				}
+				add_equipment_to_stockpile = {
+					type = cv_fighter_equipment_1936
+					amount = 40
+					producer = CAN 
 				}
 				create_equipment_variant = {
 					name = "Ruler Class"

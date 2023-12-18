@@ -729,6 +729,39 @@ ideas = {
 				}
 			}
 		}
+		
+		RAJ_poor_industrial_infrastructure_3 = {
+			picture = SPR_anarchist_public_transport
+
+			allowed = {
+				original_tag = RAJ
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+			    has_capitulated = yes
+			}
+
+			removal_cost = -1
+			equipment_bonus = {
+				railway_gun_equipment = {
+					build_cost_ic = 0.35 instant = yes
+				}
+			}
+			equipment_bonus = {
+				amphibious_tank_chassis = {
+					build_cost_ic = 0.15 instant = yes
+				}
+			}
+			equipment_bonus = {
+				heavy_tank_chassis = {
+					build_cost_ic = 0.25 instant = yes 
+				}
+			}
+		}
 
 		RAJ_princely_states = {
 
@@ -1479,8 +1512,8 @@ ideas = {
 				conscription_factor = -0.08
 				consumer_goods_factor = 0.275
 				autonomy_gain = -0.4
-				stability_factor = -0.15
-				stability_weekly = -0.003
+				stability_factor = -0.20
+				stability_weekly = -0.004
 			}
 		}
 
@@ -1511,8 +1544,8 @@ ideas = {
 				conscription_factor = -0.06
 				consumer_goods_factor = 0.2
 				autonomy_gain = -0.2
-				stability_factor = -0.12
-				stability_weekly = -0.001
+				stability_factor = -0.15
+				stability_weekly = -0.002
 			}
 		}
 
@@ -1538,7 +1571,7 @@ ideas = {
 				conscription_factor = -0.04
 				consumer_goods_factor = 0.15
 				autonomy_gain = -0.1
-				stability_factor = -0.05
+				stability_factor = -0.10
 			}
 		}
 
@@ -1563,6 +1596,7 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.075
 				autonomy_gain = 0.4
+				stability_factor = -0.05
 			}
 		}
 
@@ -1824,8 +1858,8 @@ ideas = {
 				war_support_factor = -0.4
 				surrender_limit = -0.25
 				conscription_factor = -0.15
-				army_core_attack_factor = -0.1
-				army_core_defence_factor = -0.1
+				army_core_attack_factor = -0.20
+				army_core_defence_factor = -0.20
 			}
 		}
 
@@ -1858,8 +1892,8 @@ ideas = {
 				war_support_factor = -0.3
 				surrender_limit = -0.20
 				conscription_factor = -0.1
-				army_core_attack_factor = -0.05
-				army_core_defence_factor = -0.05
+				army_core_attack_factor = -0.1
+				army_core_defence_factor = -0.1
 			}
 		}
 
@@ -1891,7 +1925,8 @@ ideas = {
 				autonomy_gain = 0.5
 				war_support_factor = -0.2
 				surrender_limit = -0.10
-				conscription_factor = -0.05
+				army_core_attack_factor = -0.05
+				army_core_defence_factor = -0.05
 			}
 		}
 
