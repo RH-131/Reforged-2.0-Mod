@@ -42,11 +42,11 @@ ability = {
 		}
 		one_time_effect = {
 			add_temporary_buff_to_units = {
-				combat_offense = 0.2
-				combat_breakthrough = 0.25
-				org_damage_multiplier = -0.8
+				combat_offense = 0.25
+				combat_breakthrough = 0.15
+				org_damage_multiplier = -0.3
 				str_damage_multiplier = 0.8
-				war_support_reduction_on_damage = 0.2
+				war_support_reduction_on_damage = 0.5
 				cannot_retreat_while_attacking = 1.0
 				
 				days = 5
@@ -87,11 +87,11 @@ ability = {
 		}
 		one_time_effect = {
 			add_temporary_buff_to_units = {
-				combat_defense = 0.2
-				combat_entrenchment = 0.25
-				org_damage_multiplier = -0.8
-				str_damage_multiplier = 0.85
-				war_support_reduction_on_damage = 0.2
+				combat_defense = 0.25
+				combat_entrenchment = 0.15
+				org_damage_multiplier = -0.3
+				str_damage_multiplier = 0.8
+				war_support_reduction_on_damage = 0.5
 				cannot_retreat_while_defending = 1.0
 				
 				days = 5
@@ -129,11 +129,11 @@ ability = {
 			is_border_war = no
 		}
 		
-		cost = 0.1
+		cost = 0.08
 		duration = 340
 		cooldown = 504
 		unit_modifiers = {
-			planning_speed = 2.0
+			planning_speed = 1.0
 		}
 		
 		
@@ -168,7 +168,7 @@ ability = {
 		duration = 760
 		cooldown = 760
 		unit_modifiers = {
-			army_speed_factor = -0.2
+			army_speed_factor = -0.25
 			supply_consumption_factor = -0.1
 		}
 		
