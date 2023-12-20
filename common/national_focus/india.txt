@@ -95,11 +95,8 @@ focus_tree = {
 			add_ideas = RAJ_england_influence
 			ENG = { add_ideas = ENG_foreign_indian_labour_force }
 			add_political_power = 75 
-		    RAJ = { complete_national_focus = RAJ_coastal_defence_fleet }
+		    RAJ = { complete_national_focus = RAJ_bengal_dockyards }
 		    RAJ = { complete_national_focus = RAJ_import_british_design }
-		    RAJ = { complete_national_focus = RAJ_naval_doctrine }
-		    RAJ = { complete_national_focus = RAJ_the_illustrious_class }
-		    RAJ = { complete_national_focus = RAJ_the_princess_royal_class }
 		}
 	}
 	
@@ -1092,7 +1089,7 @@ focus_tree = {
 		x = 14
 		y = 0
 
-		cost = 10
+		cost = 15
 
 		ai_will_do = {
 			factor = 4
@@ -1125,7 +1122,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 15
 
 		ai_will_do = {
 			factor = 100
@@ -2826,9 +2823,9 @@ focus_tree = {
    			 
 
 			436 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					level = 4
+					level = 2
 					type = industrial_complex
 					instant_build = yes 
 				}
@@ -2934,14 +2931,6 @@ focus_tree = {
 		complete_tooltip = {
 			custom_effect_tooltip = RAJ_attempt_industrialization_tt_3
 			
-			429 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
-					type = industrial_complex
-					instant_build = yes 
-				}
-			}
 			swap_ideas = {
 				remove_idea = RAJ_agrarian_society
 				add_idea = RAJ_agrarian_society_2 
@@ -2955,14 +2944,6 @@ focus_tree = {
 			add_to_variable = {
 				var = rapid_industrialization
 				value = 7 
-			}
-			429 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					level = 1
-					type = industrial_complex
-					instant_build = yes 
-				}
 			}
 			swap_ideas = {
 				remove_idea = RAJ_agrarian_society
@@ -5266,7 +5247,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes 
 				}
 			}
@@ -5279,7 +5260,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes 
 				}
 			}
@@ -5315,7 +5296,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes 
 				}
 			}
@@ -5332,7 +5313,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes 
 				}
 			}
@@ -5370,7 +5351,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes 
 				}
 			}
@@ -5387,7 +5368,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes 
 				}
 			}
@@ -5428,7 +5409,7 @@ focus_tree = {
 			
 			add_offsite_building = {
 				type = arms_factory
-				level = 4
+				level = 2
 			}
 		}
 
@@ -5436,7 +5417,7 @@ focus_tree = {
 			
 			add_offsite_building = {
 				type = arms_factory
-				level = 4
+				level = 2
 			}
 		}		
 	}	
