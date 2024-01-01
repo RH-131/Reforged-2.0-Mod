@@ -10,6 +10,7 @@ guiTypes = {
 		orientation = CENTER
 		origo = center
 		show_sound = "ui_tank_designer_panel_appear"
+		clipping = no
 
 		background = {
 			name = "Background"
@@ -447,7 +448,29 @@ guiTypes = {
 			quadTextureSprite = "GFX_button_123x34"
 			clicksound = "ui_tank_designer_select_3d_model"
 
-		}	
+		}
+
+		containerWindowType = {
+			name = "icon_selection_container"
+			position = { x=340 y=68 }
+			size = { width = 154 height = 56 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_equipment_designer_equipment_icon_bg"
+				pdx_tooltip = "SELECT_2D_ICON"
+			}
+
+			buttonType = {
+				name = "btn_equipment_icon"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_locked_icon"
+				Orientation = "center"
+				centerPosition = yes
+				clicksound = "ui_tank_designer_equipment_icon"
+				alwaystransparent = yes
+			}
+		}		
 
 		containerWindowType = {
 			name = "equipment_select_model"

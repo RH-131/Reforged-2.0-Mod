@@ -1674,7 +1674,22 @@ equipment_modules = {
 	}
 	
 	cupola = {
-		abbreviation = "cupola"
+		abbreviation = "cup"
+		category = tank_turret_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			entrenchment = 2
+			build_cost_ic = 1
+		}
+		xp_cost = 1
+		multiply_stats = {
+			
+		}
+	}
+	
+	cupola_2 = {
+		abbreviation = "cup2"
 		category = tank_turret_module
 		sfx = sfx_ui_sd_module_turret
 
@@ -1690,6 +1705,21 @@ equipment_modules = {
 	
 	periscope = {
 		abbreviation = "pscope"
+		category = tank_turret_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			entrenchment = 2
+			build_cost_ic = 1
+		}
+		xp_cost = 1
+		multiply_stats = {
+			
+		}
+	}
+	
+	periscope_2 = {
+		abbreviation = "pscope2"
 		category = tank_turret_module
 		sfx = sfx_ui_sd_module_turret
 

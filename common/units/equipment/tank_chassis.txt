@@ -41,6 +41,7 @@ equipments = {
 					tank_light_turret_type
 				}
 			}
+			
 			suspension_type_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -56,14 +57,20 @@ equipments = {
 				}
 			}
 
+			armor_layout_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_layout_type
+				}
+			}
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_engine_type
 				}
 			}
-
-			special_type_slot_1 = {
+			
+			radio_slot = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
@@ -72,30 +79,33 @@ equipments = {
 				}
 			}
 
-			special_type_slot_2 = {
+			interior_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_interior_module
+				}
+			}
+
+			optic_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_optic_module
+				}
+			}
+			
+			hull_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
-					tank_radio_module
+					tank_hull_module
 					tank_secondary_turret
 				}
 			}
 
-			special_type_slot_3 = {
+			turret_slot_1 = {
 				required = no
 				allowed_module_categories = {
-					tank_special_module
-					tank_radio_module
-					tank_secondary_turret
-				}
-			}
-
-			special_type_slot_4 = {
-				required = no
-				allowed_module_categories = {
-					tank_special_module
-					tank_radio_module
-					tank_secondary_turret
+					tank_turret_module
 				}
 			}
 			
@@ -287,8 +297,8 @@ equipments = {
 			main_armament_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_small_main_armament
 					tank_medium_main_armament
+					tank_small_main_armament
 					tank_flamethrower
 				}
 			}
@@ -296,15 +306,15 @@ equipments = {
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_light_turret_type
 					tank_medium_turret_type
 				}
 			}
-
+			
 			suspension_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_suspension_type
+					tank_non_tracked_suspension_type
 				}
 			}
 
@@ -315,46 +325,71 @@ equipments = {
 				}
 			}
 
+			armor_layout_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_layout_type
+				}
+			}
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_engine_type
 				}
 			}
-
-			special_type_slot_1 = {
+			
+			radio_slot = {
 				required = no
 				allowed_module_categories = {
-					tank_radio_module
 					tank_special_module
+					tank_radio_module
 					tank_secondary_turret
 				}
 			}
 
-			special_type_slot_2 = {
-				required = no
+			interior_slot = {
+				required = yes
 				allowed_module_categories = {
-					tank_special_module
-					tank_secondary_turret
-					tank_radio_module
+					tank_interior_module
 				}
 			}
 
-			special_type_slot_3 = {
+			optic_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_optic_module
+				}
+			}
+			
+			hull_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
+					tank_hull_module
 					tank_secondary_turret
-					tank_radio_module
 				}
 			}
 
-			special_type_slot_4 = {
+			hull_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
+					tank_hull_module
 					tank_secondary_turret
-					tank_radio_module
+				}
+			}
+			
+			turret_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
+				}
+			}
+			
+			turret_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
 				}
 			}
 			
@@ -600,9 +635,9 @@ equipments = {
 			main_armament_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_small_main_armament
-					tank_medium_main_armament
 					tank_heavy_main_armament
+					tank_medium_main_armament
+					tank_small_main_armament
 					tank_flamethrower
 				}
 			}
@@ -610,12 +645,10 @@ equipments = {
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_light_turret_type
-					tank_medium_turret_type
 					tank_heavy_turret_type
 				}
 			}
-
+			
 			suspension_type_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -630,14 +663,20 @@ equipments = {
 				}
 			}
 
+			armor_layout_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_layout_type
+				}
+			}
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_engine_type
 				}
 			}
-
-			special_type_slot_1 = {
+			
+			radio_slot = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
@@ -646,33 +685,68 @@ equipments = {
 				}
 			}
 
-			special_type_slot_2 = {
-				required = no
+			interior_slot = {
+				required = yes
 				allowed_module_categories = {
-					tank_special_module
-					tank_secondary_turret
-					tank_radio_module
+					tank_interior_module
 				}
 			}
 
-			special_type_slot_3 = {
+			optic_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_optic_module
+				}
+			}
+			
+			hull_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
+					tank_hull_module
 					tank_secondary_turret
-					tank_radio_module
 				}
 			}
 
-			special_type_slot_4 = {
+			hull_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
+					tank_hull_module
 					tank_secondary_turret
-					tank_radio_module
 				}
 			}
-
+			
+			hull_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+					tank_hull_module
+					tank_secondary_turret
+				}
+			}
+			
+			turret_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
+				}
+			}
+			
+			turret_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
+				}
+			}
+			
+			turret_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
+				}
+			}
+			
 		}
 		module_count_limit = {
 			module = sloped_armor
@@ -876,19 +950,20 @@ equipments = {
 			main_armament_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_small_main_armament
+					tank_heavy_main_armament
 					tank_medium_main_armament
+					tank_small_main_armament
+					tank_flamethrower
 				}
 			}
 
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_light_turret_type
-					tank_medium_turret_type
+					tank_heavy_turret_type
 				}
 			}
-
+			
 			suspension_type_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -903,46 +978,91 @@ equipments = {
 				}
 			}
 
+			armor_layout_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_layout_type
+				}
+			}
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_engine_type
 				}
 			}
-
-			special_type_slot_1 = {
+			
+			radio_slot = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
 					tank_radio_module
+					tank_secondary_turret
 				}
 			}
 
-			special_type_slot_2 = {
+			interior_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_interior_module
+				}
+			}
+
+			optic_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_optic_module
+				}
+			}
+			
+			hull_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
-					tank_radio_module
+					tank_hull_module
+					tank_secondary_turret
 				}
 			}
 
-			special_type_slot_3 = {
+			hull_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
-					tank_radio_module
+					tank_hull_module
+					tank_secondary_turret
 				}
 			}
-
-			special_type_slot_4 = {
+			
+			hull_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
-					tank_radio_module
+					tank_hull_module
+					tank_secondary_turret
 				}
 			}
-
+			
+			turret_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
+				}
+			}
+			
+			turret_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
+				}
+			}
+			
+			turret_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
+				}
+			}
 		}
+			
 		module_count_limit = {
 			module = sloped_armor
 			count < 2
@@ -1271,22 +1391,20 @@ equipments = {
 			main_armament_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_small_main_armament
-					tank_medium_main_armament
 					tank_heavy_main_armament
+					tank_medium_main_armament
+					tank_small_main_armament
+					tank_flamethrower
 				}
 			}
 
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_light_turret_type
-					tank_medium_turret_type
 					tank_heavy_turret_type
-					tank_modern_turret_type
 				}
 			}
-
+			
 			suspension_type_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -1301,46 +1419,91 @@ equipments = {
 				}
 			}
 
+			armor_layout_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_layout_type
+				}
+			}
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_engine_type
 				}
 			}
-
-			special_type_slot_1 = {
+			
+			radio_slot = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
 					tank_radio_module
+					tank_secondary_turret
 				}
 			}
 
-			special_type_slot_2 = {
+			interior_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_interior_module
+				}
+			}
+
+			optic_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_optic_module
+				}
+			}
+			
+			hull_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
-					tank_radio_module
+					tank_hull_module
+					tank_secondary_turret
 				}
 			}
 
-			special_type_slot_3 = {
+			hull_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
-					tank_radio_module
+					tank_hull_module
+					tank_secondary_turret
 				}
 			}
-
-			special_type_slot_4 = {
+			
+			hull_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
-					tank_radio_module
+					tank_hull_module
+					tank_secondary_turret
 				}
 			}
-
+			
+			turret_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
+				}
+			}
+			
+			turret_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
+				}
+			}
+			
+			turret_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
+				}
+			}
 		}
+			
 		module_count_limit = {
 			module = sloped_armor
 			count < 2
@@ -1441,23 +1604,20 @@ equipments = {
 			main_armament_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_small_main_armament
-					tank_medium_main_armament
 					tank_heavy_main_armament
-					tank_super_heavy_main_armament
+					tank_medium_main_armament
+					tank_small_main_armament
+					tank_flamethrower
 				}
 			}
 
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_light_turret_type
-					tank_medium_turret_type
 					tank_heavy_turret_type
-					tank_super_heavy_turret_type
 				}
 			}
-
+			
 			suspension_type_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -1472,14 +1632,20 @@ equipments = {
 				}
 			}
 
+			armor_layout_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_layout_type
+				}
+			}
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_engine_type
 				}
 			}
-
-			special_type_slot_1 = {
+			
+			radio_slot = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
@@ -1488,34 +1654,69 @@ equipments = {
 				}
 			}
 
-			special_type_slot_2 = {
-				required = no
+			interior_slot = {
+				required = yes
 				allowed_module_categories = {
-					tank_special_module
-					tank_secondary_turret
-					tank_radio_module
+					tank_interior_module
 				}
 			}
 
-			special_type_slot_3 = {
+			optic_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_optic_module
+				}
+			}
+			
+			hull_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
+					tank_hull_module
 					tank_secondary_turret
-					tank_radio_module
 				}
 			}
 
-			special_type_slot_4 = {
+			hull_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
+					tank_hull_module
 					tank_secondary_turret
-					tank_radio_module
 				}
 			}
-
+			
+			hull_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+					tank_hull_module
+					tank_secondary_turret
+				}
+			}
+			
+			turret_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
+				}
+			}
+			
+			turret_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
+				}
+			}
+			
+			turret_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_turret_module
+				}
+			}
 		}
+			
 		module_count_limit = {
 			module = sloped_armor
 			count < 2
