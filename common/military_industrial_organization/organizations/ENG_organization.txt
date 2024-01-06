@@ -12,7 +12,13 @@ ENG_vickers_armstrong_org = {
 	icon = GFX_idea_vickers_armstrong_eng
 	
 	allowed = {	
-		tag = ENG
+		OR = {
+			tag = ENG
+			tag = SAF
+			tag = CAN
+			tag = AST
+			tag = RAJ
+		}
 	}
 	
 	equipment_type = { mio_cat_eq_all_light_tank medium_tank_chassis }
@@ -35,198 +41,14 @@ ENG_vickers_armstrong_org = {
 	
 	initial_trait = {
 		equipment_bonus = {
-			maximum_speed = 0.025
+			soft_attack = 0.04
+			armor_value = -0.10
+			defense = 0.12
 			reliability = 0.05
 		}
 		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-	}
-	
-	trait = {
-		token = generic_mio_trait_power_traverse
-		name = generic_mio_trait_power_traverse
-		icon = GFX_generic_mio_trait_icon_breakthrough
-
-		position = { x=1 y=0 }
-		
-		equipment_bonus = {
-			breakthrough = 0.05
-		}
-	}
-	
-	trait = {
-		token = ENG_mio_trait_light_tank_improvements
-		name = generic_mio_trait_light_tank_improvements
-		icon = GFX_generic_mio_department_icon_tank_light_tank_weapons
-
-		position = { x=0 y=1 }
-		relative_position_id = generic_mio_trait_power_traverse
-		any_parent = { generic_mio_trait_power_traverse }
-
-		equipment_bonus = {
-			soft_attack = 0.03
-			hard_attack = 0.02
-		}
-	}
-	
-	trait = {
-		token = ENG_mio_trait_improved_gun_metallurgy
-		name = generic_mio_trait_improved_gun_metallurgy
-		icon = GFX_generic_mio_trait_icon_ap_attack
-
-		position = { x=0 y=3 }
-		relative_position_id = generic_mio_trait_power_traverse
-
-		all_parents = { ENG_mio_trait_light_tank_improvements }
-		
-		equipment_bonus = {
-			soft_attack = 0.02
-			hard_attack = 0.02
-			ap_attack = 0.05
-		}
-	}
-	
-	trait = {
-		token = ENG_mio_trait_crew_survival_layout
-		name = generic_mio_trait_crew_survival_layout
-		icon = GFX_generic_mio_trait_icon_defense		
-
-		position = { x=4 y=0 }
-		
-		equipment_bonus = {
-			defense = 0.075
-		}
-	}
-	
-	trait = {
-		token = ENG_mio_trait_engines
-		name = generic_mio_trait_engines
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-
-		position = { x=3 y=1 }
-		relative_position_id = generic_mio_trait_power_traverse
-
-		any_parent = { ENG_mio_trait_crew_survival_layout }
-		
-		equipment_bonus = {
-			maximum_speed = 0.03
-		}
-		production_bonus = {
-			production_resource_need_factor = 0.025
-		}
-
-	}
-	
-	trait = { 
-		token = ENG_mio_trait_expanded_turret_capacity
-		name = ENG_mio_trait_expanded_turret_capacity
-		icon = GFX_generic_mio_department_icon_tank_medium_tank_engine
-		special_trait_background = yes
-
-		position = { x=2 y=3 }
-		relative_position_id = generic_mio_trait_power_traverse
-
-		all_parents = { ENG_mio_trait_light_tank_improvements ENG_mio_trait_engines }
-
-		equipment_bonus = {
-			reliability = 0.05
-			armor_value = 0.05
-			breakthrough = 0.05
-		}
-		production_bonus = {
-			production_resource_need_factor = 0.025
-		}
-	}
-	
-	trait = {
-		token = ENG_mio_trait_modular_construction
-		name = generic_mio_trait_modular_construction
-		icon = GFX_generic_mio_department_icon_tank_general_technology
-		
-		position = { x=6 y=1 }
-		relative_position_id = generic_mio_trait_power_traverse
-		
-
-
-		production_bonus = {
-			production_efficiency_cap_factor = 0.025
-			production_efficiency_gain_factor = 0.1
-		}
-	}
-	
-	trait = {
-		token = ENG_mio_trait_light_tank_specialization
-		name = generic_mio_trait_light_tank_specialization
-		icon = GFX_generic_mio_department_icon_tank_light_tank_production
-		
-		position = { x=5 y=2 }
-		relative_position_id = generic_mio_trait_power_traverse
-		
-		any_parent = { ENG_mio_trait_modular_construction }
-		
-		mutually_exclusive= { ENG_mio_trait_medium_tank_specialization }
-
-		limit_to_equipment_type = { mio_cat_eq_all_light_tank }
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-	}
-	
-	trait = {
-		token = ENG_mio_trait_light_tank_lower_standards
-
-		icon = GFX_generic_mio_department_icon_tank_light_tank_production
-		
-		position = { x=5 y=3 }
-		relative_position_id = generic_mio_trait_power_traverse
-		
-		any_parent = { ENG_mio_trait_light_tank_specialization }
-
-		limit_to_equipment_type = { mio_cat_eq_all_light_tank }
-
-		equipment_bonus = {
-			reliability = -0.15
-			build_cost_ic = -0.075
-		}
-
-	}
-	trait = {
-		token = ENG_mio_trait_medium_tank_specialization
-		name = generic_mio_trait_medium_tank_specialization
-		icon = GFX_generic_mio_department_icon_tank_medium_tank_production
-		
-		position = { x=7 y=2 }
-		relative_position_id = generic_mio_trait_power_traverse
-
-		any_parent = { ENG_mio_trait_modular_construction }
-		
-		mutually_exclusive= { ENG_mio_trait_light_tank_specialization }
-		
-		limit_to_equipment_type = { medium_tank_chassis }
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-	}
-	
-	trait = {
-		token = ENG_mio_trait_medium_tank_production
-
-		icon = GFX_generic_mio_department_icon_tank_general_line_efficiency
-		
-		position = { x=7 y=3 }
-		relative_position_id = generic_mio_trait_power_traverse
-		
-		any_parent = { ENG_mio_trait_medium_tank_specialization }
-
-		limit_to_equipment_type = { medium_tank_chassis }
-
-		production_bonus = {
-			production_efficiency_gain_factor = 0.15
-			production_resource_need_factor = -0.05
-			production_resource_penalty_factor = 0.10
+			production_capacity_factor = 0.10
+			production_resource_need_factor = -0.15
 		}
 	}
 
@@ -236,7 +58,13 @@ ENG_leyland_org = {
 	icon = GFX_idea_Leyland
 	
 	allowed = {	
-		tag = ENG
+		OR = {
+			tag = ENG
+			tag = SAF
+			tag = CAN
+			tag = AST
+			tag = RAJ
+		}
 	}
 	
 	equipment_type = { mio_cat_eq_all_medium_tank }
@@ -259,215 +87,142 @@ ENG_leyland_org = {
 	
 	initial_trait = {
 		equipment_bonus = {
-			maximum_speed = 0.02
+			maximum_speed = 0.05
 			reliability = -0.05
-			hard_attack = 0.025
-		}
-
-	}
-	
-	trait = {
-		token = ENG_mio_cruiser_stabilization
-		name = ENG_mio_cruiser_stabilization
-		icon = GFX_generic_mio_trait_icon_breakthrough
-
-		position = { x=1 y=0 }
-		
-		equipment_bonus = {
-			reliability = 0.025
-			defense = 0.05
-		}
-	}
-	
-	trait = {
-		token = ENG_mio_cruiser_gun_improvements
-		name = ENG_mio_cruiser_gun_improvements
-		icon = GFX_generic_mio_trait_icon_breakthrough
-
-		position = { x=1 y=1 }
-		
-		any_parent = { ENG_mio_cruiser_stabilization }
-		
-		equipment_bonus = {
-			soft_attack = 0.025
-			hard_attack = 0.035
-			build_cost_ic = 0.02
-		}
-	}
-	
-	trait = {
-		token = ENG_mio_cruiser_armor_piercing_rounds
-		name = ENG_mio_cruiser_armor_piercing_rounds
-		icon = GFX_generic_mio_trait_icon_breakthrough
-
-		position = { x=1 y=2 }
-		
-		any_parent = { ENG_mio_cruiser_gun_improvements }
-		
-		equipment_bonus = {
-			ap_attack = 0.065
-		}
-	}
-	
-	trait = {
-		token = generic_mio_trait_power_traverse
-		name = generic_mio_trait_power_traverse
-		icon = GFX_generic_mio_trait_icon_breakthrough
-
-		position = { x=4 y=0 }
-		
-		equipment_bonus = {
-			breakthrough = 0.05
-		}
-	}
-	
-	trait = {
-		token = ENG_mio_trait_engines
-		name = generic_mio_trait_engines
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-
-		position = { x=4 y=1 }
-
-		any_parent = { generic_mio_trait_power_traverse }
-		
-		equipment_bonus = {
-			maximum_speed = 0.02
-			build_cost_ic = 0.02
-		}
-
-	}
-	
-	trait = {
-		token = ENG_mio_trait_speed_improvements
-		name = generic_mio_trait_speed_improvements
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-		
-		position = { x=4 y=2 }
-
-	
-		any_parent = { ENG_mio_trait_engines }
-		
-		
-		equipment_bonus = {
-			maximum_speed = 0.02
-			breakthrough = 0.05
-			build_cost_ic = 0.02
-		}
-	}
-	
-	trait = {
-		token = ENG_mio_trait_speed_teething
-		name = generic_mio_trait_speed_improvements
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-		
-		position = { x=3 y=3 }
-
-	
-		any_parent = { ENG_mio_trait_speed_improvements }
-		mutually_exclusive= { ENG_mio_trait_fix_problems }
-		
-		equipment_bonus = {
-			armor_value = -0.05
-			reliability = -0.05
-			maximum_speed = 0.02
-		}
-	}
-	
-	trait = {
-		token = ENG_mio_trait_fix_problems
-		name = ENG_mio_trait_fix_problems
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-		
-		position = { x=6 y=3 }
-
-	
-		any_parent = { ENG_mio_trait_speed_improvements }
-		mutually_exclusive= { ENG_mio_trait_speed_teething }
-		
-		equipment_bonus = {
-			reliability = 0.05
-			maximum_speed = -0.01
+			hard_attack = 0.09
+			soft_attack = 0.04
+			ap_attack = 0.05
+			build_cost_ic = 0.05
 		}
 		production_bonus = {
-			production_resource_need_factor = -0.10
+			production_resource_need_factor = 0.05
 		}
+
 	}
-}
-ENG_vickers_armstrong_eng_organization = {
-	include = generic_medium_tank_organization
-	icon = GFX_idea_vickers_armstrong_eng
 	
-	allowed = {	
-		tag = ENG
-	}
-
-	initial_trait = {
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
-		}
-		equipment_bonus = {
-			maximum_speed = 0.1
-			reliability = 0.05
-			armor_value = -0.1
-		}
-	}
-
-	add_trait = { 
-		token = ENG_mio_trait_expanded_turret_capacity
-		name = ENG_mio_trait_expanded_turret_capacity
-		icon = GFX_generic_mio_department_icon_tank_medium_tank_engine
-		special_trait_background = yes
-
-		position = { x=1 y=1 }
-		relative_position_id = generic_mio_trait_all_round_cupola
-
-		any_parent = { generic_mio_trait_all_round_cupola }
-		limit_to_equipment_type = { mio_cat_eq_all_medium_tank }
-
-		equipment_bonus = {
-			reliability = 0.05
-			armor_value = 0.05
-			breakthrough = 0.05
-		}
-	}
-
-	add_trait = { 
-		token = ENG_mio_trait_expanded_production_facilities
-		name = ENG_mio_trait_expanded_production_facilities
-		icon = GFX_generic_mio_department_icon_tank_medium_tank_technology
-		special_trait_background = yes
-
-		position = { x=2 y=1 }
-		relative_position_id = generic_mio_trait_simplified_turret_design
-
-		all_parents = { generic_mio_trait_simplified_turret_design generic_mio_trait_armor_steel_working }
-		production_bonus = {
-			production_efficiency_cap_factor = 0.02
-			production_efficiency_gain_factor = 0.1
-		}
-		
-	}
 }
 
-ENG_vauxhall_organization = {
-	include = generic_infantry_tank_organization
+ENG_vauxhall_org = {
 	icon = GFX_idea_vauxhall
-
+	
 	allowed = {	
 		OR = {
 			tag = ENG
 			tag = SAF
 			tag = CAN
 			tag = AST
+			tag = RAJ
 		}
 	}
+	
+	equipment_type = { mio_cat_eq_all_heavy_tank }
+	research_categories = { mio_cat_tech_heavy_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+
 
 	initial_trait = {
 		equipment_bonus = {
-			armor_value = 0.05
+			maximum_speed = -0.10
+			soft_attack = 0.075
+			armor_value = 0.12
+			defense = 0.10
+			build_cost_ic = 0.10
+		}
+		production_bonus = {
+			production_resource_need_factor = 0.10
 		}
 	}
 }
+#ENG_vickers_armstrong_eng_organization = {
+#	include = generic_medium_tank_organization
+#	icon = GFX_idea_vickers_armstrong_eng
+#	
+#	allowed = {	
+#		tag = ENG
+#	}
+#
+#	initial_trait = {
+#		organization_modifier = {
+#			military_industrial_organization_research_bonus = 0.05
+#		}
+#		equipment_bonus = {
+#			maximum_speed = 0.1
+#			reliability = 0.05
+#			armor_value = -0.1
+#		}
+#	}
+#
+#	add_trait = { 
+#		token = ENG_mio_trait_expanded_turret_capacity
+#		name = ENG_mio_trait_expanded_turret_capacity
+#		icon = GFX_generic_mio_department_icon_tank_medium_tank_engine
+#		special_trait_background = yes
+#
+#		position = { x=1 y=1 }
+#		relative_position_id = generic_mio_trait_all_round_cupola
+#
+#		any_parent = { generic_mio_trait_all_round_cupola }
+#		limit_to_equipment_type = { mio_cat_eq_all_medium_tank }
+#
+#		equipment_bonus = {
+#			reliability = 0.05
+#			armor_value = 0.05
+#			breakthrough = 0.05
+#		}
+#	}
+#
+#	add_trait = { 
+#		token = ENG_mio_trait_expanded_production_facilities
+#		name = ENG_mio_trait_expanded_production_facilities
+#		icon = GFX_generic_mio_department_icon_tank_medium_tank_technology
+#		special_trait_background = yes
+#
+#		position = { x=2 y=1 }
+#		relative_position_id = generic_mio_trait_simplified_turret_design
+#
+#		all_parents = { generic_mio_trait_simplified_turret_design generic_mio_trait_armor_steel_working }
+#		production_bonus = {
+#			production_efficiency_cap_factor = 0.02
+#			production_efficiency_gain_factor = 0.1
+#		}
+#		
+#	}
+#}
+#
+#ENG_vauxhall_organization = {
+#	include = generic_infantry_tank_organization
+#	icon = GFX_idea_vauxhall
+#
+#	allowed = {	
+#		OR = {
+#			tag = ENG
+#			tag = SAF
+#			tag = CAN
+#			tag = AST
+#			tag = RAJ
+#		}
+#	}
+#
+#	initial_trait = {
+#		equipment_bonus = {
+#			armor_value = 0.05
+#		}
+#	}
+#}
 
 
  ######  ##     ## #### ########   ######  
