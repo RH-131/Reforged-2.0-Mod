@@ -284,7 +284,7 @@ technologies = {
 	}
 	
 	############################# Light armor ############################
-	eng_light_tank_chassis_1934 = { 
+	eng_vickers_tank_chassis_1934 = { 
 		enable_equipment_modules = {
 			tank_torsion_bar_suspension
 			tank_riveted_armor
@@ -324,7 +324,7 @@ technologies = {
 		}
 				
 		path = {
-			leads_to_tech = eng_light_tank_chassis_1936
+			leads_to_tech = eng_tetrarch_tank_chassis_1940
 			research_cost_coeff = 1
 		}
 	    
@@ -345,37 +345,7 @@ technologies = {
 		}
 	}	
 	
-	eng_light_tank_chassis_1936 = { 
-
-		enable_equipments = {
-			light_tank_chassis_1936 
-		}
-		
-		path = {
-			leads_to_tech = eng_light_tank_chassis_1938
-			research_cost_coeff = 1
-		}
-		
-		research_cost = 1.5
-		start_year = 1936
-		
-		folder = {
-			name = eng_nsb_armour_folder
-			position = { x = 0 y = @1936 }
-		}
-		
-		ai_will_do = {
-			factor = 0
-		}
-		
-		
-		categories = { all_armour
-			armor
-			cat_light_armor
-		}
-	}
-	
-	eng_light_tank_chassis_1938 = { 
+	eng_tetrarch_tank_chassis_1940 = { 
 
 		enable_equipments = {
 			light_tank_chassis_1938
@@ -385,14 +355,14 @@ technologies = {
 		}	
 		
 		path = {
-			leads_to_tech = eng_light_tank_chassis_1940
+			leads_to_tech = eng_valentine_tank_chassis_1940
 			research_cost_coeff = 1
 		}
 		dependencies = {
 			improved_machine_tools = 1
 		}
 		research_cost = 1.5
-		start_year = 1938
+		start_year = 1940
 		on_research_complete = {			
 				hidden_effect = {
 					load_oob = "unlock_tanks_light"
@@ -401,7 +371,7 @@ technologies = {
 		}
 		folder = {
 			name = eng_nsb_armour_folder
-			position = { x = 0 y = @1938 }
+			position = { x = 0 y = @1940 }
 		}
 		
 		ai_will_do = {
@@ -415,7 +385,7 @@ technologies = {
 		}
 	}
 	
-	eng_light_tank_chassis_1940 = { 
+	eng_valentine_tank_chassis_1940 = { 
 
 		enable_equipments = {
 			light_tank_chassis_1940
@@ -432,43 +402,13 @@ technologies = {
 		}
 		
 		research_cost = 1.5
-		start_year = 1940
-		
-		folder = {
-			name = eng_nsb_armour_folder
-			position = { x = 0 y = @1940 }
-		}
-
-		ai_will_do = {
-			factor = 2
-	
-		}
-		
-		categories = { all_armour
-			armor
-			cat_light_armor
-		}
-	}
-	
-	eng_light_tank_chassis_1942 = { 
-
-		enable_equipments = {
-			light_tank_chassis_1942
-			light_tank_destroyer_chassis_1942
-			light_tank_artillery_chassis_1942
-			light_tank_aa_chassis_1942
-		}	
-		dependencies = {
-			assembly_line_production = 1
-		}
-		research_cost = 1.5
 		start_year = 1942
 		
 		folder = {
 			name = eng_nsb_armour_folder
 			position = { x = 0 y = @1942 }
 		}
-		
+
 		ai_will_do = {
 			factor = 2
 	
@@ -480,7 +420,7 @@ technologies = {
 		}
 	}
 	
-	eng_medium_tank_chassis_1936 = {	
+	eng_cruiser_tank_chassis_1936 = {	
 
 		enable_equipments = {
 			medium_tank_chassis_1936
@@ -490,7 +430,7 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = eng_medium_tank_chassis_1938
+			leads_to_tech = eng_crusader_tank_chassis_1940
 			research_cost_coeff = 1
 		}
 		
@@ -521,7 +461,7 @@ technologies = {
 	}
 
 	
-	eng_medium_tank_chassis_1938 = { 
+	eng_crusader_tank_chassis_1940 = { 
 
 		enable_equipments = {
 			medium_tank_chassis_1938
@@ -531,7 +471,11 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = eng_medium_tank_chassis_1940
+			leads_to_tech = eng_valentine_tank_chassis_1940
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = eng_cromwell_tank_chassis_1942
 			research_cost_coeff = 1
 		}
 		
@@ -540,44 +484,8 @@ technologies = {
 		}
 		
 		research_cost = 1.8
-		start_year = 1938
-
-		folder = {
-			name = eng_nsb_armour_folder
-			position = { x = 2 y = @1938 }
-		}
-
-		ai_will_do = {
-			factor = 10
-			
-		}
-		
-		categories = { all_armour
-			armor
-			cat_medium_armor
-		}
-	}
-	
-	eng_medium_tank_chassis_1940 = { 
-
-		enable_equipments = {
-			medium_tank_chassis_1940
-			medium_tank_destroyer_chassis_1940
-			medium_tank_artillery_chassis_1940
-			medium_tank_aa_chassis_1940
-		}
-		
-		path = {
-			leads_to_tech = eng_medium_tank_chassis_1942
-			research_cost_coeff = 1
-		}
-			
-		dependencies = {
-			advanced_machine_tools = 1
-		}
-		research_cost = 1.8
 		start_year = 1940
-		
+
 		folder = {
 			name = eng_nsb_armour_folder
 			position = { x = 2 y = @1940 }
@@ -594,7 +502,43 @@ technologies = {
 		}
 	}
 	
-	eng_medium_tank_chassis_1942 = { 
+	eng_cromwell_tank_chassis_1942 = { 
+
+		enable_equipments = {
+			medium_tank_chassis_1940
+			medium_tank_destroyer_chassis_1940
+			medium_tank_artillery_chassis_1940
+			medium_tank_aa_chassis_1940
+		}
+		
+		path = {
+			leads_to_tech = eng_comet_tank_chassis_1944
+			research_cost_coeff = 1
+		}
+			
+		dependencies = {
+			advanced_machine_tools = 1
+		}
+		research_cost = 1.8
+		start_year = 1942
+		
+		folder = {
+			name = eng_nsb_armour_folder
+			position = { x = 2 y = @1942 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			
+		}
+		
+		categories = { all_armour
+			armor
+			cat_medium_armor
+		}
+	}
+	
+	eng_comet_tank_chassis_1944 = { 
 
 		enable_equipments = {
 			medium_tank_chassis_1942
@@ -604,18 +548,18 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = eng_medium_tank_chassis_1944
+			leads_to_tech = eng_centurion_tank_chassis_1945
 			research_cost_coeff = 1
 		}
 		dependencies = {
 			assembly_line_production = 1
 		}
 		research_cost = 1.8
-		start_year = 1942
+		start_year = 1944
 		
 		folder = {
 			name = eng_nsb_armour_folder
-			position = { x = 2 y = @1942 }
+			position = { x = 2 y = @1944 }
 		}
 		
 		ai_will_do = {
@@ -628,7 +572,7 @@ technologies = {
 		}
 	}
 	
-	eng_medium_tank_chassis_1944 = { 
+	eng_centurion_tank_chassis_1945 = { 
 
 		enable_equipments = {
 			medium_tank_chassis_1944
@@ -645,11 +589,11 @@ technologies = {
 			modern_tools = 1
 		}
 		research_cost = 1.8
-		start_year = 1944
+		start_year = 1945
 		
 		folder = {
 			name = eng_nsb_armour_folder
-			position = { x = 2 y = @1944 }
+			position = { x = 2 y = @1945 }
 		}
 		
 		ai_will_do = {
@@ -663,10 +607,10 @@ technologies = {
 		}
 	}
 	
-	eng_heavy_tank_chassis_1937 = { 
+	eng_matilda_tank_chassis_1934 = { 
 
 		enable_equipments = {
-			heavy_tank_chassis_1937 
+			heavy_tank_chassis_1934
 		}
 		enable_subunits = {
 			heavy_armor
@@ -678,7 +622,7 @@ technologies = {
 				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 		}	
 		path = {
-			leads_to_tech = eng_heavy_tank_chassis_1939
+			leads_to_tech = eng_matilda2_tank_chassis_1938
 			research_cost_coeff = 1
 		}
 		
@@ -687,7 +631,7 @@ technologies = {
 		
 		folder = {
 			name = eng_nsb_armour_folder
-			position = { x = 4 y = @1937 }
+			position = { x = 4 y = @1936 }
 		}
 		
 		ai_will_do = {
@@ -701,7 +645,7 @@ technologies = {
 		}
 	}
 		
-	eng_heavy_tank_chassis_1939 = { 
+	eng_matilda2_tank_chassis_1938 = { 
 
 		enable_equipments = {
 			heavy_tank_chassis_1939
@@ -710,7 +654,7 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = eng_heavy_tank_chassis_1941
+			leads_to_tech = eng_churchill_tank_chassis_1940
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -735,7 +679,7 @@ technologies = {
 		}
 	}
 	
-	eng_heavy_tank_chassis_1941 = { 
+	eng_churchill_tank_chassis_1940 = { 
 
 		enable_equipments = {
 			heavy_tank_chassis_1941
@@ -744,7 +688,7 @@ technologies = {
 		}
 				
 		path = {
-			leads_to_tech = eng_heavy_tank_chassis_1943
+			leads_to_tech = eng_churchill7_tank_chassis_1943
 			research_cost_coeff = 1
 		}
 		
@@ -770,7 +714,7 @@ technologies = {
 		}
 	}
 	
-	eng_heavy_tank_chassis_1943 = { 
+	eng_churchill7_tank_chassis_1943 = { 
 
 		enable_equipments = {
 			heavy_tank_chassis_1943
@@ -779,7 +723,7 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = eng_heavy_tank_chassis_1945
+			leads_to_tech = eng_centurion_tank_chassis_1945
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -790,30 +734,6 @@ technologies = {
 		folder = {
 			name = eng_nsb_armour_folder
 			position = { x = 4 y = @1943 }
-		}
-		
-		ai_will_do = {
-			factor = 10
-			
-		}
-		
-		categories = { all_armour
-			armor
-			cat_heavy_armor
-		}
-	}
-	
-	eng_heavy_tank_chassis_1945 = { 
-
-		enable_equipments = {
-			heavy_tank_chassis_1945
-		}
-		
-		research_cost = 2.2
-		start_year = 1945
-		folder = {
-			name = eng_nsb_armour_folder
-			position = { x = 4 y = @1945 }
 		}
 		
 		ai_will_do = {
