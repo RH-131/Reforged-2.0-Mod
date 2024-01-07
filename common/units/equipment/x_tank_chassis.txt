@@ -74,6 +74,15 @@ duplicate_archetypes = {
 		}
 	}
 
+	medium_tank_assault_gun_chassis = {
+		archetype = medium_tank_chassis
+		type = { armor assault_gun }
+		for_each = {
+			variant_name = { find_and_replace = { "chassis" "equipment" } }
+			hardness = { set = 0.70 }
+		}
+	}
+	
 	medium_tank_destroyer_chassis = {
 		archetype = medium_tank_chassis
 		type = { armor anti_tank }
@@ -114,6 +123,15 @@ duplicate_archetypes = {
 	heavy_tank_artillery_chassis = {
 		archetype = heavy_tank_chassis
 		type = { armor artillery }
+		for_each = {
+			variant_name = { find_and_replace = { "chassis" "equipment" } }
+			hardness = { set = 0.8 }
+		}
+	}
+	
+	heavy_tank_assault_gun_chassis = {
+		archetype = heavy_tank_chassis
+		type = { armor assault_gun }
 		for_each = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
 			hardness = { set = 0.8 }
