@@ -221,6 +221,19 @@ equipment_modules = {
 			maximum_speed = 0.2
 		}
 	}
+	
+	tank_horstmann_suspension = {
+		abbreviation = "hrt"
+		category = tank_suspension_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 3
+		}
+		multiply_stats =  {
+			maximum_speed = 0.2
+		}
+	}
 
 	tank_bogie_suspension = {
 		abbreviation = "bog"
