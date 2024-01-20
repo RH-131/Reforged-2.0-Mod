@@ -32,7 +32,9 @@ USA_chrysler_organization = {
 	}
 
 	available = {
-		has_completed_focus = USA_improve_armour
+		FROM = {
+			has_completed_focus = USA_improve_armour
+		}
 	}
 	
 	equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
@@ -121,7 +123,9 @@ USA_army_ordnance_department_organization = {
 	}
 	
 	available = {
-		has_completed_focus = USA_improve_teething
+		FROM = {
+			has_completed_focus = USA_improve_teething
+		}
 	}
 	
 	equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
@@ -306,7 +310,9 @@ USA_tank_destroyer_board_organization = {
 		tag = USA 
 	}
 	available = {
-		has_completed_focus = USA_improve_teething 
+		FROM = {
+			has_completed_focus = USA_improve_teething 
+		}
 	}
 	
 	equipment_type = { mio_cat_eq_all_tank_destroyers }
@@ -352,7 +358,9 @@ USA_jumbo_organization = {
 		tag = USA 
 	}
 	available = {
-		has_completed_focus = USA_improve_armour 
+		FROM = {
+			has_completed_focus = USA_improve_armour 
+			}
 	}
 	
 	equipment_type = { medium_tank_chassis }
