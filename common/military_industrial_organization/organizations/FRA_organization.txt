@@ -9,7 +9,7 @@
  #################### 
 
 FRA_renault_organization = {
-	include = generic_infantry_tank_organization
+
 	icon = GFX_idea_renault
 	allowed = {	
 		OR = {
@@ -21,6 +21,9 @@ FRA_renault_organization = {
 			}
 		}
 	}
+	
+	equipment_type = { mio_cat_eq_all_light_tank }
+	research_categories = { mio_cat_tech_light_armor_and_modules }
 
 	visible = {
 		IF = {
@@ -52,51 +55,88 @@ FRA_renault_organization = {
 			}
 		}
 	}
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
 
 	initial_trait = {
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.05
 		}
-	}
-
-	add_trait = { 
-		token = FRA_mio_trait_automitrailleuses
-		name = FRA_mio_trait_automitrailleuses
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-		special_trait_background = yes
-		
-		position = { x=6 y=0 }  
-		
-		limit_to_equipment_type = { medium_tank_chassis }
-		
 		equipment_bonus = {
-			maximum_speed = 0.1
-			armor_value = -0.05
-		} 
+			soft_attack = 0.05
+			armor_value = 0.15
+			breakthrough = -0.05
+			defense = 0.1
+			maximum_speed = -0.05
+		}
 
 	}
-	add_trait = {
-		token = FRA_mio_trait_b1_bis_suspension
-		name = FRA_mio_trait_b1_bis_suspension
-		icon = GFX_generic_mio_trait_icon_breakthrough
-		special_trait_background = yes
-		
-		position = { x=0 y=4 }  
-		relative_position_id = generic_mio_trait_heavy_tank_improvements
-		
-		any_parent = { generic_mio_trait_heavy_tank_improvements }
-		
-		limit_to_equipment_type = { heavy_tank_chassis }
+	
+	trait = {
+		token = renault_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { light_tank_destroyer_chassis  }
+
+		position = { x=0 y=0 }
 		
 		equipment_bonus = {
-			maximum_speed = 0.05
-			breakthrough = 0.1 
-		} 
+			hard_attack = 0.05
+			ap_attack = 0.10
+			armor_value = 0.15
+			breakthrough = -0.05
+		}
+
+	}
+	
+	trait = {
+		token = renault_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { light_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			soft_attack = 0.05
+			armor_value = 0.15
+			breakthrough = -0.05
+		}
+
+	}
+	
+	trait = {
+		token = renault_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			air_attack = 0.1
+			armor_value = 0.15
+			breakthrough = -0.05
+		}
+
 	}
 }
 
 FRA_hotchkiss_organization = {
-	include = generic_mobile_tank_organization
+
 	icon = GFX_idea_generic_tank_manufacturer_3
 	allowed = {	
 		OR = {
@@ -105,27 +145,85 @@ FRA_hotchkiss_organization = {
 		}
 		has_dlc = "Arms Against Tyranny"
 	}
-	add_trait = { 
-		token = FRA_mio_trait_l_35
-		name = FRA_mio_trait_l_35
-		icon = GFX_generic_mio_department_icon_tank_general_weapons
-		any_parent = { generic_mio_enlarged_breech }
-		relative_position_id = generic_mio_enlarged_breech
-		position = { x=1 y=2 }  
-		equipment_bonus = {
-			hard_attack = 0.05
-			ap_attack = 0.05
-		}  
+	
+	equipment_type = { mio_cat_eq_all_light_tank medium_tank_chassis }
+	research_categories = { mio_cat_tech_light_armor_and_modules mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
 	}
 
-	override_trait = {
-		token = generic_mio_gunner_sight_improvements
-		position = { x=-1 y=2}
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
 	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {  
+		equipment_bonus = {
+			hard_attack = 0.025
+			soft_attack = 0.05
+			armor = -0.05
+			reliability = -0.05
+			maximum_speed = 0.075
+		}  
+	}
+	
+	trait = {
+		token = hotchkiss_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { light_tank_destroyer_chassis medium_tank_destroyer_chassis }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			hard_attack = 0.10
+			ap_attack = 0.05
+			armor_value = -0.05
+		}
+
+	}
+	
+	trait = {
+		token = hotchkiss_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { light_tank_artillery_chassis medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			soft_attack = 0.05
+			armor_value = -0.05
+		}
+
+	}
+	
+	trait = {
+		token = hotchkiss_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			soft_attack = 0.125
+			air_attack = 0.03
+		}
+
+	}
+
 }
 
 FRA_apx_organization = {
-	include = generic_medium_tank_organization
+
 	icon = GFX_idea_FRA_atelier_puteaux
 	allowed = {	
 		OR = {
@@ -133,6 +231,69 @@ FRA_apx_organization = {
 			tag = EFR
 		}
 		has_dlc = "Arms Against Tyranny"
+	}
+	
+	equipment_type = { mio_cat_eq_all_heavy_tank }
+	research_categories = { mio_cat_tech_heavy_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {  
+		equipment_bonus = {
+			hard_attack = 0.1
+			soft_attack = 0.025
+			defense = 0.25
+			maximum_speed = -0.05
+			armor = 0.15
+			reliability = -0.075
+		}
+		production_bonus = {
+			production_resource_need_factor = 0.10
+		}		
+	}
+	
+	trait = {
+		token = apx_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { heavy_tank_destroyer_chassis }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			hard_attack = 0.10
+			ap_attack = 0.05
+			defense = 0.10
+		}
+
+	}
+	
+	trait = {
+		token = apx_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { heavy_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			soft_attack = 0.05
+			armor_value = 0.05
+		}
+
 	}
 }
 
