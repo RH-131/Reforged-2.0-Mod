@@ -1527,16 +1527,16 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			if = {
-				limit = { has_dlc = "Arms Against Tyranny" }
-				mio:GER_man_organization = {
-					add_mio_funds = 800
-				}
-			}
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = idea_alkett
-			}
+#			if = {
+#				limit = { has_dlc = "Arms Against Tyranny" }
+#				mio:GER_man_organization = {
+#					add_mio_funds = 800
+#				}
+#			}
+#			else = {
+#				custom_effect_tooltip = available_designer
+#				show_ideas_tooltip = idea_alkett
+#			}
 			random_state = {
 				limit = { has_state_flag = GER_absorb_rheinmetall_target }
 				add_extra_state_shared_building_slots = 4
@@ -1549,16 +1549,16 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			if = {
-				limit = { has_dlc = "Arms Against Tyranny" }
-				mio:GER_man_organization = {
-					add_mio_funds = 800
-				}
-			}
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = idea_alkett
-			}
+#			if = {
+#				limit = { has_dlc = "Arms Against Tyranny" }
+#				mio:GER_man_organization = {
+#					add_mio_funds = 800
+#				}
+#			}
+#			else = {
+#				custom_effect_tooltip = available_designer
+#				show_ideas_tooltip = idea_alkett
+#			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -5528,8 +5528,8 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { has_dlc = "Arms Against Tyranny" }
-				mio:GER_porsche_organization = {
-					complete_mio_trait = GER_mio_trait_high_quality_manufacturing
+				mio:GER_henschel_organization = {
+					complete_mio_trait = henschel_td
 				}
 			}
 			else = {
@@ -5719,7 +5719,7 @@ focus_tree = {
 			if = {
 				limit = { has_dlc = "Arms Against Tyranny" }
 				mio:GER_man_organization = {
-					complete_mio_trait = GER_mio_trait_improved_armaments
+					complete_mio_trait = man_td
 				}
 			}
 			else = {

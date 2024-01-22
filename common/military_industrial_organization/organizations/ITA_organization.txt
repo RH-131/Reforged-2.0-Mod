@@ -14,92 +14,96 @@ ITA_fiat_organization = {
 	icon = GFX_idea_fiat
 	
 	allowed = {	
-		OR = {
-			tag = ITA 
-			AND = {
-				tag = GRE 
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				tag = BUL 
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				tag = ETH 
-				has_dlc = "By Blood Alone"
-			}
-		}
-	}
-
-	visible = {
-		IF = {
-			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_country_flag = ETH_ITA_sends_army_designers }
-		}
+		tag = ITA
 	}
 	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ITA } }
-			}
-			FROM = { NOT = { has_war_with = ITA } }
-		}
-		ELSE = { #original_tag = ITA
-			FROM = {
-				controls_state = 158 #PIEMONT (Torino)
-			}
-#			ITA_is_northern_designer = yes
-		}
+	equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_light_armor_and_modules mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
 
-		IF = {
-			limit = { FROM = { original_tag = GRE } }
-			FROM = {
-#				has_completed_focus = GRE_rapprochement_with_the_italians
-			}
-		}
-		IF = {
-			limit = { FROM = { original_tag = BUL } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_fiat_mio_flag
-				}
-			}
-			FROM = {
-				OR = {
-					is_subject = no
-					is_subject_of = ITA
-				}
-				#is_in_faction_with = ITA
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-		}
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
 	}
 	
-	add_trait = { 
-		token = ITA_mio_trait_new_industrialization_program
-		name = ITA_new_industrialization_program
-		icon = GFX_generic_mio_department_icon_tank_general_production
-		special_trait_background = yes
-
-		position = { x=9 y=0 }
-		
-		available = {
-			FROM = {
-#				has_completed_focus = ITA_new_industrialization_program
-#				has_completed_focus = ITA_strengthen_northern_industry
-			}
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			maximum_speed = 0.025
+			hard_attack = 0.04
+			soft_attack = 0.025
+			build_cost_ic = -0.05
 		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
 		production_bonus = {
-			production_capacity_factor = 0.1
+			production_resource_need_factor = -0.05
 		}
+
+	}
+	
+	trait = {
+		token = fiat_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { light_tank_destroyer_chassis medium_tank_destroyer_chassis  }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			maximum_speed = 0.025
+			hard_attack = 0.04
+			ap_attack = 0.04
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.05
+		}
+
+	}
+	
+	trait = {
+		token = fiat_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { light_tank_artillery_chassis medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			maximum_speed = 0.025
+			soft_attack = 0.04
+			breakthrough = 0.04
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.05
+		}
+
+	}
+	
+	trait = {
+		token = fiat_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			maximum_speed = 0.025
+			soft_attack = 0.04
+			air_attack = 0.06
+			ap_attack = 0.05
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.05
+		}
+
 	}
 }
 

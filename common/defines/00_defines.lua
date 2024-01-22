@@ -670,8 +670,8 @@ NMarket = {
 NTechnology = {
 	MAX_SUBTECHS = 3,						-- Max number of sub technologies a technology can have.
 	BASE_RESEARCH_POINTS_SAVED = 30.0,		-- Base amount of research points a country can save per slot.
-	BASE_YEAR_AHEAD_PENALTY_FACTOR = 4,		-- Base year ahead penalty
-	BASE_TECH_COST = 80,					-- Base cost for a tech. multiplied with tech cost and ahead of time penalties
+	BASE_YEAR_AHEAD_PENALTY_FACTOR = 5.5,		-- Base year ahead penalty
+	BASE_TECH_COST = 75,					-- Base cost for a tech. multiplied with tech cost and ahead of time penalties
 	MAX_TECH_SHARING_BONUS = 0.5, 			-- Max technology sharing bonus that can be applied instantly
 	LICENSE_PRODUCTION_TECH_BONUS = 0.15,	-- License production tech bonus
 
@@ -679,7 +679,7 @@ NTechnology = {
 	DEFAULT_XP_BOOST_RESEARCH_COST = 0,				-- default xp cost of a research to speed up the process
 	DEFAULT_XP_BOOST_RESEARCH_BONUS = 0,			-- default boost research bonus gained when xp is used to research an item
 	MIN_RESEARCH_SPEED = 0.25,						-- research speed can't go below this value
-	USE_BONUS_REGRET_TIMER = 3,						-- Number of days the player has to regret using a limited tech bonus
+	USE_BONUS_REGRET_TIMER = 20,						-- Number of days the player has to regret using a limited tech bonus
 },
 
 NPolitics = {
@@ -4082,7 +4082,7 @@ NIndustrialOrganisation = {
 	DESIGN_TEAM_CHANGE_XP_COST = 5,				-- Flat cost added to the XP cost of a new equipment design
 	FUNDS_FOR_RESEARCH_COMPLETION_PER_RESEARCH_COST = 250,     -- Funds added to MIO when the Design Team has completed a research, multiplied by research_cost in technology template
 	FUNDS_FOR_CREATING_EQUIPMENT_VARIANT = 0,		-- Funds added to MIO when a new variant is created with the Design Team assigned to it
-	FUNDS_FROM_MANUFACTURER_PER_IC_PER_DAY = 0.05,		-- Funds added to MIO when a manufacturer is attached to a production line. Added every day proportional to IC produced.
+	FUNDS_FROM_MANUFACTURER_PER_IC_PER_DAY = 0.075,		-- Funds added to MIO when a manufacturer is attached to a production line. Added every day proportional to IC produced.
 	MAX_FUNDS_FROM_MANUFACTURER_PER_DAY = 20,		-- Max funds generated per manufacturer per day. Set to 0 for no Maximum.
 	DESIGN_TEAM_RESEARCH_BONUS = 0.01,				-- Research bonus for applying a Design Team that matches the technology
 	ENABLE_TASK_CAPACITY = false,					-- Enable limited task capacity for MIOs

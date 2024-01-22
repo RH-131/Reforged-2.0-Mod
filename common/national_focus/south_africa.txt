@@ -1671,16 +1671,16 @@ focus_tree = {
 				category = recon_tech
 				category = maintenance_company_tech
 			}
-			if = {
-				limit = { has_dlc = "Arms Against Tyranny" }
-				mio:SAF_marmon_herrington_organization = {
-					add_mio_funds = 800
-				}
-			}
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = SAFR_marmon_herrington
-			}
+#			if = {
+#				limit = { has_dlc = "Arms Against Tyranny" }
+#				mio:SAF_marmon_herrington_organization = {
+#					add_mio_funds = 800
+#				}
+#			}
+#			else = {
+#				custom_effect_tooltip = available_designer
+#				show_ideas_tooltip = SAFR_marmon_herrington
+#			}
 		}
 	}
 	

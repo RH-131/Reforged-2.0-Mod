@@ -9,17 +9,16 @@
  #################### 
 
 
-USA_marmon_herrington_organization = {
-	include = generic_mobile_tank_organization
-	icon = GFX_idea_marmon_herrington
-	allowed = {	
-		tag = USA 
-
-	}
-}
+#USA_marmon_herrington_organization = {
+#	include = generic_mobile_tank_organization
+#	icon = GFX_idea_marmon_herrington
+#	allowed = {	
+#		tag = USA 
+#
+#	}
+#}
 
 USA_chrysler_organization = {
-	include = generic_medium_tank_organization
 	icon = GFX_idea_chrysler
 	
 	allowed = {	
@@ -27,128 +26,196 @@ USA_chrysler_organization = {
 			tag = USA 
 			AND = {
 				tag = MEX 
-				has_dlc = "Man the Guns"
 			}
 #			NOR_AAT = yes 
 		}
 	}
 
 	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = USA } }
-			}
-			FROM = { NOT = { has_war_with = USA } }
+		FROM = {
+			has_completed_focus = USA_improve_armour
 		}
+	}
+	
+	equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_light_armor_and_modules mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
 
-		if = {
-			limit = {
-				FROM = { tag = MEX }
-			}
-			FROM = { is_in_faction_with = USA }
-		} 
-		else_if = {
-			limit = {
-				FROM = { tag = NOR }
-			}
-			FROM = { 
-#				has_completed_focus = NOR_invite_transnational_manufacturers
-			}
-		}
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
 	}
 
 	initial_trait = {
 		name = USA_mio_trait_medium_tank_organization
 
-		limit_to_equipment_type = { mio_cat_eq_all_medium_tank }
-
 		equipment_bonus = {
+			armor_value = 0.1
 			reliability = 0.1
-			soft_attack = 0.02
-			hard_attack = 0.03
-			defense = -0.15
+			soft_attack = 0.075
+			hard_attack = 0.05
+			build_cost_ic = 0.10
 		}
 	}
 
-	add_trait = { 
-		token = USA_mio_trait_strict_design_specifications
-		name = USA_mio_trait_strict_design_specifications
-		icon = GFX_generic_mio_trait_icon_reliability
-		special_trait_background = yes
+	trait = {
+		token = chrysler_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
 
-		position = { x=2 y=1 }
-		relative_position_id = generic_mio_trait_simplified_turret_design
+		limit_to_equipment_type = { light_tank_destroyer_chassis medium_tank_destroyer_chassis  }
 
-		all_parents = { generic_mio_trait_simplified_turret_design generic_mio_trait_armor_steel_working }
-		limit_to_equipment_type = { mio_cat_eq_all_medium_tank }
-
+		position = { x=0 y=0 }
+		
 		equipment_bonus = {
-			reliability = 0.1
+			armor_value = 0.05
+			ap_attack = 0.075
 		}
+
 	}
+	
+	trait = {
+		token = chrysler_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
 
-	add_trait = { 
-		token = USA_mio_trait_expanded_production_facilities
-		name = USA_mio_trait_expanded_production_facilities
-		icon = GFX_generic_mio_trait_icon_build_cost_ic
-		special_trait_background = yes
+		limit_to_equipment_type = { light_tank_artillery_chassis medium_tank_artillery_chassis }
 
-		position = { x=0 y=1 }
-		relative_position_id = USA_mio_trait_strict_design_specifications
-
-		all_parents = { USA_mio_trait_strict_design_specifications }
-		production_bonus = {
-			production_cost_factor = -0.1
-			production_capacity_factor = 0.05
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			armor_value = 0.05
+			soft_attack = 0.025
+			breakthrough = 0.05
 		}
+
+	}
+	
+	trait = {
+		token = chrysler_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			armor_value = 0.05
+			soft_attack = 0.05
+			air_attack = 0.075
+		}
+
 	}
 }
 
 USA_army_ordnance_department_organization = {
-	include = generic_medium_tank_organization
 	icon = GFX_idea_army_ordnance_department
 	
 	allowed = {	
 		tag = USA
 	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = USA_improve_teething
+		}
+	}
+	
+	equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_light_armor_and_modules mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
 
-	add_trait = { 
-		token = USA_mio_trait_periscope_sights
-		name = USA_mio_trait_periscope_sights
-		icon = GFX_generic_mio_department_icon_tank_medium_tank_armor
-		special_trait_background = yes
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		name = USA_mio_trait_medium_tank_organization
 
-		position = { x=1 y=1 }
-		relative_position_id = generic_mio_trait_all_round_cupola
-
-		all_parents = { generic_mio_trait_all_round_cupola }
 		equipment_bonus = {
-			breakthrough = 0.1
-			defense = 0.05
+			maximum_speed = 0.075
+			armor_value = -0.05
+			reliability = -0.1
+			soft_attack = 0.025
+			hard_attack = 0.1
 		}
-	}
-
-	add_trait = { 
-		token = USA_mio_trait_mass_production_of_armor
-		name = USA_mio_trait_mass_production_of_armor
-		icon = GFX_generic_mio_department_icon_tank_medium_tank_line_efficiency
-		special_trait_background = yes
-
-		position = { x=2 y=1 }
-		relative_position_id = generic_mio_trait_simplified_turret_design
-
-		all_parents = { generic_mio_trait_simplified_turret_design generic_mio_trait_armor_steel_working }
 		production_bonus = {
-			production_efficiency_cap_factor = 0.01
-			production_efficiency_gain_factor = 0.1
+			production_resource_need_factor = 0.10
 		}
 	}
+	
+	trait = {
+		token = ordnance_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { light_tank_destroyer_chassis medium_tank_destroyer_chassis  }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			armor_value = -0.05
+			reliability = -0.05
+			hard_attack = 0.075
+			ap_attack = 0.5
+		}
+
+	}
+	
+	trait = {
+		token = ordnance_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { light_tank_artillery_chassis medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			armor_value = -0.05
+			reliability = -0.05
+			soft_attack = 0.05
+			breakthrough = 0.1
+		}
+
+	}
+	
+	trait = {
+		token = ordnance_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			armor_value = -0.05
+			reliability = -0.05
+			soft_attack = 0.1
+			air_attack = 0.05
+		}
+
+	}
+	
 }
 
 USA_detroit_arsenal_organization = {
 	name = detroit_arsenal
-	include = generic_tank_organization
 	icon = GFX_idea_generic_industrial_concern_1
 	allowed = {	
 		tag = USA
@@ -156,18 +223,101 @@ USA_detroit_arsenal_organization = {
 	available = {
 #		FROM = { has_completed_focus = USA_main_battle_tanks }
 	}
+	equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_light_armor_and_modules mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		name = USA_mio_trait_medium_tank_organization
+
+		equipment_bonus = {
+			reliability = -0.075
+			soft_attack = 0.04
+			hard_attack = 0.04
+			build_cost_ic = -0.05
+		}
+#		production_bonus = {
+#			production_resource_need_factor = 0.10
+#		}
+	}
+	
+	trait = {
+		token = detroit_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { light_tank_destroyer_chassis medium_tank_destroyer_chassis  }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			hard_attack = 0.04
+			ap_attack = 0.025
+		}
+
+	}
+	
+	trait = {
+		token = detroit_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { light_tank_artillery_chassis medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			soft_attack = 0.04
+		}
+
+	}
+	
+	trait = {
+		token = detroit_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			air_attack = 0.1
+		}
+
+	}
 }
 
 USA_tank_destroyer_board_organization = {
 	name = tank_destroyer_board
-	include = generic_mobile_tank_organization
 	icon = GFX_idea_usa_tank_destroyer_board
+	
 	allowed = {	
 		tag = USA 
 	}
 	available = {
-#		FROM = { has_completed_focus = USA_tank_destroyer_doctrine }
+		FROM = {
+			has_completed_focus = USA_improve_teething 
+		}
 	}
+	
+	equipment_type = { mio_cat_eq_all_tank_destroyers }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+	
 	initial_trait = {
 		name = ROM_mio_trait_mobile_tank_destroyers
 		
@@ -176,25 +326,67 @@ USA_tank_destroyer_board_organization = {
 		}
 		
 		equipment_bonus = {
-			reliability = 0.05
-			hard_attack = 0.05
-			ap_attack = 0.05
+			maximum_speed = 0.125
+			armor_value = -0.25
+			hardness = -0.15
+			soft_attack = -0.25
+			defense = 0.25
+			breakthrough = 0.1
+			hard_attack = 0.15
+			ap_attack = 0.10
 		}
 	}
 
-	override_trait = {
-		token = generic_mio_enlarged_breech
-		limit_to_equipment_type = { 
-			mio_cat_eq_all_tank_destroyers
-		}
-		equipment_bonus = {
-			hard_attack = 0.05
-			ap_attack = 0.1
-		}
-		special_trait_background = yes
-	}
+#	override_trait = {
+#		token = generic_mio_enlarged_breech
+#		limit_to_equipment_type = { 
+#			mio_cat_eq_all_tank_destroyers
+#		}
+#		equipment_bonus = {
+#			hard_attack = 0.05
+#			ap_attack = 0.1
+#		}
+#		special_trait_background = yes
+#	}
 }
 
+USA_jumbo_organization = {
+	name = jumbo_board
+	icon = GFX_idea_generic_industrial_concern_1
+	
+	allowed = {	
+		tag = USA 
+	}
+	available = {
+		FROM = {
+			has_completed_focus = USA_improve_armour 
+			}
+	}
+	
+	equipment_type = { medium_tank_chassis }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+	
+	initial_trait = {
+		name = ROM_mio_trait_mobile_tank_destroyers
+		
+		limit_to_equipment_type = { 
+			medium_tank_chassis
+		}
+		
+		equipment_bonus = {
+			maximum_speed = -0.10
+			armor_value = 0.30
+			hardness = 0.075
+			defense = 0.50
+			breakthrough = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.075
+			build_cost_ic = 0.2
+			fuel_consumption = 0.1
+
+		}
+	}
+}
 
 
 
