@@ -8,34 +8,255 @@
 
  #################### 
 
+GER_alkett_org = {
+	icon = GFX_idea_idea_alkett
+	
+	allowed = {	
+		tag = GER
+	}
+	available = {
+		FROM = {
+			has_completed_focus = GER_absorb_rheinmetall
+		}
+	}
+	equipment_type = { mio_cat_eq_all_medium_tank mio_cat_eq_all_light_tank }
+	research_categories = { mio_cat_tech_medium_armor_and_modules mio_cat_tech_light_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			reliability = -0.075
+			soft_attack = 0.1
+			hard_attack = 0.1
+			armor_value = 0.075
+			build_cost_ic = 0.05
+		}
+		production_bonus = {
+			production_resource_need_factor = 0.05
+		}
+
+	}
+	
+	trait = {
+		token = alkett_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { light_tank_destroyer_chassis medium_tank_destroyer_chassis }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			hard_attack = 0.05
+			ap_attack = 0.05
+			armor_value = 0.05
+		}
+
+	}
+	
+	trait = {
+		token = alkett_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { light_tank_artillery_chassis medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			soft_attack = 0.05
+			reliability = -0.05
+			armor_value = 0.05
+		}
+
+	}
+	
+	trait = {
+		token = alkett_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			air_attack = 0.1
+			armor_value = 0.05
+		}
+
+	}
+	
+}
 
 GER_porsche_organization = {
-	include = generic_heavy_tank_organization
+
 	icon = GFX_idea_porsche
 	
 	allowed = {	
-		tag = GER 
+		OR = {
+			tag = GER 
+#			AND = {
+#				tag = MEX 
+#				has_dlc = "Man the Guns"
+#			}
+#			NOR_AAT = yes
+		}
 	}
 
-	add_trait = {
-		token = GER_mio_trait_high_quality_manufacturing
-		name = GER_mio_trait_high_quality_manufacturing
-		icon = GFX_generic_mio_department_icon_tank_heavy_tank_materials
-		special_trait_background = yes
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = GER } }
+			}
+			FROM = { NOT = { has_war_with = GER } }
+		}
 
-		position = { x=1 y=0 }
-		relative_position_id = generic_mio_trait_one_piece_hull_side_coverings
+		IF = {
+			limit = {
+				FROM = { tag = MEX }
+			}
+			FROM = { is_in_faction_with = GER }
+		}
+		ELSE_IF = {
+			limit = {
+				FROM = { tag = NOR }
+			}
+#			FROM = { has_completed_focus = NOR_invite_german_engineers }
+		}
+	}
+	
+	equipment_type = { mio_cat_eq_all_heavy_tank heavy_tank_destroyer_chassis heavy_tank_artillery_chassis }
+	research_categories = { mio_cat_tech_heavy_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
 
-		available = {
-			owner = {
-				has_completed_focus = GER_festung_principle
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			reliability = -0.25
+			maximum_speed = -0.10 
+			armor_value = 0.25
+			hardness = 0.075
+			build_cost_ic = -0.10
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.10
+		}
+
+	}	
+}
+
+GER_henschel_organization = {
+
+	icon = GFX_idea_henschel
+	
+	allowed = {	
+		OR = {
+			tag = GER 
+			AND = {
+				tag = BUL
+				has_dlc = "Battle for the Bosporus"
+			}
+			AND = {
+				tag = ETH
+				has_dlc = "By Blood Alone"
 			}
 		}
-
-		production_bonus = {
-			production_cost_factor = 0.15
-			production_resource_need_factor = 0.15
+	}
+	
+	visible = {
+		IF = {
+			limit = { FROM = { original_tag = ETH } }
+#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}
+	}
+
+	available = {
+		FROM = {
+			has_completed_focus = GER_festung_principle
+		}
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = GER } }
+			}
+			FROM = { NOT = { has_war_with = GER } }
+		}
+
+		IF = {
+			limit = { 
+				OR = { 
+					FROM = { original_tag = BUL }
+					FROM = { original_tag = ETH } 
+				} 
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_country_flag = has_invited_henschel_mio_flag
+				}
+			}
+			
+		}
+		IF = {
+			limit = { FROM = { original_tag = BUL } } 
+			FROM = { 
+				OR = {
+					is_subject = no
+					is_subject_of = GER
+				}
+				#is_in_faction_with = GER
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+	}
+	
+	equipment_type = { mio_cat_eq_all_heavy_tank }
+	research_categories = { mio_cat_tech_heavy_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
 		equipment_bonus = {
 			reliability = -0.1
 			soft_attack = 0.25 
@@ -43,128 +264,526 @@ GER_porsche_organization = {
 			ap_attack = 0.15
 			defense = 0.25
 			armor_value = 0.05
+			build_cost_ic = 0.25
 		}
-	}
-}
+		production_bonus = {
+			production_resource_need_factor = 0.15
+			production_resource_penalty_factor = 0.15
+		}
 
-GER_henschel_organization = {
-	include = generic_mobile_tank_organization
-	icon = GFX_idea_henschel
+	}
 	
-	allowed = {	
-		tag = GER 
+	trait = {
+		token = henschel_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { heavy_tank_destroyer_chassis }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.1
+			hard_attack = 0.25
+			ap_attack = 0.15 
+			defense = 0.25
+			armor_value = 0.05					
+			build_cost_ic = 0.25
+		}
+		production_bonus = {
+			production_resource_need_factor = 0.15
+			production_resource_penalty_factor = 0.15
+		}
+
+	}
+	
+	trait = {
+		token = henschel_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { heavy_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.1
+			soft_attack = 0.10
+			defense = 0.25
+			armor_value = 0.05					
+			build_cost_ic = 0.25
+		}
+		production_bonus = {
+			production_resource_need_factor = 0.15
+			production_resource_penalty_factor = 0.15
+		}
+
 	}
 }
 
 GER_man_organization = {
-	include = generic_medium_tank_organization
+
 	icon = GFX_idea_GER_MAN
 	
 	allowed = {	
-		tag = GER 
-	}
-
-	add_trait = {
-		token = GER_mio_trait_improved_armaments
-		name = GER_mio_trait_improved_armaments
-		icon = GFX_generic_mio_department_icon_tank_medium_tank_weapons
-		special_trait_background = yes
-
-		position = { x=1 y=0 }
-		relative_position_id = generic_mio_trait_power_traverse
-
-		available = {
-			owner = {
-				has_completed_focus = GER_offense_is_the_best_defense
+		OR = {
+			tag = GER 
+			AND = {
+				tag = GRE
+				has_dlc = "Battle for the Bosporus"
 			}
 		}
+	}
+	
+	available = {
+	FROM = {
+		has_completed_focus = GER_offense_is_the_best_defense
+	}
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = GER } }
+			}
+			FROM = { NOT = { has_war_with = GER } }
+		}
+	}
 
-		production_bonus = {
-			production_cost_factor = 0.1
-		}
+	equipment_type = { mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
 		equipment_bonus = {
-			soft_attack = 0.15
-			hard_attack = 0.15
-			air_attack = 0.1
-			ap_attack = 0.1
-			maximum_speed = 0.05
+			reliability = -0.1
+			maximum_speed = 0.10 
+			armor_value = 0.1 
+			hard_attack = 0.15 
+			soft_attack = 0.15 
+			build_cost_ic = 0.1
 		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+			production_efficiency_gain_factor = 0.1
+			production_resource_penalty_factor = 0.15
+		}
+
+	}
+	
+	trait = {
+		token = man_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { medium_tank_destroyer_chassis }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.10
+			hard_attack = 0.1
+			ap_attack = 0.1 
+			maximum_speed = 0.10 
+			armor_value = 0.05 
+			build_cost_ic = 0.05
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+			production_efficiency_gain_factor = 0.1
+			production_resource_penalty_factor = 0.15
+		}
+
+	}
+	
+	trait = {
+		token = man_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.1
+			soft_attack = 0.1 
+			maximum_speed = 0.10
+			armor_value = 0.05 
+			build_cost_ic = 0.05
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+			production_efficiency_gain_factor = 0.1
+			production_resource_penalty_factor = 0.15
+		}
+
+	}
+	
+	trait = {
+		token = man_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.1
+			soft_attack = 0.15
+			air_attack = 0.075
+			maximum_speed = 0.10
+			armor_value = 0.05 
+			build_cost_ic = 0.1
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+			production_efficiency_gain_factor = 0.1
+			production_resource_penalty_factor = 0.15
+		}
+
 	}
 }
 
 #Benz 
 GER_daimler_benz_organization = {
-	include = generic_tank_organization
-	icon = GFX_idea_generic_tank_manufacturer_2 # TODO change
+
+	icon = GFX_idea_daimler_benz
 	
 	allowed = {	
 		tag = GER 
 	}
 
 	tree_header_text = {
-		text = mio_header_tank_construction
-		x = 3
+		text = mio_weapons_specialization
+		x = 1
 	}
 
 	tree_header_text = {
-		text = mio_header_equipment_and_specialization
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
 		x = 7
 	}
-
-	tree_header_text = {
-		text = mio_header_armor
-		x = 9
-	}
+	
+	equipment_type = { mio_cat_eq_all_medium_tank mio_cat_eq_all_light_tank }
+	research_categories = { mio_cat_tech_medium_armor_and_modules mio_cat_tech_light_armor_and_modules }
+	
 	initial_trait = {
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
-		}
-	}
-
-	add_trait = {  
-		token = GER_mio_trait_hotrolled_armor
-		name = GER_mio_trait_hotrolled_armor
-		icon = GFX_generic_mio_department_icon_tank_general_technology
-		special_trait_background = yes
-
-		limit_to_equipment_type = { light_tank_chassis medium_tank_chassis }
-		production_bonus = {
-			production_efficiency_cap_factor = 0.01
-			production_efficiency_gain_factor = 0.05
-		}
-
-		position = { x=9 y=0 }  
-		ai_will_do = {
-			base = 2
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-		}
-	}
-
-	add_trait = {
-		token = GER_mio_trait_multilayer_armour
-		name = GER_mio_trait_multilayer_armour
-		icon = GFX_generic_mio_trait_icon_armor_value
-		special_trait_background = yes
-
-		any_parent = { GER_mio_trait_hotrolled_armor }
-		limit_to_equipment_type = { light_tank_chassis medium_tank_chassis }
 		equipment_bonus = {
-			armor_value = 0.1
-		} 
+			reliability = -0.05
+			breakthrough = 0.1
+			hard_attack = 0.1
+			maximum_speed = 0.1
+			build_cost_ic = 0.1
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.1
+		}
 
-		position = { x=9 y=2 }  
-		ai_will_do = {
-			base = 2
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
+	}
+	
+	trait = {
+		token = daimler_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { light_tank_destroyer_chassis medium_tank_destroyer_chassis }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.10
+			hard_attack = 0.05
+			ap_attack = 0.075
+			maximum_speed = 0.1
+			build_cost_ic = 0.05
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.1
+		}
+
+	}
+	
+	trait = {
+		token = daimler_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { light_tank_artillery_chassis medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.10
+			soft_attack = 0.05
+			breakthrough = 0.1
+			maximum_speed = 0.1
+			build_cost_ic = 0.05
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.1
+		}
+
+	}
+	
+	trait = {
+		token = daimler_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.10
+			soft_attack = 0.05
+			air_attack = 0.05
+			maximum_speed = 0.1
+			build_cost_ic = 0.05
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.1
 		}
 	}
 }
+
+GER_vomag_organization = {
+
+	icon = GFX_idea_vomag
+	
+	allowed = {	
+		tag = GER 
+	}
+	available = {
+		FROM = {
+			has_completed_focus = GER_kdf_wagen
+		}
+	}
+
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	equipment_type = { medium_assault_gun_equipment }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+	
+	initial_trait = {
+		equipment_bonus = {
+			build_cost_ic = -0.05 
+			soft_attack = 0.05 
+			hard_attack = 0.05 
+			reliability = 0.05 
+		}
+	}
+}
+
+GER_krupp_organization = { 
+
+	icon = GFX_idea_krupp
+	
+	allowed = {	
+		tag = GER 
+	}
+
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	equipment_type = { mio_cat_eq_all_medium_tank mio_cat_eq_all_light_tank }
+	research_categories = { mio_cat_tech_medium_armor_and_modules mio_cat_tech_light_armor_and_modules }
+	
+	initial_trait = {
+		equipment_bonus = {
+			build_cost_ic = -0.1
+			armor_value = 0.1
+			reliability = 0.05
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.05
+		}
+
+	}
+	
+	trait = {
+		token = krupp_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { light_tank_destroyer_chassis medium_tank_destroyer_chassis }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			hard_attack = 0.04
+			build_cost_ic = -0.1
+			armor_value = 0.1
+			reliability = 0.05
+		}
+
+	}
+	
+	trait = {
+		token = krupp_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { light_tank_artillery_chassis medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			soft_attack = 0.04
+			build_cost_ic = -0.1
+			armor_value = 0.1
+			reliability = 0.05
+		}
+
+	}
+	
+	trait = {
+		token = krupp_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			soft_attack = 0.05
+			air_attack = 0.075
+			build_cost_ic = -0.1
+			armor_value = 0.1
+			reliability = 0.05
+		}
+	}
+}
+
+#GER_nibelungenwerke_organization = { # CURRENTLY JUST AN IDEA ON A FOCUS
+#
+#	icon = GFX_idea_daimler_benz
+#	
+#	allowed = {	
+#		tag = GER 
+#	}
+#
+#	tree_header_text = {
+#		text = mio_weapons_specialization
+#		x = 1
+#	}
+#
+#	tree_header_text = {
+#		text = mio_hull_specialization
+#		x = 4
+#	}
+#	
+#	tree_header_text = {
+#		text = mio_industry_specialization
+#		x = 7
+#	}
+#	
+#	equipment_type = { mio_cat_eq_all_medium_tank }
+#	research_categories = { mio_cat_tech_medium_armor_and_modules }
+#	
+#	initial_trait = {
+#		equipment_bonus = {
+#		}
+#		production_bonus = {
+#		}
+#
+#	}
+#	
+#	trait = {
+#		token = nibelungenwerke_td
+#		icon = GFX_generic_mio_trait_icon_hard_attack
+#
+#		limit_to_equipment_type = { light_tank_destroyer_chassis medium_tank_destroyer_chassis }
+#
+#		position = { x=0 y=0 }
+#		
+#		equipment_bonus = {
+#			reliability = -0.10
+#			hard_attack = 0.05
+#			ap_attack = 0.075
+#			maximum_speed = 0.1
+#			build_cost_ic = 0.05
+#		}
+#		production_bonus = {
+#			production_efficiency_gain_factor = 0.1
+#		}
+#
+#	}
+#	
+#	trait = {
+#		token = nibelungenwerke_spg
+#		icon = GFX_generic_mio_trait_icon_soft_attack
+#
+#		limit_to_equipment_type = { light_tank_artillery_chassis medium_tank_artillery_chassis }
+#
+#		position = { x=1 y=0 }
+#		
+#		equipment_bonus = {
+#			reliability = -0.10
+#			soft_attack = 0.05
+#			breakthrough = 0.1
+#			maximum_speed = 0.1
+#			build_cost_ic = 0.05
+#		}
+#		production_bonus = {
+#			production_efficiency_gain_factor = 0.1
+#		}
+#
+#	}
+#	
+#	trait = {
+#		token = nibelungenwerke_spaa
+#		icon = GFX_generic_mio_trait_icon_ap_attack
+#
+#		limit_to_equipment_type = { light_tank_aa_chassis medium_tank_aa_chassis }
+#
+#		position = { x=2 y=0 }
+#		
+#		equipment_bonus = {
+#			reliability = -0.10
+#			soft_attack = 0.05
+#			air_attack = 0.05
+#			maximum_speed = 0.1
+#			build_cost_ic = 0.05
+#		}
+#		production_bonus = {
+#			production_efficiency_gain_factor = 0.1
+#		}
+#	}
+#}
 
 #####################
 
@@ -209,7 +828,27 @@ GER_messerschmitt_organization = {
 	icon = GFX_idea_messerschmitt
 	
 	allowed = {	
-		tag = GER
+		OR = {
+			tag = GER
+#			NOR_AAT = yes 
+		}
+	}
+
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = GER } }
+			}
+			FROM = { NOT = { has_war_with = GER } }
+		}
+		
+		if = {
+			limit = {
+				FROM = { original_tag = NOR }
+			}
+#			FROM = { has_completed_focus = NOR_invite_german_engineers }
+		}
 	}
 
 	add_trait = {
@@ -257,7 +896,42 @@ GER_junkers_organization = {
 	icon = GFX_idea_junkers
 	
 	allowed = {	 
-		tag = GER 
+		OR = {
+			tag = GER 
+			AND = {
+				tag = ETH
+				has_dlc = "By Blood Alone"
+			}
+		}
+	}
+	
+	visible = {
+		IF = {
+			limit = { FROM = { original_tag = ETH } }
+#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+		}
+	}
+
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = GER } }
+			}
+			FROM = { NOT = { has_war_with = GER } }
+		}
+
+		IF = {
+			limit = {
+				FROM = { NOT  = { original_tag = GER } }
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_country_flag = has_invited_GER_junkers_organization_flag
+				}
+			}
+		}
 	}
 
 	add_trait = {
@@ -290,7 +964,50 @@ GER_heinkel_organization = {
 	icon = GFX_idea_heinkel
 	
 	allowed = {	
-		tag = GER 
+		OR = {
+			tag = GER 
+			AND = {
+				tag = BUL
+				has_dlc = "Battle for the Bosporus"
+			}
+#			NOR_AAT = yes
+		}
+	}
+
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = GER } }
+			}
+			FROM = { NOT = { has_war_with = GER } }
+		}
+
+		IF = {
+			limit = {
+				FROM = { original_tag = BUL }
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_country_flag = has_invited_heinkel_mio_flag
+				}
+			}
+			FROM = { 
+				OR = {
+					is_subject = no
+					is_subject_of = GER
+				}
+				#is_in_faction_with = GER
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				FROM = { original_tag = NOR }
+			}
+#			FROM = { has_completed_focus = NOR_invite_german_engineers }
+		}
 	}
 }
 
@@ -320,7 +1037,22 @@ GER_rheinmetall_organization = {
 	icon = GFX_idea_rheinmetall
 	
 	allowed = {	
-		tag = GER 
+		OR = {
+			tag = GER 
+			AND = {
+				tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+		}
+	}
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = GER } }
+			}
+			FROM = { NOT = { has_war_with = GER } }
+		}
 	}
 }
 
@@ -329,7 +1061,42 @@ GER_mauser_organization = {
 	icon = GFX_idea_mauser
 	
 	allowed = {	 
-		tag = GER 
+		OR = {
+			tag = GER 
+			AND = {
+				tag = ETH
+				has_dlc = "By Blood Alone"
+			}
+		}
+	}
+	
+	visible = {
+		IF = {
+			limit = { FROM = { original_tag = ETH } }
+#			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+		}
+	}
+	
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = GER } }
+			}
+			FROM = { NOT = { has_war_with = GER } }
+		}
+
+		IF = {
+			limit = {
+				FROM = { NOT  = { original_tag = GER } }
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_country_flag = has_invited_GER_mauser_organization_flag
+				}
+			}
+		}
 	}
 }
 
@@ -338,6 +1105,48 @@ GER_opel_organization = {
 	icon = GFX_idea_opel
 	
 	allowed = {	
-		tag = GER
+		OR = {
+			tag = GER
+			AND = {
+				tag = ROM
+				has_dlc = "Death or Dishonor"
+			}
+			AND = {
+				tag = BUL
+				has_dlc = "Battle for the Bosporus"
+			}
+		}
+	}
+	
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = GER } }
+			}
+			FROM = { NOT = { has_war_with = GER } }
+		}
+
+		IF = {
+			limit = { FROM = { original_tag = BUL } }
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_country_flag = has_invited_opel_mio_flag
+				}
+			}
+			FROM = { 
+				OR = {
+					is_subject = no
+					is_subject_of = GER
+				}
+				#is_in_faction_with = GER
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+		IF = {
+			limit = { FROM = { original_tag = ROM } }
+			FROM = { has_country_flag = GER_mot_chosen }
+		}	
 	}
 }

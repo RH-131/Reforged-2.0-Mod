@@ -15,55 +15,70 @@ generic_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
 
 	allowed = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CZE tag = ROM tag = SPR } }
-		NOT = {
-			AND = {
-				tag = POL
-				OR = {
-					has_dlc = "Poland: United and Ready"
-					has_dlc = "No Step Back"
-				}
-			}
-		}
-		NOT = {
-			AND = {
-				OR = { tag = AST tag = SAF tag = NZL tag = CAN }
-				has_dlc = "Together for Victory"
-			}
-		}
-		NOT = {
-			AND = {
-				OR = {
-					is_literally_china = yes
-					tag = MAN
-				}
-				has_dlc = "Waking the Tiger"
-			}
-		}
-		NOT = {
-			AND = {
-				OR = { tag = MEX }
-				has_dlc = "Man the Guns"
-			}
-		}
-		NOT = {
-			AND = {
-				OR = { tag = BUL tag = GRE tag = TUR }
-				has_dlc = "Battle for the Bosporus"
-			}
-		}
-		NOT = {
-			AND = {
-				OR = { tag = ETH tag = SWI }
-				has_dlc = "By Blood Alone"
-			}
-		}
-		NOT = {
-			AND = {
-				OR = { tag = FIN tag = NOR tag = SWE }
-				has_dlc = "Arms Against Tyranny"
-			}
-		}
+		always = no #used to removed the mio from all nations
+#		NOT = { 
+#			OR = { 
+#				tag = GER 
+#				tag = ENG 
+#				tag = SOV 
+#				tag = FRA 
+#				tag = ITA 
+#				tag = JAP 
+#				tag = USA 
+#				tag = BEL 
+#				tag = CZE 
+#				tag = ROM 
+#				tag = SPR 
+#				} 
+#				}
+#		NOT = {
+#			AND = {
+#				tag = POL
+#				OR = {
+#					has_dlc = "Poland: United and Ready"
+#					has_dlc = "No Step Back"
+#				}
+#			}
+#		}
+#		NOT = {
+#			AND = {
+#				OR = { tag = AST tag = SAF tag = NZL tag = CAN }
+#				has_dlc = "Together for Victory"
+#			}
+#		}
+#		NOT = {
+#			AND = {
+#				OR = {
+#					is_literally_china = yes
+#					tag = MAN
+#				}
+#				has_dlc = "Waking the Tiger"
+#			}
+#		}
+#		NOT = {
+#			AND = {
+#				OR = { tag = MEX }
+#				has_dlc = "Man the Guns"
+#			}
+#		}
+#		NOT = {
+#			AND = {
+#				OR = { tag = BUL tag = GRE tag = TUR }
+#				has_dlc = "Battle for the Bosporus"
+#			}
+#		}
+#		NOT = {
+#			AND = {
+#				OR = { tag = ETH tag = SWI }
+#				has_dlc = "By Blood Alone"
+#			}
+#		}
+#		NOT = {
+#			AND = {
+#				OR = { tag = FIN tag = NOR tag = SWE }
+#				has_dlc = "Arms Against Tyranny"
+#			}
+#		}
 	}
 
 	equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
@@ -356,7 +371,6 @@ generic_infantry_tank_organization = {
 			hard_attack = 0.05
 			armor_value = 0.05
 		}
-
 
 	}
 	trait = {
@@ -7391,7 +7405,7 @@ generic_motorized_mechanized_organization = {
 		name = generic_mio_initial_trait_motorized_mechanized_manufacturer
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.025
 		}
 	}
 
@@ -7407,8 +7421,8 @@ generic_motorized_mechanized_organization = {
 		limit_to_equipment_type = { motorized_equipment }
 
 		equipment_bonus = {
-			reliability = -0.07
 			build_cost_ic = -0.05
+			hardness = -0.10
 		}
 	}
 
@@ -7425,10 +7439,11 @@ generic_motorized_mechanized_organization = {
 		limit_to_equipment_type = { motorized_equipment }
 
 		equipment_bonus = {
-			reliability = 0.05
+			reliability = -0.05
+			hardness = 0.075
 		}
 		production_bonus = {
-			production_resource_need_factor = 0.02
+			production_resource_need_factor = 0.05
 		}
 	}
 
@@ -7445,7 +7460,7 @@ generic_motorized_mechanized_organization = {
 		limit_to_equipment_type = { motorized_equipment }
 		
 		equipment_bonus = {
-			breakthrough = 0.035
+			maximum_speed = 0.025
 		}
 	}
 
@@ -7464,7 +7479,7 @@ generic_motorized_mechanized_organization = {
 		limit_to_equipment_type = { motorized_equipment }
 
 		equipment_bonus = {
-			fuel_consumption = -0.05
+			fuel_consumption = -0.10
 		}
 	}
 
@@ -7484,7 +7499,7 @@ generic_motorized_mechanized_organization = {
 
 		equipment_bonus = {
 			fuel_consumption = 0.05
-			maximum_speed = 0.05
+			maximum_speed = 0.025
 		}
 	}
 
@@ -7497,7 +7512,7 @@ generic_motorized_mechanized_organization = {
 		relative_position_id = generic_mio_trait_steel_cargo_bed
 
 		equipment_bonus = {
-			breakthrough = 0.03
+			breakthrough = 0.025
 		}
 	}
 
@@ -7512,7 +7527,7 @@ generic_motorized_mechanized_organization = {
 		all_parents = { generic_mio_trait_medium_machinegun_mounts }
 
 		equipment_bonus = {
-			hardness = 0.05
+			hardness = 0.025
 		}
 	}
 
@@ -7531,8 +7546,9 @@ generic_motorized_mechanized_organization = {
 		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment motorized_equipment }
 		
 		equipment_bonus = {
-			breakthrough = 0.04
-			build_cost_ic = 0.01
+			breakthrough = 0.025
+			soft_attack = 0.10
+			build_cost_ic = 0.05
 		}
 	}
 
@@ -7552,7 +7568,7 @@ generic_motorized_mechanized_organization = {
 
 		equipment_bonus = {
 			ap_attack = 0.1
-			hard_attack = 0.02
+			hard_attack = 0.05
 		}
 	}
 
@@ -7569,8 +7585,9 @@ generic_motorized_mechanized_organization = {
 		mutually_exclusive = { generic_mio_trait_closed_chassi }
 
 		equipment_bonus = {
-			defense = -0.02
-			build_cost_ic = -0.03
+			defense = -0.05
+			build_cost_ic = -0.05
+			hardness = 0.05
 		}
 	}
 
@@ -7587,7 +7604,7 @@ generic_motorized_mechanized_organization = {
 		mutually_exclusive = { generic_mio_trait_open_chassi }
 
 		equipment_bonus = {
-			armor_value = 0.05
+			armor_value = 0.10
 		}
 	}
 
@@ -7605,7 +7622,7 @@ generic_motorized_mechanized_organization = {
 		any_parent = { generic_mio_trait_closed_chassi generic_mio_trait_open_chassi }
 
 		equipment_bonus = {
-			hardness = 0.05
+			hardness = 0.025
 		}
 	}
 
@@ -7622,7 +7639,7 @@ generic_motorized_mechanized_organization = {
 		all_parents = { generic_mio_trait_bulletproof_panels }
 
 		equipment_bonus = {
-			breakthrough = 0.035
+			breakthrough = 0.05
 		}
 	}
 
@@ -7639,8 +7656,8 @@ generic_motorized_mechanized_organization = {
 		all_parents = { generic_mio_trait_bulletproof_panels }
 
 		equipment_bonus = {
-			defense = 0.06
-			maximum_speed = -0.02
+			defense = 0.075
+			maximum_speed = -0.04
 		}
 	}
 }
