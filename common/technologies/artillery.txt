@@ -1156,5 +1156,35 @@ technologies = {
 				movement = 0.15 #If you change this - Change the custom tooltip too: RAJ_revive_the_screw_guns_effect ROM_modern_at_guns_tech_tt
 			}
 		}
-	}	
+	}
+
+	GER_flak_gun = {
+		
+		research_cost = 1
+		
+		allow = {
+			always = no
+		}
+		
+		enable_equipments = {
+			anti_tank_flak_equipment
+		}
+
+		start_year = 1941
+		
+#		folder = {
+#			name = artillery_folder
+#			position = { x = 8 y = @1943 }
+#		}
+#		
+#		ai_will_do = {
+#			factor = 10
+#			
+#		}
+		
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+		}
+	}
 }
