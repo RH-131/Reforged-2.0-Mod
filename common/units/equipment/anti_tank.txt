@@ -96,4 +96,59 @@ equipments = {
 		}
 	}
 	
+	flak_gun_equipment = {
+		year = 1936
+		
+		is_archetype = yes
+		is_buildable = yes
+		active = yes
+		type = { 
+			anti_tank
+			infantry
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 0.9
+
+		#Defensive Abilities
+		defense = 12
+		breakthrough = 6
+		hardness = 0.1
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 4
+		hard_attack = 40
+		ap_attack = 54
+
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 3
+			
+		build_cost_ic = 5
+		resources = {
+			tungsten = 2
+			steel = 1
+		}
+		upgrades = {
+			art_cost_upgrade
+			art_at_upgrade
+			art_at_hvy_upgrade
+		}
+	}
+	flak_gun_equipment_1 = {
+		archetype = anti_tank_equipment
+		priority = 90
+		visual_level = 0
+		
+		upgrades = {
+			art_cost_upgrade
+			art_at_upgrade
+			art_at_hvy_upgrade
+		}
+	}
 }

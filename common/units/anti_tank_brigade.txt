@@ -159,5 +159,89 @@ sub_units = {
 			attack = 0.05
 			defence = 0.05
 		}
-	}	
+	}
+	
+	flak_gun_brigade_mot = {
+		sprite = anti_tank
+		map_icon_category = infantry
+		priority = 500
+		active = yes
+		
+		
+		type = {
+		    motorized
+			anti_tank
+		}
+		
+		group = mobile_combat_support
+		
+		categories = {
+			category_front_line
+			category_army
+			category_line_artillery
+			category_anti_tank
+		}		
+		
+		combat_width = 2
+
+		need = {
+			anti_tank_equipment = 18
+			motorized_equipment = 18 
+		}
+		
+	#	defense = 0.10
+	#	soft_attack = 0.10
+	#	hard_attack = 0.10
+	#	breakthrough = 0.10
+	#	ap_attack = 0.10
+		
+		manpower = 400
+		max_strength = 2
+		max_organisation = 2
+		default_morale = 0.05
+		training_time = 80
+		weight = 0.5
+		supply_consumption = 0.15
+	
+		forest = {
+			attack = -0.2
+			movement = -0.05
+		}
+		hills = {
+			attack = -0.2
+			movement = -0.1
+		}
+		mountain = {
+			attack = -0.4
+			movement = -0.2
+		}		
+		jungle = {
+			attack = -0.3
+			movement = -0.25
+		}
+		marsh = {
+			attack = -0.25
+			movement = -0.35
+		}
+		fort = {
+			attack = 0.1							  
+		}
+
+		river = {
+			attack = -0.2
+			movement = -0.2			  
+		}
+
+		amphibious = {
+			attack = -0.4							   
+		}
+		plains = {
+			attack = 0.05 
+			defence = 0.05 
+		}
+		desert = {
+			attack = 0.05
+			defence = 0.05
+		}
+	}
 }
