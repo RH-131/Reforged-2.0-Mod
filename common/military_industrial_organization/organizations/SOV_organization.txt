@@ -12,9 +12,9 @@
 @tank_3_X = 9
 @tank_3_Y = 4
 #BONUSES
-@tank_max_speed = 0.05
-@tank_production_capacity_factor = 0.05
-@tank_soft_attack = 0.05
+#@tank_max_speed = 0.05
+#@tank_production_capacity_factor = 0.05
+#@tank_soft_attack = 0.05
 
 
 ### SHIPS
@@ -57,11 +57,11 @@
 @materiel_3_X = 9
 @materiel_3_Y = 4
 #BONUSES
-@artillery_production_cost_factor = -0.1
-@infantry_equipment_production_cost_factor = -0.1
-@motorized_production_cost_factor = -0.1
-@materiel_production_efficiency_cap_factor = 0.1
-@materiel_production_capacity_factor = 0.1
+@artillery_production_cost_factor = -0.05
+@infantry_equipment_production_cost_factor = -0.05
+@motorized_production_cost_factor = -0.05
+@materiel_production_efficiency_cap_factor = 0.05
+@materiel_production_capacity_factor = 0.05
 
 
 ########    ###    ##    ## ##    ##  ######  
@@ -72,674 +72,850 @@
    ##    ##     ## ##   ### ##   ##  ##    ## 
    ##    ##     ## ##    ## ##    ##  ######  
 
+SOV_kharkiv_diesel_factory_org = {
+	icon = GFX_idea_kirov_plant
+	
+	allowed = {
+		OR = {
+		tag = SOV
+		tag = MON
+		}
+	}
+	available = {
+		FROM = {
+			has_completed_focus = SOV_heavy_state_funding_for_tank_bureaus
+#				NOT = {
+#					has_completed_focus = SOV_tankograd
+#				}
+			controls_state = 221
+		}
+	}
+	equipment_type = { mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
 
-SOV_morozov_design_bureau_organization = {
-	include = generic_mobile_tank_organization
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			reliability = -0.05
+			soft_attack = 0.1
+			hard_attack = 0.1
+			build_cost_ic = 0.05
+		}
+
+	}
+	
+	trait = {
+		token = kharkiv_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { medium_tank_destroyer_chassis  }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			hard_attack = 0.05
+			build_cost_ic = 0.05
+		}
+
+	}
+	
+	trait = {
+		token = kharkiv_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			soft_attack = 0.04
+			build_cost_ic = 0.05
+		}
+
+	}
+	
+	trait = {
+		token = kharkiv_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			air_attack = 0.05
+			build_cost_ic = 0.05
+		}
+
+	}
+	
+}
+
+SOV_uralvagonzavody_org = { #tankograd
+	icon = GFX_idea_uralvagonzavod
+	
+	allowed = {	
+		tag = SOV
+	}
+	available = {
+		FROM = {
+			has_completed_focus = SOV_tankograd
+			controls_state = 653
+		}
+	}
+	equipment_type = { mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			reliability = -0.1
+			armor_value = -0.05
+			build_cost_ic = -0.15
+		}
+
+	}
+	
+	trait = {
+		token = ural_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { medium_tank_destroyer_chassis  }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.1
+			armor_value = -0.05
+			build_cost_ic = -0.15
+		}
+
+	}
+	
+	trait = {
+		token = ural_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.1
+			armor_value = -0.05
+			build_cost_ic = -0.15
+		}
+
+	}
+	
+	trait = {
+		token = ural_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.1
+			armor_value = -0.05
+			build_cost_ic = -0.15
+		}
+
+	}
+	
+}
+
+SOV_kirov_org = { #tankograd
+	icon = GFX_idea_SOV_kirov
+	
+	allowed = {	
+		tag = SOV
+	}
+	available = {
+		FROM = {
+			has_completed_focus = SOV_heavy_state_funding_for_tank_bureaus
+			controls_state = 195
+		}
+	}
+	equipment_type = { mio_cat_eq_all_heavy_tank }
+	research_categories = { mio_cat_tech_heavy_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			reliability = -0.1
+			armor_value = 0.1
+			hard_attack = 0.1
+			soft_attack = 0.1
+			build_cost_ic = 0.15
+		}
+
+	}
+	
+	trait = {
+		token = kirov_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { medium_tank_destroyer_chassis  }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.1
+			hard_attack = 0.12
+			ap_attack = 0.10
+			armor_value = 0.10
+			build_cost_ic = 0.15
+		}
+
+	}
+	
+	trait = {
+		token = kirov_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.1
+			soft_attack = 0.12
+			armor_value = 0.10
+			build_cost_ic = 0.15
+		}
+
+	}
+	
+}
+
+SOV_krasnoye_sormovo_org = { #T-34/85 designer
+	icon = GFX_idea_krasnoye_sormovo
+	
+	allowed = {	
+		tag = SOV
+	}
+	available = {
+		FROM = {
+			has_completed_focus = SOV_tankograd
+			controls_state = 252
+		}
+	}
+	equipment_type = { mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			ap_attack = 0.15
+		}
+
+	}
+	
+}
+
+SOV_ordzhonikidze_ural_heavy_machine_building_plant_UZTM_org = { #T-34/85 designer
+	icon = GFX_idea_generic_tank_manufacturer_3
+	
+	allowed = {	
+		tag = SOV
+	}
+	available = {
+		FROM = {
+			has_completed_focus = SOV_heavy_state_funding_for_tank_bureaus
+			controls_state = 653
+		}
+	}
+	equipment_type = { 	light_tank_destroyer_chassis 
+						medium_tank_destroyer_chassis }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			reliability = -0.05
+			hard_attack = 0.15
+			ap_attack = 0.15
+			build_cost_ic = 0.1
+		}
+
+	}
+	add_trait = {
+		token = ordz_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { light_tank_artillery_chassis medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			soft_attack = 0.20
+			build_cost_ic = 0.1
+		}
+
+	}
+	add_trait = {
+		token = ordz_assg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { heavy_assault_gun_equipment }
+
+		position = { x=4 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			soft_attack = 0.15
+			build_cost_ic = 0.1
+		}
+
+	}
+	
+}
+
+SOV_morozov_design_org = {
+
 	icon = GFX_idea_morozov_design_bureau
 	
 	allowed = {	
 		OR = {
-			tag = SOV
-			AND = {
-				tag = MEX 
-				has_dlc = "Man the Guns"
-			}
-			AND = {
-				OR = {
-					is_literally_china = yes
-					tag = MAN
-					tag = MEN
-				} 
-				has_dlc = "Waking the Tiger"
-			}
-#			NOR_AAT = yes
+		tag = SOV
+		tag = MON
 		}
 	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-
-		IF = {
-			limit = {
-				FROM = { tag = MEX }
-			}
-			FROM = { is_in_faction_with = SOV }
-		}
-		ELSE_IF = {
-			limit = {
-				FROM = {
-					OR = {
-						is_literally_china = yes
-						tag = MAN
-						tag = MEN
-					}
-				} 
-			}
-#			FROM = { has_completed_focus = CHI_hire_soviet_designer }
-		}
-		ELSE_IF = {
-			limit = {
-				FROM = { original_tag = NOR }
-			}
-#			FROM = { has_completed_focus = NOR_invite_soviet_designers }
-		}
+#	available = {
+#		FROM = {
+#			has_completed_focus = SOV_heavy_state_funding_for_tank_bureaus
+#			controls_state = 653
+#		}
+#	}
+	equipment_type = { 	mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_light_armor_and_modules mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
 	}
 
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_174
-		name = SOV_merge_tank_plant
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-		special_trait_background = yes
-
-		position = { x=@tank_1_X y=@tank_1_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = { #Two FROM blocs to provide two different check marks in the UI
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_174_flag
-			}
-		}
-
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
 		equipment_bonus = {
-			maximum_speed = @tank_max_speed
+			reliability = -0.05
+			maximum_speed = 0.1
+			armor_value = -0.1
+			build_cost_ic = -0.05
 		}
+
 	}
 
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_112
-		name = SOV_merge_tank_plant_2
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
+	trait = {
+		token = morozov_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
 
-		position = { x=@tank_2_X y=@tank_2_Y }
+		limit_to_equipment_type = { light_tank_destroyer_chassis medium_tank_destroyer_chassis  }
+
+		position = { x=0 y=0 }
 		
-		visible = {
-			FROM = { original_tag = SOV }
+		equipment_bonus = {
+			reliability = -0.05
+			maximum_speed = 0.1
+			armor_value = -0.1
+			build_cost_ic = -0.05
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 252 #GORKY
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_112_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = @tank_production_capacity_factor
-		}
 	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_ural_heavy_machine_building_plant
-		name = SOV_merge_tank_plant_3
-		#icon = GFX_generic_mio_department_icon_facilities
+	
+	trait = {
+		token = morozov_spg
 		icon = GFX_generic_mio_trait_icon_soft_attack
-		special_trait_background = yes
 
-		position = { x=@tank_3_X y=@tank_3_Y }
+		limit_to_equipment_type = { light_tank_artillery_chassis medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
 		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 653 #SVERDLOVSK
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag
-			}
-		}
-
 		equipment_bonus = {
-			soft_attack = @tank_soft_attack
+			reliability = -0.05
+			maximum_speed = 0.1
+			armor_value = -0.1
+			build_cost_ic = -0.05
 		}
+
+	}
+	
+	trait = {
+		token = morozov_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			maximum_speed = 0.1
+			armor_value = -0.1
+			build_cost_ic = -0.05
+		}
+
 	}
 }
 
 SOV_astrov_design_bureau_organization = {
-	include = generic_medium_tank_organization
+	
 	icon = GFX_idea_astrov_design_bureau
-	
-	allowed = {	
-		original_tag = SOV
-	}
 
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_174
-		name = SOV_merge_tank_plant
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-		special_trait_background = yes
-
-		position = { x=@tank_1_X y=@tank_1_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = { #Two FROM blocs to provide two different check marks in the UI
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_174_flag
-			}
-		}
-
-		equipment_bonus = {
-			maximum_speed = @tank_max_speed
-		}
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_112
-		name = SOV_merge_tank_plant_2
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@tank_2_X y=@tank_2_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 252 #GORKY
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_112_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = @tank_production_capacity_factor
-		}
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_ural_heavy_machine_building_plant
-		name = SOV_merge_tank_plant_3
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_soft_attack
-		special_trait_background = yes
-
-		position = { x=@tank_3_X y=@tank_3_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 653 #SVERDLOVSK
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag
-			}
-		}
-
-		equipment_bonus = {
-			soft_attack = @tank_soft_attack
-		}
-	}
-}
-
-SOV_okmo_organization = {
-	include = generic_infantry_tank_organization
-	icon = GFX_idea_okmo
-	
 	allowed = {	
 		OR = {
-			tag = SOV 
-			AND = {
-				tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
+		tag = SOV
+		tag = MON
 		}
 	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-
-		IF = {
-			limit = { FROM = { original_tag = BUL } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_okmo_mio_flag
-				}
-			}
-			FROM = {
-				OR = {
-					is_subject = no
-					is_subject_of = SOV
-				}
-				#is_in_faction_with = SOV
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-		}
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_174
-		name = SOV_merge_tank_plant
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-		special_trait_background = yes
-
-		position = { x=@tank_1_X y=@tank_1_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = { #Two FROM blocs to provide two different check marks in the UI
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_174_flag
-			}
-		}
-
-		equipment_bonus = {
-			maximum_speed = @tank_max_speed
-		}
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_112
-		name = SOV_merge_tank_plant_2
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@tank_2_X y=@tank_2_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 252 #GORKY
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_112_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = @tank_production_capacity_factor
-		}
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_ural_heavy_machine_building_plant
-		name = SOV_merge_tank_plant_3
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_soft_attack
-		special_trait_background = yes
-
-		position = { x=@tank_3_X y=@tank_3_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 653 #SVERDLOVSK
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag
-			}
-		}
-
-		equipment_bonus = {
-			soft_attack = @tank_soft_attack
-		}
-	}
-}
-
-SOV_mytishchy_machine_building_plant_organization = {
-	include = generic_tank_refurbishment_plant_organization
-	icon = GFX_idea_SOV_mytishchy_machine_building_plant
+#	available = {
+#		FROM = {
+#			has_completed_focus = SOV_heavy_state_funding_for_tank_bureaus
+#			controls_state = 653
+#		}
+#	}
+	equipment_type = { 	mio_cat_eq_all_light_tank }
+	research_categories = { mio_cat_tech_light_armor_and_modules }
 	
-	allowed = {	
-		OR = {
-			tag = SOV
-			AND = {
-				tag = ETH 
-				has_dlc = "By Blood Alone"
-			}
-		}
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
 	}
 
-	visible = {
-		IF = { 
-			limit = { FROM = { original_tag = ETH } } 
-#			FROM = { has_completed_focus = ETH_mytishchi-ababa_plant }
-		}
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
 	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_174
-		name = SOV_merge_tank_plant
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-		special_trait_background = yes
-
-		position = { x=@tank_1_X y=@tank_1_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = { #Two FROM blocs to provide two different check marks in the UI
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_174_flag
-			}
-		}
-
-		equipment_bonus = {
-			maximum_speed = @tank_max_speed
-		}
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_112
-		name = SOV_merge_tank_plant_2
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@tank_2_X y=@tank_2_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 252 #GORKY
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_112_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = @tank_production_capacity_factor
-		}
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_ural_heavy_machine_building_plant
-		name = SOV_merge_tank_plant_3
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_soft_attack
-		special_trait_background = yes
-
-		position = { x=@tank_3_X y=@tank_3_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 653 #SVERDLOVSK
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag
-			}
-		}
-
-		equipment_bonus = {
-			soft_attack = @tank_soft_attack
-		}
-	}
-}
-
-SOV_kirov_organization = {
-	include = generic_heavy_tank_organization
-	icon = GFX_idea_SOV_kirov
 	
-	allowed = {	
-		original_tag = SOV
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			soft_attack = 0.04
+			reliability = -0.05
+			build_cost_ic = -0.05
+		}
+
 	}
 
-	override_trait = {
-		token = generic_mio_trait_wide_tracks
+	trait = {
+		token = astrov_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { light_tank_destroyer_chassis medium_tank_destroyer_chassis  }
 
 		position = { x=0 y=0 }
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_174
-		name = SOV_merge_tank_plant
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-		special_trait_background = yes
-
-		position = { x=@tank_1_X y=@tank_1_Y }
 		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = { #Two FROM blocs to provide two different check marks in the UI
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_174_flag
-			}
-		}
-
 		equipment_bonus = {
-			maximum_speed = @tank_max_speed
+			reliability = -0.05
+			hard_attack = 0.04
+			build_cost_ic = -0.05
 		}
+
 	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_112
-		name = SOV_merge_tank_plant_2
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@tank_2_X y=@tank_2_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 252 #GORKY
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_112_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = @tank_production_capacity_factor
-		}
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_ural_heavy_machine_building_plant
-		name = SOV_merge_tank_plant_3
-		#icon = GFX_generic_mio_department_icon_facilities
+	
+	trait = {
+		token = astrov_spg
 		icon = GFX_generic_mio_trait_icon_soft_attack
-		special_trait_background = yes
 
-		position = { x=@tank_3_X y=@tank_3_Y }
+		limit_to_equipment_type = { light_tank_artillery_chassis medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
 		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 653 #SVERDLOVSK
-			}
-			FROM = {
-#				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag
-			}
-		}
-
 		equipment_bonus = {
-			soft_attack = @tank_soft_attack
+			soft_attack = 0.04
+			reliability = -0.05
+			build_cost_ic = -0.05
 		}
+
+	}
+	
+	trait = {
+		token = astrov_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			air_attack = 0.04
+			build_cost_ic = -0.05
+		}
+
 	}
 }
+
+#SOV_okmo_organization = {
+#	include = generic_infantry_tank_organization
+#	icon = GFX_idea_okmo
+#	
+#	allowed = {	
+#		OR = {
+#			tag = SOV 
+#			AND = {
+#				tag = BUL
+#				has_dlc = "Battle for the Bosporus"
+#			}
+#		}
+#	}
+#
+#	available = {
+#		# When in a Foreign MIO, countries need to be at peace with original country
+#		IF = {
+#			limit = {
+#				FROM = { NOT = { original_tag = SOV } }
+#			}
+#			FROM = { NOT = { has_war_with = SOV } }
+#		}
+#
+#		IF = {
+#			limit = { FROM = { original_tag = BUL } }
+#			custom_trigger_tooltip = {
+#				tooltip = has_invited_mio_tt
+#				FROM = {
+#					has_country_flag = has_invited_okmo_mio_flag
+#				}
+#			}
+#			FROM = {
+#				OR = {
+#					is_subject = no
+#					is_subject_of = SOV
+#				}
+#				#is_in_faction_with = SOV
+#				NOT = { has_completed_focus = BUL_nationalization }
+#			}
+#		}
+#	}
+#
+#	add_trait = { 
+#		token = SOV_mio_trait_merge_plant_no_174
+#		name = SOV_merge_tank_plant
+#		#icon = GFX_generic_mio_department_icon_facilities
+#		icon = GFX_generic_mio_trait_icon_maximum_speed
+#		special_trait_background = yes
+#
+#		position = { x=@tank_1_X y=@tank_1_Y }
+#		
+#		visible = {
+#			FROM = { original_tag = SOV }
+#		}
+#
+#		available = { #Two FROM blocs to provide two different check marks in the UI
+#			FROM = {
+#				has_full_control_of_state = 195 #LENINGRAD
+#			}
+#			FROM = {
+##				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#			}
+#		}
+#
+#		on_complete = {
+#			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+#			FROM = {
+#				set_country_flag = SOV_merge_plant_no_174_flag
+#			}
+#		}
+#
+#		equipment_bonus = {
+#			maximum_speed = @tank_max_speed
+#		}
+#	}
+#
+#	add_trait = { 
+#		token = SOV_mio_trait_merge_plant_no_112
+#		name = SOV_merge_tank_plant_2
+#		#icon = GFX_generic_mio_department_icon_facilities
+#		icon = GFX_generic_mio_trait_icon_production_capacity
+#		special_trait_background = yes
+#
+#		position = { x=@tank_2_X y=@tank_2_Y }
+#		
+#		visible = {
+#			FROM = { original_tag = SOV }
+#		}
+#
+#		available = {
+#			FROM = {
+#				has_full_control_of_state = 252 #GORKY
+#			}
+#			FROM = {
+##				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#			}
+#		}
+#
+#		on_complete = {
+#			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+#			FROM = {
+#				set_country_flag = SOV_merge_plant_no_112_flag
+#			}
+#		}
+#
+#		production_bonus = {
+#			production_capacity_factor = @tank_production_capacity_factor
+#		}
+#	}
+#
+#	add_trait = { 
+#		token = SOV_mio_trait_merge_ural_heavy_machine_building_plant
+#		name = SOV_merge_tank_plant_3
+#		#icon = GFX_generic_mio_department_icon_facilities
+#		icon = GFX_generic_mio_trait_icon_soft_attack
+#		special_trait_background = yes
+#
+#		position = { x=@tank_3_X y=@tank_3_Y }
+#		
+#		visible = {
+#			FROM = { original_tag = SOV }
+#		}
+#
+#		available = {
+#			FROM = {
+#				has_full_control_of_state = 653 #SVERDLOVSK
+#			}
+#			FROM = {
+##				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#			}
+#		}
+#
+#		on_complete = {
+#			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+#			FROM = {
+#				set_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag
+#			}
+#		}
+#
+#		equipment_bonus = {
+#			soft_attack = @tank_soft_attack
+#		}
+#	}
+#}
+#
+#SOV_mytishchy_machine_building_plant_organization = {
+#	include = generic_tank_refurbishment_plant_organization
+#	icon = GFX_idea_SOV_mytishchy_machine_building_plant
+#	
+#	allowed = {	
+#		OR = {
+#			tag = SOV
+#			AND = {
+#				tag = ETH 
+#				has_dlc = "By Blood Alone"
+#			}
+#		}
+#	}
+#
+#	visible = {
+#		IF = { 
+#			limit = { FROM = { original_tag = ETH } } 
+##			FROM = { has_completed_focus = ETH_mytishchi-ababa_plant }
+#		}
+#	}
+#
+#	available = {
+#		# When in a Foreign MIO, countries need to be at peace with original country
+#		IF = {
+#			limit = {
+#				FROM = { NOT = { original_tag = SOV } }
+#			}
+#			FROM = { NOT = { has_war_with = SOV } }
+#		}
+#	}
+#
+#	add_trait = { 
+#		token = SOV_mio_trait_merge_plant_no_174
+#		name = SOV_merge_tank_plant
+#		#icon = GFX_generic_mio_department_icon_facilities
+#		icon = GFX_generic_mio_trait_icon_maximum_speed
+#		special_trait_background = yes
+#
+#		position = { x=@tank_1_X y=@tank_1_Y }
+#		
+#		visible = {
+#			FROM = { original_tag = SOV }
+#		}
+#
+#		available = { #Two FROM blocs to provide two different check marks in the UI
+#			FROM = {
+#				has_full_control_of_state = 195 #LENINGRAD
+#			}
+#			FROM = {
+##				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#			}
+#		}
+#
+#		on_complete = {
+#			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+#			FROM = {
+#				set_country_flag = SOV_merge_plant_no_174_flag
+#			}
+#		}
+#
+#		equipment_bonus = {
+#			maximum_speed = @tank_max_speed
+#		}
+#	}
+#
+#	add_trait = { 
+#		token = SOV_mio_trait_merge_plant_no_112
+#		name = SOV_merge_tank_plant_2
+#		#icon = GFX_generic_mio_department_icon_facilities
+#		icon = GFX_generic_mio_trait_icon_production_capacity
+#		special_trait_background = yes
+#
+#		position = { x=@tank_2_X y=@tank_2_Y }
+#		
+#		visible = {
+#			FROM = { original_tag = SOV }
+#		}
+#
+#		available = {
+#			FROM = {
+#				has_full_control_of_state = 252 #GORKY
+#			}
+#			FROM = {
+##				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#			}
+#		}
+#
+#		on_complete = {
+#			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+#			FROM = {
+#				set_country_flag = SOV_merge_plant_no_112_flag
+#			}
+#		}
+#
+#		production_bonus = {
+#			production_capacity_factor = @tank_production_capacity_factor
+#		}
+#	}
+#
+#	add_trait = { 
+#		token = SOV_mio_trait_merge_ural_heavy_machine_building_plant
+#		name = SOV_merge_tank_plant_3
+#		#icon = GFX_generic_mio_department_icon_facilities
+#		icon = GFX_generic_mio_trait_icon_soft_attack
+#		special_trait_background = yes
+#
+#		position = { x=@tank_3_X y=@tank_3_Y }
+#		
+#		visible = {
+#			FROM = { original_tag = SOV }
+#		}
+#
+#		available = {
+#			FROM = {
+#				has_full_control_of_state = 653 #SVERDLOVSK
+#			}
+#			FROM = {
+##				has_completed_focus = SOV_merge_tank_and_materiel_plants
+#			}
+#		}
+#
+#		on_complete = {
+#			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+#			FROM = {
+#				set_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag
+#			}
+#		}
+#
+#		equipment_bonus = {
+#			soft_attack = @tank_soft_attack
+#		}
+#	}
+#}
+
 
 
 

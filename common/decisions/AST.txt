@@ -1,65 +1,17 @@
-political_actions = {
-    AST_annex_nzl = {
-
-		icon = generic_political_discourse
-
-		allowed = {
-			tag = AST			
-		}
-
-		available = {
-			is_ai = no
-			NZL = { is_ai = yes }
-			country_exists = NZL
-			OR = {
-				has_completed_focus = AST_support_the_policy_of_appeasement
-				has_war_with = GER
-			}
-		}
-
-		modifier = {
-			consumer_goods_factor = 0.2
-		}
-
-		cost = 0
-		days_remove = 365
-
-		fire_only_once = yes
-
-
-		complete_effect = {
-			NZL = {
-				transfer_navy = {
-					target = AST
-				}
-			}
-			annex_country = {
-              target = NZL
-              transfer_troops = yes
-			}
-			every_state = {
-				every_state = {
-				limit = { is_core_of = NZL }
-				set_resistance = 0
-				set_compliance = 100
-				}	
-			}
-		}
-	}
-}
-
 operations = {
 	AST_Order_UK_Air = {
 		
 		icon = generic_air
-	
+		
+		allowed = {
+			tag = AST
+		}
 		available = {
-			has_completed_focus = AST_strengthen_ties_with_uk 
-			has_completed_focus = AST_expand_the_raaf
+			date > 1938.8.1
 		}
 	
 		visible = {
-			has_completed_focus = AST_strengthen_ties_with_uk
+			date > 1936.1.1
 		}
 		modifier = {
 			civilian_factory_use = 4
@@ -73,12 +25,7 @@ operations = {
 		remove_effect = {
 			add_equipment_to_stockpile = {
 				type = medium_plane_fighter_airframe
-				amount = 50
-				producer = ENG
-			}
-			add_equipment_to_stockpile = {
-				type = medium_plane_airframe
-				amount = 50
+				amount = 100
 				producer = ENG
 			}
 			add_equipment_to_stockpile = {
@@ -86,24 +33,26 @@ operations = {
 				amount = 50
 				producer = ENG
 			}
-			ENG = {
-				add_offsite_building = { type = industrial_complex level = 2 }
-			}
+#			ENG = {
+#				add_offsite_building = { type = arms_factory level = 2 }
+#			}
 		}		
 	}
 	
 	AST_Order_USA_Air = {
 		
 		icon = generic_air
-	
+		
+		allowed = {
+			tag = AST
+		}
 		available = {
-			has_completed_focus = AST_Homeland_defence
-			has_completed_focus = AST_expand_the_raaf
+			date > 1939.10.1
 	
 		}
 	
 		visible = {
-			has_completed_focus = AST_Homeland_defence
+			date > 1936.1.1
 		}
 		modifier = {
 			civilian_factory_use = 4
@@ -126,30 +75,32 @@ operations = {
 				producer = USA
 			}
 			add_equipment_to_stockpile = {
-				type = large_plane_airframe
-				amount = 10
+				type = small_plane_naval_bomber_airframe
+				amount = 50
 				producer = USA
 			}
-			USA = {
-				add_offsite_building = { type = industrial_complex level = 2 }
-			}
+#			USA = {
+#				add_offsite_building = { type = arms_factory level = 2 }
+#			}
 		}		
 	}
 	
 	AST_Procure_Arms = {
 		
 		icon = generic_army
-	
+		
+		allowed = {
+			tag = AST
+		}
 		available = {
 			has_completed_focus = AST_Indo_pacific
-	
 		}
 	
 		visible = {
-			has_completed_focus = AST_Homeland_defence
+			date > 1936.1.1
 		}
 		modifier = {
-			civilian_factory_use = 10
+			civilian_factory_use = 6
 		}
 		cost = 75
 		days_remove = 60
@@ -166,12 +117,12 @@ operations = {
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
 				amount = 100
-				producer = RAJ
+				producer = USA
 			}
 			add_equipment_to_stockpile = {
 				type = radio_equipment
-				amount = 50
-				producer = FRA
+				amount = 100
+				producer = USA
 			}
 			add_equipment_to_stockpile = {
 				type = support_equipment
@@ -180,18 +131,12 @@ operations = {
 			}
 			add_equipment_to_stockpile = {
 				type = motorized_equipment
-				amount = 150
-				producer = FRA
+				amount = 100
+				producer = USA
 			}
-			USA = {
-				add_offsite_building = { type = arms_factory level = 2 }
-			}
-			RAJ = {
-				add_offsite_building = { type = arms_factory level = 1 }
-			}
-			FRA = {
-				add_offsite_building = { type = arms_factory level = 2 }
-			}
+#			USA = {
+#				add_offsite_building = { type = arms_factory level = 3 }
+#			}
 		}		
 	}
 	
@@ -257,7 +202,6 @@ operations = {
 		}
 
 		available = {
-			has_completed_focus = AST_invest_in_victory
 			has_full_control_of_state = 521
 			num_of_civilian_factories_available_for_projects > 2
 			has_tech = excavation3
@@ -305,7 +249,6 @@ operations = {
 		}
 
 		available = {
-			has_completed_focus = AST_invest_in_victory
 			has_full_control_of_state = 521
 			num_of_civilian_factories_available_for_projects > 2
 			has_tech = excavation3
@@ -353,7 +296,6 @@ operations = {
 		}
 
 		available = {
-			has_completed_focus = AST_invest_in_victory
 			has_full_control_of_state = 517
 			num_of_civilian_factories_available_for_projects > 2
 			has_tech = excavation3
@@ -401,7 +343,6 @@ operations = {
 		}
 
 		available = {
-			has_completed_focus = AST_invest_in_victory
 			has_full_control_of_state = 285
 			num_of_civilian_factories_available_for_projects > 2
 			has_tech = excavation3

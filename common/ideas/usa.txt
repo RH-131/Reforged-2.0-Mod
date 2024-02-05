@@ -111,7 +111,6 @@ ideas = {
 				experience_gain_air_factor = -0.5
 				experience_gain_navy_factor = -0.5
 				training_time_army_factor = 0.5
-				max_command_power = -75
 				supply_consumption_factor = 0.2
 				land_doctrine_cost_factor = 0.4
 				air_doctrine_cost_factor = 0.4
@@ -134,7 +133,6 @@ ideas = {
 				experience_gain_air_factor = -0.25
 				experience_gain_navy_factor = -0.25
 				training_time_army_factor = 0.25
-				max_command_power = -50
 				supply_consumption_factor = 0.1
 				land_doctrine_cost_factor = 0.2
 				air_doctrine_cost_factor = 0.2
@@ -1181,9 +1179,8 @@ ideas = {
 
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
-				industrial_capacity_factory = 0.1
-				production_factory_efficiency_gain_factor = 0.1
-				consumer_goods_factor = 0.1
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 
@@ -1784,6 +1781,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				production_speed_infrastructure_factor = 0.15
+				local_resources_factor = 0.1
 			}
 		}
 	}

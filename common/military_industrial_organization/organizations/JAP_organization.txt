@@ -9,13 +9,181 @@
  #################### 
 
 JAP_osaka_army_arsenal_organization = {
-	include = generic_tank_organization
+
 	icon = GFX_idea_osaka_army_arsenal
 	allowed = {	
 		tag = JAP
-		has_dlc = "Arms Against Tyranny"
 	}
-} 
+	
+	equipment_type = { mio_cat_eq_all_light_tank medium_tank_chassis }
+	research_categories = { mio_cat_tech_light_armor_and_modules mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			soft_attack = 0.075
+			ap_attack = -0.05
+			hard_attack = -0.05
+			armor_value = -0.05
+			maximum_speed = 0.05
+			breakthrough = 0.075
+			reliability = -0.05
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_capacity_factor = 0.10
+		}
+	}
+	
+	trait = {
+		token = osaka_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { light_tank_destroyer_chassis medium_tank_destroyer_chassis }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			soft_attack = 0.425
+			hard_attack = 0.05
+			ap_attack = 0.10
+			reliability = -0.05
+		}
+
+	}
+	
+	trait = {
+		token = osaka_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { light_tank_artillery_chassis medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = -0.20
+			armor_value = -0.05
+			breakthrough = 0.1
+			reliability = -0.05
+		}
+
+	}
+	
+	trait = {
+		token = osaka_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			soft_attack = 0.125
+			hard_attack = -0.05
+			air_attack = 0.06
+			reliability = -0.05
+		}
+
+	}
+}
+
+JAP_tokyo_org = {
+
+	icon = GFX_idea_tokyo_arsenal
+	allowed = {	
+		tag = JAP
+	}
+	
+	equipment_type = { mio_cat_eq_all_light_tank }
+	research_categories = { mio_cat_tech_light_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			reliability = 0.05
+		}
+		production_bonus = {
+
+		}
+	}
+	
+	trait = {
+		token = tokyo_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { light_tank_destroyer_chassis  }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			hard_attack = 0.05
+			ap_attack = 0.05
+		}
+
+	}
+	
+	trait = {
+		token = tokyo_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { light_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			soft_attack = 0.025
+			breakthrough = 0.1
+			defense = 0.15
+		}
+
+	}
+	
+	trait = {
+		token = tokyo_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			soft_attack = 0.05
+			air_attack = 0.05
+		}
+
+	}
+}
 
 
 #####################
@@ -144,9 +312,6 @@ JAP_mitsubishi_organization = {
 			}
 			FROM = { NOT = { has_war_with = JAP } }
 		}
-		ELSE = {
-			FROM = { has_completed_focus = JAP_agility_focus }
-		}
 
 		IF = {
 			limit = {
@@ -167,9 +332,6 @@ JAP_aichi_organization = {
 	icon = GFX_idea_aichi
 	allowed = {	
 		tag = JAP
-	}
-	available = {
-		FROM = { has_completed_focus = JAP_range_focus }
 	}
 }
 

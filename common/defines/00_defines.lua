@@ -427,7 +427,7 @@ NCountry = {
 	STARTING_FUEL_RATIO = 0.25,						-- starting fuel ratio compared to max fuel for countries
 	BASE_FUEL_GAIN_PER_OIL = 2,						-- base amount of fuel gained hourly per excess oil
 	BASE_FUEL_GAIN = 2.0,							-- base amount of fuel gained hourly, independent of excess oil
-	BASE_FUEL_CAPACITY = 50000,						-- base amount of fuel capacity
+	BASE_FUEL_CAPACITY = 100000,						-- base amount of fuel capacity
 
 	SCORCHED_EARTH_STATE_COST = 50,					-- pp cost to scorch a state
 
@@ -647,10 +647,10 @@ NProduction = {
 
 NMarket = {
 	PURCHASE_CONTRACT_DELIVERY_TOTAL_DAYS = 30,                   	-- Number of days between purchase contract deliveries
-	IC_TO_CIC_FACTOR = 2.0,                    						-- The factor for mapping IC cost to CIC cost. Should be a positive number.
-	MAX_CIV_FACTORIES_PER_CONTRACT = 15,							-- Max number of factories that can be assigned for paying single contract.
-	LOW_PRICE_LEVEL_FACTOR = 0.90,                    				-- The factor of base equipment price for low price level. Should be in range (0,1] 
-	HIGH_PRICE_LEVEL_FACTOR = 1.01,                    				-- The factor of base equipment price for high price level. Should be more than 1.
+	IC_TO_CIC_FACTOR = 0.5,                    						-- The factor for mapping IC cost to CIC cost. Should be a positive number.
+	MAX_CIV_FACTORIES_PER_CONTRACT = 25,							-- Max number of factories that can be assigned for paying single contract.
+	LOW_PRICE_LEVEL_FACTOR = 0.80,                    				-- The factor of base equipment price for low price level. Should be in range (0,1] 
+	HIGH_PRICE_LEVEL_FACTOR = 1.2,                    				-- The factor of base equipment price for high price level. Should be more than 1.
 	MIN_DELIVERY_LIMIT_WARNING_UI = 0.8,							-- The delivery percentage under we want to let player know the contract is inefficient. [0,1]
 	PURCHASE_CONTRACT_SUBSIDY_BONUS_SPEED_FACTOR = 1.0,				-- The factor of speed bonus from subsidies
 	CONVOY_WEIGHT_OVERRIDE = 0.0,									-- Overrides the default lend leas weight of convoys for international market
@@ -670,8 +670,8 @@ NMarket = {
 NTechnology = {
 	MAX_SUBTECHS = 3,						-- Max number of sub technologies a technology can have.
 	BASE_RESEARCH_POINTS_SAVED = 30.0,		-- Base amount of research points a country can save per slot.
-	BASE_YEAR_AHEAD_PENALTY_FACTOR = 4,		-- Base year ahead penalty
-	BASE_TECH_COST = 80,					-- Base cost for a tech. multiplied with tech cost and ahead of time penalties
+	BASE_YEAR_AHEAD_PENALTY_FACTOR = 5.5,		-- Base year ahead penalty
+	BASE_TECH_COST = 75,					-- Base cost for a tech. multiplied with tech cost and ahead of time penalties
 	MAX_TECH_SHARING_BONUS = 0.5, 			-- Max technology sharing bonus that can be applied instantly
 	LICENSE_PRODUCTION_TECH_BONUS = 0.15,	-- License production tech bonus
 
@@ -679,7 +679,7 @@ NTechnology = {
 	DEFAULT_XP_BOOST_RESEARCH_COST = 0,				-- default xp cost of a research to speed up the process
 	DEFAULT_XP_BOOST_RESEARCH_BONUS = 0,			-- default boost research bonus gained when xp is used to research an item
 	MIN_RESEARCH_SPEED = 0.25,						-- research speed can't go below this value
-	USE_BONUS_REGRET_TIMER = 3,						-- Number of days the player has to regret using a limited tech bonus
+	USE_BONUS_REGRET_TIMER = 20,						-- Number of days the player has to regret using a limited tech bonus
 },
 
 NPolitics = {
@@ -828,9 +828,9 @@ NMilitary = {
 	BASE_DIVISION_BRIGADE_CHANGE_COST = 0,	--Base cost to change a regiment column.
 	BASE_DIVISION_SUPPORT_SLOT_COST = 0, 	--Base cost to unlock a support slot
 
-	MAX_ARMY_EXPERIENCE = 999,			--Max army experience a country can store
-	MAX_NAVY_EXPERIENCE = 999,			--Max navy experience a country can store
-	MAX_AIR_EXPERIENCE = 999,				--Max air experience a country can store
+	MAX_ARMY_EXPERIENCE = 300,			--Max army experience a country can store
+	MAX_NAVY_EXPERIENCE = 300,			--Max navy experience a country can store
+	MAX_AIR_EXPERIENCE = 300,				--Max air experience a country can store
 
 	COMBAT_MINIMUM_TIME = 6,			-- Shortest time possible for a combat in hours
 	SPOTTING_QUALITY_DROP_HOURS = 4, 	-- Each X hours the intel quality drops after unit was spotted.
@@ -962,7 +962,7 @@ NMilitary = {
 	PLANNING_DECAY = 0.02,
 	PLAYER_ORDER_PLANNING_DECAY = 0.02,				-- Amount of planning lost due to player manual order
 	PLANNING_GAIN = 0.03,
-	NAVAL_INVASION_PLANNING_BONUS_GAIN = 0.05,		-- Planning Bonus gain per day for naval invasions
+	NAVAL_INVASION_PLANNING_BONUS_GAIN = 0.15,		-- Planning Bonus gain per day for naval invasions
 	NAVAL_INVASION_PLANNING_BONUS_MALUS = -1,		-- Malus in percentage for the planning bonus gain for naval invasions
 	PLANNING_MAX = 0.3,                           	-- can get more from techs
 	CIVILWAR_ORGANIZATION_FACTOR = 0.3,			  	-- Multiplier of org for both sides when civilwar.
@@ -1054,12 +1054,12 @@ NMilitary = {
 	ARMOR_VS_AVERAGE = 0.5,			                -- how to weight in highest armor & pen vs the division average
 	PEN_VS_AVERAGE = 0.5,
 
-	LAND_EQUIPMENT_BASE_COST = 25,					-- Cost in XP to upgrade a piece of equipment one level is base + ( total levels * ramp )
-	LAND_EQUIPMENT_RAMP_COST = 25,
-	NAVAL_EQUIPMENT_BASE_COST = 25,
-	NAVAL_EQUIPMENT_RAMP_COST = 25,
-	AIR_EQUIPMENT_BASE_COST = 25,
-	AIR_EQUIPMENT_RAMP_COST = 25,
+	LAND_EQUIPMENT_BASE_COST = 20,					-- Cost in XP to upgrade a piece of equipment one level is base + ( total levels * ramp )
+	LAND_EQUIPMENT_RAMP_COST = 40,
+	NAVAL_EQUIPMENT_BASE_COST = 20,
+	NAVAL_EQUIPMENT_RAMP_COST = 40,
+	AIR_EQUIPMENT_BASE_COST = 20,
+	AIR_EQUIPMENT_RAMP_COST = 40,
 
 	FASTER_ORG_REGAIN_LEVEL = 0.25,
 	FASTER_ORG_REGAIN_MULT = 1.0,
@@ -1165,9 +1165,9 @@ NMilitary = {
 
 	ARMY_MAX_FUEL_FLOW_MULT = 2.0,					-- max fuel ratio that an army can get per hour, multiplied by supply situation
 
-	ARMY_FUEL_COST_MULT = 0.5,						-- fuel cost multiplier for all army related stuff
-	ARMY_COMBAT_FUEL_MULT =   2.0,					-- fuel consumption ratio in combat (plus ARMY_MOVEMENT_FUEL_MULT if you are also moving. ie offensive combat)
-	ARMY_TRAINING_FUEL_MULT = 1.0,					-- fuel consumption ratio while training
+	ARMY_FUEL_COST_MULT = 0.7,						-- fuel cost multiplier for all army related stuff
+	ARMY_COMBAT_FUEL_MULT =   1.0,					-- fuel consumption ratio in combat (plus ARMY_MOVEMENT_FUEL_MULT if you are also moving. ie offensive combat)
+	ARMY_TRAINING_FUEL_MULT = 0.5,					-- fuel consumption ratio while training
 	ARMY_MOVEMENT_FUEL_MULT = 1.0,					-- fuel consumption ratio while moving
 	ARMY_NAVAL_TRANSFER_FUEL_MULT = 0.0,			-- fuel consumption ratio while naval transferring
 	ARMY_STRATEGIC_DEPLOYMENT_FUEL_MULT = 0.0,		-- fuel consumption ratio while doing strategic deployment
@@ -1176,10 +1176,10 @@ NMilitary = {
 
 	FUEL_FLOW_PENALTY_FOR_SUPPLY_CHUNK_EDGE_RATIO = 0.5, -- supply flow that is limited by control of incoming edge provinces will have lesser effect on fuel flow
 
-	OUT_OF_FUEL_EQUIPMENT_MULT = 0.1,				-- ratio of the stats that you get from equipments that uses fuel and you lack it
+	OUT_OF_FUEL_EQUIPMENT_MULT = 0.25,				-- ratio of the stats that you get from equipments that uses fuel and you lack it
 	OUT_OF_FUEL_SPEED_MULT = 0.35,					-- speed mult that armies get when out of fuel
 	OUT_OF_FUEL_TRAINING_XP_GAIN_MULT = 0.0,		-- xp gain mult from training when a unit is out of fuel
-	FUEL_CAPACITY_DEFAULT_HOURS = 192,				-- default capacity if not specified
+	FUEL_CAPACITY_DEFAULT_HOURS = 240,				-- default capacity if not specified
 
 	MAX_ESTIMATED_PLAN_UNITS_NOT_IN_PLACE_FACTOR = -0.6, 	--Scaled by % of units not in place. Used to be a flat -50%
 	DAMAGE_SPLIT_ON_FIRST_TARGET = 0.35,			--% of damage dealt to the first target in a combat. The rest will be split amongst subsequent targets. Modifiers can affect this up to a maximum of 0.9. That value must not be exposed as a define.
@@ -1505,7 +1505,7 @@ NNavy = {
 	CONVOY_EFFICIENCY_MIN_VALUE = 0.05,								-- To avoid complete 0% efficiency, set the lower limit.
 	CONVOY_ROUTE_SIZE_CONVOY_SCALE = 0.5,                           -- scales impact of convoy route size (0 to turn off)
 	ANTI_AIR_TARGETTING_TO_CHANCE = 0.4,							-- Balancing value to convert averaged equipment stats (anti_air_targetting and naval_strike_agility) to probability chances of airplane being hit by navies AA.
-	ANTI_AIR_ATTACK_TO_AMOUNT = 0.004,								-- Balancing value to convert equipment stat anti_air_attack to the random % value of airplanes being hit.
+	ANTI_AIR_ATTACK_TO_AMOUNT = 0.002,								-- Balancing value to convert equipment stat anti_air_attack to the random % value of airplanes being hit.
 	CONVOY_SINKING_SPILLOVER = 0.5,                 				-- Damaged convoys roll for if they sink in the end of combat by accumulating the damage. This scales that chance.
 	UNIT_EXPERIENCE_PER_COMBAT_HOUR = 10,
 	UNIT_EXPERIENCE_SCALE = 1,
@@ -1517,13 +1517,13 @@ NNavy = {
 	LEADER_EXPERIENCE_SCALE = 1.0,
 	BATTLE_NAME_VP_FACTOR = 100,									-- Name is given by ((VP value) * BATTLE_NAME_VP_FACTOR) / (Distance VP -> battle)
 	BATTLE_NAME_VP_CUTOFF = 1.0,									-- If best score of above calculation is below this, name will be that of region.
-	AMPHIBIOUS_LANDING_PENALTY = -0.7,								-- amphibious landing penalty
-	AMPHIBIOUS_INVADE_SPEED_BASE = 0.5, 							-- every hour movement progress on amphibious invasion
-	AMPHIBIOUS_INVADE_MOVEMENT_COST = 24.0, 						-- total progress cost of movement while amphibious invading
-	AMPHIBIOUS_INVADE_ATTACK_LOW = 0.2, 							-- low and high cap of attack modifier scale. Scale interpolated by invasion progress.
-	AMPHIBIOUS_INVADE_ATTACK_HIGH = 1.0,
-	AMPHIBIOUS_INVADE_DEFEND_LOW = 1.5, 							-- low and high cap of defend modifier scale. Scale interpolated by invasion progress.
-	AMPHIBIOUS_INVADE_DEFEND_HIGH = 1.0,
+	AMPHIBIOUS_LANDING_PENALTY = -0.6,								-- amphibious landing penalty
+	AMPHIBIOUS_INVADE_SPEED_BASE = 0.6, 							-- every hour movement progress on amphibious invasion
+	AMPHIBIOUS_INVADE_MOVEMENT_COST = 20.0, 						-- total progress cost of movement while amphibious invading
+	AMPHIBIOUS_INVADE_ATTACK_LOW = 0.5, 							-- low and high cap of attack modifier scale. Scale interpolated by invasion progress.
+	AMPHIBIOUS_INVADE_ATTACK_HIGH = 1.2,
+	AMPHIBIOUS_INVADE_DEFEND_LOW = 0.5, 							-- low and high cap of defend modifier scale. Scale interpolated by invasion progress.
+	AMPHIBIOUS_INVADE_DEFEND_HIGH = 1.2,
 	AMPHIBIOUS_INVADE_LANDING_PENALTY_DECREASE = 3.5, 				-- scale of bonus that decreases "amphibious penalty" during combat, relative to invading transporter tech.
 	BASE_CARRIER_SORTIE_EFFICIENCY = 0.5,							-- factor of planes that can sortie by default from a carrier
 	CONVOY_ATTACK_BASE_FACTOR = 0.15,                               -- base % of convoys that get intercepted
@@ -1849,12 +1849,12 @@ NNavy = {
 	AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING					= 0.7,  -- AA penalty at 0% positioning
 	SUBMARINE_REVEAL_ON_MINIMUM_POSITIONING                         = 1.75,  -- submarine reveal change on 0% positioning
 
-	SHIP_TO_FLEET_ANTI_AIR_RATIO									= 0.5,	-- total sum of fleet's anti air will be multiplied with this ratio and added to calculations anti-air of individual ships while air damage reduction
+	SHIP_TO_FLEET_ANTI_AIR_RATIO									= 0.3,	-- total sum of fleet's anti air will be multiplied with this ratio and added to calculations anti-air of individual ships while air damage reduction
 
 	ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE								= 0.275,	-- received air damage is calculated using following: 1 - ( (ship_anti_air + fleet_anti_air * SHIP_TO_FLEET_ANTI_AIR_RATIO )^ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE ) * ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE
-	ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE							= 0.1,
+	ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE							= 0.15,
 
-	MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE 			= 0.5,	-- damage reduction for incoming air attacks is clamped to this value at maximum.
+	MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE 			= 0.65,	-- damage reduction for incoming air attacks is clamped to this value at maximum.
 
 	CHANCE_TO_DAMAGE_PART_ON_CRITICAL_HIT							= 0.1,	-- the game will roll between 0-1 and will damage a random part if below this val on naval critical hits
 	CHANCE_TO_DAMAGE_PART_ON_CRITICAL_HIT_FROM_AIR					= 0.1,	-- the game will roll between 0-1 and will damage a random part if below this val on air critical hits
@@ -4082,7 +4082,7 @@ NIndustrialOrganisation = {
 	DESIGN_TEAM_CHANGE_XP_COST = 5,				-- Flat cost added to the XP cost of a new equipment design
 	FUNDS_FOR_RESEARCH_COMPLETION_PER_RESEARCH_COST = 250,     -- Funds added to MIO when the Design Team has completed a research, multiplied by research_cost in technology template
 	FUNDS_FOR_CREATING_EQUIPMENT_VARIANT = 0,		-- Funds added to MIO when a new variant is created with the Design Team assigned to it
-	FUNDS_FROM_MANUFACTURER_PER_IC_PER_DAY = 0.05,		-- Funds added to MIO when a manufacturer is attached to a production line. Added every day proportional to IC produced.
+	FUNDS_FROM_MANUFACTURER_PER_IC_PER_DAY = 0.075,		-- Funds added to MIO when a manufacturer is attached to a production line. Added every day proportional to IC produced.
 	MAX_FUNDS_FROM_MANUFACTURER_PER_DAY = 20,		-- Max funds generated per manufacturer per day. Set to 0 for no Maximum.
 	DESIGN_TEAM_RESEARCH_BONUS = 0.01,				-- Research bonus for applying a Design Team that matches the technology
 	ENABLE_TASK_CAPACITY = false,					-- Enable limited task capacity for MIOs

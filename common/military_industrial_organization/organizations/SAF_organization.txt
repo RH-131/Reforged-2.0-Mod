@@ -8,22 +8,106 @@
 
  #################### 
 
-SAF_marmon_herrington_organization = {
-    name = SAFR_marmon_herrington
-    include = generic_motorized_mechanized_organization
-    icon = GFX_idea_generic_tank_manufacturer_3
-    allowed = {
-        original_tag = SAF
-    }
-}
+#SAF_marmon_herrington_organization = {
+#    name = SAFR_marmon_herrington
+#    include = generic_motorized_mechanized_organization
+#    icon = GFX_idea_generic_tank_manufacturer_3
+#    allowed = {
+#        original_tag = SAF
+#    }
+#}
+
 SAF_iscor_organization = {
     name = SAF_iscor_organization
-    include = generic_medium_tank_organization
     icon = GFX_idea_SAF_idea_iscor
     allowed = {
         original_TAG = SAF
-        has_dlc = "Together for Victory"
     }
+	equipment_type = { mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			armor_value = 0.10
+			maximum_speed = -0.025
+			hard_attack = 0.03
+			soft_attack = 0.075
+			build_cost_ic = 0.05
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+			production_efficiency_gain_factor = 0.1
+		}
+
+	}
+	
+	trait = {
+		token = iscor_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { medium_tank_destroyer_chassis  }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			maximum_speed = -0.025
+			armor_value = 0.10
+			hard_attack = 0.05
+			ap_attack = 0.025
+		}
+
+	}
+	
+	trait = {
+		token = iscor_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { medium_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			maximum_speed = -0.025
+			armor_value = 0.05
+			soft_attack = 0.025
+			breakthrough = 0.10
+		}
+
+	}
+	
+	trait = {
+		token = iscor_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { medium_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			maximum_speed = -0.025
+			armor_value = 0.05
+			soft_attack = 0.03
+			air_attack = 0.10
+
+		}
+
+	}
+	
 }
 
 

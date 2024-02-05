@@ -6,9 +6,93 @@
  #  #  # #  # # #   # 
  #  #  # #  # # # ## 
 
- #################### 
+##################### 
 
+RAJ_muradnager_org = {
+	icon = GFX_idea_generic_tank_manufacturer_2
+	
+	allowed = {	
+			tag = RAJ
+	}
+	
+	equipment_type = { mio_cat_eq_all_light_tank }
+	research_categories = { mio_cat_tech_light_armor_and_modules }
+	
+	tree_header_text = {
+		text = mio_weapons_specialization
+		x = 1
+	}
 
+	tree_header_text = {
+		text = mio_hull_specialization
+		x = 4
+	}
+	
+	tree_header_text = {
+		text = mio_industry_specialization
+		x = 7
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			build_cost_ic = -0.075
+			reliability = -0.10
+			defense = 0.1
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.1
+		}
+	}
+	
+	trait = {
+		token = muradnager_td
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		limit_to_equipment_type = { light_tank_destroyer_chassis  }
+
+		position = { x=0 y=0 }
+		
+		equipment_bonus = {
+			hard_attack = 0.025
+			reliability = -0.05
+			defense = 0.1
+		}
+
+	}
+	
+	trait = {
+		token = muradnager_spg
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		limit_to_equipment_type = { light_tank_artillery_chassis }
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			soft_attack = 0.02
+			reliability = -0.05
+			defense = 0.1
+		}
+
+	}
+	
+	trait = {
+		token = muradnager_spaa
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		limit_to_equipment_type = { light_tank_aa_chassis }
+
+		position = { x=2 y=0 }
+		
+		equipment_bonus = {
+			air_attack = 0.05
+			reliability = -0.05
+			defense = 0.1
+		}
+
+	}
+
+}
 
 #####################
 
