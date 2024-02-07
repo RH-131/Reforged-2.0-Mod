@@ -274,7 +274,7 @@ technologies = {
 	}
 	
 	############################# Light armor ############################
-	usa_light_tank_chassis_1934 = { 
+	usa_m1_combat_car_chassis = { 
 		enable_equipment_modules = {
 			tank_torsion_bar_suspension
 			tank_riveted_armor
@@ -314,7 +314,7 @@ technologies = {
 		}
 				
 		path = {
-			leads_to_tech = usa_light_tank_chassis_1936
+			leads_to_tech = usa_m2_light_tank_chassis
 			research_cost_coeff = 1
 		}
 		
@@ -336,14 +336,14 @@ technologies = {
 		}
 	}	
 	
-	usa_light_tank_chassis_1936 = { 
+	usa_m2_light_tank_chassis = { 
 
 		enable_equipments = {
 			light_tank_chassis_1936 
 		}
 		
 		path = {
-			leads_to_tech = usa_light_tank_chassis_1938
+			leads_to_tech = usa_m3_stuart_tank_chassis
 			research_cost_coeff = 1
 		}
 		
@@ -366,7 +366,7 @@ technologies = {
 		}
 	}
 	
-	usa_light_tank_chassis_1938 = { 
+	usa_m3_stuart_tank_chassis = { 
 
 		enable_equipments = {
 			light_tank_chassis_1938 
@@ -376,7 +376,7 @@ technologies = {
 		}	
 		
 		path = {
-			leads_to_tech = usa_light_tank_chassis_1940
+			leads_to_tech = usa_m5_stuart_tank_chassis
 			research_cost_coeff = 1
 		}
 		
@@ -402,7 +402,7 @@ technologies = {
 		}
 	}
 	
-	usa_light_tank_chassis_1940 = { 
+	usa_m5_stuart_tank_chassis = { 
 
 		enable_equipments = {
 			light_tank_chassis_1940
@@ -412,7 +412,7 @@ technologies = {
 		}	
 		
 		path = {
-			leads_to_tech = usa_light_tank_chassis_1942
+			leads_to_tech = usa_m24_chaffee_tank_chassis
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -437,7 +437,7 @@ technologies = {
 		}
 	}
 	
-	usa_light_tank_chassis_1942 = { 
+	usa_m24_chaffee_tank_chassis = { 
 
 		enable_equipments = {
 			light_tank_chassis_1942
@@ -467,7 +467,7 @@ technologies = {
 		}
 	}
 	
-	usa_medium_tank_chassis_1939 = { 
+	usa_m3_lee_tank_chassis = { 
 
 		enable_equipments = {
 			medium_tank_chassis_1939 
@@ -477,7 +477,7 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = usa_medium_tank_chassis_1941
+			leads_to_tech = usa_m4a1_sherman_tank_chassis
 			research_cost_coeff = 1
 		}
 		
@@ -510,7 +510,7 @@ technologies = {
 		}
 	}
 	
-	usa_medium_tank_chassis_1941 = { 
+	usa_m4a1_sherman_tank_chassis = { 
 
 		enable_equipments = {
 			medium_tank_chassis_1941
@@ -520,10 +520,13 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = usa_medium_tank_chassis_1943
+			leads_to_tech = usa_m4a3_sherman_tank_chassis
 			research_cost_coeff = 1
 		}
-			
+		path = {
+			leads_to_tech = usa_sherman_jumbo_tank_chassis
+			research_cost_coeff = 1
+		}
 		dependencies = {
 			advanced_machine_tools = 1
 		}
@@ -546,7 +549,7 @@ technologies = {
 		}
 	}
 	
-	usa_medium_tank_chassis_1943 = { 
+	usa_m4a3_sherman_tank_chassis = { 
 
 		enable_equipments = {
 			medium_tank_chassis_1943
@@ -556,7 +559,7 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = usa_medium_tank_chassis_1945
+			leads_to_tech = usa_easy_8_tank_chassis
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -580,10 +583,14 @@ technologies = {
 		}
 	}
 	
-	usa_medium_tank_chassis_1945 = { 
+	usa_easy_8_tank_chassis = { 
 
 		enable_equipments = {
 			medium_tank_chassis_1945
+		}
+		path = {
+			leads_to_tech = usa_pershing_tank_chassis
+			research_cost_coeff = 1
 		}
 		dependencies = {
 			modern_tools = 1
@@ -606,7 +613,66 @@ technologies = {
 			cat_medium_armor
 		}
 	}
+	usa_sherman_jumbo_tank_chassis = { 
+
+		enable_equipments = {
+			medium_tank_chassis_1943
+			medium_tank_destroyer_chassis_1943
+			medium_tank_artillery_chassis_1943
+			medium_tank_aa_chassis_1943
+		}
+		
+		path = {
+			leads_to_tech = usa_pershing_tank_chassis
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			assembly_line_production = 1
+		}
+		research_cost = 1.8
+		start_year = 1943
+		
+		folder = {
+			name = usa_nsb_armour_folder
+			position = { x = 4 y = @1943 }
+		}
 	
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = { all_armour
+			armor
+			cat_medium_armor
+		}
+	}
+	
+	usa_pershing_tank_chassis = { 
+
+		enable_equipments = {
+			medium_tank_chassis_1945
+		}
+		dependencies = {
+			modern_tools = 1
+		}
+		research_cost = 2.2
+		start_year = 1945
+		
+		folder = {
+			name = usa_nsb_armour_folder
+			position = { x = 4 y = @1945 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+		}
+		
+		categories = { all_armour
+			armor
+			cat_medium_armor
+		}
+	}
 	
 	#engines/trucks
 	

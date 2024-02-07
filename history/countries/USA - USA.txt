@@ -1,6 +1,5 @@
 ﻿capital = 361
 
-oob = "USA_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "USA_1936_naval_mtg"
@@ -50,12 +49,6 @@ set_technology = { #player
 	heavy_artillery1 = 1
 	interwar_antiair = 1
 	interwar_antitank = 1
-	################### armor ############
-	usa_tech_armored_cars = 1
-	usa_light_tank_1934 = 1 
-	usa_motorised_infantry = 1
-	usa_basic_tank_engines = 1
-	usa_rivetted_armour = 1
 	################### aircraft ################
 	usa_fighter_1934 = 1
 	usa_cv_fighter_1934 = 1
@@ -196,180 +189,41 @@ if = {
 	add_ideas = MTG_naval_treaty_adherent
 }
 
-add_to_tech_sharing_group = MEX_USA_tech_group
+	################ Armor ###########
 
-
-1939.1.1 = {
-
-	add_political_power = 1199
-	
-	#adding ministers
-	add_ideas = {
-		carl_spaatz
-		jimmy_doolittle
-		army_ordnance_department
-		general_electric
-		robert_goddard
-		USA_war_department
-		#laws
-		isolation
-		volunteer_only
-		great_depression_3
-		new_deal
-		refinery_idea
-	}
-	remove_ideas = {
-		great_depression
-	}
-
-	#focuses
-	unlock_national_focus = USA_continue_the_new_deal
-	unlock_national_focus = USA_wpa
-	complete_national_focus = USA_war_department
-	complete_national_focus = USA_air_war_plans_division
-	complete_national_focus = USA_war_plans_division
-	complete_national_focus = USA_agricultural_adjustment_act
-	complete_national_focus = USA_neutrality_act
-	complete_national_focus = USA_intervention_in_asia	
-	complete_national_focus = USA_war_plan_orange
-	complete_national_focus = USA_intervention_in_europe		
-	complete_national_focus = USA_war_plan_black
-	complete_national_focus = USA_strategic_bombing
- 	complete_national_focus = USA_fair_labour_standards_act
-
-	set_global_flag = earhart_disappeared
-	oob = "USA_1939"
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "USA_1939_naval_mtg"
-		else = {
-			set_naval_oob = "USA_1939_naval_legacy"
-		}
-	}
-
-	set_technology = {
-		fighter_1936 = 1
-		cv_fighter_1936 = 1
-		interwar_antitank = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		support_weapons2 = 1
-		marines = 1
-
-		#doctrines
-		#Air
-		air_superiority = 1
-		naval_strike_tactics = 1
-
-		sup_delay = 1
-		submarine_operations_bs = 1
-		carrier_primacy = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-		basic_encryption = 1
-		basic_decryption = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		oil_processing = 1
-		fuel_refining2 = 1
-		fuel_refining3 = 1
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-		dispersed_industry3 = 1
-	}
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		set_technology = {
-			improved_submarine = 1
-			basic_destroyer = 1
-			basic_heavy_cruiser = 1
-			basic_battlecruiser = 1
-		}
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		set_technology = {
-			improved_ship_hull_light = 1
-			basic_ship_hull_heavy = 1
-			improved_ship_hull_heavy = 1
-			improved_sonar = 1
-			improved_ship_torpedo_launcher = 1
-			improved_cruiser_armor_scheme = 1
-			improved_heavy_battery = 1
-			dp_secondary_battery = 1
-		}
-		remove_ideas = MTG_naval_treaty_adherent
-		add_ideas = MTG_naval_treaty_adherent_reduced
-	}
-	create_equipment_variant = {
-		name = "Martin M166"
-		type = tac_bomber_equipment_1934
-		upgrades = {
-			plane_tac_bomb_upgrade = 2
-			plane_range_upgrade = 1
-			plane_engine_upgrade = 2
-			plane_reliability_upgrade = 1
-		}
-	}
-}
-set_convoys = 600
-set_stability = 0.45
-set_war_support = 1
-
-set_politics = {
-	ruling_party = democratic
-	last_election = "1932.11.8"
-	election_frequency = 48
-	elections_allowed = yes
-}
-set_popularities = {
-	democratic = 61
-	neutrality = 35
-	communism = 2
-	fascism = 2
-}
 if = {
 	limit = {
-		OR = {
-			has_dlc = "Together for Victory"
-			has_dlc = "Man the Guns"
-		}
+		NOT = {has_dlc = "No Step Back"}
 	}
-	set_autonomy = {
-		target = PHI
-		autonomous_state = autonomy_colony
-		freedom_level = 0.1
+	set_technology = {
+		usa_tech_armored_cars = 1
+		usa_light_tank_1934 = 1 
+		usa_motorised_infantry = 1
+		usa_basic_tank_engines = 1
+		usa_rivetted_armour = 1
 	}
-	else = {
-		puppet = PHI
+	set_oob = "USA_1936"
+}
+	
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		usa_nsb_motorised_infantry = 1
+		usa_nsb_tech_armored_cars = 1
+		usa_nsb_tech_armored_cars2 = 1
+		usa_m1_combat_car_chassis = 1 
+		usa_m2_light_tank_chassis = 1
+		usa_basic_tank_engines = 1
+		usa_rivetted_armour = 1
+		hull = 1
+		turret = 1
+	}
+	set_oob = "USA_1936_nsb"
+}
 
-	}
-}
-add_ideas = {
-	undisturbed_isolation
-	disarmed_nation
-	great_depression
-	free_trade
-	home_of_the_free
-	USA_political_corruption
-	USA_legislation_deadlock
-	USA_the_poor_command_post
-	USA_japan_trading
-	refinery_idea
-	airandnavy_idea
-}
+add_to_tech_sharing_group = MEX_USA_tech_group
 
 if = {
 	limit = { has_dlc = "La Resistance" }
@@ -810,148 +664,72 @@ if = {
 	}
 }
 
-
-# 1939 Start #
-1939.1.1 = {
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		# Ship variants #
-		create_equipment_variant = {
-			name = "Salmon Class"
-			type = submarine_2
-			upgrades = {
-				ship_reliability_upgrade = 1
-				sub_engine_upgrade = 1
-				sub_stealth_upgrade = 1
-				sub_torpedo_upgrade = 1
-			}
-		}
-		create_equipment_variant = {
-			name = "Benson & Gleaves Class"
-			type = destroyer_2
-			upgrades = {
-				ship_torpedo_upgrade = 3
-				destroyer_engine_upgrade = 3
-				ship_ASW_upgrade = 3
-				ship_anti_air_upgrade = 3
-			}
-		}
-		create_equipment_variant = {
-			name = "Wasp Class"
-			type = carrier_2
-			upgrades = {
-				ship_deckspace_upgrade = 2
-				carrier_armor_upgrade = 2
-				ship_engine_upgrade = 2
-				ship_reliability_upgrade = 2
-			}
-		}
-		# 1941
-		#create_equipment_variant = {
-		#	name = "South Dakota Class"
-		#	type = battleship_2
-		#	upgrades = {
-		#		ship_reliability_upgrade = 3
-		#		ship_engine_upgrade = 3
-		#		ship_armor_upgrade = 3
-		#		ship_gun_upgrade = 3
-		#	}
-		#}
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		# Submarines #
-		create_equipment_variant = {
-			name = "Salmon Class"				# represents Salmon and Sargo classes
-			type = ship_hull_submarine_2
-			name_group = USA_SS_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_torpedo_slot = ship_torpedo_sub_2
-				fixed_ship_engine_slot = sub_ship_engine_2
-				rear_1_custom_slot = ship_torpedo_sub_2
-			}
-		}
-		# Destroyers #
-		create_equipment_variant = {
-			name = "Sims Class"					# represents Gridley, Bagley, Benham, Sims classes
-			type = ship_hull_light_2
-			name_group = USA_DD_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = dp_light_battery
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = ship_sonar_1
-				fixed_ship_engine_slot = light_ship_engine_2
-				fixed_ship_torpedo_slot = ship_torpedo_1
-				mid_1_custom_slot = ship_torpedo_1
-				rear_1_custom_slot = ship_depth_charge_1
-			}
-		}
-		create_equipment_variant = {
-			name = "Benson & Gleaves Class"
-			type = ship_hull_light_3
-			name_group = USA_DD_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = dp_light_battery
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = ship_sonar_2
-				fixed_ship_engine_slot = light_ship_engine_2
-				fixed_ship_torpedo_slot = ship_torpedo_2
-				mid_1_custom_slot = ship_torpedo_2
-				rear_1_custom_slot = ship_depth_charge_1
-			}
-		}
-		
-		# Battleships #
-		create_equipment_variant = {
-			name = "North Carolina Class"
-			type = ship_hull_heavy_3
-			name_group = USA_BB_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = ship_heavy_battery_3
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = heavy_ship_engine_2
-				fixed_ship_secondaries_slot = dp_ship_secondaries
-				fixed_ship_armor_slot = ship_armor_bb_2
-				front_1_custom_slot = ship_heavy_battery_3
-				mid_1_custom_slot = empty
-				mid_2_custom_slot = dp_ship_secondaries
-				mid_3_custom_slot = empty
-				rear_1_custom_slot = ship_airplane_launcher_1
-			}
-		}
-		# Carriers #
-		create_equipment_variant = {
-			name = "Wasp Class"
-			type = ship_hull_carrier_1
-			name_group = USA_CV_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_deck_slot_1 = ship_deck_space
-				fixed_ship_deck_slot_2 = ship_deck_space
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = carrier_ship_engine_1
-				fixed_ship_secondaries_slot = ship_secondaries_2
-				front_1_custom_slot = ship_deck_space
-			}
-		}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
 	}
 	create_equipment_variant = {
-		name = "F2A Buffalo"
-		type = cv_fighter_equipment_1936
-		upgrades = {
-			cv_plane_gun_upgrade = 1
-			cv_plane_range_upgrade = 0
-			plane_engine_upgrade = 2
-			plane_reliability_upgrade = 2
+		name = "M1 Light Tank"
+		type = light_tank_chassis_1934
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			armor_layout_type_slot = tank_no_armor
+			interior_slot = small_interior
+			engine_type_slot = tank_gasoline_engine
+			optic_slot = early_war_optics
 		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+		obsolete = yes
+		icon = "gfx/interface/technologies/land/ger/pz_i.dds"
+	}
+	create_equipment_variant = {
+		name = "Panzer I Ausf. A"
+		type = light_tank_chassis_1934
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_welded_armor
+			armor_layout_type_slot = tank_no_armor
+			interior_slot = small_interior
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_1
+			optic_slot = early_war_optics
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 5
+			tank_nsb_armor_upgrade = 1
+		}
+		icon = "gfx/interface/technologies/land/ger/pz_i.dds"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Panzer II Ausf. a"
+		type = light_tank_chassis_1936
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_auto_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_welded_armor
+			armor_layout_type_slot = tank_no_armor
+			interior_slot = small_interior
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_1
+			optic_slot = early_war_optics
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 3
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/land/ger/pz_ii_a.dds"
 	}
 }

@@ -43,7 +43,6 @@ set_technology = { #player
 	interwar_antiair = 1
 	interwar_antitank = 1
 	
-	################ armor ##############
 	################ airunits ##############
     eng_fighter_1934 = 1
 	eng_cv_fighter_1934 = 1
@@ -145,7 +144,7 @@ if = {
 		basic_fire_control_system = 1
 		mtg_transport = 1 
 	}
-	set_naval_oob = "ENG_1936_Naval
+	set_naval_oob = "ENG_1936_Naval"
 	add_ideas = MTG_naval_treaty_adherent
 	set_global_flag = MTG_second_london_conference
 	set_global_flag = { flag = MTG_naval_treaty_signatories value = 5 }
@@ -368,116 +367,6 @@ if = {
 	}
 }
 ### Ship Variants ###
-
-#create_equipment_variant = {
-#	name = "O/P/R Class"
-#	type = submarine_1
-#	upgrades = {
-#		ship_reliability_upgrade = 1
-#		sub_engine_upgrade = 1
-#		sub_stealth_upgrade = 1
-#		sub_torpedo_upgrade = 1
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "S Class"
-#	type = submarine_1
-#	upgrades = {
-#		ship_reliability_upgrade = 2
-#		sub_engine_upgrade = 2
-#		sub_stealth_upgrade =2
-#		sub_torpedo_upgrade = 2
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "A/B/C/D Class"
-#	type = destroyer_1
-#	upgrades = {
-#		ship_torpedo_upgrade = 1
-#		ship_engine_upgrade = 1
-#		ship_ASW_upgrade = 1
-#		ship_anti_air_upgrade = 1
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Tribal Class"
-#	type = destroyer_1
-#	upgrades = {
-#		ship_torpedo_upgrade = 2
-#		ship_engine_upgrade = 2
-#		ship_ASW_upgrade = 2
-#		ship_anti_air_upgrade = 2
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Emerald Class"
-#	type = light_cruiser_1
-#	upgrades = {
-#		ship_reliability_upgrade = 1
-#		ship_engine_upgrade = 1
-#		ship_gun_upgrade = 1
-#		ship_anti_air_upgrade = 1
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Amphion Class"
-#	type = light_cruiser_1
-#	upgrades = {
-#		ship_reliability_upgrade = 2
-#		ship_engine_upgrade = 2
-#		ship_gun_upgrade = 2
-#		ship_anti_air_upgrade = 2
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Edinburgh Class"
-#	type = light_cruiser_2
-#	upgrades = {
-#		ship_reliability_upgrade = 3
-#		ship_engine_upgrade = 3
-#		ship_gun_upgrade = 3
-#		ship_anti_air_upgrade = 3
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "County Class"
-#	type = heavy_cruiser_1
-#	upgrades = {
-#		ship_reliability_upgrade = 2
-#		ship_engine_upgrade = 2
-#		ship_armor_upgrade = 2
-#		ship_gun_upgrade = 2
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Admiral Class"
-#	type = battle_cruiser_1
-#	upgrades = {
-#		ship_reliability_upgrade = 1
-#		ship_engine_upgrade = 1
-#		ship_armor_upgrade = 1
-#		ship_gun_upgrade = 1
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Nelson Class"
-#	type = battleship_1
-#	upgrades = {
-#		ship_reliability_upgrade = 1
-#		ship_engine_upgrade = 1
-#		ship_armor_upgrade = 1
-#		ship_gun_upgrade = 1
-#	}
-#}
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Variants ###
@@ -1028,4 +917,74 @@ if = {
 				front_1_custom_slot = ship_deck_space
 			}
 	}						 
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "Vickers Light Tank Mk V"
+		type = light_tank_chassis_1934
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_horstmann_suspension
+			armor_type_slot = tank_riveted_armor
+			armor_layout_type_slot = tank_no_armor
+			interior_slot = small_interior
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_1
+			optic_slot = early_war_optics
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+		obsolete = yes
+		icon = "gfx/interface/technologies/land/eng/light_tank_1934.dds"
+	}
+	create_equipment_variant = {
+		name = "Cruiser Mark I"
+		type = medium_tank_chassis_1936
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_medium_three_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_welded_armor
+			armor_layout_type_slot = tank_rigid_armor
+			interior_slot = big_interior
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_1
+			optic_slot = early_war_optics
+			hull_slot_1 = secondary_turret_hmg
+			hull_slot_2 = secondary_turret_hmg
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/land/eng/cruiser_mki.dds"
+	}
+	create_equipment_variant = {
+		name = "Vickers Light Tank Mk VI"
+		type = light_tank_chassis_1936
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_horstmann_suspension
+			armor_type_slot = tank_riveted_armor
+			armor_layout_type_slot = tank_no_armor
+			interior_slot = small_interior
+			engine_type_slot = tank_gasoline_engine
+			optic_slot = early_war_optics
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 3
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/land/eng/light_tank1.dds"
+	}
 }
