@@ -284,7 +284,7 @@ technologies = {
 	}
 	
 	############################# Light armor ############################
-	fra_vickers_tank_chassis_1934 = { 
+	fra_renault_tank_chassis = { 
 		enable_equipment_modules = {
 			tank_torsion_bar_suspension
 			tank_riveted_armor
@@ -324,10 +324,14 @@ technologies = {
 		}
 				
 		path = {
-			leads_to_tech = fra_tetrarch_tank_chassis_1940
+			leads_to_tech = fra_r35_tank_chassis
 			research_cost_coeff = 1
 		}
-	    
+	    path = {
+			leads_to_tech = fra_h35_tank_chassis
+			research_cost_coeff = 1
+		}
+		
 		research_cost = 1.5
 		start_year = 1934
 		folder = {
@@ -345,17 +349,14 @@ technologies = {
 		}
 	}	
 	
-	fra_tetrarch_tank_chassis_1940 = { 
+	fra_r35_tank_chassis = { 
 
 		enable_equipments = {
-			light_tank_chassis_1938
-			light_tank_destroyer_chassis_1938
-			light_tank_artillery_chassis_1938
-			light_tank_aa_chassis_1938
+			light_tank_chassis_1936
 		}	
 		
 		path = {
-			leads_to_tech = fra_valentine_tank_chassis_1940
+			leads_to_tech = fra_r_tank_chassis
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -385,7 +386,44 @@ technologies = {
 		}
 	}
 	
-	fra_valentine_tank_chassis_1940 = { 
+	fra_h35_tank_chassis = { 
+
+		enable_equipments = {
+			light_tank_chassis_1936
+		}	
+		
+		path = {
+			leads_to_tech = fra_h39_tank_chassis
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			improved_machine_tools = 1
+		}
+		research_cost = 1.5
+		start_year = 1940
+		on_research_complete = {			
+				hidden_effect = {
+					load_oob = "unlock_tanks_light"
+				}			
+				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+		folder = {
+			name = fra_nsb_armour_folder
+			position = { x = 0 y = @1940 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+		}
+		
+		categories = { all_armour
+			armor
+			cat_light_armor
+		}
+	}
+	
+	fra_r40_tank_chassis = { 
 
 		enable_equipments = {
 			light_tank_chassis_1940
@@ -397,7 +435,7 @@ technologies = {
 			advanced_machine_tools = 1
 		}
 		path = {
-			leads_to_tech = fra_light_tank_chassis_1942
+			leads_to_tech = fra_stuart_tank_chassis
 			research_cost_coeff = 1
 		}
 		
