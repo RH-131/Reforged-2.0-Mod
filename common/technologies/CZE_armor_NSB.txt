@@ -1,0 +1,1022 @@
+technologies = {
+	#Vertical position
+	
+	@1934 = 1
+	@1936 = 5
+	@1937 = 7
+	@1938 = 9
+	@1939 = 11
+	@1940 = 13
+	@1941 = 15
+	@1942 = 17
+	@1943 = 19
+	@1944 = 21
+	@1945 = 23
+	@1946 = 25
+		
+	cze_nsb_motorised_infantry = {
+
+		enable_subunits = {
+			motorized
+			truck_infantry
+			truck_light_infantry
+			truck_garrison
+		}
+		enable_equipments = {
+			motorized_equipment_1
+		}
+			
+		path = {
+			leads_to_tech = cze_nsb_mechanised_infantry
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1936
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = -4 y = @1936 }
+		}
+		
+		
+		categories = { all_armour
+			motorized_equipment
+		}
+		
+		ai_will_do = {
+			factor = 7
+			
+		}
+	}
+	
+	cze_nsb_mechanised_infantry = {
+
+		enable_equipments = {
+			mechanized_equipment_1
+		}
+		enable_subunits = {
+			mechanized
+			logistics_company_mech
+		}
+		
+		path = {
+			leads_to_tech = cze_nsb_mechanised_infantry2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 1940
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = -4 y = @1940 }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = "unlock_motorized"
+				load_oob = "unlock_tanks_mech"
+			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+		
+		categories = { all_armour
+			motorized_equipment
+			cat_mechanized_equipment
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	cze_nsb_mechanised_infantry2 = {
+
+		enable_equipments = {
+			mechanized_equipment_2
+		}
+		
+		path = {
+			leads_to_tech = cze_nsb_mechanised_infantry3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1943
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = -4 y = @1943 }
+		}
+		
+		categories = { all_armour
+			motorized_equipment
+			cat_mechanized_equipment
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+	}
+	cze_nsb_mechanised_infantry3 = {
+
+		enable_equipments = {
+			mechanized_equipment_3
+		}
+
+		mechanized = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		research_cost = 2
+		start_year = 1945
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = -4 y = @1945 }
+		}
+		
+		categories = { all_armour
+			motorized_equipment
+			cat_mechanized_equipment
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+	}
+	
+    # Armored cars
+	cze_nsb_tech_armored_cars = {
+
+		enable_subunits = {
+			recon_ac
+			
+			
+			armored_car
+		}
+		
+		enable_equipments = { armored_cars_equipment_1}
+		path = {
+			leads_to_tech = cze_nsb_tech_armored_cars2
+			research_cost_coeff = 1
+		}
+        
+		research_cost = 1
+		start_year = 1934
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = -2 y = @1934 }
+		}
+		
+		categories = { all_armour
+			cat_light_armor
+			motorized_equipment
+		}
+		
+		ai_will_do = {
+			factor = 4
+			
+		}
+	}
+	
+	cze_nsb_tech_armored_cars2 = {
+		
+		enable_equipments = { armored_cars_equipment_2}
+		
+		path = {
+			leads_to_tech = cze_nsb_tech_armored_cars3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.2
+		start_year = 1936
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = -2 y = @1936 }
+		}
+		
+		categories = { all_armour
+			cat_light_armor
+			motorized_equipment
+		}
+		
+		ai_will_do = {
+			factor = 4
+			
+		}
+	}
+	
+	cze_nsb_tech_armored_cars3 = {
+				
+		enable_equipments = { armored_cars_equipment_3}
+		
+		path = {
+			leads_to_tech = cze_nsb_tech_armored_cars4
+			research_cost_coeff = 1
+		}
+        
+		research_cost = 1.2
+		start_year = 1938
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = -2 y = @1938 }
+		}
+		
+		categories = { all_armour
+			cat_light_armor
+			motorized_equipment
+		}
+		
+		ai_will_do = {
+			factor = 4
+			
+		}
+	}
+	cze_nsb_tech_armored_cars4 = {	
+		
+		enable_equipments = { armored_cars_equipment_4}
+		path = {
+			leads_to_tech = cze_nsb_tech_armored_cars5
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.2
+		start_year = 1941
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = -2 y = @1941 }
+		}
+		
+		categories = { all_armour
+			cat_light_armor
+			motorized_equipment
+		}
+		
+		ai_will_do = {
+			factor = 4
+			
+		}
+	}
+	cze_nsb_tech_armored_cars5 = {
+
+		
+		enable_equipments = { armored_cars_equipment_5}
+		
+		research_cost = 1.4
+		start_year = 1944
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = -2 y = @1944 }
+		}
+		
+		categories = { all_armour
+			cat_light_armor
+			motorized_equipment
+		}
+		
+		ai_will_do = {
+			factor = 4
+			
+		}
+	}
+	
+	############################# Light armor ############################
+	cze_panzeri_tank_chassis = {
+		enable_equipment_modules = {
+			tank_light_one_man_tank_turret
+			tank_light_fixed_superstructure_turret
+			tank_medium_fixed_superstructure_turret
+			sloped_armor
+			extra_ammo_storage
+			wet_ammo_storage
+			smoke_launchers
+		}
+		enable_subunits = {
+			light_armor
+			light_armor_recon
+		}
+		enable_equipments = {
+			light_tank_chassis_1934 
+		}	
+		path = {
+			leads_to_tech = cze_panzerii_tank_chassis
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = cze_czech_tank_chassis
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1934
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 0 y = @1934 }
+		}
+		ai_will_do = {
+			factor = 5
+			
+		}		
+		categories = {
+			all_armour
+			armor
+			cat_light_armor
+		}
+	}	
+	
+	cze_panzerii_tank_chassis = { 
+		enable_equipments = {
+			light_tank_chassis_1936
+			tank_light_two_man_tank_turret			
+		}
+		path = {
+			leads_to_tech = cze_panzeriif_tank_chassis
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1936
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 2 y = @1936 }
+		}
+		ai_will_do = {
+			factor = 5
+		}		
+		categories = {
+			all_armour
+			armor
+			cat_light_armor
+		}
+	}
+	
+	cze_panzeriif_tank_chassis = {
+		enable_equipments = {
+			light_tank_chassis_1938
+			light_tank_destroyer_chassis_1938
+			light_tank_artillery_chassis_1938
+			light_tank_aa_chassis_1938
+		}	
+		
+		path = {
+			leads_to_tech = cze_luchs_tank_chassis
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			advanced_machine_tools = 1
+		}
+		research_cost = 1.5
+		start_year = 1940
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 2 y = @1940 }
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		categories = {
+			all_armour
+			armor
+			cat_light_armor
+		}
+	}
+	cze_luchs_tank_chassis = {
+		enable_equipments = {
+			light_tank_chassis_1940
+			light_tank_destroyer_chassis_1940
+			light_tank_artillery_chassis_1940
+			light_tank_aa_chassis_1940
+		}	
+		dependencies = {
+			modern_tools = 1
+		}
+		research_cost = 1.5
+		start_year = 1944
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 2 y = @1944 }
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		categories = {
+			all_armour
+			armor
+			cat_light_armor
+		}
+	}
+	cze_czech_tank_chassis = {
+		enable_equipments = {
+			light_tank_chassis_1942
+			light_tank_destroyer_chassis_1942
+			light_tank_artillery_chassis_1942
+			light_tank_aa_chassis_1942
+			tank_light_three_man_tank_turret
+		}	
+		dependencies = {
+			advanced_machine_tools = 1
+		}
+		path = {
+			leads_to_tech = cze_hetzer_tank_chassis
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1939
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 0 y = @1939 }
+		}
+		ai_will_do = {
+			factor = 5
+		}		
+		categories = {
+			all_armour
+			armor
+			cat_light_armor
+		}
+	}
+	cze_hetzer_tank_chassis = { 
+		enable_equipments = {
+			light_tank_chassis_1944
+			light_tank_destroyer_chassis_1944
+			light_tank_artillery_chassis_1944
+			light_tank_aa_chassis_1944
+		}	
+		research_cost = 1.5
+		start_year = 1944
+		dependencies = {
+			modern_tools = 1
+		}
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 0 y = @1944 }
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		categories = {
+			all_armour
+			armor
+			cat_light_armor
+		}
+	}
+	cze_panzeriii_tank_chassis = {	
+		enable_equipments = {
+			medium_tank_chassis_1936
+			tank_medium_one_man_tank_turret
+			tank_medium_two_man_tank_turret
+			tank_medium_three_man_tank_turret
+		}
+		enable_subunits = {
+			medium_armor
+		}
+		path = {
+			leads_to_tech = cze_panzeriiij_tank_chassis
+			research_cost_coeff = 1
+		}
+		research_cost = 1.8
+		start_year = 1936
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 4 y = @1936 }
+		}
+		ai_will_do = {
+			factor = 10	
+		}
+		categories = {
+			all_armour
+			armor
+			cat_medium_armor
+		}
+	}
+	cze_panzeriiij_tank_chassis = { 
+		enable_equipments = {
+			medium_tank_chassis_1938
+			medium_tank_destroyer_chassis_1938
+			medium_tank_artillery_chassis_1938
+			medium_tank_assault_gun_chassis_1938
+			medium_tank_aa_chassis_1938
+			tank_medium_one_man_tank_turret
+			tank_medium_two_man_tank_turret
+			tank_medium_three_man_tank_turret
+		}
+		enable_subunits = {
+			medium_assault_gun_brigade
+			medium_assault_gun_company
+		}
+		path = {
+			leads_to_tech = cze_panzerivg_tank_chassis
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = cze_panther_tank_chassis
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			improved_machine_tools = 1
+		}
+		research_cost = 1.8
+		start_year = 1941
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 4 y = @1941 }
+		}
+		ai_will_do = {
+			factor = 10
+			
+		}
+		categories = {
+			all_armour
+			armor
+			cat_medium_armor
+		}
+	}
+	
+	cze_panzeriv_tank_chassis = { 
+		enable_equipments = {
+			medium_tank_chassis_1940
+			medium_tank_destroyer_chassis_1940
+			medium_tank_artillery_chassis_1940
+			medium_tank_aa_chassis_1940
+		}
+		path = {
+			leads_to_tech = cze_panzerivg_tank_chassis
+			research_cost_coeff = 1
+		}	
+		dependencies = {
+			advanced_machine_tools = 1
+		}
+		research_cost = 1.8
+		start_year = 1936
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 6 y = @1936 }
+		}
+		ai_will_do = {
+			factor = 10	
+		}
+		categories = {
+			all_armour
+			armor
+			cat_medium_armor
+		}
+	}
+	
+	cze_panzerivg_tank_chassis = {
+		enable_equipments = {
+			medium_tank_chassis_1942
+			medium_tank_destroyer_chassis_1942
+			medium_tank_artillery_chassis_1942
+			medium_tank_aa_chassis_1942
+		}
+		path = {
+			leads_to_tech = cze_panther_tank_chassis
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			assembly_line_production = 1
+		}
+		research_cost = 1.8
+		start_year = 1941
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 6 y = @1941 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		categories = {
+			all_armour
+			armor
+			cat_medium_armor
+		}
+	}
+	
+	cze_panther_tank_chassis = { #PANTHER
+		enable_equipments = {
+			medium_tank_chassis_1943
+			medium_tank_destroyer_chassis_1943
+			medium_tank_artillery_chassis_1943
+			medium_tank_aa_chassis_1943
+		}	
+		path = {
+			leads_to_tech = cze_pantherii_tank_chassis
+			research_cost_coeff = 1
+		}
+		research_cost = 1.8
+		start_year = 1943
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 5 y = @1943 }
+		}
+		dependencies = {
+			assembly_line_production = 1
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		categories = {
+			all_armour
+			armor
+			cat_medium_armor
+		}
+	}
+	cze_pantherii_tank_chassis = { 
+		enable_equipments = {
+			medium_tank_chassis_1945 
+		}
+		research_cost = 2
+		start_year = 1945
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 5 y = @1945 }
+		}
+		dependencies = {
+			modern_tools = 1
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			all_armour
+			armor
+			cat_medium_armor
+		}
+	}
+	
+	cze_neubau_tank_chassis = { 
+		enable_equipments = {
+			heavy_tank_chassis_1934 
+			tank_heavy_two_man_tank_turret
+			tank_heavy_three_man_tank_turret
+			tank_heavy_fixed_superstructure_turret
+		}
+		enable_subunits = {
+			heavy_armor
+		}
+		path = {
+			leads_to_tech = cze_ticze_tank_chassis
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1934
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 8 y = @1934 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			all_armour
+			armor
+			cat_heavy_armor
+		}
+	}
+	cze_ticze_tank_chassis = {
+		enable_equipments = {
+			heavy_tank_chassis_1942
+			heavy_tank_destroyer_chassis_1942
+			heavy_tank_artillery_chassis_1942
+		}
+		path = {
+			leads_to_tech = cze_king_ticze_tank_chassis
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			assembly_line_production = 1
+		}
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = "unlock_tanks_heavy"
+			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+		research_cost = 2.2
+		start_year = 1942
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 8 y = @1942 }
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			all_armour
+			armor
+			cat_heavy_armor
+		}
+	}
+	cze_king_ticze_tank_chassis = { 
+		enable_equipments = {
+			heavy_tank_chassis_1944
+			heavy_tank_destroyer_chassis_1944
+			heavy_tank_artillery_chassis_1944
+		}
+		dependencies = {
+			modern_tools = 1
+		}
+		research_cost = 2.2
+		start_year = 1944
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 8 y = @1944 }
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			all_armour
+			armor
+			cat_heavy_armor
+		}
+	}
+	cze_basic_tank_engines_nsb = {
+	
+		path = {
+			leads_to_tech = cze_diesel_engine_nsb
+			research_cost_coeff = 1
+		}
+        path = {
+			leads_to_tech = cze_petrol_engine_nsb
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1934
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 12 y = @1934 }
+		}
+		
+		enable_equipment_modules = {
+			tank_torsion_bar_suspension
+			tank_petrol_electric_engine
+			tank_christie_suspension
+			tank_bogie_suspension
+		}
+		
+		categories = { 
+			all_armour
+			tank_upgrade
+		}
+		
+		ai_will_do = {
+			factor = 10		
+		}
+	}
+	
+	cze_diesel_engine_nsb = {
+
+	    xor={
+			cze_petrol_engine_nsb
+		}
+		dependencies = {
+			basic_machine_tools = 1
+		}
+
+		path = {
+			leads_to_tech = cze_suspension_upgrade_nsb
+			research_cost_coeff = 1
+		}
+		allow = {
+            NOT = { has_tech = cze_petrol_engine }
+	    }
+		research_cost = 1.5
+		start_year = 1936
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 12 y = @1936 }
+		}
+		
+		enable_equipment_modules = {
+			tank_diesel_engine
+		}
+		
+		categories = { 
+			all_armour
+			tank_upgrade
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+		}
+	}
+	cze_petrol_engine_nsb = {
+        xor={
+			cze_diesel_engine_nsb
+		}
+		allow = {
+            NOT = { has_tech = cze_diesel_engine_nsb }
+	    }
+		dependencies = {
+			basic_machine_tools = 1
+		}
+		
+		path = {
+			leads_to_tech = cze_suspension_upgrade_nsb
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1936
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 13 y = @1936 }
+		}
+		
+		enable_equipment_modules = {
+			tank_gasoline_engine
+		}
+		
+		categories = { 
+			all_armour
+			tank_upgrade
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+		}
+	}
+	cze_suspension_upgrade_nsb = {
+		
+		path = {
+			leads_to_tech = cze_large_tracks_nsb
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.2
+		start_year = 1938
+		dependencies = {
+			improved_machine_tools = 1
+		}
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 12 y = @1938 }
+		}
+		
+		categories = { 
+			all_armour
+			tank_upgrade
+		}
+		
+		enable_equipment_modules = {
+			tank_interleaved_suspension
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+		}
+	}
+	cze_large_tracks_nsb = {
+		
+		path = {
+			leads_to_tech = cze_transmission_upgrade_nsb
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.3
+		start_year = 1942
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 12 y = @1942 }
+		}
+		dependencies = {
+			assembly_line_production = 1
+		}
+		categories = { 
+			all_armour
+			tank_upgrade
+		}
+		
+		enable_equipment_modules = {
+			wide_tracks
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+		}
+	}
+	cze_transmission_upgrade_nsb = {
+        
+		research_cost = 1.4
+		start_year = 1944
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 12 y = @1944 }
+		}
+		dependencies = {
+			modern_tools = 1
+		}
+		categories = { 
+			all_armour
+			tank_upgrade
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+		}
+	}
+	cze_rivetted_armour_nsb = {
+        
+		research_cost = 1.0
+		start_year = 1934
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 12 y = @1934 }
+		}
+		path = {
+			leads_to_tech = cze_casted_armour_nsb
+			research_cost_coeff = 1
+		}
+		categories = { 
+			all_armour
+			tank_upgrade
+		}
+		
+		enable_equipment_modules = {
+			tank_riveted_armor
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+		}
+	}
+	cze_casted_armour_nsb = {
+        
+		
+		research_cost = 1.4
+		start_year = 1940
+		dependencies = {
+			advanced_machine_tools = 1
+		}
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 12 y = @1940 }
+		}
+		path = {
+			leads_to_tech = cze_welded_armour_nsb
+			research_cost_coeff = 1
+		}
+		categories = { 
+			all_armour
+			tank_upgrade
+		}
+		
+		enable_equipment_modules = {
+			tank_cast_armor
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+		}
+	}
+	cze_welded_armour_nsb = {
+		
+		research_cost = 1.6
+		start_year = 1942
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 12 y = @1942 }
+		}
+		dependencies = {
+			assembly_line_production = 1
+		}
+		path = {
+			leads_to_tech = cze_armour_skirts_nsb
+			research_cost_coeff = 1
+		}
+		categories = { 
+			all_armour
+			tank_upgrade
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+		}
+	}
+	cze_armour_skirts_nsb = {
+	
+		dependencies = {
+			modern_tools = 1
+		}
+		research_cost = 1.0
+		start_year = 1944
+		folder = {
+			name = cze_nsb_armour_folder
+			position = { x = 12 y = @1944 }
+		}
+		
+		categories = { 
+			all_armour
+			tank_upgrade
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+		}
+	}
+}

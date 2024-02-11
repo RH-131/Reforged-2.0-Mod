@@ -220,7 +220,6 @@ technology_folders = {
         available = {
 			NOT = {has_dlc = "No Step Back"}
 			OR  = {
-			original_tag = HUN
 			original_tag = ROM
 			original_tag = SPR
 			original_tag = BUL
@@ -233,7 +232,6 @@ technology_folders = {
         available = {
 			has_dlc = "No Step Back"
 			OR  = {
-			original_tag = HUN
 			original_tag = ROM
 			original_tag = SPR
 			original_tag = BUL
@@ -265,20 +263,42 @@ technology_folders = {
 		ledger = army
         available = {
         	NOT = {has_dlc = "No Step Back"}
-		    OR  = {
-				original_tag = GER
-				original_tag = CZE
-		    }
+		    original_tag = GER
         }
     }
 	ger_nsb_armour_folder = {
 		ledger = army
         available = {
 			has_dlc = "No Step Back"
-		    OR  = {
-				original_tag = GER
-				original_tag = CZE
-		    }
+		    original_tag = GER
+        }
+    }
+	cze_armour_folder = {
+		ledger = army
+        available = {
+        	NOT = {has_dlc = "No Step Back"}
+		    original_tag = CZE
+        }
+    }
+	cze_nsb_armour_folder = {
+		ledger = army
+        available = {
+			has_dlc = "No Step Back"
+		    original_tag = CZE
+        }
+    }
+	hun_armour_folder = {
+		ledger = army
+        available = {
+        	NOT = {has_dlc = "No Step Back"}
+		    original_tag = HUN
+        }
+    }
+	hun_nsb_armour_folder = {
+		ledger = army
+        available = {
+			has_dlc = "No Step Back"
+		    original_tag = HUN
         }
     }
     sov_armour_folder = {
@@ -305,27 +325,37 @@ technology_folders = {
 		ledger = army
         available = {
         	NOT = {has_dlc = "No Step Back"}
-		    OR  = {
 			original_tag = ENG
-			original_tag = CAN
-			original_tag = RAJ 
-			original_tag = SAF
-			original_tag = AST
-			original_tag = NZL
-			original_tag = MAL
-			original_tag = IRE
-			original_tag = HOL
-			original_tag = POR
-			original_tag = FRA
-		    }
         }
     }
 	eng_nsb_armour_folder = {
 		ledger = army
         available = {
 			has_dlc = "No Step Back"
-		    OR  = {
 			original_tag = ENG
+        }
+    }
+	
+	fra_armour_folder = {
+		ledger = army
+        available = {
+        	NOT = {has_dlc = "No Step Back"}
+			original_tag = FRA
+        }
+    }
+	fra_nsb_armour_folder = {
+		ledger = army
+        available = {
+			has_dlc = "No Step Back"
+			original_tag = FRA
+        }
+    }
+	
+	cmw_armour_folder = {
+		ledger = army
+        available = {
+        	NOT = {has_dlc = "No Step Back"}
+		    OR  = {
 			original_tag = CAN
 			original_tag = RAJ 
 			original_tag = SAF
@@ -335,7 +365,23 @@ technology_folders = {
 			original_tag = IRE
 			original_tag = HOL
 			original_tag = POR
-			original_tag = FRA
+		    }
+        }
+    }
+	cmw_nsb_armour_folder = {
+		ledger = army
+        available = {
+			has_dlc = "No Step Back"
+		    OR  = {
+			original_tag = CAN
+			original_tag = RAJ 
+			original_tag = SAF
+			original_tag = AST
+			original_tag = NZL
+			original_tag = MAL
+			original_tag = IRE
+			original_tag = HOL
+			original_tag = POR
 		    }
         }
     }

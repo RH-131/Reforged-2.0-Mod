@@ -291,7 +291,36 @@ technologies = {
 	}
 	
 	############################# Light armor ############################
-	jap_light_tank_chassis_1934 = { 
+	jap_chiro_chassis = {
+		enable_equipment_modules = {
+			tank_torsion_bar_suspension
+			tank_riveted_armor
+			tank_gasoline_engine
+			tank_diesel_engine
+			tank_petrol_electric_engine
+			tank_cast_armor
+			tank_christie_suspension
+			tank_bogie_suspension
+			tank_interleaved_suspension
+			tank_light_one_man_tank_turret
+			tank_light_two_man_tank_turret
+			tank_light_three_man_tank_turret
+			tank_light_fixed_superstructure_turret
+			tank_medium_one_man_tank_turret
+			tank_medium_two_man_tank_turret
+			tank_medium_three_man_tank_turret
+			tank_medium_fixed_superstructure_turret
+			tank_heavy_two_man_tank_turret
+			tank_heavy_three_man_tank_turret
+			tank_heavy_fixed_superstructure_turret
+			tank_super_heavy_four_man_tank_turret
+			tank_super_heavy_three_man_tank_turret
+			tank_modern_tank_turret
+			sloped_armor
+			extra_ammo_storage
+			wet_ammo_storage
+			smoke_launchers
+		}
 		enable_subunits = {
 			light_armor
 			light_armor_recon
@@ -302,7 +331,7 @@ technologies = {
 		}
 				
 		path = {
-			leads_to_tech = jap_light_tank_chassis_1936
+			leads_to_tech = jap_hago_chassis
 			research_cost_coeff = 1
 		}
 		
@@ -324,14 +353,14 @@ technologies = {
 		}
 	}	
 	
-	jap_light_tank_chassis_1936 = { 
+	jap_hago_chassis = { 
 
 		enable_equipments = {
 			light_tank_chassis_1936 
 		}
 		
 		path = {
-			leads_to_tech = jap_light_tank_chassis_1938
+			leads_to_tech = jap_keni_chassis
 			research_cost_coeff = 1
 		}
 		
@@ -354,7 +383,7 @@ technologies = {
 		}
 	}
 	
-	jap_light_tank_chassis_1938 = { 
+	jap_keni_chassis = { 
 
 		enable_equipments = {
 			light_tank_chassis_1938
@@ -364,7 +393,7 @@ technologies = {
 		}	
 		
 		path = {
-			leads_to_tech = jap_light_tank_chassis_1940
+			leads_to_tech = jap_kami_chassis
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -393,7 +422,7 @@ technologies = {
 		}
 	}
 	
-	jap_light_tank_chassis_1940 = { 
+	jap_kami_chassis = { 
 
 		enable_equipments = {
 			light_tank_chassis_1940
@@ -405,16 +434,16 @@ technologies = {
 			advanced_machine_tools = 1
 		}
 		path = {
-			leads_to_tech = jap_light_tank_chassis_1942
+			leads_to_tech = jap_kachi_chassis
 			research_cost_coeff = 1
 		}
 		
 		research_cost = 1.5
-		start_year = 1940
+		start_year = 1941
 		
 		folder = {
 			name = jap_nsb_armour_folder
-			position = { x = 0 y = @1940 }
+			position = { x = 0 y = @1941 }
 		}
 
 		ai_will_do = {
@@ -428,7 +457,7 @@ technologies = {
 		}
 	}
 	
-	jap_light_tank_chassis_1942 = { 
+	jap_kachi_chassis = { 
 
 		enable_equipments = {
 			light_tank_chassis_1942
@@ -439,17 +468,13 @@ technologies = {
 		dependencies = {
 			assembly_line_production = 1
 		}
-		path = {
-			leads_to_tech = jap_light_tank_chassis_1944
-			research_cost_coeff = 1
-		}
 		
 		research_cost = 1.5
-		start_year = 1942
+		start_year = 1943
 		
 		folder = {
 			name = jap_nsb_armour_folder
-			position = { x = 0 y = @1942 }
+			position = { x = 0 y = @1943 }
 		}
 		
 		ai_will_do = {
@@ -463,46 +488,17 @@ technologies = {
 		}
 	}
 	
-	jap_light_tank_chassis_1944 = { 
+	jap_chiha_chassis = { 
 
 		enable_equipments = {
-			light_tank_chassis_1944
-			light_tank_destroyer_chassis_1944
-			light_tank_artillery_chassis_1944
-			light_tank_aa_chassis_1944
-		}	
-		research_cost = 1.5
-		start_year = 1944
-		dependencies = {
-			modern_tools = 1
-		}
-		folder = {
-			name = jap_nsb_armour_folder
-			position = { x = 0 y = @1944 }
-		}
-		
-		ai_will_do = {
-			factor = 10
-			
-		}
-		
-		categories = { all_armour
-			armor
-			cat_light_armor
-		}
-	}
-	
-	jap_medium_tank_chassis_1939 = { 
-
-		enable_equipments = {
-			medium_tank_chassis_1939
-			medium_tank_destroyer_chassis_1939
-			medium_tank_artillery_chassis_1939
-			medium_tank_aa_chassis_1939
+			medium_tank_chassis_1938
+			medium_tank_destroyer_chassis_1938
+			medium_tank_artillery_chassis_1938
+			medium_tank_aa_chassis_1938
 		}
 		
 		path = {
-			leads_to_tech = jap_medium_tank_chassis_1941
+			leads_to_tech = jap_chihe_chassis
 			research_cost_coeff = 1
 		}
 		on_research_complete = {
@@ -538,7 +534,7 @@ technologies = {
 		}
 	}
 	
-	jap_medium_tank_chassis_1941 = { 
+	jap_chihe_chassis = { 
 
 		enable_equipments = {
 			medium_tank_chassis_1941
@@ -548,7 +544,7 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = jap_medium_tank_chassis_1943
+			leads_to_tech = jap_chihe_chassis
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -577,8 +573,46 @@ technologies = {
 			cat_medium_armor
 		}
 	}
-	
-	jap_medium_tank_chassis_1943 = { 
+	jap_chihe_chassis = { 
+
+		enable_equipments = {
+			medium_tank_chassis_1942
+			medium_tank_destroyer_chassis_1942
+			medium_tank_artillery_chassis_1942
+			medium_tank_aa_chassis_1942
+		}
+		
+		path = {
+			leads_to_tech = jap_chito_chassis
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			advanced_machine_tools = 1
+		}	
+		
+		research_cost = 1.8
+		start_year = 1941
+		
+		folder = {
+			name = jap_nsb_armour_folder
+			position = { x = 2 y = @1942 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				num_of_military_factories < 75
+			}
+			
+		}
+		
+		categories = { all_armour
+			armor
+			cat_medium_armor
+		}
+	}
+	jap_chito_chassis = { 
 
 		enable_equipments = {
 			medium_tank_chassis_1943
@@ -588,7 +622,7 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = jap_medium_tank_chassis_1945
+			leads_to_tech = jap_chiri_chassis
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -616,10 +650,10 @@ technologies = {
 		}
 	}
 	
-	jap_medium_tank_chassis_1945 = { 
+	jap_chiri_chassis = { 
 
 		enable_equipments = {
-			medium_tank_chassis_1945
+			medium_tank_chassis_1944
 		}
 		
 		research_cost = 2.2
@@ -627,7 +661,7 @@ technologies = {
 		
 		folder = {
 			name = jap_nsb_armour_folder
-			position = { x = 2 y = @1945 }
+			position = { x = 2 y = @1944 }
 		}
 		dependencies = {
 			modern_tools = 1
