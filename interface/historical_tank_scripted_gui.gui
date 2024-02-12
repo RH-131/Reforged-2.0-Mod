@@ -1,0 +1,1742 @@
+guiTypes = {
+	containerWindowType = {      
+		name = "historical_armor_design_parent_container" 
+		position = { x = 0 y = 4 }
+		size = { width = 100% height = 100%% }
+		fade_time = 400
+		fade_type = linear
+		#moveable = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_plain_bg2"
+		}
+			
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 20 y = 8 }
+			textureFile = ""
+			font = "hoi_36header" 
+			borderSize = {x = 0 y = 0}
+			text = "Historical Tank Designs"
+			maxWidth = 400
+			maxHeight = 32
+			format = left
+		}
+		buttonType = {
+			name = "close_button"
+			position = { x = -50 y = 11 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "Main_14_black"
+			shortcut = "ESCAPE"
+			orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+		
+		buttonType = {
+			name = "unlock_all"
+			position = {x=408 y=10}
+			spriteType = "GFX_button_123x34"
+			buttonText = "unlock all"
+			buttonFont = "hoi_20b"
+			shortcut = "RETURN"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "bypass_trigger"
+			position = {x=538 y=10}
+			spriteType = "GFX_button_123x34"
+			buttonText = "no check"
+			buttonFont = "hoi_20b"
+			shortcut = "RETURN"
+			clicksound = click_default
+		}
+		containerWindowType = {  
+			name = "HTD_list_entry"
+			position = { x = 700 y = 5 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "HTD_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 50 height = 140 } 
+				   
+				max_slots_horizontal = 50
+				max_slots_vertical = 1
+				  
+			}  
+		} 
+	}
+		 
+###################################################
+###################################################
+
+	containerWindowType = {
+		name = "GER_historical_armor_design_container"
+		position = { x=0 y=47 }
+		size = { width = 100% height = 100%% }
+		margin = { top = 13 bottom = 24 right = 25 }
+		drag_scroll = { left middle }
+		verticalScrollbar = "right_vertical_slider"
+		horizontalScrollbar = "bottom_horizontal_slider"
+		smooth_scrolling = yes 
+		scroll_wheel_factor = 50
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_2b_border"
+		}  
+		
+		containerWindowType = {
+			name = "techtree_stripes"
+			position = { x= 0 y= 0 }
+			size = {    
+				width = 2100 height = 2100 
+				min = { width = 100%% height = 100% }
+			}
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_techtree_stripes"
+			}
+
+			iconType = {
+				name ="armortech_bg"
+				spriteType = "GFX_armortech_bg"
+				position = { x=0 y=0 }
+				allwaystransparent = yes
+			}
+
+		}
+
+		containerWindowType = {
+			name = "germany_subtitles"
+			position = { x = -8 y = 172 }			
+			orientation = upper_left
+			
+			instantTextBoxType = {
+				name = "germany_subtitle_panzer"
+				position = { x = 600 y = -165  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4}
+				text = "GERMAN PANZER"
+				maxWidth = 500
+				maxHeight = 62
+				format = centre
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "germany_subtitle_light"
+				position = { x = 320 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_LIGHT"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "germany_subtitle_cavalry"
+				position = { x = 740 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_CAVALRY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "germany_subtitle_medium"
+				position = { x = 1160 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_MEDIUM"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "germany_subtitle_heavy"
+				position = { x = 1860 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_HEAVY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+		}
+		
+		containerWindowType = {  
+			name = "year_entry"
+			position = { x = 0 y = 139 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "year_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 140 } 
+				   
+				max_slots_horizontal = 1
+				max_slots_vertical = 100
+				  
+			}  
+		} 
+		containerWindowType = {  
+			name = "tech_entry"
+			position = { x = 516 y = 173 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "tech_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 141 } 
+				   
+				add_horizontal = yes 
+			}  
+		} 
+		 
+	}
+	
+	containerWindowType = {
+		name = "SOV_historical_armor_design_container"
+		position = { x=0 y=47 }
+		size = { width = 100%% height = 100%% }
+		margin = { top = 13 bottom = 24 right = 25 }
+		drag_scroll = { left middle }
+		verticalScrollbar = "right_vertical_slider"
+		horizontalScrollbar = "bottom_horizontal_slider"
+		smooth_scrolling = yes 
+		scroll_wheel_factor = 50
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_2b_border"
+		}
+
+		containerWindowType = {
+			name = "techtree_stripes"
+			position = { x= 0 y= 0 }
+			size = { 
+				width = 2100 height = 2380 
+				min = { width = 100%% height = 100%% }
+			}
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_techtree_stripes"
+			}
+
+			iconType = {
+				name ="armortech_bg"
+				spriteType = "GFX_armortech_bg"
+				position = { x=0 y=0 }
+				allwaystransparent = yes
+			}	
+
+		}
+
+		containerWindowType = {
+			name = "soviet_subtitles"
+			position = { x = -8 y = 172 }			
+			orientation = upper_left
+			
+			instantTextBoxType = {
+				name = "soviet_subtitle_sov_armor"
+				position = { x = 600 y = -150  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "SOVIET ARMOR"
+				maxWidth = 600
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "soviet_subtitle_amph"
+				position = { x = 180 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_TANKETTE"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "soviet_subtitle_light"
+				position = { x = 600 y = -70  } #55
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4}
+				text = "ARMOUR_TITLE_LIGHT"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "soviet_subtitle_cavalry"
+				position = { x = 1020 y = -70 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4}
+				text = "ARMOUR_TITLE_CAVALRY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "soviet_subtitle_medium"
+				position = { x = 1300 y = -70 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4}
+				text = "ARMOUR_TITLE_MEDIUM"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "soviet_subtitle_infantry_tank"
+				position = { x = 1580 y = -70 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4}
+				text = "ARMOUR_TITLE_INFANTRY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "soviet_subtitle_heavy"
+				position = { x = 1860 y = -70 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4}
+				text = "ARMOUR_TITLE_HEAVY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+		}
+		
+		containerWindowType = {  
+			name = "year_entry"
+			position = { x = 0 y = 139 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "year_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 140 } 
+				   
+				max_slots_horizontal = 1
+				max_slots_vertical = 100
+				  
+			}  
+		} 
+		containerWindowType = {  
+			name = "tech_entry"
+			position = { x = 516 y = 173 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "tech_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 141 } 
+				   
+				add_horizontal = yes 
+			}  
+		}
+	}
+	
+	containerWindowType = {
+		name = "USA_historical_armor_design_container"
+		position = { x=0 y=47 }
+		size = { width = 100%% height = 100%% }
+		margin = { top = 13 bottom = 24 right = 25}
+		drag_scroll = { left middle }
+		verticalScrollbar = "right_vertical_slider"
+		horizontalScrollbar = "bottom_horizontal_slider"
+		smooth_scrolling = yes 
+		scroll_wheel_factor = 50
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_2b_border"
+		}
+
+		containerWindowType = {
+			name = "techtree_stripes"
+			position = { x= 0 y= 0 }
+			size = { 
+				width = 2730 height = 1960 
+				min = { width = 100%% height = 100%% }
+			}
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_techtree_stripes"
+			}
+
+			iconType = {
+				name ="armortech_bg"
+				spriteType = "GFX_armortech_bg"
+				position = { x=0 y=0 }
+				allwaystransparent = yes
+			}
+	
+		}
+		
+		containerWindowType = {
+			name = "usa_subtitles"
+			position = { x = -8 y = 172 }			
+			orientation = upper_left
+		
+			instantTextBoxType = {
+				name = "usaarmor_subtitle"
+				position = { x = 600 y = -165  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4}
+				text = "AMERICAN ARMOR"
+				maxWidth = 500
+				maxHeight = 62
+				format = centre
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "usaarmor_subtitle_light"
+				position = { x = 180 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_LIGHT"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "usaarmor_subtitle_para"
+				position = { x = 460 y = -85  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "AIRBORNE &"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "usaarmor_subtitle_amph"
+				position = { x = 460 y = -55  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_AMPH"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "usaarmor_subtitle_cavalry"
+				position = { x = 740 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_CAVALRY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "usaarmor_subtitle_medium"
+				position = { x = 1160 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_MEDIUM"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "usaarmor_subtitle_heavy"
+				position = { x = 2140 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_HEAVY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+		}
+		
+		containerWindowType = {  
+			name = "year_entry"
+			position = { x = 0 y = 139 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "year_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 140 } 
+				   
+				max_slots_horizontal = 1
+				max_slots_vertical = 100
+				  
+			}  
+		} 
+		containerWindowType = {  
+			name = "tech_entry"
+			position = { x = 516 y = 173 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "tech_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 141 } 
+				   
+				add_horizontal = yes 
+			}  
+		} 
+	}
+	
+	containerWindowType = {
+		name = "ENG_historical_armor_design_container"
+		position = { x=0 y=47 }
+		size = { width = 100%% height = 100%% }
+		margin = { top = 13 bottom = 24 right = 25}
+		drag_scroll = { left middle }
+		verticalScrollbar = "right_vertical_slider"
+		horizontalScrollbar = "bottom_horizontal_slider"
+		smooth_scrolling = yes 
+		scroll_wheel_factor = 50
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_2b_border"
+		}
+
+		containerWindowType = {
+			name = "techtree_stripes"
+			position = { x= 0 y= 0 }
+			size = { 
+				width = 2380 height = 2380 
+				min = { width = 100%% height = 100%% }
+			}
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_techtree_stripes"
+			}
+
+			iconType = {
+				name ="armortech_bg"
+				spriteType = "GFX_armortech_bg"
+				position = { x=0 y=0 }
+				alwaystransparent = yes
+			}
+
+		}
+
+		containerWindowType = {
+			name = "british_subtitles"
+			position = { x = -8 y = 172 }				
+			orientation = upper_left
+			
+			instantTextBoxType = {
+				name = "british_subtitle"
+				position = { x = 450 y = -150 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = { x = 0 y = 0 }
+				text = "BRITISH ARMOR"
+				maxWidth = 700
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "british_subtitle_light"
+				position = { x = 320 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_LIGHT"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "british_subtitle_cavalry"
+				position = { x = 600 y = 490  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_CRUISER"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "british_subtitle_medium"
+				position = { x = 1160 y = 1190  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_MEDIUM"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "british_subtitle_infantry"
+				position = { x = 1440 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_INFANTRY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "british_subtitle_heavy"
+				position = { x = 2000 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_HEAVY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+		}
+		
+		containerWindowType = {  
+			name = "year_entry"
+			position = { x = 0 y = 139 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "year_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 140 } 
+				   
+				max_slots_horizontal = 1
+				max_slots_vertical = 100
+				  
+			}  
+		} 
+		containerWindowType = {  
+			name = "tech_entry"
+			position = { x = 516 y = 173 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "tech_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 141 } 
+				   
+				add_horizontal = yes 
+			}  
+		} 
+	}
+	
+	containerWindowType = {
+		name = "CMW_historical_armor_design_container"
+		position = { x=0 y=47 }
+		size = { width = 100%% height = 100%% }
+		margin = { top = 13 bottom = 24 right = 25}
+		drag_scroll = { left middle }
+		verticalScrollbar = "right_vertical_slider"
+		horizontalScrollbar = "bottom_horizontal_slider"
+		smooth_scrolling = yes 
+		scroll_wheel_factor = 50
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_2b_border"
+		}
+
+		containerWindowType = {
+			name = "techtree_stripes"
+			position = { x= 0 y= 0 }
+			size = { 
+				width = 1870 height = 1290 
+				min = { width = 100%% height = 100%% }
+			}
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_techtree_stripes"
+			}
+
+			iconType = {
+				name ="armortech_bg"
+				spriteType = "GFX_armortech_bg"
+				position = { x=0 y=0 }
+				alwaystransparent = yes
+			}
+
+		}
+
+		containerWindowType = {
+			name = "cmw_subtitles"
+			position = { x = -8 y = 172 }				
+			orientation = upper_left
+			
+			instantTextBoxType = {
+				name = "cmw_subtitle"
+				position = { x = 600 y = -150 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = { x = 0 y = 0 }
+				text = "CANADIAN ARMOR"
+				maxWidth = 700
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "cmw_subtitle_medium"
+				position = { x = 600 y = 350  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_MEDIUM"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "cmw_subtitle_infantry"
+				position = { x = 1440 y = 350  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_INFANTRY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+		}
+		
+		containerWindowType = {  
+			name = "year_entry"
+			position = { x = 0 y = 139 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "year_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 140 } 
+				   
+				max_slots_horizontal = 1
+				max_slots_vertical = 100
+				  
+			}  
+		} 
+		containerWindowType = {  
+			name = "tech_entry"
+			position = { x = 516 y = 173 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "tech_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 141 } 
+					 
+				add_horizontal = yes 
+			}  
+		} 
+	}
+	
+	containerWindowType = {
+		name = "FRA_historical_armor_design_container"
+		position = { x=0 y=47 }
+		size = { width = 100%% height = 100%% }
+		margin = { top = 13 bottom = 24 right = 25}
+		drag_scroll = { left middle }
+		verticalScrollbar = "right_vertical_slider"
+		horizontalScrollbar = "bottom_horizontal_slider"
+		smooth_scrolling = yes 
+		scroll_wheel_factor = 50
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_2b_border"
+		}
+
+		containerWindowType = {
+			name = "techtree_stripes"
+			position = { x= 0 y= 0 }
+			size = { 
+				width = 1900 height = 2100
+				min = { width = 100%% height = 100%% }
+			}
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_techtree_stripes"
+			}
+
+			iconType = {
+				name ="armortech_bg"
+				spriteType = "GFX_armortech_bg"
+				position = { x=0 y=0 }
+				alwaystransparent = yes
+			}
+	
+		}
+
+		containerWindowType = {
+			name = "frencharmor_subtitles"
+			position = { x = -8 y = 172 }			
+			orientation = upper_left
+			
+			instantTextBoxType = {
+				name = "frencharmor_subtitle"
+				position = { x = 450 y = -150 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = { x = 0 y = 0 }
+				text = "FRENCH ARMOR"
+				maxWidth = 700
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "frencharmor_subtitle_tankette"
+				position = { x = 180 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_TANKETTE"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "frencharmor_subtitle_light"
+				position = { x = 460 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_LIGHT"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "frencharmor_subtitle_infantry"
+				position = { x = 740 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_INFANTRY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "frencharmor_subtitle_cavalry"
+				position = { x = 1020 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_CAVALRY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "frencharmor_subtitle_medium"
+				position = { x = 1300 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_MEDIUM"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "frencharmor_subtitle_heavy"
+				position = { x = 1580 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_HEAVY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+		}
+		
+		containerWindowType = {  
+			name = "year_entry"
+			position = { x = 0 y = 139 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "year_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 140 } 
+				   
+				max_slots_horizontal = 1
+				max_slots_vertical = 100
+				  
+			}  
+		} 
+		containerWindowType = {  
+			name = "tech_entry"
+			position = { x = 516 y = 173 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "tech_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 141 } 
+				   
+				add_horizontal = yes 
+			}  
+		} 
+	}
+	
+	containerWindowType = {
+		name = "ITA_historical_armor_design_container"
+		position = { x=0 y=47 }
+		size = { width = 100%% height = 100%% }
+		margin = { top = 13 bottom = 24 right = 25}
+		drag_scroll = { left middle }
+		verticalScrollbar = "right_vertical_slider"
+		horizontalScrollbar = "bottom_horizontal_slider"
+		smooth_scrolling = yes 
+		scroll_wheel_factor = 50
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_2b_border"
+		}
+
+		containerWindowType = {
+			name = "techtree_stripes"
+			position = { x= 0 y= 0 }
+			size = {  
+				width = 1470 height = 2100  
+				min = { width = 100%% height = 100%% }
+			}
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_techtree_stripes"
+			}
+
+			iconType = {
+				name ="armortech_bg"
+				spriteType = "GFX_armortech_bg"
+				position = { x=0 y=0 }
+				allwaystransparent = yes
+			}
+		
+		}
+
+		containerWindowType = {
+			name = "italyarmor_subtitles"
+			position = { x = -8 y = 172 }			
+			orientation = upper_left
+		
+			instantTextBoxType = {
+				name = "italyarmor_subtitle_tankette"
+				position = { x = 180 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_TANKETTE"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "italyarmor_subtitle_light"
+				position = { x = 460 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_LIGHT"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "italyarmor_subtitle_medium"
+				position = { x = 740 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_MEDIUM"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "italyarmor_subtitle_heavy"
+				position = { x = 1020 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_HEAVY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+		}
+
+		containerWindowType = {  
+			name = "year_entry"
+			position = { x = 0 y = 139 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "year_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 140 } 
+				   
+				max_slots_horizontal = 1
+				max_slots_vertical = 100
+				  
+			}  
+		} 
+		containerWindowType = {  
+			name = "tech_entry"
+			position = { x = 516 y = 173 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "tech_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 141 } 
+				   
+				add_horizontal = yes 
+			}  
+		}
+	}
+	
+	containerWindowType = {
+		name = "JAP_historical_armor_design_container"
+		position = { x=0 y=47 }
+		size = { width = 100%% height = 100%% }
+		margin = { top = 13 bottom = 24 right = 25}
+		drag_scroll = { left middle }
+		verticalScrollbar = "right_vertical_slider"
+		horizontalScrollbar = "bottom_horizontal_slider"
+		smooth_scrolling = yes 
+		scroll_wheel_factor = 50
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_2b_border"
+		}
+
+		containerWindowType = {
+			name = "techtree_stripes"
+			position = { x= 0 y= 0 }
+			size = { 
+				width = 1680 height = 2100
+				min = { width = 100%% height = 100%% }
+			}
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_techtree_stripes"
+			}
+
+			iconType = {
+				name ="armortech_bg"
+				spriteType = "GFX_armortech_bg"
+				position = { x=0 y=0 }
+				allwaystransparent = yes
+			}
+				
+		}
+
+		containerWindowType = {
+			name = "japanarmor_subtitles"
+			position = { x = -8 y = 172 }			
+			orientation = upper_left
+			
+			instantTextBoxType = {
+				name = "japanarmor_subtitle"
+				position = { x = 450 y = -150 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = { x = 0 y = 0 }
+				text = "JAPANESE ARMOR"
+				maxWidth = 700
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "japanarmor_subtitle_amph"
+				position = { x = 740 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_AMPH"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "japanarmor_subtitle_tankette"
+				position = { x = 180 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_TANKETTE"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "japanarmor_subtitle_light"
+				position = { x = 460 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_LIGHT"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "japanarmor_subtitle_medium"
+				position = { x = 1020 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_MEDIUM"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "japanarmor_subtitle_heavy"
+				position = { x = 1300 y = -70  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_HEAVY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+		}
+		
+		containerWindowType = {  
+			name = "year_entry"
+			position = { x = 0 y = 139 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "year_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 140 } 
+				   
+				max_slots_horizontal = 1
+				max_slots_vertical = 100
+				  
+			}  
+		} 
+		containerWindowType = {  
+			name = "tech_entry"
+			position = { x = 516 y = 173 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "tech_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 141 } 
+				   
+				add_horizontal = yes 
+			}  
+		} 
+	}
+	
+	containerWindowType = {
+		name = "HUN_historical_armor_design_container"
+		position = { x=0 y=47 }
+		size = { width = 100%% height = 100%% }
+		margin = { top = 13 bottom = 24 right = 25}
+		drag_scroll = { left middle }
+		verticalScrollbar = "right_vertical_slider"
+		horizontalScrollbar = "bottom_horizontal_slider"
+		smooth_scrolling = yes 
+		scroll_wheel_factor = 50
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_2b_border"
+		}
+
+		containerWindowType = {
+			name = "techtree_stripes"
+			position = { x= 0 y= 0 }
+			size = { 
+				width = 1870 height = 1290 
+				min = { width = 100%% height = 100%% }
+			}
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_techtree_stripes"
+			}
+
+			iconType = {
+				name ="armortech_bg"
+				spriteType = "GFX_armortech_bg"
+				position = { x=0 y=0 }
+				alwaystransparent = yes
+			}
+
+		}
+
+		containerWindowType = {
+			name = "subtitles"
+			position = { x = -8 y = 172 }				
+			orientation = upper_left
+			
+			instantTextBoxType = {
+				name = "subtitle"
+				position = { x = 600 y = -150 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = { x = 0 y = 0 }
+				text = "HUNGARIAN ARMOR"
+				maxWidth = 700
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "subtitle_medium"
+				position = { x = 600 y = 350  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_MEDIUM"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "subtitle_infantry"
+				position = { x = 1440 y = 350  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_INFANTRY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+		}
+		
+		containerWindowType = {  
+			name = "year_entry"
+			position = { x = 0 y = 139 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "year_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 140 } 
+				   
+				max_slots_horizontal = 1
+				max_slots_vertical = 100
+				  
+			}  
+		} 
+		containerWindowType = {  
+			name = "tech_entry"
+			position = { x = 516 y = 173 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "tech_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 141 } 
+					 
+				add_horizontal = yes 
+			}  
+		} 
+	}
+	
+	containerWindowType = { 
+		name = "axis_minor_historical_armor_design_container"
+		position = { x=0 y=47 }
+		size = { width = 100%% height = 100%% }
+		margin = { top = 13 bottom = 24 right = 25}
+		drag_scroll = { left middle }
+		verticalScrollbar = "right_vertical_slider"
+		horizontalScrollbar = "bottom_horizontal_slider"
+		smooth_scrolling = yes 
+		scroll_wheel_factor = 50
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_2b_border"
+		}
+
+		containerWindowType = {
+			name = "techtree_stripes"
+			position = { x= 0 y= 0 }
+			size = { 
+				width = 1870 height = 1290 
+				min = { width = 100%% height = 100%% }
+			}
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_techtree_stripes"
+			}
+
+			iconType = {
+				name ="armortech_bg"
+				spriteType = "GFX_armortech_bg"
+				position = { x=0 y=0 }
+				alwaystransparent = yes
+			}
+
+		}
+
+		containerWindowType = {
+			name = "subtitles"
+			position = { x = -8 y = 172 }				
+			orientation = upper_left
+			
+			instantTextBoxType = {
+				name = "subtitle"
+				position = { x = 600 y = -150 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = { x = 0 y = 0 }
+				text = "AXIS ALIGNED ARMOR"
+				maxWidth = 700
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "subtitle_medium"
+				position = { x = 600 y = 350  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_MEDIUM"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "subtitle_infantry"
+				position = { x = 1440 y = 350  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_INFANTRY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+		}
+		
+		containerWindowType = {  
+			name = "year_entry"
+			position = { x = 0 y = 139 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "year_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 140 } 
+				   
+				max_slots_horizontal = 1
+				max_slots_vertical = 100
+				  
+			}  
+		} 
+		containerWindowType = {  
+			name = "tech_entry"
+			position = { x = 516 y = 173 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "tech_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 141 } 
+					 
+				add_horizontal = yes 
+			}  
+		} 
+	}
+	
+	containerWindowType = {
+		name = "CZE_historical_armor_design_container"
+		position = { x=0 y=47 }
+		size = { width = 100%% height = 100%% }
+		margin = { top = 13 bottom = 24 right = 25}
+		drag_scroll = { left middle }
+		verticalScrollbar = "right_vertical_slider"
+		horizontalScrollbar = "bottom_horizontal_slider"
+		smooth_scrolling = yes 
+		scroll_wheel_factor = 50
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_2b_border"
+		}
+
+		containerWindowType = {
+			name = "techtree_stripes"
+			position = { x= 0 y= 0 }
+			size = { 
+				width = 1870 height = 1290 
+				min = { width = 100%% height = 100%% }
+			}
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_techtree_stripes"
+			}
+
+			iconType = {
+				name ="armortech_bg"
+				spriteType = "GFX_armortech_bg"
+				position = { x=0 y=0 }
+				alwaystransparent = yes
+			}
+
+		}
+
+		containerWindowType = {
+			name = "subtitles"
+			position = { x = -8 y = 172 }				
+			orientation = upper_left
+			
+			instantTextBoxType = {
+				name = "subtitle"
+				position = { x = 600 y = -150 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = { x = 0 y = 0 }
+				text = "CZECH ARMOR"
+				maxWidth = 700
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "subtitle_medium"
+				position = { x = 600 y = 350  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_MEDIUM"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "subtitle_infantry"
+				position = { x = 1440 y = 350  }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4 }
+				text = "ARMOUR_TITLE_INFANTRY"
+				maxWidth = 200
+				maxHeight = 62
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+		}
+		
+		containerWindowType = {  
+			name = "year_entry"
+			position = { x = 0 y = 139 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "year_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 140 } 
+				   
+				max_slots_horizontal = 1
+				max_slots_vertical = 100
+				  
+			}  
+		} 
+		containerWindowType = {  
+			name = "tech_entry"
+			position = { x = 516 y = 173 } 
+			size = { width = 100%% height = 100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 98
+			
+			# this grid will be dynamically populated
+			gridboxtype = { 
+				name = "tech_list"   
+				position = { x = 0 y = 0 }
+				slotsize = { width = 240 height = 141 } 
+					 
+				add_horizontal = yes 
+			}  
+		} 
+	}
+	
+	containerWindowType = {
+		name = "HTD_list_entry"
+		position = { x=0 y=0 }
+		size = { width = 203 height = 84 }
+		clipping = no
+
+		buttonType = {
+			name = "flag"
+			quadTextureSprite = "GFX_flag_small2"   
+			position = { x = 10 y = 10 }    
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "GET_NAME"      
+		}	
+	}
+	containerWindowType = {
+		name = "year_entry"
+		position = { x=-25 y=0 }
+		size = { width = 203 height = 84 }
+		clipping = no
+
+		instantTextBoxType = {
+			name = "year_text"
+			position = { x = 180 y = 47 }
+			textureFile = "" 
+			font = "hoi_36header"
+			borderSize = {x = 4 y = 4}
+			text = "HTD_YEAR_TOOLTIP" 
+			maxWidth = 5000
+			maxHeight = 170 
+			fixedsize = yes
+			format = left
+		}
+		instantTextBoxType = {
+			name = "year_tt"
+			position = { x = 6 y = -1 }
+			textureFile = "" 
+			font = "hoi_20bs"
+			borderSize = {x = 4 y = 4}
+			text = "" 
+			maxWidth = 5000
+			maxHeight = 170 
+			fixedsize = yes
+			format = left
+			pdx_tooltip = HTD_YEAR_TOOLTIP
+		}
+	}
+	
+	containerWindowType = {
+		name = "tech_entry"
+		position = { x=-55 y=0 }
+		size = { width = 203 height = 84 }
+		clipping = no
+
+		iconType = {
+			name = "tech_cost_bg"
+			position = { x=0 y=0 }
+			spriteType = "GFX_tech_bonus"
+			frame = 4
+			pdx_tooltip = HTD_variant_tooltip
+		}
+		buttonType = {
+			name = "tech"
+			quadTextureSprite ="GFX_tech_status"
+			frame = 1
+			pdx_tooltip = HTD_variant_tooltip
+		}
+  
+		iconType = {
+			name = "tech_icon"
+			position = { x=95 y=50 }
+			spriteType = "GFX_technology_medium"
+			centerposition = yes
+			allwaystransparent = yes 
+		}
+		instantTextBoxType = {
+			name = "tech_name"
+			position = { x = 6 y = -1 }
+			textureFile = "" 
+			font = "hoi_20bs"
+			borderSize = {x = 4 y = 4}
+			text = "V_GET_NAME_LOCALISED" 
+			maxWidth = 180
+			maxHeight = 20 
+			fixedsize = yes
+			format = left
+			allwaystransparent = yes 
+		}
+		instantTextBoxType = { 
+			name = "tech_cost" 
+			position = { x = 6 y = -1 }
+			textureFile = ""
+			font = "hoi_20bs"
+			borderSize = {x = 4 y = 4}
+			text = "[GetHDTXPText]"
+			maxWidth = 180
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+			allwaystransparent = yes 
+		}
+		instantTextBoxType = {
+			name = "subtech_icon"
+			position = { x = -10 y = -1 }
+			textureFile = "" 
+			font = "hoi_20bs" 
+			text = "[GetHDTSubtechIcon]" 
+			maxWidth = 40
+			maxHeight = 20 
+			fixedsize = yes
+			format = left
+			allwaystransparent = yes
+		}
+	}
+}
