@@ -487,8 +487,9 @@ HTD_GER_medium_tank_chassis_1941 = {
 			radio_slot = tank_radio_3
 			optic_slot = mid_war_optics
 			hull_slot_1 = armor_skirts
+			hull_slot_2 = easy_maintenance
 			turret_slot_1 = smoke_launchers
-			turret_slot_2 = cupola
+			turret_slot_2 = cupola_2
 		}
 		upgrades = {
 			tank_nsb_engine_upgrade = 6
@@ -515,9 +516,10 @@ HTD_GER_medium_tank_destroyer_chassis_1941 = {
 			radio_slot = tank_radio_2
 			optic_slot = mid_war_optics
 			hull_slot_1 = armor_skirts
+			hull_slot_2 = easy_maintenance
 			turret_slot_1 = smoke_launchers
-			turret_slot_2 = periscope
-			turret_slot_3 = cupola
+			turret_slot_2 = periscope_2
+			turret_slot_3 = cupola_2
 		}
 		upgrades = {
 			tank_nsb_engine_upgrade = 6
@@ -544,8 +546,8 @@ HTD_GER_medium_tank_rocket_chassis_1941 = {
 			optic_slot = mid_war_optics
 			hull_slot_1 = armor_skirts
 			turret_slot_1 = smoke_launchers
-			turret_slot_2 = periscope
-			turret_slot_3 = cupola
+			turret_slot_2 = periscope_2
+			turret_slot_3 = cupola_2
 		}
 		upgrades = {
 			tank_nsb_engine_upgrade = 6
@@ -572,8 +574,9 @@ HTD_GER_medium_tank_chassis_1941 = {
 			radio_slot = tank_radio_3
 			optic_slot = late_war_optics
 			hull_slot_1 = armor_skirts
+			hull_slot_2 = easy_maintenance
 			turret_slot_1 = smoke_launchers
-			turret_slot_2 = cupola
+			turret_slot_2 = cupola_2
 			turret_slot_3 = pintle_mount
 		}
 		upgrades = {
@@ -601,8 +604,9 @@ HTD_GER_medium_tank_rocket_chassis_1941 = {
 			radio_slot = tank_radio_3
 			optic_slot = late_war_optics
 			hull_slot_1 = armor_skirts
+			hull_slot_2 = easy_maintenance
 			turret_slot_1 = smoke_launchers
-			turret_slot_2 = cupola
+			turret_slot_2 = cupola_2
 			turret_slot_3 = pintle_mount
 		}
 		upgrades = {
@@ -615,13 +619,13 @@ HTD_GER_medium_tank_rocket_chassis_1941 = {
 HTD_GER_medium_tank_chassis_1937 = {
 	create_equipment_variant = {
 		allow_without_tech = yes 
-		name = "PzKpfw IV A" 
+		name = "PzKpfw IV D" 
 		icon = "gfx/interface/technologies/land/ger/pz_iii_a.dds"
 		type = medium_tank_chassis_1937
 		parent_version = 0
 		modules = {
 			main_armament_slot = tank_close_support_gun
-			turret_type_slot = tank_medium_fixed_superstructure_turret
+			turret_type_slot = tank_medium_three_man_tank_turret
 			suspension_type_slot = tank_leaf_spring_suspension
 			armor_type_slot = tank_welded_armor
 			armor_layout_type_slot = tank_rigid_armor
@@ -629,9 +633,237 @@ HTD_GER_medium_tank_chassis_1937 = {
 			engine_type_slot = tank_gasoline_engine
 			radio_slot = tank_radio_1
 			optic_slot = early_war_optics
-			hull_slot_1 = additional_machine_guns
 			turret_slot_1 = smoke_launchers
 			turret_slot_2 = cupola
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+}
+
+HTD_GER_medium_tank_amphibious_chassis_1937 = {
+	create_equipment_variant = {
+		allow_without_tech = yes 
+		name = "Tauchpanzer IV D" 
+		icon = "gfx/interface/technologies/land/ger/pz_iii_a.dds"
+		type = medium_tank_amphibious_chassis_1937
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_close_support_gun
+			turret_type_slot = tank_medium_three_man_tank_turret
+			suspension_type_slot = tank_leaf_spring_suspension
+			armor_type_slot = tank_welded_armor
+			armor_layout_type_slot = tank_rigid_armor
+			interior_slot = big_interior
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_1
+			optic_slot = early_war_optics
+			hull_slot_2 = amphibious_drive
+			turret_slot_1 = smoke_launchers
+			turret_slot_2 = cupola
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+}
+
+HTD_GER_medium_tank_chassis_1937 = {
+	create_equipment_variant = {
+		allow_without_tech = yes 
+		name = "PzKpfw IV F" 
+		icon = "gfx/interface/technologies/land/ger/pz_iii_a.dds"
+		type = medium_tank_chassis_1937
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_close_support_gun_2
+			turret_type_slot = tank_medium_three_man_tank_turret
+			suspension_type_slot = tank_leaf_spring_suspension
+			armor_type_slot = tank_welded_armor
+			armor_layout_type_slot = tank_rigid_armor
+			interior_slot = big_interior
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_2
+			optic_slot = mid_war_optics
+			turret_slot_1 = smoke_launchers
+			turret_slot_2 = cupola
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+}
+
+HTD_GER_medium_tank_chassis_1937 = {
+	create_equipment_variant = {
+		allow_without_tech = yes 
+		name = "PzKpfw IV F2" 
+		icon = "gfx/interface/technologies/land/ger/pz_iii_a.dds"
+		type = medium_tank_chassis_1937
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_medium_cannon_2
+			turret_type_slot = tank_medium_three_man_tank_turret
+			suspension_type_slot = tank_leaf_spring_suspension
+			armor_type_slot = tank_welded_armor
+			armor_layout_type_slot = tank_rigid_armor
+			interior_slot = big_interior
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_2
+			optic_slot = mid_war_optics
+			turret_slot_1 = smoke_launchers
+			turret_slot_2 = cupola
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+}
+
+HTD_GER_medium_tank_chassis_1942 = {
+	create_equipment_variant = {
+		allow_without_tech = yes 
+		name = "PzKpfw IV G" 
+		icon = "gfx/interface/technologies/land/ger/pz_iii_a.dds"
+		type = medium_tank_chassis_1942
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_medium_cannon_2
+			turret_type_slot = tank_medium_three_man_tank_turret
+			suspension_type_slot = tank_leaf_spring_suspension
+			armor_type_slot = tank_welded_armor
+			armor_layout_type_slot = tank_rigid_armor
+			interior_slot = big_interior
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_3
+			optic_slot = mid_war_optics
+			hull_slot_1 = armor_skirts
+			hull_slot_2 = easy_maintenance
+			turret_slot_1 = smoke_launchers
+			turret_slot_2 = cupola_2
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+}
+
+HTD_GER_medium_tank_destroyer_chassis_1942 = {
+	create_equipment_variant = {
+		allow_without_tech = yes 
+		name = "StuG IV" 
+		icon = "gfx/interface/technologies/land/ger/pz_iii_a.dds"
+		type = medium_tank_destroyer_chassis_1942
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_medium_cannon_2
+			turret_type_slot = tank_medium_fixed_superstructure_turret
+			suspension_type_slot = tank_leaf_spring_suspension
+			armor_type_slot = tank_welded_armor
+			armor_layout_type_slot = tank_rigid_armor
+			interior_slot = big_interior
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_3
+			optic_slot = mid_war_optics
+			hull_slot_1 = easy_maintenance
+			turret_slot_1 = smoke_launchers
+			turret_slot_2 = cupola_2
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+}
+
+HTD_GER_medium_tank_chassis_1942 = {
+	create_equipment_variant = {
+		allow_without_tech = yes 
+		name = "PzKpfw IV H" 
+		icon = "gfx/interface/technologies/land/ger/pz_iii_a.dds"
+		type = medium_tank_chassis_1942
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_medium_cannon_2
+			turret_type_slot = tank_medium_three_man_tank_turret
+			suspension_type_slot = tank_leaf_spring_suspension
+			armor_type_slot = tank_welded_armor
+			armor_layout_type_slot = tank_rigid_armor
+			interior_slot = big_interior
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_3
+			optic_slot = late_war_optics
+			hull_slot_1 = armor_skirts
+			hull_slot_2 = easy_maintenance
+			turret_slot_1 = smoke_launchers
+			turret_slot_2 = cupola_2
+			turret_slot_3 = turret_armor_skirts
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+}
+
+HTD_GER_medium_tank_rocket_chassis_1942 = {
+	create_equipment_variant = {
+		allow_without_tech = yes 
+		name = "Sturmpanzer 43" 
+		icon = "gfx/interface/technologies/land/ger/pz_iii_a.dds"
+		type = medium_tank_rocket_chassis_1942
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_medium_howitzer_2
+			turret_type_slot = tank_medium_fixed_superstructure_turret
+			suspension_type_slot = tank_leaf_spring_suspension
+			armor_type_slot = tank_welded_armor
+			armor_layout_type_slot = tank_sloped_armor
+			interior_slot = big_interior
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_3
+			optic_slot = late_war_optics
+			hull_slot_1 = armor_skirts
+			hull_slot_2 = easy_maintenance
+			turret_slot_1 = smoke_launchers
+			turret_slot_2 = cupola_2
+			turret_slot_3 = pintle_mount
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+}
+
+HTD_GER_medium_tank_aa_chassis_1942 = {
+	create_equipment_variant = {
+		allow_without_tech = yes 
+		name = "FlakPz IV Ostwind" 
+		icon = "gfx/interface/technologies/land/ger/pz_iii_a.dds"
+		type = medium_tank_aa_chassis_1942
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_medium_howitzer_2
+			turret_type_slot = tank_medium_open_turret
+			suspension_type_slot = tank_leaf_spring_suspension
+			armor_type_slot = tank_welded_armor
+			armor_layout_type_slot = tank_rigid_armor
+			interior_slot = big_interior
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_3
+			optic_slot = late_war_optics
+			hull_slot_1 = armor_skirts
+			hull_slot_2 = easy_maintenance
+			turret_slot_1 = smoke_launchers
+			turret_slot_2 = cupola_2
+			turret_slot_3 = pintle_mount
 		}
 		upgrades = {
 			tank_nsb_engine_upgrade = 6
