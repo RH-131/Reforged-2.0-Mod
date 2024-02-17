@@ -1,0 +1,119 @@
+### Vertical position Y
+@1941 = 6
+@1942 = 8
+@1943 = 10
+@1944 = 12
+@1945 = 14
+
+### Horizontal position X
+@MEDIUM = 7
+
+
+HTD_HUN_tech_position = {
+	set_temp_variable = { tech_status = 0 }
+	set_temp_variable = { armor_aa = 0 }
+	set_temp_variable = { armor_td = 0 }
+	set_temp_variable = { armor_art = 0 }
+	set_temp_variable = { armor_flame = 0 }
+	set_temp_variable = { armor_asg = 0 }
+	set_temp_variable = { armor_amph = 0 }
+	set_temp_variable = { armor_cs = 0 }
+	set_temp_variable = { armor_reg = 0 }
+	set_temp_variable = { xp_true = 0 } 
+	
+  
+  #template entry #TODO ELOUDA
+	if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ast_ac1_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942}
+
+		set_temp_variable = { subtech = 0 }
+	}
+  
+	HTD_adjust_position = yes			  
+}
+HTD_SWE_tech_position = {
+	set_temp_variable = { tech_status = 0 }
+	set_temp_variable = { armor_aa = 0 }
+	set_temp_variable = { armor_td = 0 }
+	set_temp_variable = { armor_art = 0 }
+	set_temp_variable = { armor_flame = 0 }
+	set_temp_variable = { armor_asg = 0 }
+	set_temp_variable = { armor_amph = 0 }
+	set_temp_variable = { armor_cs = 0 }
+	set_temp_variable = { armor_reg = 0 }
+	set_temp_variable = { xp_true = 0 } 
+	
+  
+  #template entry #TODO ELOUDA
+	if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ast_ac1_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942}
+
+		set_temp_variable = { subtech = 0 }
+	}
+  
+	HTD_adjust_position = yes			  
+}
+HTD_POL_tech_position = {
+	set_temp_variable = { tech_status = 0 }
+	set_temp_variable = { armor_aa = 0 }
+	set_temp_variable = { armor_td = 0 }
+	set_temp_variable = { armor_art = 0 }
+	set_temp_variable = { armor_flame = 0 }
+	set_temp_variable = { armor_asg = 0 }
+	set_temp_variable = { armor_amph = 0 }
+	set_temp_variable = { armor_cs = 0 }
+	set_temp_variable = { armor_reg = 0 }
+	set_temp_variable = { xp_true = 0 } 
+	
+  
+  #template entry #TODO ELOUDA
+	if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ast_ac1_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942}
+
+		set_temp_variable = { subtech = 0 }
+	}
+  
+	HTD_adjust_position = yes			  
+}
+HTD_CZE_tech_position = {
+	set_temp_variable = { tech_status = 0 }
+	set_temp_variable = { armor_aa = 0 }
+	set_temp_variable = { armor_td = 0 }
+	set_temp_variable = { armor_art = 0 }
+	set_temp_variable = { armor_flame = 0 }
+	set_temp_variable = { armor_asg = 0 }
+	set_temp_variable = { armor_amph = 0 }
+	set_temp_variable = { armor_cs = 0 }
+	set_temp_variable = { armor_reg = 0 }
+	set_temp_variable = { xp_true = 0 } 
+	
+  
+  #template entry #TODO ELOUDA
+	if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ast_ac1_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942}
+
+		set_temp_variable = { subtech = 0 }
+	}
+  
+	HTD_adjust_position = yes			  
+}
+
+#template entry
+#HTD_AST_trm_medium_tank_chassis_ast_ac1_1_a = {
+#	set_temp_variable = { xp_cost = 10 } 
+#	
+#	### CONDITIONS
+#	
+#}

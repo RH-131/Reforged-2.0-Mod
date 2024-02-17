@@ -1,0 +1,641 @@
+### Vertical position Y
+@1930 = 0
+@1933 = 2
+@1934 = 4
+@1935 = 6
+@1936 = 8
+@1937 = 10
+@1938 = 12
+@1939 = 14
+@1940 = 16
+@1941 = 18
+@1942 = 20
+@1943 = 22
+@1944 = 24
+@1945 = 26
+### Horizontal position X
+@TANKETTE = 1
+@LIGHT = 5
+@INFANTRY = 9
+@CAVALRY = 13
+@MEDIUM = 17
+@HEAVY = 21
+
+HTD_FRA_tech_position = {
+	set_temp_variable = { tech_status = 0 }
+	set_temp_variable = { armor_aa = 0 }
+	set_temp_variable = { armor_td = 0 }
+	set_temp_variable = { armor_art = 0 }
+	set_temp_variable = { armor_flame = 0 }
+	set_temp_variable = { armor_asg = 0 }
+	set_temp_variable = { armor_amph = 0 }
+	set_temp_variable = { armor_cs = 0 }
+	set_temp_variable = { armor_reg = 0 }
+	set_temp_variable = { xp_true = 0 } 
+	
+	if = {
+		limit = { check_variable = { v = token:trm_tankette_tank_chassis_fra_amr33_1_a } }
+
+		set_temp_variable = { tech_x = @TANKETTE }
+		set_temp_variable = { tech_y = @1933 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_tankette_tank_chassis_fra_amr35_1_b } }
+
+		set_temp_variable = { tech_x = @TANKETTE }
+		set_temp_variable = { tech_y = @1936 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_tankette_tank_chassis_fra_amr35_1_a } }
+
+		set_temp_variable = { tech_x = @TANKETTE }
+		set_temp_variable = { tech_y = @1936 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_tankette_tank_chassis_fra_amr35_1_c } }
+
+		set_temp_variable = { tech_x = @TANKETTE }
+		set_temp_variable = { tech_y = @1936 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_tankette_tank_destroyer_chassis_fra_amr35_1_a } }
+
+		set_temp_variable = { tech_x = @TANKETTE }
+		set_temp_variable = { tech_y = @1936 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_fra_ft17_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_fra_ft17_1_b } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_fra_h35_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1936 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_fra_h35_1_b } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1936 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_fra_h39_1_b } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_fra_h39_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_fra_fcm36_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1938 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_fra_r35_1_a } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_fra_r35_1_b } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_fra_r40_1_a } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_fra_amc34_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1934 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_fra_amc35_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1936 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_fra_s35_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_destroyer_chassis_fra_s35_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_destroyer_chassis_fra_s35_1_b } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_fra_s40_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_fra_d1_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1933 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_fra_d2_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_fra_d2_1_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_fra_amx38_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1938 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_fra_amx40_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_fra_sarl42_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_fra_2c_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_fra_b1_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_fra_b1_2_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1937 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_fra_b1_2_b } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1937 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_fra_arl44_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	HTD_adjust_position = yes
+}
+
+
+HTD_FRA_trm_tankette_tank_chassis_fra_amr33_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_tankette_tank_chassis_fra_amr33_1 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_FRA_trm_tankette_tank_chassis_fra_amr35_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_tankette_tank_chassis_fra_amr35_1 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_FRA_trm_tankette_tank_chassis_fra_amr35_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_tankette_tank_chassis_fra_amr35_1 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_FRA_trm_tankette_tank_chassis_fra_amr35_1_c = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_tankette_tank_chassis_fra_amr35_1 
+	has_tech = tech_trm_tankette_tank_fra_amr35_turret_2 
+	has_tech = tech_trm_weapon_c_fra_25_sa35 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_basic 
+	
+}
+HTD_FRA_trm_tankette_tank_destroyer_chassis_fra_amr35_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_tankette_tank_chassis_fra_amr35_1 
+	has_tech = tech_trm_tankette_tank_fra_amr35_casemate_1 
+	has_tech = tech_trm_weapon_c_fra_25_sa34 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_basic
+
+}
+HTD_FRA_trm_light_tank_chassis_fra_ft17_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_french_armour 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_light_tank_chassis_fra_ft17_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_french_armour 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_light_tank_chassis_fra_h35_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_fra_h35_1 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_light_tank_chassis_fra_h35_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_fra_h35_1 
+	has_tech = tech_trm_weapon_c_fra_37_sa38 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_light_tank_chassis_fra_h39_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_fra_h39_1 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_light_tank_chassis_fra_h39_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_fra_h39_1 
+	has_tech = tech_trm_weapon_c_fra_37_sa38 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_light_tank_chassis_fra_fcm36_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_fra_fcm36_1 
+	has_tech = tech_trm_engine_diesel_interwar_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_cavalry_tank_chassis_fra_amc34_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_fra_amc34_1 
+	has_tech = tech_trm_weapon_c_fra_47_sa34 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_cavalry_tank_chassis_fra_amc35_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_cavalry_tank_chassis_fra_amc35_1 
+	has_tech = tech_trm_weapon_c_fra_47_sa35 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+	
+}
+HTD_FRA_trm_cavalry_tank_chassis_fra_s35_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_fra_s35_1 
+	has_tech = tech_trm_weapon_c_fra_47_sa35 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_cavalry_tank_chassis_fra_s40_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_fra_s40_1 
+	has_tech = tech_trm_weapon_c_fra_47_sa35 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio
+
+}
+HTD_FRA_trm_cavalry_tank_destroyer_chassis_fra_s35_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_fra_s35_1 
+	has_tech = tech_trm_cavalry_tank_fra_s35_casemate_1 
+	has_tech = tech_trm_weapon_c_fra_75_apx 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio
+
+}
+HTD_FRA_trm_cavalry_tank_destroyer_chassis_fra_s35_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_fra_s35_1 
+	has_tech = tech_trm_cavalry_tank_fra_s35_casemate_1 
+	has_tech = tech_trm_weapon_c_fra_47_sa39 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio
+
+}
+HTD_FRA_trm_infantry_tank_chassis_fra_r35_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_fra_r35_1 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_infantry_tank_chassis_fra_r35_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_fra_r35_1 
+	has_tech = tech_trm_weapon_c_fra_37_sa38 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_infantry_tank_chassis_fra_r40_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_fra_r40_1 
+	has_tech = tech_trm_weapon_c_fra_37_sa38 
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_medium_tank_chassis_fra_d1_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_fra_d1_1 
+	has_tech = tech_trm_weapon_c_fra_47_sa34
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_medium_tank_chassis_fra_d2_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_fra_d2_1 
+	has_tech = tech_trm_weapon_c_fra_47_sa34
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_medium_tank_chassis_fra_d2_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_fra_d2_1 
+	has_tech = tech_trm_medium_tank_fra_d2_turret_2 
+	has_tech = tech_trm_weapon_c_fra_47_sa35
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_medium_tank_chassis_fra_amx38_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_fra_amx38_1 
+	has_tech = tech_trm_weapon_c_fra_47_sa35
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_medium_tank_chassis_fra_amx40_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_fra_amx40_1 
+	has_tech = tech_trm_weapon_c_fra_47_sa35
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_suspension_christie_improved_fra
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_rounded_fra 
+	has_tech = tank_radio
+
+}
+HTD_FRA_trm_medium_tank_chassis_fra_sarl42_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_fra_sarl42_1 
+	has_tech = tech_trm_weapon_c_fra_75_sa42
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_heavy_tank_chassis_fra_2c_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_fra_2c_1
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_heavy_tank_chassis_fra_b1_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_fra_b1_1
+	has_tech = tech_trm_weapon_c_fra_47_sa34
+	has_tech = tech_trm_weapon_c_fra_75_sa35
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_FRA_trm_heavy_tank_chassis_fra_b1_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_fra_b1_2
+	has_tech = tech_trm_weapon_c_fra_47_sa35
+	has_tech = tech_trm_weapon_c_fra_75_sa35
+	has_tech = tech_trm_engine_gasoline_basic_fra
+	has_tech = tech_trm_armour_improved 
+
+}
+HTD_FRA_trm_heavy_tank_chassis_fra_b1_2_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_fra_b1_2
+	has_tech = tech_trm_weapon_c_fra_47_sa35
+	has_tech = tech_trm_weapon_c_fra_75_sa35
+	has_tech = tech_trm_engine_diesel_improved_fra
+	has_tech = tech_trm_armour_improved 
+	has_tech = tank_radio 
+	has_tech = tech_trm_armour_addon 
+
+}
+HTD_FRA_trm_heavy_tank_chassis_fra_arl44_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_fra_arl44_1
+	has_tech = tech_trm_weapon_c_fra_90_sa45
+	has_tech = tech_trm_engine_gasoline_improved_fra
+	has_tech = tech_trm_gearbox_advanced_fra
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_sloped_fra 
+	has_tech = tank_radio3
+
+}

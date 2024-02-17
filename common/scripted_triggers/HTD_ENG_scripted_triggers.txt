@@ -1,0 +1,1682 @@
+### Vertical position Y
+@1925 = 0
+@1930 = 2
+@1934 = 4
+@1935 = 6
+@1936 = 8
+@1937 = 10
+@1938 = 12
+@1939 = 14
+@1940 = 16
+@1941 = 18
+@1942 = 20
+@1943 = 22
+@1944 = 24
+@1945 = 26
+@1946 = 28
+@1947 = 30
+### Horizontal position X
+@LIGHT = 1
+@CAVALRY = 5
+@CAVALRY2 = 9
+@MEDIUM = 13
+@MEDIUM2 = 17
+@INFANTRY = 21
+@HEAVY = 25
+@HEAVY2 = 29
+
+HTD_ENG_tech_position = {
+	set_temp_variable = { tech_status = 0 }
+	set_temp_variable = { armor_aa = 0 }
+	set_temp_variable = { armor_td = 0 }
+	set_temp_variable = { armor_art = 0 }
+	set_temp_variable = { armor_flame = 0 }
+	set_temp_variable = { armor_asg = 0 }
+	set_temp_variable = { armor_amph = 0 }
+	set_temp_variable = { armor_cs = 0 }
+	set_temp_variable = { armor_reg = 0 }
+	set_temp_variable = { xp_true = 0 } 
+	
+	if = {
+		limit = { check_variable = { v = token:trm_tankette_tank_chassis_eng_cardenloyd_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1925 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_eng_vickers_light_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_eng_vickers_light_1_b } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_eng_vickers_light_1_c } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_eng_vickers_light_2_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1934 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_eng_vickers_light_3_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_eng_vickers_light_4_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1936 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_aa_chassis_eng_vickers_light_4_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1936 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_aa = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_eng_vickers_e_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_eng_vickers_e_1_b } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_para_tank_chassis_eng_tetrarch_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_para_tank_chassis_eng_mk8_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_eng_mk1_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1936 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_eng_mk2_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1937 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_eng_mk3_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1938 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_eng_mk4_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_eng_mk5_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_cs_chassis_eng_mk5_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_eng_mk6_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY2 }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_cs_chassis_eng_mk6_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY2 }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_aa_chassis_eng_mk6_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY2 }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_aa = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_aa_chassis_eng_mk6_1_b } }
+
+		set_temp_variable = { tech_x = @CAVALRY2 }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_aa = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_eng_mk6_1_b } }
+
+		set_temp_variable = { tech_x = @CAVALRY2 }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_eng_mk7_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_eng_mk8_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_eng_mk8_1_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_cs_chassis_eng_mk8_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_aa_chassis_eng_mk8_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_aa = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_eng_mk8_2_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_eng_mk8_2_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_cs_chassis_eng_mk8_2_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_eng_mk8_3_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_eng_mk8_3_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_eng_comet_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_advanced_tank_chassis_eng_centurion_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1945 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_advanced_tank_chassis_eng_centurion_1_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1947 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_advanced_tank_cs_chassis_eng_centurion_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1947 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_eng_vickers_medium_1_b } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1925 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_eng_vickers_medium_1_a } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_eng_matilda1_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1937 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_eng_matilda2_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_eng_matilda2_1_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_cs_chassis_eng_matilda2_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_eng_valentine_1_a } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_eng_valentine_2_a } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_cs_chassis_eng_valentine_2_a } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_destroyer_chassis_eng_valentine_2_a } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_artillery_chassis_eng_valentine_2_a } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_art = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_eng_valentine_3_a } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_amphibious_chassis_eng_valentine_3_a } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_amph = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_eng_valentine_3_b } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_eng_valentine_3_c } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_eng_independent_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1925 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_eng_churchill_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_eng_churchill_1_b } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_cs_chassis_eng_churchill_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_destroyer_chassis_eng_churchill_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_eng_churchill_2_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_cs_chassis_eng_churchill_2_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_amphibious_chassis_eng_churchill_2_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_amph = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_eng_churchill_3_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_cs_chassis_eng_churchill_3_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_amphibious_chassis_eng_churchill_3_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_amph = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_eng_churchill_4_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1945 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_eng_excelsior_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY2 }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_eng_excelsior_1_b } }
+
+		set_temp_variable = { tech_x = @HEAVY2 }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_superheavy_tank_chassis_eng_tortoise_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY2 }
+		set_temp_variable = { tech_y = @1945 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_usa_m4_1_g } }
+
+		set_temp_variable = { tech_x = @CAVALRY2 }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_usa_m4_2_h } }
+
+		set_temp_variable = { tech_x = @CAVALRY2 }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_usa_m4_1_b } }
+
+		set_temp_variable = { tech_x = @CAVALRY2 }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	
+	HTD_adjust_position = yes
+}
+
+HTD_ENG_trm_tankette_tank_chassis_eng_cardenloyd_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_british_armour 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_basic 
+}
+HTD_ENG_trm_light_tank_chassis_eng_vickers_light_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_eng_vickers_light_1 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_basic 
+}
+HTD_ENG_trm_light_tank_chassis_eng_vickers_light_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_eng_vickers_light_1 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_basic 
+}
+HTD_ENG_trm_light_tank_chassis_eng_vickers_light_1_c = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_eng_vickers_light_1 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_basic 
+}
+HTD_ENG_trm_light_tank_chassis_eng_vickers_light_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_eng_vickers_light_2 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_basic 
+}
+HTD_ENG_trm_light_tank_chassis_eng_vickers_light_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_eng_vickers_light_3 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_basic 
+}
+HTD_ENG_trm_light_tank_chassis_eng_vickers_light_4_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_eng_vickers_light_4 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_basic
+}
+HTD_ENG_trm_light_tank_aa_chassis_eng_vickers_light_4_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_eng_vickers_light_4 
+	has_tech = tech_trm_light_tank_eng_vickers_light_aa_open_1 
+	has_tech = tech_trm_weapon_aa_mg_eng_7_besa 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_basic 
+}
+HTD_ENG_trm_light_tank_chassis_eng_vickers_e_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_eng_vickers_e_1 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_basic 
+}
+HTD_ENG_trm_light_tank_chassis_eng_vickers_e_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_light_tank_chassis_eng_vickers_e_1 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_basic 
+}
+HTD_ENG_trm_para_tank_chassis_eng_tetrarch_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_para_tank_chassis_eng_tetrarch_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_weapon_mg_eng_besa 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_basic 
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_smoke_discharger
+}
+HTD_ENG_trm_para_tank_chassis_eng_mk8_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_para_tank_chassis_eng_mk8_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_weapon_mg_eng_besa 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_light_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_ammo_eng_ap_small
+}
+HTD_ENG_trm_cavalry_tank_chassis_eng_mk1_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_eng_mk1_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_basic 
+}
+HTD_ENG_trm_cavalry_tank_chassis_eng_mk2_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_eng_mk2_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_cavalry_tank_chassis_eng_mk3_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_eng_mk3_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tank_radio
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_cavalry_tank_chassis_eng_mk4_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_eng_mk4_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tank_radio
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_cavalry_tank_chassis_eng_mk5_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_eng_mk5_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_light_sloped_eng
+	has_tech = tank_radio2
+}
+HTD_ENG_trm_cavalry_tank_cs_chassis_eng_mk5_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_eng_mk5_1
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_light_sloped_eng
+	has_tech = tank_radio2
+}
+HTD_ENG_trm_cavalry_tank_chassis_eng_mk6_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_eng_mk6_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_light_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+}
+HTD_ENG_trm_cavalry_tank_chassis_eng_mk6_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_eng_mk6_1 
+	has_tech = tech_trm_cavalry_tank_eng_mk6_turret_2 
+	has_tech = tech_trm_weapon_c_eng_57_6pdr_mk3
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_light_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_ammo_eng_ap_small
+}
+HTD_ENG_trm_cavalry_tank_cs_chassis_eng_mk6_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_eng_mk6_1
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_light_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+}
+HTD_ENG_trm_cavalry_tank_aa_chassis_eng_mk6_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_eng_mk6_1
+	has_tech = tech_trm_cavalry_tank_eng_mk6_aa_open_1
+	has_tech = tech_trm_weapon_aa_ac_eng_40_bofors
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_light_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+}
+HTD_ENG_trm_cavalry_tank_aa_chassis_eng_mk6_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_cavalry_tank_chassis_eng_mk6_1
+	has_tech = tech_trm_cavalry_tank_eng_mk6_aa_1
+	has_tech = tech_trm_weapon_aa_ac_eng_20_oerlikon
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_light_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+}
+HTD_ENG_trm_medium_tank_chassis_eng_mk7_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_eng_mk7_1 
+	has_tech = tech_trm_weapon_c_eng_57_6pdr_mk3
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_medium_tank_chassis_eng_mk8_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_eng_mk8_1 
+	has_tech = tech_trm_weapon_c_eng_57_6pdr_mk3
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_medium_tank_chassis_eng_mk8_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_eng_mk8_1 
+	has_tech = tech_trm_weapon_c_eng_75_mk5
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_medium_tank_cs_chassis_eng_mk8_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_eng_mk8_1 
+	has_tech = tech_trm_weapon_c_eng_95_how
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_medium_tank_aa_chassis_eng_mk8_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_eng_mk8_1 
+	has_tech = tech_trm_medium_tank_eng_mk8_aa_1 
+	has_tech = tech_trm_weapon_aa_ac_eng_20_polsten
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+}
+HTD_ENG_trm_medium_tank_chassis_eng_mk8_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_eng_mk8_2
+	has_tech = tech_trm_weapon_c_eng_57_6pdr_mk3
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_improved_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_smoke_discharger
+	has_tech = tech_trm_ammo_eng_ap_small
+}
+HTD_ENG_trm_medium_tank_chassis_eng_mk8_2_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_eng_mk8_2
+	has_tech = tech_trm_weapon_c_eng_75_mk5
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_improved_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_smoke_discharger
+}
+HTD_ENG_trm_medium_tank_cs_chassis_eng_mk8_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_eng_mk8_2
+	has_tech = tech_trm_weapon_c_eng_95_how
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_improved_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_smoke_discharger
+}
+HTD_ENG_trm_medium_tank_chassis_eng_mk8_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_eng_mk8_3
+	has_tech = tech_trm_weapon_c_eng_76_17pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_improved_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_ammo_eng_apds
+}
+HTD_ENG_trm_medium_tank_destroyer_chassis_eng_mk8_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_eng_mk8_3
+	has_tech = tech_trm_weapon_c_eng_76_17pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_improved_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_ammo_eng_apds
+}
+HTD_ENG_trm_medium_tank_chassis_eng_comet_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_eng_comet_1
+	has_tech = tech_trm_weapon_c_eng_76_mk2
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_improved_eng
+	has_tech = tech_trm_gearbox_advanced_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_smoke_discharger
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_ammo_eng_apds
+}
+HTD_ENG_trm_medium_advanced_tank_chassis_eng_centurion_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_advanced_tank_chassis_eng_centurion_1
+	has_tech = tech_trm_weapon_c_eng_76_17pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_improved_eng
+	has_tech = tech_trm_gearbox_advanced_eng
+	has_tech = tech_trm_suspension_horstmann_modified_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_ammo_eng_apds
+}
+HTD_ENG_trm_medium_advanced_tank_chassis_eng_centurion_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_advanced_tank_chassis_eng_centurion_1
+	has_tech = tech_trm_medium_advanced_tank_eng_centurion_turret_2
+	has_tech = tech_trm_weapon_c_eng_84_20pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_improved_eng
+	has_tech = tech_trm_gearbox_advanced_eng
+	has_tech = tech_trm_suspension_horstmann_modified_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_ammo_eng_apds
+}
+HTD_ENG_trm_medium_advanced_tank_cs_chassis_eng_centurion_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_advanced_tank_chassis_eng_centurion_1
+	has_tech = tech_trm_medium_advanced_tank_eng_centurion_turret_2
+	has_tech = tech_trm_weapon_c_eng_95_how
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_improved_eng
+	has_tech = tech_trm_gearbox_advanced_eng
+	has_tech = tech_trm_suspension_horstmann_modified_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_ammo_eng_heat
+}
+HTD_ENG_trm_infantry_tank_chassis_eng_vickers_medium_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_vickers_medium_1 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_basic 
+}
+HTD_ENG_trm_infantry_tank_chassis_eng_vickers_medium_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_vickers_medium_1 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_basic 
+}
+HTD_ENG_trm_infantry_tank_chassis_eng_matilda1_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_matilda1_1 
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_armour_interwar
+}
+HTD_ENG_trm_infantry_tank_chassis_eng_matilda2_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_matilda2_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_diesel_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tank_radio
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_armour_addon
+}
+HTD_ENG_trm_infantry_tank_chassis_eng_matilda2_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_matilda2_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_diesel_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_armour_addon
+}
+HTD_ENG_trm_infantry_tank_cs_chassis_eng_matilda2_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_matilda2_1
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_diesel_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_armour_addon
+}
+HTD_ENG_trm_infantry_tank_chassis_eng_valentine_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_valentine_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_diesel_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tank_radio
+}
+HTD_ENG_trm_infantry_tank_chassis_eng_valentine_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_valentine_2
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_diesel_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_infantry_tank_cs_chassis_eng_valentine_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_valentine_2
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_diesel_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_infantry_tank_destroyer_chassis_eng_valentine_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_valentine_2
+	has_tech = tech_trm_infantry_tank_eng_valentine_superstructure_open_1
+	has_tech = tech_trm_weapon_c_eng_76_17pdr
+	has_tech = tech_trm_engine_diesel_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tank_radio2
+}
+HTD_ENG_trm_infantry_tank_artillery_chassis_eng_valentine_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_valentine_1 
+	has_tech = tech_trm_infantry_tank_eng_valentine_superstructure_1 
+	has_tech = tech_trm_weapon_art_eng_88_25pdr
+	has_tech = tech_trm_engine_diesel_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tank_radio2
+}
+HTD_ENG_trm_infantry_tank_chassis_eng_valentine_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_valentine_3
+	has_tech = tech_trm_weapon_c_eng_57_6pdr_mk5
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_diesel_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_infantry_tank_chassis_eng_valentine_3_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_valentine_3
+	has_tech = tech_trm_infantry_tank_eng_valentine_turret_4
+	has_tech = tech_trm_weapon_c_eng_57_6pdr_mk5
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_diesel_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_infantry_tank_chassis_eng_valentine_3_c = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_valentine_3
+	has_tech = tech_trm_infantry_tank_eng_valentine_turret_4
+	has_tech = tech_trm_weapon_c_eng_75_mk5
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_diesel_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_infantry_tank_amphibious_chassis_eng_valentine_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_infantry_tank_chassis_eng_valentine_3
+	has_tech = tech_trm_weapon_c_eng_57_6pdr_mk5
+	has_tech = tech_trm_engine_diesel_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_duplex_drive_eng
+}
+HTD_ENG_trm_heavy_tank_chassis_eng_independent_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_independent_1 
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_armour_interwar
+}
+HTD_ENG_trm_heavy_tank_chassis_eng_churchill_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_churchill_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_heavy_tank_chassis_eng_churchill_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_churchill_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_heavy_tank_cs_chassis_eng_churchill_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_churchill_1 
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_heavy_tank_destroyer_chassis_eng_churchill_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_churchill_1 
+	has_tech = tech_trm_heavy_tank_eng_churchill_casemate_1 
+	has_tech = tech_trm_weapon_c_eng_76_20cwt
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+}
+HTD_ENG_trm_heavy_tank_chassis_eng_churchill_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_churchill_2
+	has_tech = tech_trm_weapon_c_eng_57_6pdr_mk5
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_ammo_eng_ap_small
+}
+HTD_ENG_trm_heavy_tank_cs_chassis_eng_churchill_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_churchill_2
+	has_tech = tech_trm_weapon_c_eng_95_how
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_heavy_tank_amphibious_chassis_eng_churchill_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_churchill_2
+	has_tech = tech_trm_weapon_c_eng_57_6pdr_mk5
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_ammo_eng_ap_small
+	has_tech = tech_trm_special_deep_wading_eng
+}
+HTD_ENG_trm_heavy_tank_chassis_eng_churchill_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_churchill_3
+	has_tech = tech_trm_weapon_c_eng_75_mk5
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_advanced
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_heavy_tank_cs_chassis_eng_churchill_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_churchill_3
+	has_tech = tech_trm_weapon_c_eng_95_how
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_advanced
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+}
+HTD_ENG_trm_heavy_tank_amphibious_chassis_eng_churchill_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_churchill_3
+	has_tech = tech_trm_weapon_c_eng_75_mk5
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_advanced
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_deep_wading_eng
+}
+HTD_ENG_trm_heavy_tank_chassis_eng_churchill_4_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_churchill_4
+	has_tech = tech_trm_weapon_c_eng_76_17pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_basic_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_armour_advanced
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_ammo_eng_apds
+}
+HTD_ENG_trm_heavy_tank_chassis_eng_excelsior_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_excelsior_1
+	has_tech = tech_trm_weapon_c_eng_57_6pdr_mk5
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_improved_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_smoke_discharger
+	has_tech = tech_trm_ammo_eng_ap_small
+}
+HTD_ENG_trm_heavy_tank_chassis_eng_excelsior_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_heavy_tank_chassis_eng_excelsior_1
+	has_tech = tech_trm_weapon_c_eng_76_17pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_improved_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_christie_improved_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_smoke_discharger
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_ammo_eng_apds
+}
+HTD_ENG_trm_superheavy_tank_chassis_eng_tortoise_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_superheavy_tank_chassis_eng_tortoise_1
+	has_tech = tech_trm_weapon_c_eng_94_32pdr
+	has_tech = tech_trm_weapon_mg_eng_besa
+	has_tech = tech_trm_engine_gasoline_improved_eng
+	has_tech = tech_trm_gearbox_advanced_eng
+	has_tech = tech_trm_suspension_torsion_eng
+	has_tech = tech_trm_armour_advanced
+	has_tech = tech_trm_armour_design_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_eng
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_special_smoke_discharger
+	has_tech = tech_trm_special_improved_optics
+}
+HTD_ENG_trm_medium_tank_chassis_usa_m4_1_g = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	is_in_faction_with = USA
+	
+	has_license = {
+		from = USA
+		equipment = {
+			type = trm_medium_tank_chassis_usa_m4_1
+		}
+	}
+	
+	has_tech = tech_trm_medium_tank_usa_m4_turret_4
+	has_tech = tech_trm_weapon_c_eng_76_17pdr
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_vss_vertical_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tech_trm_ergonomics_improved_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_cupola_eng
+	
+	if = {
+		limit = { USA = { is_ai = no } }
+		USA = {
+			has_tech = tech_trm_medium_tank_chassis_usa_m4_1
+			has_tech = tech_trm_engine_radial_interwar_usa 
+			has_tech = tech_trm_gearbox_advanced_usa
+			has_tech = tech_trm_armour_improved
+			has_tech = tech_trm_armour_design_sloped_usa
+			has_tech = tech_trm_armour_construction_welded_usa
+			has_tech = tech_trm_armour_construction_cast_partial_usa
+			has_tech = tech_trm_ergonomics_improved_usa
+			has_tech = tank_radio2
+		}
+	}
+	else = {
+		date > 1943.6.1
+	}
+}
+HTD_ENG_trm_medium_tank_chassis_usa_m4_2_h = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	is_in_faction_with = USA
+	
+	has_license = {
+		from = USA
+		equipment = {
+			type = trm_medium_tank_chassis_usa_m4_2
+		}
+	}
+	
+	has_tech = tech_trm_medium_tank_usa_m4_turret_4
+	has_tech = tech_trm_weapon_c_eng_76_17pdr
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_vss_vertical_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tech_trm_ergonomics_improved_eng
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_cupola_eng
+	has_tech = tech_trm_ammo_eng_apds
+	
+	if = {
+		limit = { USA = { is_ai = no } }
+		USA = {
+			has_tech = tech_trm_medium_tank_chassis_usa_m4_2
+			has_tech = tech_trm_engine_radial_interwar_usa 
+			has_tech = tech_trm_gearbox_advanced_usa
+			has_tech = tech_trm_armour_improved
+			has_tech = tech_trm_armour_design_sloped_usa
+			has_tech = tech_trm_armour_construction_welded_usa
+			has_tech = tech_trm_armour_construction_cast_partial_usa
+			has_tech = tech_trm_ergonomics_improved_usa
+			has_tech = tank_radio2
+		}
+	}
+	else = {
+		date > 1944.1.1
+	}
+}
+HTD_ENG_trm_medium_tank_destroyer_chassis_usa_m4_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	is_in_faction_with = USA
+	
+	has_license = {
+		from = USA
+		equipment = {
+			type = trm_medium_tank_chassis_usa_m4_1
+		}
+	}
+	
+	has_tech = tech_trm_medium_tank_usa_m4_turret_open_3
+	has_tech = tech_trm_weapon_c_eng_76_17pdr
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_vss_vertical_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_eng
+	has_tech = tech_trm_armour_construction_welded_eng
+	has_tech = tech_trm_armour_construction_cast_partial_eng
+	has_tech = tech_trm_ergonomics_improved_eng
+	has_tech = tank_radio2
+	has_tech = tech_trm_ammo_eng_apds
+	
+	if = {
+		limit = { USA = { is_ai = no } }
+		USA = {
+			has_tech = tech_trm_medium_tank_chassis_usa_m4_1
+			has_tech = tech_trm_medium_tank_usa_m4_turret_open_1
+			has_tech = tech_trm_engine_diesel_improved_usa 
+			has_tech = tech_trm_gearbox_standard_usa
+			has_tech = tech_trm_armour_interwar
+			has_tech = tech_trm_armour_design_sloped_usa
+			has_tech = tech_trm_armour_construction_welded_usa
+			has_tech = tech_trm_armour_construction_cast_partial_usa
+			has_tech = tech_trm_ergonomics_improved_usa
+			has_tech = tank_radio2
+		}
+	}
+	else = {
+		date > 1943.6.1
+	}
+}

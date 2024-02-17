@@ -1,0 +1,781 @@
+@1930 = 0
+@1932 = 2
+@1934 = 4
+@1935 = 6
+@1936 = 8
+@1937 = 10
+@1938 = 12
+@1939 = 14
+@1940 = 16
+@1941 = 18
+@1942 = 20
+@1943 = 22
+@1944 = 24
+@1945 = 26
+# Horizontal position X
+@AMPH = 9
+@TANKETTE = 1
+@LIGHT = 5
+@MEDIUM = 13
+@HEAVY = 17
+
+HTD_JAP_tech_position = {
+	set_temp_variable = { tech_status = 0 }
+	set_temp_variable = { armor_aa = 0 }
+	set_temp_variable = { armor_td = 0 }
+	set_temp_variable = { armor_art = 0 }
+	set_temp_variable = { armor_flame = 0 }
+	set_temp_variable = { armor_asg = 0 }
+	set_temp_variable = { armor_amph = 0 }
+	set_temp_variable = { armor_cs = 0 }
+	set_temp_variable = { armor_reg = 0 }
+	set_temp_variable = { xp_true = 0 } 
+	
+	if = {
+		limit = { check_variable = { v = token:trm_tankette_tank_chassis_jap_type92_1_a } }
+
+		set_temp_variable = { tech_x = @TANKETTE }
+		set_temp_variable = { tech_y = @1932 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_tankette_tank_chassis_jap_type92_1_b } }
+
+		set_temp_variable = { tech_x = @TANKETTE }
+		set_temp_variable = { tech_y = @1932 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_tankette_tank_chassis_jap_type94_1_a } }
+
+		set_temp_variable = { tech_x = @TANKETTE }
+		set_temp_variable = { tech_y = @1934 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_tankette_tank_chassis_jap_type97_1_a } }
+
+		set_temp_variable = { tech_x = @TANKETTE }
+		set_temp_variable = { tech_y = @1938 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_jap_type95_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_jap_type95_1_b } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_cs_chassis_jap_type95_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 4 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_destroyer_chassis_jap_type95_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_assault_gun_chassis_jap_type95_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_jap_type98_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_aa_chassis_jap_type98_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_aa = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_jap_type2_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_jap_type5_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1945 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_amph_tank_chassis_jap_type2_1_a } }
+
+		set_temp_variable = { tech_x = @AMPH }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_amph_tank_chassis_jap_type3_1_a } }
+
+		set_temp_variable = { tech_x = @AMPH }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_jap_type89_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_jap_type89_2_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1934 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_jap_type97_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1937 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_jap_type97_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1937 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_assault_gun_chassis_jap_type97_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1937 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_jap_type97_1_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_cs_chassis_jap_type97_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_jap_type97_1_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_assault_gun_chassis_jap_type97_1_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_jap_type1_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_cs_chassis_jap_type1_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_jap_type3_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_jap_type3_1_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_jap_type4_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_jap_type4_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_jap_apc_type4_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1945 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_advanced_tank_chassis_jap_type5_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1945 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_advanced_tank_destroyer_chassis_jap_type5_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1945 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_jap_type91_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1932 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_jap_type95_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+
+	HTD_adjust_position = yes
+}
+
+HTD_JAP_trm_tankette_tank_chassis_jap_type92_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_tankette_tank_chassis_jap_type92_1 
+	has_tech = tech_trm_engine_gasoline_basic_jap
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_JAP_trm_tankette_tank_chassis_jap_type92_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_tankette_tank_chassis_jap_type92_1 
+	has_tech = tech_trm_engine_gasoline_basic_jap
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_JAP_trm_tankette_tank_chassis_jap_type94_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_tankette_tank_chassis_jap_type94_1 
+	has_tech = tech_trm_engine_gasoline_basic_jap
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_JAP_trm_tankette_tank_chassis_jap_type97_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_tankette_tank_chassis_jap_type97_1 
+	has_tech = tech_trm_weapon_c_jap_37_type94 
+	has_tech = tech_trm_engine_diesel_interwar_jap 
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_JAP_trm_light_tank_chassis_jap_type95_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_jap_type95_1 
+	has_tech = tech_trm_weapon_c_jap_37_type94 
+	has_tech = tech_trm_engine_gasoline_basic_jap
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_JAP_trm_light_tank_chassis_jap_type95_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_jap_type95_1 
+	has_tech = tech_trm_weapon_c_jap_37_type94 
+	has_tech = tech_trm_weapon_mg_jap_type97  
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_JAP_trm_light_tank_cs_chassis_jap_type95_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_jap_type95_1 
+	has_tech = tech_trm_light_tank_jap_type95_turret_2 
+	has_tech = tech_trm_weapon_c_jap_57_type97
+	has_tech = tech_trm_weapon_mg_jap_type97  
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_basic 
+	has_tech = tank_radio2
+
+}
+HTD_JAP_trm_light_tank_destroyer_chassis_jap_type95_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_jap_type95_1 
+	has_tech = tech_trm_light_tank_jap_type95_superstructure_open_1  
+	has_tech = tech_trm_weapon_c_jap_47_type1
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio2
+
+}
+HTD_JAP_trm_light_tank_assault_gun_chassis_jap_type95_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_jap_type95_1 
+	has_tech = tech_trm_light_tank_jap_type95_superstructure_open_1  
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio2
+
+}
+HTD_JAP_trm_light_tank_chassis_jap_type98_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_jap_type98_1 
+	has_tech = tech_trm_weapon_c_jap_37_type100
+	has_tech = tech_trm_weapon_mg_jap_type97  
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_basic 
+	has_tech = tech_trm_armour_design_partial_sloped_jap  
+
+}
+HTD_JAP_trm_light_tank_aa_chassis_jap_type98_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_jap_type98_1 
+	has_tech = tech_trm_light_tank_jap_type98_aa_open_1 
+	has_tech = tech_trm_weapon_aa_ac_jap_20_type2
+	has_tech = tech_trm_weapon_mg_jap_type97  
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_basic 
+	has_tech = tech_trm_armour_design_partial_sloped_jap  
+
+}
+HTD_JAP_trm_light_tank_chassis_jap_type2_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_jap_type2_1 
+	has_tech = tech_trm_weapon_c_jap_37_type1
+	has_tech = tech_trm_weapon_mg_jap_type97  
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_gearbox_standard_jap 
+	has_tech = tech_trm_armour_basic 
+	has_tech = tech_trm_armour_design_partial_sloped_jap  
+	has_tech = tech_trm_armour_construction_welded_jap   
+	has_tech = tank_radio  
+
+}
+HTD_JAP_trm_light_tank_chassis_jap_type5_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_jap_type5_1 
+	has_tech = tech_trm_weapon_c_jap_47_type1
+	has_tech = tech_trm_weapon_mg_jap_type97  
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_gearbox_standard_jap 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tech_trm_armour_design_partial_sloped_jap  
+	has_tech = tech_trm_armour_construction_welded_jap   
+	has_tech = tank_radio2 
+}
+HTD_JAP_trm_amph_tank_chassis_jap_type2_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_amph_tank_chassis_jap_type2_1  
+	has_tech = tech_trm_weapon_c_jap_37_type1
+	has_tech = tech_trm_weapon_mg_jap_type97  
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_basic  
+	has_tech = tech_trm_armour_construction_welded_jap   
+	has_tech = tank_radio
+
+}
+HTD_JAP_trm_amph_tank_chassis_jap_type3_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_amph_tank_chassis_jap_type3_1   
+	has_tech = tech_trm_weapon_c_jap_47_type1
+	has_tech = tech_trm_weapon_mg_jap_type97  
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_gearbox_standard_jap 
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_construction_welded_jap   
+	has_tech = tank_radio2
+
+}
+HTD_JAP_trm_medium_tank_chassis_jap_type89_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_japan_armour
+	has_tech = tech_trm_engine_gasoline_basic_jap
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_JAP_trm_medium_tank_chassis_jap_type89_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type89_2 
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_JAP_trm_medium_tank_chassis_jap_type97_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type97_1  
+	has_tech = tech_trm_weapon_c_jap_57_type97 
+	has_tech = tech_trm_weapon_mg_jap_type97
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_partial_sloped_jap 
+
+}
+HTD_JAP_trm_medium_tank_chassis_jap_type97_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type97_1  
+	has_tech = tech_trm_medium_tank_jap_type97_turret_2   
+	has_tech = tech_trm_weapon_c_jap_47_type1
+	has_tech = tech_trm_weapon_mg_jap_type97
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_partial_sloped_jap 
+	has_tech = tech_trm_armour_construction_welded_jap   
+	has_tech = tank_radio
+
+}
+HTD_JAP_trm_medium_tank_cs_chassis_jap_type97_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type97_1  
+	has_tech = tech_trm_medium_tank_jap_type97_turret_3   
+	has_tech = tech_trm_weapon_c_jap_120_naval
+	has_tech = tech_trm_weapon_mg_jap_type97
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_partial_sloped_jap 
+	has_tech = tech_trm_armour_construction_welded_jap   
+	has_tech = tank_radio
+
+}
+HTD_JAP_trm_medium_tank_destroyer_chassis_jap_type97_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type97_1  
+	has_tech = tech_trm_medium_tank_jap_type97_superstructure_open_1    
+	has_tech = tech_trm_weapon_c_jap_75_type3
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_partial_sloped_jap 
+	has_tech = tank_radio
+
+}
+HTD_JAP_trm_medium_tank_destroyer_chassis_jap_type97_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type97_1  
+	has_tech = tech_trm_medium_tank_jap_type97_superstructure_1     
+	has_tech = tech_trm_weapon_c_jap_75_type3
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tech_trm_armour_design_partial_sloped_jap 
+	has_tech = tank_radio2
+
+}
+HTD_JAP_trm_medium_tank_assault_gun_chassis_jap_type97_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type97_1  
+	has_tech = tech_trm_medium_tank_jap_type97_superstructure_open_1
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tech_trm_armour_design_partial_sloped_jap 
+	has_tech = tank_radio
+
+}
+HTD_JAP_trm_medium_tank_assault_gun_chassis_jap_type97_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type97_1  
+	has_tech = tech_trm_medium_tank_jap_type97_superstructure_open_1
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tech_trm_armour_design_partial_sloped_jap 
+	has_tech = tank_radio2
+
+}
+HTD_JAP_trm_medium_tank_chassis_jap_type1_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type1_1 
+	has_tech = tech_trm_weapon_c_jap_47_type1
+	has_tech = tech_trm_weapon_mg_jap_type97
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_gearbox_standard_jap
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_partial_sloped_jap 
+	has_tech = tech_trm_armour_construction_welded_jap   
+	has_tech = tank_radio
+
+}
+HTD_JAP_trm_medium_tank_cs_chassis_jap_type1_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type1_1  
+	has_tech = tech_trm_weapon_c_jap_75_type99
+	has_tech = tech_trm_weapon_mg_jap_type97
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_gearbox_standard_jap
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_partial_sloped_jap 
+	has_tech = tech_trm_armour_construction_welded_jap   
+	has_tech = tank_radio
+
+}
+HTD_JAP_trm_medium_tank_chassis_jap_type3_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type3_1  
+	has_tech = tech_trm_weapon_c_jap_75_type3
+	has_tech = tech_trm_weapon_mg_jap_type97
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_gearbox_standard_jap
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_partial_sloped_jap 
+	has_tech = tech_trm_armour_construction_welded_jap   
+	has_tech = tank_radio
+
+}
+HTD_JAP_trm_medium_tank_chassis_jap_type3_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type3_1  
+	has_tech = tech_trm_medium_tank_chassis_jap_type4_1   
+	has_tech = tech_trm_weapon_c_jap_75_type5
+	has_tech = tech_trm_weapon_mg_jap_type97
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_gearbox_standard_jap
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_partial_sloped_jap 
+	has_tech = tech_trm_armour_construction_welded_jap   
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics 
+
+}
+HTD_JAP_trm_medium_tank_chassis_jap_type4_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type4_1   
+	has_tech = tech_trm_weapon_c_jap_75_type5
+	has_tech = tech_trm_weapon_mg_jap_type97
+	has_tech = tech_trm_engine_diesel_improved_jap 
+	has_tech = tech_trm_gearbox_standard_jap
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_partial_sloped_jap 
+	has_tech = tech_trm_armour_construction_welded_jap   
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics 
+
+}
+HTD_JAP_trm_medium_tank_destroyer_chassis_jap_type4_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_type4_1   
+	has_tech = tech_trm_medium_tank_jap_type4_superstructure_open_1    
+	has_tech = tech_trm_weapon_c_jap_105_type5
+	has_tech = tech_trm_engine_diesel_improved_jap
+	has_tech = tech_trm_gearbox_standard_jap
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_partial_sloped_jap
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics 
+
+}
+HTD_JAP_trm_medium_tank_destroyer_chassis_jap_apc_type4_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_jap_apc_type4_1
+	has_tech = tech_trm_weapon_c_jap_75_type5
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_gearbox_standard_jap
+	has_tech = tech_trm_armour_basic
+	has_tech = tech_trm_armour_design_partial_sloped_jap
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics 
+
+}
+HTD_JAP_trm_medium_advanced_tank_chassis_jap_type5_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_advanced_tank_chassis_jap_type5_1   
+	has_tech = tech_trm_weapon_c_jap_75_type5_semi
+	has_tech = tech_trm_weapon_c_jap_37_type1
+	has_tech = tech_trm_weapon_mg_jap_type97
+	has_tech = tech_trm_engine_gasoline_improved_jap
+	has_tech = tech_trm_gearbox_standard_jap
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_partial_sloped_jap 
+	has_tech = tech_trm_armour_construction_welded_jap   
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics 
+
+}
+HTD_JAP_trm_medium_advanced_tank_destroyer_chassis_jap_type5_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_advanced_tank_chassis_jap_type5_1   
+	has_tech = tech_trm_medium_advanced_tank_jap_type5_casemate_1    
+	has_tech = tech_trm_weapon_c_jap_105_type5
+	has_tech = tech_trm_weapon_c_jap_37_type1
+	has_tech = tech_trm_weapon_mg_jap_type97
+	has_tech = tech_trm_engine_gasoline_improved_jap 
+	has_tech = tech_trm_gearbox_standard_jap
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_sloped_jap  
+	has_tech = tech_trm_armour_construction_welded_jap   
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics 
+
+}
+HTD_JAP_trm_heavy_tank_chassis_jap_type91_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_jap_type91_1 
+	has_tech = tech_trm_engine_gasoline_basic_jap
+	has_tech = tech_trm_armour_interwar
+
+}
+HTD_JAP_trm_heavy_tank_chassis_jap_type95_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_jap_type95_1  
+	has_tech = tech_trm_weapon_c_jap_37_type94 
+	has_tech = tech_trm_engine_diesel_interwar_jap
+	has_tech = tech_trm_armour_interwar
+
+}

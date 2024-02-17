@@ -1,0 +1,1547 @@
+#Vertical position
+@1932 = 0
+@1934 = 2
+@1935 = 4
+@1936 = 6
+@1937 = 8
+@1938 = 10
+@1939 = 12
+@1940 = 14
+@1941 = 16
+@1942 = 18
+@1943 = 20
+@1944 = 22
+@1945 = 24
+@1946 = 26
+@1947 = 28
+#Horizontal position
+@CAVALRY = 9
+@LIGHT = 1
+@LIGHT2 = 5
+@MEDIUM = 13
+@MEDIUM2 = 17
+@MEDIUM3 = 21
+@HEAVY = 25
+	
+HTD_GER_tech_position = {
+	set_temp_variable = { tech_status = 0 }
+	set_temp_variable = { armor_aa = 0 }
+	set_temp_variable = { armor_td = 0 }
+	set_temp_variable = { armor_art = 0 }
+	set_temp_variable = { armor_flame = 0 }
+	set_temp_variable = { armor_asg = 0 }
+	set_temp_variable = { armor_amph = 0 }
+	set_temp_variable = { armor_cs = 0 }
+	set_temp_variable = { armor_reg = 0 }
+	set_temp_variable = { xp_true = 0 } 
+	
+	if = {
+		limit = { check_variable = { v = token:light_tank_chassis_1934 } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1932 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_aa = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:light_tank_chassis_1934 } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1934 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:light_tank_destroyer_chassis_1934 } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1934 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:light_tank_artillery_chassis_1934 } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1934 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_art = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:light_tank_chassis_1936 } }
+
+		set_temp_variable = { tech_x = @LIGHT2 }
+		set_temp_variable = { tech_y = @1936 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:light_tank_artillery_chassis_1934 } }
+
+		set_temp_variable = { tech_x = @LIGHT2 }
+		set_temp_variable = { tech_y = @1938 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_art = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:light_tank_amphibious_chassis_1934 } }
+
+		set_temp_variable = { tech_x = @LIGHT2 }
+		set_temp_variable = { tech_y = @1938 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_amph = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:light_tank_chassis_1940 } }
+
+		set_temp_variable = { tech_x = @LIGHT2 }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:light_tank_destroyer_chassis_1940 } }
+
+		set_temp_variable = { tech_x = @LIGHT2 }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:light_tank_artillery_chassis_1940 } }
+
+		set_temp_variable = { tech_x = @LIGHT2 }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_art = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:light_tank_chassis_1944 } }
+
+		set_temp_variable = { tech_x = @LIGHT2 }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:medium_tank_chassis_1936 } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1937 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ger_panzer3_2_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1938 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ger_panzer3_3_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_assault_gun_chassis_ger_panzer3_3_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_amphibious_chassis_ger_panzer3_3_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_amph = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ger_panzer3_4_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ger_panzer3_4_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_ger_panzer3_4_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ger_panzer3_5_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_ger_panzer3_5_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_assault_gun_chassis_ger_panzer3_5_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_cs_chassis_ger_panzer3_5_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_cs_chassis_ger_panzer4_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1937 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_cs_chassis_ger_panzer4_2_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_amphibious_chassis_ger_panzer4_2_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_amph = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_cs_chassis_ger_panzer4_3_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ger_panzer4_3_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ger_panzer4_3_c } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_ger_panzer4_3_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ger_panzer4_4_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_assault_gun_chassis_ger_panzer4_4_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_aa_chassis_ger_panzer4_4_c } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 4 }
+		set_temp_variable = { armor_aa = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_aa_chassis_ger_panzer4_4_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 5 }
+		set_temp_variable = { armor_aa = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_ger_panzer4_4_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_ger_panzer4_4_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ger_panzer4_4_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM2 }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_artillery_chassis_ger_panzer34_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_ger_panzer34_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_advanced_tank_chassis_ger_panther_1_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM3 }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_advanced_tank_chassis_ger_panther_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM3 }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_advanced_tank_chassis_ger_panther_2_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM3 }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_advanced_tank_destroyer_chassis_ger_panther_2_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM3 }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_advanced_tank_chassis_ger_panther_3_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM3 }
+		set_temp_variable = { tech_y = @1945 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_ger_neubaufahrzeug_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1934 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_ger_tiger_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_ger_tiger_1_b } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_destroyer_chassis_ger_tiger_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_assault_gun_chassis_ger_tiger_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_ger_tiger2_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_destroyer_chassis_ger_tiger2_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_ger_tiger2_1_b } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_superheavy_tank_chassis_ger_maus_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1945 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_ger_pz35_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_ger_pz38_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_ger_pz38_2_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_destroyer_chassis_ger_pz38_2_b } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_artillery_chassis_ger_pz38_2_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_art = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_destroyer_chassis_ger_pz38_2_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 4 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_aa_chassis_ger_pz38_2_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_aa = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_destroyer_chassis_ger_pz38_3_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1945 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	HTD_adjust_position = yes
+				  
+}
+
+HTD_GER_light_tank_chassis_1934 = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = ger_panzeri_tank_chassis
+	has_tech = ger_basic_tank_engines 
+	has_tech = ger_rivetted_armour 
+	has_tech = tank_radio
+	
+}
+HTD_GER_trm_light_tank_aa_chassis_ger_panzer1_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_german_armour
+	has_tech = tech_trm_light_tank_ger_panzer1_aa_open_1
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_basic 
+	has_tech = tank_radio
+	has_tech = tech_trm_special_improved_optics  
+	
+}
+HTD_GER_trm_light_tank_chassis_ger_panzer1_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_ger_panzer1_2 
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_basic 
+	has_tech = tank_radio
+	
+}
+HTD_GER_trm_light_tank_destroyer_chassis_ger_panzer1_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_ger_panzer1_2 
+	has_tech = tech_trm_light_tank_ger_panzer1_superstructure_open_1  
+	has_tech = tech_trm_weapon_c_ger_47_pak38t
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_basic 
+	has_tech = tank_radio
+	has_tech = tech_trm_special_improved_optics
+	
+}
+HTD_GER_trm_light_tank_artillery_chassis_ger_panzer1_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_ger_panzer1_2 
+	has_tech = tech_trm_light_tank_ger_panzer1_superstructure_open_1  
+	has_tech = tech_trm_weapon_art_ger_150_sig33
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_basic 
+	has_tech = tank_radio
+	has_tech = tech_trm_special_improved_optics
+	
+}
+HTD_GER_trm_para_tank_chassis_ger_panzer1_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_para_tank_chassis_ger_panzer1_1  
+	has_tech = tech_trm_weapon_ac_ger_8_ew141
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio2
+
+}
+HTD_GER_trm_light_tank_chassis_ger_panzer2_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_ger_panzer2_1 
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_basic 
+	has_tech = tank_radio
+
+}
+HTD_GER_trm_light_tank_chassis_ger_panzer2_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_ger_panzer2_2 
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_basic  
+	has_tech = tank_radio
+
+}
+HTD_GER_trm_light_tank_artillery_chassis_ger_panzer2_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_ger_panzer2_2 
+	has_tech = tech_trm_light_tank_ger_panzer2_superstructure_open_1  
+	has_tech = tech_trm_weapon_art_ger_150_sig33
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_light_tank_amphibious_chassis_ger_panzer2_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_ger_panzer2_2 
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_basic  
+	has_tech = tank_radio
+	has_tech = tech_trm_special_schwimmpanzer_ger 
+
+}
+HTD_GER_trm_cavalry_tank_chassis_ger_panzer2_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_cavalry_tank_chassis_ger_panzer2_1 
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio
+
+}
+HTD_GER_trm_light_tank_chassis_ger_panzer2_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_ger_panzer2_3
+	has_tech = tech_trm_ammo_ger_apcr_small 
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio2
+
+}
+HTD_GER_trm_light_tank_chassis_ger_panzer2_3_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_ger_panzer2_3
+	has_tech = tech_trm_light_tank_ger_panzer2_turret_open_1
+	has_tech = tech_trm_weapon_c_ger_50_kwk38
+	has_tech = tech_trm_ammo_ger_apcr_small
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_light_tank_destroyer_chassis_ger_panzer2_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_ger_panzer2_3
+	has_tech = tech_trm_light_tank_ger_panzer2_superstructure_open_1
+	has_tech = tech_trm_weapon_c_ger_75_kwk40_long
+	has_tech = tech_trm_ammo_ger_apcr_large 
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_light_tank_artillery_chassis_ger_panzer2_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_ger_panzer2_3
+	has_tech = tech_trm_light_tank_ger_panzer2_superstructure_open_1
+	has_tech = tech_trm_weapon_art_ger_105_lefh18m
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_light_tank_chassis_ger_panzer2_4_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_ger_panzer2_4
+	has_tech = tech_trm_weapon_aa_ac_ger_20_flak38
+	has_tech = tech_trm_ammo_ger_apcr_small
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_light_tank_chassis_ger_vk1602_leopard_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_ger_vk1602_leopard_1 
+	has_tech = tech_trm_weapon_c_ger_50_kwk39
+	has_tech = tech_trm_ammo_ger_apcr_small
+	has_tech = tech_trm_engine_gasoline_improved_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_improved   
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_tank_chassis_ger_panzer3_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer3_1 
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_basic 
+	has_tech = tank_radio
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_tank_chassis_ger_panzer3_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer3_2
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_tank_chassis_ger_panzer3_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer3_3
+	has_tech = tech_trm_weapon_c_ger_50_kwk38
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_tank_assault_gun_chassis_ger_panzer3_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer3_3
+	has_tech = tech_trm_medium_tank_ger_panzer3_casemate_1 
+	has_tech = tech_trm_weapon_c_ger_75_kwk37
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tech_trm_armour_design_partial_sloped_ger  
+	has_tech = tank_radio
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_tank_amphibious_chassis_ger_panzer3_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer3_3
+	has_tech = tech_trm_weapon_c_ger_50_kwk38
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_tauchpanzer_ger 
+
+}
+HTD_GER_trm_medium_tank_chassis_ger_panzer3_4_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer3_4
+	has_tech = tech_trm_weapon_c_ger_50_kwk38
+	has_tech = tech_trm_ammo_ger_apcr_small
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_tank_chassis_ger_panzer3_4_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer3_4
+	has_tech = tech_trm_weapon_c_ger_50_kwk39
+	has_tech = tech_trm_ammo_ger_apcr_small
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_armour_addon
+	has_tech = tech_trm_special_smoke_discharger 
+
+}
+HTD_GER_trm_medium_tank_destroyer_chassis_ger_panzer3_4_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer3_4
+	has_tech = tech_trm_medium_tank_ger_panzer3_casemate_1 
+	has_tech = tech_trm_weapon_c_ger_75_kwk40
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tech_trm_armour_design_partial_sloped_ger  
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_armour_addon
+	has_tech = tech_trm_special_smoke_discharger 
+
+}
+HTD_GER_trm_medium_tank_chassis_ger_panzer3_5_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer3_5
+	has_tech = tech_trm_weapon_c_ger_50_kwk39
+	has_tech = tech_trm_ammo_ger_apcr_small
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_armour_addon
+	has_tech = tech_trm_special_schurzen_ger 
+	has_tech = tech_trm_special_smoke_discharger 
+
+}
+HTD_GER_trm_medium_tank_destroyer_chassis_ger_panzer3_5_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer3_5
+	has_tech = tech_trm_medium_tank_ger_panzer3_casemate_3  
+	has_tech = tech_trm_weapon_c_ger_75_kwk40_long
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tech_trm_armour_design_partial_sloped_ger  
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_armour_addon
+	has_tech = tech_trm_special_schurzen_ger 
+	has_tech = tech_trm_special_smoke_discharger 
+
+}
+HTD_GER_trm_medium_tank_assault_gun_chassis_ger_panzer3_5_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer3_5
+	has_tech = tech_trm_medium_tank_ger_panzer3_casemate_3  
+	has_tech = tech_trm_weapon_c_ger_105_stuh42
+	has_tech = tech_trm_ammo_ger_heat_early 
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tech_trm_armour_design_partial_sloped_ger  
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_armour_addon
+	has_tech = tech_trm_special_schurzen_ger 
+	has_tech = tech_trm_special_smoke_discharger 
+
+}
+HTD_GER_trm_medium_tank_cs_chassis_ger_panzer3_5_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer3_5
+	has_tech = tech_trm_medium_tank_ger_panzer3_turret_3 
+	has_tech = tech_trm_weapon_c_ger_75_kwk37
+	has_tech = tech_trm_ammo_ger_heat_early 
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_suspension_torsion_ger 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_armour_addon
+	has_tech = tech_trm_special_smoke_discharger 
+
+}
+HTD_GER_trm_medium_tank_cs_chassis_ger_panzer4_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_1 
+	has_tech = tech_trm_weapon_c_ger_75_kwk37
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_basic 
+	has_tech = tank_radio
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_tank_cs_chassis_ger_panzer4_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_2
+	has_tech = tech_trm_weapon_c_ger_75_kwk37
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_tank_amphibious_chassis_ger_panzer4_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_2
+	has_tech = tech_trm_weapon_c_ger_75_kwk37
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_tauchpanzer_ger
+
+}
+HTD_GER_trm_medium_tank_cs_chassis_ger_panzer4_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_3
+	has_tech = tech_trm_weapon_c_ger_75_kwk37
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_tank_chassis_ger_panzer4_3_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_3
+	has_tech = tech_trm_medium_tank_ger_panzer4_turret_2 
+	has_tech = tech_trm_weapon_c_ger_75_kwk40
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_tank_chassis_ger_panzer4_3_c = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_3
+	has_tech = tech_trm_medium_tank_ger_panzer4_turret_2 
+	has_tech = tech_trm_weapon_c_ger_75_kwk40
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_armour_addon
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_medium_tank_destroyer_chassis_ger_panzer4_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_3
+	has_tech = tech_trm_medium_tank_ger_panzer3_casemate_1
+	has_tech = tech_trm_weapon_c_ger_75_kwk40_long
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_partial_sloped_ger
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_medium_tank_chassis_ger_panzer4_4_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_4
+	has_tech = tech_trm_weapon_c_ger_75_kwk40_long
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_improved 
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_schurzen_ger
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_medium_tank_chassis_ger_panzer4_4_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_4
+	has_tech = tech_trm_medium_tank_ger_panzer4_turret_3
+	has_tech = tech_trm_weapon_c_ger_75_kwk40_long
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_improved 
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_standard_ger
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_medium_tank_assault_gun_chassis_ger_panzer4_4_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_4
+	has_tech = tech_trm_medium_tank_ger_panzer4_casemate_1 
+	has_tech = tech_trm_weapon_c_ger_150_stuh43
+	has_tech = tech_trm_ammo_ger_heat_improved 
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_sloped_ger 
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_standard_ger
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_schurzen_ger
+
+}
+HTD_GER_trm_medium_tank_aa_chassis_ger_panzer4_4_c = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_4
+	has_tech = tech_trm_medium_tank_ger_panzer4_aa_open_1
+	has_tech = tech_trm_weapon_aa_ac_ger_37_flak43
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_improved 
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_standard_ger
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_tank_aa_chassis_ger_panzer4_4_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_4
+	has_tech = tech_trm_medium_tank_ger_panzer4_aa_open_1
+	has_tech = tech_trm_weapon_aa_ac_ger_20_flak38_x4 
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_improved 
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_standard_ger
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_tank_destroyer_chassis_ger_panzer4_4_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_4
+	has_tech = tech_trm_medium_tank_ger_panzer4_casemate_1 
+	has_tech = tech_trm_weapon_c_ger_75_kwk40_long
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_sloped_ger 
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_standard_ger
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_medium_tank_destroyer_chassis_ger_panzer4_4_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer4_4
+	has_tech = tech_trm_medium_tank_ger_panzer4_casemate_1 
+	has_tech = tech_trm_weapon_c_ger_75_kwk42
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_sloped_ger 
+	has_tech = tank_radio3
+	has_tech = tech_trm_tank_construction_standard_ger
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_weapon_mg_ger_mg42 
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_medium_tank_artillery_chassis_ger_panzer34_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer34_1 
+	has_tech = tech_trm_weapon_art_ger_150_sfh18
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_partial_sloped_ger
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_standard_ger
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_tank_destroyer_chassis_ger_panzer34_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_ger_panzer34_1 
+	has_tech = tech_trm_weapon_c_ger_88_kwk43
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_partial_sloped_ger
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_standard_ger
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_medium_advanced_tank_chassis_ger_panther_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_advanced_tank_chassis_ger_panther_1
+	has_tech = tech_trm_weapon_c_ger_75_kwk42
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_improved_ger 
+	has_tech = tech_trm_transmission_double_differential_ger  
+	has_tech = tech_trm_suspension_torsion_double_ger   
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_sloped_ger
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_standard_ger
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_medium_advanced_tank_chassis_ger_panther_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_advanced_tank_chassis_ger_panther_1
+	has_tech = tech_trm_weapon_c_ger_75_kwk42
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_improved_ger 
+	has_tech = tech_trm_transmission_double_differential_ger  
+	has_tech = tech_trm_suspension_torsion_double_ger   
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_sloped_ger
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_standard_ger
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_zimmerit_ger 
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_medium_advanced_tank_chassis_ger_panther_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_advanced_tank_chassis_ger_panther_2
+	has_tech = tech_trm_weapon_c_ger_75_kwk42
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_improved_ger 
+	has_tech = tech_trm_transmission_double_differential_ger  
+	has_tech = tech_trm_suspension_torsion_double_ger   
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_sloped_ger
+	has_tech = tank_radio3
+	has_tech = tech_trm_tank_construction_standard_ger
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_zimmerit_ger 
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_medium_advanced_tank_destroyer_chassis_ger_panther_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_advanced_tank_chassis_ger_panther_2
+	has_tech = tech_trm_medium_advanced_tank_ger_panther_casemate_1 
+	has_tech = tech_trm_weapon_c_ger_88_kwk43
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_improved_ger 
+	has_tech = tech_trm_transmission_double_differential_ger  
+	has_tech = tech_trm_suspension_torsion_double_ger   
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_sloped_ger
+	has_tech = tank_radio3
+	has_tech = tech_trm_tank_construction_standard_ger
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_zimmerit_ger 
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_medium_advanced_tank_chassis_ger_panther_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_advanced_tank_chassis_ger_panther_3
+	has_tech = tech_trm_weapon_c_ger_75_kwk42
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_improved_ger 
+	has_tech = tech_trm_transmission_double_differential_ger  
+	has_tech = tech_trm_gearbox_advanced_ger   
+	has_tech = tech_trm_suspension_torsion_double_ger   
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_sloped_ger
+	has_tech = tank_radio3
+	has_tech = tech_trm_tank_construction_standard_ger
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_zimmerit_ger 
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_heavy_tank_chassis_ger_neubaufahrzeug_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_ger_neubaufahrzeug_1 
+	has_tech = tech_trm_weapon_c_ger_75_kwk37
+	has_tech = tech_trm_engine_gasoline_interwar_ger
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tank_radio
+
+
+}
+HTD_GER_trm_heavy_tank_chassis_ger_tiger_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_ger_tiger_1 
+	has_tech = tech_trm_weapon_c_ger_88_kwk36
+	has_tech = tech_trm_engine_gasoline_improved_ger 
+	has_tech = tech_trm_transmission_double_differential_ger  
+	has_tech = tech_trm_suspension_torsion_double_ger   
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_partial_sloped_ger
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_heavy_tank_chassis_ger_tiger_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_ger_tiger_1 
+	has_tech = tech_trm_weapon_c_ger_88_kwk36
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_improved_ger 
+	has_tech = tech_trm_transmission_double_differential_ger  
+	has_tech = tech_trm_suspension_torsion_double_ger   
+	has_tech = tech_trm_armour_improved 
+	has_tech = tech_trm_armour_design_partial_sloped_ger
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_zimmerit_ger
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_heavy_tank_destroyer_chassis_ger_tiger_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_ger_tiger_1 
+	has_tech = tech_trm_heavy_tank_ger_tiger_casemate_1  
+	has_tech = tech_trm_weapon_c_ger_88_kwk43
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_interwar_ger 
+	has_tech = tech_trm_transmission_xelectrical_ger   
+	has_tech = tech_trm_suspension_torsion_double_ger   
+	has_tech = tech_trm_armour_advanced 
+	has_tech = tech_trm_armour_design_partial_sloped_ger
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_armour_addon
+
+}
+HTD_GER_trm_heavy_tank_assault_gun_chassis_ger_tiger_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_ger_tiger_1 
+	has_tech = tech_trm_heavy_tank_ger_tiger_casemate_1  
+	has_tech = tech_trm_weapon_c_ger_380_rw61
+	has_tech = tech_trm_engine_gasoline_improved_ger 
+	has_tech = tech_trm_transmission_double_differential_ger  
+	has_tech = tech_trm_suspension_torsion_double_ger     
+	has_tech = tech_trm_armour_advanced 
+	has_tech = tech_trm_armour_design_sloped_ger
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_zimmerit_ger
+
+}
+HTD_GER_trm_heavy_tank_chassis_ger_tiger2_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_ger_tiger2_1 
+	has_tech = tech_trm_weapon_c_ger_88_kwk43
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_improved_ger 
+	has_tech = tech_trm_transmission_double_differential_ger  
+	has_tech = tech_trm_suspension_torsion_double_ger   
+	has_tech = tech_trm_armour_advanced 
+	has_tech = tech_trm_armour_design_sloped_ger
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_zimmerit_ger
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_heavy_tank_chassis_ger_tiger2_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_ger_tiger2_1 
+	has_tech = tech_trm_heavy_tank_ger_tiger2_turret_2  
+	has_tech = tech_trm_weapon_c_ger_105_kwk45
+	has_tech = tech_trm_engine_gasoline_improved_ger 
+	has_tech = tech_trm_transmission_double_differential_ger  
+	has_tech = tech_trm_suspension_torsion_double_ger   
+	has_tech = tech_trm_armour_advanced 
+	has_tech = tech_trm_armour_design_sloped_ger
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_zimmerit_ger
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_heavy_tank_destroyer_chassis_ger_tiger2_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_ger_tiger2_1 
+	has_tech = tech_trm_heavy_tank_ger_tiger2_casemate_1  
+	has_tech = tech_trm_weapon_c_ger_128_kwk44
+	has_tech = tech_trm_engine_gasoline_improved_ger 
+	has_tech = tech_trm_transmission_double_differential_ger  
+	has_tech = tech_trm_suspension_torsion_double_ger   
+	has_tech = tech_trm_armour_advanced 
+	has_tech = tech_trm_armour_design_sloped_ger
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_zimmerit_ger
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_superheavy_tank_chassis_ger_maus_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_superheavy_tank_chassis_ger_maus_1  
+	has_tech = tech_trm_weapon_c_ger_128_kwk44
+	has_tech = tech_trm_weapon_c_ger_75_kwk37
+	has_tech = tech_trm_engine_gasoline_advanced_ger  
+	has_tech = tech_trm_transmission_xelectrical_ger  
+	has_tech = tech_trm_suspension_torsion_double_ger   
+	has_tech = tech_trm_armour_advanced 
+	has_tech = tech_trm_armour_design_sloped_ger
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_special_smoke_discharger
+
+}
+HTD_GER_trm_cavalry_tank_chassis_ger_pz35_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_czech_design 
+	has_tech = tech_trm_cavalry_tank_chassis_ger_pz35_1
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio
+
+}
+HTD_GER_trm_cavalry_tank_chassis_ger_pz38_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_czech_design 
+	has_tech = tech_trm_cavalry_tank_chassis_ger_pz38_1
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio
+
+}
+HTD_GER_trm_cavalry_tank_chassis_ger_pz38_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_czech_design 
+	has_tech = tech_trm_cavalry_tank_chassis_ger_pz38_2
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio2
+
+}
+HTD_GER_trm_cavalry_tank_destroyer_chassis_ger_pz38_2_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_czech_design 
+	has_tech = tech_trm_cavalry_tank_chassis_ger_pz38_2
+	has_tech = tech_trm_cavalry_tank_ger_pz38_superstructure_open_1 
+	has_tech = tech_trm_weapon_c_ger_75_kwk40_long
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_cavalry_tank_destroyer_chassis_ger_pz38_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_czech_design 
+	has_tech = tech_trm_cavalry_tank_chassis_ger_pz38_2
+	has_tech = tech_trm_cavalry_tank_ger_pz38_casemate_1  
+	has_tech = tech_trm_weapon_c_ger_75_kwk40_long
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_ger
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_standard_ger 
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_weapon_mg_ger_mg42 
+
+}
+HTD_GER_trm_cavalry_tank_aa_chassis_ger_pz38_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_czech_design 
+	has_tech = tech_trm_cavalry_tank_chassis_ger_pz38_2
+	has_tech = tech_trm_cavalry_tank_ger_pz38_aa_open_1 
+	has_tech = tech_trm_weapon_aa_ac_ger_20_flak38
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_GER_trm_cavalry_tank_artillery_chassis_ger_pz38_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_czech_design 
+	has_tech = tech_trm_cavalry_tank_chassis_ger_pz38_2
+	has_tech = tech_trm_cavalry_tank_ger_pz38_superstructure_open_1 
+	has_tech = tech_trm_weapon_art_ger_150_sig33
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_interwar  
+	has_tech = tank_radio2
+	has_tech = tech_trm_special_improved_optics
+
+
+}
+HTD_GER_trm_cavalry_tank_destroyer_chassis_ger_pz38_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_czech_design 
+	has_tech = tech_trm_cavalry_tank_chassis_ger_pz38_3 
+	has_tech = tech_trm_weapon_c_ger_75_kwk42
+	has_tech = tech_trm_ammo_ger_apcr_large
+	has_tech = tech_trm_engine_gasoline_basic_ger
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_ger
+	has_tech = tank_radio3
+	has_tech = tech_trm_tank_construction_standard_ger 
+	has_tech = tech_trm_special_improved_optics
+	has_tech = tech_trm_weapon_mg_ger_mg42 
+
+}

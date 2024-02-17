@@ -1,0 +1,105 @@
+### Vertical position Y
+@1941 = 6
+@1942 = 8
+@1943 = 10
+@1944 = 12
+@1945 = 14
+
+### Horizontal position X
+@MEDIUM = 7
+@INFANTRY = 19
+
+
+HTD_AST_tech_position = {
+	set_temp_variable = { tech_status = 0 }
+	set_temp_variable = { armor_aa = 0 }
+	set_temp_variable = { armor_td = 0 }
+	set_temp_variable = { armor_art = 0 }
+	set_temp_variable = { armor_flame = 0 }
+	set_temp_variable = { armor_asg = 0 }
+	set_temp_variable = { armor_amph = 0 }
+	set_temp_variable = { armor_cs = 0 }
+	set_temp_variable = { armor_reg = 0 }
+	set_temp_variable = { xp_true = 0 } 
+	
+  
+  #template entry
+	if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ast_ac1_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942}
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ast_ac3_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1943}
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_ast_ac4_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1944}
+
+		set_temp_variable = { subtech = 0 }
+	}
+  
+	HTD_adjust_position = yes			  
+}
+
+#template entry
+HTD_AST_trm_medium_tank_chassis_ast_ac1_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	has_completed_focus = AST_sentinel_tank_project
+	has_tech = tech_trm_british_armour
+	has_tech = tech_trm_medium_tank_chassis_ast_ac1_1
+	has_tech = tech_trm_weapon_c_eng_40_2pdr
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_vss_vertical_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_eng
+	has_tech = tech_trm_armour_construction_cast_eng
+	has_tech = tank_radio2
+	
+	
+}
+HTD_AST_trm_medium_tank_chassis_ast_ac3_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	has_completed_focus = AST_sentinel_tank_project
+	has_tech = tech_trm_british_armour
+	has_tech = tech_trm_medium_tank_chassis_ast_ac3_1
+	has_tech = tech_trm_weapon_c_eng_88_25pdr
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_vss_vertical_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_eng
+	has_tech = tech_trm_armour_construction_cast_eng
+	has_tech = tank_radio2
+	
+	
+}
+HTD_AST_trm_medium_tank_chassis_ast_ac4_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+	has_completed_focus = AST_sentinel_tank_project
+	has_tech = tech_trm_british_armour
+	has_tech = tech_trm_medium_tank_chassis_ast_ac4_1
+	has_tech = tech_trm_weapon_c_eng_76_17pdr
+	has_tech = tech_trm_engine_gasoline_interwar_eng
+	has_tech = tech_trm_gearbox_standard_eng
+	has_tech = tech_trm_suspension_vss_vertical_eng
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_eng
+	has_tech = tech_trm_armour_construction_cast_eng
+	has_tech = tank_radio2	
+	
+}

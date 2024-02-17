@@ -1,0 +1,1422 @@
+#Vertical position
+@1930 = 0
+@1933 = 2
+@1934 = 4
+@1935 = 6
+@1936 = 8
+@1937 = 10
+@1938 = 12
+@1939 = 14
+@1940 = 16
+@1941 = 18
+@1942 = 20
+@1943 = 22
+@1944 = 24
+@1945 = 26
+@1946 = 28
+@1947 = 30
+
+# Horizontal position X
+@SOV_ARMOR = 7
+@TANKETTE = 1
+@LIGHT = 5
+@LIGHT2 = 9
+@CAVALRY = 13
+@MEDIUM = 17
+@INFANTRY = 21
+@HEAVY = 25
+
+HTD_SOV_tech_position = {
+	set_temp_variable = { tech_status = 0 }
+	set_temp_variable = { armor_aa = 0 }
+	set_temp_variable = { armor_td = 0 }
+	set_temp_variable = { armor_art = 0 }
+	set_temp_variable = { armor_flame = 0 }
+	set_temp_variable = { armor_asg = 0 }
+	set_temp_variable = { armor_amph = 0 }
+	set_temp_variable = { armor_cs = 0 }
+	set_temp_variable = { armor_reg = 0 }
+	set_temp_variable = { xp_true = 0 } 
+	
+	if = {
+		limit = { check_variable = { v = token:trm_tankette_tank_chassis_sov_t27_1_a } }
+
+		set_temp_variable = { tech_x = @TANKETTE }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_tankette_tank_amphibious_chassis_sov_t37_1_a } }
+
+		set_temp_variable = { tech_x = @TANKETTE }
+		set_temp_variable = { tech_y = @1933 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_tankette_tank_amphibious_chassis_sov_t38_1_a } }
+
+		set_temp_variable = { tech_x = @TANKETTE }
+		set_temp_variable = { tech_y = @1937 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_amphibious_chassis_sov_t40_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_sov_t40_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_sov_t26_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT2 }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_sov_t26_2_a } }
+
+		set_temp_variable = { tech_x = @LIGHT2 }
+		set_temp_variable = { tech_y = @1933 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_sov_t26_3_a } }
+
+		set_temp_variable = { tech_x = @LIGHT2 }
+		set_temp_variable = { tech_y = @1937 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_sov_t26_3_b } }
+
+		set_temp_variable = { tech_x = @LIGHT2 }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_sov_t50_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT2 }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_sov_t60_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_sov_t70_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_aa_chassis_sov_t70_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_aa = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_destroyer_chassis_sov_komsomolets_1_a } }
+
+		set_temp_variable = { tech_x = @TANKETTE }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_destroyer_chassis_sov_t70_1_b } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_destroyer_chassis_sov_t70_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_light_tank_chassis_sov_t80_1_a } }
+
+		set_temp_variable = { tech_x = @LIGHT }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_sov_bt2_1_b } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_sov_bt2_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_sov_bt2_1_c } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1930 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_sov_bt5_1_b } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1933 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_sov_bt5_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1934 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_sov_bt7_1_b } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_cs_chassis_sov_bt7_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_cs = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_sov_bt7_1_a } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1937 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_cavalry_tank_chassis_sov_bt7_1_c } }
+
+		set_temp_variable = { tech_x = @CAVALRY }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_sov_t28_1_a } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1934 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_sov_t28_2_a } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1938 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_infantry_tank_chassis_sov_t28_2_b } }
+
+		set_temp_variable = { tech_x = @INFANTRY }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_sov_t34_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1940 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_sov_t34_2_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_sov_t34_2_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_sov_t34_3_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_sov_t34_3_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_sov_t34_3_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_assault_gun_chassis_sov_t34_3_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_sov_t34_4_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_sov_t34_4_c } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_sov_t34_4_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_destroyer_chassis_sov_t34_4_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_td = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_sov_t34_4_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_tank_chassis_sov_t34_4_c } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_advanced_tank_chassis_sov_t44_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1945 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_advanced_tank_chassis_sov_t44_1_b } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1945 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_medium_advanced_tank_chassis_sov_t54_1_a } }
+
+		set_temp_variable = { tech_x = @MEDIUM }
+		set_temp_variable = { tech_y = @1946 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_sov_t35_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1935 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_sov_kv1_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_assault_gun_chassis_sov_kv1_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1939 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_sov_kv1_2_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1941 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_sov_kv1_3_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_sov_kv1_3_b } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_sov_kv1_3_c } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_reg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_assault_gun_chassis_sov_kv1_3_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1942 }
+
+		set_temp_variable = { subtech = 3 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_sov_is_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_assault_gun_chassis_sov_is_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_destroyer_chassis_sov_is_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1943 }
+
+		set_temp_variable = { subtech = 2 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_sov_is_2_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_destroyer_chassis_sov_is_2_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1944 }
+
+		set_temp_variable = { subtech = 1 }
+		set_temp_variable = { armor_asg = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_sov_is3_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1945 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { v = token:trm_heavy_tank_chassis_sov_is4_1_a } }
+
+		set_temp_variable = { tech_x = @HEAVY }
+		set_temp_variable = { tech_y = @1946 }
+
+		set_temp_variable = { subtech = 0 }
+	}
+
+	HTD_adjust_position = yes
+}
+
+HTD_SOV_trm_tankette_tank_chassis_sov_t27_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_tankette_tank_chassis_sov_t27_1
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_basic 
+}
+HTD_SOV_trm_tankette_tank_amphibious_chassis_sov_t37_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_tankette_tank_chassis_sov_t37_1
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_basic 
+}
+HTD_SOV_trm_tankette_tank_amphibious_chassis_sov_t38_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_tankette_tank_chassis_sov_t38_1
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_basic 
+}
+HTD_SOV_trm_light_tank_chassis_sov_t26_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_t26_1
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_SOV_trm_light_tank_chassis_sov_t26_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_t26_2
+	has_tech = tech_trm_weapon_c_sov_45_20k32 
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_SOV_trm_light_tank_chassis_sov_t26_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_t26_3
+	has_tech = tech_trm_weapon_c_sov_45_20k34 
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_SOV_trm_light_tank_chassis_sov_t26_3_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_t26_3
+	has_tech = tech_trm_weapon_c_sov_45_20k34 
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_basic 
+	has_tech = tech_trm_armour_addon 
+
+}
+HTD_SOV_trm_light_tank_chassis_sov_t50_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_t50_1
+	has_tech = tech_trm_weapon_c_sov_45_20k38
+	has_tech = tech_trm_engine_diesel_interwar_sov 
+	has_tech = tech_trm_gearbox_standard_sov 
+	has_tech = tech_trm_suspension_torsion_sov 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tech_trm_armour_design_sloped_sov 
+	has_tech = tank_radio 
+
+}
+HTD_SOV_trm_light_tank_amphibious_chassis_sov_t40_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_t40_1
+	has_tech = tech_trm_weapon_mg_sov_dshk
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_suspension_torsion_sov 
+	has_tech = tech_trm_armour_basic 
+	has_tech = tech_trm_armour_design_sloped_sov 
+
+}
+HTD_SOV_trm_light_tank_chassis_sov_t40_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_t40_1
+	has_tech = tech_trm_weapon_ac_sov_20_tnsh
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_suspension_torsion_sov 
+	has_tech = tech_trm_armour_basic 
+	has_tech = tech_trm_armour_design_sloped_sov 
+
+}
+HTD_SOV_trm_light_tank_chassis_sov_t60_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_t60_1
+	has_tech = tech_trm_weapon_ac_sov_20_tnsh
+	has_tech = tech_trm_engine_gasoline_basic_sov  
+	has_tech = tech_trm_gearbox_standard_sov 
+	has_tech = tech_trm_suspension_torsion_sov 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tech_trm_armour_design_sloped_sov 
+	has_tech = tank_radio 
+
+}
+HTD_SOV_trm_light_tank_chassis_sov_t70_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_t70_1
+	has_tech = tech_trm_weapon_c_sov_45_20k38
+	has_tech = tech_trm_ammo_sov_apcr_small
+	has_tech = tech_trm_engine_gasoline_basic_sov
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio
+	has_tech = tech_trm_tank_construction_fast_sov
+
+}
+HTD_SOV_trm_light_tank_chassis_sov_t80_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_t80_1
+	has_tech = tech_trm_weapon_c_sov_45_20k38
+	has_tech = tech_trm_ammo_sov_apcr_small
+	has_tech = tech_trm_engine_gasoline_basic_sov
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+
+}
+HTD_SOV_trm_light_tank_aa_chassis_sov_t70_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_t70_1
+	has_tech = tech_trm_light_tank_sov_t70_aa_open_1
+	has_tech = tech_trm_weapon_aa_ac_sov_37_61k
+	has_tech = tech_trm_engine_gasoline_basic_sov
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+
+}
+HTD_SOV_trm_light_tank_destroyer_chassis_sov_komsomolets_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_komsomolets_1
+	has_tech = tech_trm_weapon_c_sov_57_zis2
+	has_tech = tech_trm_engine_gasoline_basic_sov
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_armour_basic
+
+}
+HTD_SOV_trm_light_tank_destroyer_chassis_sov_t70_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_t70_1
+	has_tech = tech_trm_light_tank_sov_t70_superstructure_open_1
+	has_tech = tech_trm_weapon_c_sov_76_f34
+	has_tech = tech_trm_engine_gasoline_basic_sov
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio
+	has_tech = tech_trm_tank_construction_fast_sov
+
+}
+HTD_SOV_trm_light_tank_destroyer_chassis_sov_t70_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_light_tank_chassis_sov_t70_1
+	has_tech = tech_trm_light_tank_sov_t70_superstructure_open_1
+	has_tech = tech_trm_weapon_c_sov_76_f34
+	has_tech = tech_trm_engine_gasoline_basic_sov
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+
+}
+HTD_SOV_trm_cavalry_tank_chassis_sov_bt2_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_cavalry_tank_chassis_sov_bt2_1
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_SOV_trm_cavalry_tank_chassis_sov_bt2_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_cavalry_tank_chassis_sov_bt2_1
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_SOV_trm_cavalry_tank_chassis_sov_bt2_1_c = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_cavalry_tank_chassis_sov_bt2_1
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_SOV_trm_cavalry_tank_chassis_sov_bt5_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_cavalry_tank_chassis_sov_bt5_1
+	has_tech = tech_trm_weapon_c_sov_45_20k32
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_SOV_trm_cavalry_tank_chassis_sov_bt5_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_cavalry_tank_chassis_sov_bt5_1
+	has_tech = tech_trm_weapon_c_sov_45_20k32
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_basic 
+
+}
+HTD_SOV_trm_cavalry_tank_chassis_sov_bt7_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_cavalry_tank_chassis_sov_bt7_1
+	has_tech = tech_trm_weapon_c_sov_45_20k34
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_SOV_trm_cavalry_tank_chassis_sov_bt7_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_cavalry_tank_chassis_sov_bt7_1
+	has_tech = tech_trm_weapon_c_sov_45_20k34
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_SOV_trm_cavalry_tank_chassis_sov_bt7_1_c = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_cavalry_tank_chassis_sov_bt7_1
+	has_tech = tech_trm_weapon_c_sov_45_20k38
+	has_tech = tech_trm_engine_diesel_improved_sov 
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_SOV_trm_cavalry_tank_cs_chassis_sov_bt7_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_cavalry_tank_chassis_sov_bt7_1
+	has_tech = tech_trm_cavalry_tank_sov_bt7_turret_2
+	has_tech = tech_trm_weapon_c_sov_76_kt28
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_SOV_trm_infantry_tank_chassis_sov_t28_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_infantry_tank_chassis_sov_t28_1
+	has_tech = tech_trm_weapon_c_sov_76_kt28
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_SOV_trm_infantry_tank_chassis_sov_t28_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_infantry_tank_chassis_sov_t28_2
+	has_tech = tech_trm_weapon_c_sov_76_l10
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_interwar 
+
+}
+HTD_SOV_trm_infantry_tank_chassis_sov_t28_2_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_infantry_tank_chassis_sov_t28_2
+	has_tech = tech_trm_weapon_c_sov_76_l10
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tech_trm_armour_addon 
+
+}
+HTD_SOV_trm_medium_tank_chassis_sov_t34_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_sov_t34_1
+	has_tech = tech_trm_weapon_c_sov_76_l11
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_christie_improved_sov
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio
+
+}
+HTD_SOV_trm_medium_tank_chassis_sov_t34_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_sov_t34_2
+	has_tech = tech_trm_weapon_c_sov_76_f34
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_christie_improved_sov
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio
+	has_tech = tech_trm_tank_construction_fast_sov
+
+}
+HTD_SOV_trm_medium_tank_chassis_sov_t34_3_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_sov_t34_3
+	has_tech = tech_trm_weapon_c_sov_76_f34
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_christie_improved_sov
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_simple_construction_sov 
+
+}
+HTD_SOV_trm_medium_tank_chassis_sov_t34_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_sov_t34_3
+	has_tech = tech_trm_medium_tank_sov_t34_turret_2 
+	has_tech = tech_trm_weapon_c_sov_76_f34
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_christie_improved_sov
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tech_trm_armour_construction_cast_partial_sov 
+	has_tech = tank_radio
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_simple_construction_sov 
+
+}
+HTD_SOV_trm_medium_tank_chassis_sov_t34_4_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_sov_t34_4
+	has_tech = tech_trm_weapon_c_sov_76_f34
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_christie_improved_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tech_trm_armour_construction_cast_partial_sov 
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_simple_construction_sov 
+	has_tech = tech_trm_special_cupola_sov  
+
+}
+HTD_SOV_trm_medium_tank_chassis_sov_t34_4_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_sov_t34_4
+	has_tech = tech_trm_medium_tank_sov_t34_turret_3
+	has_tech = tech_trm_weapon_c_sov_85_d5
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_christie_improved_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tech_trm_armour_construction_cast_partial_sov 
+	has_tech = tech_trm_armour_construction_cast_round_sov 
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_simple_construction_sov 
+	has_tech = tech_trm_special_cupola_sov  
+
+}
+HTD_SOV_trm_medium_tank_chassis_sov_t34_4_c = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_sov_t34_4
+	has_tech = tech_trm_medium_tank_sov_t34_turret_3
+	has_tech = tech_trm_weapon_c_sov_85_ziss53
+	has_tech = tech_trm_ammo_sov_apcr_large
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_christie_improved_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tech_trm_armour_construction_cast_partial_sov 
+	has_tech = tech_trm_armour_construction_cast_round_sov 
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_simple_construction_sov 
+	has_tech = tech_trm_special_cupola_sov  
+
+}
+HTD_SOV_trm_medium_tank_destroyer_chassis_sov_t34_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_sov_t34_2
+	has_tech = tech_trm_weapon_c_sov_57_zis4
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_christie_improved_sov
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio
+	has_tech = tech_trm_tank_construction_fast_sov
+
+}
+HTD_SOV_trm_medium_tank_destroyer_chassis_sov_t34_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_sov_t34_3
+	has_tech = tech_trm_medium_tank_sov_t34_casemate_1 
+	has_tech = tech_trm_weapon_c_sov_85_d5
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_christie_improved_sov
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_simple_construction_sov 
+	has_tech = tech_trm_special_cupola_sov  
+
+}
+HTD_SOV_trm_medium_tank_destroyer_chassis_sov_t34_4_c = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_sov_t34_4
+	has_tech = tech_trm_weapon_c_sov_57_zis4
+	has_tech = tech_trm_ammo_sov_apcr_small
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_christie_improved_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tech_trm_armour_construction_cast_partial_sov 
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_simple_construction_sov 
+	has_tech = tech_trm_special_cupola_sov  
+
+}
+HTD_SOV_trm_medium_tank_destroyer_chassis_sov_t34_4_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_sov_t34_4
+	has_tech = tech_trm_medium_tank_sov_t34_casemate_1 
+	has_tech = tech_trm_weapon_c_sov_85_d5
+	has_tech = tech_trm_ammo_sov_apcr_large
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_christie_improved_sov
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_simple_construction_sov 
+	has_tech = tech_trm_special_cupola_sov  
+
+}
+HTD_SOV_trm_medium_tank_destroyer_chassis_sov_t34_4_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_sov_t34_4
+	has_tech = tech_trm_medium_tank_sov_t34_casemate_1 
+	has_tech = tech_trm_weapon_c_sov_100_d10
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_christie_improved_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_simple_construction_sov 
+	has_tech = tech_trm_special_cupola_sov  
+	has_tech = tech_trm_weapon_mg_sov_dshk   
+
+}
+HTD_SOV_trm_medium_tank_assault_gun_chassis_sov_t34_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_tank_chassis_sov_t34_3
+	has_tech = tech_trm_medium_tank_sov_t34_casemate_1 
+	has_tech = tech_trm_weapon_c_sov_122_m30
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_christie_improved_sov
+	has_tech = tech_trm_armour_interwar
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_simple_construction_sov 
+	has_tech = tech_trm_special_cupola_sov  
+
+}
+HTD_SOV_trm_medium_advanced_tank_chassis_sov_t44_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_advanced_tank_chassis_sov_t44_1
+	has_tech = tech_trm_weapon_c_sov_85_ziss53
+	has_tech = tech_trm_ammo_sov_apcr_large
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tech_trm_armour_construction_cast_partial_sov 
+	has_tech = tech_trm_armour_construction_cast_round_sov 
+	has_tech = tank_radio3
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_cupola_sov 
+
+}
+HTD_SOV_trm_medium_advanced_tank_chassis_sov_t44_1_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_advanced_tank_chassis_sov_t44_1
+	has_tech = tech_trm_weapon_c_sov_100_lb1
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tech_trm_armour_construction_cast_partial_sov 
+	has_tech = tech_trm_armour_construction_cast_round_sov 
+	has_tech = tank_radio3
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_cupola_sov 
+
+}
+HTD_SOV_trm_medium_advanced_tank_chassis_sov_t54_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_medium_advanced_tank_chassis_sov_t54_1
+	has_tech = tech_trm_weapon_c_sov_100_d10
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_transmission_twin_transmission_sov   
+	has_tech = tech_trm_gearbox_advanced_sov 
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_advanced 
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tech_trm_armour_construction_cast_partial_sov
+	has_tech = tech_trm_armour_construction_cast_round_sov
+	has_tech = tank_radio3
+	has_tech = tech_trm_special_cupola_sov
+	has_tech = tech_trm_weapon_mg_sov_dshk
+	has_tech = tech_trm_special_improved_optics
+
+}
+HTD_SOV_trm_heavy_tank_chassis_sov_t35_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_t35_1
+	has_tech = tech_trm_weapon_c_sov_76_kt28
+	has_tech = tech_trm_engine_gasoline_basic_sov 
+	has_tech = tech_trm_armour_interwar 
+	has_tech = tech_trm_weapon_c_sov_45_20k32
+
+}
+HTD_SOV_trm_heavy_tank_chassis_sov_kv1_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_kv1_1
+	has_tech = tech_trm_weapon_c_sov_76_l11
+	has_tech = tech_trm_engine_diesel_improved_sov 
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+
+}
+HTD_SOV_trm_heavy_tank_chassis_sov_kv1_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_kv1_2
+	has_tech = tech_trm_weapon_c_sov_76_f34
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio
+	has_tech = tech_trm_tank_construction_fast_sov
+
+}
+HTD_SOV_trm_heavy_tank_chassis_sov_kv1_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_kv1_3
+	has_tech = tech_trm_weapon_c_sov_76_f34
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio
+	has_tech = tech_trm_tank_construction_fast_sov
+
+}
+HTD_SOV_trm_heavy_tank_chassis_sov_kv1_3_b = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_kv1_3
+	has_tech = tech_trm_weapon_c_sov_76_f34
+	has_tech = tech_trm_engine_diesel_advanced_sov   
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tech_trm_armour_construction_cast_partial_sov
+	has_tech = tech_trm_armour_construction_cast_round_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_cupola_sov
+
+}
+HTD_SOV_trm_heavy_tank_chassis_sov_kv1_3_c = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_kv1_3
+	has_tech = tech_trm_heavy_tank_sov_kv1_turret_2
+	has_tech = tech_trm_weapon_c_sov_85_d5
+	has_tech = tech_trm_engine_diesel_advanced_sov   
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tech_trm_armour_construction_cast_partial_sov
+	has_tech = tech_trm_armour_construction_cast_round_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_cupola_sov
+
+}
+HTD_SOV_trm_heavy_tank_chassis_sov_is_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_is_1
+	has_tech = tech_trm_weapon_c_sov_85_d5
+	has_tech = tech_trm_engine_diesel_improved_sov   
+	has_tech = tech_trm_transmission_twin_transmission_sov 
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_heavy_sov
+	has_tech = tech_trm_armour_construction_cast_partial_sov
+	has_tech = tech_trm_armour_construction_cast_round_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_ergonomics_standard_sov 
+	has_tech = tech_trm_special_cupola_sov
+
+}
+HTD_SOV_trm_heavy_tank_chassis_sov_is_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_is_2
+	has_tech = tech_trm_weapon_c_sov_122_d25
+	has_tech = tech_trm_engine_diesel_improved_sov   
+	has_tech = tech_trm_transmission_twin_transmission_sov 
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_advanced
+	has_tech = tech_trm_armour_design_sloped_heavy_sov
+	has_tech = tech_trm_armour_construction_cast_sov
+	has_tech = tech_trm_armour_construction_cast_round_sov
+	has_tech = tank_radio3
+	has_tech = tech_trm_ergonomics_standard_sov 
+	has_tech = tech_trm_special_cupola_sov
+	has_tech = tech_trm_weapon_mg_sov_dshk
+
+}
+HTD_SOV_trm_heavy_tank_chassis_sov_is3_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_is3_1
+	has_tech = tech_trm_weapon_c_sov_122_d25
+	has_tech = tech_trm_engine_diesel_improved_sov   
+	has_tech = tech_trm_transmission_twin_transmission_sov 
+	has_tech = tech_trm_gearbox_advanced_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_advanced
+	has_tech = tech_trm_armour_design_sloped_pike_sov
+	has_tech = tech_trm_armour_construction_cast_partial_sov
+	has_tech = tech_trm_armour_construction_cast_round_sov
+	has_tech = tank_radio3
+	has_tech = tech_trm_ergonomics_standard_sov 
+	has_tech = tech_trm_special_cupola_sov
+	has_tech = tech_trm_weapon_mg_sov_dshk
+
+}
+HTD_SOV_trm_heavy_tank_chassis_sov_is4_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_is4_1
+	has_tech = tech_trm_weapon_c_sov_122_d25
+	has_tech = tech_trm_engine_diesel_advanced_sov
+	has_tech = tech_trm_transmission_twin_transmission_sov 
+	has_tech = tech_trm_gearbox_advanced_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_advanced
+	has_tech = tech_trm_armour_design_sloped_heavy_sov
+	has_tech = tech_trm_armour_construction_cast_partial_sov
+	has_tech = tech_trm_armour_construction_cast_round_sov
+	has_tech = tank_radio3
+	has_tech = tech_trm_ergonomics_standard_sov 
+	has_tech = tech_trm_special_cupola_sov
+	has_tech = tech_trm_weapon_mg_sov_dshk
+
+}
+HTD_SOV_trm_heavy_tank_assault_gun_chassis_sov_kv1_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_kv1_1
+	has_tech = tech_trm_heavy_tank_sov_kv2_turret_1 
+	has_tech = tech_trm_weapon_c_sov_152_m10
+	has_tech = tech_trm_engine_diesel_improved_sov 
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+
+}
+HTD_SOV_trm_heavy_tank_assault_gun_chassis_sov_kv1_3_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_kv1_3
+	has_tech = tech_trm_heavy_tank_sov_kv1_casemate_1 
+	has_tech = tech_trm_weapon_c_sov_152_ml20
+	has_tech = tech_trm_engine_diesel_improved_sov  
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_tank_construction_fast_sov
+	has_tech = tech_trm_special_cupola_sov
+
+}
+HTD_SOV_trm_heavy_tank_assault_gun_chassis_sov_is_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_is_1
+	has_tech = tech_trm_heavy_tank_sov_is_casemate_1 
+	has_tech = tech_trm_weapon_c_sov_152_ml20
+	has_tech = tech_trm_ammo_sov_heat
+	has_tech = tech_trm_engine_diesel_improved_sov   
+	has_tech = tech_trm_transmission_twin_transmission_sov 
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_ergonomics_standard_sov 
+	has_tech = tech_trm_special_cupola_sov
+	has_tech = tech_trm_weapon_mg_sov_dshk
+
+}
+HTD_SOV_trm_heavy_tank_destroyer_chassis_sov_is_1_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_is_1
+	has_tech = tech_trm_heavy_tank_sov_is_casemate_1 
+	has_tech = tech_trm_weapon_c_sov_122_a19
+	has_tech = tech_trm_engine_diesel_improved_sov   
+	has_tech = tech_trm_transmission_twin_transmission_sov 
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_ergonomics_standard_sov 
+	has_tech = tech_trm_special_cupola_sov
+	has_tech = tech_trm_weapon_mg_sov_dshk
+
+}
+HTD_SOV_trm_heavy_tank_destroyer_chassis_sov_is_2_a = {
+	set_temp_variable = { xp_cost = 10 } 
+	### CONDITIONS
+
+	has_tech = tech_trm_heavy_tank_chassis_sov_is_2
+	has_tech = tech_trm_heavy_tank_sov_is_casemate_1 
+	has_tech = tech_trm_weapon_c_sov_122_a19
+	has_tech = tech_trm_engine_diesel_improved_sov   
+	has_tech = tech_trm_transmission_twin_transmission_sov 
+	has_tech = tech_trm_gearbox_standard_sov
+	has_tech = tech_trm_suspension_torsion_sov
+	has_tech = tech_trm_armour_improved
+	has_tech = tech_trm_armour_design_sloped_sov
+	has_tech = tank_radio2
+	has_tech = tech_trm_ergonomics_standard_sov 
+	has_tech = tech_trm_special_cupola_sov
+	has_tech = tech_trm_weapon_mg_sov_dshk
+
+}
