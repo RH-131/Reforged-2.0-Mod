@@ -189,11 +189,10 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
 			add_political_power = 100
-			FIN_bop_low_increase_effect = yes
 
 			add_popularity = {
 				ideology = neutrality
@@ -225,8 +224,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 
-			FIN_bop_very_low_increase_effect = yes
-
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.03
@@ -249,12 +246,10 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
 			add_political_power = 50
-
-			FIN_bop_very_low_increase_effect = yes
 
 			add_popularity = {
 				ideology = neutrality
@@ -279,12 +274,10 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
 			add_political_power = 50
-
-			FIN_bop_very_low_increase_effect = yes
 
 			add_popularity = {
 				ideology = democratic
@@ -534,10 +527,9 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			FIN_bop_low_increase_effect = yes
 
 			add_political_power = 100
 
@@ -562,9 +554,6 @@ focus_tree = {
 					add = paasikivi_doctrine_improved
 				}
 				add_country_leader_trait = kokoomus_policies
-			}
-			hidden_effect = {
-				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}
@@ -652,10 +641,9 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			FIN_bop_low_increase_effect = yes
 
 			army_experience = 50
 			air_experience = 25
@@ -668,13 +656,6 @@ focus_tree = {
 				every_country_division = {
 					random_select_amount = 12
 					add_divisional_commander_xp = 650
-					hidden_effect = {
-						add_history_entry = {
-							key = FIN_strengthen_military_administration_history_entry
-							subject = "Military Merit Award"
-							allow = yes #(allow medal award)
-						}
-					}
 				}
 			}
 
@@ -703,11 +684,9 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
-			FIN_bop_low_increase_effect = yes
-
 			add_political_power = 100
 
 			FIN_risto_ryti = {
@@ -788,11 +767,10 @@ focus_tree = {
 			has_government = neutrality
 		}
 
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 50
-			FIN_bop_very_low_increase_effect = yes
 		}
 	}
 	
@@ -1098,8 +1076,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			FIN_bop_low_increase_effect = yes
-
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
 			add_to_variable = {
 				FIN_finnish_army_conscription_factor = 0.1
@@ -1340,11 +1316,10 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			add_stability = 0.05
-			FIN_bop_medium_increase_effect = yes
 
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = FIN_vilho_annala
@@ -1737,8 +1712,6 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			FIN_bop_low_increase_effect = yes
-
 			213 = { #MURMANSK
 				add_core_of = ROOT
 			}
@@ -2189,7 +2162,7 @@ focus_tree = {
 		cost = 5
 		available = {
 			has_tech = excavation3
-			has_full_control_of_state = 929 #OULU
+			has_full_control_of_state = 149 #OULU
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
@@ -5052,12 +5025,6 @@ focus_tree = {
 		relative_position_id = FIN_suomen_ilmavoimat
 		cost = 5
 		available = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				has_tech = iw_small_airframe
-			}
 		}
 
 		search_filters = {  FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH }
@@ -5080,77 +5047,6 @@ focus_tree = {
 
 			air_experience = 15
 			navy_experience = 15
-
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				if = {
-					limit = {
-						has_tech = basic_small_airframe
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						create_equipment_variant = {
-							name = "VL Kotka" 
-							type = small_plane_naval_bomber_airframe_1
-							modules = {
-								fixed_main_weapon_slot = torpedo_mounting
-								engine_type_slot = engine_1_1x
-								special_type_slot_1 = empty
-							}
-							icon = "GFX_FIN_naval_bomber1_medium"
-							design_team = mio:FIN_valtion_lentokonetehdas_organization
-						}
-					}
-					else = {
-						create_equipment_variant = {
-							name = "VL Kotka" 
-							type = small_plane_naval_bomber_airframe_1
-							modules = {
-								fixed_main_weapon_slot = torpedo_mounting
-								engine_type_slot = engine_1_1x
-								special_type_slot_1 = empty
-							}
-							icon = "GFX_FIN_naval_bomber1_medium"
-						}
-					}
-				}
-				else = {
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						create_equipment_variant = {
-							name = "VL Kotka" 
-							type = small_plane_naval_bomber_airframe_0
-							allow_without_tech = yes #Tooltip purposes (focus requires tech anyways)
-							modules = {
-								fixed_main_weapon_slot = torpedo_mounting
-								engine_type_slot = engine_1_1x
-								special_type_slot_1 = empty
-							}
-							icon = "GFX_FIN_iw_small_naval_bomber_1_medium"
-							design_team = mio:FIN_valtion_lentokonetehdas_organization
-						}
-					}
-					else = {
-						create_equipment_variant = {
-							name = "VL Kotka" 
-							type = small_plane_naval_bomber_airframe_0
-							allow_without_tech = yes #Tooltip purposes (focus requires tech anyways)
-							modules = {
-								fixed_main_weapon_slot = torpedo_mounting
-								engine_type_slot = engine_1_1x
-								special_type_slot_1 = empty
-							}
-							icon = "GFX_FIN_iw_small_naval_bomber_1_medium"
-						}
-					}
-				}
-			}
 		}
 	}
 	
@@ -5238,12 +5134,7 @@ focus_tree = {
 		relative_position_id = FIN_national_aircraft_production
 		cost = 5
 		available = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				has_tech = iw_small_airframe
-			}
+			
 		}
 
 		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
@@ -5265,112 +5156,6 @@ focus_tree = {
 			}
 
 			air_experience = 15
-
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				if = {
-					limit = {
-						has_tech = improved_small_airframe
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						create_equipment_variant = { #Made-up
-							name = "VL Kemi"
-							type = small_plane_cas_airframe_2
-							parent_version = 0
-							modules = {
-								fixed_main_weapon_slot = bomb_locks
-								fixed_auxiliary_weapon_slot_1 = heavy_mg_2x
-								engine_type_slot = engine_2_1x
-							}
-							icon = "GFX_FIN_CAS2_medium"
-							design_team = mio:FIN_valtion_lentokonetehdas_organization
-						}
-					}
-					else = {
-						create_equipment_variant = { #Made-up
-							name = "VL Kemi"
-							type = small_plane_cas_airframe_2
-							parent_version = 0
-							modules = {
-								fixed_main_weapon_slot = bomb_locks
-								fixed_auxiliary_weapon_slot_1 = heavy_mg_2x
-								engine_type_slot = engine_2_1x
-							}
-							icon = "GFX_FIN_CAS2_medium"
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						has_tech = basic_small_airframe
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						create_equipment_variant = { #Made-up
-							name = "VL Kemi"
-							type = small_plane_cas_airframe_1
-							parent_version = 0
-							modules = {
-								fixed_main_weapon_slot = bomb_locks
-								fixed_auxiliary_weapon_slot_1 = heavy_mg_2x
-								engine_type_slot = engine_1_1x
-							}
-							icon = "GFX_FIN_CAS1_medium"
-							design_team = mio:FIN_valtion_lentokonetehdas_organization
-						}
-					}
-					else = {
-						create_equipment_variant = { #Made-up
-							name = "VL Kemi"
-							type = small_plane_cas_airframe_1
-							parent_version = 0
-							modules = {
-								fixed_main_weapon_slot = bomb_locks
-								fixed_auxiliary_weapon_slot_1 = heavy_mg_2x
-								engine_type_slot = engine_1_1x
-							}
-							icon = "GFX_FIN_CAS1_medium"
-						}
-					}
-				}
-				else = {
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						create_equipment_variant = { #Made-up
-							name = "VL Kemi"
-							type = small_plane_cas_airframe_0
-							parent_version = 0
-							modules = {
-								fixed_main_weapon_slot = bomb_locks
-								engine_type_slot = engine_1_1x
-							}
-							icon = "GFX_FIN_CAS1_medium"
-							design_team = mio:FIN_valtion_lentokonetehdas_organization
-						}
-					}
-					else = {
-						create_equipment_variant = { #Made-up
-							name = "VL Kemi"
-							type = small_plane_cas_airframe_0
-							parent_version = 0
-							modules = {
-								fixed_main_weapon_slot = bomb_locks
-								engine_type_slot = engine_1_1x
-							}
-							icon = "GFX_FIN_CAS1_medium"
-						}
-					}
-				}
-			}
 		}
 	}
 	

@@ -83,35 +83,113 @@ set_popularities = {
 	neutrality = 90 
 }
 
-recruit_character = FIN_risto_heikki_ryti
-recruit_character = FIN_aimo_aaltonen
-recruit_character = FIN_vilho_annala
+145 = {
+	set_demilitarized_zone = yes
+}
+
+### MINERAL WEALTH DEVELOPMENT ###
+set_variable = { FIN_mineral_wealth_development_resource_amount = 2 } #2 by default, can be 3 if giving resource rights
+set_variable = { FIN_mineral_wealth_development_aluminium_amount = 6 } #6 by default, can be 8 if giving resource rights
+
+### ECONOMIC DECISIONS ###
+set_variable = { FIN_prioritize_light_industry_dec_cost = 50 } #Will be duplicated if the opposite NS is active
+set_variable = { FIN_prioritize_heavy_industry_dec_cost = 50 } #Will be duplicated if the opposite NS is active
+
+### FOCUS ###
+set_variable = { FIN_subsidized_national_industrialization_factories_required = 30 }
+set_variable = { FIN_basic_subsidies_value = 1000 }
+
+### MOTTI SYSTEM
+set_variable = { FIN_motti_decision_cost = 25 }
+set_variable = { FIN_motti_decision_cost_increase = 2 } #Will be multiplied by current CP/PP cost
+set_variable = { FIN_motti_decision_cost_for_trigger = FIN_motti_decision_cost } #For trigger purposes
+subtract_from_variable = { FIN_motti_decision_cost_for_trigger = 1 } 
+
+### NATIONAL DEFENSE SYSTEM
+set_variable = { FIN_weapon_caches_decision_cost = 25 }
+set_variable = { FIN_weapon_caches_decision_cost_increase = 5 } #Will be added to the current PP&CP cost
+set_variable = { FIN_weapon_caches_decision_cost_for_trigger = FIN_weapon_caches_decision_cost } #For trigger purposes
+subtract_from_variable = { FIN_weapon_caches_decision_cost_for_trigger = 1 } 
+set_variable = { FIN_search_for_weapon_caches_decision_cost = 15 } #CP cost for decision to Search for Weapon Caches (for Finland's enemies)
+set_variable = { FIN_search_for_weapon_caches_decision_cost_for_trigger = FIN_search_for_weapon_caches_decision_cost } #For trigger purposes
+subtract_from_variable = { FIN_search_for_weapon_caches_decision_cost_for_trigger = 1 } 
+
+set_variable = { FIN_coastal_garrisons_pp_xp_cost = 60 }
+set_variable = { FIN_coastal_garrisons_pp_xp_cost_trigger = FIN_coastal_garrisons_pp_xp_cost }
+add_to_variable = { FIN_coastal_garrisons_pp_xp_cost_trigger = -1 }
+set_variable = { FIN_coastal_garrisons_cp_cost = 30 }
+set_variable = { FIN_coastal_garrisons_cp_cost_trigger = FIN_coastal_garrisons_cp_cost }
+add_to_variable = { FIN_coastal_garrisons_cp_cost_trigger = -1 }
+set_variable = { FIN_coastal_garrisons_time = 30 }
+
+### ARMY LEADERS
+recruit_character = FIN_carl_mannerheim
 recruit_character = FIN_erik_heinrichs
 recruit_character = FIN_vilho_petter_nenonen
-recruit_character = FIN_kyösti_kallio
-recruit_character = FIN_carl_gustaf_mannerheim
-recruit_character = FIN_karl_lennart_oesch
-recruit_character = FIN_antti_hackzell
-recruit_character = FIN_1
-recruit_character = FIN_jarl_lundqvist
-recruit_character = FIN_hugo_osterman
-recruit_character = FIN_2
-recruit_character = FIN_olavi_sarko
-recruit_character = FIN_mauno_pekkala
-recruit_character = FIN_akseli_anttila
-recruit_character = FIN_karl_oesch
-recruit_character = FIN_olavi_arho
-recruit_character = FIN_valio_porvari
-recruit_character = FIN_carl_mannerheim
-recruit_character = FIN_lauri_malmberg
-recruit_character = FIN_vaino_tanner
-recruit_character = FIN_rainer_von_fieandt
+recruit_character = FIN_woldemar_hagglund
+recruit_character = FIN_juho_heiskanen
+recruit_character = FIN_wiljo_einar_tuompo
+recruit_character = FIN_aarne_juutilainen
+recruit_character = FIN_fanni_luukkonen
+recruit_character = FIN_hannu_hannuksela
+recruit_character = FIN_hjalmar_siilasvuo
+recruit_character = FIN_taavetti_laatikainen
+recruit_character = FIN_matti_aarnio
+recruit_character = FIN_erkki_raappana
+recruit_character = FIN_aarne_sihvo
+recruit_character = FIN_aksel_airo
+recruit_character = FIN_ruben_lagus
+recruit_character = FIN_paavo_susitaival #Only as Fascist Demagogue without DLC
+recruit_character = FIN_kurt_martti_wallenius
+recruit_character = FIN_lauri_torni
+
+### NAVY LEADERS
+recruit_character = FIN_ragnar_hakola
+recruit_character = FIN_svante_sundman
+
+### THEORISTS ###
 recruit_character = FIN_vaino_valve
-recruit_character = FIN_harald_ohquist
+recruit_character = FIN_gustaf_magnusson
+recruit_character = FIN_torsti_verkkola
+
+###ARMY CHIEFS ###
+recruit_character = FIN_lauri_malmberg
+recruit_character = FIN_hugo_osterman
+
+### NAVY CHIEFS ###
+recruit_character = FIN_olavi_arho
 recruit_character = FIN_eero_rahola
+
+### AIR CHIEFS ###
+recruit_character = FIN_jarl_lundqvist
+recruit_character = FIN_olavi_sarko
+
+### MILITARY HIGH COMMAND ###
+recruit_character = FIN_karl_oesch
+recruit_character = FIN_harald_ohquist
+recruit_character = FIN_valio_porvari
 recruit_character = FIN_lauri_tiainen
-recruit_character = FIN_ralf_torngren
+recruit_character = FIN_frans_helminen
+recruit_character = FIN_alpo_marttinen
+recruit_character = FIN_kaarlo_somerto
+recruit_character = FIN_reino_hallamaa
+recruit_character = FIN_johan_arajuuri
+recruit_character = GER_nikolaus_von_falkenhorst #Defined in the German char file
+
+
+### POLITICAL ADVISORS ###
 recruit_character = FIN_ake_henrik_gartz
+recruit_character = FIN_aimo_lahti
+recruit_character = FIN_antti_hackzell
+recruit_character = FIN_rudolf_holsti
+recruit_character = FIN_aimo_cajander
+recruit_character = FIN_urho_kekkonen
+recruit_character = FIN_ralf_torngren
+recruit_character = FIN_ernst_von_born
+recruit_character = FIN_hilja_riipinen
+recruit_character = FIN_esko_riekki
+recruit_character = FIN_elias_simojoki
+recruit_character = FIN_ilmari_kianto
  
 add_ideas = {
     FIN_communism_banned
