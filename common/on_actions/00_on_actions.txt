@@ -538,30 +538,6 @@ on_actions = {
 					remove_ideas = anti_soviet_pact
 				}
 			}
-			if = {
-				limit = {
-					FIN = { has_completed_focus = FIN_learn_from_the_winter_war }
-					ROOT = {
-						TAG = FIN
-					}
-					FROM = {
-						TAG = SOV
-					}
-				}
-				FIN = { complete_national_focus = FIN_begin_the_continuation_war }	 
-			}
-			if = {
-				limit = {
-					FIN = { has_completed_focus = FIN_learn_from_the_winter_war }
-					ROOT = {
-						TAG = SOV
-					}
-					FROM = {
-						TAG = FIN
-					}
-				}
-				FIN = { complete_national_focus = FIN_begin_the_continuation_war }	 
-			}
 			#Germany has started a war - allies should try to contain Germany
 			if = {
 				limit = {

@@ -25,3 +25,23 @@
 #
 #	can be added to countries, states or unit leaders
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+#### STATE MODIDIFERS
+ETH_state_development_dynamic_modifier = { #STATE MODIFIER
+	enable = { always = yes }
+	icon = GFX_modifiers_ETH_state_development
+	state_production_speed_buildings_factor = ETH_state_development_production_speed # $MODIFIER_STATE_PRODUCTION_SPEED_BUILDINGS_FACTOR$
+	local_building_slots_factor = ETH_state_development_local_building_slots_factor # $MODIFIER_LOCAL_BUILDING_SLOTS$
+
+
+	# Later
+	local_factories = ETH_state_development_local_factories
+	state_resources_factor = ETH_state_development_state_resources_factor
+
+}
+
+ETH_arranged_expansion_modifier = {
+	enable = { always = yes  }
+	icon = GFX_modifiers_ETH_arranged_territorial_expansion
+	custom_modifier_tooltip = ETH_arranged_expansion_modifier_tt
+}

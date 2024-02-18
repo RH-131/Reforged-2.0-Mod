@@ -85,6 +85,27 @@ ETH_INF_01 =
 	}
 }
 
+ETH_ARB = {
+	name = "Arbegnoch fighters"
+
+	for_countries = { ETH }
+
+	can_use = { always = no }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ETH_INF_01 }
+
+	fallback_name = "%d Arbegnoch Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+	}
+	
+}
+
 ETH_CAV_01 = 
 {
 	name = "Cavalry Division"

@@ -235,10 +235,7 @@ FIN_national_defense_category = {
 		days_remove = 30
 
 		visible = {
-			OR = {
-				has_completed_focus = FIN_weapon_caches
-				has_completed_focus = FIN_defensive_preparations
-			}
+			has_completed_focus = FIN_weapon_caches
 		}
 
 		available = {
@@ -294,18 +291,7 @@ FIN_national_defense_category = {
 				is_historical_focus_on = yes
 			}
 			modifier = {
-				factor = 5
-				OR = {
-					FIN_is_historical_ai = yes
-					FIN_is_fascist_ai = yes
-				}
-			}
-			modifier = {
 				factor = 10
-				OR = {
-					FIN_is_historical_ai = yes
-					FIN_is_fascist_ai = yes
-				}
 				FROM = {
 					any_neighbor_state = {
 						controller = {
@@ -316,7 +302,6 @@ FIN_national_defense_category = {
 			}
 			modifier = { #Don't do this if historical Finland needs to ban communism tack
 				factor = 0
-				FIN_is_historical_ai = yes
 				OR = {
 					has_idea = communist_pressure
 					communism > 0.08
@@ -561,10 +546,7 @@ FIN_national_defense_category = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = FIN_coastal_defense
-				has_completed_focus = FIN_defensive_preparations
-			}
+			has_completed_focus = FIN_coastal_defense
 			OR = {
 				has_full_control_of_state = 111
 				has_full_control_of_state = 928
@@ -810,10 +792,7 @@ FIN_national_defense_category = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = FIN_sea_mines_strategy
-				has_completed_focus = FIN_defensive_preparations
-			}
+			has_completed_focus = FIN_sea_mines_strategy
 			has_full_control_of_state = 111
 		}
 

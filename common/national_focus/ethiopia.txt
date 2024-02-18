@@ -383,30 +383,13 @@ focus_tree = {
 					cavalry = { x = 1 y = 1 }
 				}
 			} 
-			division_template = {
-				name = "Irregular Camelry Division"		
-				division_names_group = ETH_CAV_01
-				is_locked = yes
-				force_allow_recruiting = yes
-				regiments = {
-					camelry = { x = 0 y = 0 }
-					camelry = { x = 0 y = 1 }
-					camelry = { x = 1 y = 0 }
-				}
-			} 
 			hidden_effect = {
-				set_division_template_cap = { division_template = "Irregular Cavalry Division" division_cap = 6 }
-				set_division_template_cap = { division_template = "Irregular Camelry Division" division_cap = 3 }
+				set_division_template_cap = { division_template = "Irregular Cavalry Division" division_cap = 9 }
 				random_owned_controlled_state = {
 					create_unit = {
 						division = "division_template = \"Irregular Cavalry Division\" start_experience_factor = 0.05 start_equipment_factor = 1"
 						owner = ETH
-						count = 2
-					}
-					create_unit = {
-						division = "division_template = \"Irregular Camelry Division\" start_experience_factor = 0.05 start_equipment_factor = 1"
-						owner = ETH
-						count = 1
+						count = 3
 					}
 				}
 			}
@@ -867,7 +850,6 @@ focus_tree = {
 			modifier = {
 				factor = 1.25
 				has_government = neutrality
-				has_completed_focus = ETH_boarding_the_train
 			}
 		}
 
@@ -894,7 +876,6 @@ focus_tree = {
 			modifier = {
 				factor = 1.25
 				has_government = neutrality
-				has_completed_focus = ETH_the_lion_stands_firm
 			}
 		}
 
@@ -1044,10 +1025,6 @@ focus_tree = {
 		}
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0.5
-				has_completed_focus = ETH_callout_to_the_world
-			}
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_BALANCE_OF_POWER}
@@ -1087,7 +1064,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			ETH_BOP_centralization_large_effect = yes 
 			random_owned_controlled_state = {
 				limit = {
 					not = { state = 271 }
@@ -1140,19 +1116,11 @@ focus_tree = {
 		}
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 1.5
-				OR = {
-					has_completed_focus = ETH_callout_to_the_world
-					has_government = democratic
-				}
-			}
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_BALANCE_OF_POWER}
 
 		completion_reward = {
-			ETH_BOP_decentralization_large_effect = yes 
 			every_owned_state = {
 				limit = { 
 					check_variable = { ETH_state_development_production_speed < -0.15 }
@@ -1299,10 +1267,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
-
 		completion_reward = {
-			ETH_BOP_centralization_large_effect = yes 
 			add_stability = -0.05
 			add_ideas = ETH_taxed_nobility_idea
 		}
@@ -1327,15 +1292,10 @@ focus_tree = {
 			}
 		}
 
-		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
-
 		completion_reward = {
-			ETH_BOP_decentralization_large_effect = yes 
 			add_stability = 0.2
 			add_war_support = 0.1
 			custom_effect_tooltip = ETH_expand_tax_exemptions_tt
-			add_to_variable = { ETH_bureaucracy_production_speed_buildings_factor = -0.05 }
-			add_to_variable = { ETH_bureaucracy_production_factory_max_efficiency_factor = -0.05 } # $MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$
 		}
 	}
 	focus = {
@@ -1361,12 +1321,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
 
 		completion_reward = {
-			ETH_BOP_centralization_large_effect = yes 
 			add_stability = 0.03
-			custom_effect_tooltip = ETH_communal_agriculture_consumer_tt
-			add_to_variable = {
-				ETH_industrialization_consumer_goods_factor = -0.15
-			}
 		}
 	}
 	focus = {
@@ -1404,13 +1359,6 @@ focus_tree = {
 		}
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 2
-				OR = {
-					has_government = democratic
-					has_completed_focus = ETH_callout_to_the_world
-				}
-			}
 		}
 
 		search_filters = {FOCUS_FILTER_ARMY_XP}
@@ -1439,16 +1387,9 @@ focus_tree = {
 			base = 2
 		}
 
-		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
-
 		completion_reward = {
-			ETH_BOP_centralization_large_effect = yes 
 			add_stability = 0.1
 			custom_effect_tooltip = ETH_the_state_court_tt
-			add_to_variable = { ETH_bureaucracy_production_speed_buildings_factor = 0.1 }
-			add_to_variable = { ETH_bureaucracy_production_factory_max_efficiency_factor = 0.05 } # $MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$
-			add_to_variable = { ETH_bureaucracy_research_speed_factor = 0.1 }
-			ETH_check_remove_corrupt_bureaucracy = yes 
 		}
 	}
 	focus = {
@@ -2014,7 +1955,6 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			add_ideas = ETH_national_studs_idea
-			set_technology = { camelry = 1 }
 		}
 	}
 	focus = {
@@ -2377,7 +2317,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					has_completed_focus = ITA_victoryinETH
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -2444,7 +2384,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					has_completed_focus = ITA_victoryinETH
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -2473,7 +2413,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					has_completed_focus = ITA_victoryinETH
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -2481,10 +2421,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
-
 		completion_reward = {
-			ETH_BOP_centralization_large_effect = yes
 			custom_effect_tooltip = ETH_italian_general_staff_tt
 			ITA = {
 				country_event = {
@@ -2497,7 +2434,7 @@ focus_tree = {
 	focus = {
 		id = ETH_cooperation
 		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = ETH_amedeos_feast_of_maskal focus = ETH_assertiveness }
+		prerequisite = { focus = ETH_amedeos_feast_of_maskal }
 		dynamic = yes 
 		x = 1
 		y = 1
@@ -2544,7 +2481,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					has_completed_focus = ITA_victoryinETH
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -2552,10 +2489,9 @@ focus_tree = {
 			}
 		}
 
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			ETH_BOP_centralization_large_effect = yes 
 			add_political_power = 120
 			add_offsite_building = { type = industrial_complex level = 2 }
 		}
@@ -2575,7 +2511,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					has_completed_focus = ITA_victoryinETH
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -2711,7 +2647,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					has_completed_focus = ITA_victoryinETH
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -2776,7 +2712,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					has_completed_focus = ITA_victoryinETH
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -2784,10 +2720,9 @@ focus_tree = {
 			}
 		}
 
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			ETH_BOP_centralization_small_effect = yes 
 			add_stability = 0.1
 			effect_tooltip = {
 				swap_ideas = {
@@ -2822,7 +2757,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					has_completed_focus = ITA_victoryinETH
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -2870,7 +2805,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					has_completed_focus = ITA_victoryinETH
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}

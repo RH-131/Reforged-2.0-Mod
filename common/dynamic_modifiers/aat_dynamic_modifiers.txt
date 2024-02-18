@@ -27,63 +27,6 @@
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
 #
 ###################################
-#
-#ER_poor_iron_quality = {
-#	enable = { always = yes }
-#	icon = GFX_modifiers_SOV_civilian_labor_in_defense
-#
-#	state_resource_steel = iron_ore_scale
-#
-#
-################################
-#
-###  ##  ### #    ##  #  # ###  
-##  #  # #   #   #  # ## # #  # 
-##  #    ##  #   #### # ## #  # 
-##  #  # #   #   #  # #  # #  # 
-###  ##  ### ### #  # #  # ###  
-#
-################################
-#
-#CE_the_icelandic_economy_modifier = {
-#	enable = { always = yes }
-#	icon = GFX_idea_tur_balkan_central_bank_wealthy_greece 
-#
-#	research_speed_factor = ICE_economy_research_speed_factor
-#	production_factory_max_efficiency_factor = ICE_economy_production_factory_max_efficiency_factor
-#	production_speed_buildings_factor = ICE_economy_production_speed_buildings_factor
-#	consumer_goods_factor = ICE_economy_consumer_goods_factor
-#	industrial_capacity_dockyard = ICE_economy_industrial_capacity_dockyard
-#	industrial_capacity_factory = ICE_economy_industrial_capacity_factory
-#
-#
-#CE_transformation_of_nature_state_modifier = {
-#	enable = { always = yes }
-#	icon = GFX_modifiers_ETH_state_development #GFX_decision_generic_electricity
-#
-#	state_production_speed_buildings_factor = 0.15
-#	state_resources_factor = 0.1
-#	local_factories = 0.15
-#
-#
-#
-#
-##################################################################
-##################################################################
-##################################################################
-#
-#   ##    ##  #######  ########  ##      ##    ###    ##    ## 
-#   ###   ## ##     ## ##     ## ##  ##  ##   ## ##    ##  ##  
-#   ####  ## ##     ## ##     ## ##  ##  ##  ##   ##    ####   
-#   ## ## ## ##     ## ########  ##  ##  ## ##     ##    ##    
-#   ##  #### ##     ## ##   ##   ##  ##  ## #########    ##    
-#   ##   ### ##     ## ##    ##  ##  ##  ## ##     ##    ##    
-#   ##    ##  #######  ##     ##  ###  ###  ##     ##    ##    
-#
-##################################################################
-##################################################################
-##################################################################
-#
 #### State Modifiers ####
 # ### Historical Democratic ###
 #OR_prep_his_dmod_1 = {
@@ -1025,404 +968,59 @@
 ##### NATIONAL SPIRITS ######
 #############################
 #
-#
-#IN_finnish_army = {
-#	enable = { always = yes }
-#
-#	icon = GFX_idea_FIN_finnish_army
-#
-#	experience_gain_army_factor = FIN_finnish_army_experience_gain_army_factor #0.05
-#	land_reinforce_rate = FIN_finnish_army_land_reinforce_rate #0.05
-#	acclimatization_cold_climate_gain_factor = FIN_finnish_army_acclimatization_cold_climate_gain_factor #0.05
-#	army_spirit_category_type_cost_factor = FIN_finnish_army_army_spirit_category_type_cost_factor #-0.1
-#
-#	#LATER MODIFIERS
-#	custom_modifier_tooltip = FIN_finnish_army_dynamic_modifier_tt #Bonuses applied via hidden NS or tech (molotov_cocktails_tech)
-#	dig_in_speed_factor = FIN_finnish_army_dig_in_speed_factor #0.05
-#	max_dig_in_factor = FIN_finnish_army_max_dig_in_factor #0.1
-#	training_time_factor = FIN_finnish_army_training_time_factor #-0.1
-#	mobilization_speed = FIN_finnish_army_mobilization_speed #0.1
-#	conscription_factor = FIN_finnish_army_conscription_factor #0.1
-#	cas_damage_reduction = FIN_finnish_army_cas_damage_reduction #0.15
-#	winter_attrition_factor = FIN_finnish_army_winter_attrition_factor #-0.15
-#	army_org_factor = FIN_finnish_army_army_org_factor #0.1
-#	special_forces_cap = FIN_finnish_army_special_forces_cap #0.15
-#	breakthrough_factor = FIN_finnish_army_breakthrough_factor #0.05
-#	special_forces_out_of_supply_factor = FIN_finnish_army_special_forces_out_of_supply_factor #-0.1
-#	equipment_capture_factor = FIN_finnish_army_equipment_capture_factor #0.3
-#	equipment_conversion_speed = FIN_finnish_army_equipment_conversion_speed #0.3
-#	production_lack_of_resource_penalty_factor = FIN_finnish_army_production_lack_of_resource_penalty_factor #-0.15
-#	supply_combat_penalties_on_core_factor = FIN_finnish_army_supply_combat_penalties_on_core_factor #-0.15
-#	org_loss_when_moving = FIN_finnish_army_org_loss_when_moving #-0.15
-#	recon_factor_while_entrenched = FIN_finnish_army_recon_factor_while_entrenched #0.1
-#	army_attack_speed_factor = FIN_finnish_army_army_attack_speed_factor #0.1
-#	intel_from_combat_factor = FIN_finnish_army_intel_from_combat_factor #0.1
-#	initiative_factor = FIN_finnish_army_initiative_factor #0.02
-#	modifier_army_sub_unit_long_range_patrol_support_attack_factor = FIN_finnish_army_modifier_army_sub_unit_long_range_patrol_support_attack_factor
-#	modifier_army_sub_unit_long_range_patrol_support_defence_factor = FIN_finnish_army_modifier_army_sub_unit_long_range_patrol_support_defence_factor
-#
-#
-#IN_finnish_airforce = {
-#	enable = { always = yes }
-#
-#	icon = GFX_idea_FIN_finnish_airforce #Needs to match any hidden NS associated to this, such as FIN_hidden_cas_production_ns, FIN_hidden_fighter_production_ns and FIN_hidden_naval_bomber_production_ns
-#
-#	experience_gain_air_factor = FIN_finnish_airforce_experience_gain_air_factor #0.05
-#	air_weather_penalty = FIN_finnish_airforce_air_weather_penalty #-0.05
-#	air_untrained_pilots_penalty_factor = FIN_finnish_airforce_air_untrained_pilots_penalty_factor #-0.2
-#	air_spirit_category_type_cost_factor = FIN_finnish_airforce_air_spirit_category_type_cost_factor #-0.1
-#
-#	#LATER MODIFIERS
-#	custom_modifier_tooltip = FIN_finnish_airforce_dynamic_modifier_tt #Bonuses applied via hidden NS (FIN_hidden_cas_production_ns, FIN_hidden_fighter_production_ns, FIN_hidden_naval_bomber_production_ns)
-#	air_ace_generation_chance_factor = FIN_finnish_airforce_air_ace_generation_chance_factor #0.1
-#	air_home_defence_factor = FIN_finnish_airforce_air_home_defence_factor #0.1
-#	ace_effectiveness_factor = FIN_finnish_airforce_ace_effectiveness_factor #0.1
-#	air_mission_efficiency = FIN_finnish_airforce_air_mission_efficiency #0.05
-#	naval_strike_targetting_factor = FIN_finnish_airforce_naval_strike_targetting_factor #0.1
-#	air_cas_efficiency = FIN_finnish_airforce_air_cas_efficiency #0.1
-#	air_superiority_efficiency = FIN_finnish_airforce_air_superiority_efficiency #0.1
-#
-#
-#IN_finnish_navy = {
-#	enable = { always = yes }
-#
-#	icon = GFX_idea_FIN_finnish_navy #Needs to match any hidden NS associated to this, such as FIN_hidden_dd_and_coastal_defense_production_ns and FIN_hidden_dd_and_coastal_defense_production_ns_no_mtg
-#
-#	experience_gain_navy_factor = FIN_finnish_navy_experience_gain_navy_factor #0.05
-#	mines_planting_by_fleets_factor = FIN_finnish_navy_mines_planting_by_fleets_factor #0.05
-#	navy_anti_air_attack_factor = FIN_finnish_navy_navy_anti_air_attack_factor #0.05
-#	navy_spirit_category_type_cost_factor = FIN_finnish_navy_navy_spirit_category_type_cost_factor #-0.1
-#
-#	#LATER MODIFIERS
-#	custom_modifier_tooltip = FIN_finnish_navy_dynamic_modifier_tt #Bonuses applied via hidden NS (FIN_hidden_cas_production_ns, FIN_hidden_fighter_production_ns, FIN_hidden_naval_bomber_production_ns)
-#	convoy_retreat_speed = FIN_finnish_navy_convoy_retreat_speed #0.1
-#	refit_speed = FIN_finnish_navy_refit_speed #0.1
-#	spotting_chance = FIN_finnish_navy_spotting_chance #0.05
-#	repair_speed_factor = FIN_finnish_navy_repair_speed_factor #0.1
-#	production_speed_dockyard_factor = FIN_finnish_navy_production_speed_dockyard_factor #0.1
-#	industrial_capacity_dockyard = FIN_finnish_navy_industrial_capacity_dockyard #0.1
-#	extra_marine_supply_grace = FIN_finnish_navy_extra_marine_supply_grace #48
-#	naval_invasion_capacity = FIN_finnish_navy_naval_invasion_capacity #15
-#	naval_mines_effect_reduction = FIN_finnish_navy_naval_mines_effect_reduction #0.15
-#	experience_gain_navy_unit_factor = FIN_finnish_navy_experience_gain_navy_unit_factor #0.1
-#	naval_coordination = FIN_finnish_navy_naval_coordination #0.05
-#	naval_equipment_upgrade_xp_cost = FIN_finnish_navy_naval_equipment_upgrade_xp_cost #-0.1
-#
-#
-#IN_fascist_regime = {
-#	enable = { always = yes }
-#
-#	icon = GFX_idea_FIN_a_fascist_regime
-#
-#	war_support_factor = FIN_fascist_regime_war_support_factor #0.05
-#	send_volunteer_size = FIN_fascist_regime_send_volunteer_size #3
-#
-#	#LATER MODIFIERS
-#	army_org_factor = FIN_fascist_regime_army_org_factor #0.05
-#	max_command_power = FIN_fascist_regime_max_command_power #25
-#	special_forces_cap = FIN_fascist_regime_special_forces_cap #0.3
-#	special_forces_no_supply_grace = FIN_fascist_regime_special_forces_no_supply_grace #24
-#	special_forces_out_of_supply_factor = FIN_fascist_regime_special_forces_out_of_supply_factor #-0.15
-#	special_forces_attack_factor = FIN_fascist_regime_special_forces_attack_factor #0.10
-#	special_forces_training_time_factor = FIN_fascist_regime_special_forces_training_time_factor #0.2
-#	justify_war_goal_time = FIN_fascist_regime_justify_war_goal_time # -0.35
-#	military_industrial_organization_research_bonus = FIN_fascist_regime_military_industrial_organization_research_bonus #0.1
-#	consumer_goods_factor = FIN_fasicst_regime_consumer_goods_factor #-0.1
-#
-#
-#
 ############################
 ##### STATE MODIFIERS ######
 ############################
 #
-#IN_mannerheim_line_expansion_modifier = {
-#	enable = { always = yes }
-#	icon = GFX_modifiers_SOV_civilian_labor_in_defense
-#
-#	remove_trigger = {
-#		ROOT = { NOT = { is_core_of = ROOT.controller } } # ROOT refers to the state on which the modifier is added
-#	}
-#
-#	army_core_defence_factor = 0.05
-#	production_speed_bunker_factor = 0.1
-#	production_speed_coastal_bunker_factor = 0.1
-#	local_supplies = 0.1
-#
-#
-#IN_motti_tactics_modifier = { #Gets removed via on_action
-#	enable = { always = yes }
-#	icon = GFX_modifiers_FIN_motti_tactics_modifier
-#
-#	army_speed_factor_for_controller = 0.15
-#	attrition_for_controller = -0.1
-#	local_supplies_for_controller = 0.15
-#
-#	equipment_capture_for_controller = 0.5
-#	#equipment_capture_factor_for_controller = 0.1 #TODO_Manu: Potentially not necessary
-#	enemy_army_speed_factor = -0.15
-#	enemy_local_supplies = -0.15
-#	enemy_attrition = 0.15
-#	enemy_truck_attrition_factor = 0.15
-#
-#
-#IN_weapon_caches_modifier = { #Gets removed via on_action
-#	enable = { always = yes }
-#	icon = GFX_modifiers_FIN_weapon_caches
-#
-#	starting_compliance = -0.5
-#	resistance_decay = -0.5
-#	resistance_target = 0.15
-#	resistance_damage_to_garrison = 0.35
-#	resistance_garrison_penetration_chance = 0.25
-#	local_non_core_supply_impact_factor = 0.25
-#
-#
-#IN_anti_soviet_sentiment = {
-#	enable = { always = yes }
-#	icon = GFX_modifiers_generic_fascist_corporatism
-#
-#	local_factory_sabotage = 0.1
-#	local_manpower = -0.2
-#	local_supplies = -0.2
-#	state_resources_factor = -0.2
-#
-#
-#IN_confederation_of_finno_russian_republics_dm = {
-#	enable = { always = yes }
-#	icon = GFX_modifiers_FIN_confederated_finno_russian_republics
-#
-#	remove_trigger = {  # ROOT refers to the state on which the modifier is added
-#		ROOT = {
-#			controller = {
-#				OR = {
-#					NOT = { original_tag = FIN }
-#					is_subject = yes
-#				}
-#			}
-#		}
-#	}
-#
-#	compliance_gain = 0.25
-#
-#
-#
-###########################################################
-###########################################################
-###########################################################
-#
-#   ##    ##  #######  ########  ########  ####  ######  
-#   ###   ## ##     ## ##     ## ##     ##  ##  ##    ## 
-#   ####  ## ##     ## ##     ## ##     ##  ##  ##       
-#   ## ## ## ##     ## ########  ##     ##  ##  ##       
-#   ##  #### ##     ## ##   ##   ##     ##  ##  ##       
-#   ##   ### ##     ## ##    ##  ##     ##  ##  ##    ## 
-#   ##    ##  #######  ##     ## ########  ####  ######  
-#
-###########################################################
-###########################################################
-###########################################################
-#
-############################
-##### STATE MODIFIERS ######
-############################
-#
-#ORDIC_efficient_resource_extraction = {
-#	enable = { always = yes }
-#	icon = GFX_modifiers_generic_construction
-#	
-#	state_resources_factor = 0.1
-#
-#
-#ORDIC_military_industry_hub_leader_dmod = {
-#	enable = { always = yes }
-#	icon = GFX_modifiers_generic_military_industry
-#
-#	production_speed_arms_factory_factor = 0.3
-#
-#
-#ORDIC_military_industry_hub_member_dmod = {
-#	enable = { always = yes }
-#	icon = GFX_modifiers_generic_military_industry
-#
-#	production_speed_arms_factory_factor = 0.2
-#
-#
-############################
-#### COUNTRY MODIFIERS #####
-############################
-#
-#ORDIC_airforces_originator_dmod = {
-#	enable = { always = yes }
-#	icon = GFX_idea_generic_air_bonus
-#
-#	remove_trigger = { NORDIC_basic_joint_trigger = no }
-#
-#	experience_gain_air = 0.2
-#	air_cas_present_factor = NORDIC_airforces_originator_dmod_cas_factor #0.25
-#	air_strategic_bomber_bombing_factor = NORDIC_airforces_originator_dmod_strat_bombing_factor #0.35 
-#	air_intercept_efficiency = NORDIC_airforces_originator_dmod_intercept_efficiency #0.25
-#	air_superiority_efficiency = NORDIC_airforces_originator_dmod_superiority_efficiency #0.25
-#	air_range_factor = NORDIC_airforces_originator_dmod_range_factor # 0.3
-#	production_speed_air_base_factor = NORDIC_airforces_originator_dmod_air_base_production # 0.3
-#	air_accidents_factor = NORDIC_airforces_originator_dmod_air_accidents_factor # -0.4
-#	custom_modifier_tooltip = NORDIC_airforces_dmod_production_cost_TT
-#	custom_modifier_tooltip = NORDIC_airforces_dmod_naval_TT
-#
-#
-#ORDIC_airforces_member_dmod = {
-#	enable = { always = yes }
-#	icon = GFX_idea_generic_air_bonus
-#
-#	remove_trigger = { NORDIC_basic_joint_trigger = no }
-#
-#	experience_gain_air = 0.1
-#	air_cas_present_factor = NORDIC_airforces_member_dmod_cas_factor #0.15
-#	air_strategic_bomber_bombing_factor = NORDIC_airforces_member_dmod_strat_bombing_factor #0.2 
-#	air_intercept_efficiency = NORDIC_airforces_member_dmod_intercept_efficiency #0.15
-#	air_superiority_efficiency = NORDIC_airforces_member_dmod_superiority_efficiency #0.15
-#	air_range_factor = NORDIC_airforces_member_dmod_range_factor # 0.2
-#	production_speed_air_base_factor = NORDIC_airforces_member_dmod_air_base_production # 0.2
-#	air_accidents_factor =  NORDIC_airforces_member_dmod_air_accidents_factor # -0.25
-#	custom_modifier_tooltip = NORDIC_airforces_dmod_production_cost_TT # 0.15
-#	custom_modifier_tooltip = NORDIC_airforces_dmod_naval_TT #0.2
-#
-#
-#ORDIC_navy_originator_dmod = {
-#	enable = { always = yes }
-#	icon = GFX_idea_generic_navy_bonus
-#
-#	remove_trigger = { NORDIC_basic_joint_trigger = no }
-#
-#	experience_gain_navy = 0.2
-#	naval_doctrine_cost_factor = NORDIC_navy_originator_dmod_naval_doctrine_cost_factor #-0.10
-#	repair_speed_factor = NORDIC_navy_originator_dmod_naval_repair_speed_factor # 0.35
-#	navy_leader_cost_factor = NORDIC_navy_originator_dmod_navy_leader_cost_factor # - 0.30
-#
-#
-#ORDIC_navy_member_dmod = {
-#	enable = { always = yes }
-#	icon = GFX_idea_generic_navy_bonus
-#
-#	remove_trigger = { NORDIC_basic_joint_trigger = no }
-#
-#	experience_gain_navy = 0.1
-#	naval_doctrine_cost_factor = NORDIC_navy_member_dmod_naval_doctrine_cost_factor # -0.075
-#	repair_speed_factor = NORDIC_navy_member_dmod_naval_repair_speed_factor # 0.25
-#	navy_leader_cost_factor = NORDIC_navy_member_dmod_navy_leader_cost_factor # -0.2
-#
-#
-#ORDIC_mil_industry_originator_dmod = {
-#	enable = { always = yes }
-#	icon = GFX_idea_generic_production_bonus
-#
-#	remove_trigger = { NORDIC_basic_joint_trigger = no }
-#
-#	production_factory_max_efficiency_factor = 0.1
-#	production_speed_arms_factory_factor = NORDIC_mil_industry_originator_production_speed_arms_factory_factor # 0.15
-#	production_factory_efficiency_gain_factor = NORDIC_mil_industry_originator_dmod_efficiency_gain_factor # 0.2
-#	equipment_conversion_speed = NORDIC_mil_industry_originator_dmod_equipment_conversion_speed # 0.25 
-#	production_factory_start_efficiency_factor = NORDIC_mil_industry_originator_dmod_start_efficiency_factor # 0.2
-#
-#
-#ORDIC_mil_industry_member_dmod = {
-#	enable = { always = yes }
-#	icon = GFX_idea_generic_production_bonus
-#
-#	remove_trigger = { NORDIC_basic_joint_trigger = no }
-#
-#	production_factory_max_efficiency_factor = 0.1
-#	production_speed_arms_factory_factor = NORDIC_mil_industry_member_production_speed_arms_factory_factor # 0.1
-#	production_factory_efficiency_gain_factor = NORDIC_mil_industry_member_dmod_efficiency_gain_factor # 0.1
-#	equipment_conversion_speed = NORDIC_mil_industry_member_dmod_equipment_conversion_speed # 0.15
-#	production_factory_start_efficiency_factor = NORDIC_mil_industry_member_dmod_start_efficiency_factor # 0.1
-#
-#
-#
-#ORDIC_democratic_alliance_leader_dmod = {
-#	enable = { always = yes }
-#	 icon = GFX_idea_NORDIC_nordic_council
-#
-#	remove_trigger = { NORDIC_basic_joint_trigger = no }
-#
-#	democratic_drift = 0.025
-#	production_speed_buildings_factor = 0.15
-#	consumer_goods_factor = 0.2
-#	research_speed_factor = NORDIC_democratic_alliance_leader_dmod_research # 0.075 
-#	training_time_factor = NORDIC_democratic_alliance_leader_dmod_training_time # 0.12
-#	production_factory_start_efficiency_factor = NORDIC_democratic_alliance_leader_dmod_prod_eff_start # 0.2
-#	war_support_factor = NORDIC_democratic_alliance_leader_dmod_war_support # -0.15
-#
-#
-#ORDIC_democratic_alliance_member_dmod = {
-#	enable = { always = yes }
-#	 icon = GFX_idea_NORDIC_nordic_council
-#
-#	remove_trigger = { NORDIC_basic_joint_trigger = no }
-#
-#	democratic_drift = 0.015
-#	production_speed_buildings_factor = 0.10
-#	consumer_goods_factor = 0.12
-#	research_speed_factor = NORDIC_democratic_alliance_member_dmod_research # 0.05 
-#	training_time_factor = NORDIC_democratic_alliance_member_dmod_training_time # 0.08
-#	production_factory_start_efficiency_factor = NORDIC_democratic_alliance_member_dmod_prod_eff_start # 0.15	
-#	war_support_factor = NORDIC_democratic_alliance_member_dmod_war_support # -0.1
-#
-#
-#ORDIC_communist_alliance_leader_dmod = {
-#	enable = { always = yes }
-#	icon = GFX_idea_NORDIC_northern_union 
-#
-#	remove_trigger = { NORDIC_basic_joint_trigger = no }
-#
-#	communism_drift = 0.025
-#	weekly_manpower = 350
-#	dig_in_speed_factor = -0.15
-#	production_factory_max_efficiency_factor = NORDIC_communist_alliance_leader_dmod_max_eff # 0.15
-#	max_planning_factor = NORDIC_communist_alliance_leader_dmod_max_planning # -0.1
-#	research_speed_factor = NORDIC_communist_alliance_leader_dmod_research # 0.075
-#	production_lack_of_resource_penalty_factor = NORDIC_communist_alliance_leader_dmod_resource_penalty # 0.1
-#
-#
-#ORDIC_communist_alliance_member_dmod = {
-#	enable = { always = yes }
-#	 icon = GFX_idea_NORDIC_northern_union
-#
-#	remove_trigger = { NORDIC_basic_joint_trigger = no }
-#
-#	communism_drift = 0.015
-#	weekly_manpower = 200
-#	dig_in_speed_factor = -0.10
-#	production_factory_max_efficiency_factor = NORDIC_democratic_alliance_member_dmod_max_eff # 0.1
-#	max_planning_factor = NORDIC_communist_alliance_member_dmod_max_planning # -0.08
-#	research_speed_factor = NORDIC_communist_alliance_member_dmod_research # 0.05
-#	production_lack_of_resource_penalty_factor = NORDIC_communist_alliance_member_dmod_resource_penalty # 0.06
-#
-#ORDIC_monarchist_alliance_leader_dmod = {	
-#	enable = { always = yes }
-#	icon = GFX_idea_NORDIC_kalmar_league
-#
-#	remove_trigger = { NORDIC_basic_joint_trigger = no }
-#
-#	neutrality_drift = 0.015
-#	political_power_gain = 0.7
-#	research_speed_factor = -0.03
-#	production_factory_efficiency_gain_factor = NORDIC_monarchist_alliance_leader_dmod_prod_eff_gain # 0.25
-#	production_speed_buildings_factor = NORDIC_monarchist_alliance_leader_dmod_construction # -0.1
-#	army_org_factor = NORDIC_monarchist_alliance_leader_dmod_max_org # 0.2
-#	fascism_drift = NORDIC_monarchist_alliance_leader_dmod_drift_defense # -0.15 
-#
-#
-#ORDIC_monarchist_alliance_member_dmod = {	
-#	enable = { always = yes }
-#	icon = GFX_idea_NORDIC_kalmar_league 
-#
-#	remove_trigger = { NORDIC_basic_joint_trigger = no }
-#
-#	neutrality_drift = 0.015
-#	political_power_gain = 0.4
-#	research_speed_factor = -0.02
-#	production_factory_efficiency_gain_factor = NORDIC_monarchist_alliance_member_dmod_prod_eff_gain # 0.17
-#	production_speed_buildings_factor = NORDIC_monarchist_alliance_member_dmod_construction # -0.7
-#	army_org_factor = NORDIC_monarchist_alliance_member_dmod_max_org # 0.12
-#	fascism_drift = NORDIC_monarchist_alliance_member_dmod_drift_defense # -0.1  
-#
+FIN_mannerheim_line_expansion_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	remove_trigger = {
+		ROOT = { NOT = { is_core_of = ROOT.controller } }  #ROOT refers to the state on which the modifier is added
+	}
+
+	army_core_defence_factor = 0.05
+	production_speed_bunker_factor = 0.1
+	production_speed_coastal_bunker_factor = 0.1
+	local_supplies = 0.1
+}
+
+
+FIN_motti_tactics_modifier = { #Gets removed via on_action
+	enable = { always = yes }
+	icon = GFX_modifiers_FIN_motti_tactics_modifier
+
+	army_speed_factor_for_controller = 0.15
+	attrition_for_controller = -0.1
+	local_supplies_for_controller = 0.15
+
+	equipment_capture_for_controller = 0.5
+	equipment_capture_factor_for_controller = 0.1 #TODO_Manu: Potentially not necessary
+	enemy_army_speed_factor = -0.15
+	enemy_local_supplies = -0.15
+	enemy_attrition = 0.15
+	enemy_truck_attrition_factor = 0.15
+}
+
+FIN_weapon_caches_modifier = { #Gets removed via on_action
+	enable = { always = yes }
+	icon = GFX_modifiers_FIN_weapon_caches
+
+	starting_compliance = -0.5
+	resistance_decay = -0.5
+	resistance_target = 0.15
+	resistance_damage_to_garrison = 0.35
+	resistance_garrison_penetration_chance = 0.25
+	local_non_core_supply_impact_factor = 0.25
+}
+
+FIN_anti_soviet_sentiment = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_fascist_corporatism
+
+	local_factory_sabotage = 0.1
+	local_manpower = -0.2
+	local_supplies = -0.2
+	state_resources_factor = -0.2
+}
