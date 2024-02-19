@@ -274,6 +274,143 @@ characters={
 			traits = { military_theorist }
 		}
 	}
+	
+	ETH_random_leader_1 = {
+		advisor = {
+			slot = political_advisor
+			idea_token = ETH_random_leader_1
+			allowed = {
+				original_tag = ETH
+			}
+			visible = {
+				has_character_flag = ETH_visible_advisor_flag		
+			}
+			traits = {
+				marxist_fundamentalist
+			}
+		}
+		#name=ETH_random_leader_1
+		portraits={
+			army={
+				small=GFX_portrait_ETH_generic_political_male_1_small
+			}
+		}
+	}
+
+	ETH_random_leader_2 = {
+		advisor = {
+			slot = political_advisor
+			idea_token = ETH_random_leader_2
+			allowed = {
+				original_tag = ETH
+			}
+			visible = {
+				has_character_flag = ETH_visible_advisor_flag			
+			}
+			traits = {
+				leftist_intellectual
+			}
+		}
+		#name=ETH_random_leader_2
+		portraits={
+			army={
+				small=GFX_portrait_ETH_generic_male_6_small
+			}
+		}		
+	}
+
+	ETH_random_leader_3 = {
+		advisor = {
+			slot = political_advisor
+			idea_token = ETH_random_leader_3
+			allowed = {
+				original_tag = ETH
+			}
+			visible = {
+				has_character_flag = ETH_visible_advisor_flag		
+			}
+			traits = {
+				anti_bolshevik_leftist
+			}
+		}
+		#name=ETH_random_leader_2
+		portraits={
+			army={
+				small=GFX_portrait_ETH_generic_female_5_small
+			}
+		}
+		gender = female 
+	}
+
+	ETH_random_leader_4 = {
+		advisor = {
+			slot = political_advisor
+			idea_token = ETH_random_leader_4
+			allowed = {
+				original_tag = ETH
+			}
+			visible = {
+				has_character_flag = ETH_visible_advisor_flag			
+			}
+			traits = {
+				revolutionary_culture_minister
+			}
+		}
+		#name=ETH_random_leader_2
+		portraits={
+			army={
+				small=GFX_portrait_ETH_generic_male_5_small
+			}
+		}
+		
+	}
+
+	ETH_random_leader_5 = {
+		advisor = {
+			slot = political_advisor
+			idea_token = ETH_random_leader_5
+			allowed = {
+				original_tag = ETH
+			}
+			visible = {
+				has_character_flag = ETH_visible_advisor_flag			
+			}
+			traits = {
+				collectivization_specialist
+			}
+		}
+		#name=ETH_random_leader_2
+		portraits={
+			army={
+				small=GFX_portrait_ETH_generic_female_4_small
+			}
+		}
+		gender = female 
+	}
+
+	ETH_random_leader_6 = {
+		advisor = {
+			slot = political_advisor
+			idea_token = ETH_random_leader_6
+			allowed = {
+				original_tag = ETH
+			}
+			visible = {
+				has_character_flag = ETH_visible_advisor_flag			
+			}
+			traits = {
+				patriotic_socialist
+			}
+		}
+		#name=ETH_random_leader_2
+		portraits={
+			army={
+				small=GFX_portrait_ETH_generic_female_2_small
+			}
+		}
+		gender = female 	
+	}
+	
 	ETH_Buffer_Character_1 = { 
 		#Bugfix Char
 	}

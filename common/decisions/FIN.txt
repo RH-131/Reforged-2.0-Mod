@@ -125,16 +125,6 @@ FIN_motti_tactics_category = {
 					NOT = { is_fully_controlled_by = ROOT }
 				}
 			}
-			modifier = { #Don't do this if historical Finland needs to ban communism tack
-				factor = 0
-				FIN_is_historical_ai = yes
-				OR = {
-					has_idea = communist_pressure
-					communism > 0.08
-				}
-				NOT = { has_country_flag = banned_communism_flag }
-				NOT = { has_completed_focus = FIN_the_lone_wolf }
-			}
 		}
 	}
 

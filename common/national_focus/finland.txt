@@ -111,67 +111,6 @@ focus_tree = {
 							}
 						}
 					}
-					FIN_miina_sillanpaa = {
-						if = {
-							limit = {
-								has_trait = FIN_champion_of_equality_sillanpaa
-							}
-							add_trait = {
-								trait = champion_of_equality
-								slot = political_advisor
-							}
-							remove_trait = {
-								trait = FIN_champion_of_equality_sillanpaa
-								slot = political_advisor
-							}
-						}
-					}
-					# SWAP ADVISOR TRAITS TO HIDE TOOLTIP ABOUT DECISIONS
-					FIN_yrjo_leino = {
-						if = {
-							limit = {
-								has_trait = FIN_communist_revolutionary_leino
-							}
-							add_trait = {
-								trait = communist_revolutionary
-								slot = political_advisor
-							}
-							remove_trait = {
-								trait = FIN_communist_revolutionary_leino
-								slot = political_advisor
-							}
-						}
-					}
-					FIN_aarne_saarinen = {
-						if = {
-							limit = {
-								has_trait = FIN_technocrat_saarinen
-							}
-							add_trait = {
-								trait = technocrat
-								slot = political_advisor
-							}
-							remove_trait = {
-								trait = FIN_technocrat_saarinen
-								slot = political_advisor
-							}
-						}
-					}
-					FIN_otto_wille_kuusinen = {
-						if = {
-							limit = {
-								has_trait = FIN_patriotic_socialist_kuusinen
-							}
-							add_trait = {
-								trait = patriotic_socialist
-								slot = political_advisor
-							}
-							remove_trait = {
-								trait = FIN_patriotic_socialist_kuusinen
-								slot = political_advisor
-							}
-						}
-					}
 				}
 			}
 		}
@@ -3061,6 +3000,10 @@ focus_tree = {
 			army_experience = 25
 
 			custom_effect_tooltip = FIN_winter_warfare_battalion_tt
+			
+			set_technology = {
+			    winter_logistics_support_tech = 1
+			}
 
 		}
 	}
@@ -3403,6 +3346,10 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = FIN_sami_pathfinders
+			
+			set_technology = {
+			    sami_pathfinders_tech = 1
+			}
 
 		}
 	}
@@ -3424,7 +3371,9 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = FIN_long_range_patrols_battalion_tt
-
+			set_technology = {
+			    long_range_patrol_support_tech = 1
+			}
 		}
 	}
 	
