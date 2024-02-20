@@ -506,10 +506,8 @@ ITA_colonial_management_dec_cat = {
 
 		available = {
 			has_war = no
-			any_controlled_state = {
-				OR = {
-					is_core_of = ETH
-				}
+			ETH = {
+				is_subject_of = ITA
 			}
 		}
 

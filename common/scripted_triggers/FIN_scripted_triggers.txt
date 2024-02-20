@@ -98,30 +98,3 @@ FIN_can_purchase_equipment_from_country = {
 		}
 	}
 }
-
-   ###    ####    ########  ##          ###    ##    ##  ######  
-  ## ##    ##     ##     ## ##         ## ##   ###   ## ##    ## 
- ##   ##   ##     ##     ## ##        ##   ##  ####  ## ##       
-##     ##  ##     ########  ##       ##     ## ## ## ##  ######  
-#########  ##     ##        ##       ######### ##  ####       ## 
-##     ##  ##     ##        ##       ##     ## ##   ### ##    ## 
-##     ## ####    ##        ######## ##     ## ##    ##  ######  
-
-
-
-FIN_is_historical_ai = {
-	OR = {
-		AND = {
-			is_historical_focus_on = yes
-			has_game_rule = {
-				rule = FIN_ai_behavior
-				option = DEFAULT
-			}
-		}
-		has_country_flag = FIN_AI_RANDOM_HISTORICAL
-		has_game_rule = {
-			rule = FIN_ai_behavior
-			option = HISTORICAL
-		}
-	}
-}
