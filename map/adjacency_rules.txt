@@ -76,7 +76,7 @@ adjacency_rule =
 	{
 		army = no
 		navy = no
-		submarine = no
+		submarine = yes
 		trade = no
 	}
 	friend =
@@ -98,6 +98,46 @@ adjacency_rule =
 	
 	icon = 5407	
 	offset = { -31.0 0.0 -2.0 }
+}
+
+#Tsushima Strait
+adjacency_rule =
+{
+	name = "TSUSHIMA_STRAIT"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 1158 4056 10011 }
+	
+	icon = 5407
+	offset = { -36.0 0.0 -9.0 }
 }
 
 #Øresund - (Østersøen <-> Kattegat/Skagerak/Nordsøen)

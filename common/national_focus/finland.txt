@@ -81,21 +81,6 @@ focus_tree = {
 						has_dlc = "Arms Against Tyranny"
 					}
 					# SWAP ADVISOR TRAITS TO HIDE TOOLTIP ABOUT DECISIONS
-					FIN_karl_august_fagerholm = {
-						if = {
-							limit = {
-								has_trait = FIN_democratic_reformer_fagerholm
-							}
-							add_trait = {
-								trait = democratic_reformer
-								slot = political_advisor
-							}
-							remove_trait = {
-								trait = FIN_democratic_reformer_fagerholm
-								slot = political_advisor
-							}
-						}
-					}
 					FIN_vaino_tanner = {
 						if = {
 							limit = {
@@ -653,43 +638,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			every_other_country = {
-				limit = {
-					NORDIC_is_nordic = yes
-					NOT = { has_war_with = ROOT }
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = FIN_nordic_amity
-				}
-				ROOT = {
-					add_opinion_modifier = {
-						target = PREV
-						modifier = FIN_nordic_amity
-					}
-				}
-			}
-
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						NORDIC_is_nordic = yes
-						NOT = { has_war_with = ROOT }
-					}
-					add_ai_strategy = {
-						type = befriend 
-						id = ROOT
-						value = 25
-					}
-					ROOT = {
-						add_ai_strategy = {
-							type = befriend 
-							id = PREV
-							value = 25
-						}
-					}
-				}
-			}
+			
 		}
 	}
 	
@@ -1006,7 +955,6 @@ focus_tree = {
 		cost = 5
 		available = {
 			is_subject = no
-			has_dynamic_modifier = { modifier = FIN_finnish_army }
 			all_core_state = {
 				is_controlled_by = ROOT
 			}
@@ -1015,11 +963,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
-			add_to_variable = {
-				FIN_finnish_army_conscription_factor = 0.1
-				tooltip = conscription_factor_tt
-			}
 			
 			add_timed_idea = {
 				idea = FIN_finnish_march_of_conquest
@@ -1179,8 +1122,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
-			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
-			add_to_variable = { FIN_finnish_army_special_forces_cap = 0.2 tooltip = special_forces_cap_tt }
 
 			add_doctrine_cost_reduction = {
 				name = FIN_modernize_the_army
@@ -2427,13 +2368,13 @@ focus_tree = {
 		relative_position_id = FIN_tire_factory_at_nokia
 		cost = 5
 		available = {
-			has_full_control_of_state = 926 #TURKU (Pori)
+			has_full_control_of_state = 111 #TURKU (Pori)
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			926 = { #TURKU (Pori)
+			111 = { #TURKU (Pori)
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
@@ -3620,9 +3561,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
-			add_to_variable = { FIN_finnish_army_max_dig_in_factor = 0.1 tooltip = max_dig_in_factor_tt }
-			add_to_variable = { FIN_finnish_army_dig_in_speed_factor = 0.05 tooltip = dig_in_speed_factor_tt }
 
 			add_timed_idea = {
 				idea = FIN_fortification_effort
@@ -4723,7 +4661,7 @@ focus_tree = {
 						fixed_ship_radar_slot = empty
 						fixed_ship_engine_slot = cruiser_ship_engine_1
 						fixed_ship_armor_slot = ship_armor_cruiser_1
-						fixed_ship_secondaries_slot = dp_ship_secondaries_1
+						fixed_ship_secondaries_slot = dp_ship_secondaries
 						mid_1_custom_slot = empty
 						mid_2_custom_slot = empty
 						rear_1_custom_slot = empty

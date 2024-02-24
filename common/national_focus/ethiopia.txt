@@ -31,7 +31,33 @@ focus_tree = {
 	# # #  #  #    #   #  #### ###    #       #### # ## #  #      #  ##  #    #### 
 	#   #  #  #    #   #  #  # #  #   #       #  # #  # #  #      #  #   #  # #  # 
 	#   # ### ### ###  #  #  # #  #   #       #  # #  # ###       #  ###  ##  #  # 
+	
+	focus = {
+		id = ETH_declare_for_italy
+		icon = GFX_focus_befriend_italy
 
+		x = 22
+		y = 0
+		cost = 5
+		available = {
+			always = yes			
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			custom_effect_tooltip = ETH_raise_from_the_ranks_tt
+			add_ideas = { AOI_africa_orientale_italiana_idea }
+			hidden_effect = {
+				ETH_random_general_male_only = yes
+				ETH_random_general_male_only = yes
+				ETH_random_general_5 = {
+					set_character_flag = ETH_visible_random_general_flag
+				}
+			}
+		}
+	}
+	
 	focus = {
 		id = ETH_ecole_militaire_haile_selassie_1er
 		icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er
@@ -626,7 +652,6 @@ focus_tree = {
 		id = ETH_old_reliable
 		 icon = GFX_focus_secret_rearmament
 		prerequisite = { focus = ETH_camouflage focus = ETH_the_junior_officer_corps }
-		mutually_exclusive = { focus = ETH_new_weapons_and_tactics }
 		x = 0
 		y = 1
 		relative_position_id = ETH_camouflage
@@ -650,7 +675,6 @@ focus_tree = {
 		id = ETH_bring_in_foreign_advisors
 		 icon = GFX_focus_SOV_flying_clubs
 		prerequisite = { focus = ETH_debre_zeyit_air_force_training_center }
-		mutually_exclusive = { focus = ETH_ethiopian_officers }
 		x = 1
 		y = 1
 		relative_position_id = ETH_debre_zeyit_air_force_training_center
@@ -1260,7 +1284,7 @@ focus_tree = {
 	focus = {
 		id = ETH_invest_in_the_north
 		icon = GFX_focus_ETH_invest_in_the_north
-		prerequisite = { focus = ETH_bomb_proofing focus = ETH_rapid_industrial_expansion }
+		prerequisite = { focus = ETH_rapid_industrial_expansion }
 
 		x = 1
 		y = 1
@@ -1323,7 +1347,7 @@ focus_tree = {
 	focus = {
 		id = ETH_invest_in_the_east
 		icon = GFX_focus_ETH_invest_in_the_east
-		prerequisite = { focus = ETH_bomb_proofing focus = ETH_rapid_industrial_expansion }
+		prerequisite = { focus = ETH_rapid_industrial_expansion }
 
 		x = 3
 		y = 1
@@ -1374,7 +1398,7 @@ focus_tree = {
 	focus = {
 		id = ETH_invest_in_the_west
 		icon = GFX_focus_ETH_invest_in_the_west
-		prerequisite = { focus = ETH_bomb_proofing focus = ETH_rapid_industrial_expansion }
+		prerequisite = { focus = ETH_rapid_industrial_expansion }
 		available = {
 			OR = {
 				837 = { is_owned_by = ROOT}
@@ -1795,32 +1819,6 @@ focus_tree = {
  ##   ##  ### ### #  # ###   ##  #  # #  #  #  ###  ##  #  # ### ##   #  ##  
  
  ###########################################################################
-
-	focus = {
-		id = ETH_declare_for_italy
-		icon = GFX_focus_befriend_italy
-
-		x = 22
-		y = 0
-		cost = 5
-		available = {
-			always = yes			
-		}
-
-		search_filters = {FOCUS_FILTER_POLITICAL}
-
-		completion_reward = {
-			custom_effect_tooltip = ETH_raise_from_the_ranks_tt
-			add_ideas = { AOI_africa_orientale_italiana_idea }
-			hidden_effect = {
-				ETH_random_general_male_only = yes
-				ETH_random_general_male_only = yes
-				ETH_random_general_5 = {
-					set_character_flag = ETH_visible_random_general_flag
-				}
-			}
-		}
-	}
 	focus = {
 		id = ETH_restore_the_country
 		icon = GFX_goal_generic_construction2
@@ -1935,39 +1933,6 @@ focus_tree = {
 				popularity = 0.1
 			}
 			add_war_support = 0.05
-			IF = {
-				limit = {
-					has_country_leader_with_trait = inexperienced_sultan
-				}
-				ETH_abba_jofir = {
-					swap_country_leader_traits = { 
-						remove = inexperienced_sultan
-						add = inexperienced_sultan_2
-					}
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					has_country_leader_with_trait = crowned_adder
-				}
-				ETH_haile_selassie_gugsa = {
-					swap_country_leader_traits = { 
-						remove = crowned_adder
-						add = crowned_adder_2
-					}
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					has_country_leader_with_trait = tainted_ras
-				}
-				ETH_hailu_tekle_haymanot = {
-					swap_country_leader_traits = { 
-						remove = tainted_ras
-						add = tainted_ras_2
-					}
-				}
-			}
 		}
 	}
 	focus = {
@@ -2019,20 +1984,7 @@ focus_tree = {
 
 			add_political_power = 100 
 			custom_effect_tooltip = ETH_amedeos_feast_of_maskal_tt
-			IF = { 
-				limit = {
-					has_completed_focus = ETH_sway_the_warlords
-				}
-				ETH_seyoum_mengesha = {
-					clr_character_flag = ETH_imprisoned_flag 
-				}
-				ETH_ayalew_birru = {
-					clr_character_flag = ETH_imprisoned_flag 
-				}
-				ETH_ras_kassa = {
-					clr_character_flag = ETH_imprisoned_flag 
-				}
-			}
+			
 		}
 	}
 	
@@ -2361,23 +2313,12 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
-			IF = {
-				limit = { is_or_will_be_jimma = yes}
-				ITA = {
-					country_event = {
-						id = BBA_ethiopia_fascist_events.65
-						hours = 1
-					}
-				}
-			}
-			ELSE = {
-				ITA = {
+			ITA = {
 					country_event = {
 						id = BBA_ethiopia_fascist_events.64
 						hours = 1
 					}
 				}
-			}
 		}
 	}
 	
