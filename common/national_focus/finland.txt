@@ -187,34 +187,6 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = FIN_collaboration_with_the_left
-		icon = GFX_goal_generic_national_unity
-		prerequisite = { focus = FIN_political_unity }
-
-		x = 1
-		y = 1
-		relative_position_id = FIN_political_unity
-		cost = 5
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
-
-		completion_reward = {
-			add_political_power = 50
-
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.1
-			}
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = FIN_vaino_tanner
-			show_ideas_tooltip = FIN_miina_sillanpaa
-		}
-	}
-	
-	focus = {
 		id = FIN_railways_and_infrastructure
 		icon = GFX_focus_generic_railroad
 		prerequisite = { focus = FIN_political_unity }
@@ -720,6 +692,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			date > 1940.5.1
 			NOT = { has_government = communism }
 			NOT = { is_in_faction_with = SOV }
 			NOT = { has_non_aggression_pact_with = SOV }
@@ -1173,176 +1146,13 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = FIN_national_unity
-		icon = GFX_focus_EST_national_pride_in_finland
+		id = FIN_arm_the_lotta_svard
+		icon = GFX_focus_SWE_lottakoren
 		prerequisite = { focus = FIN_finnish_neutrality }
 
 		x = 3
 		y = 0
 		relative_position_id = FIN_weapon_caches
-		cost = 5
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			add_stability = 0.05
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = FIN_vilho_annala
-		}
-	}
-	
-	focus = {
-		id = FIN_viron_kansa
-		icon = GFX_focus_FIN_viron_kansa
-		prerequisite = { focus = FIN_national_unity }
-
-		x = -1
-		y = 2
-		relative_position_id = FIN_national_unity
-		cost = 5
-
-		bypass = {
-			EST = {
-				OR = {
-					AND = {
-						is_subject = yes
-						NOT = { is_subject_of = ROOT }
-					}
-					has_capitulated = yes
-					exists = no
-					all_core_state = {
-						OR = {
-							is_claimed_by = ROOT
-							is_owned_by = ROOT
-							controller = {
-								is_subject_of = ROOT
-							}
-						}
-					}
-				}
-			}
-		}
-
-		available = {
-			is_subject = no
-			OR = {
-				has_government = fascism
-				threat > 0.7
-			}
-			OR = {
-				has_war = no
-				surrender_progress < 0.05
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			EST = {
-				country_event = { id = AAT_finland_diplomacy.01 hours = 4 random_hours = 2 }
-			}
-
-			custom_effect_tooltip = if_they_accept_tt
-			custom_effect_tooltip = FIN_viron_kansa_positive_outcome_tt
-
-			custom_effect_tooltip = if_they_refuse_tt
-			event_option_tooltip = AAT_finland_diplomacy.04.b
-		}
-	}
-	
-	focus = {
-		id = FIN_ambitions_in_the_south
-		icon = GFX_focus_SOV_baltic_security
-		prerequisite = { focus = FIN_viron_kansa }
-
-		x = 0
-		y = 2
-		relative_position_id = FIN_viron_kansa
-		cost = 5
-
-		bypass = {
-			EST = {
-				all_core_state = {
-					OR = {
-						is_claimed_by = ROOT
-						is_owned_by = ROOT
-						controller = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-			LAT = {
-				all_core_state = {
-					OR = {
-						is_claimed_by = ROOT
-						is_owned_by = ROOT
-						controller = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-			LIT = {
-				all_core_state = {
-					OR = {
-						is_claimed_by = ROOT
-						is_owned_by = ROOT
-						controller = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-		}
-
-		available = {
-			is_subject = no
-			OR = {
-				NOT = { country_exists = EST }
-				is_in_faction_with = EST
-				has_subject = EST
-				any_state = {
-					is_core_of = EST
-					is_controlled_by = ROOT
-				}
-			}
-			OR = {
-				has_war = no
-				surrender_progress < 0.05
-			}
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			custom_effect_tooltip = FIN_ambitions_in_the_south_claims_tt
-			custom_effect_tooltip = generic_current_effects
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = EST #In case previous focus was bypassed
-						is_core_of = LAT
-						is_core_of = LIT
-					}
-					NOT = { is_owned_by = ROOT }
-				}
-				add_claim_by = ROOT
-			}
-		}
-	}
-	
-	focus = {
-		id = FIN_arm_the_lotta_svard
-		icon = GFX_focus_SWE_lottakoren
-		prerequisite = { focus = FIN_national_unity }
-
-		x = 0
-		y = 1
-		relative_position_id = FIN_national_unity
 		cost = 5
 		available = {
 		}
@@ -1500,12 +1310,12 @@ focus_tree = {
 	focus = {
 		id = FIN_a_cry_for_help
 		icon = GFX_focus_FIN_a_cry_for_help
-		prerequisite = { focus = FIN_national_unity }
+		prerequisite = { focus = FIN_arm_the_lotta_svard }
 
 		x = 1
-		y = 2
-		relative_position_id = FIN_national_unity
-		cost = 5
+		y = 1
+		relative_position_id = FIN_arm_the_lotta_svard
+		cost = 2
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = FIN_in_a_defensive_war_against_a_major_tt
@@ -1551,7 +1361,7 @@ focus_tree = {
 
 			add_timed_idea = {
 				idea = FIN_international_volunteers
-				days = 365
+				days = 90
 			}
 		}
 	}
@@ -1562,7 +1372,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_finnish_march_of_conquest focus = FIN_militarized_society }
 
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = FIN_militarized_society
 		cost = 5
 		available = {

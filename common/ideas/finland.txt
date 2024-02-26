@@ -226,27 +226,6 @@ ideas = {
 				communism_drift = -0.15
 			}
 		}
-		
-		sisu = { # NO-AAT version
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				NOT = {
-					has_government = communism
-				}
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				army_morale_factor = 0.25
-				attrition = -0.1
-				army_core_attack_factor = 0.2
-				army_core_defence_factor = 0.2
-			}
-		}
 
 		winter_war_ns = {
 			picture = tur_sub_zero_survival_training
@@ -675,8 +654,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.1
-				conversion_cost_civ_to_mil_factor = -0.4
+				consumer_goods_factor = -0.05
+				conversion_cost_civ_to_mil_factor = -0.10
 			}
 		}
 
