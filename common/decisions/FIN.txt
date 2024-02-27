@@ -216,7 +216,7 @@ FIN_national_defense_category = {
 			command_power > FIN_weapon_caches_decision_cost_for_trigger
 			has_political_power > FIN_weapon_caches_decision_cost_for_trigger
 			has_equipment = {
-				infantry_equipment > 49
+				infantry_equipment > 299
 			}
 		}
 		custom_cost_text = FIN_weapon_caches_decision_cost_dynamic_ie_cp_pp
@@ -257,7 +257,7 @@ FIN_national_defense_category = {
 				add_political_power = FIN_remove_mana_cost
 				add_equipment_to_stockpile = { 
 					type = infantry_equipment
-					amount = -50
+					amount = -300
 				}
 
 				add_to_variable = { FIN_weapon_caches_decision_cost = FIN_weapon_caches_decision_cost_increase }

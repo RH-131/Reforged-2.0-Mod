@@ -136,7 +136,7 @@ focus_tree = {
 		icon = GFX_focus_generic_workers
 		prerequisite = { focus = FIN_political_unity }
 
-		x = -3
+		x = 1
 		y = 1
 		relative_position_id = FIN_political_unity
 		cost = 5
@@ -163,9 +163,9 @@ focus_tree = {
 		icon = GFX_focus_generic_industrialists
 		prerequisite = { focus = FIN_political_unity }
 
-		x = 2
-		y = 0
-		relative_position_id = FIN_align_the_agrarian_league
+		x = -1
+		y = 1
+		relative_position_id = FIN_political_unity
 		cost = 5
 		available = {
 		}
@@ -297,7 +297,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_railways_and_infrastructure }
 
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = FIN_railways_and_infrastructure
 		cost = 5
 		available = {
@@ -610,37 +610,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-		id = FIN_moderate_politics
-		icon = GFX_goal_generic_neutrality_focus
-		prerequisite = { focus = FIN_reach_out_to_scandinavia }
-
-		x = 0
-		y = 1
-		relative_position_id = FIN_reach_out_to_scandinavia
-		cost = 5
-		available = {
-			has_government = neutrality
-		}
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100
+			add_opinion_modifier = { target = SWE modifier = FIN_brotherhood }
+			add_opinion_modifier = { target = NOR modifier = FIN_brotherhood }
 		}
 	}
 	
 	focus = {
 		id = FIN_the_lone_wolf
 		icon = GFX_focus_FIN_the_lone_wolf
-		prerequisite = { focus = FIN_moderate_politics }
+		prerequisite = { focus = FIN_reach_out_to_scandinavia }
 		x = 0
 		y = 1
-		relative_position_id = FIN_moderate_politics
+		relative_position_id = FIN_reach_out_to_scandinavia
 		cost = 5
 		available = {
 			is_subject = no
@@ -695,7 +677,6 @@ focus_tree = {
 			date > 1940.5.1
 			NOT = { has_government = communism }
 			NOT = { is_in_faction_with = SOV }
-			NOT = { has_non_aggression_pact_with = SOV }
 			NOT = { has_guaranteed = SOV }
 			NOT = { has_country_flag = FIN_winter_war_ongoing_flag }
 			GER = {
@@ -1372,7 +1353,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_finnish_march_of_conquest focus = FIN_militarized_society }
 
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = FIN_militarized_society
 		cost = 5
 		available = {
@@ -1483,7 +1464,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = FIN_infrastructure_effort
-				days = 730
+				days = 365
 			}
 
 			#UUSIMAA (Helsinki)
@@ -1549,7 +1530,7 @@ focus_tree = {
 			add_stability = 0.05
 			add_timed_idea = {
 				idea = FIN_bank_of_aland_ns
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -3263,7 +3244,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = FIN_suomen_maavoimat
-		cost = 5
+		cost = 2
 		available = {
 			has_defensive_war = yes
 		}
@@ -4832,17 +4813,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				mio:FIN_crichton_vulcan_organization = {
-					complete_mio_trait = FIN_mio_trait_rapid_raiders
-					add_mio_size = 1 #For Covering Production line below
-				}
-			}
-
 			if = {
 				limit = {
 					has_dlc = "Man the Guns"

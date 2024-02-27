@@ -1,0 +1,297 @@
+infantry_FIN = {
+
+	available_for = {
+		FIN
+	}
+
+	roles = {
+		infantry
+	}
+
+	upgrade_prio = {
+		factor = 2
+
+		modifier = {
+			factor = 5
+		}
+	}
+
+	match_to_count = 0.10
+	
+	infantry_default = {
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 1
+			}
+		}
+
+		target_width = 30.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			1.00 #-- breakthrough
+			0.00 #-- hardness
+			4.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.00 #-- recon
+			1.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 3000.0
+			
+			support = {
+				engineer = 1
+				recon = 1
+				DIV_HQ = 1
+				field_hospital = 1
+				logistics_company = 1
+				anti_air_company = 1
+				anti_tank = 1
+				artillery = 1
+			}
+			
+			regiments = {
+				infantry = 11
+				artillery_brigade = 3
+				anti_tank_brigade = 1
+			}
+		}
+		
+		allowed_types = {
+			engineer
+			DIV_HQ
+			logistics_company
+			logistics_company_mot
+			logistics_company_mech
+			maintenance_company
+			recon
+			mot_recon
+			recon_ac
+			light_armor_recon
+			pack_artillery
+			artillery
+			heavy_artillery_support
+			rocket_artillery
+			field_hospital
+			anti_air_company
+			anti_tank
+			infantry
+			light_infantry
+			truck_infantry
+			pack_artillery_brigade
+			artillery_brigade
+			artillery_heavy
+			rocket_artillery_brigade
+			anti_tank_brigade
+		}
+
+		replace_at_match = 0.9
+		replace_with = infantry_improved
+		target_min_match = 0.7
+	}
+
+	infantry_improved = {
+		
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 1
+			}
+		}
+
+		target_width = 30.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			1.00 #-- breakthrough
+			0.00 #-- hardness
+			4.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.00 #-- recon
+			1.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 3000.0
+			
+			support = {
+				engineer = 1
+				recon = 1
+				DIV_HQ = 1
+				field_hospital = 1
+				logistics_company = 1
+				anti_air_company = 1
+				anti_tank = 1
+				artillery = 1
+			}
+			
+			regiments = {
+				infantry = 9
+				artillery_brigade = 4
+				anti_tank_brigade = 2
+			}
+		}
+		
+		allowed_types = {
+			engineer
+			DIV_HQ
+			logistics_company
+			logistics_company_mot
+			logistics_company_mech
+			maintenance_company
+			recon
+			mot_recon
+			recon_ac
+			light_armor_recon
+			pack_artillery
+			artillery
+			heavy_artillery_support
+			rocket_artillery
+			field_hospital
+			anti_air_company
+			anti_tank
+			infantry
+			truck_infantry
+			pack_artillery_brigade
+			artillery_brigade
+			artillery_heavy
+			rocket_artillery_brigade
+			anti_tank_brigade
+		}
+	}
+}
+
+garrison_FIN = {
+
+	available_for = {
+		FIN
+	}
+	
+	roles = {
+		garrison
+	}
+
+	match_to_count = 0.5
+	
+	upgrade_prio = {
+		factor = 1
+
+		modifier = {
+			factor = 100
+			AND = {
+				any_country = {
+					is_justifying_wargoal_against = ROOT
+				}
+				NOT = { ai_has_role_template = garrison }
+			}		
+		}
+	}
+
+	garrison_FIN = {
+	
+		reinforce_prio = 0
+		custom_icon = 7
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+			}
+		}
+		
+		target_width = 30.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+				
+		target_template = {
+			weight = 0.9
+			match_value = 3000.0
+			
+			support = {
+				DIV_HQ = 1
+        		recon = 1
+	 			engineer = 1
+				anti_tank =  1
+				field_hospital = 1
+			}
+			
+			regiments = {
+				garrison = 12
+				artillery_brigade = 2 
+				anti_air_brigade = 1
+			}
+		}
+		
+		allowed_types = {
+			DIV_HQ
+			recon
+			engineer
+			field_hospital
+			anti_tank
+			garrison
+			artillery_brigade
+			anti_air_brigade
+		}
+	}
+}

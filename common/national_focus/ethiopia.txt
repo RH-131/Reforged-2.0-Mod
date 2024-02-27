@@ -1850,7 +1850,7 @@ focus_tree = {
 		icon = GFX_focus_ETH_invite_italian_settlers
 		prerequisite = { focus = ETH_restore_the_country }
 
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = ETH_restore_the_country
 		cost = 5
@@ -1894,31 +1894,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ETH_replace_the_abuna
-		icon = GFX_focus_ETH_replace_the_abuna
-		prerequisite = { focus = ETH_restore_the_country }
-		dynamic = yes 
-		x = 0
-		y = 1
-		relative_position_id = ETH_restore_the_country
-		cost = 5
-		available = {
-		}
-
-		search_filters = {FOCUS_FILTER_POLITICAL}
-
-		completion_reward = {
-			add_political_power = 150
-			add_stability = 0.1
-		}
-	}
-	focus = {
 		id = ETH_the_capital_victory_parade
 		icon = GFX_goal_support_fascism
 		prerequisite = { focus = ETH_restore_the_country }  
 		dynamic = yes 
 
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = ETH_restore_the_country
 		cost = 5
@@ -1938,7 +1919,7 @@ focus_tree = {
 	focus = {
 		id = ETH_amedeos_feast_of_maskal
 		icon = GFX_focus_ETH_amedeos_feast_of_maskal
-		prerequisite = { focus = ETH_invite_italian_settlers focus = ETH_replace_the_abuna }
+		prerequisite = { focus = ETH_invite_italian_settlers focus = ETH_the_capital_victory_parade }
 		x = 1
 		y = 1
 		relative_position_id = ETH_invite_italian_settlers
@@ -1991,11 +1972,11 @@ focus_tree = {
 	focus = {
 		id = ETH_invite_italian_investors
 		icon = GFX_goal_generic_intelligence_exchange
-		prerequisite = { focus = ETH_amedeos_feast_of_maskal }
+		prerequisite = { focus = ETH_invite_italian_settlers }
 
-		x = -3
+		x = -1
 		y = 1
-		relative_position_id = ETH_amedeos_feast_of_maskal
+		relative_position_id = ETH_invite_italian_settlers
 		cost = 5
 		available = {
 			is_subject_of = ITA
@@ -2022,7 +2003,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = ETH_amedeos_feast_of_maskal }
 
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = ETH_amedeos_feast_of_maskal
 		cost = 5
@@ -2053,11 +2034,11 @@ focus_tree = {
 	focus = {
 		id = ETH_cooperation
 		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = ETH_amedeos_feast_of_maskal }
+		prerequisite = { focus = ETH_the_capital_victory_parade }
 		dynamic = yes 
 		x = 1
 		y = 1
-		relative_position_id = ETH_amedeos_feast_of_maskal
+		relative_position_id = ETH_the_capital_victory_parade
 		cost = 5
 		available = {
 		}
@@ -2075,6 +2056,7 @@ focus_tree = {
 		id = ETH_adopt_the_lira
 		icon = GFX_focus_ETH_adopt_the_lira
 		prerequisite = { focus = ETH_invite_italian_investors }
+		prerequisite = { focus = ETH_amedeos_feast_of_maskal }
 
 		x = 0
 		y = 1
@@ -2106,7 +2088,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = ETH_italian_general_staff }
 
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = ETH_italian_general_staff
 		cost = 5
@@ -2138,10 +2120,11 @@ focus_tree = {
 		id = ETH_recruit_mercenaries
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = ETH_amedeos_feast_of_maskal }
+		prerequisite = { focus = ETH_cooperation }
 
-		x = 1
+		x = 0
 		y = 1
-		relative_position_id = ETH_amedeos_feast_of_maskal
+		relative_position_id = ETH_cooperation
 		cost = 5
 		available = {
 		}
@@ -2179,7 +2162,7 @@ focus_tree = {
 	focus = {
 		id = ETH_outsourced_production
 		icon = GFX_focus_generic_truck
-		prerequisite = { focus = ETH_adopt_the_lira focus = ETH_request_italian_equipment }
+		prerequisite = { focus = ETH_adopt_the_lira focus = ETH_italian_general_staff }
 
 		x = 1
 		y = 1
