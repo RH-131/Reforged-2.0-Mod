@@ -11,4 +11,4 @@ tags={
 }
 name="Baptized in Fire"
 supported_version="1.13.7"
-remote_file_id="2726354765"
+remote_file_id="3169092708"
