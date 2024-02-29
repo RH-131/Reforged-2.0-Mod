@@ -137,7 +137,87 @@ adjacency_rule =
 	required_provinces = { 1158 4056 10011 }
 	
 	icon = 7932
-	offset = { -15.0 0.0 0.0 }
+	offset = { -15.0 -50.0 0.0 }
+}
+
+#Tsugaru Strait
+adjacency_rule =
+{
+	name = "TSUGARU_STRAIT"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 3962 9859 }
+	
+	icon = 6824
+	offset = { 20.0 0.0 0.0 }
+}
+
+#Sunda Strait
+adjacency_rule =
+{
+	name = "SUNDA_STRAIT"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 7381 1342 }
+	
+	icon = 2737
+	offset = { -20.0 0.0 0.0 }
 }
 
 #Øresund - (Østersøen <-> Kattegat/Skagerak/Nordsøen)
