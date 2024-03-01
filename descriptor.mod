@@ -9,6 +9,6 @@ tags={
 	"Historical"
 	"Balance"
 }
-name="Baptized in Fire"
+name="Baptized Testing"
 supported_version="1.13.7"
 remote_file_id="3169092708"
