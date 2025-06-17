@@ -1,20 +1,14 @@
 motorized_generic = {
 
-	roles = {
+	role = {
 		mobile
 	}
 
-	match_to_count = 0.50
 	
 	motorized_default = {
 	
-		target_width = 30.0
-		width_weight = 1.0
-		column_swap_factor = 0.5
 		
 		target_template = {
-			weight = 0.9
-			match_value = 6000.0
 						
 			regiments = {
 				motorized = 9
@@ -32,36 +26,11 @@ motorized_generic = {
 				anti_tank = 1
 			}
 		}
-
-		allowed_types = {
-			engineer
-			DIV_HQ
-			logistics_company
-			logistics_company_mot
-			logistics_company_mech
-			maintenance_company
-			recon
-			mot_recon
-			recon_ac
-			light_armor_recon
-			pack_artillery
-			artillery
-			heavy_artillery_support
-			rocket_artillery
-			field_hospital
-			anti_air_company
-			anti_tank
-			motorized
-			mechanized
-			artillery_brigade_mot
-			anti_tank_brigade_mot
-			anti_air_mot
-		}
 	}
 }
 armor_generic = {
 
-	roles = {
+	role = {
 		armor
 	}
 
@@ -83,7 +52,6 @@ armor_generic = {
 		}
 	}
 	
-	match_to_count = 0.5
 	
 	light_armor_default = {
 		upgrade_prio = {
@@ -103,10 +71,6 @@ armor_generic = {
 				num_of_military_factories > 119
 			}
 		}
-		
-		target_width = 30.0
-		width_weight = 1.0
-		column_swap_factor = 0.5
 		
 		stat_weights = {
 			0.00 #-- default_morale
@@ -147,8 +111,6 @@ armor_generic = {
 		}
 		
 		target_template = {
-			weight = 0.9
-			match_value = 4000.0
 			
 			support = {
 				engineer = 1
@@ -166,29 +128,6 @@ armor_generic = {
 			}
 		}
 
-		allowed_types = {
-			engineer
-			DIV_HQ
-			logistics_company
-			logistics_company_mot
-			logistics_company_mech
-			maintenance_company
-			recon
-			mot_recon
-			recon_ac
-			light_armor_recon
-			pack_artillery
-			artillery
-			heavy_artillery_support
-			rocket_artillery
-			field_hospital
-			anti_air_company
-			anti_tank
-			light_armor
-			motorized
-			anti_air_mot
-		}
-
 		replace_at_match = 0.4
 		replace_with = medium_armor_default
 		target_min_match = 0.5
@@ -203,10 +142,6 @@ armor_generic = {
 				factor = 1
 			}
 		}
-		
-		target_width = 30.0
-		width_weight = 3.0
-		column_swap_factor = 0.1
 		
 		stat_weights = {
 			0.00 #-- default_morale
@@ -247,8 +182,6 @@ armor_generic = {
 		}
 		
 		target_template = {
-			weight = 0.5
-			match_value = 1000.0
 			
 			support = {
 				engineer = 1
@@ -268,30 +201,6 @@ armor_generic = {
 		}
 		
 		target_min_match = 0.5
-
-		allowed_types = {
-			engineer
-			DIV_HQ
-			logistics_company
-			logistics_company_mot
-			logistics_company_mech
-			maintenance_company
-			recon
-			mot_recon
-			recon_ac
-			light_armor_recon
-			pack_artillery
-			artillery
-			heavy_artillery_support
-			rocket_artillery
-			field_hospital
-			anti_air_company
-			anti_tank
-			heavy_armor
-			motorized
-			mechanized
-			anti_air_mot
-		}
 	}
 
 	medium_armor_default = {
@@ -312,10 +221,6 @@ armor_generic = {
 				}
 			}
 		}
-	
-		target_width = 30.0
-		width_weight = 1.5
-		column_swap_factor = 0.5
 		
 		stat_weights = {
 			0.00 #-- default_morale
@@ -356,8 +261,6 @@ armor_generic = {
 		}
 		
 		target_template = {
-			weight = 0.9
-			match_value = 5000.0
 			
 			support = {
 				engineer = 1
@@ -376,36 +279,12 @@ armor_generic = {
 			}
 		}
 		target_min_match = 0.5
-
-		allowed_types = {
-			engineer
-			DIV_HQ
-			logistics_company
-			logistics_company_mot
-			logistics_company_mech
-			maintenance_company
-			recon
-			mot_recon
-			recon_ac
-			light_armor_recon
-			pack_artillery
-			artillery
-			heavy_artillery_support
-			rocket_artillery
-			field_hospital
-			anti_air_company
-			anti_tank
-			medium_armor
-			motorized
-			mechanized
-			anti_air_mot
-		}
 	}
 }
 
 garrison_generic = {
 	
-	roles = {
+	role = {
 		garrison
 	}
 
@@ -418,7 +297,6 @@ garrison_generic = {
 		}
 	}
 	
-	match_to_count = 0.60
 
 	garrison_generic = {
 	
@@ -432,10 +310,6 @@ garrison_generic = {
 				factor = 1
 			}
 		}
-		
-		target_width = 10.0
-		width_weight = 1.0
-		column_swap_factor = 0.5
 		
 		stat_weights = {
 			0.00 #-- default_morale
@@ -469,8 +343,6 @@ garrison_generic = {
 		}
 		
 		target_template = {
-			weight = 0.9
-			match_value = 3000.0
 			
 			support = { 
 				engineer = 1
@@ -481,20 +353,12 @@ garrison_generic = {
 			}
 		}
 		
-		allowed_types = {
-			engineer
-			DIV_HQ
-			recon
-			garrison
-			light_infantry
-			infantry
-		}
 	}
 }
 
 suppression_generic = {
 	
-	roles = {
+	role = {
 		suppression
 	}
 
@@ -507,7 +371,6 @@ suppression_generic = {
 		}
 	}
 	
-	match_to_count = 0.60
 
 	suppression_generic = {
 	
@@ -526,10 +389,6 @@ suppression_generic = {
 				}
 			}
 		}
-		
-		target_width = 10.0
-		width_weight = 1.0
-		column_swap_factor = 0.5
 		
 		stat_weights = {
 			0.00 #-- default_morale
@@ -563,8 +422,6 @@ suppression_generic = {
 		}
 		
 		target_template = {
-			weight = 0.9
-			match_value = 3000.0
 			
 			support = { 
 				military_police = 1
@@ -597,7 +454,7 @@ infantry_generic = {
 		MAN
 	}
 
-	roles = {
+	role = {
 		infantry
 	}
 
@@ -609,7 +466,6 @@ infantry_generic = {
 		}
 	}
 
-	match_to_count = 0.10
 	
 	infantry_default = {
 	
@@ -620,10 +476,6 @@ infantry_generic = {
 				factor = 1
 			}
 		}
-
-		target_width = 30.0
-		width_weight = 1.0
-		column_swap_factor = 0.5
 		
 		stat_weights = {
 			0.00 #-- default_morale
@@ -657,8 +509,6 @@ infantry_generic = {
 		}
 		
 		target_template = {
-			weight = 0.9
-			match_value = 3000.0
 			
 			support = {
 				engineer = 1
@@ -677,34 +527,6 @@ infantry_generic = {
 				anti_tank_brigade = 1
 			}
 		}
-		
-		allowed_types = {
-			engineer
-			DIV_HQ
-			logistics_company
-			logistics_company_mot
-			logistics_company_mech
-			maintenance_company
-			recon
-			mot_recon
-			recon_ac
-			light_armor_recon
-			pack_artillery
-			artillery
-			heavy_artillery_support
-			rocket_artillery
-			field_hospital
-			anti_air_company
-			anti_tank
-			infantry
-			light_infantry
-			truck_infantry
-			pack_artillery_brigade
-			artillery_brigade
-			artillery_heavy
-			rocket_artillery_brigade
-			anti_tank_brigade
-		}
 
 		replace_at_match = 0.9
 		replace_with = infantry_improved
@@ -720,10 +542,6 @@ infantry_generic = {
 				factor = 1
 			}
 		}
-
-		target_width = 30.0
-		width_weight = 1.0
-		column_swap_factor = 0.5
 		
 		stat_weights = {
 			0.00 #-- default_morale
@@ -764,8 +582,6 @@ infantry_generic = {
 		}
 		
 		target_template = {
-			weight = 0.9
-			match_value = 3000.0
 			
 			support = {
 				engineer = 1
@@ -784,39 +600,12 @@ infantry_generic = {
 				anti_tank_brigade = 2
 			}
 		}
-		
-		allowed_types = {
-			engineer
-			DIV_HQ
-			logistics_company
-			logistics_company_mot
-			logistics_company_mech
-			maintenance_company
-			recon
-			mot_recon
-			recon_ac
-			light_armor_recon
-			pack_artillery
-			artillery
-			heavy_artillery_support
-			rocket_artillery
-			field_hospital
-			anti_air_company
-			anti_tank
-			infantry
-			truck_infantry
-			pack_artillery_brigade
-			artillery_brigade
-			artillery_heavy
-			rocket_artillery_brigade
-			anti_tank_brigade
-		}
 	}
 }
 
 mountaineers_generic = {
 
-	roles = {
+	role = {
 		mountaineers
 	}
 	
@@ -831,7 +620,6 @@ mountaineers_generic = {
 		}
 	}
 	
-	match_to_count = 0.45
 
 	mountaineers_default = {
 	
@@ -842,10 +630,6 @@ mountaineers_generic = {
 				factor = 1
 			}
 		}
-	
-		target_width = 30.0
-		width_weight = 2.0
-		column_swap_factor = 0.2
 		
 		stat_weights = {
 			0 #-- default_morale
@@ -879,8 +663,6 @@ mountaineers_generic = {
 		}
 
 		target_template = {
-			weight = 0.5
-			match_value = 3000.0
 			
 			support = {
 				engineer = 1
@@ -899,38 +681,12 @@ mountaineers_generic = {
 				anti_tank_brigade = 2
 			}
 		}
-		
-		allowed_types = {
-			engineer
-			DIV_HQ
-			logistics_company
-			logistics_company_mot
-			logistics_company_mech
-			maintenance_company
-			recon
-			mot_recon
-			recon_ac
-			light_armor_recon
-			pack_artillery
-			artillery
-			heavy_artillery_support
-			rocket_artillery
-			field_hospital
-			anti_air_company
-			anti_tank
-			mountaineers
-			pack_artillery_brigade
-			artillery_brigade
-			artillery_heavy
-			rocket_artillery_brigade
-			anti_tank_brigade
-		}
 	}
 }
 
 marines_generic = {
 
-	roles = {
+	role = {
 		marines
 	}
 	
@@ -945,7 +701,6 @@ marines_generic = {
 		}
 	}
 	
-	match_to_count = 0.45
 
 	marine_default = {
 	
@@ -956,10 +711,6 @@ marines_generic = {
 				factor = 1
 			}
 		}
-	
-		target_width = 30.0
-		width_weight = 1.0
-		column_swap_factor = 0.1
 		
 		stat_weights = {
 			0.00 #-- default_morale
@@ -993,8 +744,6 @@ marines_generic = {
 		}
 
 		target_template = {
-			weight = 0.9
-			match_value = 2000.0
 			
 			support = {
 				engineer = 1
@@ -1012,33 +761,6 @@ marines_generic = {
 				rocket_artillery_brigade = 3
 				anti_tank_brigade = 1
 			}
-		}
-
-		
-		allowed_types = {
-			engineer
-			DIV_HQ
-			logistics_company
-			logistics_company_mot
-			logistics_company_mech
-			maintenance_company
-			recon
-			mot_recon
-			recon_ac
-			light_armor_recon
-			pack_artillery
-			artillery
-			heavy_artillery_support
-			rocket_artillery
-			field_hospital
-			anti_air_company
-			anti_tank
-			marine
-			pack_artillery
-			artillery_brigade
-			artillery_heavy
-			rocket_artillery_brigade
-			anti_tank_brigade
 		}
 	}
 
@@ -1059,10 +781,6 @@ marines_generic = {
 				factor = 0
 			}
 		}
-	
-		target_width = 30.0
-		width_weight = 1.0
-		column_swap_factor = 0.1
 		
 		stat_weights = {
 			0.00 #-- default_morale
@@ -1103,8 +821,6 @@ marines_generic = {
 		}
 
 		target_template = {
-			weight = 0.9
-			match_value = 2000.0
 			
 			support = {
 				engineer = 1
@@ -1123,35 +839,13 @@ marines_generic = {
 			}
 		}
 
-		
-		allowed_types = {
-			engineer
-			DIV_HQ
-			logistics_company
-			logistics_company_mot
-			logistics_company_mech
-			maintenance_company
-			recon
-			mot_recon
-			recon_ac
-			light_armor_recon
-			pack_artillery
-			artillery
-			heavy_artillery_support
-			rocket_artillery
-			field_hospital
-			anti_air_company
-			anti_tank
-			amphibious_armor
-			amphibious_mechanized
-		}
 	}
 }
 
 
 paratrooper_generic = {
 
-	roles = {
+	role = {
 		paratrooper
 	}
 	
@@ -1166,7 +860,6 @@ paratrooper_generic = {
 		}
 	}
 	
-	match_to_count = 0.45
 	
 	paratrooper_default = {
 	
@@ -1177,10 +870,6 @@ paratrooper_generic = {
 				factor = 1
 			}
 		}
-		
-		target_width = 30.0
-		width_weight = 3.0
-		column_swap_factor = 0.1
 		
 		stat_weights = {
 			0.20 #-- default_morale
@@ -1214,8 +903,6 @@ paratrooper_generic = {
 		}
 
 		target_template = {
-			weight = 0.9
-			match_value = 2000.0
 			
 			support = {
 				engineer = 1
@@ -1231,20 +918,6 @@ paratrooper_generic = {
 			regiments = {
 				paratrooper = 15
 			}
-		}
-		
-		allowed_types = {
-			engineer
-			recon
-			DIV_HQ
-			signal_company
-			field_hospital
-			anti_tank
-			military_police
-			anti_air_company
-			pack_artillery
-			light_armor_para
-			paratrooper
 		}
 	}
 }

@@ -68,9 +68,14 @@ NMapMode = {
 	RAILWAY_GUN_RANGE_INDICATOR_ROTATION_SPEED = 0.001,								-- How fast the indicator is rotating.
 	RAILWAY_GUN_RANGE_STRIPES_COLOR = { 1.0, 0.5, 0.0, 0.2 },						-- Color of the railway gun range stripes (when hovered)
 
+	PREPARING_RAID_ARROW_COLOR = { 0.7, 0.7, 0.7, 1.0 },							    -- Color of the arrow drawn in the raid map mode for raids that are still preparing.
+	READY_RAID_ARROW_COLOR = { 0.7, 0.7, 0, 0.9},							        -- Color of the arrow drawn in the raid map mode for raids that can be launched.
+	ACTIVE_RAID_ARROW_COLOR = { 1, 0, 0, 0.9 },							        -- Color of the arrow drawn in the raid map mode for active raids.
+	
 	OCCUPATION_MAP_MODE_COUNTRY_STRIPE_ALPHA = 0.3,									-- alpha of occupied country stripes in occupation map mode
 	OPERATIVE_MAP_MODE_INVALID_COUNTRY_TARGET_TRANSPARENCY = 0.15,							-- alpha of country which cannot be targeted by the selected operative mission
 
+	COASTAL_FACILITY_OFFSET = {-1.5, 0, 1.5},					-- Offset from world position CVector3f (x, y, z). So it does not overlap with a port map icon
 
 	SUPPLY_MAP_MODE_COUNTRY_BORDER_CAMERA_DISTANCE = 1.0,
 	SUPPLY_MAP_MODE_COUNTRY_BORDER_OUTLINE_CUTOFF = 0.973,

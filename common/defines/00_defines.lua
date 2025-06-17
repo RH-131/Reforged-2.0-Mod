@@ -215,6 +215,7 @@ NDiplomacy = {
 	ATTACHE_TO_SUBJECT_EFFECT = -0.05,				-- If overlord sent attaches to the subject it losses autonomy
 	ATTACHE_TO_OVERLORD_EFFECT = 0.05,				-- If subject sent attaches to the overlord it gains autonomy
 
+	AUTONOMY_LEVEL_CHANGE_SANCTUARY = 30,			-- The number of days post autonomy level has changed where neither side can increase nor decrease the autonomy level.
 	AUTONOMY_LEVEL_CHANGE_PP_COST_BASE = 50.0,		-- Base cost of changing level of autonomy
 	AUTONOMY_LEVEL_CHANGE_PP_ANNEX = 300,			-- Annexation cost
 	AUTONOMY_LEVEL_CHANGE_PP_FREE = 300,			-- Break free cost
@@ -1425,10 +1426,11 @@ NAir = {
 
 	MISSION_EFFICIENCY_MULT_AT_LACK_OF_FUEL = 0.25, 				-- multiplier for mission efficiency when a base lacks fuel
 
-	BOMBING_TARGETING_RANDOM_FACTOR = 0.25,							-- % of picking the wrong target
-	BOMBING_PROV_BUILD_PRIO_SCALE = 2.0,							-- Scale of the selected priority for provincial buildings
-	BOMBING_STATE_BUILD_PRIO_SCALE = 1.5,							-- Scale of the selected priority for state buildings
-	BOMBING_INFRA_PRIO_SCALE = 0.7,									-- Scale of the selected priority for infastryctyre
+	STRATEGIC_BOMBING_PROV_BUILD_PRIO_SCALE = 1.5,					-- Scale of the selected priority for provincial buildings
+	STRATEGIC_BOMBING_STATE_BUILD_PRIO_SCALE = 1.5,					-- Scale of the selected priority for state buildings
+	STRATEGIC_BOMBING_INFRA_PRIO_SCALE = 0.7,						-- Scale of the selected priority for infrastructure
+	STRATEGIC_BOMBING_RAILWAY_PRIORITY_SCALE = 0.2,					-- The scale of extra priority assigned to railway for strategic bombing
+	STRATEGIC_BOMBING_STATE_BUILDING_SCALE = 1.0,					-- The scale of state building priority for strategic bombing
 	NAVAL_MINES_PLANTING_SPEED_MULT = 0.025,						-- Value used to overall balance of the speed of planting naval mines
 	NAVAL_MINES_SWEEPING_SPEED_MULT = 0.025,						-- Value used to overall balance of the speed of sweeping naval mines
 	NON_CORE_STRATEGIC_IMPACT = 0.5,                                -- multiplier for strategic impact of non-core bombing

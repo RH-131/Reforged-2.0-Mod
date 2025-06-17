@@ -4,31 +4,17 @@ infantry_D01 = {
 		D01
 	}
 
-	roles = {
+	role = {
 		infantry
 	}
-
-	match_to_count = 0.50
 	
 	infantry_default_D01 = {
-
-		
-		
-		target_width = 10.0
-		width_weight = 1.0
-		column_swap_factor = 0.5
 		
 		target_template = {
-			weight = 0.9
-			match_value = 6000.0
 						
 			regiments = {
 				light_infantry = 5
 			}
-		}
-
-		allowed_types = {
-			light_infantry
 		}
 	}
 }
@@ -38,21 +24,13 @@ infantry_SPR = {
 		SPR
 	}
 
-	roles = {
+	role = {
 		infantry
 	}
 	
-	match_to_count = 0.50
-	
 	infantry_default_SPR = {
-
-		target_width = 10.0
-		width_weight = 1.0
-		column_swap_factor = 0.5
 		
 		target_template = {
-			weight = 0.9
-			match_value = 6000.0
 						
 			regiments = {
 				light_infantry = 10
@@ -63,13 +41,6 @@ infantry_SPR = {
 				recon = 1
 				DIV_HQ = 1
 			}
-		}
-
-		allowed_types = {
-			light_infantry
-			engineer
-			recon
-			DIV_HQ
 		}
 	}
 }

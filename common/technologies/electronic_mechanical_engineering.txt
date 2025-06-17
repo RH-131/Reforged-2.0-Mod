@@ -400,25 +400,31 @@ technologies = {
 	
 	# radar
 	radio_detection = {
-		# 
+		allow = {
+	 		ROOT = {
+				is_special_project_completed = sp:sp_air_radar
+			}
+		}
+
 		enable_building = {
 			building = radar_station
 			level = 1
 		}
-		
+		coordination_bonus = 0.01
 		path = {
-			leads_to_tech = decimetric_radar 
+			leads_to_tech = cavity_magnatron 
 			research_cost_coeff = 1
 		}
-		enable_equipment_modules = { 
-			ship_radar_1
-		}
-		research_cost = 1.5
-		start_year = 1937
-		folder = {
-			name = electronics_folder
-			position = { x = 2 y = 4 }
-		}
+		#enable_equipment_modules = {
+		#	ship_radar_1
+		#	radio_navigation_1
+		#}
+		research_cost = 1.75
+		#start_year = 1937
+		#folder = {
+		#	name = electronics_folder
+		#	position = { x = 2 y = 4 }
+		#}
 		
 		ai_will_do = {
 			factor = 10
@@ -428,29 +434,53 @@ technologies = {
 			electronics
 			radar_tech
 		}
+
 	}
 	
-	decimetric_radar = {
+	cavity_magnatron = { #was decimetric radar
+
+		# can build radars/radar boost in air/sea combat depends on radar level
+		allow = {
+	 		ROOT = {
+				is_special_project_completed = sp:sp_air_radar
+			}
+		}
+
+		is_special_project_tech = yes
 		
+		coordination_bonus = 0.01
+		research_cost = 1.25
+		start_year = 1938
+		enable_equipment_modules = { 
+			ship_radar_2
+			
+		}
 		
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 8 }
+		}
+
+		special_project_specialization = { specialization_air specialization_nuclear }
+
 		path = {
 			leads_to_tech = centimetric_radar 
 			research_cost_coeff = 1
 		}
 		
-		static_anti_air_hit_chance_factor = 0.1
-		
-		research_cost = 1.5
-		start_year = 1939
-		folder = {
-			name = electronics_folder
-			position = { x = 2 y = 8 }
-		}
-		enable_equipment_modules = { 
-			ship_radar_2
-		}
 		ai_will_do = {
-			factor = 5
+			factor = 1
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 5
+			}
+			modifier = {
+				date < "1938.1.1"
+				factor = 0.5
+			}
 		}
 		
 		categories = {
@@ -464,27 +494,141 @@ technologies = {
 		}
 	}
 	
+	#improved_cavity_magnatron = {
+#
+	#	# radar boost in air/sea combat depends on radar level
+	#	enable_building = {
+	#		building = radar_station
+	#		level = 3
+	#	}
+	#	coordination_bonus = 0.01
+	#	enable_equipment_modules = { 
+	#		ship_radar_2
+	#	}
+#
+	#	path = {
+	#		leads_to_tech = centimetric_radar 
+	#		research_cost_coeff = 1
+	#	}
+	#	
+	#	research_cost = 1.25
+	#	start_year = 1939
+	#	
+	#	folder = {
+	#		name = electronics_folder
+	#		position = { x = 0 y = 8 }
+	#	}
+	#	
+	#	ai_will_do = {
+	#		factor = 1
+	#		modifier = {
+	#			OR = {
+	#				tag = ENG
+	#				tag = USA
+	#			}
+	#			factor = 5
+	#		}
+	#		modifier = {
+	#			date < "1939.1.1"
+	#			factor = 0.5
+	#		}
+	#	}
+	#	
+	#	categories = {
+	#		electronics
+	#		radar_tech
+	#	}
+	#}
+	
 	centimetric_radar = {
 
+		allow = {
+	 		ROOT = {
+				is_special_project_completed = sp:sp_air_radar
+			}
+		}
+		# radar boost in air/sea combat depends on radar level
 		enable_building = {
 			building = radar_station
 			level = 3
 		}
-		
-		static_anti_air_hit_chance_factor = 0.1
+		is_special_project_tech = yes
+		special_project_specialization = { specialization_air specialization_nuclear }
+		coordination_bonus = 0.02
+		static_anti_air_hit_chance_factor = 0.2
+
+		enable_equipment_modules = { 
+			air_air_radar_1
+			air_ground_radar_1
+		}
 		
 		path = {
-			leads_to_tech = advanced_centimetric_radar
+			leads_to_tech = phased_array 
 			research_cost_coeff = 1
 		}
+		
 		path = {
 			leads_to_tech = night_fighters1
 			research_cost_coeff = 1
 		}
-		enable_equipment_modules = { 
+		
+		research_cost = 1.25
+		start_year = 1940
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 4
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+			}
+			modifier = {
+				factor = 0.5
+				date < "1940.1.1"
+			}
+		}
+		
+		categories = {
+			electronics
+			radar_tech
+		}
+	}
+	
+	phased_array = {
+		is_special_project_tech = yes
+		# radar boost in air/sea combat depends on radar level
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_air_radar
+			}
+		}
+		enable_building = {
+			building = radar_station
+			level = 5
+		}
+		coordination_bonus = 0.01
+		enable_equipment_modules = {
+			air_air_radar_2
 			ship_radar_3
 		}
-		research_cost = 2
+
+		special_project_specialization = { specialization_air specialization_nuclear }
+
+		static_anti_air_hit_chance_factor = 0.2
+		
+		path = {
+			leads_to_tech = monopulse_radar 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.25
 		start_year = 1941
 		
 		folder = {
@@ -494,6 +638,17 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 4
+			}
+			modifier = {
+				date < "1941.1.1"
+				factor = 0.5
+			}
 		}
 		
 		categories = {
@@ -502,31 +657,45 @@ technologies = {
 		}
 	}
 	
-	advanced_centimetric_radar = {
-
+	monopulse_radar = {
+		is_special_project_tech = yes
 		# radar boost in air/sea combat depends on radar level
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_air_radar
+			}
+		}
 		enable_building = {
 			building = radar_station
-			level = 4
-		}		
-		path = {
-			leads_to_tech = night_fighters2
-			research_cost_coeff = 1
+			level = 6
 		}
-		static_anti_air_hit_chance_factor = 0.1
-		
-		research_cost = 2
-		start_year = 1942
+		coordination_bonus = 0.01
 		enable_equipment_modules = { 
 			ship_radar_4
+			air_ground_radar_2
+			
 		}
+		special_project_specialization = { specialization_air specialization_nuclear }
+		
+		static_anti_air_hit_chance_factor = 0.2
+		
+		research_cost = 1.25
+		start_year = 1942
+		
 		folder = {
 			name = electronics_folder
 			position = { x = 2 y = 14 }
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 1
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 5
+			}
 		}
 		
 		categories = {
@@ -534,6 +703,7 @@ technologies = {
 			radar_tech
 		}
 	}
+	
 	night_fighters1 = {
 		
 		research_cost = 2
@@ -1035,10 +1205,6 @@ technologies = {
 		folder = {
 			name = electronics_folder
 			position = { x = 1 y = 0 }
-		}
-		folder = {
-			name = secret_weapons_folder
-			position = { x = 10 y = 0 }
 		}
 		
 		ai_will_do = {

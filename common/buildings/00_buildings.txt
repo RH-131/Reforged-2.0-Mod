@@ -86,7 +86,6 @@ buildings = {
 	rail_way = {
 		base_cost = 150
 		per_level_extra_cost = 120
-		provincial = yes
 		disabled_in_dmz = yes
 		icon_frame = 16
 		level_cap = {
@@ -126,7 +125,6 @@ buildings = {
 		always_shown = yes
 		base_cost = 7000
 		per_level_extra_cost = -500
-		provincial = yes
 		only_costal = yes
 		is_port = yes
 		icon_frame = 6
@@ -142,7 +140,6 @@ buildings = {
 		has_destroyed_mesh = yes
 		base_cost = 500
 		per_level_extra_cost = 500
-		provincial = yes
 		disabled_in_dmz = yes
 		icon_frame = 7
 		land_fort = 1
@@ -158,7 +155,6 @@ buildings = {
 		has_destroyed_mesh = yes
 		base_cost = 500
 		per_level_extra_cost = 500
-		provincial = yes
 		disabled_in_dmz = yes
 		only_costal = yes
 		icon_frame = 8
@@ -207,7 +203,6 @@ buildings = {
 			shares_slots = yes
 			state_max = 40
 		}
-		shares_slots = yes
 		value = 5
 		infrastructure_construction_effect = yes
 	}
@@ -233,8 +228,8 @@ buildings = {
 		refinery = yes
 		level_cap = {
 			state_max = 3
+			shares_slots = yes
 		}
-		shares_slots = yes
 		value = 5
 		infrastructure_construction_effect = yes
 		show_modifier = yes
@@ -258,7 +253,6 @@ buildings = {
 		level_cap = {
 			shares_slots = yes
 		}
-		shares_slots = yes
 		value = 1
 		infrastructure_construction_effect = yes
 		fuel_silo = yes
@@ -273,8 +267,8 @@ buildings = {
 		refinery = yes
 		level_cap = {
 			state_max = 3
+			shares_slots = yes
 		}
-		shares_slots = yes
 		value = 5
 		infrastructure_construction_effect = yes
 	}
@@ -289,8 +283,8 @@ buildings = {
 		refinery = yes
 		level_cap = {
 			state_max = 3
+			shares_slots = yes
 		}
-		shares_slots = yes
 		value = 5
 		infrastructure_construction_effect = yes
 		
@@ -311,25 +305,25 @@ buildings = {
 		allied_build = yes
 		infrastructure_construction_effect = yes
 	}
-	mega_gun_emplacement = {
-		dlc_allowed = { has_dlc = Gotterdammerung }
-		hide_if_missing_tech = yes
-		show_on_map = 1
-		base_cost = 30000
-		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 24
-		value = 1
-		disabled_in_dmz = yes
-		infrastructure_construction_effect = yes
-		gun_emplacement = yes
-		spawn_point = rocket_site_spawn
-		level_cap = {
-			state_max = 1
-			shares_slots = yes
-			exclusive_with = rocket_site
-		}
-		#Building utilizes equipment "explosive_ammo_equipment" as ammunition for the air mission barrage
-	}
+#	mega_gun_emplacement = {
+#		dlc_allowed = { has_dlc = Gotterdammerung }
+#		hide_if_missing_tech = yes
+#		show_on_map = 1
+#		base_cost = 30000
+#		damage_factor = 0 # This building can't be damaged by regular strat bombing
+#		icon_frame = 24
+#		value = 1
+#		disabled_in_dmz = yes
+#		infrastructure_construction_effect = yes
+#		gun_emplacement = yes
+#		spawn_point = rocket_site_spawn
+#		level_cap = {
+#			state_max = 1
+#			shares_slots = yes
+#			exclusive_with = rocket_site
+#		}
+#		#Building utilizes equipment "explosive_ammo_equipment" as ammunition for the air mission barrage
+#	}
 	rocket_site = {
 		show_on_map = 1
 		base_cost = 5000
@@ -339,9 +333,8 @@ buildings = {
 		level_cap = {
 			state_max = 3
 			shares_slots = yes
-			exclusive_with = mega_gun_emplacement
+#			exclusive_with = mega_gun_emplacement
 		}
-		shares_slots = yes
 		value = 1
 		infrastructure_construction_effect = yes
 	}

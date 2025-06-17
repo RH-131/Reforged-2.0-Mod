@@ -20,18 +20,6 @@ technologies = {
 		}
 	}
 
-	land_multi_charge_large_caliber_gun_tech = {
-		allow = {
-			always = no
-		}
-
-		start_year = 1936
-		enable_building = {
-			building = mega_gun_emplacement
-			level = 1
-		}
-	}
-
 	stronghold_network_tech = {
 		allow = {
 			always = no
@@ -56,7 +44,6 @@ technologies = {
 			nuclear
 		}
 		sp_nuclear_bomb_speed_factor = 0.05
-		sp_thermo_nuclear_bomb_speed_factor = 0.05
 		nuclear_production_factor = 0.5
 	}
 }
