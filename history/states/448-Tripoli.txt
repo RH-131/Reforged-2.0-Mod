@@ -4,21 +4,18 @@ state={
 	name="STATE_448"
 	manpower = 469136
 	
-	resources={
-		oil= 10
-		aluminium=15
-	}
-	
 	state_category = town
+	
+	resources = {
+		steel = 20
+		chromium = 30
+	}
 
 	history={
 		owner = ITA
-		add_core_of = LBA
+		
 		victory_points = {
-			1149 10 # Tripoli
-		}
-		victory_points = {
-			9980 1 # Misurata
+			1149 10 
 		}
 		buildings = {
 			infrastructure = 4
@@ -28,6 +25,7 @@ state={
 				naval_base = 5
 			}
 		}
+		add_core_of = LBA
 	}
 
 	provinces={

@@ -3,6 +3,9 @@ state={
 	id=329
 	name="STATE_329"
 	manpower = 85000
+	resources={
+		chromium=10 # was: 2
+	}
 	
 	state_category = rural
 
@@ -17,6 +20,7 @@ state={
 			10627 3
 		}
 		add_core_of = MON
+		add_core_of = SOV
 	}
 
 	provinces={

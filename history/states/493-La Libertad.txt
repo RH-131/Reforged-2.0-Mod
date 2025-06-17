@@ -3,12 +3,19 @@ state={
 	id=493
 	name="STATE_493"
 	manpower = 1
+	resources={
+#		oil=15 # was: 20
+	}
 	
-	state_category = wasteland
+	state_category = town
 
-	history = {
+	history={
 		owner = PAR
-		add_core_of = PAR
+		buildings = {
+
+		}
+
+
 	}
 
 	provinces={

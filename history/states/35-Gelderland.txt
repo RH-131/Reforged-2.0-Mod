@@ -1,15 +1,23 @@
 state={
 	id=35
 	name="STATE_35"
+	
+	manpower=1449000
+	buildings_max_level_factor=1.000
+	state_category=city
+	resources={
+		steel=40 
+	}
+	
 
 	history={
 		owner = HOL
-		add_core_of = HOL
 		set_state_flag = atlantikwall_state
+		add_core_of = HOL
 		buildings = {
 			infrastructure = 7
-			industrial_complex = 6
 			arms_factory = 4
+			industrial_complex = 6
 
 		}
 		victory_points = {
@@ -27,9 +35,6 @@ state={
 	provinces={
 		480 3262 6496 6500 9431 11456 11562 
 	}
-	manpower=1449000
-	buildings_max_level_factor=1.000
-	state_category=city
 
 	local_supplies=0.0 
 }

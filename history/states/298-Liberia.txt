@@ -5,10 +5,26 @@ state=
 	manpower = 745000
 	
 	state_category = rural
+	resources={
+		rubber=50 # was: 7
+	}	
+	
 
-	history = {
-		owner = PAR
-		add_core_of = PAR
+	history= {
+		owner = FRA
+		add_core_of = SEN
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			7959 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			7959 3
+		}
+
 	}
 	provinces={
 		7959 8006

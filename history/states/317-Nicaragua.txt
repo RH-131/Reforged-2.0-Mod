@@ -1,19 +1,25 @@
 state={
 	id=317
 	name="STATE_317"
+	manpower=1
+	buildings_max_level_factor=1.000
+	resources={
+#		chromium=1 # was: 1
+	}
 
-	state_category = wasteland
+	state_category = town
 
-	history = {
+	history={
 		owner = PAR
-		add_core_of = PAR
+		buildings = {
+
+		}
+
 	}
 
 	provinces={
 		1988 2075 10728 12738 13139 13178 
 	}
-	manpower= 1
-	buildings_max_level_factor=1.000
 
 	local_supplies=0.0 
 }

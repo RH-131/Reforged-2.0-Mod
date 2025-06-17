@@ -4,32 +4,22 @@ state={
 	name="STATE_451"
 	manpower = 45628
 	
-	state_category = pastoral
+	state_category = wasteland
 
 	history={
 		owner = ITA
-		add_core_of = LBA
 		set_state_flag = GER_atlantikwall
-		
 		victory_points = {
-			1130 5 #Tobruk
-		}
-		victory_points = {
-			7082 1 #Derna
-		}
-		victory_points = {
-			10120 1 #Bardia
+			1130 5 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			air_base = 4
 			1130 = {
 				naval_base = 6
 			}
-			10120 = {
-				naval_base = 1
-			}
 		}
+		add_core_of = LBA
 	}
 
 	provinces={

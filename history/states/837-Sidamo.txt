@@ -1,9 +1,9 @@
 state = {
 	id = 837 # Sidamo (including Gammu Gofa)
 	name = "STATE_837"
-	manpower = 950000
+	manpower = 1150000
 	resources = {
-		rubber = 4
+		rubber = 25
 	}
 	
 	state_category = rural
@@ -17,11 +17,15 @@ state = {
 		victory_points = { 
 			8019 1 
 		}
+		victory_points = { 
+			13246 2 
+		}
+		victory_points = { 
+			13247 1 
+		}
 		
 		owner = ETH
 		add_core_of = ETH
-		add_core_of = SID
-		add_core_of = ORO
 
 		1936.6.1 = {
 			owner = ITA
@@ -30,7 +34,7 @@ state = {
 	}
 
 	provinces = {
- 		8019 8062
+ 		8019 8062 10775 13246 13247
  	}
 
 	local_supplies = 0.0 

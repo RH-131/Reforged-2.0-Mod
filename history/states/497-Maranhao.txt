@@ -2,13 +2,29 @@
 state={
 	id=497
 	name="STATE_497"
-	manpower = 1
+	manpower = 2950100
 	
-	state_category = wasteland
+	state_category = rural
+	
+	resources = {
+		rubber = 40
+	}
 
 	history = {
+
 		owner = PAR
 		add_core_of = PAR
+
+		buildings = {
+			infrastructure = 3
+			#industrial_complex = 1 Should probably not have this factory
+			air_base = 1
+		}
+
+		victory_points = {
+			12933 2 
+		}
+
 	}
 
 	provinces={
