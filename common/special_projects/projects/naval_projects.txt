@@ -58,12 +58,6 @@ sp_naval_cruiser_submarine = {
 			}
 			ship_hull_cruiser_submarine
 		}
-		enable_equipments = {	
-			limit = {
-				not = { has_dlc = "Man the Guns" }
-			}
-			cruiser_submarine
-		}
 		
 		country_effects = {
 			if = {
@@ -172,7 +166,7 @@ sp_naval_cruiser_submarine = {
 	
 }
 
-Fleet Submarine
+# Fleet Submarine
 sp_naval_fleet_submarine = {
 	specialization = specialization_naval
 	
@@ -353,7 +347,7 @@ sp_naval_fleet_submarine = {
 	
 }
 
-Midget Submarine
+# Midget Submarine
 sp_naval_midget_submarine = {
 	specialization = specialization_naval
 
@@ -613,7 +607,7 @@ sp_naval_midget_submarine = {
 	}	
 }
 
-Air-Independent Propulsion
+# Air-Independent Propulsion
 sp_naval_aip_engine = {
 	specialization = specialization_naval
 
@@ -785,7 +779,7 @@ sp_naval_aip_engine = {
 
 }
 
-ANECHOIC TILES
+# ANECHOIC TILES
 sp_naval_anechoic_tiles = {
 	specialization = specialization_naval
 
@@ -953,7 +947,7 @@ sp_naval_anechoic_tiles = {
    ##  #  # #   #  #  ##  ###     ##  #  # ### #    ##  
 
 
-Torpedo Cruiser
+# Torpedo Cruiser
 sp_naval_torpedo_cruiser = {
 	specialization = specialization_naval
 
@@ -1146,7 +1140,7 @@ sp_naval_torpedo_cruiser = {
 }
 
 
-Super Heavy Battleship
+# Super Heavy Battleship
 sp_naval_super_heavy_battleship = {
 	specialization = specialization_naval
  
@@ -1490,14 +1484,11 @@ sp_naval_super_heavy_battleship = {
 					}
 				}
 			}
-
 		}
-
 	}	
-	
 }
 
-Underway Replenishment
+# Underway Replenishment
 sp_naval_underway_replenishment = {
 	specialization = specialization_naval
 
@@ -1632,7 +1623,7 @@ sp_naval_underway_replenishment = {
 	}	
 }
 
-PROXIMITY FUZE
+# PROXIMITY FUZE
 
 sp_naval_proximity_fuze = {
 	specialization = specialization_naval
@@ -1649,9 +1640,7 @@ sp_naval_proximity_fuze = {
 	}
 
 	available = {
-		FROM = {
-			has_tech = improved_radio
-		}	
+	
 	}
 	
 	resource_cost = {

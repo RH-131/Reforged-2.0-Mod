@@ -2018,10 +2018,10 @@ focus_tree = {
 					check_variable = { var = focus_power value = 0 compare = less_than_or_equals }
 				}
 				if = { 
-					limit = { NOT = { has_tech = decimetric_radar }
+					limit = { NOT = { has_tech = cavity_magnatron }
 					}
 					set_technology = { 
-						decimetric_radar = 1 
+						cavity_magnatron = 1 
 					}
 				}
 				random_owned_controlled_state = {
@@ -2072,10 +2072,10 @@ focus_tree = {
 				custom_effect_tooltip = ENG_focus_boost_tt
 				effect_tooltip = {
 					if = { 
-						limit = { NOT = { has_tech = decimetric_radar }
+						limit = { NOT = { has_tech = cavity_magnatron }
 						}
 						set_technology = { 
-							decimetric_radar = 1 
+							cavity_magnatron = 1 
 						}
 					}
 					random_owned_controlled_state = {
@@ -2166,10 +2166,10 @@ focus_tree = {
 				}
 				subtract_from_variable = { var = focus_power value = 1 }
 				if = { 
-					limit = { NOT = { has_tech = decimetric_radar }
+					limit = { NOT = { has_tech = cavity_magnatron }
 					}
 					set_technology = { 
-						decimetric_radar = 1 
+						cavity_magnatron = 1 
 					}
 				}
 				random_owned_controlled_state = {
