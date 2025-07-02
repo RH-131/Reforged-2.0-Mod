@@ -13,22 +13,20 @@ infantry_CHI = {
 		MAN
 	}
 
-	role = {
-		infantry
-	}
-	
+	role = infantry	
 
-
-	match_to_count = 0.50
 	
 	infantry_default_CHI = {
-		
+	
+
 		target_template = {
+
 						
 			regiments = {
 				light_infantry = 5
 			}
 		}
+		
 		replace_at_match = 0.4
 		replace_with = infantry_2_CHI
 		target_min_match = 0.5
@@ -44,12 +42,16 @@ infantry_CHI = {
 				num_of_factories < 50
 			}
 		}
+
 		
 		target_template = {
+
 						
 			regiments = {
 				light_infantry = 10
 			}
 		}
+		
+
 	}
 }

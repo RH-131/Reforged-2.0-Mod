@@ -67,14 +67,6 @@ on_actions = {
 				set_variable = { host = FRA.id }
 			}
 			else_if = {
-				limit = {has_game_rule = { rule = horst_host_country option = BRA} }
-				set_variable = { host = BRA.id }
-			}
-			else_if = {
-				limit = {has_game_rule = { rule = horst_host_country option = MEX} }
-				set_variable = { host = MEX.id }
-			}
-			else_if = {
 				limit = {has_game_rule = { rule = horst_host_country option = IRE} }
 				set_variable = { host = IRE.id }
 			}
