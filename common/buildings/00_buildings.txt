@@ -262,7 +262,7 @@ buildings = {
 	synthetic_rubber_refinery = {
 		show_on_map = 1
 		base_cost = 12500
-		icon_frame = 17
+		icon_frame = 28
 		local_resources_rubber = 4
 		refinery = yes
 		level_cap = {
@@ -275,7 +275,7 @@ buildings = {
 	steel_refinery = {
 		show_on_map = 1
 		base_cost = 12500
-		icon_frame = 18
+		icon_frame = 29
 		local_resources_steel = 5
 		local_resources_aluminium = 2
 		local_resources_tungsten = 1
@@ -305,25 +305,25 @@ buildings = {
 		allied_build = yes
 		infrastructure_construction_effect = yes
 	}
-#	mega_gun_emplacement = {
-#		dlc_allowed = { has_dlc = Gotterdammerung }
-#		hide_if_missing_tech = yes
-#		show_on_map = 1
-#		base_cost = 30000
-#		damage_factor = 0 # This building can't be damaged by regular strat bombing
-#		icon_frame = 24
-#		value = 1
-#		disabled_in_dmz = yes
-#		infrastructure_construction_effect = yes
-#		gun_emplacement = yes
-#		spawn_point = rocket_site_spawn
-#		level_cap = {
-#			state_max = 1
-#			shares_slots = yes
-#			exclusive_with = rocket_site
-#		}
-#		#Building utilizes equipment "explosive_ammo_equipment" as ammunition for the air mission barrage
-#	}
+	mega_gun_emplacement = {
+		dlc_allowed = { has_dlc = Gotterdammerung }
+		hide_if_missing_tech = yes
+		show_on_map = 1
+		base_cost = 30000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 24
+		value = 1
+		disabled_in_dmz = yes
+		infrastructure_construction_effect = yes
+		gun_emplacement = yes
+		spawn_point = rocket_site_spawn
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+			exclusive_with = rocket_site
+		}
+		#Building utilizes equipment "explosive_ammo_equipment" as ammunition for the air mission barrage
+	}
 	rocket_site = {
 		show_on_map = 1
 		base_cost = 5000
@@ -333,7 +333,7 @@ buildings = {
 		level_cap = {
 			state_max = 3
 			shares_slots = yes
-#			exclusive_with = mega_gun_emplacement
+			exclusive_with = mega_gun_emplacement
 		}
 		value = 1
 		infrastructure_construction_effect = yes
@@ -404,7 +404,7 @@ buildings = {
 		}
 		spawn_point = nuclear_reactor_spawn
 		show_on_map = 1
-		base_cost = 35000
+		base_cost = 350000
 		icon_frame = 27
 		#nuclear_reactor = yes
 		value = 10
