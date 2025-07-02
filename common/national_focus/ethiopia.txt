@@ -1743,68 +1743,60 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			if = {
+			custom_effect_tooltip = ETH_invite_foreign_industrialists_tt
+			IF = {
 				limit = {
-					has_dlc = "Arms Against Tyranny"
+					ENG = {
+						exists = yes
+						has_opinion = {
+							target = ROOT
+							value > 50
+						}
+					}					
 				}
-				unlock_decision_category_tooltip = foreign_mio_decisions_category
 			}
-			else = {
-				custom_effect_tooltip = ETH_invite_foreign_industrialists_tt
-				IF = {
-					limit = {
-						ENG = {
-							exists = yes
-							has_opinion = {
-								target = ROOT
-								value > 50
-							}
-						}					
-					}
+			IF = {
+				limit = {
+					SWE = {
+						exists = yes
+						has_opinion = {
+							target = ROOT
+							value > 50
+						}
+					}					
 				}
-				IF = {
-					limit = {
-						SWE = {
-							exists = yes
-							has_opinion = {
-								target = ROOT
-								value > 50
-							}
-						}					
-					}
+			}
+			IF = {
+				limit = {
+					GER = {
+						exists = yes
+						has_opinion = {
+							target = ROOT
+							value > 50
+						}
+					}					
 				}
-				IF = {
-					limit = {
-						GER = {
-							exists = yes
-							has_opinion = {
-								target = ROOT
-								value > 50
-							}
-						}					
-					}
+			}
+			IF = {
+				limit = {
+					CZE = {
+						exists = yes
+						has_opinion = {
+							target = ROOT
+							value > 50
+						}
+					}					
 				}
-				IF = {
-					limit = {
-						CZE = {
-							exists = yes
-							has_opinion = {
-								target = ROOT
-								value > 50
-							}
-						}					
-					}
-				}
-				IF = {
-					limit = {
-						JAP = {
-							exists = yes
-							has_opinion = {
-								target = ROOT
-								value > 50
-							}
-						}					
-					}
+			}
+			IF = {
+				limit = {
+					JAP = {
+						exists = yes
+						has_opinion = {
+							target = ROOT
+							value > 50
+						}
+					}					
 				}
 			}
 		}

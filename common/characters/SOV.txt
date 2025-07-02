@@ -1373,50 +1373,6 @@ characters={
 			}
 		}
 	}
-	SOV_igor_kurchatov = {
-		advisor={
-			slot = theorist_research
-			idea_token = igor_kurchatov
-			allowed  = {
-				original_tag  = SOV
-			}
-			cost = 150
-			research_bonus = {
-				nuclear = 0.10
-			}
-			traits  = {
-				nuclear_scientist 
-			}
-		}
-		name="igor_kurchatov"
-		portraits={
-			army={
-				small="GFX_idea_igor_kurchatov"
-			}
-		}
-	}
-	SOV_sergei_korolev = {
-		advisor={
-			slot = theorist_research
-			idea_token = sergei_korolev
-			allowed  = {
-				original_tag  = SOV
-			}
-			cost = 150
-			research_bonus = {
-				rocketry = 0.15
-			}
-			traits  = {
-				rocket_scientist 
-			}
-		}
-		name="sergei_korolev"
-		portraits={
-			army={
-				small="GFX_idea_sergei_korolev"
-			}
-		}
-	}
 	SOV_sergey_gorshkov = {
 		advisor={
 			slot = theorist
@@ -2230,6 +2186,114 @@ characters={
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 2
+		}
+	}
+	
+	
+  #####                                                              
+ #     #   ####   #  ######  #    #  #####  #   ####   #####   ####  
+ #        #    #  #  #       ##   #    #    #  #         #    #      
+  #####   #       #  #####   # #  #    #    #   ####     #     ####  
+       #  #       #  #       #  # #    #    #       #    #         # 
+ #     #  #    #  #  #       #   ##    #    #  #    #    #    #    # 
+  #####    ####   #  ######  #    #    #    #   ####     #     ####  
+
+
+	SOV_igor_kurchatov = {
+		name = SOV_igor_kurchatov
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_igor_kurchatov
+				small = GFX_idea_igor_kurchatov
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist scientist_trait_fast_learner }
+			skills = {
+				specialization_nuclear = 2
+				specialization_naval = 2
+			}
+		}
+	}
+
+	SOV_abram_ioffe = {
+		name = SOV_abram_ioffe
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_abram_ioffe
+			}
+		}
+
+		scientist = {
+			skills = {
+				specialization_nuclear = 2
+			}
+		}
+	}
+
+	SOV_sergey_korolyov = {
+		name = SOV_sergey_korolyov
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_sergei_korolev
+				small = GFX_idea_sergei_korolev
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_rocketry_specialist scientist_trait_gifted_engineer }
+			skills = {
+				specialization_air = 2
+			}
+		}		
+	}
+
+	SOV_boris_stechkin = {
+		name = SOV_boris_stechkin
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_boris_stechkin
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_jet_expert scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	SOV_arkady_nazarov = {
+		name = SOV_arkady_nazarov
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_arkady_nazarov
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist scientist_trait_fast_learner }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	SOV_vladimir_kotelnikov = {
+		name = SOV_vladimir_kotelnikov
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_vladimir_kotelnikov
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_electronics_specialist }
+			skills = {
+				specialization_air = 2
+			}
 		}
 	}
 }

@@ -1,4 +1,103 @@
 
+sp_experimental_rockets = {
+	specialization = specialization_air 
+	icon = GFX_sp_rockets_flying_bomb
+
+	project_tags = {
+		sp_tag_rocket
+	}
+
+	breakthrough_cost = {
+		specialization_air = 3
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 8
+			aluminium = 8
+			tungsten = 2
+		 }
+	}
+
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 3
+			ROOT = { tag = GER }
+		}
+		modifier = {
+			factor = 0.5
+			ROOT = { is_major = no }
+		}
+		modifier = {
+			factor = 0.5 # Play a bit safe until we have radar
+			ROOT = { NOT = { has_tech = radio_detection } }
+		}
+	}
+
+	complexity = sp_complexity.large
+
+	available = { 
+		FROM = {
+			has_tech = computing_machine
+		}
+	}
+
+	
+	prototype_time = sp_time.prototype.very_long
+
+	project_output = {
+		country_effects = {
+			if = { 
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_ROCKET_AND_SUBMARINE_SITE_REMINDER_PROJECT
+					PROJECT = sp_rockets_flying_bomb
+				}				
+			}
+			else = {
+				custom_effect_tooltip = {
+					localization_key = SP_ROCKET_SITE_REMINDER_PROJECT
+					PROJECT = sp_rockets_flying_bomb
+				}
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = sp_rockets_improved_guidance	
+			}
+		}
+		set_technology = {
+			experimental_rockets
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_rockets_scientist_xp_generic_reward
+		sp_rockets_political_interference_generic_reward
+		sp_rockets_onsite_explosion_generic_reward
+		sp_rockets_generic_major_breakthrough_reward
+		sp_rockets_generic_avionics_advancements_reward
+		sp_air_generic_reward_scientist_xp_1
+		sp_air_generic_reward_scientist_xp_2
+		sp_air_generic_reward_scientist_xp_3
+		sp_air_generic_reward_air_xp_1
+		sp_air_generic_reward_air_xp_2
+		sp_air_generic_reward_air_xp_3
+		sp_air_generic_reward_major_progress_1
+		sp_air_generic_reward_major_progress_2
+		sp_air_generic_reward_major_progress_3
+		sp_air_generic_reward_test_failure_1
+		sp_air_generic_reward_test_failure_2
+		sp_air_generic_reward_test_failure_3
+	}
+
+	unique_prototype_rewards = {
+		
+	}
+}
+
 
  #   #   # ### #  #  ##      ###   ##  #   # ###   ## 
    #    # #   #  ## # #        #  # #  # ## ## #  # #   
@@ -45,11 +144,13 @@ sp_rockets_flying_bomb = {
 	}
 
 	complexity = sp_complexity.medium
-
+	
+	special_project_parent = {
+ 		sp_experimental_rockets
+ 	}
+	
 	available = { 
-		FROM = {
-			has_tech = experimental_rockets
-		}
+		
 	}
 
 	
@@ -75,15 +176,6 @@ sp_rockets_flying_bomb = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_TECH
 				TECH = sp_rockets_improved_guidance	
-			}
-			if = { 
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_TECH
-					TECH = sp_rockets_rocket_bomber	
-				}		
 			}
 		}
 		enable_equipments = {
@@ -351,11 +443,13 @@ sp_rockets_ballistic_missile = {
 			chromium = 9
 		}
 	}
-
+	
+	special_project_parent = {
+ 		sp_experimental_rockets
+ 	}
+	
 	available = { 
-		FROM = {
-			has_tech = experimental_rockets
-		}
+	
 	}
 
 	ai_will_do = {
@@ -743,12 +837,6 @@ sp_rockets_ground_to_air_missile = {
 
 	special_project_parent = {
 		sp_rockets_ballistic_missile
-	}
-
-	available = { 
-		FROM = {
-			has_tech = experimental_rockets
-		}
 	}
 	
 	ai_will_do = {
