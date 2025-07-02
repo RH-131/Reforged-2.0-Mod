@@ -1849,7 +1849,7 @@ focus_tree = {
 				category = electronics		
 			}
 			set_technology = { 
-				cavity_magnatron = 1 
+				decimetric_radar = 1 
 			}
 			every_state = {
 				limit = { has_state_flag = GER_siemens_RDR}
@@ -1890,7 +1890,7 @@ focus_tree = {
 				category = electronics		
 			}
 			set_technology = { 
-				cavity_magnatron = 1 
+				decimetric_radar = 1 
 			}
 			random_owned_controlled_state = {
 				prioritize = { 51 }
@@ -6912,7 +6912,7 @@ focus_tree = {
 		prerequisite = { focus = GER_air_innovation_2 }
 		relative_position_id = GER_air_innovation_2 
 		available = {
-			has_tech = phased_array
+			has_tech = advanced_centimetric_radar
 		}
 		x = -2
 		y = 1

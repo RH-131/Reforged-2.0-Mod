@@ -1,0 +1,46 @@
+infantry_D01 = {
+
+	available_for = {
+		D01
+	}
+
+	role = {
+		infantry
+	}
+	
+	infantry_default_D01 = {
+		
+		target_template = {
+						
+			regiments = {
+				light_infantry = 5
+			}
+		}
+	}
+}
+infantry_SPR = {
+
+	available_for = {
+		SPR
+	}
+
+	role = {
+		infantry
+	}
+	
+	infantry_default_SPR = {
+		
+		target_template = {
+						
+			regiments = {
+				light_infantry = 10
+			}
+			
+			support = {
+				engineer = 1
+				recon = 1
+				DIV_HQ = 1
+			}
+		}
+	}
+}

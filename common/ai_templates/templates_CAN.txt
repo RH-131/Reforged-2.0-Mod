@@ -5,12 +5,15 @@ infantry_CAN = {
 		CAN
 	}
 
-	role = infantry	
+	role = {
+		infantry
+	}
+	
+
+
+	match_to_count = 0.50
 	
 	infantry_default_CAN = {
-	
-		
-	
 		
 		target_template = {
 						
@@ -21,6 +24,5 @@ infantry_CAN = {
 				DIV_HQ = 1
 			}
 		}
-
 	}
 }

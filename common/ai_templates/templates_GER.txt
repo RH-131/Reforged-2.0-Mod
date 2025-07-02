@@ -4,8 +4,9 @@ armored_GER = {
 		GER
 	}
 	
-	role = armor
-
+	role = {
+		armor
+	}
 	
 	upgrade_prio = {
 		factor = 2.0
@@ -29,7 +30,6 @@ armored_GER = {
 				has_tech = ger_medium_tank_1936
 			}
 		}
-		
 		
 		target_template = {
 			
@@ -88,10 +88,11 @@ armored_GER = {
 	}
 
 
-	heavy_armor_GER = {		
+	heavy_armor_GER = {
+		
+		
 		
 		target_template = {
-
 			
 			support = {
 				DIV_HQ = 1
@@ -120,7 +121,9 @@ garrison_GER = {
 		GER
 	}
 	
-	role = garrison
+	role = {
+		garrison
+	}
 	
 	upgrade_prio = {
 		factor = 1
@@ -155,7 +158,6 @@ garrison_GER = {
 				factor = 2
 			}
 		}
-		
 				
 		target_template = {
 			
@@ -171,7 +173,6 @@ garrison_GER = {
 				artillery_brigade = 2 
 			}
 		}
-		
 	}
 }
 	
@@ -181,7 +182,9 @@ infantry_GER = {
 		GER
 	}
 	
-	role = infantry
+	role = {
+		infantry
+	}
 	
 	upgrade_prio = {
 		factor = 2
@@ -200,7 +203,6 @@ infantry_GER = {
 				factor = 2
 			}
 		}
-		
 				
 		target_template = {
 			
@@ -220,7 +222,6 @@ infantry_GER = {
 				anti_tank_brigade = 1 
 			}
 		}
-
 	}
 }
 
@@ -230,8 +231,9 @@ infantry_GER = {
 		GER
 	}
 	
-	role = infantry
-
+	role = {
+		infantry
+	}
 	
 	upgrade_prio = {
 		factor = 2
@@ -250,7 +252,6 @@ infantry_GER = {
 				factor = 2
 			}
 		}
-		
 				
 		target_template = {
 			
@@ -270,7 +271,6 @@ infantry_GER = {
 				anti_tank_brigade = 1 
 			}
 		}
-
 	}
 }
 
@@ -280,7 +280,9 @@ motorized_infantry_GER = {
 		GER
 	}
 	
-	role = motorized
+	role = {
+		motorized
+	}
 	
 	upgrade_prio = {
 		factor = 2
@@ -299,7 +301,6 @@ motorized_infantry_GER = {
 				factor = 5
 			}
 		}
-
 		
 		target_template = {
 						
@@ -318,7 +319,6 @@ motorized_infantry_GER = {
 				field_hospital = 1
 			}
 		}
-
 	}
 }
 
@@ -329,7 +329,9 @@ mountaineers_GER = {
 		GER
 	}
 	
-	role = mountaineers
+	role = {
+		mountaineers
+	}
 	
 	upgrade_prio = {
 		factor = 2
@@ -342,9 +344,7 @@ mountaineers_GER = {
 		}
 	}
 	
-	
 	mountaineers_default_GER = {
-	
 	
 		target_template = {
 			
@@ -363,7 +363,6 @@ mountaineers_GER = {
 				anti_tank_brigade = 1 
 			}
 		}
-		
 	}
 }
 
@@ -373,7 +372,9 @@ marines_GER = {
 		GER
 	}
 	
-	role = marines
+	role = {
+		marines
+	}
 	
 	upgrade_prio = {
 		factor = 2
@@ -385,7 +386,6 @@ marines_GER = {
 			}
 		}
 	}
-	
 
 	marine_default_GER = {
 
@@ -405,7 +405,6 @@ marines_GER = {
 				
 			}
 		}
-
 	}
 }
 
@@ -415,7 +414,9 @@ paratroopers_GER = {
 		GER
 	}
 	
-	role = paratrooper
+	role = {
+		paratrooper
+	}
 	
 	upgrade_prio = {
 		factor = 2
@@ -443,13 +444,14 @@ paratroopers_GER = {
 				paratrooper= 9 
 			}
 		}
-		
 	}
 }
 
 suppression_GER = {
 	
-	role = suppression
+	role = {
+		suppression
+	}
 	
 	upgrade_prio = {
 		factor = 1
@@ -459,13 +461,11 @@ suppression_GER = {
 			has_war = yes
 		}
 	}
-	
 
 	suppression_generic = {
 	
 		reinforce_prio = 0
 		custom_icon = 13
-
 		
 		target_template = {
 			

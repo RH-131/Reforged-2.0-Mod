@@ -817,7 +817,7 @@ focus_tree = {
 		available_if_capitulated = yes		
 		
 		available = { 
-			has_tech = cavity_magnatron
+			has_tech = decimetric_radar
 			has_full_control_of_state = 629 #Hawaii
 			has_full_control_of_state = 630 #Johnston Atoll
 			has_full_control_of_state = 631 #Midway
@@ -2212,9 +2212,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				technology = radio_detection
-				technology = cavity_magnatron
+				technology = decimetric_radar
 				technology = centimetric_radar 
-				technology = phased_array
+				technology = advanced_centimetric_radar
 				uses = 2
 				bonus = 1 
 			} 
