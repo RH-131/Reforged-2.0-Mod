@@ -1,11 +1,14 @@
 state={
 	id=523
 	name="STATE_523"
-
+	
+	resources = {
+		rubber = 10
+	}
+	
 	history={
-		set_state_flag = AST_control_wall
-		owner = AST
 		add_core_of = NGA
+		owner = AST
 		buildings = {
 			infrastructure = 3
 			air_base = 3

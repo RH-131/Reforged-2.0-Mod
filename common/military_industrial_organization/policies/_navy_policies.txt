@@ -38,32 +38,7 @@ mio_policy_navy_space_efficient_design = {
 	equipment_bonus = {
 		ship_hull_carrier = {
 			carrier_size = 1
-		}
-		same_as_mio = {
-			naval_range = 0.2
-		}
-	}
-}
-
-mio_policy_navy_stable_platforms = {
-	icon = GFX_mio_policy_stable_platforms
-	allowed = {
-		OR ={
-			has_mio_equipment_type = capital_ship
-			has_mio_equipment_type = screen_ship
-			has_mio_equipment_type = submarine
-			has_mio_equipment_type = carrier
-			has_mio_equipment_type = mio_cat_eq_all_carrier
-			has_mio_equipment_type = mio_cat_eq_all_cruiser
-			has_mio_equipment_type = mio_cat_eq_all_destroyer
-			has_mio_equipment_type = mio_cat_eq_all_battleship
-		}
-	}
-	available = { has_mio_size > 5}
-	equipment_bonus = {
-		same_as_mio = {
-			naval_light_gun_hit_chance_factor = 0.025
-			naval_heavy_gun_hit_chance_factor = 0.025
+			max_strength = -0.15
 		}
 	}
 }

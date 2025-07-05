@@ -22,6 +22,17 @@ state={
 			industrial_complex = 7
 			anti_air_building = 2
 			air_base = 6
+			6521 = {
+                landmark_berlin_reichstag = {
+                    level = 1
+                    allowed = {
+                        has_dlc = "Gotterdammerung"
+                    }
+                }
+            }
+            3499 = {
+                land_facility = 1 #Representing Kommersdorf's Research Facilities
+            }
 
 		}
 		add_core_of = GER
@@ -37,7 +48,7 @@ state={
 	}
 
 	provinces={
-		375 478 3367 3499 3522 6487 6521 9428 9456 9496 9560 11219 11359 11415 11444 11505 13275 13276 13277 13278 13279
+		375 478 3367 3499 3522 6487 6521 9428 9456 9496 9560 11219 11359 11415 11444 11505 13273 13274 13275 13276
 	}
 
 	local_supplies=0.0 

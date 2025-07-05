@@ -3,12 +3,15 @@ state=
 	id=550
 	name="STATE_550"
 	manpower = 600600
+	resources = {
+		steel = 10
+	}
 	
 	state_category = rural
 	
 	history={
-		owner = ETH
-		add_core_of = ETH
+		owner = ITA
+		add_core_of = ERI
 		victory_points = { #Massaua
 			12766 1
 		}
@@ -20,8 +23,8 @@ state=
 		}
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 2
 			arms_factory = 1
+			industrial_complex = 2
 			air_base = 3
 			12766 = {
 				naval_base = 3

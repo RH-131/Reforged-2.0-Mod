@@ -1,15 +1,15 @@
-# Adjacency rules determine if an army, navy or trade can pass through the adjacency (e.g. a canal or strait).
+# Adjacency rules determine if an army, navy or trade can pass through the adjacency (e.g. a canal or strait).
 #
-# If two countries at war control provinces in the adjacency it is considered contested.
-# The optional triggers is_enemy, is_friend and is_neutral are evaluated in order and if one evaluates to true the corresponding rule is used.
-# If is_enemy and is_friend evaluates to false the neutral rule is used. In this case the is_neutral trigger will not be evaluated at all.
-# If is_friend and is_neutral evaluates to false the enemy rule is used.
-# If is_enemy and is_neutral evaluates to false the friend rule is used.
-# If any adjacency province controller is at war with the country the enemy rule is used, unless is_enemy evaluates to false, then the neutral rule is used.
-# If any adjacency province controller is an ally of is giving military access to the country the friend rule is used, unless is_friend evaluates to false, then the neutral rule is used.
-# Otherwise the neutral rule is used, unless is_neutral evaluates to false, then the enemy rule is used.
+# If two countries at war control provinces in the adjacency it is considered contested.
+# The optional triggers is_enemy, is_friend and is_neutral are evaluated in order and if one evaluates to true the corresponding rule is used.
+# If is_enemy and is_friend evaluates to false the neutral rule is used. In this case the is_neutral trigger will not be evaluated at all.
+# If is_friend and is_neutral evaluates to false the enemy rule is used.
+# If is_enemy and is_neutral evaluates to false the friend rule is used.
+# If any adjacency province controller is at war with the country the enemy rule is used, unless is_enemy evaluates to false, then the neutral rule is used.
+# If any adjacency province controller is an ally of is giving military access to the country the friend rule is used, unless is_friend evaluates to false, then the neutral rule is used.
+# Otherwise the neutral rule is used, unless is_neutral evaluates to false, then the enemy rule is used.
 #
-# The 'name' property is how you refer to the rule in adjacencies.csv
+# The 'name' property is how you refer to the rule in adjacencies.csv
 
 #Suez Canal
 adjacency_rule =
@@ -76,7 +76,7 @@ adjacency_rule =
 	{
 		army = no
 		navy = no
-		submarine = no
+		submarine = yes
 		trade = no
 	}
 	friend =
@@ -94,7 +94,7 @@ adjacency_rule =
 		trade = yes
 	}
 	
-	required_provinces = { 4135 }
+	required_provinces = { 4135 9945 }
 	
 	icon = 5407	
 	offset = { -31.0 0.0 -2.0 }
@@ -231,129 +231,12 @@ adjacency_rule =
 	
 	icon = 9833
 	offset = { -2 0 -9 }
-
-}
-
-adjacency_rule = 
-{
-	name = "MESSINA_STRAIT"
-
-	contested =
-	{
-		army = yes
-		navy = yes
-		submarine = yes
-		trade = yes
-	}
-	enemy =
-	{
-		army = yes
-		navy = no
-		submarine = no
-		trade = no
-	}
-	friend =
-	{
-		army = yes
-		navy = yes
-		submarine = yes
-		trade = yes
-	}
-	neutral =
-	{
-		army = yes
-		navy = no
-		submarine = no
-		trade = yes
-	}
-	
-	required_provinces = { 4159 9990 }
-	
-	icon = 5681
-	offset = { -1 0 0 }
-}
-adjacency_rule =
-{
-	name = "MALACCA_STRAIT"
-
-	contested =
-	{
-		army = yes
-		navy = yes
-		submarine = yes
-		trade = yes
-	}
-	enemy =
-	{
-		army = no
-		navy = no
-		submarine = no
-		trade = no
-	}
-	friend =
-	{
-		army = yes
-		navy = yes
-		submarine = yes
-		trade = yes
-	}
-	neutral =
-	{
-		army = yes
-		navy = yes
-		submarine = yes
-		trade = yes
-	}
-	
-	required_provinces = { 12299 4652 }
-	
-	icon = 5960
-	offset = { 0 0 0 }
-}
-adjacency_rule =
-{
-	name = "TARANTO_STRAIT"
-
-	contested =
-	{
-		army = no
-		navy = no
-		submarine = no
-		trade = no
-	}
-	enemy =
-	{
-		army = no
-		navy = no
-		submarine = no
-		trade = no
-	}
-	friend =
-	{
-		army = yes
-		navy = yes
-		submarine = yes
-		trade = yes
-	}
-	neutral =
-	{
-		army = yes
-		navy = yes
-		submarine = yes
-		trade = yes
-	}
-	
-	required_provinces = { 11837 11767 }
-	
-	icon = 11767
-	offset = { -15 0 5 }
 }
 
 #The Dardanelles
 adjacency_rule =
 {
 	name = "DARDANELLES_STRAIT"
-
 
 	contested =
 	{
@@ -429,10 +312,10 @@ adjacency_rule =
 		trade = yes
 	}
 	
-	required_provinces = { 11366 317 3231 }
+	required_provinces = { 317 3231 3368 6257 6389 }
 		
-	icon = 11366
-	offset = { 5 0 -6 }
+	icon = 6389
+	offset = { -9 0 2 }
 }
 #Strait of Hormuz
 adjacency_rule =
@@ -474,22 +357,23 @@ adjacency_rule =
 	offset = { 2 0 12 }
 }
 
-#Strait of the Red Sea
-adjacency_rule = {
-	name = "RED_SEA"
+#Strait of Otranto #TODO_Manu: TEST THIS OUT AND REMOVE IF NOT SATISFACTORY
+adjacency_rule =
+{
+	name = "OTRANTO_STRAIT" #TODO_Manu: Remove this loc key too if not necessary
 
 	contested =
 	{
-		army = no
-		navy = no
-		submarine = no
-		trade = no
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
 	}
 	enemy =
 	{
 		army = no
 		navy = no
-		submarine = no
+		submarine = yes
 		trade = no
 	}
 	friend =
@@ -507,8 +391,8 @@ adjacency_rule = {
 		trade = yes
 	}
 	
-	required_provinces = { 5074 8124 }
+	required_provinces = { 6979 11767 }
 		
-	icon = 5074
-	offset = { -20 0 -20 }
+	icon = 6979
+	offset = { 9 0 6 }
 }

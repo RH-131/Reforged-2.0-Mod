@@ -7,7 +7,7 @@ state={
 	state_category = town
 	
 	resources={
-		tungsten=50 # was: 300 - then 150 #
+		tungsten=100 #was 150 # was: 300
 	}
 
 	history={
@@ -19,10 +19,11 @@ state={
 			6996 1
 		}
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 2
+			infrastructure = 5
+			industrial_complex = 1
 		}
 		add_core_of = POR
+		add_core_of = SPR
 	}
 
 	provinces={

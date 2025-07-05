@@ -1022,7 +1022,83 @@ operations = {
 			add_war_support = -0.10
 		}
 	}
-	
+	JAP_last_defense = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			tag = JAP
+		}
+
+		available = {
+			has_completed_focus = JAP_operation_z
+			OR = {
+				has_idea = JAP_island_hopping1
+				has_idea = JAP_island_hopping2
+				has_idea = JAP_island_hopping3
+				has_idea = JAP_island_hopping4
+				has_idea = JAP_island_hopping5
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_war = yes
+			has_completed_focus = JAP_operation_z
+		}
+		modifier = {
+			civilian_factory_use = 15
+		}
+		remove_effect = {
+			524 = {
+				remove_province_modifier = {
+					static_modifiers = { pacific_island }
+					province = {
+						all_provinces = yes
+					}
+				}
+				add_province_modifier = {
+					static_modifiers = { fortified_pacific_island }
+					province = {
+						all_provinces = yes
+					}
+				}
+			}
+			526 = {
+				remove_province_modifier = {
+					static_modifiers = { pacific_island }
+					province = {
+						all_provinces = yes
+					}
+				}
+				add_province_modifier = {
+					static_modifiers = { fortified_pacific_island }
+					province = {
+						all_provinces = yes
+					}
+				}
+			}
+			645 = {
+				remove_province_modifier = {
+					static_modifiers = { pacific_island }
+					province = {
+						all_provinces = yes
+					}
+				}
+				add_province_modifier = {
+					static_modifiers = { fortified_pacific_island }
+					province = {
+						all_provinces = yes
+					}
+				}
+			}
+		}
+	}
 	JAP_homeland_defense = {
 
 		icon = generic_prepare_civil_war

@@ -1,7 +1,9 @@
 state = {
 	id = 836 # Bale
 	name = "STATE_836"
-	manpower = 800000
+	manpower = 1
+	resources = {
+	}
 	
 	state_category = pastoral
 
@@ -11,17 +13,11 @@ state = {
 			infrastructure = 1
 		}
 		
-		owner = ETH
-		add_core_of = ETH
-
-		1936.6.1 = {
-			owner = ITA
-			controller = ITA
-		}
+		owner = PAR
 	}
 
 	provinces = {
- 		4995 10775 13248
+		5173
  	}
 
 	local_supplies = 0.0 

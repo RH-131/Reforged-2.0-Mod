@@ -6,8 +6,8 @@ state={
 	}
 	manpower = 1042276
 	resources={
-		#chromium=45 # was: 84
-		#steel = 10 # was: 20
+		#chromium=225 # was: 84
+		#steel = 50 # was: 20
 	}
 	
 	state_category = city
@@ -27,6 +27,14 @@ state={
 			}
 		}
 		add_core_of = TUR
+		if = {
+			limit = { has_dlc = "Battle for the Bosporus"}
+			set_demilitarized_zone = yes
+		}
+		
+		1936.11.9 = {
+			set_demilitarized_zone = no
+		}
 	}
 
 	local_supplies=0.0 

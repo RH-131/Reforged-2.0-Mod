@@ -1,0 +1,22 @@
+defend_our_empire = {
+	allowed = {
+		tag = ETH
+	}
+	enable = {
+		country_exists = ENG
+	}
+	abort = {
+		ENG = { has_capitulated = yes }
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 1000
+	}
+
+	ai_strategy = {
+			type = equipment_production_factor
+			id = infantry
+			value = 500
+		}
+}

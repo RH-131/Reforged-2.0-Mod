@@ -274,6 +274,140 @@ characters={
 			traits = { military_theorist }
 		}
 	}
+	ETH_random_general_1 = {
+		portraits={
+			army={
+				large=GFX_portrait_ETH_generic_male_1
+				small=GFX_portrait_ETH_generic_male_1_small
+			}
+		}
+		
+		corps_commander={
+			traits={ trait_cautious }
+			skill=1
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				has_character_flag = ETH_visible_random_general_flag
+			}
+		}
+	}
+
+	ETH_random_general_2 = {
+		portraits={
+			army={
+				large=GFX_portrait_ETH_generic_female_1
+				small=GFX_portrait_ETH_generic_female_1_small
+			}
+		}
+	
+		gender = female
+
+		corps_commander={
+			traits={ trait_cautious }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			
+			visible = {
+				has_character_flag = ETH_visible_random_general_flag
+			}
+		}
+	}
+
+	ETH_random_general_3 = {
+		portraits={
+			army={
+				large=GFX_portrait_ETH_generic_male_2
+				small=GFX_portrait_ETH_generic_male_2_small
+			}
+		}
+		
+		corps_commander={
+			traits={ trait_cautious }
+			skill=3
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			visible = {
+				has_character_flag = ETH_visible_random_general_flag
+			}
+		}
+	}
+
+	ETH_random_general_4 = {
+		portraits={
+			army={
+				large=GFX_portrait_ETH_generic_female_2
+				small=GFX_portrait_ETH_generic_female_2_small
+			}
+		}
+		
+		gender = female 
+
+		corps_commander={
+			traits={ trait_cautious }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			visible = {
+				has_character_flag = ETH_visible_random_general_flag
+			}
+		}
+	}
+
+	ETH_random_general_5 = {
+		portraits={
+			army={
+				large=GFX_portrait_ETH_generic_male_3
+				small=GFX_portrait_ETH_generic_male_3_small
+			}
+		}
+		
+		corps_commander={
+			traits={ trait_cautious }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+			visible = {
+				has_character_flag = ETH_visible_random_general_flag
+			}
+		}
+	}
+
+
+	ETH_random_general_6 = {
+		portraits={
+			army={
+				large=GFX_portrait_ETH_generic_female_3
+				small=GFX_portrait_ETH_generic_female_3_small
+			}
+		}
+
+		gender = female 
+
+		corps_commander={
+			traits={ trickster }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			visible = {
+				has_character_flag = ETH_visible_random_general_flag
+			}
+		}
+	}
+	
 	ETH_Buffer_Character_1 = { 
 		#Bugfix Char
 	}

@@ -1,1 +1,756 @@
 add_namespace = generic_purchase_ships_events
+add_namespace = BBA_ethiopia_fascist_events
+
+
+
+############################################################
+
+###  ##   ##  ##  ###  ## ###     ### #   # ### #  # ###  ## 
+#   #  # #   #  #  #  #    #      #   #   # #   ## #  #  #   
+##  ####  #  #     #   #   #      ##   # #  ##  # ##  #   #  
+#   #  #   # #  #  #    #  #      #    # #  #   #  #  #    # 
+#   #  # ##   ##  ### ##   #      ###   #   ### #  #  #  ## 
+
+############################################################
+
+##########################################################################
+#						Demand DJI from Vichy Events
+##########################################################################
+#ETH takes DJI from Vichy - Does vichy continue war?
+country_event = {
+	id = BBA_ethiopia_fascist_events.50
+	title = BBA_ethiopia_fascist_events.50.t
+	desc = BBA_ethiopia_fascist_events.50.desc
+	picture = GFX_report_event_tur_machine_gunners
+	is_triggered_only = yes
+	# Give up DJI
+	option = {
+		name = BBA_ethiopia_fascist_events.50.a
+		ai_chance = {
+			base = 10
+		}
+		ETH = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.51
+				hours = 1
+			}
+		}
+	}
+	# War with ETH
+	option = {
+		name = BBA_ethiopia_fascist_events.50.b
+		ai_chance = {
+			base = 0
+		}
+		ETH = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.52
+				hours = 1
+			}
+		}
+		add_stability = -0.05
+		create_wargoal = {
+			type = take_claimed_state 
+			target = FROM 
+			generator = { 268 }
+		}
+	}
+}
+
+#Vichy give up DJI
+country_event = {
+	id = BBA_ethiopia_fascist_events.51
+	title = BBA_ethiopia_fascist_events.51.t
+	desc = BBA_ethiopia_fascist_events.51.desc
+	picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	#Ok - Get DJI
+	option = {
+		name = BBA_ethiopia_fascist_events.51.a
+		ai_chance = {
+			base = 10
+		}
+		ETH = {
+			transfer_state = 268
+			268 = { add_core_of = ETH }
+		}
+	}
+}
+
+#Vichy Refuse to give up DJI
+country_event = {
+	id = BBA_ethiopia_fascist_events.52
+	title = BBA_ethiopia_fascist_events.52.t
+	desc = BBA_ethiopia_fascist_events.52.desc
+	picture = GFX_report_event_tur_machine_gunners
+	is_triggered_only = yes
+	# That sucks
+	option = {
+		name = BBA_ethiopia_fascist_events.52.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+##########################################################################
+#					Request Italian Equipment Events
+##########################################################################
+
+#ETH choose which equipment to request from ITA
+country_event = {
+	id = BBA_ethiopia_fascist_events.53
+	title = BBA_ethiopia_fascist_events.53.t
+	desc = BBA_ethiopia_fascist_events.53.desc
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+	# Request Inf Equipment
+	option = {
+		name = BBA_ethiopia_fascist_events.53.a
+		ai_chance = {
+			base = 10
+		}
+		set_country_flag = ETH_wants_inf_equip_flag
+		ITA = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.54
+				hours = 1
+			}
+		}
+	}
+	# Request Artillery
+	option = {
+		name = BBA_ethiopia_fascist_events.53.b
+		ai_chance = {
+			base = 10
+		}
+		set_country_flag = ETH_wants_artillery_flag
+		ITA = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.54
+				hours = 1
+			}
+		}
+	}
+}
+
+# ETH request ITA equipment
+country_event = {
+	id = BBA_ethiopia_fascist_events.54
+	title = BBA_ethiopia_fascist_events.54.t
+	desc = BBA_ethiopia_fascist_events.54.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	# Yes
+	option = {
+		name = BBA_ethiopia_fascist_events.54.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = -10
+				FROM = {
+					NOT = { is_puppet_of = ROOT }
+				}
+			}
+		}
+		ETH = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.56
+				hours = 24
+			}
+		}
+	}
+	# No
+	option = {
+		name = BBA_ethiopia_fascist_events.54.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				FROM = {
+					NOT = { is_puppet_of = ROOT }
+				}
+			}
+		}
+		ETH = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.55
+				hours = 24
+			}
+		}
+	}
+}
+
+
+# ITA refuses to send equipment
+country_event = {
+	id = BBA_ethiopia_fascist_events.55
+	title = BBA_ethiopia_fascist_events.55.t
+	desc = BBA_ethiopia_fascist_events.55.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	# Oh well
+	option = {
+		name = BBA_ethiopia_fascist_events.55.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#ITA agrees to send equipment
+country_event = {
+	id = BBA_ethiopia_fascist_events.56
+	title = BBA_ethiopia_fascist_events.56.t
+	desc = BBA_ethiopia_fascist_events.56.desc
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+	option = {
+		name = BBA_ethiopia_fascist_events.56.a
+		ai_chance = {
+			base = 10
+		}
+		IF = {
+			limit = {
+				has_country_flag = ETH_wants_inf_equip_flag
+			}
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_1 
+				amount = 2500  
+				producer = ITA
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_equipment_subsidy = {
+					cic = 500
+					equipment_type = infantry_equipment
+					seller_tags  = { ITA }
+				}
+			}
+			clr_country_flag = ETH_wants_inf_equip_flag
+		}
+		ELSE_IF = {
+			limit = {
+				has_country_flag = ETH_wants_artillery_flag
+			}
+			add_equipment_to_stockpile = { 
+				type = artillery_equipment 
+				amount = 500  
+				producer = ITA
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_equipment_subsidy = {
+					cic = 250
+					equipment_type = artillery_equipment
+					seller_tags  = { ITA }
+				}
+			}
+			clr_country_flag = ETH_wants_artillery_flag
+		}
+
+	}
+}
+
+# ETH requests designers from ITA
+country_event = {
+	id = BBA_ethiopia_fascist_events.57
+	title = BBA_ethiopia_fascist_events.57.t
+	desc = BBA_ethiopia_fascist_events.57.desc
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	# Yes
+	option = {
+		name = BBA_ethiopia_fascist_events.57.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				FROM = {
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.58
+				hours = 12
+			}
+		}
+	}
+	# No
+	option = {
+		name = BBA_ethiopia_fascist_events.57.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				FROM = {
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.59
+				hours = 12
+			}
+		}
+	}
+}
+
+
+
+# ITA Agree to send designers
+country_event = {
+	id = BBA_ethiopia_fascist_events.58
+	title = BBA_ethiopia_fascist_events.58.t
+	desc = BBA_ethiopia_fascist_events.58.desc
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	# Great!
+	option = {
+		name = BBA_ethiopia_fascist_events.58.a
+		ai_chance = {
+			base = 10
+		}
+		IF = {
+			limit = {
+				has_country_flag = ETH_want_ITA_army_designers
+			}
+			ETH_add_random_mil_factory_effect = yes
+			ETH_add_random_mil_factory_effect = yes
+			set_country_flag = ETH_ITA_sends_army_designers
+			clr_country_flag = ETH_want_ITA_army_designers
+
+		}
+		ELSE_IF = {
+			limit = {
+				has_country_flag = ETH_want_ITA_air_designers
+			}
+			ETH_add_random_mil_factory_effect = yes
+			ETH_add_random_mil_factory_effect = yes
+			set_country_flag = ETH_ITA_sends_air_designers
+			clr_country_flag = ETH_want_ITA_air_designers
+		}	
+	}
+}
+
+# ITA refuse to send designers
+country_event = {
+	id = BBA_ethiopia_fascist_events.59
+	title = BBA_ethiopia_fascist_events.59.t
+	desc = BBA_ethiopia_fascist_events.59.desc
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	# Oh well
+	option = {
+		name = BBA_ethiopia_fascist_events.59.a
+		ai_chance = {
+			base = 10
+		}
+		clr_country_flag = ETH_want_ITA_army_designers
+		clr_country_flag = ETH_want_ITA_air_designers
+	}
+}
+
+country_event = {
+	id = BBA_ethiopia_fascist_events.60
+	title = BBA_ethiopia_fascist_events.60.t
+	desc = BBA_ethiopia_fascist_events.60.desc
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	# Army
+	option = {
+		name = BBA_ethiopia_fascist_events.60.a
+		ai_chance = {
+			base = 20
+		}
+		custom_effect_tooltip = ETH_outsourced_production_army_tt
+		show_ideas_tooltip = fiat_ETH
+		show_ideas_tooltip = breda_ETH
+		show_ideas_tooltip = beretta_ETH
+		set_country_flag = ETH_want_ITA_army_designers
+		ITA = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.57
+				hours = 12
+			}
+		}
+	}
+	# Airforce
+	option = {
+		name = BBA_ethiopia_fascist_events.60.b
+		ai_chance = {
+			base = 5
+		}
+		set_country_flag = ETH_want_ITA_air_designers
+		custom_effect_tooltip = ETH_outsourced_production_air_tt
+		show_ideas_tooltip = ETH_imam
+		show_ideas_tooltip = caproni_ETH
+		show_ideas_tooltip = macchi_ETH
+		ITA = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.57
+				hours = 12
+			}
+		}
+	}
+}
+
+##########################################################################
+#							Our Enemy's Enemy Events
+##########################################################################
+
+# ETH requesting weapons from all major nations who have different ideology to ITA
+country_event = {
+	id = BBA_ethiopia_fascist_events.61
+	title = BBA_ethiopia_fascist_events.61.t
+	desc = BBA_ethiopia_fascist_events.61.desc
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+	# Yes
+	option = {
+		name = BBA_ethiopia_fascist_events.61.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0
+				has_war_with = FROM
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = ITA
+			}
+			modifier = {
+				factor = 0
+				has_opinion = {
+					target = ITA
+					value > 0
+				}
+			}
+			modifier = {
+				add = 20
+				has_war_with = ITA
+			}
+		}
+		FROM = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.62
+				hours = 12
+			}
+		}
+	}
+	# No
+	option = {
+		name = BBA_ethiopia_fascist_events.61.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				add = 10
+				has_war_with = FROM
+			}
+		}
+		FROM = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.63
+				hours = 12
+			}
+		}
+	}
+}
+
+#FROM will send arms
+country_event = {
+	id = BBA_ethiopia_fascist_events.62
+	title = BBA_ethiopia_fascist_events.62.t
+	desc = BBA_ethiopia_fascist_events.62.desc
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+	# Great!
+	option = {
+		name = BBA_ethiopia_fascist_events.62.a
+		ai_chance = {
+			base = 10
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 1000 
+			producer = FROM
+		}		
+	}
+}
+
+#FROM will NOT send arms
+country_event = {
+	id = BBA_ethiopia_fascist_events.63
+	title = BBA_ethiopia_fascist_events.63.t
+	desc = BBA_ethiopia_fascist_events.63.desc
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+	# Boo!
+	option = {
+		name = BBA_ethiopia_fascist_events.63.a
+		ai_chance = {
+			base = 10
+		}		
+	}
+}
+
+##########################################################################
+#							Compensation Events
+##########################################################################
+
+#Gugsa/Haymanot - Request ERI
+country_event = {
+	id = BBA_ethiopia_fascist_events.64
+	title = BBA_ethiopia_fascist_events.64.t
+	desc = BBA_ethiopia_fascist_events.64.desc
+	picture = GFX_report_event_saf_civil_war
+	is_triggered_only = yes
+	option = {
+		name = BBA_ethiopia_fascist_events.64.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = -10
+				FROM = {
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+		}
+		ETH = {
+			set_country_flag = ETH_wants_ERI_flag
+			country_event = {
+				id = BBA_ethiopia_fascist_events.66
+				hours = 1
+			}
+		}			
+	}
+	option = {
+		name = BBA_ethiopia_fascist_events.64.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				FROM = {
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+		}	
+		ETH = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.67
+				days = 3
+			}
+		}		
+	}
+}
+
+#Jofir - Request SOM and Jubland
+country_event = {
+	id = BBA_ethiopia_fascist_events.65
+	title = BBA_ethiopia_fascist_events.65.t
+	desc = BBA_ethiopia_fascist_events.65.desc
+	picture = GFX_report_event_saf_civil_war
+	is_triggered_only = yes
+	option = {
+		name = BBA_ethiopia_fascist_events.65.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = -10
+				FROM = {
+					NOT = { is_puppet_of = ROOT }
+				}
+			}
+		}
+		ETH = {
+			set_country_flag = ETH_wants_som_flag
+			country_event = {
+				id = BBA_ethiopia_fascist_events.66
+				hours = 1
+			}
+		}		
+	}
+	option = {
+		name = BBA_ethiopia_fascist_events.65.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				FROM = {
+					NOT = { is_puppet_of = ROOT }
+				}
+			}
+		}	
+		ETH = {
+			country_event = {
+				id = BBA_ethiopia_fascist_events.67
+				days = 3
+			}
+		}			
+	}
+}
+
+#ITA Agree to give ETH land
+country_event = {
+	id = BBA_ethiopia_fascist_events.66
+	title = BBA_ethiopia_fascist_events.66.t
+	desc = BBA_ethiopia_fascist_events.66.desc
+	picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	option = {
+		name = BBA_ethiopia_fascist_events.66.a
+		ai_chance = {
+			base = 10
+		}
+		IF = {
+			limit = {
+				has_country_flag = ETH_wants_ERI_flag
+			}
+			ETH = { transfer_state = 550}
+			clr_country_flag = ETH_wants_ERI_flag
+		}
+		ELSE_IF = {
+			limit = {
+				has_country_flag = ETH_wants_som_flag
+			}
+			ETH = { transfer_state = 559}
+			ETH = { transfer_state = 844}
+			clr_country_flag = ETH_wants_som_flag
+		}
+	}
+}
+
+# Italy Refuse compensation
+country_event = {
+	id = BBA_ethiopia_fascist_events.67
+	title = BBA_ethiopia_fascist_events.67.t
+	desc = BBA_ethiopia_fascist_events.67.desc
+	picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	option = {
+		name = BBA_ethiopia_fascist_events.67.a
+		ai_chance = {
+			base = 10
+		}	
+	}
+}
+
+##########################################################################
+#						Request Italian Generals
+##########################################################################
+
+#ITA event for sending advisors to ETH
+country_event = {
+	id = BBA_ethiopia_fascist_events.69
+	title = BBA_ethiopia_fascist_events.69.t
+	desc = BBA_ethiopia_fascist_events.69.desc
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	#Agree to send advisors
+	option = {
+		name = BBA_ethiopia_fascist_events.69.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_government = fascism }
+					has_civil_war = yes
+					NOT = {
+						ETH = {has_war_with = ITA}
+					}
+				}				
+			}
+		}
+		FROM = {
+			country_event = {
+				hours = 1
+				id = BBA_ethiopia_fascist_events.70
+			}
+			set_country_flag = has_soviet_advisors_flag
+		}
+		custom_effect_tooltip = ETH_send_ita_generals_tt
+	}
+	#Refuse to send advisors
+	option = {
+		name = BBA_ethiopia_fascist_events.69.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 10
+				OR = {
+					NOT = { has_government = fascism }
+					has_civil_war = yes
+					NOT = {FROM = {is_subject_of = ITA}}
+				}				
+			}
+		}
+		FROM = {
+			country_event = {
+				hours = 1
+				id = BBA_ethiopia_fascist_events.71
+			}
+		}
+	}
+}
+
+#ETH event for ITA sending advisors
+country_event = {
+	id = BBA_ethiopia_fascist_events.70
+	title = BBA_ethiopia_fascist_events.70.t
+	desc = BBA_ethiopia_fascist_events.70.desc
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	option = { 
+		name = BBA_ethiopia_fascist_events.70.a
+		ai_chance = {
+			base = 10
+		}
+		#custom_effect_tooltip = BBA_ethiopia_fascist_events_15_tt
+		hidden_effect = {
+			ITA = {
+				#Set Italian characters here:
+				ITA_giuseppe_tellera = {
+					set_nationality = ETH
+					set_character_flag = ITA_advisor_eth
+				}
+				ITA_mario_berti = {
+					set_nationality = ETH
+					set_character_flag = ITA_advisor_eth
+				}
+				ITA_alessandro_pirzio_biroli = {
+					set_nationality = ETH
+					set_character_flag = ITA_advisor_eth
+				}
+			}
+		}
+	}
+}
+
+# Italy refuse to send advisors
+country_event = {
+	id = BBA_ethiopia_fascist_events.71
+	title = BBA_ethiopia_fascist_events.71.t
+	desc = BBA_ethiopia_fascist_events.71.desc
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	option = { 
+		name = BBA_ethiopia_fascist_events.71.a
+		ai_chance = {
+			base = 10
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 800
+			producer = ITA
+		}	
+	}
+}
+

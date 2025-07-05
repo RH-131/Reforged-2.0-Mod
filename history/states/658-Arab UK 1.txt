@@ -3,18 +3,21 @@ state={
 	id=658
 	name="STATE_658"
 	manpower = 170200
-
+	resources={
+		oil=5 # was: 6
+	}
+	
 	state_category = pastoral
 
+
 	history={
+		add_core_of = NGA
 		owner = RAJ
-		add_core_of = RAJ
 		victory_points = {
 			7960 1 
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
 			7960 = {
 				naval_base = 3
 			}

@@ -226,47 +226,1120 @@ ideas = {
 				communism_drift = -0.15
 			}
 		}
-	}
-	# TECHNOLOGY
-	naval_manufacturer = {
-		designer = yes
-		crichton = {
-			picture = generic_naval_manufacturer_1
+
+		winter_war_ns = {
+			picture = tur_sub_zero_survival_training
 			allowed = {
-				original_tag = FIN
+				always = no
 			}
-			research_bonus = {
-				naval_equipment = -0.05
+
+			allowed_civil_war = {
+				always = no
 			}
-			# submarine and defence ship production
+
+			cancel = {
+				NOT = { has_war_with = SOV }
+			}
+
+			removal_cost = -1
+			
 			modifier = {
-				naval_manufacturer_cost_factor = -0.33
+				conscription = 0.03
+				mobilization_speed = 0.85
+				winter_attrition_factor = -0.1
+				army_core_defence_factor = 0.1
 			}
-			traits = {
-				naval_manufacturer
+		}
+
+		FIN_we_are_the_white_death_idea = {
+			picture = ger_bulwark_against_bolshevism
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+				army_attack_against_major_factor = 0.1
+				winter_attrition_factor = -0.2
+			}
+		}
+
+		FIN_embraced_by_the_white_death = {
+			picture = ENG_the_war_to_end_all_wars
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { has_war_with = FIN }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				truck_attrition_factor = 0.1
+				attrition = 0.2
+				winter_attrition_factor = 0.25
+				army_attack_factor = -0.1
+				war_support_factor = -0.15
+			}
+		}
+
+		FIN_the_lapland_war = {
+			picture = chi_war_of_resistance2
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = -180
+				attrition = 0.03
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+
+		FIN_compensation_for_side_switch_bad = {
+			picture = EST_exploit_the_banks
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
+
+		FIN_compensation_for_side_switch_good = {
+			picture = tur_balkan_central_bank_wealthy_greece
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		
+		#################################
+		##### REAL NATIONAL SPIRITS #####
+		#################################
+
+		### SISU NS - AAT VERSION ###
+
+		FIN_sisu_1 = { # AAT version
+			name = sisu
+
+			picture = sisu
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				#army_morale_factor = 0
+				#attrition = 0
+				#army_core_attack_factor = 0
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		FIN_sisu_2 = { # AAT version
+			name = sisu
+
+			picture = sisu
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.05
+				#attrition = 0
+				#army_core_attack_factor = 0
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		FIN_sisu_3 = { # AAT version
+			name = sisu
+
+			picture = sisu
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.15
+				attrition = -0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.15
+			}
+		}
+
+		FIN_sisu_4 = { # AAT version
+			name = sisu
+
+			picture = sisu
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.25
+				attrition = -0.1
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.2
+			}
+		}
+
+		FIN_sisu_5 = { # AAT version
+			name = sisu
+
+			picture = sisu
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.3
+				attrition = -0.15
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+			}
+		}
+
+
+		### OTHER NS ###
+
+		FIN_public_opposition_to_the_winter_war = { #For SOVIET UNION if they reject Finnish peace demands (when FIN pushes back)
+			picture = FIN_opposition_to_winter_war
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			available = {
+				has_war_with = FIN
+			}
+
+			modifier = {
+				army_speed_factor = -0.05
+				army_morale_factor = -0.1
+				army_org_regain = -0.05
+				pocket_penalty = 0.2
+				political_power_factor = -0.1
+			}
+		}
+
+		FIN_infrastructure_effort = {
+			picture = generic_build_infrastructure
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+			}
+		}
+
+		FIN_bank_of_aland_ns = {
+			picture = tur_balkan_central_bank_wealthy_greece
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { controls_state = 145 }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		FIN_hydro_electric_expansion = {
+			picture = por_hydroelectric_power
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		FIN_underground_resistance_cells_ns = {
+			name = FIN_underground_resistance_cells
+			picture = chi_war_of_resistance3
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_decay_on_our_occupied_states = -0.20
+				resistance_target_on_our_occupied_states = 0.1
+				resistance_damage_to_garrison_on_our_occupied_states = 0.1
+				target_sabotage_cost = -0.15
+				target_sabotage_factor = 0.1
+			}
+		}
+
+		FIN_underground_resistance_cells_ns_no_lar = {
+			name = FIN_underground_resistance_cells
+			picture = chi_war_of_resistance3
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_decay_on_our_occupied_states = -0.20
+				resistance_target_on_our_occupied_states = 0.1
+				resistance_damage_to_garrison_on_our_occupied_states = 0.1
+				boost_resistance_factor = 0.1
+			}
+		}
+
+		FIN_sami_pathfinders = {
+			picture = FIN_sami_pathfinders
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				winter_attrition_factor = -0.15
+				supply_combat_penalties_on_core_factor = -0.1
+				initiative_factor = 0.02
+				custom_modifier_tooltip = FIN_sami_pathfinders_recon_bonus_tt
+			}
+		}
+
+		FIN_fortification_effort = {
+			picture = generic_fortify_the_borders
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_bunker_factor = 0.2
+			}
+		}
+
+		FIN_coastal_batteries_effort = {
+			picture = FIN_coastal_batteries_effort
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_coastal_bunker_factor = 0.1
+				railway_gun_bombardment_factor = -0.15
+			}
+
+			equipment_bonus = {
+				railway_gun_equipment_1 = {
+					instant = yes
+					build_cost_ic = -0.25
+				}
+			}
+		}
+
+		FIN_repurposed_small_industries = {
+			picture =  generic_exploit_mines
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				conversion_cost_civ_to_mil_factor = -0.10
+			}
+		}
+
+		FIN_union_of_finnish_brothers_in_arms = {
+			picture = FIN_union_of_finnish_borthers_in_arms
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.1
+				army_morale_factor = 0.1
+				weekly_casualties_war_support = 0.001
+			}
+		}
+
+		FIN_lotta_svard = {
+			picture = FIN_lotta_svard
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.1
+				custom_modifier_tooltip = FIN_lotta_svard_support_battalions_bonus_tt
+			}
+		}
+
+		FIN_militarized_society = {
+			picture =  generic_reserve_divisions
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			available = {
+				OR = {
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+			}
+			
+			modifier = {
+				training_time_factor = -0.15
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				custom_modifier_tooltip = FIN_militarized_society_requirement_tt
+			}
+		}
+		
+		FIN_the_lone_wolf = {
+			picture = FIN_lone_wolf
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			available = {
+				is_subject = no
+				is_in_faction = no
+				NOT = { has_government = democratic }
+				NOT = { has_government = communism }
+			}
+			
+			on_add = {
+				set_rule = { 
+					desc = FIN_the_lone_wolf
+					can_create_factions = no
+					can_join_factions = no
+					can_send_volunteers = yes
+				}
+			}
+
+			modifier = {
+				conscription_factor = 0.05
+				defensive_war_stability_factor = 0.35
+				improve_relations_maintain_cost_factor = -0.5
+				weekly_casualties_war_support = 0.005
+				weekly_bombing_war_support = 0.005
+				fascism_acceptance = 50
+				custom_modifier_tooltip = FIN_the_lone_wolf_tt
+			}
+		}
+
+		FIN_finnish_march_of_conquest = {
+			picture = FIN_finnish_march_of_conquest
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			available = {
+			}
+
+			modifier = {
+				army_attack_against_major_factor = 0.1
+				army_breakthrough_against_major_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+
+		FIN_international_volunteers = {
+			picture = generic_volunteer_expedition_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			available = {
+				has_defensive_war = yes
+			}
+
+			modifier = {
+				weekly_manpower = 600
+				army_morale_factor = 0.1
+			}
+		}
+
+		FIN_national_industry_expand = {
+			picture = SOV_third_five_year_plan_military
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.03
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+
+		FIN_national_industry_modernize = {
+			name = FIN_national_industry_expand
+			picture = SOV_third_five_year_plan_military
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		FIN_national_industry_final = {
+			name = FIN_national_industry_expand
+			picture = SOV_third_five_year_plan_military
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.03
+				production_speed_arms_factory_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 	}
-	aircraft_manufacturer = {
-		designer = yes
-		valtion_lentokonetehdas = {
-			picture = generic_air_manufacturer_3
-			allowed = {
-				original_tag = FIN
+
+	########  ########  ######  ####  ######   ##    ## ######## ########   ######  
+	##     ## ##       ##    ##  ##  ##    ##  ###   ## ##       ##     ## ##    ## 
+	##     ## ##       ##        ##  ##        ####  ## ##       ##     ## ##       
+	##     ## ######    ######   ##  ##   #### ## ## ## ######   ########   ######  
+	##     ## ##             ##  ##  ##    ##  ##  #### ##       ##   ##         ## 
+	##     ## ##       ##    ##  ##  ##    ##  ##   ### ##       ##    ##  ##    ## 
+	########  ########  ######  ####  ######   ##    ## ######## ##     ##  ######  
+
+
+		tank_manufacturer = {
+
+			designer = yes
+
+			FIN_valtion_panssaritehdas = {
+				name = FIN_valtion_panssaritehdas_organization
+				picture = FIN_valtion_panssaritehdas
+
+				allowed = {
+					original_tag = FIN
+				}
+
+				visible = {
+					NOT = { has_completed_focus = FIN_national_armor_focus }
+				}
+				
+				research_bonus = {
+					armor = 0.15
+				}
+				
+				traits = { tank_manufacturer }
 			}
-			research_bonus = {
-				air_equipment = -0.05
-			}
-			traits = {
-				light_aircraft_manufacturer
-			}
-			modifier = {
-				aircraft_manufacturer_cost_factor = -0.33
-			}
-			# assembled Junkers, fast bombers
-			ai_will_do = {
-				factor = 1
+
+			FIN_valtion_panssaritehdas_improved = {
+				name = FIN_valtion_panssaritehdas_organization
+				picture = FIN_valtion_panssaritehdas
+
+				allowed = {
+					original_tag = FIN
+				}
+
+				visible = {
+					has_completed_focus = FIN_national_armor_focus
+				}
+
+				cost = 75
+				
+				research_bonus = {
+					armor = 0.15
+				}
+				
+				traits = { tank_manufacturer }
+
+				equipment_bonus = {
+					armor = {
+						instant = yes
+						build_cost_ic = -0.1
+					}
+				}
 			}
 		}
+
+		naval_manufacturer = { 
+			
+			designer = yes
+			
+	#		crichton = { #OLD Designer before AAT
+	#			
+	#			picture = generic_naval_manufacturer_1
+	#
+	#			
+	#			allowed = {
+	#				original_tag = FIN
+	#			}
+	#			
+	#			research_bonus = {
+	#				naval_equipment = 0.15
+	#			}
+	#			
+	#			# submarine and defence ship production
+	#			
+	#			traits = { naval_manufacturer }
+	#		}
+
+			FIN_crichton_vulcan = {
+				name = FIN_crichton_vulcan_organization
+				picture = FIN_crichton_vulcan
+
+				allowed = {
+					original_tag = FIN
+				}
+
+				visible = {
+					NOT = { has_completed_focus = FIN_conversion_of_civilian_vessels }
+				}
+				
+				research_bonus = {
+					naval_equipment = 0.15
+				}
+				
+				traits = { raiding_fleet_naval_manufacturer }
+			}
+
+			FIN_crichton_vulcan_improved = {
+				name = FIN_crichton_vulcan_organization
+				picture = FIN_crichton_vulcan
+
+				allowed = {
+					original_tag = FIN
+				}
+
+				visible = {
+					has_completed_focus = FIN_conversion_of_civilian_vessels
+				}
+
+				cost = 75
+				
+				research_bonus = {
+					naval_equipment = 0.15
+				}
+				
+				traits = { raiding_fleet_naval_manufacturer }
+
+				equipment_bonus = {
+					screen_ship = {
+						instant = yes
+						build_cost_ic = -0.1
+					}
+				}
+
+				modifier = {
+					repair_speed_factor = 0.1
+				}
+			}
+		}
+		
+		aircraft_manufacturer = { 
+				
+			designer = yes
+			
+			
+	#		valtion_lentokonetehdas = { #OLD Designer before AAT
+	#			
+	#			picture = generic_air_manufacturer_3
+	#
+	#			
+	#			allowed = {
+	#				original_tag = FIN
+	#			}
+	#			
+	#			research_bonus = {
+	#				air_equipment = 0.15
+	#			}
+	#			
+	#			traits = { light_aircraft_manufacturer }
+	#			
+	#			# assembled Junkers, fast bombers
+	#		
+	#			ai_will_do = {
+	#				factor = 1
+	#			}
+	#		}
+
+			FIN_valtion_lentokonetehdas = {
+				name = FIN_valtion_lentokonetehdas_organization
+				picture = FIN_valtion_lentokonetehdas
+
+				allowed = {
+					original_tag = FIN
+				}
+
+				visible = {
+					NOT = { has_completed_focus = FIN_national_aircraft_production }
+				}
+				
+				research_bonus = {
+					air_equipment = 0.15
+				}
+				
+				traits = { light_aircraft_manufacturer }
+			}
+
+			FIN_valtion_lentokonetehdas_improved = {
+				name = FIN_valtion_lentokonetehdas_organization
+				picture = FIN_valtion_lentokonetehdas
+
+				allowed = {
+					original_tag = FIN
+				}
+				
+				visible = {
+					has_completed_focus = FIN_national_aircraft_production
+				}
+
+				cost = 75
+
+				research_bonus = {
+					air_equipment = 0.15
+				}
+				
+				traits = { light_aircraft_manufacturer }
+
+				equipment_bonus = {
+					small_plane_airframe = {
+						instant = yes
+						build_cost_ic = -0.1
+					}
+					cv_small_plane_airframe = {
+						instant = yes
+						build_cost_ic = -0.1
+					}
+				}	
+			}
+		}
+
+		materiel_manufacturer = {
+			
+			designer = yes
+
+			FIN_valtion_kivaaritehdas = {
+				name = FIN_valtion_kivaaritehdas_organization
+				picture = FIN_valtion_kivaaritehdas
+
+				allowed = {
+					original_tag = FIN
+				}
+
+				visible = {
+					NOT = { has_completed_focus = FIN_integrate_oy_tikkakoski }
+				}
+				
+				research_bonus = {
+					infantry_weapons = 0.15
+				}
+				
+				traits = { infantry_equipment_manufacturer }
+			}
+
+			FIN_valtion_kivaaritehdas_improved = {
+				name = FIN_valtion_kivaaritehdas_organization
+				picture = FIN_valtion_kivaaritehdas
+
+				allowed = {
+					original_tag = FIN
+				}
+
+				visible = {
+					has_completed_focus = FIN_integrate_oy_tikkakoski
+				}
+
+				cost = 75
+				
+				research_bonus = {
+					infantry_weapons = 0.15
+				}
+				
+				traits = { infantry_equipment_manufacturer }
+
+				equipment_bonus = {
+					infantry_equipment = {
+						instant = yes
+						build_cost_ic = -0.1
+					}
+				}
+			}
+
+			FIN_valtion_tykkitehdas = {
+				name = FIN_valtion_tykkitehdas_organization
+				picture = FIN_valtion_tykkitehdas
+
+				allowed = {
+					original_tag = FIN
+				}
+
+				visible = {
+					NOT = { has_completed_focus = FIN_national_firepower }
+				}
+				
+				research_bonus = {
+					artillery = 0.15
+				}
+				
+				traits = { artillery_manufacturer }
+			}
+
+			FIN_valtion_tykkitehdas_improved = {
+				name = FIN_valtion_tykkitehdas_organization
+				picture = FIN_valtion_tykkitehdas
+
+				allowed = {
+					original_tag = FIN
+				}
+
+				visible = {
+					has_completed_focus = FIN_national_firepower
+				}
+
+				cost = 75
+				
+				research_bonus = {
+					artillery = 0.15
+				}
+				
+				traits = { artillery_manufacturer }
+
+				equipment_bonus = {
+					artillery_equipment = {
+						instant = yes
+						build_cost_ic = -0.1
+					}
+				}
+			}
+
+			FIN_sisu_auto = {
+				name = FIN_sisu_auto_organization
+				picture = FIN_sisu_auto
+
+				allowed = {
+					original_tag = FIN
+				}
+
+				visible = {
+					NOT = { has_completed_focus = FIN_contract_with_yhteissisu }
+				}
+				
+				research_bonus = {
+					motorized_equipment = 0.15
+				}
+				
+				traits = { motorized_equipment_manufacturer }
+			}
+
+			FIN_sisu_auto_improved = {
+				name = FIN_sisu_auto_organization
+				picture = FIN_sisu_auto
+
+				allowed = {
+					original_tag = FIN
+				}
+
+				visible = {
+					has_completed_focus = FIN_contract_with_yhteissisu
+				}
+
+				cost = 75
+				
+				research_bonus = {
+					motorized_equipment = 0.15
+				}
+				
+				traits = { motorized_equipment_manufacturer }
+
+				equipment_bonus = {
+					motorized_equipment = {
+						instant = yes
+						build_cost_ic = -0.1
+					}
+				}
+			}
+		}
+
+
+		industrial_concern = {
+
+			FIN_outokumpu = {
+
+				picture = GFX_idea_FIN_outokumpu
+				
+				allowed = {
+					original_tag = FIN
+				}
+				
+				cost = 150
+
+				research_bonus = {
+					excavation_tech = 0.15
+				}
+				
+				traits = { mining_company }
+			}
+
+			FIN_tampella = {
+
+				picture = GFX_idea_FIN_tampella
+				
+				allowed = {
+					original_tag = FIN
+				}
+				
+				cost = 150
+
+				research_bonus = {
+					industry = 0.15
+				}
+				
+				traits = { industrial_concern }
+			}
+
+			FIN_pohjolan_voima = {
+
+				picture = GFX_idea_FIN_pohjolan_voima
+				
+				allowed = {
+					original_tag = FIN
+				}
+
+				available = {
+					has_completed_focus = FIN_found_pohjolan_voima
+				}
+				
+				cost = 150
+				
+				traits = { construction_company }
+
+				modifier = {
+					consumer_goods_factor = -0.15
+				}
+			}
+
+			FIN_nokia = {
+
+				picture = FIN_nokia
+				
+				allowed = {
+					original_tag = FIN
+				}
+
+				visible = {
+					NOT = { has_completed_focus = FIN_tire_factory_at_nokia }
+				}
+
+				available = {
+					controls_state = 927 #HÄME (Tampere - Nokia)
+				}
+				
+				cost = 150
+
+				research_bonus = {
+					electronics = 0.15
+				}
+				
+				traits = { electronics_concern }
+			}
+
+			FIN_nokia_improved = {
+				name = FIN_nokia
+
+				picture = FIN_nokia
+				
+				allowed = {
+					original_tag = FIN
+				}
+
+				visible = {
+					has_completed_focus = FIN_tire_factory_at_nokia
+				}
+				
+				available = {
+					controls_state = 927 #HÄME (Tampere - Nokia)
+				}
+
+				cost = 150
+
+				research_bonus = {
+					electronics = 0.15
+					synth_resources = 0.15
+				}
+				
+				traits = { electronics_concern }
+			}
+
+			FIN_valtionrautatiet = {
+
+				picture = GFX_idea_FIN_valtionrautatiet
+				
+				allowed = {
+					original_tag = FIN
+				}
+				
+				cost = 75
+
+				research_bonus = {
+					train_tech = 0.15
+				}
+				
+				traits = { railway_company }
+			}
+
+		}
 	}
-}

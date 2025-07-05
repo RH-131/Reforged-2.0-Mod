@@ -4,7 +4,7 @@ state = {
 	name = "STATE_409"
 	manpower = 295605
 	resources = {
-		chromium = 9
+		chromium = 45 # was: 12
 	}
 	
 	state_category = rural
@@ -15,7 +15,7 @@ state = {
 			12189 1
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			air_base = 4
 			9604 = {
@@ -23,6 +23,8 @@ state = {
 			}
 		}
 		add_core_of = SOV
+		add_core_of = FER
+		add_core_of = VLA
 	}
 
 	provinces = {

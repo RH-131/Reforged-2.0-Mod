@@ -3,14 +3,17 @@ state={
 	name="STATE_907"
 	manpower = 6454865
 	state_category=town
-
+	resources={
+		chromium=40
+	}
 	history={
 		owner = ENG
 		add_core_of = NGA
 		set_state_flag = ENG_atlantikwall
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			arms_factory = 4
+			industrial_complex = 4
 			air_base = 5
 			
 
@@ -29,7 +32,7 @@ state={
 
 	}
 	provinces={
-		992 1068 3996 4055 4143 7011 7117 7188 10005 10031 10127 12004 13259
+		992 1068 3996 4055 4143 7011 7117 7188 7216 10005 10031 10127 12004 12930 12979 13195
 	}
 	
 	buildings_max_level_factor=1.000

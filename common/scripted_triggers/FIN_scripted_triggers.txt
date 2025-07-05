@@ -1,0 +1,100 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		exampel_trigger = yes
+#	}
+# 
+FIN_state_is_valid_for_motti_tactics = {
+	OR = {
+		state = 150 #KUOPIO
+		state = 929 #OULU
+		state = 147 #SALLA
+		state = 148 #LAPPI
+		state = 722 #PETSAMO
+		state = 149 #VAASA
+		state = 930 #MIKKELI
+	}
+}
+
+FIN_is_lone_wolf_finland = {
+	original_tag = FIN
+	has_idea = FIN_the_lone_wolf
+}
+
+#Used to change name of States and VPs when appropriate. Expected to be used inside on_state_control_changed. FROM.FROM is state / ROOT is new controller / FROM is former controller
+FIN_state_or_vp_name_should_change = {
+	OR = {
+		AND = {
+			ROOT = { original_tag = FIN }
+			NOT = { FROM = { original_tag = FIN } } #Not civil wars
+		}
+		AND = {
+			FROM = { original_tag = FIN }
+			NOT = { ROOT = { original_tag = FIN } } #Not civil wars
+		}
+	}
+	OR = {
+		FROM.FROM = { state = 216 } # OLONETS (Petrozavodsk / Äänislinna)
+		FROM.FROM = { state = 213 } # MURMANSK / KUOLAN NIEMIMAA // (Murmansk / Muurmanski) (Kandalaksha / Kantalahti)
+		FROM.FROM = { state = 195 } # LENINGRAD / PIETARI // (Leningrad / Pietari)
+	}
+}
+
+#Used inside a country TAG - FIN is assumed to be ROOT
+FIN_can_purchase_equipment_from_country = {
+	exists = yes
+	has_capitulated = no
+	NOT = { has_war_with = ROOT }
+	NOT = {
+		is_embargoing = ROOT
+		is_embargoed_by = ROOT
+	}
+	ROOT = {
+		OR = {
+			is_in_faction_with = PREV #Ally
+			AND = { #Neutral - acceptable ideology difference
+				is_in_faction = no
+				PREV = {
+					OR = {
+						is_in_faction = no
+						all_allied_country = {
+							NOT = { has_war_with = ROOT }
+						}
+					}
+				}
+				OR = {
+					has_government = PREV
+					AND = {
+						has_government = neutrality
+						PREV = {
+							NOT = { has_government = communism }
+						}
+					}
+					AND = {
+						has_government = democratic
+						PREV = {
+							has_government = neutrality
+						}
+					}
+				}
+			}
+			AND = { #In another ideologically friendly faction - no conflict between factions
+				is_in_faction = yes
+				OR = {
+					has_government = PREV
+				}
+				all_allied_country = {
+					NOT = { has_war_with = PREV }
+				}
+			}
+		}
+	}
+}

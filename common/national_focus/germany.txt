@@ -1849,7 +1849,7 @@ focus_tree = {
 				category = electronics		
 			}
 			set_technology = { 
-				decimetric_radar = 1 
+				cavity_magnatron = 1 
 			}
 			every_state = {
 				limit = { has_state_flag = GER_siemens_RDR}
@@ -1888,9 +1888,6 @@ focus_tree = {
 				bonus = 1
 				uses = 2
 				category = electronics		
-			}
-			set_technology = { 
-				decimetric_radar = 1 
 			}
 			random_owned_controlled_state = {
 				prioritize = { 51 }
@@ -4848,7 +4845,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -4871,7 +4868,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -4893,7 +4890,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -4916,7 +4913,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -4939,7 +4936,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -4962,7 +4959,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -4985,7 +4982,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5008,7 +5005,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5031,7 +5028,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5053,7 +5050,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5075,7 +5072,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5098,7 +5095,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5121,7 +5118,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5145,7 +5142,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5168,7 +5165,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5190,7 +5187,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -6912,7 +6909,7 @@ focus_tree = {
 		prerequisite = { focus = GER_air_innovation_2 }
 		relative_position_id = GER_air_innovation_2 
 		available = {
-			has_tech = advanced_centimetric_radar
+			has_tech = phased_array
 		}
 		x = -2
 		y = 1

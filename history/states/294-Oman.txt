@@ -2,17 +2,16 @@
 state={
 	id=294
 	name="STATE_294"
-	manpower = 1369000
+	manpower = 369000
 	
 	state_category = rural
 	
 	resources={
-		oil= 10
+		oil=2 # was: 2
 	}
 
 	history={
 		owner = RAJ
-		add_core_of = RAJ
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1 
@@ -23,6 +22,7 @@ state={
 		victory_points = {
 			10760 3 
 		}
+		add_core_of = NGA
 	}
 
 	provinces={

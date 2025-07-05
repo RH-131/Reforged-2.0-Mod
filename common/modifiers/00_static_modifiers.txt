@@ -158,6 +158,28 @@ unplanned_offensive = { # on Province
 	local_org_regain = -0.5
 }
 
+pacific_island = { # Pacific
+	air_cas_present_factor = -0.15
+	army_attack_factor = -0.1
+	army_speed_factor = -0.2
+	ground_attack_factor = -0.15
+	local_org_regain = -0.2
+	truck_attrition_factor = 1.0
+	unit_upkeep_attrition_factor = 0.3
+	shore_bombardment_bonus = -0.15
+}
+
+fortified_pacific_island = { # Pacific
+	air_cas_present_factor = -0.40
+	army_attack_factor = -0.1
+	army_speed_factor = -0.2
+	ground_attack_factor = -0.40
+	local_org_regain = -0.2
+	truck_attrition_factor = 1.0
+	unit_upkeep_attrition_factor = 0.3
+	shore_bombardment_bonus = -0.75
+}
+
 night = { # On province. Multiplied by amount of darkness.
 	air_bombing_targetting = -0.5
 	carrier_traffic = -1.0

@@ -5,25 +5,14 @@ infantry_CAN = {
 		CAN
 	}
 
-	roles = {
-		infantry
-	}
-	
-
-
-	match_to_count = 0.50
+	role = infantry	
 	
 	infantry_default_CAN = {
 	
 		
-		
-		target_width = 10.0
-		width_weight = 1.0
-		column_swap_factor = 0.5
+	
 		
 		target_template = {
-			weight = 0.9
-			match_value = 6000.0
 						
 			regiments = {
 				light_infantry = 10
@@ -33,9 +22,5 @@ infantry_CAN = {
 			}
 		}
 
-		allowed_types = {
-			light_infantry
-			DIV_HQ
-		}
 	}
 }

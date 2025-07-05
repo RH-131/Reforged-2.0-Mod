@@ -3,11 +3,11 @@ state= {
 	name="STATE_122"
 	manpower = 2309230
 	
-	state_category = large_city
+	state_category = city
 	
 	resources={
-		steel= 11
-		aluminium= 3
+		steel=55 # was: 16
+		aluminium=15 # was: 4
 	}
 
 	history=
@@ -22,8 +22,8 @@ state= {
 		victory_points = { 377 5 }
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 8
 			arms_factory = 4
+			industrial_complex = 10
 			377 = {
 				naval_base = 3
 			}

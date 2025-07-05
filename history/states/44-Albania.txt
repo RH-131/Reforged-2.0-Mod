@@ -3,9 +3,9 @@ state = {
 	id = 44
 	name = "STATE_44"
 	resources = {
-		aluminium = 2
-		chromium = 3
-
+		aluminium = 5.000
+		chromium = 3.000
+		oil = 4.000
 	}
 
 	history = {
@@ -20,15 +20,12 @@ state = {
 			13255 2
 		}
 		victory_points = {
-			9780 3
-		}
-		victory_points = {
 			6900 2
 		}
 		buildings = {
-			infrastructure = 7
+			infrastructure = 6
 			arms_factory = 5
-			industrial_complex = 6
+			industrial_complex = 5
 			dockyard = 3
 			air_base = 3
 			11767 = {
@@ -37,7 +34,6 @@ state = {
 			13255 = {
 				naval_base = 2
 			}
-			fuel_silo = 1
 
 		}
 		add_core_of = ALB
@@ -52,10 +48,10 @@ state = {
 	}
 
 	provinces = {
-		3448 3884 3896 6900 9780 9875 9914 11762 11767 13255 
+		3448 3884 6900 9875 9914 11767 13255 
 	}
-	manpower = 740800
+	manpower = 493867
 	buildings_max_level_factor = 1.000
-	state_category = city
+	state_category = town
 	local_supplies = 5.000
 }

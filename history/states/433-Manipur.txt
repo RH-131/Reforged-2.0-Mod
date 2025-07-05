@@ -8,7 +8,7 @@ state={
 	
 	
 	resources={
-		tungsten= 32
+		tungsten= 160
 	}
 
 	history={
@@ -18,6 +18,14 @@ state={
 		owner = RAJ
 		buildings = {
 			infrastructure = 3
+			4915 = {
+                landmark_taj_mahal = {
+                    level = 1
+                    allowed = {
+                        has_dlc = "Graveyard of Empires"
+                    }
+                }
+			}
 		}
 
 	}

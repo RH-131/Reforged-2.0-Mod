@@ -7,7 +7,7 @@ state={
 	state_category = rural
 	
 	resources={
-		chromium=15
+		chromium=75 # was: 22
 	}
 
 	history={
@@ -18,10 +18,12 @@ state={
 		buildings = {
 			infrastructure = 5
 			air_base = 3
+			
+			#Kakhovka Dam
+			737 = { dam = 1 }
 		}
 		add_core_of = SOV
 		add_core_of = UKR
-		add_core_of = CRI
 	}
 
 	provinces={

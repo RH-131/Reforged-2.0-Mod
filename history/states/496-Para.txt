@@ -2,13 +2,30 @@
 state={
 	id=496
 	name="STATE_496" # Minas Gerais
-	manpower = 1
+	manpower = 4603600
 	
-	state_category = wasteland
-
+	state_category = town
+	
+	resources = {
+		aluminium = 65
+		chromium = 15
+	    steel = 105 # was: 4
+	}
+	
 	history = {
+
 		owner = PAR
 		add_core_of = PAR
+
+		victory_points = {
+			7476 3
+		}
+
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+		}
+		
 	}
 
 	provinces={
