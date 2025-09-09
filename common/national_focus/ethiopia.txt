@@ -652,7 +652,7 @@ focus_tree = {
 		id = ETH_old_reliable
 		 icon = GFX_focus_secret_rearmament
 		prerequisite = { focus = ETH_camouflage focus = ETH_the_junior_officer_corps }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = ETH_camouflage
 		cost = 5
@@ -668,14 +668,14 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			custom_effect_tooltip = ETH_old_reliable_tt
+			
 		}
 	}
 	focus = {
 		id = ETH_bring_in_foreign_advisors
 		 icon = GFX_focus_SOV_flying_clubs
 		prerequisite = { focus = ETH_debre_zeyit_air_force_training_center }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = ETH_debre_zeyit_air_force_training_center
 		cost = 5
@@ -699,7 +699,7 @@ focus_tree = {
 		id = ETH_expand_the_officer_corps
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = ETH_old_reliable }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = ETH_old_reliable
 		cost = 5

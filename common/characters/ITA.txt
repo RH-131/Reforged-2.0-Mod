@@ -332,6 +332,65 @@ characters={
 			legacy_id=-1
 		}
 	}
+	ITA_giuseppe_tellera = {
+		name = ITA_giuseppe_tellera
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_giuseppe_tellera_small
+				large = GFX_portrait_ITA_giuseppe_tellera
+			}
+		}
+		
+		corps_commander = {
+			traits = { armor_officer } #Representing how he died
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 0
+			visible = { has_government = fascism }
+		}
+	}
+	ITA_mario_berti = {
+		name = ITA_mario_berti
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_mario_berti_small
+				large = GFX_portrait_ITA_mario_berti
+			}
+		}
+		
+		corps_commander = {
+			traits = { old_guard trait_reckless war_hero } #Always sick really need to do something about it
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 0
+		}
+	}
+	ITA_alessandro_pirzio_biroli = {
+		name = ITA_alessandro_pirzio_biroli
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_alessandro_pirzio_biroli_small
+				large = GFX_portrait_ITA_alessandro_pirzio_biroli
+			}
+		}
+		
+		corps_commander = {
+			traits = { harsh_leader } #Resistance stuff if anything
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 0
+			visible = { has_government = fascism }
+		}
+	}
 	ITA_inigo_campioni={
 		name="Inigo Campioni"
 		advisor={

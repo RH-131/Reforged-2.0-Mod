@@ -770,31 +770,6 @@ ideas = {
 
 	tank_manufacturer = {
 		designer = yes
-		ETH_mytishchy_machine_building_plant = {
-
-			picture = SOV_mytishchy_machine_building_plant
-
-			allowed = {
-				original_tag = ETH
-				has_dlc = "By Blood Alone"
-			}
-
-			visible = {
-				has_completed_focus = ETH_mytishchi-ababa_plant
-			}
-
-			research_bonus = {
-				armor = 0.1
-			}
-
-			traits = { tank_refurbishment_plant }
-
-			modifier = {
-				equipment_conversion_speed = 0.15
-				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = -0.1
-			}
-		}
 
 		fiat_ETH = { 
 			picture = fiat
@@ -1255,38 +1230,6 @@ ideas = {
 			
 			ai_will_do = {
 				factor = 1
-			}
-		}
-		ETH_mitsubishi = {
-			picture = mitsubishi	
-			allowed = {
-				original_tag = ETH		
-				has_dlc = "By Blood Alone"
-			}
-			visible = {
-				has_completed_focus = ETH_invite_foreign_industrialists
-				IF = {
-					limit = {NOT = {has_idea = ETH_mitsubishi}}
-					JAP = {
-						has_opinion = {
-							target = ETH
-							value > 75
-						}
-					}
-				}
-				ELSE = {
-					NOT = {has_war_with = JAP}
-				}
-			}
-			
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { light_aircraft_manufacturer_2 }
-
-			modifier = {
-
 			}
 		}
 	}
